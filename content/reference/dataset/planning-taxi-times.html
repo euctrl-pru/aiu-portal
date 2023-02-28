@@ -1,0 +1,131 @@
+---
+title: Taxi-time planning values
+slug: planning-taxi-times
+---
+
+
+
+<div id="data-description" class="section level2">
+<h2>Data description</h2>
+<p>Using data received directly from airlines, EUROCONTROL CODA (Central office for Delay Analysis) provides seasonal taxi time statistics for both the IATA Winter Season and the IATA summer seasons.</p>
+<p>These taxi times are calculated using the airline reported actual off-block time (AOBT), actual take-off time (ATOT), actual landing time (ALDT) and actual in-block time (AIBT) providing the aviation community with seasonal benchmark values.
+Furthermore for additional granularity, taxi-out times by wake turbulence category are also offered for a number of airports.
+See the <a href="https://www.eurocontrol.int/publication/eurocontrol-specification-aodf" target="_blank">EUROCONTROL Specification for Operational ANS Performance Monitoring - Air Transport Operator Data Flow (AODF)</a> for a full description and overview of operational data items (incl. AOBT, ATOT, ALDT &amp; AIBT) collected from airlines.</p>
+</div>
+<div id="column-naming-and-types" class="section level2">
+<h2>Column naming and types</h2>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="3%" />
+<col width="6%" />
+<col width="81%" />
+<col width="3%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Coumn Name</th>
+<th>Data Source</th>
+<th>Label</th>
+<th>Column description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IATA Season</td>
+<td>AIU/CODA</td>
+<td>IATA Season</td>
+<td>S for summer covering 31 weeks starting the last Sunday of March. W for winter covering 21 weeks starting the last Sunday of October. The suffix is composed of the last two digits of the year in which the IATA season started. e.g. S21: IATA summer season covering 28 March 2021 - 30 October 2021. W20: IATA winter season covering 25 October 2020 - 27 March 2021.</td>
+<td>S21</td>
+</tr>
+<tr class="even">
+<td>ICAO</td>
+<td>Network Manager</td>
+<td>ICAO</td>
+<td>ICAO 4-letter airport designator</td>
+<td>EGLL</td>
+</tr>
+<tr class="odd">
+<td>IATA</td>
+<td>Network Manager</td>
+<td>IATA</td>
+<td>IATA 3-letter airport designator</td>
+<td>LHR</td>
+</tr>
+<tr class="even">
+<td>Airport Name</td>
+<td>Network Manager</td>
+<td>Airport Name</td>
+<td>Airport name</td>
+<td>LONDON/HEATHROW</td>
+</tr>
+<tr class="odd">
+<td>Wake Turbulence Category</td>
+<td>Network Manager</td>
+<td>Wake Turbulence Category</td>
+<td>Wake turbulence category</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>Mean TXI (Mins)</td>
+<td>AIU/CODA</td>
+<td>Mean TXI (Mins)</td>
+<td>The mean taxi-in time in minutes of the observed flights.</td>
+<td>5,3</td>
+</tr>
+<tr class="odd">
+<td>Mean TXO (Mins)</td>
+<td>AIU/CODA</td>
+<td>Mean TXO (Mins)</td>
+<td>The mean taxi-in time in minutes of the observed flights.</td>
+<td>7,6</td>
+</tr>
+<tr class="even">
+<td>Standard Deviation</td>
+<td>AIU/CODA</td>
+<td>Standard Deviation</td>
+<td>The Standard Deviation in minutes of the observed taxi-times.</td>
+<td>4,7</td>
+</tr>
+<tr class="odd">
+<td>10th Pctl</td>
+<td>AIU/CODA</td>
+<td>10th Pctl</td>
+<td>The 10th percentile in minutes of the observed taxi-times.</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Median</td>
+<td>AIU/CODA</td>
+<td>Median</td>
+<td>The median in minutes of the observed taxi-times.</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>90th Pctl</td>
+<td>AIU/CODA</td>
+<td>90th Pctl</td>
+<td>The 90th percentile in minutes of the observed taxi-times.</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<div id="calculated-fields" class="section level3">
+<h3>Calculated Field(s)</h3>
+<p>Taxi-Out: airline reported actual take-off time (ATOT) - actual off-block time (AOBT)</p>
+<p>Taxi-in: airline reported actual in-block time (AIBT)- actual landing time (ALDT)</p>
+</div>
+<div id="applied-filters" class="section level3">
+<h3>Applied filters</h3>
+<p>Extreme outliers (taxi-in exceeding 120 minutes and taxi-out exceeding 180 minutes) are excluded from the calculation.
+Only airports with at least 100 observations during the reporting period are listed.</p>
+<p>The taxi-time report is based on the following 3 wake turbulence categories: M (medium), H (heavy) or J (super) with aircraft in wake turbulence category L (light) not taken in to account.</p>
+<ul>
+<li>L: aircraft with a maximum certified take off mass of 7000 kg or less.</li>
+<li>M: with a maximum certified take off mass of less than 136000 kg but more than 7000 kg.</li>
+<li>H: aircraft with a maximum certified take off mass of less than 560000kg but more than 136000 kg.</li>
+<li>J: aircraft with a maximum certified take off mass of 560000kg or more.</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,187 @@
+---
+title: Traffic Complexity Score Dataset
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+slug: traffic-complexity-score
+---
+
+
+
+<div id="data-description" class="section level2">
+<h2>Data description</h2>
+<p>The PRU, in close collaboration with ANSPs, has defined a set of complexity indicators that
+can be applied in ANSP benchmarking.
+The complexity indicators are computed on a systematic basis for each day of the year.
+The complexity indicators are based on the concept of “interactions” arising when there are
+two aircraft in the same “place” at the same time.
+Hence, the <strong>Complexity Score</strong> is a measure of the potential number of interactions between
+aircraft defined as the total duration of all interactions (in minutes) per flight-hour
+controlled in a given volume of airspace.
+The <strong>Complexity Score</strong> is the product of two components: Traffic density and Structural index.</p>
+<p>The traffic density is expressed in <strong>Adjusted density</strong> which measures the (uneven) distribution
+of traffic throughout the airspace (i.e. taking into account the relative concentration).
+The measure relies on dividing the airspace volume into a discrete grid of 20 nautical mile cells.
+An interaction is defined as the simultaneous presence of two aircraft in a cell of 20x20 nautical
+miles and 3,000 feet in height.</p>
+<p>The structural index originates from horizontal, vertical, and speed interactions and is computed
+as the sum of the three indicators.</p>
+<p><strong>Horizontal interactions index:</strong> A measure of the complexity of the flow structure based on
+the potential interactions between aircraft on different headings.
+The indicator is defined as the ratio of the duration of horizontal interactions to the total
+duration of all interactions.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cplx-horizontal"></span>
+<img src="../../../../../../../../images/cplx-horizontal.png" alt="Horizontal interactions." width="300px" />
+<p class="caption">
+Figure 1: Horizontal interactions.
+</p>
+</div>
+<p><strong>Vertical interactions index:</strong> A measure of the complexity arising from aircraft in vertical
+evolution based on the potential interactions between climbing, cruising and descending aircraft.
+The indicator is defined as the ratio of the duration of vertical interactions to the total
+duration of all interactions.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cplx-vertical"></span>
+<img src="../../../../../../../../images/cplx-vertical.png" alt="Vertical interactions." width="300px" />
+<p class="caption">
+Figure 2: Vertical interactions.
+</p>
+</div>
+<p><strong>Speed interactions indicator:</strong> A measure of the complexity arising from the aircraft mix
+based on the potential interactions between aircraft of different speeds.
+The indicator is defined as the ratio of the duration of speed interactions to the
+total duration of all interactions.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cplx-speed"></span>
+<img src="../../../../../../../../images/cplx-speed.png" alt="Speed interactions." width="300px" />
+<p class="caption">
+Figure 3: Speed interactions.
+</p>
+</div>
+<p>More information on the methodology used for the computation of the complexity score
+see <span class="citation">(<a href="#ref-complexitymetrics" role="doc-biblioref">ACE Working Group on Complexity 2006</a>)</span>.</p>
+</div>
+<div id="column-naming-and-types" class="section level2">
+<h2>Column naming and types</h2>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="46%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Data source</th>
+<th>Label</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>YEAR</td>
+<td>Network Manager</td>
+<td>YEAR</td>
+<td>Reference year</td>
+<td>2014</td>
+</tr>
+<tr class="even">
+<td>MONTH_NUM</td>
+<td>Network Manager</td>
+<td>MONTH</td>
+<td>Month (numeric)</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>MONTH_MON</td>
+<td>Network Manager</td>
+<td>MONTH_MON</td>
+<td>Month (3-letter code)</td>
+<td>JAN</td>
+</tr>
+<tr class="even">
+<td>FLT_DATE</td>
+<td>Network Manager</td>
+<td>DATE_FLT</td>
+<td>Date of flight</td>
+<td>12-01-2014</td>
+</tr>
+<tr class="odd">
+<td>ENTITY_NAME</td>
+<td>PRU</td>
+<td>ENTITY_NAME</td>
+<td>Entity name</td>
+<td>Slovenia Control</td>
+</tr>
+<tr class="even">
+<td>ENTITY_TYPE</td>
+<td>PRU</td>
+<td>ENTITY_TYPE</td>
+<td>Type of the entity to which the data relates (ANSP, FAB, AREA)</td>
+<td>ANSP (AUA)</td>
+</tr>
+<tr class="odd">
+<td>CPLX_FLIGHT_HRS</td>
+<td>NM/PRU</td>
+<td>CPLX_FLIGHT_HRS</td>
+<td>Complexity flight hours</td>
+<td>89.4</td>
+</tr>
+<tr class="even">
+<td>CPLX_INTER</td>
+<td>NM/PRU</td>
+<td>CPLX_INTER</td>
+<td>Complexity interactions (hours of interactions)</td>
+<td>9.4</td>
+</tr>
+<tr class="odd">
+<td>VERTICAL_INTER_HRS</td>
+<td>NM/PRU</td>
+<td>VERTICAL_INTER_HRS</td>
+<td>Hours of vertical interactions</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td>HORIZ_INTER_HRS</td>
+<td>NM/PRU</td>
+<td>HORIZ_INTER_HRS</td>
+<td>Hours of horizontal interactions</td>
+<td>5.8</td>
+</tr>
+<tr class="odd">
+<td>SPEED_INTER_HRS</td>
+<td>NM/PRU</td>
+<td>SPEED_INTER_HRS</td>
+<td>Hours of speed interactions</td>
+<td>1.5</td>
+</tr>
+</tbody>
+</table>
+<div id="calculated-fields" class="section level3">
+<h3>Calculated Field(s)</h3>
+<p><span class="math display">\[
+\begin{align*}
+\text{Adjusted Density}        &amp; = \frac{\text{CPLX_INTER}}{\text{CPLX_FLIGHT_HRS}} 60 \\
+\text{Vertical interactions}   &amp; = \frac{\text{VERTICAL_INTER_HRS}}{\text{CPLX_FLIGHT_HRS}} 60 \\
+\text{Horizontal interactions} &amp; = \frac{\text{HORIZ_INTER_HRS}}{\text{CPLX_FLIGHT_HRS}} 60 \\
+\text{Speed interactions}      &amp; = \frac{\text{SPEED_INTER_HRS}}{\text{CPLX_FLIGHT_HRS}} 60 \\
+\text{Vertical Score}          &amp; = \frac{\text{VERTICAL_INTER_HRS}}{\text{CPLX_INTER}} \\
+\text{Horizontal Score}        &amp; = \frac{\text{HORIZ_INTER_HRS}}{\text{CPLX_INTER}} \\
+\text{Speed Score}             &amp; = \frac{\text{SPEED_INTER_HRS}}{\text{CPLX_INTER}} \\
+\text{Structural Index}        &amp; = \frac{\text{VERTICAL_INTER_HRS} + \text{HORIZ_INTER_HRS} + \text{SPEED_INTER_HRS}}{\text{CPLX_INTER}} \\
+\text{Complexity Score}        &amp; = \frac{\text{VERTICAL_INTER_HRS} + \text{HORIZ_INTER_HRS} + \text{SPEED_INTER_HRS}}{\text{CPLX_FLIGHT_HRS}} 60
+\end{align*}
+\]</span></p>
+</div>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-complexitymetrics" class="csl-entry">
+ACE Working Group on Complexity. 2006. <span>“Report on <span>Complexity Metrics</span> for <span>ANSP Benchmarking Analysis</span>,”</span> April. <a href="https://www.eurocontrol.int/sites/default/files/2019-06/2006-complexity-metrics-report.pdf">https://www.eurocontrol.int/sites/default/files/2019-06/2006-complexity-metrics-report.pdf</a>.
+</div>
+</div>
+</div>

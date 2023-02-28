@@ -1,0 +1,12 @@
+---
+title: Departure Slot
+slug: departure-slot
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+A departure slot is a time when an aircraft can take off,
+the so called Calculated Time of Take-Off ([CTOT](/acronym/ctot/)).
+

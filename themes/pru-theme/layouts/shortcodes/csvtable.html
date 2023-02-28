@@ -1,0 +1,26 @@
+<!-- {{/*
+Usage: {{% csvtable "data/datafile" %}}
+i.e. the data file is  'data/datafile'
+*/}}-->
+
+{{ $datafile := (printf "%s" (.Get 0)) }}
+{{ $sep := "," }}
+
+<table>
+{{ range $i, $r := getCSV $sep $datafile }}
+    <thead>
+    {{ if eq $i 0 }}
+        {{ range $r }}
+        <th>{{ . }}</th>
+        {{end}}
+    {{end}}
+    </thead>
+    {{ if ge $i 1 }}
+    <tr>
+        {{ range  $r }}
+        <td>{{ . }}</td>
+        {{end}}
+    </tr>
+    {{end}}
+{{ end }}
+</table>

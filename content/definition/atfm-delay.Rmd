@@ -1,0 +1,31 @@
+---
+title: ATFM Delay
+slug: atfm-delay
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+The duration between the last take-off time requested by the aircraft operator
+and the take-off slot allocated by the Network Manager following a regulation
+communicated by the [FMP](/acronym/fmp/), in relation to an
+airport (airport delay) or sector (en-route delay) location.
+
+See also [ATFM delay causes and codes](/definition/atfm-delay-codes/).
+
+## Unit of Measurement
+
+Minute.
+
+## Modification of the ATFM delay calculation (NM release 20.0)
+
+Please note that software release 20.0 of the Network Manager on 04 April 2016
+introduced a change to improve the accuracy of the ATFM delay calculation for
+operational purposes.
+
+ATFM delays data and graphs in this website take this change into account as of
+April 2016.
+
+For more information on the the change in methodology [click here](/methodology/ATFM-delay-calculation).

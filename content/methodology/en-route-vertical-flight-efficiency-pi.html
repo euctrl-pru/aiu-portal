@@ -1,0 +1,243 @@
+---
+title: En-route Vertical Flight Efficiency
+bibliography: ["../../static/bib/aviation.bib"]
+link-citations: true
+slug: en-route-vertical-flight-efficiency-pi
+---
+
+
+
+<p>This document provides a technical description on the methodology used in the analysis of the
+vertical profile of the aircraft’s trajectory during the en-route phase of flight. The objective of
+the methodology is to measure and observe vertical flight efficiency without highlighting specific
+reasons for the observed behaviour. More detailed case studies are needed to find out reasons for
+particular observations.</p>
+<div id="acronyms-and-terminology" class="section level2">
+<h2>Acronyms and terminology</h2>
+<table>
+<caption><span id="tab:acronyms">Table 1: </span> Acronyms and terminology</caption>
+<colgroup>
+<col width="19%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="/acronym/ftfm/" title="FTFM">FTFM</a></td>
+<td>Trajectory information based on the last filed flight plan</td>
+</tr>
+<tr class="even">
+<td><a href="/acronym/gcd/" title="GCD">GCD</a></td>
+<td>Great Circle Distance</td>
+</tr>
+<tr class="odd">
+<td><a href="/acronym/prisme/" title="PRISME">PRISME</a></td>
+<td>Pan-European Repository of Information Supporting the Management of EATM</td>
+</tr>
+<tr class="even">
+<td><a href="/acronym/rad/" title="RAD">RAD</a></td>
+<td>Route Availability Document</td>
+</tr>
+<tr class="odd">
+<td>VFI</td>
+<td>Vertical Flight Inefficiency</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="methodology" class="section level2">
+<h2>Methodology</h2>
+<div id="approach-and-assumptions" class="section level3">
+<h3>Approach and assumptions</h3>
+<p>The general approach of the analysis is to compare the maximum altitudes in the flight plans of
+flights between a specific airport pair with the maximum altitudes of flights between similar
+airport pairs, hereafter called reference flights. Reference flights are flights between
+unconstrained (in terms of RAD restrictions) airport pairs which have a great circle distance close
+to the one of the examined airport pair.</p>
+<p>Since the aircraft type has a significant influence on the nominal cruising altitude, the analysis
+is done using specific aircraft types with similar performance (e.g. only jet aircraft, turboprop
+aircraft …) Currently only Airbus and Boeing aircraft are considered since they account for the
+biggest portion of scheduled commercial flights.</p>
+<p>The use of the maximum altitude in the flight plan leads to an underestimation of the vertical
+flight inefficiency because there can be lower cruise segments before or after the moment the
+maximum altitude is reached. These cruise segments can be even more inefficient since the fuel
+consumption at lower altitudes is in general higher.</p>
+<p>To account for statistical uncertainty, the lowest and highest 10 percent of the flights (when
+sorted according to their maximum altitudes) are excluded.</p>
+</div>
+<div id="general-overview" class="section level3">
+<h3>General overview</h3>
+<p>The analysis is done in 4 major steps. First, the necessary data are extracted from the data source.
+Then the reference distributions are calculated such that they can be used for all the airport pairs
+under investigation. For each considered airport pair, the maximum altitudes in the flight plan are
+processed in order to be compared with the reference. In the last step the different metrics are
+calculated. The process is visualised in Figure <a href="#fig:vfe-er-figure-001">1</a>.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vfe-er-figure-001"></span>
+<img src="../../../../../../../images/vfe-er-figure-001.png" alt="Different steps of the analysis." width="800px" />
+<p class="caption">
+Figure 1: Different steps of the analysis.
+</p>
+</div>
+<p>The following paragraphs explain these steps in further detail.</p>
+</div>
+<div id="loading-of-the-trajectories-information" class="section level3">
+<h3>Loading of the trajectories information</h3>
+<p>The data used for the analysis are downloaded from the PRISME database. FTFM data is used in order
+to assess the maximum altitudes in the flight plans. The most important data fields for the analysis
+are the altitude and time information.</p>
+</div>
+<div id="definition-of-the-reference-distribution" class="section level3">
+<h3>Definition of the reference distribution</h3>
+<p>Reference airport pairs are airport pairs with a great circle distance (GCD) close to the great
+circle distance of the considered airport pair and which have no constraints in the RAD.</p>
+<p>Reference distributions are calculated for buckets of GCD ranges, e.g. a reference is calculated for
+all airport pairs in the GCD ranges [0,10) NM, [10,20) NM, etc. This approach reduces the
+calculation time significantly since only one calculation is needed and the reference for a specific
+airport pair will be the one of the corresponding bucket.</p>
+<p>The reference distribution is created using a large number of flights with no specific filtering
+except for the aircraft type. This is done in order to get a reference distribution irrespective of
+factors such as aircraft weights, weather phenomena, company policies…</p>
+<p>The reference is based on the assumption that flights between airport pairs with similar GCDs,
+performed with a similar aircraft type, would file for similar maximum altitudes. The
+differentiating factor between the two sets of flights can be the presence of RAD constraints,
+scenarios, airline policy, mistakes in the flight planning system, etc., and if the distribution of
+the maximum altitudes of flights on the chosen airport pair doesn’t follow the reference
+distribution, this could be an indication of inefficiency.</p>
+</div>
+<div id="distribution-of-the-maximum-altitudes" class="section level3">
+<h3>Distribution of the maximum altitudes</h3>
+<p>As is done for the reference, the distribution of the maximum altitudes flown on the considered
+airport pair is determined. Having the distributions of the reference and the considered flow on the
+airport pair allows for plotting a diagram as in the Figure <a href="#fig:vfe-er-figure-002">2</a>.</p>
+<p>Figure <a href="#fig:vfe-er-figure-002">2</a> shows the histograms of the maximum filed altitudes both for the reference flights and the
+flights on the chosen airport pair. The numbers on the right of the bars indicate the number of
+flights while the length of the bar indicates the percentage of flights. E.g. the large blue bar at
+FL350 represents 260 flights, being 76.2% of the total number of flights on the chosen airport pair.
+The sum of the percentages corresponding to the lengths of the bars is 100% both for the blue and
+for the red bars. As can be seen from the values of the number of flights, there are a lot more
+flights in the reference distribution which makes it a stable reference.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vfe-er-figure-002"></span>
+<img src="../../../../../../../images/vfe-er-figure-002.png" alt="Example distribution of maximum altitudes." width="900px" />
+<p class="caption">
+Figure 2: Example distribution of maximum altitudes.
+</p>
+</div>
+<p>The data in Figure <a href="#fig:vfe-er-figure-002">2</a> above can be represented differently,
+using percentiles as shown in Figure <a href="#fig:vfe-er-figure-003">3</a>.
+To obtain this, the percentages from Figure <a href="#fig:vfe-er-figure-002">2</a> are simply put successively. E.g. the percentages of
+the chosen airport pair (blue bars: 2.6% at FL310, 21.1% at FL330 and 76.2% at FL350) are plotted at
+their respective altitudes to get the blue line in Figure <a href="#fig:vfe-er-figure-003">3</a>.
+The same is done for the reference.</p>
+<p>The example represents an airport pair on which, in general, flights are filing higher than the
+reference. There are however some percentiles where reference flights are filing higher than the
+flights on the considered airport pair. Only this part is used in the calculation of vertical flight
+inefficiency (VFI) in order to flag only the inefficiencies.
+The red shaded area in Figure <a href="#fig:vfe-er-figure-003">3</a>
+indicates the VFI. The dark grey areas on the left and right highlight the percentiles that are
+excluded to account for statistical uncertainty as mentioned before.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vfe-er-figure-003"></span>
+<img src="../../../../../../../images/vfe-er-figure-003.png" alt="Example distribution of maximum altitudes." width="900px" />
+<p class="caption">
+Figure 3: Example distribution of maximum altitudes.
+</p>
+</div>
+</div>
+<div id="calculation-of-the-metrics" class="section level3">
+<h3>Calculation of the metrics</h3>
+<p>The VFI is calculated using the percentiles as shown in Figure <a href="#fig:vfe-er-figure-003">3</a>.
+For each percentile range, the
+altitude value of the airport pair is subtracted from the reference value. When the airport pair
+value is higher than the reference value, the result of the subtraction is negative. This might
+appear as if the flights are more efficient than the reference flights. Nevertheless, the focus is
+put on finding the inefficiencies so negative values are set to 0.</p>
+<p>The result of the percentile range is then multiplied by the number of flights corresponding to the
+percentile range (e.g. if the width of the percentile range is 1%, the number of flights
+corresponding to the percentile range is 1% of the total number of flights on the airport pair).</p>
+<p>Summing up over all percentile ranges gives the total vertical flight inefficiency. The vertical
+flight inefficiency per flight value is then calculated by dividing the total vertical flight
+inefficiency by the number of flights on the considered airport pair (the number of flights for this
+calculation step is 80% of the total number of flights on the airport pair since the lowest 10% and
+highest 10% of the flights are not used).</p>
+<p>Table <a href="#tab:formulas">2</a> summarises the formulas used for the calculation of the VFI metrics.</p>
+<table>
+<caption><span id="tab:formulas">Table 2: </span> Formulas used for the calculation of the results</caption>
+<colgroup>
+<col width="76%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Result</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total vertical flight inefficiency (Total VFI)</td>
+<td><span class="math display">\[VFI_{\mathrm{tot}} = \sum_{i} \max(L_{\mathrm{ref}, i} - L_{\mathrm{act}, i}, 0) \cdot n_{\mathrm{act}, i}\]</span></td>
+</tr>
+<tr class="even">
+<td>Vertical flight inefficiency per flight (VFI per flight)</td>
+<td><span class="math display">\[\frac{VFI_{\mathrm{tot}} }{\sum_{i} n_{\textrm{act}, i}}\]</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>With:</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(i\)</span></td>
+<td>Percentile range</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L_{ {ref}, i}\)</span></td>
+<td>Flight level of the <span class="math inline">\(i^{th}\)</span> percentile range over all reference flights in the GCD bucket around the GCD of the considered airport pair.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(L_{ {act}, i}\)</span></td>
+<td>Flight level of the <span class="math inline">\(i^{th}\)</span> percentile range over all flights on the considered airport pair.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n_{ {act}, i}\)</span></td>
+<td>Number of flights on the considered airport pair in the percentile range.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="further-information" class="section level2">
+<h2>Further Information</h2>
+<p>For further information please refer also to
+<span class="citation">(<a href="#ref-icns-vfe" role="doc-biblioref">S. Peeters et al. 2016</a>; <a href="#ref-en-route-vertical-flight-efficiency_consultation" role="doc-biblioref">Sam Peeters and Guastalla 2017</a>)</span>.</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-en-route-vertical-flight-efficiency_consultation" class="csl-entry">
+Peeters, Sam, and Guglielmo Guastalla. 2017. <span>“Analysis of En-Route Vertical Flight Efficiency.”</span> 00-04. <span>Eurocontrol/PRU</span>. <a href="http://ansperformance.eu/library/en-route-vertical-flight-efficiency_consultation.pdf">http://ansperformance.eu/library/en-route-vertical-flight-efficiency_consultation.pdf</a>.
+</div>
+<div id="ref-icns-vfe" class="csl-entry">
+Peeters, S., H. Koelman, R. Koelle, R. Galaviz-Schomisch, J. Gulding, and M. Meekma. 2016. <span>“Towards a Common Analysis of Vertical Flight Efficiency.”</span> In <em>2016 <span>Integrated Communications Navigation</span> and <span>Surveillance</span> (<span>ICNS</span>)</em>, 7A2-1-7A2-11. <span>Herndon, VA, USA</span>: <span>IEEE</span>. <a href="https://doi.org/10.1109/ICNSURV.2016.7486368">https://doi.org/10.1109/ICNSURV.2016.7486368</a>.
+</div>
+</div>
+</div>

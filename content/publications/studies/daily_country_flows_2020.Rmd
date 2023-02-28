@@ -1,0 +1,127 @@
+---
+title:  "Daily country flight flows - 2020"
+excerpt: "Flow map of daily flight flows between countries in EUROCONTROL's Network Manager Area"
+date: "2020-09-11"
+extrajs: ["/javascript/target_blank.js"]
+link-citations: true
+---
+<style type="text/css">
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    height: 620px;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+</style>
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+The AIU calculated the daily country pair flows of flights for 2020 and
+fed them to the excellent ![flowmap.blue](/images/flowmap.blue-32x32.png) [flowmap.blue](https://flowmap.blue/) 
+so that questiones like the ones below (and many others you may have in mind)
+can be *visualised* on a map.
+
+In the [following map][flows-map] (or see the sections below for some examples
+and relevant links) play with
+
+* the filters (top left box, or click on the circles) to select the countries of interest,
+* your mouse and hover over the flow arrows or country circles to get the amount 
+  of relevant flight flows counts
+* the time interval selector (center bottom) and its play button; or
+* the settings (bottom left gear) in order, for example, to enable clustering
+
+
+<div class="resp-container" style="display:block;margin:auto">
+<iframe class="resp-iframe" src="https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=45.558025,6.475440,2.76,15,1&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200101T000000,20200911T000000&col=Default&f=50" title="Daily country flight flows - 2020" frameborder="0" style="border:0" allowfullscreen>
+</iframe> 
+</div>
+
+[flows-map]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=45.558025,6.475440,2.76,15,1&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200101T000000,20200911T000000&col=Default&f=50>
+
+
+  
+
+### Who was flying to/from Spain in the mid August week?
+
+Answer: Britons and Germans seems to have *all* [flown to Spain][spain-aug]
+to spend their holidays! (Or maybe Spaniards went en-mass to UK and Germany...!)
+  
+```{r, out.width="49%",fig.align='center'}
+knitr::include_graphics("/images/flows-eu-mid-aug-2020.png")
+```
+
+
+### Where were flying Europeans in July/August?
+
+Answer: [Britons][uk-jul-aug] and [Germans][de-jul-aug]
+flew en-mass to Spain (~10k flights from/to each country);
+while [France][fr-jul-aug], [Italy][it-jul-aug],
+[Greece][gr-jul-aug] and [Turkey][tr-jul-aug]
+took only approximately half of that (~5K flights each.)
+
+
+```{r, out.width="49%",fig.cap="Flows in/out og UK and Gemrany in July/August 2020",fig.show='hold',fig.align='center'}
+knitr::include_graphics("/images/flows-uk-jul-aug-2020.png")
+
+knitr::include_graphics("/images/flows-de-jul-aug-2020.png")
+```
+
+
+### How was the translantic traffic like this summer 2020?
+
+Answer: extremely low, just few flights coming in / flying out of Europe.
+Look for example at the very thin flow from USA...
+
+
+
+
+## Methodology
+
+The pairs/counts have been derived from the country location of the ICAO indicator
+associated with the aerodrome of departure (ADEP) and destination (ADES).
+
+There is a very low percentage of airport pairs where one or both of ADEP/ADES
+are unknown. These are usually associated with [IFR][ifr] helicopter flights
+(i.e. connections to oil platforms from/to [Norway][no-null-island]) or
+air filled ([AFIL][afil]) flight plans.
+
+Unknown ADEP/ADES have been *arbitrarily* mapped to the
+[Null Island](https://en.wikipedia.org/wiki/Null_Island) and not filtered out
+in order to keep the flow counts consistent.
+
+
+[afil]: /acronym/afil/ "Air-filed (flight plan)"
+[ifr]: /acronym/ifir/ "Instrument Flight Rules"
+
+[no-null-island]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=30.350738,3.951042,2.14,15,1&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&col=Default&f=50&s=3>
+
+[spain-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200810T000000,20200817T000000&col=Default&f=50>
+
+[eu-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50>
+
+[uk-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=21>
+
+[de-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=15>
+
+[fr-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=20>
+
+[gr-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=23>
+
+[it-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=27>
+
+[tr-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50&s=40>
+
+[eu-jul-aug]: <https://flowmap.blue/19mCVbGW943x-xx7zompIrw2bPnyXAq-T8HsupbW4NHQ/0db2dd9?v=46.632150,11.629359,3.34,0,0&a=0&as=1&b=1&bo=75&c=0&ca=0&cz=2&d=0&fe=1&lt=1&lfm=ALL&t=20200701T000000,20200901T000000&col=Default&f=50>

@@ -1,0 +1,29 @@
+---
+title: Performance Review Report (PRR) 2021 (consultation)
+type: "PRR"
+date: '2022-03-24'
+tags:
+  - PRR
+  - Funding
+---
+
+<div class="container">
+<div class="row align-items-start">
+
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2021-consultation" target="_blank">
+  <img class="card-img-top" src="/images/prc/prr2021_consultation.png" alt="Performance Review Report 2021 - consultation">
+  <div class="card-body"><h5 class="card-title">PRR 2021 - final draft for stakeholder consultation</h5></a><p class="card-text"></p>
+</div></div>
+</div>
+
+<div class="col-sm-9">
+As in previous years, the Performance Review Commission (PRC) has prepared an independent review of ANS performance in Europe. Stakeholders are invited to provide comments on the draft Final Report for the PRC’s consideration before the report is finalised.
+
+The consultation phase is from 24 March to 15 April 2022.
+
+<a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2021-consultation" class="btn btn-secondary" role="button" target="_blank"> Read more....</a>
+
+</div>
+
+</div></div>

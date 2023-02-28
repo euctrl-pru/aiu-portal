@@ -1,0 +1,55 @@
+---
+title: Turnaround
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+Turnaround shows the time elapsed between an aircraft blocking in and
+blocking off for the next flight from the same parking stand on the same day.
+The sample is treated to consider only ground times with the following characteristics
+
+```{r}
+library(tibble)
+library(gt)
+tribble(
+  ~category, ~seat_capacity, ~wtc_m, ~wtc_h, ~wtc_j, ~cutoff_time,
+  "B", "31-80", "x", "", "", "90 minutes",
+  "C", "81-180", "x", "x", "", "120 minutes",
+  "D", "181-220", "x", "x", "", "150 minutes",
+  "E", "> 220", "x", "x", "x", "180 minutes"
+) %>%
+  gt(id = "one") %>%
+  tab_spanner(
+    label = "WTC",
+    columns = c(wtc_m, wtc_h, wtc_j)
+  ) %>%
+    cols_label(
+    category = "",
+    seat_capacity = "Seats",
+    wtc_m = "M",
+    wtc_h = "H",
+    wtc_j = "J",
+    cutoff_time = "Cutoff time"
+  ) %>%
+    cols_align(
+    align = "right",
+    columns = seat_capacity
+  ) %>%
+  tab_footnote(
+    footnote = "Turnaround cutoff time based on scheduled Ground Time.",
+    locations = cells_column_labels(
+      columns = cutoff_time
+    )
+  ) %>%
+    opt_css(
+    css = "
+      #one .gt_table {
+        width: auto !important;
+      }
+    "
+  )
+```
+
+Additional information, based on Network Manager data, can be found in the tool MIRROR at https://www.eurocontrol.int/tool/mirror

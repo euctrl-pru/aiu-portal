@@ -1,0 +1,212 @@
+---
+title: "Vertical Flight Efficiency During Climb and Descent"
+date: "2016-04-05"
+type: "Study"
+excerpt: "Vertical flight efficiency during the climb and descent phases of flights"
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+---
+
+
+
+<p>In addition to horizontal flight efficiency, various stakeholders have indicated
+to be interested in the vertical aspect of flight efficiency as well. The PRU
+have responded to this need by developing and testing performance indicators
+addressing vertical flight efficiency for possible use in the future.</p>
+<p>The focus in this document is put on vertical flight efficiency during the climb
+and descent phases of flights rather than during the cruising phase.</p>
+<p>During climb and descent, pilots are often faced with intermediate level-offs (Figure <a href="#fig:cco-cdo-1">1</a>).</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cco-cdo-1"></span>
+<img src="../../../../../../../../images/cco-cdo-1.png" alt="Typical vertical profile with intermediate level segments during climb and descent." width="600px" />
+<p class="caption">
+Figure 1: Typical vertical profile with intermediate level segments during climb and descent.
+</p>
+</div>
+<p>These level segments increase fuel burn since they generally take place at
+suboptimal altitudes. During descent the impact on fuel efficiency is generally
+higher because additional thrust has to be applied to fly level, while the
+lowest thrust setting could be used when a complete continuous descent would be
+available and flown by the pilot.</p>
+<p>Hence, several studies and the reference material related to this topic
+<span class="citation">(<a href="#ref-CCDvsCDA" role="doc-biblioref">Larsson 2011</a>; <a href="#ref-vertical-flight-efficiency-tn" role="doc-biblioref">Performance Review Commission 2008</a>; <a href="#ref-turkish-atm-efficiency" role="doc-biblioref">Canarslanlar et al. 2014</a>; <a href="#ref-airbus-fuel-economy" role="doc-biblioref">Airbus 2004</a>)</span>
+suggest that the benefit pool regarding
+fuel efficiency is larger for descents than for climbs.</p>
+<p>Continuous climb operations (CCO) and continuous descent operations (CDO) are
+beneficial for the environment, in terms of fuel burn, the associated emissions
+and noise (Figure <a href="#fig:cco-cdo-2">2</a>).</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cco-cdo-2"></span>
+<img src="../../../../../../../../images/cco-cdo-2.png" alt="Smoother trajectory with continuous climb and descent." width="600px" />
+<p class="caption">
+Figure 2: Smoother trajectory with continuous climb and descent.
+</p>
+</div>
+<p>The methodology presented here (see grey box) is very similar for the climb and
+descent phase so that the results for both phases are directly comparable.</p>
+<p>The radius of 200NM around the airport is chosen because aircraft generally
+reach their cruising altitude within 200NM from take-off and the cruise level is
+also generally left within 200NM from the arrival airport. Another reason for
+this choice is to be able to distinguish the climb/descent phase of the flight
+from the cruise phase.</p>
+<p>Additionally to the 200NM radius, a vertical limit is used based on the altitude
+put in the flight plan at 200NM from the airport. This altitude is used to be
+able to highlight inefficiencies which are introduced on a tactical basis.
+Obviously, these inefficiencies are not known to the airlines before they take
+off so the amount of fuel on board might not be the optimal amount.</p>
+<div id="methodological-notes" class="section level3 well well-sm">
+<h3>Methodological notes</h3>
+<p>In the climb or descent parts of the trajectories the level segments are
+determined by calculating the rate of climb or descent (vertical velocity)
+between every pair of consecutive data points. If the rate of climb or descent
+between two data points is smaller than or equal to a chosen vertical velocity,
+that part of the trajectory is considered as a level flight segment. Doing this
+for the entire climb or descent trajectory, the distance and time flown level
+can be calculated.</p>
+<div id="assumptions" class="section level4">
+<h4>Assumptions</h4>
+<ul>
+<li><p>The analysis is done for the part of the flight between the
+departure/arrival airport and the moment where either:</p>
+<ul>
+<li>the flight crosses the 200NM radius around the airport while it is below the
+altitude that is in the flight plan at that point; or</li>
+<li>the flight is inside the 200NM radius around the airport but crosses the
+altitude that is in the flight plan at the 200NM radius.</li>
+</ul></li>
+<li><p>A segment of the trajectory is considered as level flight when its rate of
+climb or descent is lower than or equal to 300 feet per minute.</p></li>
+<li><p>Level segments shorter than 0.5NM are not considered.</p></li>
+</ul>
+</div>
+</div>
+<div id="case-study" class="section level2">
+<h2>Case study</h2>
+<p>The practical use of the methodology is demonstrated in the following case study
+showing all flights from/to a specific European airport, based on a radar data
+sample for July 2015.</p>
+<p>The following assumptions were made for the analysis:</p>
+<ul>
+<li><p>Different runways in use are not distinguished by the analysis because this
+information is not available and the available data don’t allow determining it
+with a high degree of confidence.</p></li>
+<li><p>The climb phase is considered to start at 3000 feet AGL since the Noise
+Abatement Departure Procedures (NADP) defined by ICAO end at this altitude
+<span class="citation">(<a href="#ref-icao:8168" role="doc-biblioref">ICAO 2006</a>)</span>.</p></li>
+<li><p>The descent phase is considered to end at 1800 feet AGL because the
+interception altitude for ILS systems is generally above this altitude. Using
+1800 feet AGL as lower limit allows capturing the level segments before ILS
+interception but disregards the trajectory below 1800 feet AGL where the
+aircraft are on the ILS glideslope and no level segments should occur.</p></li>
+</ul>
+<p>Table <a href="#tab:results">1</a> shows the numerical results of the analysis.</p>
+<table>
+<caption><span id="tab:results">Table 1: </span>Numerical results</caption>
+<colgroup>
+<col width="76%" />
+<col width="11%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Climb</th>
+<th>Descent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Average time flown level per flight</td>
+<td>14.1 s</td>
+<td>59.4 s</td>
+</tr>
+<tr class="even">
+<td>Average percentage of time flown level per flight</td>
+<td>1.2 %</td>
+<td>4.6 %</td>
+</tr>
+<tr class="odd">
+<td>Average distance flown level per flight</td>
+<td>1.6 NM</td>
+<td>4.3 NM</td>
+</tr>
+<tr class="even">
+<td>Average percentage of distance flown level per flight</td>
+<td>1.5 %</td>
+<td>3.7 %</td>
+</tr>
+<tr class="odd">
+<td>Median percentage of highest CCO/CDO altitude</td>
+<td>98.2 %</td>
+<td>94.4 %</td>
+</tr>
+<tr class="even">
+<td>Number of flights</td>
+<td>8518</td>
+<td>8439</td>
+</tr>
+</tbody>
+</table>
+<p>It is clear that much less level flight is detected during climb than during
+descent. This observation is the same for all major European airports.</p>
+<p>As an example, the vertical trajectories during descent are plotted in blue in
+Figure <a href="#fig:cco-cdo-3">3</a> while the level segments are highlighted in red. It is clear that there
+are some vertical glitches present in the data but these will rather result in
+an underestimation of the amount of level flight.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cco-cdo-3"></span>
+<img src="../../../../../../../../images/cco-cdo-3.png" alt="Vertical trajectories during descent." width="700px" />
+<p class="caption">
+Figure 3: Vertical trajectories during descent.
+</p>
+</div>
+<p>It’s also interesting to evaluate the positions of level segments. Level
+segments of several flights around the same position suggest the presence of
+specific restrictions. Figure <a href="#fig:cco-cdo-4">4</a> shows the lateral view of the descent
+trajectories. Besides the level segments close to the airport, due to the
+vectoring and ILS procedures towards the runway, there is some level flight at
+higher altitudes as well. These level segments are most likely a result of
+constraints in handover procedures between neighbouring ANSPs, airspace
+restrictions or operational procedures which signals scope for future
+improvements.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cco-cdo-4"></span>
+<img src="../../../../../../../../images/cco-cdo-4.jpg" alt="Lateral trajectories during descent." width="700px" />
+<p class="caption">
+Figure 4: Lateral trajectories during descent.
+</p>
+</div>
+<div id="note" class="section level3">
+<h3>Note</h3>
+<p>This study is available as a PRU Leaflet, see
+<span class="citation">(<a href="#ref-cco-cdo-leaflet" role="doc-biblioref">Sam Peeters 2016</a>)</span> in the References section below.</p>
+<p>A paper has been submitted to the 2016 ICNS Conference, see
+<span class="citation">(<a href="#ref-icns-vfe" role="doc-biblioref">S. Peeters et al. 2016</a>)</span> in the References section below.</p>
+</div>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-airbus-fuel-economy" class="csl-entry">
+Airbus. 2004. <em>Getting to <span>Grips</span> with <span>Fuel Economy</span></em>. Getting <span>Grips</span> With 4. <span>Airbus</span>. <a href="http://goo.gl/OoDNYC">http://goo.gl/OoDNYC</a>.
+</div>
+<div id="ref-turkish-atm-efficiency" class="csl-entry">
+Canarslanlar, A. O., Usanmaz O., Turgut E. T., Cavcar M., Dogeroglu T., Yay O. D., and Armutlu K. 2014. <span>“The <span>Measurements</span> of <span>Turkish Airspace ATM Efficiency Based</span> on <span>Actual Flight Data</span>,”</span> November. <a href="http://www.sesarinnovationdays.eu/sites/default/files/SID%202014%20poster%20Measuring%20Turkish%20Airspace%20Efficiency.pdf">http://www.sesarinnovationdays.eu/sites/default/files/SID%202014%20poster%20Measuring%20Turkish%20Airspace%20Efficiency.pdf</a>.
+</div>
+<div id="ref-icao:8168" class="csl-entry">
+ICAO. 2006. <em>Doc 8168. <span>Aircraft Operations</span></em>. Fifth. Doc 8168 OPS/611. <span>ICAO</span>. <a href="http://www.aptrac.co.za/file/icao_8168_5th_ed..pdf">http://www.aptrac.co.za/file/icao_8168_5th_ed..pdf</a>.
+</div>
+<div id="ref-CCDvsCDA" class="csl-entry">
+Larsson, Peter. 2011. <span>“<span>CCD</span> Versus <span>CDA</span>,”</span> May. <a href="http://ansperformance.eu/library/CCDvsCDA.pdf">http://ansperformance.eu/library/CCDvsCDA.pdf</a>.
+</div>
+<div id="ref-cco-cdo-leaflet" class="csl-entry">
+Peeters, Sam. 2016. <span>“Vertical <span>Flight Efficiency During Climb</span> and <span>Descent</span>,”</span> April. <a href="http://ansperformance.eu/library/cco-cdo-leaflet.pdf">http://ansperformance.eu/library/cco-cdo-leaflet.pdf</a>.
+</div>
+<div id="ref-icns-vfe" class="csl-entry">
+Peeters, S., H. Koelman, R. Koelle, R. Galaviz-Schomisch, J. Gulding, and M. Meekma. 2016. <span>“Towards a Common Analysis of Vertical Flight Efficiency.”</span> In <em>2016 <span>Integrated Communications Navigation</span> and <span>Surveillance</span> (<span>ICNS</span>)</em>, 7A2-1-7A2-11. <span>Herndon, VA, USA</span>: <span>IEEE</span>. <a href="https://doi.org/10.1109/ICNSURV.2016.7486368">https://doi.org/10.1109/ICNSURV.2016.7486368</a>.
+</div>
+<div id="ref-vertical-flight-efficiency-tn" class="csl-entry">
+Performance Review Commission. 2008. <span>“Vertical Flight Efficiency.”</span> <a href="http://ansperformance.eu/library/vertical-flight-efficiency-tn.pdf">http://ansperformance.eu/library/vertical-flight-efficiency-tn.pdf</a>.
+</div>
+</div>
+</div>

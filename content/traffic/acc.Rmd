@@ -1,0 +1,33 @@
+---
+title: Daily traffic variation by Area Control Center (ACC)
+date: '2020-04-16'
+---
+<style type="text/css">
+.img-responsive {
+    margin: 0 auto;
+    max-width: 100%
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    border: 0;
+}
+</style>
+This dashboard shows the daily traffic variation[^1] for the European [ACC](/acronym/acc) compared to 2019[^2]. <br> 
+Observed variations are the result of many different factors including: COVID-19, Overall economic downturn, Failure of airlines, ANSPs' disruptions,  Airports' disruptions, Traffic variation in 2019.
+* The graphics on the right present the daily evolution, the average evolution of each week (starting on Mondays) and the moving average over the last 7 days.
+
+<div class="resp-container"><iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/DailyTrafficVariation-ACCs.html" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+[^1]: Traffic at ACC level = Total IFR Flights controlled by each ACC.
+[^2]: The comparison with the previous year is adjusted to fit the cosest comparable day: i.e. Monday 03/02/2020 is compared to Monday 04/02/2019.

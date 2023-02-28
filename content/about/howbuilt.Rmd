@@ -1,0 +1,103 @@
+---
+title: How this site is built
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+This portal is designed and built using the following principles:
+
+* everything has to be version controlled
+* adopt KISS principle: Keep It Simple and Stupid.
+* build a static website
+* use open source tools whenever possible
+
+## Open source/Free tools and services we use
+
+* [git ![git](/images/git-logo.png){width="22" height="22"}][git]:
+	a distributed version control system.
+* [Hugo ![Hugo](/images/hugo-logo.png){width="22" height="22"}][hugo]:
+	a static site generator.
+* [D3 ![D3](/images/d3-logo.png){width="22" height="22"}](https://d3js.org/):
+	a JavaScript library for producing dynamic, interactive data visualizations in web browsers.
+* [GitHub Pages ![GitHub Pages](/images/Octocat.png){width="22" height="22"}](https://pages.github.com/):
+	a service by GitHub whereby you can have a website served on the Internet for every user, organization or repository.
+* [GitHub Organizations ![GitHub Organizations](/images/Octocat.png){width="22" height="22"}][ghorg]:
+  a service by GitHub for groups of people.
+* [Travis CI ![Travis CI](/images/travisci-logo.png){width="22" height="22"}](https://travis-ci.org/):
+	a hosted, distributed continuous integration service used to build and test software projects.
+* [R ![R Project for Statistical Computing](/images/R-logo.png){width="22" height="22"}](https://www.r-project.org/):
+	a free software environment for statistical computing and graphics.
+* [Tidyverse ![Tidyverse](/images/tidyverse-logo.png){width="22" height="22"}](https://www.tidyverse.org/):
+	is an opinionated collection of R packages designed for data science.
+	Among them:
+    * [dplyr ![dplyr](/images/dplyr-logo.png){width="22" height="22"}](https://dplyr.tidyverse.org/):
+	  	 a grammar of data manipulation, providing a consistent set of verbs that help you solve
+		   the most common data manipulation challenges.
+    * [readr ![readr](/images/readr-logo.png){width="22" height="22"}](https://readr.tidyverse.org/):
+		   a fast and friendly way to read rectangular data (like csv, tsv, and fwf).
+    * [ggplot2 ![ggplot2](/images/ggplot2-logo.png){width="22" height="22"}](https://ggplot2.tidyverse.org/):
+		   a system for declaratively creating graphics, based on [The Grammar of Graphics](http://amzn.to/2ef1eWp).
+* [Google Charts ![Google Charts](/images/google-developers-charts-logo.png){width="22" height="22"}](https://developers.google.com/chart/):
+	an interactive Web service that creates graphical charts from user-supplied information.
+* [Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/):
+	offers hosting and serverless backend services for static websites.
+
+
+
+
+## Scaffolding
+
+This website is a statically generated one: there is no CMS, no database, no
+authorization server behind it. It is just a bunch of HTML pages. These pages
+are generate by [Hugo ![Hugo](/images/hugo-logo.png){width="22" height="22"}](https://gohugo.io/)
+either out of plain Markdown or R Markdown.
+
+Hugo is a static site generator, i.e. it takes a description, generally a
+template, of the pages you want to build and generates the relevant HTML.
+
+
+### Repositories
+
+We use [git ![git](/images/git-logo.png){width="22" height="22"}](https://git-scm.com/)
+as our (distributed) version control system.
+And we selected GitHub as the central server for our git repositories.
+
+In order to group all our repositories we created a
+[GitHub Organizations ![GitHub Organizations](/images/Octocat.png){width="22" height="22"}][ghorg]
+called `euctrl-pru`. It is a sort of company/team account.
+
+We have one repository for the *source* pages, [portal](https://github.com/euctrl-pru/portal),
+where you can find and follow all we publish.
+
+
+### Web hosting
+
+Once we submit a change to the (master branch of the) `portal` repository,
+[Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/)
+triggers a build of the website and publishes it.
+
+
+### Continuous Integration and Deployment
+
+We use the continuos integration service of
+[Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/)
+to automatically
+
+* build every commit in our release branch (any branch name starting with
+  `2016<2 digit month number>-release`). These build can include tests to be
+  executed in order to garantee a certain level of quality...
+
+* build every `master` branch commit **and if successful** deploy the generated site.
+  This is a way to publish our releases and make them available on the Internet.
+  (*Less work for the Humans more boring work for the Machines*)
+
+### Credits
+<div>Icons made by <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<a href="https://www.flaticon.com/free-icons/click" title="click icons">Click icons created by Freepik - Flaticon</a>
+
+[git]: <https://git-scm.com/> "git"
+[hugo]: <https://gohugo.io/> "Hugo"
+[ghorg]: <https://github.com/blog/674-introducing-organizations> "GitHub Organizations blog post"

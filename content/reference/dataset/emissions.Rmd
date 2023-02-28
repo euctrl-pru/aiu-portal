@@ -1,0 +1,46 @@
+---
+title: CO₂ emissions by State
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+slug: emissions
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+<br>
+
+## Data source
+The data is supplied by the [EUROCONTROL Aviation Sustainability Unit][env].
+
+
+## Data description
+The CO<sub>2</sub> emissions were calculated with the EUROCONTROL [Small Emitters Tool (SET)][set],
+which enables to estimate the fuel burn and associated CO<sub>2</sub> emissions for an entire flight.
+Hence, the results reflect total CO<sub>2</sub> emissions from controlled flights rather than ANSP/ATM performance. 
+
+The **total CO<sub>2</sub> emissions for each State** were calculated based on **departing [IFR](/acronym/ifr/) flights**
+billed by the [EUROCONTROL Route Charges Office][crco],
+**aircraft type** and **actual flown distance** (full trajectory from origin to destination). 
+
+For instance, the total CO<sub>2</sub> emissions for the full trajectory of a flight from Brussels to
+New York would be included in the results for Belgium. 
+A flight from New York to Brussels would however NOT be included in the results for Belgium.  
+
+
+## Column naming and types
+
+| Column name    | Description              | Example |
+|----------------|--------------------------|---------|
+| YEAR           | Year                     | 2019    |
+| MONTH          | Month                    | 1       |
+| STATE_NAME     | State Name               | ALBANIA |
+| STATE_CODE     | State Code               | LA      |
+| CO2_QTY_TONNES | CO2 Qty (for that state) | 8318.42 |
+| TF             | traffic (for that state) | 821     |
+
+
+
+[env]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
+[set]: https://www.eurocontrol.int/tool/small-emitters-tool "small emitters tool"
+[crco]: https://www.eurocontrol.int/crco "EUROCONTROL Route Charges Office"

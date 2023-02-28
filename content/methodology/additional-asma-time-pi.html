@@ -1,0 +1,1073 @@
+---
+title: Performance Indicator - Additional ASMA Time
+subtitle: Level 1 and 2 documentation of the Additional ASMA Time performance indicator
+bibliography: ["../../static/bib/legislation.bib", "../../static/bib/aviation.bib"]
+link-citations: true
+slug: additional-asma-time-pi
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<div id="general" class="section level2">
+<h2>General</h2>
+<p>This document describes the conceptual, informational, and implementation
+independent model of the additional ASMA time performance indicator.</p>
+<p>The indicator is used as part of the performance monitoring and reporting under:</p>
+<ul>
+<li>SES: IR691/2010 <span class="citation">(<a href="#ref-eu:691/2010" role="doc-biblioref">EU 2010</a>)</span> and IR390/2013 <span class="citation">(<a href="#ref-eu:390/2013" role="doc-biblioref">EU 2013</a>)</span>, and</li>
+<li>EUROCONTROL: performance review reporting <span class="citation">(<a href="#ref-atmap-2009" role="doc-biblioref">Performance Review Unit 2009</a>)</span>.</li>
+</ul>
+<p>This web page is generated from <span class="citation">(<a href="#ref-pru-adasma-pi" role="doc-biblioref">Cappelleras 2015</a>)</span>.</p>
+</div>
+<div id="purpose-of-the-document" class="section level2">
+<h2>Purpose of the document</h2>
+<p>The purpose of this document is twofold:</p>
+<ol style="list-style-type: decimal">
+<li>to present the concept, and underlying logical and mathematical modelling of
+the indicator; and</li>
+<li>to document the processing and use of data for the calculation of the
+indicator.</li>
+</ol>
+</div>
+<div id="scope" class="section level2">
+<h2>Scope</h2>
+<p>This document covers the data processing and calculation of the additional ASMA
+time performance indicator.</p>
+<p>The calculation of this performance indicator is performed according to the
+Airport Operator Data Flow <span class="citation">(<a href="#ref-ir691-apt" role="doc-biblioref">Eurocontrol 2010</a>)</span> standard for
+data collection and processing, under
+the responsibility of the airports division in the QoS department of the PRU,
+which is compliant with IR691/2010 and IR390/2013. For the calculation of the
+indicator, the Airport Operator Data Flow is combined with trajectory data
+provided by the Network Manager.</p>
+<p>The associated processes and procedures are documented as part of the PRU
+Quality Management System.</p>
+<p>This performance indicator is also defined in the Implementing Regulation
+(390/2013), Annex I, Section 2 Environment, 2.2 (b).</p>
+</div>
+<div id="summary-of-the-performance-indicator-information" class="section level2">
+<h2>Summary of the performance indicator information</h2>
+<p>The following list summarises the status of the indicator:</p>
+<ul>
+<li>Current version status: Monitoring.</li>
+<li>Version status and evolution:
+<ul>
+<li>Conceptual Phase: 2008, phase completed.</li>
+<li>Technical Development: 2008, phase completed.</li>
+<li>Prototyping / Validation: 2008, phase completed.</li>
+<li>Monitoring: RP1 and RP2, active.</li>
+<li>Target Setting: n/a.</li>
+<li>Phase Out: n/a.</li>
+</ul></li>
+<li>Context
+<ul>
+<li>KPA
+<ul>
+<li>SES II Performance Scheme: Environment (RP2), Capacity (RP1).</li>
+<li>PRC/PRU: Efficiency.</li>
+</ul></li>
+<li>Focus Area: Airport impact on flight duration.</li>
+<li>Trade Offs: throughput and ATFM arrival delays.
+Trade-off can be observed between additional ASMA time, ATFM delay and
+runway throughput.</li>
+<li>Supports the SES II Performance Scheme (IR 691/2010 Annex I - Section 1 3.1
+and Section 2 - 3.1).</li>
+</ul></li>
+<li>Description: This indicator provides an approximate measure of the average
+inbound queuing time on the inbound traffic flow, during times that the
+airport is congested.</li>
+<li>Formula and Metrics: This indicator is calculated on the basis of data
+availability for actual ASMA entry time (flight entering the area within 40 NM
+radius around the airport) and Actual Landing Time (ALDT). The additional ASMA
+time is the difference between the actual ASMA transit time and the median
+unimpeded ASMA transit time for the group of similar flights. The ASMA
+additional time for the airport is the average of the average ASMA values for
+all flights.</li>
+<li>Units: Minutes per IFR arrival.</li>
+<li>Used in
+<ul>
+<li>SES (IR691/2010 &amp; IR390/2013): Annual Performance Report.</li>
+<li>SES eDashboard [ RP1 <span class="citation">(<a href="#ref-prb:dashboardRP1" role="doc-biblioref">Performance Review Body 2015</a>)</span> and RP2 <span class="citation">(<a href="#ref-prb:dashboardRP2" role="doc-biblioref">Performance Review Body 2016</a>)</span> ]</li>
+<li>EUROCONTROL: Performance Review Report</li>
+</ul></li>
+</ul>
+</div>
+<div id="acronyms-and-terminology" class="section level2">
+<h2>Acronyms and terminology</h2>
+<table>
+<caption><span id="tab:acronyms">Table 1: </span> Acronyms and terminology</caption>
+<thead>
+<tr class="header">
+<th align="left">Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">AC</td>
+<td>Aircraft class</td>
+</tr>
+<tr class="even">
+<td align="left">AdASMA</td>
+<td>Additional ASMA Time</td>
+</tr>
+<tr class="odd">
+<td align="left">ALDT</td>
+<td>Actual Landing Time</td>
+</tr>
+<tr class="even">
+<td align="left">ASMA</td>
+<td>Arrival Sequencing and Metering Area</td>
+</tr>
+<tr class="odd">
+<td align="left">ATFM</td>
+<td>Air Traffic Flow Management</td>
+</tr>
+<tr class="even">
+<td align="left">ATM</td>
+<td>Air Traffic Management</td>
+</tr>
+<tr class="odd">
+<td align="left">ATMAP</td>
+<td>ATM Airport Performance project</td>
+</tr>
+<tr class="even">
+<td align="left">ET</td>
+<td>Entry Time</td>
+</tr>
+<tr class="odd">
+<td align="left">ICAO</td>
+<td>International Civil Aviation Organization</td>
+</tr>
+<tr class="even">
+<td align="left">IR691</td>
+<td>COMMISSION REGULATION (EU) No 691/2010</td>
+</tr>
+<tr class="odd">
+<td align="left">IR390</td>
+<td>COMMISSION REGULATION (EU) No 390/2013</td>
+</tr>
+<tr class="even">
+<td align="left">KPA</td>
+<td>Key Performance Area</td>
+</tr>
+<tr class="odd">
+<td align="left">KPI</td>
+<td>Key Performance Indicator</td>
+</tr>
+<tr class="even">
+<td align="left">PI</td>
+<td>Performance Indicator</td>
+</tr>
+<tr class="odd">
+<td align="left">PRU</td>
+<td>Performance Review Unit</td>
+</tr>
+<tr class="even">
+<td align="left">QoS</td>
+<td>Quality of Service</td>
+</tr>
+<tr class="odd">
+<td align="left">RWY</td>
+<td>Runway</td>
+</tr>
+<tr class="even">
+<td align="left">SEC</td>
+<td>ASMA sector</td>
+</tr>
+<tr class="odd">
+<td align="left">SES</td>
+<td>Single European Sky</td>
+</tr>
+<tr class="even">
+<td align="left">TMA</td>
+<td>Terminal Manoeuvring Area</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="conceptual-model" class="section level1">
+<h1>Conceptual model</h1>
+<div id="what-we-ideally-would-like-to-measure" class="section level2">
+<h2>What we ideally would like to measure</h2>
+<p>On the conceptual level, the indicator aims to address the operational penalty
+associated with techniques used to maximize runway utilisation for inbound
+traffic flows at an airport, i.e. the accumulation of additional approach time
+resulting from speed control, path stretching and circling in the vicinity of
+the airport (use of holding patterns/stacks).</p>
+</div>
+<div id="concept-of-runway-optimisation" class="section level2">
+<h2>Concept of runway optimisation</h2>
+<p>When aircraft cannot fly unimpeded 4D trajectories, there are generally three
+places at which queuing takes place, as illustrated in the Figure <a href="#fig:adasma-01">1</a>:</p>
+<ol style="list-style-type: decimal">
+<li>At the departure stand (pre-departure queuing to optimise network
+performance)</li>
+<li>At the departure runway (take-off queuing, e.g. runway holding)</li>
+<li>In the arrival terminal airspace (arrival queuing in the Arrival Sequencing
+and Metering Area or ASMA, using speed control, stacks, holding, extension of
+approach path etc.)</li>
+</ol>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-01"></span>
+<img src="../../../../../../../images/adasma-01.png" alt="Outbound and Inbound Traffic Queues from a Flight Phase Perspective." width="500px" />
+<p class="caption">
+Figure 1: Outbound and Inbound Traffic Queues from a Flight Phase Perspective.
+</p>
+</div>
+<p>Uncertainty of approach conditions (e.g. pilot performance, landing clearance
+time, approach speed, wind conditions) makes traffic supply to runways a
+stochastic phenomenon.</p>
+<p>In order to ensure continuous traffic demand at runways and maximise runway
+usage, a minimum level of queuing is required. A certain extent of arrival
+queuing in airspace is necessary to allow arrival management (sequencing and
+metering) to optimise runway utilisation when demand is at or near the
+operational capacity.</p>
+<p>However, additional time in holding is detrimental to operations efficiency,
+fuel consumption and environment. Therefore, a trade-off exists between approach
+efficiency and runway throughput.</p>
+<p>Optimisation of the runway utilisation may require:</p>
+<ol style="list-style-type: decimal">
+<li>Re-sequencing the take-off/ landing order at the runway (first come is not
+first served), and</li>
+<li>buffering a sufficient number of aircraft in the queue to be able to fine
+tune the metering (to optimise the separation of aircraft released from the
+queue to the runway.)</li>
+</ol>
+<p>In both cases some aircraft will suffer a certain penalty in terms of queuing
+time. Higher runway utilisation targets may require higher levels of departure
+(take-off) queuing in the manoeuvring area and arrival queuing in airspace. This
+effect can be reduced if aircraft are already delivered to the queue in the
+right sequence and at the required time intervals.</p>
+<p>To reduce cost and environmental impact, the departure and arrival queuing time
+should be kept to the minimum needed to achieve the selected runway utilisation
+objectives. If possible, any departure and arrival delay that is needed for
+other reasons than sequencing and metering should therefore be absorbed at the
+departure stand through ATFM delays and local ATC pre-departure delay. If this
+is done properly, then measuring outbound and inbound queuing time allows
+assessing the “operational cost” associated with sequencing and metering in
+function of the selected runway utilisation objectives.</p>
+</div>
+<div id="conceptual-approach" class="section level2">
+<h2>Conceptual approach</h2>
+<p>The additional ASMA time is a proxy for the management of the arrival flow,
+understood as the average arrival runway queuing time on the inbound traffic
+flow, during periods of congestion at airports.</p>
+<p>Performance in terms of additional ASMA time is monitored on the basis of
+regular reporting in comparison to a nominal reference. Based on regular
+reporting, metrics are derived for the respective reporting month. The current
+measurements are compared to a nominal reference to address the level of
+efficiency. The reference is derived from the statistical analysis of a
+reference period sample. This approach is depicted in Figure <a href="#fig:adasma-02">2</a>.
+Based on regular
+reporting, metrics are derived for the respective reporting month. The current
+measurements are compared to a nominal reference to address the level of
+efficiency. The reference is derived from the statistical analysis of a
+reference period sample.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-02"></span>
+<img src="../../../../../../../images/adasma-02.png" alt="Performance Measurement Approach." width="650px" />
+<p class="caption">
+Figure 2: Performance Measurement Approach.
+</p>
+</div>
+<p>The indicator is defined, see Equation <a href="#eq:AcASMA">(1)</a>, as the difference between the
+ASMA transit time (actual
+ASMA time) and the unimpeded ASMA time, based on ASMA transit times in periods
+of low traffic.</p>
+<p><span class="math display" id="eq:AcASMA">\[
+\begin{equation}
+textrm{Actual ASMA Time} = textrm{Unimpeded ASMA Time} + textrm{Additional ASMA Time}
+\tag{1}
+\end{equation}
+\]</span></p>
+<p>The unimpeded reference time is determined based on a statistical analysis of
+historic data observed at the airport, averaged for groupings of similar
+flights. The additional ASMA time is a measure for the extent of which the
+actual ASMA time exceeds the unimpeded reference.</p>
+</div>
+</div>
+<div id="logical-model" class="section level1">
+<h1>Logical model</h1>
+<p>This section describes the underlying logical modelling and drives the
+implementation of the additional ASMA time algorithm.</p>
+<div id="assumptions" class="section level2">
+<h2>Assumptions</h2>
+<p>The purpose of the <strong>additional ASMA time</strong> indicator is to provide an
+approximate measure of the <strong>average inbound queuing time</strong> on the inbound
+traffic flow, during times that the airport is congested.</p>
+<p>The calculation of this indicator is based on generalised ASMA area defined
+around an airport. Aircraft are subject to the management of the arrival flow
+upon entering the ASMA area. Accordingly, the time spent within the ASMA area,
+i.e. the time elapsing between entering the ASMA area (actual ASMA entry time,
+ET) and the actual landing time of an arriving flight (ALDT). The generalised
+ASMA area is defined by a cylinder of radius 40NM around the airport extending
+to unlimited in terms of altitude.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-03"></span>
+<img src="../../../../../../../images/adasma-03.png" alt="Conceptual approach for Additional ASMA Time." width="450px" />
+<p class="caption">
+Figure 3: Conceptual approach for Additional ASMA Time.
+</p>
+</div>
+<p>Actual ASMA time refers to the period between the point in time when the
+aircraft enters the ASMA cylinder for the last time (‘entry time’) and the
+landing time. This ensures a consistent measurement for the inbound flow in the
+40 NM around an airport. The additional time is measured as the average
+additional time beyond the unimpeded ASMA time, which is a statistically
+determined reference time based on actual ASMA times in periods of low traffic
+demand.</p>
+<p><strong>Note</strong>: The indicator is currently defined for a radius of 40 NM to allow for
+comparability across Europe. For monitoring purposes, a supporting metric
+considering a radius of 100NM is calculated by PRU (the 40/100NM positions and
+timestamps are calculated from data feeds the Network Manager receives from
+member states.)</p>
+<p>This indicator excludes influence of the following factors:</p>
+<ol style="list-style-type: decimal">
+<li><p>Impact of noise management and terrain clearance aspects: the same effects
+are included in both the impeded and unimpeded transit times; therefore this
+does not show up in the additional time which is the difference between
+impeded and unimpeded.</p></li>
+<li><p>Effect of runway friction deteriorations: periods with such conditions are
+excluded. The calculation algorithm does not explicitly take any weather
+conditions into account.</p></li>
+</ol>
+</div>
+<div id="grouping-of-flights" class="section level2">
+<h2>Grouping of flights</h2>
+<p>To reduce the number of combinations of unique entry points and arrival runway,
+arriving flights entering the ASMA area within certain limits are grouped
+together. The clustering is based on observed arrival flows (i.e. crossing of
+flown trajectory with the ASMA cylinder).</p>
+<p>The result of this clustering yields the <strong>ASMA sectors</strong> and may not be
+confused with the actual TMA or approach sectors around the airport. Each ASMA
+sector covers a major arrival flow, and the extent of the sector is based on
+visualization of arrival radar tracks (see Figure <a href="#fig:adasma-sectors">4</a>)
+and the aforementioned entry points.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-sectors"></span>
+<img src="../../../../../../../images/asmasectors.jpg" alt="ASMA sectors and bearing." width="450px" />
+<p class="caption">
+Figure 4: ASMA sectors and bearing.
+</p>
+</div>
+<p>The indicator is first calculated at disaggregated level, i.e. per comparable
+<strong>grouping</strong> of flights with the same combination of <strong>ASMA sector</strong>, <strong>landing
+runway</strong> and <strong>aircraft class</strong>. Each grouping of flights has an unimpeded
+reference associated.</p>
+<p>Taking the weighted average of the values for all groups produces the ASMA
+additional time for the airport.</p>
+</div>
+<div id="overview-of-the-logical-model-of-the-additional-and-unimpeded-asma-times" class="section level2">
+<h2>Overview of the logical model of the Additional and Unimpeded ASMA Times</h2>
+<p>This section focuses on the algorithm for the calculation of the additional ASMA
+time indicator from a logical point of view.</p>
+<p>The additional ASMA time calculation is depicted below.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-05"></span>
+<img src="../../../../../../../images/adasma-05.png" alt="Logical steps of Additional ASMA Time calculation." width="900px" />
+<p class="caption">
+Figure 5: Logical steps of Additional ASMA Time calculation.
+</p>
+</div>
+<p>The unimpeded ASMA time is calculated as depicted below.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-06"></span>
+<img src="../../../../../../../images/adasma-06.png" alt="Logical steps of unimpeded ASMA Time calculation." width="1000px" />
+<p class="caption">
+Figure 6: Logical steps of unimpeded ASMA Time calculation.
+</p>
+</div>
+</div>
+<div id="logical-approach-to-additional-asma-time-calculation" class="section level2">
+<h2>Logical approach to Additional ASMA Time calculation</h2>
+<p>The computation of the indicator is based on four consecutive steps:</p>
+<style type="text/css">
+    .alpha ol li { list-style-type: upper-alpha; }
+</style>
+<div class="alpha">
+<ol style="list-style-type: decimal">
+<li>Filter out the flights with erroneous data and helicopters.</li>
+<li>The unimpeded times are calculated from a reference dataset in a separate
+process that is explained in the next section, and their values are constant
+for groups of similar flights (same ASMA entry sector, same arrival runway,
+same aircraft class).</li>
+<li>Calculation of the average additional time for each group of similar flights
+by calculating the additional time for each flight through subtraction of the
+group’s unimpeded time from the actual time each flight spent in ASMA space.</li>
+<li>The calculation of the average additional ASMA time for the airport which is
+the weighted average of the average additional ASMA times of all groups of
+similar inbound flights. [min/IFR flight].</li>
+</ol>
+</div>
+</div>
+<div id="logical-approach-to-unimpeded-asma-time-calculation" class="section level2">
+<h2>Logical approach to Unimpeded ASMA Time calculation</h2>
+<p>The unimpeded ASMA time for each flight is taken from the unimpeded reference
+tables. These are calculated by averaging the actual ASMA time for the unimpeded
+flights from a reference sample (e.g. one year worth of data). The basis of the
+algorithm is to determine which flights are unimpeded.</p>
+<p>The unimpeded ASMA time corresponds to the ASMA time that an aircraft of a given
+triplet, aircraft type – entry sector – runway combination, would spend if no
+additional sequencing time would be added, i.e., if the operation would be
+unimpeded. The unimpeded times are calculated from a reference data set, and
+their values are constant for each triplet combination.</p>
+<p>The process steps are described below:</p>
+<ol style="list-style-type: decimal">
+<li>The flights with no data or with wrong data are filtered;</li>
+<li>Actual ASMA time and congestion level are calculated per flight;</li>
+<li>For each flight and flight groupings of same aircraft type – entry sector –
+runway combination, calculate the saturation level per grouping;</li>
+<li>From these flights, determine which flights are unimpeded by comparing
+congestion level and saturation level, for each grouping of flights with a
+different AC – SEC – RWY combination;</li>
+<li>The unimpeded time is calculated as the median of all flights in the grouping
+of combinations AC-SECRWY, for groupings that have at least 20 unimpeded
+flights. No unimpeded reference time is calculated for the groupings that
+have less than 20 unimpeded flights. Night flights are excluded.</li>
+</ol>
+</div>
+</div>
+<div id="mathematical-model" class="section level1">
+<h1>Mathematical model</h1>
+<p>The aim of this section is to describe how the logical model is modelled
+mathematically.</p>
+<div id="mathematical-model-of-the-additional-asma-time-performance-indicator" class="section level2">
+<h2>Mathematical model of the Additional ASMA Time performance indicator</h2>
+<p>ASMA (Arrival Sequencing and Metering Area) is defined as the airspace within a
+radius of 40NM around an airport. The additional ASMA time is a proxy for the
+average arrival runway queuing time of the inbound traffic flow, during times
+when the airport is congested.</p>
+<p>Mathematically, the actual ASMA transit time per flight is calculated as the
+difference between the entry time at ASMA cylinder and ALDT. The additional ASMA
+time performance indicator is calculated as the difference between the actual
+transit time, and a previously computed transit time reference considered as
+unimpeded ASMA time.</p>
+<p>Throughout this chapter units for each variable are shown in <strong>[<strong>
+</strong>]</strong> brackets.</p>
+<div id="step-a-filtering" class="section level3">
+<h3>Step A: Filtering</h3>
+<p>Calculation of the additional ASMA time performance indicator is done with the
+flight data reported by airports as monthly reporting in combination with data
+received from the Network Manager.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-stepA"></span>
+<img src="../../../../../../../images/adasma-stepA.png" alt="Step A." width="750px" />
+<p class="caption">
+Figure 7: Step A.
+</p>
+</div>
+<p>The following filter criteria apply:</p>
+<ul>
+<li><p>flights with no actual ASMA time or an actual ASMA time of more than 2 hours
+are excluded, i.e. flights with <span class="math inline">\(\textrm{AcASMA} &lt; 120 \textrm{min}\)</span> are taken into
+account;</p></li>
+<li><p>Helicopters are also excluded from the calculation.</p></li>
+</ul>
+</div>
+<div id="step-b-determination-of-unimpeded-time-ac-rwy-sec-combination" class="section level3">
+<h3>Step B: Determination of unimpeded time AC-RWY-SEC combination</h3>
+<p>In this step, flights are assigned a reference unimpeded ASMA time, according to
+the grouping of flights they belong. Flights are grouped by <span class="math inline">\(c_i\)</span>, or
+<strong>grouping of flights</strong> with the same combination aircraft class, ASMA sector
+and arrival runway (direction of runway, i.e. 12 or 30R), at each airport <span class="math inline">\(j\)</span>
+(<span class="math inline">\(j = 1 \dotso n\)</span>, <span class="math inline">\(n\)</span> being the total number of airports affected by regulation
+IR390/2013).</p>
+<p>For example, if there are four aircraft classes landing at the airport <span class="math inline">\(j\)</span>,
+two ASMA sectors and two arrival runways, then there will be <span class="math inline">\(16 \, c_j\)</span>
+groupings of flights.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-stepB"></span>
+<img src="../../../../../../../images/adasma-stepB.png" alt="Step B." width="700px" />
+<p class="caption">
+Figure 8: Step B.
+</p>
+</div>
+<p><span class="math inline">\(\textrm{UASMA}(c_i)\)</span>, the <strong>unimpeded ASMA time</strong>, is a calculated constant for each
+grouping <span class="math inline">\(c_i\)</span> (for calculation see section 4.2) [min]. The unimpeded ASMA
+time is the ASMA transit time in non-congested conditions at arrival airport.</p>
+</div>
+<div id="step-c-calculation-of-additional-asma-time-per-flight" class="section level3">
+<h3>Step C: Calculation of Additional ASMA Time per flight</h3>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-stepC"></span>
+<img src="../../../../../../../images/adasma-stepC.png" alt="Step C." width="750px" />
+<p class="caption">
+Figure 9: Step C.
+</p>
+</div>
+<p>Let:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> arrival flight,</li>
+<li><span class="math inline">\(f_{c_i}\)</span> Arrival Flight belonging to the grouping <span class="math inline">\(c_i\)</span>. Each grouping
+<span class="math inline">\(c_i\)</span> contains at least one flight.</li>
+<li><span class="math inline">\(\textrm{ET}(f_{c_i})\)</span> ASMA entry time. The time of last entry of the flight
+<span class="math inline">\(f_{c_i}\)</span> in its ASMA sector [time],</li>
+<li><span class="math inline">\(\textrm{ALDT}(f_{c_i})\)</span> Actual Landing Time of flight <span class="math inline">\(f_{c_i}\)</span> [time],</li>
+</ul>
+<p>The <span class="math inline">\(\textrm{AcASMA}(f_{c_i})\)</span>, the actual ASMA transit time for a flight
+<span class="math inline">\(f_{c_i}\)</span>, is defined as the elapsed time between the time of the <strong>last</strong> entry
+of the flight <span class="math inline">\(f_{c_i}\)</span> in its ASMA sector, <span class="math inline">\(\textrm{ET}(f_{c_i})\)</span> [time], and its
+Actual Landing Time <span class="math inline">\(\textrm{ALDT}(f_{c_i})\)</span> [time].</p>
+<p><span class="math display">\[
+\textrm{AcASMA}(f_{c_i}) = \textrm{ALDT}(f_{c_i}) - \textrm{ET}(f_{c_i}), [min]
+\]</span></p>
+<p>Then, the <strong>Additional ASMA Time per flight</strong> <span class="math inline">\(\textrm{AdASMA}(f_{c_i})\)</span> is
+calculated for each flight <span class="math inline">\(f_{c_i}\)</span> as the difference between the Actual ASMA
+Transit Time <span class="math inline">\(\textrm{AcASMA}(f_{c_i})\)</span> of the flight and the Unimpeded ASMA Time
+<span class="math inline">\(\textrm{UASMA}(c_i)\)</span> for the Grouping <span class="math inline">\(c_i\)</span> to which the flight belongs.</p>
+<p><span class="math display">\[
+\textrm{AdASMA}(f_{c_i}) = \textrm{AcASMA}(f_{c_i}) - \textrm{UASMA}(c_i), [min]
+\]</span></p>
+</div>
+<div id="step-d-calculation-of-the-additional-asma-time-per-airport" class="section level3">
+<h3>Step D: Calculation of the Additional ASMA Time per airport</h3>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-stepD"></span>
+<img src="../../../../../../../images/adasma-stepD.png" alt="Step D." width="600px" />
+<p class="caption">
+Figure 10: Step D.
+</p>
+</div>
+<ul>
+<li><span class="math inline">\(N_j\)</span> is the total number of IFR arrivals in the data set used for
+calculation of the additional ASMA time performance indicator, [count].</li>
+</ul>
+<p>The <strong>additional ASMA time for a given airport</strong> <span class="math inline">\(\textrm{AdASMA}_j\)</span> is the average
+of the additional ASMA time <span class="math inline">\(\textrm{AdASMA}(f_j)\)</span>, for all the flights <span class="math inline">\(f_j\)</span> at
+that airport that have an unimpeded reference, in the sample <span class="math inline">\(N_j\)</span>.</p>
+<p><span class="math display">\[
+\textrm{AdASMA}_j = \frac{ textrm{AdASMA}(f_j)}{N_j}, [\textrm{min}/\textrm{IFR arrival flight}].
+\]</span></p>
+</div>
+</div>
+<div id="mathematical-model-of-the-unimpeded-asma-time" class="section level2">
+<h2>Mathematical model of the Unimpeded ASMA Time</h2>
+<p>The unimpeded ASMA time is the ASMA transit time in non-congested conditions at
+arrival airports. The unimpeded ASMA time is used (as a constant number for each
+combination of aircraft class, ASMA sector and arrival runway) in the
+calculation of the additional ASMA time. The unimpeded ASMA times are calculated
+for IFR arriving flights, at each airport.</p>
+<p>The following section details the calculation done as part of each step. The
+units for each variable are shown in <strong>[ ]</strong> brackets.</p>
+<div id="step-1-filtering" class="section level3">
+<h3>Step 1: Filtering</h3>
+<p>Reference sample for calculation of unimpeded times for all airports is one
+year, normally from (and including) January <span class="math inline">\(1^{st}\)</span> until <span class="math inline">\(31^{st}\)</span>
+December. The year depends on the availability of the data.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step1"></span>
+<img src="../../../../../../../images/adasma-step1.png" alt="Step 1." width="700px" />
+<p class="caption">
+Figure 11: Step 1.
+</p>
+</div>
+<p>A filter is applied so that only flights with <span class="math inline">\(\textrm{AcASMA}(f_{c_i}) &lt; 120\, \text{min}\)</span>
+are taken into account.</p>
+<p>Incomplete records will not be taken into account for the calculation, that is,
+records with no landing or Entry Time data.</p>
+</div>
+<div id="step-2-computations-at-flight-level-asma-time-congestion-level" class="section level3">
+<h3>Step 2: Computations at flight level: ASMA Time, Congestion level</h3>
+<p>At flight level, there are two parallel computations that lead to two new
+variables: the actual ASMA time (Step 2a) and the congestion level (Step 2b).</p>
+<div id="step-2a-calculation-of-the-actual-asma-time-per-flight" class="section level4">
+<h4>Step 2a: Calculation of the Actual ASMA Time per flight</h4>
+<p>Let:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> arrival flight,</li>
+<li><span class="math inline">\(f_{c_i}\)</span> Arrival Flight belonging to the grouping <span class="math inline">\(c_i\)</span>. Each grouping
+<span class="math inline">\(c_j\)</span> contains at least one flight.</li>
+<li><span class="math inline">\(\textrm{ET}(f_{c_i})\)</span> ASMA entry time. The time of last entry of the flight
+<span class="math inline">\(f_{c_i}\)</span> in its ASMA sector [time],</li>
+<li><span class="math inline">\(\textrm{ALDT}(f_{c_i})\)</span> Actual Landing Time of flight <span class="math inline">\(f_{c_i}\)</span> [time],</li>
+</ul>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step2a"></span>
+<img src="../../../../../../../images/adasma-step2a.png" alt="Step 2a." width="400px" />
+<p class="caption">
+Figure 12: Step 2a.
+</p>
+</div>
+<p>Then, <span class="math inline">\(\textrm{AcASMA}(f_{c_i})\)</span>, the Actual ASMA transit time for a flight
+<span class="math inline">\(f_{c_i}\)</span>, is defined as the elapsed time between the time of the last entry
+of the flight <span class="math inline">\(f_{c_i}\)</span> in its ASMA sector, <span class="math inline">\(\textrm{ET}(f_{c_i})\)</span> [time], and its
+actual landing time <span class="math inline">\(\textrm{ALDT}(f_{c_i})\)</span> [time].</p>
+</div>
+<div id="step-2b-determination-of-congestion-level-per-flight" class="section level4">
+<h4>Step 2b: Determination of Congestion Level per flight</h4>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step2b"></span>
+<img src="../../../../../../../images/adasma-step2b.png" alt="Step 2b." width="700px" />
+<p class="caption">
+Figure 13: Step 2b.
+</p>
+</div>
+<p>For each flight <span class="math inline">\(f_{c_i}\)</span>, a <strong>congestion level</strong> <span class="math inline">\(\textrm{seq}(f_{c_i})\)</span> can be
+determined [count]. The congestion level is the number of other landings during
+the time interval:
+[ASMA entry time <span class="math inline">\(\textrm{ET}(f_{c_i})\)</span>, actual landing time <span class="math inline">\(\textrm{ALDT}(f_{c_i})\)</span>] and
+then subtracting the flight itself. Thus, for all flights <span class="math inline">\(f\)</span> landing in that
+time interval:</p>
+<p><span class="math display">\[
+\text{seq}(f_{c_i}) = \sum f - 1 \quad \forall f \textrm{ such that }
+\text{ET}(f_{c_i}) \leq \text{ALDT}(f)
+\leq \text{ALDT}(f_{c_i})
+\]</span></p>
+</div>
+</div>
+<div id="step-3-computation-of-the-saturation-level" class="section level3">
+<h3>Step 3: Computation of the Saturation level</h3>
+<p>Computation of the saturation level requires the previous determination of the
+airport congestion index (Step 3a) and airport arrival throughput <span class="math inline">\(R_j\)</span> (Step
+3b). The grouping of flight according to their AC-RWY-SEC combination (Step 3c)
+allows the calculation of the first unimpeded time estimate U1 (Step 3d) and
+latter determination of the saturation level based on the results from each one
+of the computations (Step 3e).</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step3"></span>
+<img src="../../../../../../../images/adasma-step3.png" alt="Step 3." width="700px" />
+<p class="caption">
+Figure 14: Step 3.
+</p>
+</div>
+<div id="step-3a-determination-of-airport-congestion-index" class="section level4">
+<h4>Step 3a: determination of airport congestion index</h4>
+<p>At airport level, a constant known as the congestion limit <span class="math inline">\(\textrm{cl}\)</span> is chosen as:</p>
+<ul>
+<li><span class="math inline">\(0.5\)</span> for all airports.</li>
+</ul>
+</div>
+<div id="step-3b-calculation-of-airport-peak-hourly-arrival-throughput" class="section level4">
+<h4>Step 3b: Calculation of Airport Peak Hourly Arrival Throughput</h4>
+<p>The next step is defining the airport peak hourly arrival throughput, which is a
+theoretical hourly rate based on the truncated 20min window prior to the
+arrival. The – theoretical – maximum airport arrival throughput is seen as
+determinant of the level of traffic saturation and, thus, the threshold at which
+effects of congestion can be observed.</p>
+<p>For each aircraft landing at airport A, the number of aircraft that landed in
+the previous 20 minutes is counted.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step3b"></span>
+<img src="../../../../../../../images/adasma-step3b.png" alt="Step 3b." width="450px" />
+<p class="caption">
+Figure 15: Step 3b.
+</p>
+</div>
+<p>Let <span class="math inline">\(t_i\)</span> be the arrival time of the aircraft <span class="math inline">\(i\)</span>, <span class="math inline">\(n\)</span> be the number of
+aircraft that have landed in the window <span class="math inline">\([t_i − 20, t_i ]\)</span> and <span class="math inline">\(f_i\)</span> the
+landing time of the first aircraft in the window. Then, the arrival rate during
+this period is given by</p>
+<p><span class="math display">\[
+\text{hourly rate} = \frac{n - 1}{t_i - f_i}
+\]</span></p>
+<p>The numerator of the fraction is expressed as <span class="math inline">\(n – 1\)</span> to denote that the
+aircraft <span class="math inline">\(i\)</span> is excluded for the calculation of the rate.</p>
+<p>Therefore, the arrival throughput for each flight <span class="math inline">\(f_{c_i}\)</span> is calculated as:</p>
+<p><span class="math display">\[
+\text{hourly rate}(f_{c_j}) = \frac{count - 1}{base}
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+    {count}  =  \sum f  \quad \textrm{for } f \textrm{ such that} \quad {ALDT}(f_{c_i}) - 20\, \text{min} \leq {ALDT}(f) \leq {ALDT}(f_{c_i})
+\]</span></p>
+<p><span class="math display">\[
+    {base}  =  {ALDT}(f_{c_i}) - \textrm{min}({ALDT}(f))   \quad \text{where }
+    {ALDT}(f) \in [{ALDT}(f_{c_i}) - 20 \, \text{min},  {ALDT}(f_{c_i})]
+\]</span></p>
+<p>For example, for a flight landing at 07:04:00hrs, the first preceding arrival is
+observed at 06:45:04. The resulting rate base is hence 18:56 minutes. Assuming 9
+arrivals would be observed in this window (without counting the flight 07:04:00
+flight), this yields a (theoretical) hourly throughput of:</p>
+<p><span class="math display">\[
+\textrm{hourly departure throughput}(\text{flight}) = \
+\frac{9\, \textrm{flights}}{ {18:56}\, \textrm{min}} = \
+0.4754 \frac{\textrm{flights}}{\textrm{min}} = \
+28.52 \frac{\textrm{flights}}{\textrm{hour}}
+\]</span></p>
+<p>The peak hourly arrival throughput of the airport, <span class="math inline">\(R_j\)</span> , is calculated as
+the 90 percentile of all <span class="math inline">\(\text{hourly rate}\)</span> values in the reference sample</p>
+<p><span class="math display">\[
+R_j = 90^{th} \textrm{percentile}(\textrm{hourly rate}), [\textrm{flights}/\textrm{hour}]
+\]</span></p>
+</div>
+<div id="step-3c-grouping-of-similar-flights-by-ac-rwy-sec-combination" class="section level4">
+<h4>Step 3c: Grouping of similar flights by AC-RWY-SEC combination</h4>
+<p>Flights are grouped by <span class="math inline">\(c_i\)</span> , or <strong>Grouping of flights</strong> with the same
+combination aircraft class, ASMA sector and arrival runway (direction of runway,
+i.e. 12 or 30R), at each airport <span class="math inline">\(j\)</span> (<span class="math inline">\(j = 1 \dots n\)</span>, being <span class="math inline">\(n\)</span> the
+total number of airports affected by regulation IR390/2013).</p>
+<p>For example, if there are four aircraft classes landing at the airport <span class="math inline">\(j\)</span>, two
+ASMA sectors and two arrival runways there will be <span class="math inline">\(16\, c_i\)</span> groupings of
+flights.</p>
+</div>
+<div id="step-3d-calculation-of-the-first-unimpeded-asma-time-estimate" class="section level4">
+<h4>Step 3d: Calculation of the first Unimpeded ASMA Time estimate</h4>
+<p><span class="math inline">\(U_1(c_i)\)</span> is defined as the first Unimpeded ASMA Time estimate for each
+grouping of flights <span class="math inline">\(c_i\)</span>, being the <span class="math inline">\(20^{th}\)</span> percentile of all the ASMA
+transit times of the flights belonging to that grouping [min].</p>
+<p><span class="math display">\[
+U_1(c_i) = 20^{th}\textrm{percentile}({AcASMA}(f_{c_i}))
+\]</span></p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step3d"></span>
+<img src="../../../../../../../images/adasma-step3d.png" alt="Step 3d." width="350px" />
+<p class="caption">
+Figure 16: Step 3d.
+</p>
+</div>
+</div>
+<div id="step-3e-determination-of-the-saturation-level-per-grouping" class="section level4">
+<h4>Step 3e: Determination of the Saturation Level per grouping</h4>
+<p>While the congestion level is a measure for the traffic encountered by an
+individual flight, the saturation threshold describes the maximum traffic level
+served under non-congested traffic conditions. As an upper bound for the
+saturation threshold, the saturation level can be estimated as the maximum
+number of aircraft landing under non-congested conditions (expressed by the
+first estimate of the unimpeded ASMA time).</p>
+<p>Dependent on the previous steps 3b and 3d the saturation level is calculated by
+multiplying the estimate of the unimpeded time U1 with the peak hourly
+throughput <span class="math inline">\(R_j\)</span>, to provide an estimation of the (theoretical) maximum number
+of arrivals per hour served by the airport without congestion. The result is
+rounded to the next unit.</p>
+<p><span class="math inline">\(L(c_i)\)</span>, the saturation level of the grouping <span class="math inline">\(c_i\)</span>, is calculated as:
+<span class="math display">\[L(c_i) = \textrm{round}(\frac{R_j U_1(c_i)}{60})\]</span></p>
+</div>
+</div>
+<div id="step-4-identification-of-unimpeded-flights" class="section level3">
+<h3>Step 4: Identification of unimpeded flights</h3>
+<p>To ensure that a flight is unimpeded, its congestion level needs to be
+sufficiently smaller than the saturation level. Departing flights are considered
+as non-congested, if their congestion limit is equal or below the saturation
+threshold.</p>
+<p>However, it needs to be ensured that the data sample is big enough to produce a
+statistically relevant sample for the chosen stand/runway combination and robust
+estimate of the unimpeded time.</p>
+<p>To limit the impact of any congestion effect (and to address the sample size),
+the saturation threshold is estimated as a fraction of the saturation level.
+This limitation is achieved with the definition of the congestion limit
+<span class="math inline">\(\textrm{cl}\)</span>, a constant defined in Step 3a.</p>
+<p>Based on the previous outputs, the identification of the unimpeded flights is
+done: the saturation level, corrected with the congestion limit, is compared to
+the congestion level.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step4"></span>
+<img src="../../../../../../../images/adasma-step4.png" alt="Step 4." width="650px" />
+<p class="caption">
+Figure 17: Step 4.
+</p>
+</div>
+<p>With the aim of designating the unimpeded flights,<span class="math inline">\({fu}_{c_i}\)</span> is defined as a
+binary variable, denoting that a flight <span class="math inline">\(f_{c_i}\)</span> belonging to the grouping
+<span class="math inline">\(c_i\)</span> is an unimpeded flight. A flight is considered unimpeded if its
+congestion level <span class="math inline">\({seq}(f_{c_i})\)</span> is less than or equal to the product of
+congestion limit <span class="math inline">\({cl}\)</span> and the flight’s grouping saturation level <span class="math inline">\(L(c_i)\)</span>.</p>
+</div>
+<div id="step-5-computation-of-unimpeded-time-per-grouping" class="section level3">
+<h3>Step 5: Computation of unimpeded time per grouping</h3>
+<p><span class="math display">\[
+{fu}_{c_i} =
+\begin{cases}
+     1,&amp; \forall f_{c_i} \in \text{seq}(f_{c_i}) \leq 0.5 L_(c_i) \\
+    0,&amp; \text{otherwise}
+\end{cases}
+\]</span></p>
+<p>The unimpeded ASMA time per grouping is computed as the median of the ASMA time
+only for the unimpeded flights.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-step5"></span>
+<img src="../../../../../../../images/adasma-step5.png" alt="Step 5." width="700px" />
+<p class="caption">
+Figure 18: Step 5.
+</p>
+</div>
+<p>The unimpeded ASMA time <span class="math inline">\(\textrm{UASMA}(c_i)\)</span> for a grouping <span class="math inline">\(c_i\)</span> is a
+calculated constant at the airport <span class="math inline">\(j\)</span>.</p>
+<p>In order to derive statistically meaningful and representative unimpeded times
+per group, only those groupings with equal or more than 20 flights are retained
+in the calculation. For groupings <span class="math inline">\(c_i\)</span> that have less than 20 unimpeded
+flights <span class="math inline">\(\text{fu}_{c_i}\)</span>, the associated unimpeded time <span class="math inline">\(\text{UASMA}(c_i)\)</span>
+is not calculated. These groupings 𝑐𝑖 do not have unimpeded times (consequently,
+it is not possible to calculate additional ASMA time for those groupings).</p>
+<p>Night flights are excluded from the calculation at this point, so only the
+flights taking off during day time are considered for the calculation of the
+reference unimpeded times. On the standard calculation day time is defined
+between 06:30 and 22:00 of airport local time. Calibration of day time
+definition may lead to different definition in some of the busiest airports (see
+section 5).</p>
+<p>For the groupings <span class="math inline">\(c_i\)</span> that have 20 or more unimpeded flights, the unimpeded
+time is defined as the median of the Actual ASMA Transit Time
+<span class="math inline">\(\text{AcASMA}(f_{c_i})\)</span>, of all unimpeded flights <span class="math inline">\(\text{fu}_{c_i}\)</span>
+belonging to the grouping of flights.</p>
+<p><span class="math display">\[
+\text{UASMA}(c_i) =
+\begin{cases}
+    \textrm{median}(\text{AcASMA}(f_{c_i})),&amp; \forall c_i \in \textrm{count}(\text{fu}_{c_i}) \geq 20 \\
+    \textrm{null},&amp; \text{otherwise}
+\end{cases}
+\]</span></p>
+<p>These times are aggregated in Unimpeded References Tables for the calculation of
+the additional ASMA time as described in Section 4.1.</p>
+<p>Although unimpeded ASMA time constants for each 𝑐𝑖 are relatively static in
+time, regular checks are made to ensure that they remain representative of the
+operations for the airport under consideration (see section 5.2). In case a
+change of unimpeded times is detected, the causes of that change (i.e. new
+procedure implementation, change of TMA design) are investigated. When required,
+new unimpeded time constants are calculated. However, because the unimpeded time
+constants calculation method is based on statistical analysis of the Actual ASMA
+transit time, a period of several months after the change is required before new
+robust unimpeded times can be established.</p>
+</div>
+</div>
+</div>
+<div id="calibration-of-model-parameters" class="section level1">
+<h1>Calibration of model parameters</h1>
+<p>This section describes the model parameters that need to be customized for every
+airport, and the approach used for obtaining and updating them.</p>
+<p>For the additional ASMA time indicator, the parameters that need manual
+calibration are the ASMA sectors and the unimpeded times.</p>
+<div id="asma-sectors" class="section level2">
+<h2>ASMA sectors</h2>
+<p>For a given runway configuration, the ASMA transit time depends on the direction
+from which the ASMA cylinder is entered. For this reason, the ASMA cylinder is
+divided into so-called ASMA sectors. The ASMA sectors are defined according to a
+statistical cluster analysis of the distribution of the inbound traffic.
+Figure <a href="#fig:asmasectors">19</a> shows the sectorization for Heathrow.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:asmasectors"></span>
+<img src="../../../../../../../images/asmasectors.jpg" alt="ASMA sectors and bearing." width="350px" />
+<p class="caption">
+Figure 19: ASMA sectors and bearing.
+</p>
+</div>
+<p>The ASMA entry bearings are checked every month to investigate whether there are
+any changes in the arrival flows directions. In case substantial changes in the
+arrival flow directions are identified, the differences will be investigated
+with the particular airport, and the ASMA sectors will be updated if applicable.</p>
+</div>
+<div id="unimpeded-times" class="section level2">
+<h2>Unimpeded times</h2>
+<p>The base period for the calculation of Unimpeded times (which are constants for
+each one of the groupings) is the year 2011, but this can vary across the
+different airports.</p>
+<p>Unimpeded times are calculated once, over 1 year, and they are kept in a static
+reference table.</p>
+<p>As part of the manual quality analysis of the results, the unimpeded times are
+recalculated every month to investigate whether there are any changes in
+unimpeded times. Changes at the airport and the airspace design can have an
+impact on the unimpeded times. Only in the cases that the substantial changes
+are reported for an airport, the differences will be investigated with the
+particular airport. If the change is due to a change in the airport
+characteristics that require a new performance reference, the reference
+unimpeded times will be modified accordingly.</p>
+<p>Because the unimpeded time constants calculation method is based on statistical
+analysis of the actual ASMA time, a period of three months after the change is
+required before new robust unimpeded times references can be established.</p>
+<div id="example-of-unimpeded-times-recalculation" class="section level3">
+<h3>Example of unimpeded times recalculation</h3>
+<p>The following represents an example considering an airport XXXX with its
+reference unimpeded times based on the full year of 2011.</p>
+<p>As part of the monthly values calculation, the unimpeded times will be
+recalculated each month (e.g. for June 2014) and compared with the “reference”
+ones (based on 2011).</p>
+<ul>
+<li><p>If the values are considered similar enough, the static values will be kept:
+the airport reference period will still be 2011. The validity of the reference
+unimpeded times based on 2011 will be extended to June 2014)</p></li>
+<li><p>If a change is detected in the June 2014 results (the unimpeded times
+recalculated based on June 2014 are significantly different from the 2011
+ones), the issue will be investigated and discussed with the airport, in order
+to decide which new reference to take. If, for example, the change was due to
+a new runway opened in June 2014, the new reference will be the following
+year: June 2014-June 2015. However, if the difference corresponds to a runway
+closure of 3 months, the reference would be modified only for the affected 3
+months.</p></li>
+</ul>
+<p>Two parameters can trigger the renewal of the unimpeded time reference for one
+airport, each month:</p>
+<ul>
+<li><p>The number of flights that do not have unimpeded reference (are not in a
+grouping with more than 20 unimpeded flights) are more than 10% of the total
+traffic of the concerned month.</p></li>
+<li><p>The standard deviation of the unimpeded times of all the flights of the month
+is higher than 2 minutes.</p></li>
+</ul>
+</div>
+</div>
+<div id="day-time" class="section level2">
+<h2>Day Time</h2>
+<p>Due to extended opening hours in certain airports, day time may be extended for
+the filtering of the flights in the unimpeded ASMA time calculation.</p>
+</div>
+</div>
+<div id="source-data" class="section level1">
+<h1>Source data</h1>
+<div id="main-and-secondary-data-sources" class="section level2">
+<h2>Main and secondary data sources</h2>
+<p>The additional ASMA time indicator is calculated using data provided by the
+airport operators and the Network Manager:</p>
+<ul>
+<li><p>The airport operators provide the Actual Landing times, the aircraft type and
+the runways used for the arrivals.</p></li>
+<li><p>The Network Manager (NM) provides the entry points to the ASMA cylinder
+(position and time of entry) coming from the Correlated Position Reports
+(CPR). CPR are built from ANSP radar track data for both 40NM and 100NM. When
+CPR data for ASMA entry point data is not available, the data from NM’s
+Current Tactical Flight Model (CTFM) is used as a substitute.</p></li>
+</ul>
+<table>
+<colgroup>
+<col width="43%" />
+<col width="30%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Source SES (IR691/390)</th>
+<th>Alternative Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arrival airport</td>
+<td>Airports</td>
+<td>ANSPs</td>
+</tr>
+<tr class="even">
+<td>Actual landing time</td>
+<td>Airports</td>
+<td>ANSPs or NM</td>
+</tr>
+<tr class="odd">
+<td>Arrival Runway</td>
+<td>Airports</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Aircraft type</td>
+<td>Airports</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Actual ASMA entry time and point</td>
+<td>NM (based on ANSP)</td>
+<td>NM (CTFM)</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3: Data Sources</p>
+<p><strong>Note</strong>: The NM data flow also provides the calculated landing times (from both
+CPR and CTFM). Given the quality assurance measures defined for the airport
+operator data flow, NM data flow based timestamps will only be used for
+complementing the airport operator data flow.</p>
+</div>
+</div>
+<div id="quality-management" class="section level1">
+<h1>Quality management</h1>
+<div id="the-airport-operator-data-flow-process" class="section level2">
+<h2>The Airport Operator Data Flow process</h2>
+<p>The airport operator data flow (APDF) comprises all data collection, processing,
+and performance indicator calculation sub-processes. Reporting entities (i.e.
+airport operators) submit their data to EUROCONTROL on a monthly basis and in
+compliance with the APDF data specification.</p>
+<p>Several activities are performed in the data flow process, involving different
+actors, until Performance reports are published. As a summary, a high level
+overview of the activities can be found below:</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-08"></span>
+<img src="../../../../../../../images/adasma-08.png" alt="Airport Data Flow process scheme including activities and actors involved." width="800px" />
+<p class="caption">
+Figure 20: Airport Data Flow process scheme including activities and actors involved.
+</p>
+</div>
+<p>The airport operator data flow can be conceptualised as stages sub-processes:</p>
+<ul>
+<li>APDF_1 – Data Collection</li>
+<li>APDF_2 – Data Validation</li>
+<li>APDF_3 – Data Extract, Transform and Load</li>
+<li>APDF_4 – Data Merging</li>
+<li>APDF_5 – Pre-Computation of performance parameters</li>
+<li>APDF_6 – Calculation of Performance Indicators</li>
+</ul>
+<p>Each of the sub-processes are governed by quality assurance measures. The PRU
+assumes responsibility for the whole flow in terms of quality assurance. Data
+collection and initial validation is performed by CODA. Once the data is loaded,
+the data processes within the EUROCONTROL data warehouse are managed by PRISME.
+In the final stage, PRU extracts the relevant data and computes the performance
+metrics and indicators.</p>
+<p>APDF related documentation is published under the PRU Quality Management System.</p>
+</div>
+<div id="quality-assurance-framework" class="section level2">
+<h2>Quality Assurance Framework</h2>
+<p>Quality assessment on airport data flow process is focused towards implementing
+a Quality Assurance Framework based on the ISO 9001 standard. The airport
+operator data flow process includes several data processing activities, starting
+from the moment flight information is provided by the reporting entity until
+performance reports are released.</p>
+<p>Standard Operating Procedures for all these sub-processes have been established
+and is quality controlled.</p>
+<p>The documentation is published under the PRU Quality Management System.</p>
+</div>
+<div id="data-quality-checks" class="section level2">
+<h2>Data Quality Checks</h2>
+<p>For the APDF the following quality areas have been identified. Quality controls
+in support of these quality areas are implemented and regularly monitored as
+part of the aforementioned APDF sub-processes.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adasma-09"></span>
+<img src="../../../../../../../images/adasma-09.png" alt="Quality Performance Areas and corresponding Quality Indicators." width="700px" />
+<p class="caption">
+Figure 21: Quality Performance Areas and corresponding Quality Indicators.
+</p>
+</div>
+<p>More detail on these quality checks can be found in the Airport Data Flow Data Specifications (see [3]).</p>
+</div>
+<div id="performance-indicator-quality-checks" class="section level2">
+<h2>Performance Indicator Quality Checks</h2>
+<p>The average additional ASMA time per flight grouped by airport and month
+represents the main result from the performance indicator calculation process.
+In addition, this process provides parameters that are used for data validation
+and statistical analysis:</p>
+<ul>
+<li>average unimpeded time</li>
+<li>standard deviation</li>
+<li>Values for 25%,50% and 75% percentiles</li>
+<li>number of flights, number of unimpeded flights and number of flights with
+valid data</li>
+<li>total additional time, unimpeded time and 25%, 50% and 75% percentile</li>
+<li>completeness and coverage of the traffic sample</li>
+</ul>
+<p>These metrics are used for PRU internal validation activities and may trigger
+case-by-case analyses if significant variations are observed.</p>
+</div>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-pru-adasma-pi" class="csl-entry">
+Cappelleras, Laura. 2015. <span>“Additional <span>ASMA Time Performance Indicator</span> Document.”</span> 00-06. <span>Eurocontrol/PRU</span>. <a href="http://ansperformance.eu/methodology/unimpeded-asma-time/">http://ansperformance.eu/methodology/unimpeded-asma-time/</a>.
+</div>
+<div id="ref-eu:691/2010" class="csl-entry">
+EU. 2010. <span>“Commission <span>Regulation</span> (<span>EU</span>) <span>No</span> 691/2010 of 29 <span>July</span> 2010 Laying down a Performance Scheme for Air Navigation Services and Network Functions and Amending <span>Regulation</span> (<span>EC</span>) <span>No</span> 2096/2005 Laying down Common Requirements for the Provision of Air Navigation Services <span>Text</span> with <span>EEA</span> Relevance.”</span>
+</div>
+<div id="ref-eu:390/2013" class="csl-entry">
+EU. 2013. <span>“Commission <span>Implementing Regulation</span> (<span>EU</span>) <span>No</span> 390/2013 of 3 <span>May</span> 2013 Laying down a Performance Scheme for Air Navigation Services and Network Functions <span>Text</span> with <span>EEA</span> Relevance.”</span>
+</div>
+<div id="ref-ir691-apt" class="csl-entry">
+Eurocontrol. 2010. <span>“Data <span>Specification</span> for <span>Airport Operators</span> (<span>EC Reg</span> 691/2010, <span>Annex IV</span>).”</span> <a href="https://www.eurocontrol.int/publication/eurocontrol-specification-operational-ans-performance-monitoring">https://www.eurocontrol.int/publication/eurocontrol-specification-operational-ans-performance-monitoring</a>.
+</div>
+<div id="ref-prb:dashboardRP1" class="csl-entry">
+Performance Review Body. 2015. <span>“Dashboard <span>RP1</span>.”</span> <a href="http://www.eurocontrol.int/prudata/dashboard/eur_view_2014.html">http://www.eurocontrol.int/prudata/dashboard/eur_view_2014.html</a>.
+</div>
+<div id="ref-prb:dashboardRP2" class="csl-entry">
+———. 2016. <span>“Dashboard <span>RP2</span>.”</span> <a href="http://www.eurocontrol.int/prudata/dashboard/rp2_2015.html">http://www.eurocontrol.int/prudata/dashboard/rp2_2015.html</a>.
+</div>
+<div id="ref-atmap-2009" class="csl-entry">
+Performance Review Unit. 2009. <span>“<span>ATM Airport Performance</span> (<span>ATMAP</span>) <span>Framework</span>.”</span> 1. <span>Performance Review Commission</span>.
+</div>
+</div>
+</div>

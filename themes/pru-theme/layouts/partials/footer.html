@@ -1,0 +1,22 @@
+{{ if ne .Site.Params.hideFooter true }}
+<footer id="footer" class="text-center text-muted">
+    <ul class="footer-links">
+      <li>&copy; {{ now.Format "2006" }}&nbsp;{{ .Site.Params.owner.shortname }} &nbsp; &mdash; &nbsp;
+      <a href="/about/disclaimer/">Disclaimer</a>
+      </li>
+          <li>
+            <a href="{{ .Site.Params.PrivacyURL }}" target="_blank">Privacy statement</a>
+          </li>
+      <li>Subscribe via
+        <!-- text encoded (in _subscriber-href-encoded.txt) to avoid spammer robots via http://clickable-email.ezkode.com/ -->
+        <span><a href="{{ readFile "/layouts/subscribe-href.txt" }}">email <i class="fas fa-envelope"></i></a>
+        or
+        <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank">RSS <i class="fas fa-rss"></i></a></span>
+      </li>
+      <li><a href="/about/help/"><i class="fas fa-question-circle"></i></a></li>
+      <li><a href="/about/howbuilt/"><i class="fas fa-cogs"></i></a>
+      </li>
+    </ul>
+</footer>
+
+{{ end }}

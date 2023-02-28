@@ -1,0 +1,166 @@
+---
+layout: default
+title: "Traffic Overview"
+---
+
+```{r, echo=FALSE, include=FALSE}
+## libraries
+library(fs)
+library(tibble)
+library(dplyr)
+library(stringr)
+library(googlesheets4)
+library(lubridate)
+```
+
+
+<style type="text/css">
+
+  .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+   }  
+   
+@media screen and (min-width:960px) {
+  .Scorecard {
+    margin: 0px;
+    padding: 0px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #161b21;
+    text-align: left;
+  }
+
+  .Scorecard2 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 7px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #161b21;
+    text-align: left;
+  }
+  
+  #delay-plot{
+    margin-left:10px;
+  }
+  
+}
+
+@media screen and (max-width:960px) {
+
+  .Scorecard {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #161b21;
+    text-align: left;
+  }
+
+  .Scorecard2 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #161b21;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width:1200px) {
+
+  #ctry-pun, #apt-pun {
+    height: 360px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+
+  #ctry-pun, #apt-pun {
+    height: 705px;
+  }
+}
+
+
+  </style>
+  
+This page provides an overview of the traffic, [ATFM delay](/definition/atfm-delay/), [punctuality (OTP15)](/definition/punctuality/) and percentage of [operated schedules](/definition/opschedules/) in the [EUROCONTROL Area](/definition/eurocontrol-area/). For a more detailed analysis consult our [Daily traffic variation dashboard](https://www.eurocontrol.int/Economics/DailyPunctuality-States.html){target="_blank"}. Information on en-route and terminal [service units](/acronym/su/) from the [Central Route Charges Office of EUROCONTROL (CRCO)](https://www.eurocontrol.int/crco){target="_blank"} is available from our [Service Units dashboard](https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html){target="_blank"}.
+
+<ul class="nav nav-tabs mb-1">
+  <li class="nav-item">
+    <a class="nav-link" href="/traffic/">Flights</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/traffic/delay/">ATFM Delays</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page">Punctuality</a>
+  </li>  
+</ul>
+
+<!-- Network dly section -->
+#### EUROCONTROL area (Network view)  
+<div class="container">
+<div class="row align-items-start">
+<div class="col-sm-3">
+<div style=" height: 410px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;" >
+</iframe>
+</div>
+</div><!-- closes col md-3-->
+  
+<div class="col-sm-9">
+<div style=" margin-top: 0px; height: 450px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" frameborder="0" style="border:0;" >
+</iframe>
+</div><!-- closes iframe container -->
+</div><!-- closes col -->
+</div><!-- closes row -->
+</div><!-- closes container -->
+<a href="https://www.eurocontrol.int/Economics/Download/Network_Punctuality.xlsx" class="btn btn-info" role="button" target="_blank">{{% dwnld_i %}} Download network punctuality data</a>
+
+<div class="flex-container mt-2">
+
+<div class="row align-items-start">
+<div class="col-md-6" >
+#### State view
+[Punctuality (OTP15)](/definition/punctuality/) and percentage of [operated schedules](/definition/opschedules/) per State.
+<div class="row align-items-start">
+<div class="col-12">
+<div id="ctry-pun">
+<iframe id="ctry-pun-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-state-table.html" frameborder="0" style="border:0;" >
+</iframe>
+</div><!-- closes iframe container -->
+</div><!-- closes col 12-->
+</div><!-- closes secondary row-->
+</div><!-- closes col 6-->
+
+<div class="col-md-6" >
+#### Airport view
+[Punctuality (OTP15)](/definition/punctuality/) and percentage of [operated schedules](/definition/opschedules/) for main EUROCONTROL airports.
+<div class="row align-items-start">
+<div class="col-12">
+<div id="apt-pun">
+<iframe id="acc-pun-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-apt-table.html" frameborder="0" style="border:0;" >
+</iframe>
+</div><!-- closes iframe container -->
+</div><!-- closes col 12-->
+</div><!-- closes secondary row-->
+</div><!-- closes col 6-->
+</div><!-- closes row -->
+</div><!-- closes container -->
+<br>
+<a href="https://www.eurocontrol.int/Economics/Download/Stakeholder_Punctuality.xlsx" class="btn btn-info" role="button" target="_blank">{{% dwnld_i %}} Download State/airport punctuality data</a>
+<!-- </div><!-- closes tab pane-> -->
+<!-- </div><!-- closes tab content-> -->
+
+
+
+

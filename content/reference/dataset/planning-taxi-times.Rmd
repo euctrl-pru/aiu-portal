@@ -1,0 +1,49 @@
+---
+title: Taxi-time planning values
+slug: planning-taxi-times
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+## Data description
+
+Using data received directly from airlines, EUROCONTROL CODA (Central office for Delay Analysis) provides seasonal taxi time statistics for both the IATA Winter Season and the IATA summer seasons.
+
+These taxi times are calculated using the airline reported actual off-block time (AOBT), actual take-off time (ATOT), actual landing time (ALDT) and actual in-block time (AIBT) providing the aviation community with seasonal benchmark values.
+Furthermore for additional granularity, taxi-out times by wake turbulence category are also offered for a number of airports.
+See the <a href="https://www.eurocontrol.int/publication/eurocontrol-specification-aodf" target="_blank">EUROCONTROL Specification for Operational ANS Performance Monitoring - Air Transport Operator Data Flow (AODF)</a> for a full description and overview of operational data items (incl. AOBT, ATOT, ALDT & AIBT) collected from airlines.
+
+## Column naming and types
+
+| Coumn   Name             | Data Source     | Label                      | Column description                                                                                                                                                                                                                                                                                                                                                                      | Example         |
+|--------------------------|-----------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| IATA Season              | AIU/CODA        | IATA Season                | S for summer covering 31 weeks   starting the last Sunday of March. W for winter covering 21 weeks starting the last Sunday of   October.  The suffix is composed of the   last two digits of the year in which the IATA season started. e.g. S21: IATA   summer season covering 28 March 2021 - 30 October 2021.   W20: IATA winter season covering 25   October 2020 - 27 March 2021. | S21             |
+| ICAO                     | Network Manager | ICAO                       | ICAO 4-letter   airport designator                                                                                                                                                                                                                                                                                                                                                      | EGLL            |
+| IATA                     | Network Manager | IATA                       | IATA 3-letter   airport designator                                                                                                                                                                                                                                                                                                                                                      | LHR             |
+| Airport Name             | Network Manager | Airport Name               | Airport   name                                                                                                                                                                                                                                                                                                                                                                          | LONDON/HEATHROW |
+| Wake Turbulence Category | Network Manager | Wake Turbulence   Category | Wake turbulence   category                                                                                                                                                                                                                                                                                                                                                              | M               |
+| Mean TXI (Mins)          | AIU/CODA        | Mean TXI (Mins)            | The mean taxi-in   time in minutes of the observed flights.                                                                                                                                                                                                                                                                                                                             | 5,3             |
+| Mean TXO (Mins)          | AIU/CODA        | Mean TXO (Mins)            | The mean taxi-in   time in minutes of the observed flights.                                                                                                                                                                                                                                                                                                                             | 7,6             |
+| Standard Deviation       | AIU/CODA        | Standard   Deviation       | The Standard   Deviation in minutes of the observed taxi-times.                                                                                                                                                                                                                                                                                                                         | 4,7             |
+| 10th Pctl                | AIU/CODA        | 10th Pctl                  | The 10th   percentile in minutes of the observed taxi-times.                                                                                                                                                                                                                                                                                                                            | 4               |
+| Median                   | AIU/CODA        | Median                     | The median in   minutes of the observed taxi-times.                                                                                                                                                                                                                                                                                                                                     | 7               |
+| 90th Pctl                | AIU/CODA        | 90th Pctl                  | The 90th   percentile in minutes of the observed taxi-times.                                                                                                                                                                                                                                                                                                                            | 13              |
+
+
+### Calculated Field(s)
+Taxi-Out: airline reported actual take-off time (ATOT) - actual off-block time (AOBT)
+
+Taxi-in: airline reported actual in-block time (AIBT)- actual landing time (ALDT)
+
+### Applied filters
+Extreme outliers (taxi-in exceeding 120 minutes and taxi-out exceeding 180 minutes) are excluded from the calculation.
+Only airports with at least 100 observations during the reporting period are listed.
+
+The taxi-time report is based on the following 3 wake turbulence categories: M (medium), H (heavy) or J (super) with  aircraft in wake turbulence category L (light) not taken in to account.
+
+* L: aircraft with a maximum certified take off mass of 7000 kg or less. 
+* M: with a maximum certified take off mass of less than 136000 kg but more than 7000 kg. 
+* H: aircraft with a maximum certified take off mass of less than 560000kg but more than 136000 kg. 
+* J: aircraft with a maximum certified take off mass of 560000kg or more.

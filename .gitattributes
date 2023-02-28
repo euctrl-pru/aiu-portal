@@ -1,0 +1,126 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Ignore all differences in line endings
+* -crlf
+
+#
+# The above will handle all files NOT found below
+#
+
+#
+## These files are text and should be normalized (Convert crlf => lf)
+#
+
+* text eol=lf
+
+
+# "source" code
+*.txt text
+
+*.css text
+*.sass text
+*.scss text
+*.min.js binary
+*.js text
+*.coffee text
+*.json text
+*.htm text
+*.html text
+*.xml text
+*.svg text
+
+*.rb text
+
+*.py text
+*.pxd text
+*.py3 text
+*.pyw text
+*.pyx text
+
+*.sql text
+
+*.sh text
+*.bat text
+
+# data
+*.csv text
+*.tab text
+*.tsv text
+
+*.bib text
+*.cls text
+
+# git config
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+# code analysis config
+.jshintrc text
+.jscsrc text
+.jshintignore text
+.csslintrc text
+
+# misc config
+*.yaml text
+*.yml text
+
+# build config
+*.npmignore text
+
+# Documentation
+*.md text
+LICENSE text
+AUTHORS text
+
+
+#
+## These files are binary and should be left untouched
+#
+
+# (binary is a macro for -text -diff)
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+
+# audio/video
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+
+# fonts
+*.ttf binary
+*.eot binary
+*.woff binary
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).
+*.db		binary
+*.p 		binary
+*.pkl 		binary
+*.pyc 		binary
+*.pyd		binary
+*.pyo 		binary
+
+# others
+*.gz binary
+*.zip binary
+*.7z binary
+*.bz2 binary
+
+*.pdf binary
+
+*.xlsm binary
+*.xls binary
+*.xlsx binary
+

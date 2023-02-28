@@ -1,0 +1,91 @@
+/* div[id="chart"] { */
+/*     fill: none; */
+/*     pointer-events: all; */
+/* } */
+
+
+.fab {
+    fill: blue;
+    opacity: 0.5;
+    stroke-width: 1px;
+    stroke: #ccc;
+}
+
+.fir {
+	  fill: yellow;
+	  opacity: 0.1;
+    cursor: pointer;
+}
+
+.fir-boundary {
+    fill: none;
+    stroke: #888;
+    /*stroke-dasharray: 2,2;*/
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: .5px;
+}
+
+.fir-boundary.ECTRL {
+    stroke: #8BF63D;
+    /*stroke-width: .5px;*/
+}
+
+
+.graticule {
+    fill: none;
+    stroke: #333;
+    /*stroke-width: .5px;*/
+    stroke-opacity: .5;
+}
+
+
+.boundary {
+    fill: none;
+    stroke: #fff;
+    /*stroke-width: .5px;*/
+}
+
+.country {
+    fill: #ccc;
+}
+
+#tooltip {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 2px 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    background-color: #bbb;
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+#tooltip p {
+    margin: 0 0 0 0;
+    padding: 2px 2px;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.hidden{
+    display: none;
+}
+#chart {
+    width: 80%;
+    padding-top: 15px;
+    /* Set the margin-left and margin-right automatically set */
+    margin: 0 auto;
+}
+#chart svg {
+    background: #D5E3FF;
+
+}

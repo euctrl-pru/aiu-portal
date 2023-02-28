@@ -1,0 +1,91 @@
+---
+title: Airport Capacity Utilisation Methodology
+bibliography: ["../../static/bib/aviation.bib"]
+link-citations: true
+slug: airport-capacity-utilisation
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+## Overview
+
+Various methods exist to address the determination of the airport capacity.
+However, there are only a limited number of empirical approaches addressing
+the capacity utilisation at airports.
+
+A convenient way to summarise the range of operational capacities (i.e. runway
+system throughputs) are Capacity Coverage Charts (CCC)
+[@neufville-odoni-2003].
+While an airport has a theoretical maximum capacity, the
+practical capacity is considered to be established in order to limit the
+average delay to a reasonable level. The latter may also be impacted by local
+constraints or requirements of the capacity declaration process.
+
+
+(ref:ccc) Capacity Coverage Chart.
+
+
+```{r ccc, out.width=c('400px', '400px'), fig.cap='(ref:ccc)'}
+knitr::include_graphics("/images/ccc.png")
+```
+
+
+The capacity coverage chart (i.e. CCC) describes the ordered set of observed
+throughputs at an airport. As depicted in Figure \@ref(fig:ccc), the CCC varies
+dependent on the traffic, enviromental factors, and/or operational
+constraints. Ordering the observed (hourly) throughputs for the airport
+establishes a generally decreasing step function over the time horizon (e.g.
+expressed in terms of observation hours or % of time).
+
+
+[@apt-capacity-utilisation] describe a procedure to quantify
+the level of capacity utilisation comparing two characteristic throughput values.
+These characteristic values, i.e. basic load index (BLI) and peak load index (PLI),
+are based on the observed operational throughput of the airport.
+
+
+(ref:pli-bli) Capacity Coverage Chart and PLI calculation.
+
+
+```{r pli-bli, out.width=c('400px', '400px'), fig.cap='(ref:pli-bli)'}
+knitr::include_graphics("/images/pli_bli.png")
+```
+
+
+The Base Load Index (BLI) refers to the share of time an airport operates above a defined base
+level (15% of the reference capacity) and the Peak Load index (PLI) provides an indication
+of the share of time the airport operates above peak level (80% of reference capacity).
+
+Considering the achieved levels of throughput across the European top 30 airports,
+a diverse picture emerges.
+While a number of airports show the classical throughput peaking behaviour with a consistent
+base level throughout ($0.65 < \textrm{BLI} < 0.8$), London Heathrow (LHR) in the top right corner
+shows a clear exceptional capacity utilisation.
+
+
+(ref:pli-bli-prr) BLI over PLI for major European airports.
+
+
+```{r pli-bli-prr, out.width=c('400px', '400px'), fig.cap='(ref:pli-bli-prr)'}
+knitr::include_graphics("/images/pli_bli_prr.png")
+```
+
+
+For a more detailed explanation of the methodology see [@apt-capacity-utilisation].
+
+## See Also
+
+* [Basic Load Index (BLI)][bli].
+* [Peak Load Index (PLI)][pli].
+
+[bli]: /acronym/bli/ "Basic Load Index"
+[pli]: /acronym/pli/ "Peak Load Index"
+
+
+# References
+
+
+

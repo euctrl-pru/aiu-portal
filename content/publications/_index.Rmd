@@ -1,0 +1,89 @@
+---
+title: Publications
+layout: frontpage
+---
+
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+<style type="text/css">
+.img-responsive {
+    margin: 0 auto;
+    max-width: 75%
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 60.0%;
+}
+
+</style>
+<html>
+<div class="container">
+<div class="row">
+<div class="card-deck">
+<div class="card"><a href="/publications/prc/news/">
+  <img class="card-img-top" src="/images/prc/prc_pos_pap.png" alt="PRC News">
+  <div class="card-body"><h5 class="card-title">PRC News and Positions</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="/publications/prc/prr">
+  <img class="card-img-top" src="/images/prc/prr2021.png" alt="Performance Review Report">
+  <div class="card-body">   <h5 class="card-title">Annual Performance Review Report</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="/publications/prc/ace">
+  <img class="card-img-top" src="/images/prc/ace2020.png" alt="ATM Cost Effectiveness Report">
+  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Reports</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="/publications/studies/">
+  <img class="card-img-top" src="/images/prc/technote.png" alt="Studies and Technical Notes">
+  <div class="card-body"><h5 class="card-title">Studies and Technical Notes</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="card-deck">
+
+<div class="card"><a href="/global/">
+  <img class="card-img-top" src="/images/prc/global.png" alt="Global Benchmarking">
+  <div class="card-body"><h5 class="card-title">Global Benchmarking</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="/publications/ectl/think/">
+  <img class="card-img-top" src="/images/ectl_tp.jpg" alt="EUROCONTROL Think/Analysis Papers">
+  <div class="card-body"><h5 class="card-title">EUROCONTROL Think/Analysis Papers</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="/publications/ectl/datasnap/">
+  <img class="card-img-top" src="/images/ectl_ds.png" alt="EUROCONTROL Data Snapshots">
+  <div class="card-body"><h5 class="card-title">EUROCONTROL Data Snapshots</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/aviation-sustainability-briefing" target="_blank">
+  <img class="card-img-top" src="/images/asu_pub.png" alt="EUROCONTROL Aviation Sustainability Briefings">
+  <div class="card-body"><h5 class="card-title">EUROCONTROL Aviation Sustainability Briefings</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+</html>

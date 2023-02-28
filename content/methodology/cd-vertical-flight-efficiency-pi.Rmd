@@ -1,0 +1,311 @@
+---
+title: Vertical Flight Efficiency during Climb and Descent
+bibliography: ["../../static/bib/aviation.bib"]
+link-citations: true
+slug: cd-vertical-flight-efficiency-pi
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+This document provides a technical description on the methodology used in the analysis of the
+vertical profile of the aircraft’s trajectory during climb and descent phases of flights.
+The objective of the methodology is to measure and observe vertical flight efficiency without
+highlighting specific reasons for the observed behaviour. More detailed case studies are needed
+to find out reasons for particular observations.
+
+
+## Acronyms and terminology
+
+Table: (\#tab:acronyms) Acronyms and terminology
+
+| Term  | Definition |
+|-------|------------|
+| [CPF][cpf]   | Correlated Position reports for a Flight |
+| [PRISME][prisme] | Pan-European Repository of Information Supporting the Management of EATM |
+
+
+## Methodology
+
+The main assumption for the analysis of vertical flight efficiency during climb
+and descent is that, all other factors being equal, level flight is considered
+as inefficient.
+The methodology presented here is very similar for the climb and descent phases
+so the results for the climb and descent phases are directly comparable.
+
+
+
+### General overview
+
+The analysis is performed in 5 major steps. First, the trajectory data has to
+be loaded into the analysis software.
+Then the climb or descent part is identified in these trajectories.
+In these parts of the trajectories the level segments are detected and saved
+and additional filters are applied.
+The next step is the determination of the Top of Climb or Top of Descent.
+Finally, the results are calculated and processed for presentation.
+This process is visualised in Figure 1.
+
+
+(ref:vfe-cd-figure-001) Different steps of the analysis.
+
+
+```{r pli-bli, out.width=c('800px', '400px'), fig.cap='(ref:vfe-cd-figure-001)'}
+knitr::include_graphics("/images/vfe-cd-figure-001.png")
+```
+
+
+### Loading of the trajectories information
+
+The data used for the analysis are downloaded from the PRISME database.
+[CPF][cpf] data is used in order to assess the actually flown trajectories.
+
+The most important data fields that are of interest for the analysis are
+the altitude, position (latitude and longitude) and time information.
+
+
+### Identification of the climb or descent part of the flight
+
+For each flight, the climb part is defined as the part of the trajectory before
+the Top of Climb (ToC) and the descent part as the part of the trajectory after
+the Top of Descent (ToD).
+
+Optimal climb and descent parts until/from the cruising altitude generally
+require less than 200NM of track distance from/until the airport, especially
+when the cost index is low or high for respectively the climb and
+descent [@airbus-cost-index; @sam-thesis].
+With this in mind, the analysis is limited to the parts of the trajectories
+within a 200NM radius around the departure/arrival airport.
+This is to avoid including into the analysis climbs during the cruise phase
+which are used to optimise the flight altitude to account for the reducing
+weight of the aircraft.
+
+The identification method of the climb or descent part corresponds strongly
+to the method proposed by the CCO/CDO Task Force and is further detailed below.
+It should be noted that the CCO/CDO Task Force uses a 300NM radius for the
+climbs instead of 200NM as used in this analysis.
+The reasons for choosing a 200NM radius for the climb are threefold:
+
+* Having the same radius for both the climb and descent analysis enables a
+  direct comparison between the climb and descent results; and
+
+* Examination of aircraft trajectories showed that when a radius of 300NM is
+  used, a lot of level flight at slightly lower altitudes than the cruising
+  altitude is detected as inefficient, while this could be a consequence of
+  the optimisation of the cruising altitude with respect to the aircraft’s
+  weight. This type of level flight should not be seen as being inefficient
+  and can influence the final results significantly in such a way that the
+  results are not representative; and
+
+* 300NM was chosen by the CCO/CDO Task Force because some very heavy aircraft
+  could not be able to reach the cruising altitude within a 200NM radius.
+  Nevertheless, it is preferred to have a stable methodology that suits best
+  the behaviour of most of the flights and provides statistically correct
+  results and analyses.
+
+
+
+### Identification of the climb part of a flight
+
+For each flight, the 4D point where the flight crosses the 200NM radius around
+the departure airport (for the first time) is determined. This point is defined
+as D200. Within the part of the trajectory from take-off until D200 included,
+the first 4D point at which the aircraft reaches the highest altitude is
+defined as the ToC-D200.
+If the aircraft is still climbing when passing the 200NM radius, D200 and
+ToC-D200 are the same.
+
+The climb phase is considered to start at 3000 feet AGL since the Noise
+Abatement Departure Procedures (NADP) defined by ICAO end at this altitude
+[@icao:8168].
+
+Overall, the part of the trajectory considered for the analysis goes from 3000
+feet AGL (included) until ToC-D200.
+
+The CCO/CDO Task Force uses 2500 feet as lower limit which is chosen in
+relation to the availability of trajectory data.
+
+
+### Identification of the descent part of a flight
+
+For each flight, the 4D point where the flight crosses the 200NM radius around
+the destination airport (for the last time) is determined.
+This point is defined as A200. Within the part of the trajectory from A200
+included until touchdown, the last 4D point at which the aircraft leaves
+the highest altitude is defined as the ToD-A200.
+
+The descent phase is considered to end at 1800 feet AGL because the
+interception altitude for ILS systems is generally at or above this altitude.
+Using 1800 feet AGL as lower limit allows capturing the level segments before
+ILS interception but on the other hand disregarding the trajectory below 1800
+feet AGL where the aircraft are on the ILS glideslope and no level segments
+should occur.
+
+Overall, the part of the trajectory considered for the analysis goes from
+ToD-A200 until 1800 feet AGL (included).
+
+
+
+## Detection of the level segments
+
+In the climb or descent parts of the trajectories the level segments should be
+determined. The trajectory part between two points on that trajectory is
+considered as level when the trajectory stays within a fictional window as can
+be seen in Figure \@ref(fig:vfe-cd-figure-002).
+
+(ref:vfe-cd-figure-002) Rolling window for level segment detection.
+
+
+```{r vfe-cd-figure-002, out.width=c('500px', '300px'), fig.cap ='(ref:vfe-cd-figure-002)'}
+knitr::include_graphics("/images/vfe-cd-figure-002.png")
+```
+
+
+This window has temporal and altitude dimensions related to a specific vertical
+velocity that is considered to be the limit between level flight and
+climb/descent.
+After consultation in the CCO/CDO Task Force, this vertical velocity is chosen
+to be 300 feet per minute. Consequently, the dimensions of the window have to
+adhere to the following relationship:
+
+$$
+\frac{Y}{X} = 300 \  \textrm{feet per minute}
+$$
+
+E.g. when a temporal size of 10 seconds is used, the window is 50 feet high.
+In this case the altitude information of the climb or descent trajectory is
+considered at every interval of 10 seconds.
+However, since the CPF data are a discrete representation of the actual
+trajectories, the necessary altitude information is not available for every
+required time instance.
+Because of this and whenever required, a linear interpolation is done to obtain
+the information needed for the analysis.
+
+
+
+## ToC/ToD determination
+
+In order to avoid considering level segments that happen slightly below the
+cruising altitude of a flight, an exclusion box is defined.
+The exclusion box ranges from the altitude of ToC-D200 or ToD-A200 down to 90%
+of this altitude. When a level segment is detected inside the exclusion box and
+it lasts longer than 5 minutes, it is not considered in the final results.
+The new top of climb or top of descent is in that case put at the start of
+(the first of) such segment(s) for climbs or at the end of (the last of) such
+segment(s) for descents. This new ToC or ToD is called respectively ToC-CCO or
+ToD-CDO. When no level segments longer than 5 minutes are detected inside the
+exclusion box, ToC-CCO/ToD-CDO coincides with ToC-D200/ToD-A200.
+
+The determination of the ToC-CCO or ToD-CDO corresponds as well to the CCO/CDO
+Task Force’s approach.
+
+
+
+## Processing of the results
+
+The final results are calculated taking into account all level segments before
+ToC-CCO for the climbs and after ToD-CDO for the descents.
+
+The results of the analysis include the total number of flights, the average
+value and median value of the distance flown level, the percentage of distance
+flown level with respect to the total climb or descent distance, the average
+value and median value of the time flown level, the percentage of time flown
+level with respect to the total climb or descent time and the average value
+and median value of the number of level segments.
+
+An additional metric is the median CDO/CCO altitude. This metric is calculated
+by taking the altitude of the lowest level segment for each flight.
+This information is then aggregated by taking the median value over all
+considered flights.
+The rationale for using the lowest level segment is the following.
+It is best to have no level flight because this increases the fuel burn.
+However, if needed, the higher the level segment occurs, the better because
+the higher the level segment occurs, the lower the fuel burn.
+E.g. a level segment of a fixed duration at FL100 burns more fuel than at
+FL300. So, the lowest level segment is considered since it has the
+highest environmental impact.
+
+In addition, each flight can be assessed as being CCO (Continuous Climb
+Operations) or CDO (Continuous Descent Operations). The fact whether a
+flight is considered as being CCO or CDO depends on the allowed amount of
+level segments and their allowed lengths or durations.
+
+The formulas used for the calculation of all these results are shown in Table \@ref(tab:formulas).
+
+Table: (\#tab:formulas) Formulas used for the calculation of the results
+
+
+|   Result                                                     |    Formula                      |
+|--------------------------------------------------------------|:--------------------------------|
+| Total distance flown by flight $f$ during the climb/descent  | (ref:total-flown-cd)            |
+| Percentage of distance flown level during the climb/descent  | (ref:perc-flown-level-cd)       |
+| Average value of the distance flown level per flight         | (ref:avg-flown-flight-level)    |
+| Median value of the level distance                           | (ref:median-level-dist)         |
+| Total time flown by flight $f$ during the climb/descent      | (ref:total-flown-flight-cd)     |
+| Percentage of time flown level during the climb/descent      | (ref:perc-flown-flight-level)   |
+| Average time flown level per flight                          | (ref:avg-time-flight-level)     |
+| Median value of the level time                               | (ref:median-time)               |
+| Average number of level segments per flight                  | (ref:avg-level-segs)            |
+| Median value of the number of level segments                 | (ref:median-level-segs)         |
+| Percentage of flights considered as CCO or CDO               | $$P = \frac{n_0}{n} \cdot 100$$ |
+
+
+(ref:total-flown-cd) $$D_f^+ = \begin{cases} D_{3000, f} - D_{\textrm{TOC} - \textrm{CCO}, f}, & \text{climbs} \\ D_{\textrm{TOD} - \textrm{CDO}, f} - D_{1800, f}, & \text{descents} \end{cases}$$
+
+(ref:perc-flown-level-cd) $$D_{\textrm{perc}} = \frac{ \sum_{f} D_f}{\sum_{f} D_f^+} \cdot 100$$
+
+(ref:avg-flown-flight-level) $$D_{\textrm{avg}} = \frac{ \sum_{f} D_f}{n}$$
+
+(ref:median-level-dist) $$D_{med} = \begin{cases} D_m & \text{$n$ is odd, $m = (n+1)/2$} \\ \frac{D_m + D_{m+1}}{2}, & \text{$n$ is even, $m = n/2$} \end{cases}$$
+
+
+(ref:total-flown-flight-cd) $$T_f^+ = \begin{cases} T_{3000, f} - T_{\textrm{TOC} - \textrm{CCO}, f}, & \text{climbs} \\ T_{\textrm{TOD} - \textrm{CDO}, f} - T_{1800, f}, & \text{descents} \end{cases}$$
+
+(ref:perc-flown-flight-level) $$T_{\textrm{perc}} = \frac{\sum_f T_f}{\sum_f T_f^+}$$
+
+(ref:avg-time-flight-level) $$T_{\textrm{avg}} = \frac{\sum_f T_f}{n}$$
+
+(ref:median-time) $$T_{med} = \begin{cases} T_m & \text{$n$ is odd, $m = (n+1)/2$} \\ \frac{T_m + T_{m+1}}{2}, & \text{$n$ is even, $m = n/2$} \end{cases}$$
+
+(ref:avg-level-segs) $$_{\textrm{avg}} = \frac{\sum_f L_f}{n}$$
+
+(ref:median-level-segs) $$L_{med} = \begin{cases} \displaystyle L_m & \text{$n$ is odd, $m = (n+1)/2$} \\ \frac{L_m + L_{m+1}}{2}, & \text{$n$ is even, $m = n/2$} \end{cases}$$
+
+
+With:
+
+| Symbol                               | Description                                                       |
+|--------------------------------------|-------------------------------------------------------------------|
+| $n$                                  | Total number of flights considered in the analysis                |
+| $n_0$                                | Number of flights considered as CCO or CDO                        |
+| $L_f$                                | Number of level segments for flight $f$                           |
+| $D_f^{+}$                            | Total distance flown by flight $f$ during the climb/descent       |
+| $D_f$                                | Total distance flown level by flight $f$ during the climb/descent |
+| $D_{3000, f}$                        | Track distance flown by flight $f$ when passing $3000$ feet AGL   |
+| $D_{\textrm{TOC} - \textrm{CCO}, f}$ | Track distance flown by flight $f$ when passing TOC-CCO           |
+| $D_{\textrm{TOD} - \textrm{CDO}, f}$ | Track distance flown by flight $f$ when passing TOD-CDO           |
+| $D_{1800, f}$                        | Track distance flown by flight $f$ when passing 1800 feet AGL     |
+| $T_f^{+}$                            | Total time flown by flight $f$ during the climb/descent           |
+| $T_f$                                | Total time flown level by flight $f$ during the climb/descent     |
+| $T_{3000, f}$                        | Time at which flight $f$ passes $3000$ feet AGL                   |
+| $T_{\textrm{TOC} - \textrm{CCO}, f}$ | Time at which flight $f$ passes TOC-CCO                           |
+| $T_{\textrm{TOD} - \textrm{CDO}, f}$ | Time at which flight $f$ passes TOD-CDO                           |
+| $T_{1800, f}$                        | Time at which flight $f$ passes $1800$ feet AGL                   |
+
+
+
+
+
+[cpf]: /acronym/cpf/ "CPF"
+[prisme]: /acronym/prisme/ "PRISME"
+
+## Further Information
+
+For further information please refer also to
+[@cco-cdo-leaflet; @icns-vfe; @vertical-flight-efficiency-during-climb-and-descent_consultation].
+
+
+
+## References

@@ -1,0 +1,19 @@
+---
+title: Airport operator data flow (APDF)
+slug: airport-data-flow
+---
+
+The Airport operator data flow (APDF) supports the regular operational ANS performance monitoring under the EUROCONTROL Performance Review System established under the ECAC Institutional Strategy for Air Traffic Management (1997) and the Single European Sky Performance Scheme established under Implementing Regulation (EU) No 390 / 2013.
+
+[The EUROCONTROL Specification for Operational ANS Performance Monitoring - Airport Operator Data Flow (APDF)][apdf] details the data exchange requirements between reporting entities and EUROCONTROL and subsequent data handling processes.
+
+The collected data is used to analyse and compare operational ANS performance (e.g. performance monitoring and benchmarking), supports the validation of other data sources processed by the EUROCONTROL Agency, and the production of regular Agency reports and studies based on aggregated results of the operational performance data (e.g. Performance Review Report, PRU and CODA publications).
+
+The data is used for the calculation of [Additional taxi-out time](/definition/additional-taxi-out-time/), [Additional ASMA time](/definition/additional-asma-time/) and [ATC pre-departure delay](/definition/atc-pre-departure-delay/).
+The PRU engages with the airport operators on a one by one case to facilitate the implementation of the data flow. The evolution of the number of airport operators submitting data in accordance with the required APDF data specifications standards is shown in the graph below.
+
+```{r pressure, echo=FALSE, fig.cap="Number of airport operators submitting data in accordance with the EUROCONTROL APDF Specification", out.width = '70%'}
+knitr::include_graphics("/images/apdf_progress.png")
+```
+
+[apdf]: https://www.eurocontrol.int/publication/eurocontrol-specification-operational-ans-performance-monitoring "EUROCONTROL Specification for ANS Performance Monitoring - Airport Operator Data Flow (APDF)"

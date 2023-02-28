@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+  {{ range (where .Data.Pages "Section" "!=" "").GroupByDate "2006" }}
+  <h2 class="archive-title">{{ .Key }}</h2>
+    {{ range .Pages }}
+    <article class="archive-item">
+      <i class="fas fa-calendar-alt"></i>&nbsp;<span class="archive-item-date"> {{ .Date.Format "Jan 02" }}</span> &mdash; <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div>
+        {{ .Summary }}
+      </div>
+      {{ if .Truncated }}
+      <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+      <div>
+        <a href="{{ .RelPermalink }}">Read More…</a>
+      </div>
+      {{ end }}
+
+    </article>
+    {{ end }}
+  {{ end }}
+{{ end }}

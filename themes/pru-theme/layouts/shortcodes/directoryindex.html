@@ -1,0 +1,18 @@
+<!-- {{/*
+Create a link to each of the files in a directory—display as the file’s basename—along with the file’s size in bytes.
+Usage: {{< directoryindex path="/static/css" pathURL="/css" >}}
+*/}}-->
+
+{{- $pathURL := .Get "pathURL" -}}
+{{- $path := .Get "path" -}}
+{{- $files := readDir $path -}}
+<table>
+    <th>Size in bytes</th>
+    <th>Name</th>
+{{- range $files }}
+    <tr>
+        <td>{{ .Size }}</td>
+        <td><a href="{{ $pathURL }}{{ .Name | relURL }}" target="_blank"> {{ .Name }}</a></td>
+    </tr>
+{{- end }}
+</table>

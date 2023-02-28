@@ -1,0 +1,60 @@
+---
+title: "PRC Transformation Support Strategy"
+type: "Transformation, Operations"
+date: "2022-12-15"
+excerpt: "PRC Transformation Support Strategy"
+bibliography: ["../../../../static/bib/aviation.bib"]
+link-citations: true
+dwnld_i: <i class="fa pru fa-download"></i>
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+<br>
+<div class="container">
+
+#### Motivation
+<div class="row align-items-start">
+<div class="col-sm-8">
+To meet the challenges of the future, the successful and targeted deployment of agreed transformation steps is required. These priorities build on the ATM
+Master Plan and supporting pan-European strategies like the Green Deal. The political and strategic drivers require a fundamental implementation of a set of proposed changes to accommodate airspace users’ needs as well as meet societal expectations on the sustainability front. Achieving the required political goal of higher levels of performance across all key performance areas entails a deliberate transformation of the system.
+
+This key transformation will be supported by the EUROCONTROL [Performance Review Commission (PRC)](/about/prc/) which, in close collaboration with key stakeholders, will independently monitor whether performance ambitions have been met.
+</div>
+<div class="col-sm-4">
+<div class="card border-0">
+  <img class="card-img-top" src="/images/prc/vc_tss_web.jpg" alt="PRC Transformation Support Strategy">
+</div></div>
+</div>
+
+#### Vision
+<div class="row align-items-start">
+<div class="col-sm-8">
+Delivering priority change actions that support and follow the transformation of the pan-European Air Navigation System.
+
+Independent monitoring and communication on the success of major contributors and game changers will provide a level playing-field and ensure transparency
+for political and strategic decision-making, and will ultimately drive the required pan-European system change. A higherperforming European Air Navigation System (ANS) will benefit airspace users and the public – both travelling and non-travelling – alike. 
+
+</div>
+<div class="col-sm-4">
+<div class="card border-0">
+  <img class="card-img-top" src="/images/prc/vis_tss.png" alt="PRC Transformation Support Strategy">
+</div></div>
+</div>
+
+<div class="row align-items-start">
+<div class="col-sm-10">
+The successful implementation of novel and transformative concepts, and associated technological
+enablers, will accelerate the achievement of higher performance levels.
+
+The transformation of Europe’s ANS will reduce constraints on airspace users, providing them with higher flexibility and enabling more environmentally
+friendly operations. These achievements will be measured across the spectrum of air navigation service provision, concepts, and enablers.
+
+The **EUROCONTROL PRC Transformation Support Strategy** and its **action plan**  will be regularly refined in consultation with key stakeholders. Prioritising change initiatives will ensure continual progression. The implementation will provide evidence of the achieved performance benefits, highlight the key enablers for deploying the change initiatives, as well as identify any potential blocking points.
+</div>
+<div class="col-sm-2">
+<div class="row justify-content-center">
+<div class="card border-0"><a href="/library/prc_transformation_support_strategy_flyer.pdf" class="btn btn-secondary" role="button">
+<img class="card-img-top" src="/images/prc/prc_tss_flyer.png" alt="PRC Transformation Support Strategy">Download the PRC information paper</a>
+</div></div></div>

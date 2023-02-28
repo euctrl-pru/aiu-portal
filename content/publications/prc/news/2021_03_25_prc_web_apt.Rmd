@@ -1,0 +1,32 @@
+---
+title: Addressing airport capacity imbalance
+type: "PRC Webinar"
+date: '2021-03-25'
+tags:
+  - Airport
+  - Capacity
+---
+
+<div class="container">
+<div class="row align-items-start">
+
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/event/addressing-airport-capacity-imbalance" target="_blank">
+  <img class="card-img-top" src="/images/prc/202103_apt_web.png" alt="Addressing airport capacity imbalance">
+  <div class="card-body"><h5 class="card-title">PRR 2020 - final report</h5></a><p class="card-text"></p>
+</div></div>
+</div>
+
+<div class="col-sm-9">
+As travel demand picks up, airport capacity needs to be factored in as part of the post-COVID recovery phase.
+
+Different runway configurations at airports can result in varying operating conditions, affecting the performance of both air traffic control and airports in terms of workload and throughput – a performance issue already identified by the Performance Review Commission (PRC) in the Airport Capacity Imbalance study published in October 2020.
+
+In this webinar, the PRC explored the issue further with representatives from airlines and airports in order to tackle the key question:
+What is the impact of a given runway configuration on airport operations, and how do we deal with that from a strategical and tactical point of view?
+
+<a href="https://www.eurocontrol.int/event/addressing-airport-capacity-imbalance" class="btn btn-secondary" role="button" target="_blank"> Read more....</a>
+
+</div>
+
+</div></div>

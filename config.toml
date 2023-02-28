@@ -1,0 +1,612 @@
+#------- LOCAL DEVELOPMENT/TESTING -------
+# remember ending '/'
+# baseurl = "/"
+# see .Rprofile for publishDir, i.e. the place
+# where generated HTML is put (the "public" dir in hugo parlance)
+#-----------------------------------------
+
+
+#--------------- PRODUCTION ---------------
+# remember ending '/'
+baseurl = "https://www.ansperformance.eu/"
+# publishDir = "public/"
+#-----------------------------------------
+
+
+
+languageCode = "en-us"
+title = "Aviation Intelligence Unit Portal"
+theme = "pru-theme"
+
+# PRU Portal one
+# googleAnalytics = "UA-62697169-2" 
+
+# Deni's one
+googleAnalytics = "UA-61343306-1"
+summaryLength = 10
+
+ignoreFiles = [
+  "\\.knit\\.md$",
+  "\\.utf8\\.md$",
+  "\\.Rmd$",
+  "\\.Rmarkdown$",
+  "_cache$",
+  "src$"
+]
+
+# keep embedded HTML, see data.md
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+
+# Uncomment below to enable syntax highlighting
+# pygmentsCodefences = true
+# pygmentsCodefencesGuessSyntax = true
+# See https://xyproto.github.io/splash/docs/all.html for more styles
+# pygmentsStyle = "pygments"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+# See https://feathericons.com/
+# The value of pre is the icon name
+[menu]
+
+ [[menu.main]]
+#   pre = "<i class='far fa-star fa-spin fa-fw'></i>"
+#   pre = "<i class='fas fa-home'></i>"
+    name = "AIU Home"
+    identifier= "aiu"
+    url = "/#/"
+    weight = 5
+
+  [[menu.main]]
+    name = "&nbsp;Home"
+    pre = "<i class='fas fa-home'></i>"
+    url = "/#"
+    identifier = "key-home"
+    parent = "aiu"
+    weight = 1
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-plane-departure'></i>"
+    name = "&nbsp;Traffic"
+    url = "/traffic/"
+    identifier = "key-traffic"
+    parent = "aiu"
+    weight = 15
+    [[menu.main]]
+  #   pre = "&nbsp;&nbsp;&nbsp;<i class='far fa-star fa-spin fa-fw'></i>"
+      name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Daily Traffic Dashboard</span></i>"
+      url = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
+      identifier = "key-traffic-daily-traffic"
+      parent = "aiu"
+      weight = 17
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Traffic Forecast</span>"
+      url = "/traffic/statfor/"
+      identifier = "key-traffic-forecast"
+      parent = "aiu"
+      weight = 19
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-leaf'></i>"
+    name = "&nbsp;Efficiency & Environment"
+    url = "/efficiency/"
+    identifier = "key-environment"
+    parent = "aiu"
+    weight = 21
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>CO<sub>2</sub> emissions</span>"
+      url = "/efficiency/emissions/"
+      identifier = "key-environment-emissions"
+      parent = "aiu"
+      weight = 22
+     [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Horizontal Flight Efficiency</span>"
+      url = "/efficiency/hfe/"
+      identifier = "key-environment-hfe"
+      parent = "aiu"
+      weight = 23
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Vertical Flight Efficiency</span>"
+      url = "/efficiency/vfe/"
+      identifier = "key-environment-vfe"
+      parent = "aiu"
+      weight = 25
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Terminal Holdings</span>"
+      url = "/efficiency/asma/"
+      identifier = "key-environment-holding"
+      parent = "aiu"
+      weight = 27
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Taxi-out</span>"
+      url = "/efficiency/taxiout/"
+      identifier = "key-environment-taxiout"
+      parent = "aiu"
+      weight = 29
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-euro-sign'></i>"
+    name = "&nbsp;Economics"
+    url = "/economics/"
+    identifier = "key-economics"
+    parent = "aiu"
+    weight = 31
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Service Units</span>"
+      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+      identifier = "key-economics-service-units"
+      parent = "aiu"
+      weight = 33
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Unit Rates and Costs</span>"
+      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
+      identifier = "key-economics-unit-rates"
+      parent = "aiu"
+      weight = 35
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>ATM Cost Effectiveness</span>"
+      url = "/economics/ace-overview/"
+      identifier = "key-economics-ace"
+      parent = "aiu"
+      weight = 36
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>ANSPs Financial Situation</span>"
+      url = "/economics/finance/"
+      identifier = "key-economics-financial"
+      parent = "aiu"
+      weight = 37
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>CBA</span>"
+      url = "/economics/cba/"
+      identifier = "key-economics-cba"
+      parent = "aiu"
+      weight = 38
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-user-friends'></i>"
+    name = "&nbsp;Stakeholder views"
+    url = "/dashboard/stakeholder/"
+    identifier = "key-stakeholder"
+    parent = "aiu"
+    weight = 39
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Airport View</span>"
+      url = "/dashboard/stakeholder/airport/"
+      identifier = "key-stakeholder-airport"
+      parent = "aiu"
+      weight = 41
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>ANSP View</span>"
+      url = "/dashboard/stakeholder/ansp/"
+      identifier = "key-stakeholder-ansp"
+      parent = "aiu"
+      weight = 43
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>FAB View</span>"
+      url = "/dashboard/stakeholder/fab/"
+      identifier = "key-stakeholder-fab"
+      parent = "aiu"
+      weight = 45 
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>State View</span>"
+      url = "/dashboard/stakeholder/state/"
+      identifier = "key-stakeholder-state"
+      parent = "aiu"
+      weight = 47
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-book'></i>"
+    name = "&nbsp;Publications"
+    url = "/publications/"
+    identifier = "key-publications"
+    parent = "aiu"
+    weight = 49
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-database'></i>"
+    name = "&nbsp;Data"
+    url = "/data/"
+    identifier = "key-data"
+    parent = "aiu"
+    weight = 50
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-hands-helping'></i>"
+    name = "&nbsp;Reference"
+    url = "/reference/"
+    identifier = "key-support"
+    parent = "aiu"
+    weight = 51
+  #  [[menu.main]]
+  #    pre = "&nbsp;&nbsp;&nbsp;"
+  #    name = " <span style='font-weight: normal'>Definitions</span>"
+  #    url = "/definition/"
+  #    identifier = "key-support-definitions"
+  #    parent = "aiu"
+  #    weight = 52
+  #  [[menu.main]]
+  #    pre = "&nbsp;&nbsp;&nbsp;"
+  #    name = " <span style='font-weight: normal'>Methodology</span>"
+  #    url = "/methodology/"
+  #    identifier = "key-support-methodology"
+  #    parent = "aiu"
+  #    weight = 53
+  #  [[menu.main]]
+  #    pre = "&nbsp;&nbsp;&nbsp;"
+  #    name = " <span style='font-weight: normal'>Acronyms</span>"
+  #    url = "/acronym/"
+  #    identifier = "key-support-acronyms"
+  #    parent = "aiu"
+  #    weight = 54
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-external-link-alt'></i>"
+    name = "&nbsp;External"
+    url = ""
+    identifier = "key-external"
+    parent = "aiu"
+    weight = 61
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Single European Sky Portal</span>"
+      url = "https://www.eurocontrol.int/prudata/dashboard/"
+      identifier = "key-external-ses"
+      parent = "aiu"
+      weight = 63
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>ICAO GANP</span>"
+      url = "https://www4.icao.int/ganpportal/"
+      identifier = "key-external-ganp"
+      parent = "aiu"
+      weight = 65
+
+
+ [[menu.main]]
+    name = "About"
+    identifier= "about"
+    url = "/about/us/"
+    weight = 10
+   [[menu.main]]
+    name = "About the PRC"
+    url = "/about/prc/"
+    parent = "about"
+    identifier = "prc"   
+    weight = 1
+  [[menu.main]]
+    name = "About the PRU"
+    url = "/about/us/"
+    identifier = "pru"
+    parent = "about"
+    weight = 2
+  [[menu.main]]
+    name = "Release notes"
+    url = "/post/"
+    identifier = "release"
+    parent = "about"
+    weight = 3
+  [[menu.main]]
+    name = "Disclaimer"
+    url = "/about/disclaimer/"
+    identifier = "disclaimer"
+    parent = "about"
+    weight = 4
+
+  [[menu.main]]
+    name = "Areas"
+    identifier = "dashboard"
+    pre = ""
+    url = "/dashboard/"
+    weight = 15
+  [[menu.main]]
+    name = "Traffic"
+    url = "/traffic/"
+    identifier = "traffic"
+    parent = "dashboard"
+    weight = 1
+  [[menu.main]]
+    name = "Capacity & delays"
+    url = "/capacity/"
+    identifier = "capacity"
+    parent = "dashboard"
+    weight = 2
+  [[menu.main]]
+    name = "Efficiency & environment"
+    url = "/efficiency/"
+    identifier = "efficiency"
+    parent = "dashboard"
+    weight = 3
+  [[menu.main]]
+    name = "Economics"
+    url = "/economics/"
+    identifier = "economics"
+    parent = "dashboard"
+    weight = 4
+
+  [[menu.main]]
+    name = "Views"
+    pre = ""
+    url = "/dashboard/stakeholder/"
+    identifier = "stakeholder"   
+    weight = 20
+  [[menu.main]]
+    name = "Airports"
+    url = "/dashboard/stakeholder/airport/"
+    identifier = "Airport"
+    parent = "stakeholder"
+    weight = 1  
+    [[menu.main]]
+    name = "Air Navigation Service Provider"
+    url = "/dashboard/stakeholder/ansp/"
+    identifier = "Ansp"
+    parent = "stakeholder"
+    weight = 2
+  [[menu.main]]
+    name = "Functional Airspace Block"
+    url = "/dashboard/stakeholder/fab/"
+    identifier = "fab"
+    parent = "stakeholder"
+    weight = 3
+  [[menu.main]]
+    name = "States"
+    url = "/dashboard/stakeholder/state/"
+    identifier = "State"
+    parent = "stakeholder"
+    weight = 4
+
+  [[menu.main]]
+    name = "Publications"
+    pre = ""
+    url = "/publications/"
+    identifier = "publications" 
+    weight = 30
+
+  [[menu.main]]
+    name = "Data"
+    pre = ""
+    url = "/data/"
+    identifier = "data" 
+    weight = 40
+
+  [[menu.main]]
+    name = "Reference"
+    url = "/reference/"
+    identifier = "reference"
+    weight = 50
+  # [[menu.main]]
+  #  name = "Data downloads"
+  #  url = "/data/"
+  #  parent = "reference"
+  #  weight = 1  
+  [[menu.main]]
+    name = "Definitions"
+    url = "/definition/"
+    parent = "reference"
+    weight = 2
+  [[menu.main]]
+    name = "Methodology"
+    url = "/methodology/"
+    identifier = "methodology"
+    parent = "reference"
+    weight = 3
+  [[menu.main]]
+    name = "Acronyms"
+    url = "/acronym/"
+    parent = "reference"
+    weight = 4
+  [[menu.main]]
+    name = "Bibliography"
+    url = "/bibliography/"
+    parent = "reference"
+    weight = 5
+  [[menu.main]]
+    name = "divider2"
+    parent = "reference"
+    weight = 6
+  [[menu.main]]
+    name = "ICAO GANP"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://www4.icao.int/ganpportal/"
+    parent = "reference"
+    weight = 7
+
+  [[menu.main]]
+    name = "SES"
+    identifier= "ses"
+    url = " "
+    weight = 60
+  [[menu.main]]
+    name = "Single European Sky (SES) Portal"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://www.eurocontrol.int/prudata/dashboard/"
+    identifier = "ses-link"
+    parent = "ses"
+    weight = 1
+
+[[menu.traffic]]
+    name = "Traffic Overview"
+    url = "/traffic"
+    identifier= "overview"
+    weight = 10
+[[menu.traffic]]
+    name = "Daily traffic dashboard"
+    url = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
+    identifier= "state"
+    weight = 20
+[[menu.traffic]]
+    name = "Service Units"
+    url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+    identifier= "su"
+    weight = 30
+[[menu.traffic]]
+    name = "STATFOR Statistics and Forecasts"
+    url = "/traffic/statfor"
+    identifier= "statfor"
+    weight = 40
+
+[[menu.capacity]]
+    name = "Capacity Overview"
+    url = "/capacity"
+    identifier= "overview"
+    weight = 10
+ [[menu.capacity]]
+    name = "En-route ATFM delays"
+    url = "/capacity/atfm_ert"
+    identifier= "atfm_ert"
+    weight = 20
+[[menu.capacity]]
+    name = "Airport ATFM delays"
+    url = "/capacity/atfm_apt"
+    identifier= "atfm_apt"
+    weight = 30
+[[menu.capacity]]
+    name = "All-causes delay"
+    url = "/capacity/tot_dly"
+    identifier= "tot_dly"
+    weight = 40
+[[menu.efficiency]]
+    name = "Efficiency Overview"
+    url = "/efficiency"
+    identifier= "overview"
+    weight = 10
+[[menu.efficiency]]
+    name = "CO2 emissions"
+    url = "/efficiency/emissions"
+    identifier= "emissions"
+    weight = 15
+[[menu.efficiency]]
+    name = "Horizontal flight efficiency"
+    url = "/efficiency/hfe"
+    identifier= "hfe"
+    weight = 20
+[[menu.efficiency]]
+    name = "Vertical flight efficiency"
+    url = "/efficiency/vfe"
+    identifier= "vfe"
+    weight = 30
+[[menu.efficiency]]
+    name = "Terminal holdings"
+    url = "/efficiency/asma"
+    identifier= "asma"
+    weight = 40
+[[menu.efficiency]]
+    name = "Taxi out"
+    url = "/efficiency/taxiout"
+    identifier= "taxiout"
+    weight = 50
+
+[[menu.economics]]
+    name = "Economics Overview"
+    url = "/economics"
+    identifier= "overview"
+    weight = 10
+ [[menu.economics]]
+    name = "ATM Cost Efficiency (ACE)"
+    url = "/economics/ace-overview/"
+    identifier= "ace"
+    weight = 20
+[[menu.economics]]
+    name = "Unit rate and costs"
+    url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
+    identifier= "unit"
+    weight = 30
+[[menu.economics]]
+    name = "Service Units"
+    url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+    identifier= "su"
+    weight = 40
+[[menu.economics]]
+    name = "ANSP Financial dashboard"
+    url = "/economics/finance/"
+    identifier= "finance"
+    weight = 50
+[[menu.economics]]
+    name = "CBA"
+    url = "/economics/cba/"
+    identifier= "cba"
+    weight = 60
+
+
+[[menu.publications]]
+    name = "PRC News"
+    url = "/publications/prc/news"
+    identifier= "prc_news"
+    weight = 10
+[[menu.publications]]
+    name = "PRR"
+    url = "/publications/prc/prr"
+    identifier= "prr"
+    weight = 20
+ [[menu.publications]]
+    name = "ATM Cost Efficiency Benchmark (ACE)"
+    url = "/publications/prc/ace"
+    identifier= "ace"
+    weight = 30
+[[menu.publications]]
+    name = "Other"
+    url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+    identifier= "su"
+    weight = 40
+
+
+
+
+[params]
+  includeBootstrapJs = false
+  showActiveNav = true
+  containerMaxWidth = "1200px"
+  dateFormat = "Jan 2, 2006"
+  hideFooter = false
+  # HACK: DuckDuckGo multiple site search (i.e. separating sites with comma)
+  #       does not work. So use 'OR site:' from the second on
+  sitetosearch = "ansperformance.eu OR site:www.eurocontrol.int/prudata/dashboard/ OR site:www.eurocontrol.int/ACE/ OR site:www.eurocontrol.int/ServiceUnits/Dashboard/ OR site:www.eurocontrol.int/Economics/"
+  privacyURL = "https://www.eurocontrol.int/info/privacy-and-website-terms-use"
+  MathJaxCDN = "https://mathjax.rstudio.com/latest"
+
+  [params.logo]
+    url = "images/EUROCONTROL-logo-standard-rgb.png"
+    height = 40
+    alt = "PRU"
+    target = "https://eurocontrol.int"
+
+  [params.owner]
+    name = "European Organisation for the Safety of Air Navigation (EUROCONTROL)"
+    shortname = "EUROCONTROL"
+    location = "Brussels, Belgium"
+    twitter = "eurocontrol"
+    github =  "euctrl-pru"
+    email = "PRU-Support@eurocontrol.int"
+
+
+# see https://matjaz.it/hugo-power-user-make-it-web-friendly-1/
+enableRobotsTXT = true
+
+# see https://matjaz.it/hugo-power-user-make-it-web-friendly-1/
+# TODO: set Google Webmaster tools
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

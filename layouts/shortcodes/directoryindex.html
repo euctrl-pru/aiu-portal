@@ -1,0 +1,14 @@
+{{- $pathURL := .Get "pathURL" -}}
+{{- $path := .Get "path" -}}
+{{- $files := readDir $path -}}
+<table style="width: auto !important;">
+    <th>Name</th>
+    <th>Size (<a href="https://en.wikipedia.org/wiki/Kilobyte">KiB</a>)</th>
+{{- range $files }}
+    <tr>
+        <td><a href="{{ $pathURL }}{{ .Name | relURL }}" target="_blank"> {{ .Name }}</a></td>
+        <td>{{ div .Size 1024 }}</td>
+    </tr>
+{{- end }}
+</table>
+

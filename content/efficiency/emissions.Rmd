@@ -1,0 +1,695 @@
+---
+title: "CO₂ emissions"
+output: html_document
+---
+
+```{r, echo=FALSE, include=FALSE}
+# All defaults
+## libraries
+library(fs)
+library(tibble)
+library(dplyr)
+library(stringr)
+library(here)
+library(readxl)
+library(DBI)
+library(ROracle)
+library(lubridate)
+library(zoo)
+library(plotly)
+library(reactable)
+library(htmltools)
+```
+
+```{css, echo=FALSE}
+
+.nav>li>a {
+    color: black;
+    background-color:#f5f5f5;
+    padding: 2px 5px 2px 5px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a.active {
+    color:black;
+    background-color:#e0e0e0;
+    text-decoration: none;
+}
+
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+base_dir <- ""
+# base_dir <- here("static","download","xls")
+
+# co2_data_raw_old <-  read_xlsx(
+#   path  = fs::path_abs(
+#     str_glue("CO2_emissions_for_portal.xlsx"),
+#     start = base_dir),
+#   sheet = "All Data",
+#   range = cell_limits(c(1, 1), c(NA, NA))) %>%
+#   mutate(across(.cols = where(is.instant), ~ as.Date(.x)))%>%
+#   filter(is.na(YEAR)==FALSE)%>%
+#   as_tibble()
+
+export_query <- function(schema, query) {
+  USR <- Sys.getenv(paste0(schema, "_USR"))
+  PWD <- Sys.getenv(paste0(schema, "_PWD"))
+  DBN <- Sys.getenv(paste0(schema, "_DBNAME"))
+  withr::local_envvar(c("TZ" = "UTC", "ORA_SDTZ" = "UTC"))
+  withr::local_namespace("ROracle")
+  con <- withr::local_db_connection(
+    DBI::dbConnect(DBI::dbDriver("Oracle"),
+                   USR, PWD, dbname = DBN,
+                   timezone = "UTC"))
+  con %>%
+    dbSendQuery(query) %>%
+    fetch(n = -1)
+}
+
+query <- str_glue("
+    SELECT *
+      FROM TABLE (emma_pub.api_aiu_stats.MM_AIU_STATE_DEP ())
+      where year >= 2019 and STATE_NAME not in ('LIECHTENSTEIN')
+    ORDER BY 2, 3, 4
+   ")
+
+
+co2_data_raw <- export_query("PRU_DEV", query = query)%>%
+  mutate(across(.cols = where(is.instant), ~ as.Date(.x)))
+
+
+co2_data_plot_nw <- co2_data_raw %>%
+  select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH)%>%
+  group_by(FLIGHT_MONTH)%>%
+  summarise(TTF = sum(TF), TCO2 = sum(CO2_QTY_TONNES))%>%
+  mutate(YEAR = as.numeric(format(FLIGHT_MONTH,'%Y')), MONTH = as.numeric(format(FLIGHT_MONTH,'%m')))%>%
+  arrange(FLIGHT_MONTH)%>%
+  mutate(TTF_IDX=TTF/first(TTF)*100, CO2_IDX=TCO2/first(TCO2)*100)
+
+co2_data_plot_nw_ld <- co2_data_plot_nw %>% 
+  mutate(FLIGHT_MONTH = ceiling_date(as_date(FLIGHT_MONTH), unit='month')-1)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+# Network plot option 1
+
+# vertical line function
+vline <- function(x = 0, color = "#dcdcdc") {
+  list(
+    type = "line", 
+    y0 = 0, 
+    y1 = 1, 
+    yref = "paper",
+    x0 = x, 
+    x1 = x, 
+    line = list(color = color, width=1)
+  )
+}
+
+# anotations
+a1 <- list(
+  x = '2020-02-15',
+  y = 1,
+  text = paste("2020"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a2 <- list(
+  x = '2019-02-15',
+  y = 1,
+  text = paste("2019"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a3 <- list(
+  x = '2021-02-15',
+  y = 1,
+  text = paste("2021"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a4 <- list(
+  x = '2022-02-15',
+  y = 1,
+  text = paste("2022"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a5 <- list(
+  x = '2023-02-15',
+  y = 1,
+  text = paste("2023"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+# Network plot option 3
+
+# build plot nw co2
+co2_nw_plot3 <- co2_data_plot_nw_ld %>%
+  plot_ly(
+    # width = 500, 
+    height = 350,
+    x = ~ FLIGHT_MONTH,
+    y = ~ CO2_IDX,
+    yaxis = "y1",
+    type = 'scatter',
+    mode = 'lines',
+    line = list(color = '#ffc000', width = 2),
+    name = paste0('CO','<sub>2</sub>',' index'),
+    hovertemplate = paste('<b>CO','<sub>2</sub>',' index</b>: <br>%{y}',
+                          "<extra></extra>", # this is to remove the shadow
+                          sep = ""),
+    showlegend = T
+  )%>%
+  add_trace(
+    y = ~TTF_IDX, 
+    yaxis = "y1",
+    name = paste0('Departures index'),
+    mode = 'lines',
+    hovertemplate = paste('Departures index: <br>%{y}',
+                          "<extra></extra>", # this is to remove the shadow
+                          sep = ""),
+    line = list(color = '#2990ea', width = 1) 
+    ) %>%
+  layout(
+    shapes = list(vline(as.Date('2023-01-01')) ,vline(as.Date('2022-01-01')), vline(as.Date('2021-01-01')),vline(as.Date('2020-01-01'))),
+    annotations = list(a1, a2, a3, a4, a5),
+     autosize = T,
+    font = list(family = "Helvetica"),
+    xaxis = list(
+      title = "",
+      # fixedrange = TRUE,
+      tickangle=-40,
+      dtick = "M2", tickformat="%b%y",
+      # range = c(~min(FLIGHT_DATE),~max(FLIGHT_DATE)),
+      fixedrange = TRUE, # disables zoom
+      showline = T,
+      linecolor = '#dcdcdc',
+      showgrid = F
+    ),
+    yaxis = list(
+      title = paste0('Index (100 = Jan 2019)'),
+      titlefont   = list(size = 12),
+      fixedrange = TRUE,
+      rangemode='nonnegative', #forces the zeros of the two vertical axis to overlap
+      hoverformat = ",.1f",
+      # barmode = 'group',
+    # range = c(0,ceiling(max(nw_data_plot$ROLL_WK_AVG_DLY)/10000)*10000),
+      # tick0 = 1,
+      # ticksuffix = "M",
+      tickformat=",.#f",
+      zeroline = T, showline = F, showgrid = T
+    ),
+    # yaxis2 = list (
+    #   overlaying = "y",
+    #   rangemode='nonnegative',
+    #   side = "right",
+    #   title = paste0('Departures (thousands)'),
+    #   titlefont = list(size = 13),
+    #   barmode = 'group',
+    #   # ticksuffix = "k",
+    #   hoverformat = ",.1f",
+    #   automargin = T,
+    #   # range = list(0,35),
+    #   showgrid = F
+    # ),
+    hovermode = "x unified",
+    legend = list(orientation = 'h', xanchor = "left", x = 0.0, y=-0.20)
+  )%>%
+    config(
+      responsive = TRUE,
+      displaylogo = FALSE,
+      modeBarButtons = list(list("toImage"))
+      )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+#data month state
+last_date <- max(co2_data_raw$FLIGHT_MONTH, na.rm=TRUE)
+last_month <- format(last_date,'%B')
+last_year <- max(co2_data_raw$YEAR)
+
+co2_data_plot_state <- co2_data_raw %>%
+  arrange(STATE_NAME,YEAR,MONTH)%>%
+  mutate(MOM_GROWTH_CO2 = if_else(YEAR == last_year, CO2_QTY_TONNES/lag(CO2_QTY_TONNES, 12*(last_year-2019))-1,NA),
+         MOM_GROWTH_TF = if_else(YEAR == last_year, TF/lag(TF, 12*(last_year-2019))-1,NA))%>%
+  filter(FLIGHT_MONTH ==last_date)%>%
+  select(STATE_NAME, CO2_QTY_TONNES, TF, MOM_GROWTH_CO2, MOM_GROWTH_TF)%>%
+  mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
+  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = gsub("Turkiye", "Türkiye",STATE_NAME, ignore.case = FALSE))%>%
+  # mutate(CO2_DEP = ifelse(TF!=0,CO2_QTY_TONNES/TF,0))%>%
+  # mutate(CO2_DEP_2019 = ifelse(TF!=0, CO2_QTY_TONNES/TF *(MOM_GROWTH_TF+1)/(MOM_GROWTH_CO2+1), 0))%>%
+  # mutate(MOM_GROWTH_CO2_DEP = ifelse(CO2_DEP_2019!=0, CO2_DEP/CO2_DEP_2019-1, 0))%>%
+  mutate(STATE_NAME =gsub("Norway\\*", 'Norway<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Jan Mayen and Svalbard">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Denmark\\*", 'Denmark<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Faroe Islands">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Portugal\\*", 'Portugal<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Azores and Madeira">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("United Kingdom\\*", 'United Kingdom<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Jersey, Guernsey and Isle of Man">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Kosovo", 'Kosovo<span><a href="#" data-toggle="tooltip" data-placement="right" title="This designation is without prejudice to positions on status, and is in line with UNSCR 1244/99 and the ICJ opinion on the Kosovo declaration of independence.">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  select(STATE_NAME,MOM_GROWTH_CO2)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#plot month state
+
+# Render a bar chart with positive and negative values
+# https://glin.github.io/reactable/articles/cookbook/cookbook.html#bar-charts
+bar_chart_pos_neg <- function(label, value, max_value = 1, height = "1rem",
+                              pos_fill = "#E3DE00", neg_fill = "#718AF0") {
+  neg_chart <- div(style = list(flex = "1 1 0"))
+  pos_chart <- div(style = list(flex = "1 1 0"))
+  width <- paste0(abs(value / max_value) * 100, "%")
+
+  if (value < 0) {
+    bar <- div(style = list(marginLeft = "0.5rem", background = neg_fill, width = width, height = height))
+    chart <- div(
+      style = list(display = "flex", alignItems = "center", justifyContent = "flex-end"),
+      label,
+      bar
+    )
+    neg_chart <- tagAppendChild(neg_chart, chart)
+  } else {
+    bar <- div(style = list(marginRight = "0.5rem", background = pos_fill, width = width, height = height))
+    chart <- div(style = list(display = "flex", alignItems = "center"), bar, label)
+    pos_chart <- tagAppendChild(pos_chart, chart)
+  }
+
+  div(style = list(display = "flex"), neg_chart, pos_chart)
+}
+
+
+# build plot total
+table_states_month <- reactable(
+  co2_data_plot_state,
+  bordered = FALSE,
+  # defaultPageSize = 43,
+  pagination = FALSE, height = 530,
+  defaultSorted = list(STATE_NAME = "asc"),
+  striped = TRUE,
+  compact = TRUE,
+  highlight = TRUE,
+  defaultColDef = colDef(
+      style=list("font-size" = "12px", "white-space"= "wrap"),
+      headerStyle = list(background = "#e0e0e0", "font-size" = "12px")
+  ),
+  columns = list(
+    STATE_NAME = colDef(name = "Country", minWidth = 20,html = TRUE),
+    MOM_GROWTH_CO2 = colDef(
+      name = paste0("Variation (%) vs 2019"),
+      defaultSortOrder = "desc",
+      cell = function(value) {
+        # label <- paste0(round(value * 100), "%")
+        label <-paste0(if_else(value>=0,'+','-'),format(round(abs(value)*100,0),nsmall=0),'%')
+        bar_chart_pos_neg(label, value)
+      },
+      align = "center",
+      minWidth = 30
+    )
+  )
+)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+#data y2d  state
+
+co2_data_plot_state_y2d <- co2_data_raw %>%
+  arrange(STATE_NAME,YEAR,MONTH)%>%
+  group_by(STATE_NAME,YEAR)%>%
+  mutate(YTD_CO2_QTY_TONNES = cumsum(CO2_QTY_TONNES),
+         YTD_TF = cumsum(TF))%>%
+  ungroup()%>%
+  mutate(YTD_GROWTH_CO2 = if_else(YEAR == last_year, YTD_CO2_QTY_TONNES/lag(YTD_CO2_QTY_TONNES, 12*(last_year-2019))-1, NA),
+         YTD_GROWTH_TF = if_else(YEAR == last_year, YTD_TF/lag(YTD_TF, 12*(last_year-2019))-1, NA))%>%
+  filter(FLIGHT_MONTH ==last_date)%>%
+  select(STATE_NAME, YTD_CO2_QTY_TONNES, YTD_TF, YTD_GROWTH_CO2, YTD_GROWTH_TF)%>%
+  mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
+  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = gsub("Turkiye", "Türkiye",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME =gsub("Norway\\*", 'Norway<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Jan Mayen and Svalbard">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Denmark\\*", 'Denmark<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Faroe Islands">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Portugal\\*", 'Portugal<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Azores and Madeira">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("United Kingdom\\*", 'United Kingdom<span><a href="#" data-toggle="tooltip" data-placement="right" title="Includes Jersey, Guernsey and Isle of Man">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  mutate(STATE_NAME =gsub("Kosovo", 'Kosovo<span><a href="#" data-toggle="tooltip" data-placement="right" title="This designation is without prejudice to positions on status, and is in line with UNSCR 1244/99 and the ICJ opinion on the Kosovo declaration of independence.">*</a></span>', STATE_NAME, ignore.case = TRUE))%>%
+  select(STATE_NAME,YTD_GROWTH_CO2)
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#plot y2d state
+
+# build plot total
+table_states_y2d <- reactable(
+  co2_data_plot_state_y2d,
+  bordered = FALSE,
+  # defaultPageSize = 43,
+  pagination = FALSE, height = 530,
+  defaultSorted = list(STATE_NAME = "asc"),
+  striped = TRUE,
+  compact = TRUE,
+  highlight = TRUE,
+  defaultColDef = colDef(
+      style=list("font-size" = "12px", "white-space"= "wrap"),
+      headerStyle = list(background = "#e0e0e0", "font-size" = "12px")
+  ),
+  columns = list(
+    STATE_NAME = colDef(name = "Country", minWidth = 20, html = TRUE),
+    YTD_GROWTH_CO2 = colDef(
+      name = "Variation (%) vs 2019",
+      defaultSortOrder = "desc",
+      cell = function(value) {
+        # label <- paste0(round(value * 100), "%")
+        label <-paste0(if_else(value>=0,'+','-'),format(round(abs(value)*100,0),nsmall=0),'%')
+        bar_chart_pos_neg(label, value)
+      },
+      align = "center",
+      minWidth = 30
+    )
+  )
+)
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#Calculate values for scorecards
+
+# last_month <- format(last_date,'%B')
+# last_year <- format(last_date,'%Y')
+y2d <- paste0('Year to date: 01 Jan-',format(last_date %m+% months(1) -1,'%d %b'))
+
+#monthly figures
+co2_month <- co2_data_plot_nw %>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(TCO2)%>%pull
+co2_month_r <- round(co2_month/1000000,1)
+
+co2_month_prev_year<- co2_data_plot_nw %>%
+  mutate(PREV_YEAR = lag(TCO2, 12))%>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(PREV_YEAR)%>%pull
+
+dif_co2_month_prev_year <- round((co2_month/co2_month_prev_year-1)*100,0)
+dif_co2_month_prev_year <- paste0(if_else(dif_co2_month_prev_year>=0,'+', ''),dif_co2_month_prev_year,'%')
+
+co2_month_2019<- co2_data_plot_nw %>%
+  mutate(CO2_2019 = lag(TCO2, (as.numeric(last_year)-2019)*12))%>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(CO2_2019)%>%pull
+
+dif_co2_month_2019 <- round((co2_month/co2_month_2019-1)*100,1)
+dif_co2_month_2019 <- paste0(if_else(dif_co2_month_2019>=0,'+', ''),dif_co2_month_2019,'%')
+
+dep_month <- co2_data_plot_nw %>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(TTF)%>%pull
+co2_dep_month <- co2_month/dep_month
+co2_dep_month_r <- format(round(co2_dep_month,1), nsmall=1)
+
+dep_month_prev_year<- co2_data_plot_nw %>%
+  mutate(DEP_PREV_YEAR = lag(TTF, 12))%>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(DEP_PREV_YEAR)%>%pull
+co2_dep_month_prev_year <- co2_month_prev_year/dep_month_prev_year
+
+dif_co2_dep_month_prev_year <- round((co2_dep_month/co2_dep_month_prev_year-1)*100,1)
+dif_co2_dep_month_prev_year <- paste0(if_else(dif_co2_dep_month_prev_year>=0,'+', ''),format(dif_co2_dep_month_prev_year, nsmall=1),'%')
+
+dep_month_2019<- co2_data_plot_nw %>%
+  mutate(DEP_2019 = lag(TTF, (as.numeric(last_year)-2019)*12))%>%
+  filter(FLIGHT_MONTH==last_date)%>%
+  select(DEP_2019)%>%pull
+co2_dep_month_2019 <- co2_month_2019/dep_month_2019
+
+dif_co2_dep_month_2019 <- round((co2_dep_month/co2_dep_month_2019-1)*100,1)
+dif_co2_dep_month_2019 <- paste0(if_else(dif_co2_dep_month_2019>=0,'+', ''),format(dif_co2_dep_month_2019, nsmall=1),'%')
+
+#y2d figures
+
+last_month_num <- as.numeric(format(last_date,'%m'))
+data_y2d <- co2_data_plot_nw %>%
+  filter(MONTH<=last_month_num)%>%
+  group_by(YEAR)%>%
+  summarise(TTF_Y2D = sum(TTF), TCO2_Y2D = sum(TCO2))
+
+co2_y2d <- data_y2d%>%
+  filter(YEAR==last_year)%>%
+  select(TCO2_Y2D)%>% pull
+
+dep_y2d <- data_y2d%>%
+  filter(YEAR==last_year)%>%
+  select(TTF_Y2D)%>%pull
+    
+co2_y2d_r <- round(co2_y2d/1000000,1)
+
+co2_y2d_prev_year <- data_y2d%>%
+  filter(YEAR==as.numeric(last_year)-1)%>%
+  select(TCO2_Y2D)%>% pull
+
+dif_co2_y2d_prev_year <- round((co2_y2d/co2_y2d_prev_year-1)*100,0)
+dif_co2_y2d_prev_year <- paste0(if_else(dif_co2_y2d_prev_year>=0,'+', ''),dif_co2_y2d_prev_year,'%')
+
+
+co2_y2d_2019 <- data_y2d%>%
+  filter(YEAR==2019)%>%
+  select(TCO2_Y2D)%>% pull
+
+dif_co2_y2d_2019 <- round((co2_y2d/co2_y2d_2019-1)*100,1)
+dif_co2_y2d_2019 <- paste0(if_else(dif_co2_y2d_2019>=0,'+', ''),format(dif_co2_y2d_2019, nsmall=1),'%')
+
+
+dep_y2d_prev_year  <- data_y2d%>%
+  filter(YEAR==as.numeric(last_year)-1)%>%
+  select(TTF_Y2D)%>%pull
+
+co2_dep_y2d <- co2_y2d/dep_y2d
+co2_dep_y2d_r <- format(round(co2_dep_y2d,1), nsmall=1)
+co2_dep_y2d_prev_year <- co2_y2d_prev_year/dep_y2d_prev_year
+
+dif_co2_dep_y2d_prev_year <- round((co2_dep_y2d/co2_dep_y2d_prev_year-1)*100,1)
+dif_co2_dep_y2d_prev_year <- paste0(if_else(dif_co2_dep_y2d_prev_year>=0,'+', ''),format(dif_co2_dep_y2d_prev_year, nsmall=1),'%')
+
+
+dep_y2d_2019  <- data_y2d%>%
+  filter(YEAR==2019)%>%
+  select(TTF_Y2D)%>%pull
+co2_dep_y2d_2019 <- co2_y2d_2019/dep_y2d_2019
+
+dif_co2_dep_y2d_2019 <- round((co2_dep_y2d/co2_dep_y2d_2019-1)*100,1)
+dif_co2_dep_y2d_2019 <- paste0(if_else(dif_co2_dep_y2d_2019>=0,'+', ''),format(dif_co2_dep_y2d_2019, nsmall=1),'%')
+
+
+```
+
+This page provides an overview of the [CO<sub>2</sub> emissions](/reference/dataset/emissions/) in the EUROCONTROL area and their evolution since 2019. It also presents their variation with respect to 2019 broken down at State level. The data is supplied by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"} and can be downloaded in our [download section](/data/).  
+
+#### Network (CRCO area)
+<div class="container mt-3" style="padding:0px">
+<div class="row align-items-start">
+
+<div class="col-md-4" >
+
+<div class="row align-items-start">
+<div class="col-12" style="background-color: #F2F5D3; border-radius: 4px;">
+<div class="row align-items-start" style="margin-top:10px;">
+<div class="col-5" >
+<p style="font-weight:bold; color:#2E75B6; font-size:18px;  ">Month: `r last_month` </p>
+</div>
+<div class="col-4" >
+<p style=" font-size:15px; margin-top:15px">vs 2022</p>
+</div>
+<div class="col-3" >
+<p style="font-size:15px; margin-top:15px">vs 2019</p>
+</div>
+</div><!-- closes row -->
+
+<div class="row align-items-start" style="">
+<div class="col-5" >
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_month_r` Mt</p>
+</div>
+<div class="col-4" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_month_prev_year`</p>
+</div>
+<div class="col-3" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_month_2019`</p>
+</div>
+</div><!-- closes row -->
+
+<div class="row align-items-start" style="">
+<div class="col-5" >
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_month_r` <span style="font-size:20px;">t/dep</span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Tonnes of CO2 emissions per departure">*</a></span>
+</p>
+</div>
+<div class="col-4" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_month_prev_year`</p>
+</div>
+<div class="col-3" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_month_2019`</p>
+</div>
+</div><!-- closes row -->
+
+
+<div class="row align-items-start" style="">
+<div class="col-12" >
+<p style="font-weight:bold; color:#2E75B6; font-size:18px; margin-top:10px">`r y2d` </p>
+</div>
+</div><!-- closes row -->
+
+<div class="row align-items-start" style="">
+<div class="col-5" >
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_y2d_r` Mt</p>
+</div>
+<div class="col-4" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_y2d_prev_year`</p>
+</div>
+<div class="col-3" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_y2d_2019`</p>
+</div>
+</div><!-- closes row -->
+
+<div class="row align-items-start" style="">
+<div class="col-5" >
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_y2d_r` <span style="font-size:20px;">t/dep</span><a href="#" data-toggle="tooltip" data-placement="right" title="Tonnes of CO2 emissions per departure">*</a></span>
+</p>
+</div>
+<div class="col-4" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_y2d_prev_year`</p>
+</div>
+<div class="col-3" >
+<p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_y2d_2019`</p>
+</div>
+</div><!-- closes row -->
+</div></div>
+</div><!-- closes col -->
+
+<div class="col-md-8">
+
+<div id="indexes">
+```{r echo=FALSE, out.width='100%'}
+co2_nw_plot3
+```
+</div>
+</div><!-- closes col -->
+
+</div><!-- closes row -->
+</div><!-- closes container -->
+
+#### States
+
+<ul class="nav nav-pills">
+  <li class="active m-1"><a id="defaultTab" data-toggle="pill" href="#month">`r last_month`</a></li>
+  <li class="m-1"><a data-toggle="pill" href="#y2d">Year to date</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="month" class="container tab-pane fade in active">
+
+<div class="container" style="padding:0px">
+<div class="row align-items-start ">
+
+<div class="col-lg-3 pl-0 mt-1">
+```{r echo=FALSE, out.width='100%'}
+table_states_month
+```
+</div><!-- closes col -->
+<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-10fff34e">
+</div><!-- closes col -->
+
+</div><!-- closes row -->
+</div><!-- closes container -->
+</div><!-- closes id#month -->
+
+<div class="tab-pane fade" id="y2d">
+<div class="container" style="padding:0px">
+<div class="row align-items-start ml-1">
+
+<div class="col-lg-3 pl-0 mt-1">
+```{r echo=FALSE, out.width='100%'}
+table_states_y2d
+```
+</div><!-- closes col -->
+<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-65af85bf">
+</div><!-- closes col -->
+
+</div><!-- closes row -->
+</div><!-- closes container -->
+</div><!-- closes id#y2d -->
+</div><!-- closes tabcontent -->
+<br>
+
+### More on aviation sustainability 
+
+<div class="container">
+<div class="row">
+<div class="card-deck">
+
+<div class="card"><a href="https://www.eurocontrol.int/aviation-sustainability" target="_blank">
+  <img class="card-img-top" src="/images/eff/ectl_asu.jpg" alt="Sustainability site">
+  <div class="card-body"><h5 class="card-title">Aviation sustainability</h5><p class="card-text">Learn more EUROCONTROL aviation sustainability activities and products <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/aviation-sustainability-briefing" target="_blank">
+  <img class="card-img-top" src="/images/eff/asu_brief.png" alt="Sustainability Briefings">
+  <div class="card-body"><h5 class="card-title">Sustainability briefings</h5><p class="card-text">Read and subscribe to the sustainability briefings! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/publication/objective-skygreen-2022-2030" target="_blank">
+  <img class="card-img-top" src="/images/eff/skygreen.png" alt="Objective Skygreen">
+  <div class="card-body"><h5 class="card-title">Objective Skygreen</h5><p class="card-text">Read the Objective Skygreen report! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+window.onload = function() {
+  var element = document.getElementById("defaultTab");
+  element.click();
+}
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@espinielli/co2-emissions-variation-per-state.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "co2map") return new Inspector(document.querySelector("#observablehq-co2map-10fff34e"));
+});
+</script>
+
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@espinielli/year-to-date-co2-emissions-variation-per-state.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "co2map") return new Inspector(document.querySelector("#observablehq-co2map-65af85bf"));
+});
+</script>
+

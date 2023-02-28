@@ -1,0 +1,17 @@
+---
+title: ATFM slot adherence
+slug: atfm-slot-adherence
+bibliography: [../../static/bib/legislation.bib]
+link-citations: true
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+ATFM departure slots are allocated centrally by the Network Manager to hold aircraft on the ground when there is an envisaged imbalance between demand and capacity at airports or en-route. 
+
+ATFM slot adherence measures the share of take-offs outside the allocated ATFM window. Within the EU, the monitoring of ATFM slot adherence is required by Regulation [@eu:255/2010]. ATS units are required to provide information on non-compliance for airports where non-adherence equals or exceeds 20% of regulated departures.
+
+## References

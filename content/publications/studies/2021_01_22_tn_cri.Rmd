@@ -1,0 +1,30 @@
+---
+title: Technical Note - Composite Risk Index Methodology
+date: '2021-01-22'
+type: "Technical Note"
+tags: "Safety"
+---
+
+<div class="container">
+<div class="row align-items-start">
+<div class="col-sm-2">
+<div class="card border-0"><a href="/library/tn_prc_2021_01_composite_risk_index_methodology.pdf">
+  <img class="card-img-top" src="/images/prc/tn_cri.png" alt="Technical Note - Composite Risk Index">
+  <div class="card-body"><h5 class="card-title">Technical Note - Composite Risk Index</h5></a><p class="card-text"></p>
+</div></div>
+</div>
+<div class="col-sm-10">
+This Technical Note, commissioned by the Performance Review Commission (PRC) has been prepared by the EUROCONTROL Performance Review Unit (PRU).
+
+In 2019 the PRC published (in PRR2018) its preliminary concept of Composite Risk Index (CRI) and corresponding methodology that could be used to measure the performance of the European ATM system, either as a whole or of its individual entities (service providers, Member States). Since then, the PRC has refined its CRI methodology to take account of local specific operating conditions and has published its methodology in this Technical Note.
+
+This document will be of interest to ATM key decision makers, policymakers and operations staff as well as to Safety specialists, because the PRC’s methodology by nature is scalable and therefore can provide high level information for decision makers as well as more in-depth knowledge about risk exposure to safety experts.
+
+The PRC’s CRI methodology contains four components: Safety data, Traffic/exposure data, Complexity and Reporting practices. This Technical Note explains in detail several statistical methods used to model index weights, overall computation, logic behind it, its use and limitations, and lastly areas of further improvement and expansion.
+</div>
+</div></div>
+
+Read more in the full document available for download below. <br>
+
+<a href="/library/tn_prc_2021_01_composite_risk_index_methodology.pdf" class="btn btn-secondary" role="button" target="_blank"> PRC Technical Note - Composite Risk Index (CRI) <br> {{% dwnld_i %}} Download </a>
+

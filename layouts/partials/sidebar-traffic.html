@@ -1,0 +1,11 @@
+<!-- sidebar start -->
+<nav class="sidenav">
+  <ul class="sidenav-links">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.traffic }}
+      <li class="">
+        <a href="{{ .URL }}" id="{{ .Identifier }}-item" aria-controls="{{ .Identifier }}" aria-selected='{{ if $currentPage.IsMenuCurrent "traffic" . }}true{{ else}}false{{end}}'>{{ .Pre }}<span>{{ .Name }}</span></a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>

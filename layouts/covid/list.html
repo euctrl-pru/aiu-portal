@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main>
+    <article>
+    {{ partial "sidebar-covid.html" . }}
+        <header>
+            <h3>{{.Title}}</h3>
+        </header>
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+        {{.Content}}
+    </article>
+    <!-- Ranges through content/covid/*.md -->
+   <!-- {{ range .Pages }} 
+    <article class="archive-item">
+      <i class="fas fa-calendar-alt"></i>&nbsp;<span class="archive-item-date"> {{ .Date.Format "January 2, 2006" }}</span> &mdash; <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div>
+        {{ .Summary }}
+      </div>
+      {{ if .Truncated }}-->
+      <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+     <!-- <div>
+        <a href="{{ .RelPermalink }}">Read More…</a>
+      </div>
+      {{ end }}
+
+    </article>
+    {{ end }}-->
+</main>
+{{ end }}

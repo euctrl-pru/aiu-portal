@@ -1,0 +1,62 @@
+---
+title: EUROCONTROL Central Office for Delay Analysis (CODA)
+date: '2020-06-17'
+---
+<style type="text/css">
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 42.0%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115%;
+    border: 0;
+}
+</style>
+
+The Central Office for Delay Analysis within EUROCONTROL provides all-causes delay, punctuality and cancellation statistics based on operational flight by flight data received from airspace users and EUROCONTROL Network Manager flight data. 
+
+<div class="resp-container">
+<iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/a3cb9c14-f174-4045-bdf8-28d4279c1b4f/page/hjss" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<br>
+
+### Visit other interesting CODA sites 
+
+<div class="container">
+<div class="row">
+<div class="card-deck">
+
+<div class="card"><a href="https://www.eurocontrol.int/dashboard/all-causes-delay-analysis-interactive-dashboard" target="_blank">
+  <img class="card-img-top" src="/images/cap/ectl_coda_db.jpg" alt="CODA interactive dashboard">
+  <div class="card-body"><h5 class="card-title">CODA interactive dashboard!</h5><p class="card-text">Click to explore the CODA all-causes delay analysis interactive dashboard <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/tool/mirror" target="_blank">
+  <img class="card-img-top" src="/images/cap/ectl_mirror.jpg" alt="MIRROR - Operational decision support tool">
+  <div class="card-body"><h5 class="card-title">MIRROR - Operational decision support tool</h5><p class="card-text">Click to explore the new tool! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/publication/taxi-times-summer-2021" target="_blank">
+  <img class="card-img-top" src="/images/apt/ectl_tx_stand.jpeg" alt="Taxi-time planning values">
+  <div class="card-body"><h5 class="card-title">Taxi-time planning values</h5><p class="card-text">Taxi time planning values, by IATA season for airline schedulers <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+<div class="card"><a href="https://www.eurocontrol.int/network-performance#deliverables" target="_blank">
+  <img class="card-img-top" src="/images/cap/ectl_coda1.jpg" alt="Latest CODA reports">
+  <div class="card-body"><h5 class="card-title">CODA reports!</h5><p class="card-text">Click to view the latest CODA reports <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
+
+</div>
+</div>
+</div>

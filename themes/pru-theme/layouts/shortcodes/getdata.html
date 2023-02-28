@@ -1,0 +1,4 @@
+<!-- {{/*
+Usage: {{% getdata "file" "field" %}}
+*/}}-->
+{{ index (index .Site.Data (.Get 0)) (.Get 1) }}

@@ -1,0 +1,291 @@
+---
+title: Unimpeded Taxi-out Time - Technical Note
+slug: unimpeded-taxi-out-time
+---
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The <em>actual taxi-out time</em> of a flight is the time elapsed between the off-block
+time of this flight and its take-off time.</p>
+<p>The <em>unimpeded taxi-out time</em> is the taxi-out time in non congested conditions
+at airports. The unimpeded taxi-out time is used in the calculation of the
+<a href="/definition/additional-taxi-out-time/" title="Additional Taxi-out Time definition">additional taxi-out time</a>.</p>
+<p>This technical note describes the methodology used in order to calculate the
+unimpeded taxi-out time.</p>
+</div>
+<div id="general-approach" class="section level2">
+<h2>General approach</h2>
+<p>The computation of the unimpeded taxi-out time is based on the statistical
+analysis of flights in non congested conditions.</p>
+<p>In order to determine whether a flight is unimpeded or not, its <em>congestion
+level</em> is computed as the number of preceding movements (arrivals and
+departures) that occur between the off-block of the flight up to its own
+take-off.</p>
+<p>The graphic here below illustrates the evolution of the actual taxi-out time as
+a function of the congestion level. In this picture, the range between the first
+quartile (bottom bar of each rectangle), third quartile (top bar) and the median
+(medium line) is depicted for each level of congestion.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:saturationlevel"></span>
+<img src="../../../../../../../images/saturationlevel.jpg" alt="Congestion level vs. saturation level." width="400px" />
+<p class="caption">
+Figure 1: Congestion level vs. saturation level.
+</p>
+</div>
+<p>As shown in this figure, as soon as a certain level of congestion is reached (at
+the inflection point of the curve), the actual taxi-out time increases linearly
+with the level of congestion (red line passing through the origin). Beyond that
+inflection point, the actual taxi-out time is directly proportional to the
+number of movements ahead. At a low level of congestion (before the inflection
+point), the actual taxi-out time tends to be constant (horizontal red line).
+This constant actual taxi-out time is considered to be the unimpeded taxi-out
+time required by any flight to taxi out and take off. The intersection between
+the two red lines corresponds to the <em>saturation level</em>.</p>
+<p>The greater the level of congestion compared to the saturation level, the
+greater the likelihood of a flight’s being delayed due to traffic ahead.
+Therefore, to ensure that a flight is unimpeded, its congestion level needs to
+be sufficiently small compared to the saturation level. However, it needs to be
+ensured that the flight sample is big enough to produce a robust estimate of
+unimpeded ASMA time. Considering a flight as unimpeded if its congestion level
+is smaller than 50% of the saturation level has proved to be a good compromise
+between this two conflicting facts.</p>
+<p>Night flights may be subject to special procedures that are not representative
+of daytime operations. Therefore flights between 6:00 and 22:00 only are used
+for the calculation of unimpeded taxi-out time.</p>
+<p>A different unimpeded taxi-out time is determined for each combination:</p>
+<ul>
+<li>departure runway; and,</li>
+<li>departure stand (or group of stands);</li>
+</ul>
+<p>Although unimpeded taxi-out time is relatively static in time, regular checks
+are made to ensure that it remains representative of the operations for the
+airport under consideration. In case a change of unimpeded taxi-out time is
+detected, the causes of that change (new procedure implementation, change in use
+of infrastructure) are investigated. When required, new unimpeded times are
+calculated. However, because this method is based on statistical analysis of the
+actual taxi-out time, a period of several months after the change is required
+before new robust unimpeded taxi-out times can be established.</p>
+</div>
+<div id="determination-of-the-taxi-out-unimpeded-time" class="section level2">
+<h2>Determination of the taxi out unimpeded time</h2>
+<div id="methodological-assumptions" class="section level3">
+<h3>Methodological assumptions</h3>
+<p>Based on this definition of taxi-out time (from off-block time to take-off time),
+taxi-out time includes:</p>
+<ul>
+<li>possible push-day delay,</li>
+<li>possible remote de-icing time, and</li>
+<li>departure runway occupancy time.</li>
+</ul>
+</div>
+<div id="input-data-required" class="section level3">
+<h3>Input data required</h3>
+<p>The following input data are required in order to calculate the actual taxi-out time:</p>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="41%" />
+<col width="29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Acronym</th>
+<th>Description</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ADEP</td>
+<td>Departure airport code using the standard ICAO 4-letter code as defined in ICAO Doc. 7910.</td>
+<td>Airport data</td>
+</tr>
+<tr class="even">
+<td>AOBT</td>
+<td><em>Actual off-block time</em> means the actual date and time the aircraft has vacated the parking position (pushed back or on its own power).</td>
+<td>Airport data</td>
+</tr>
+<tr class="odd">
+<td>ATOT</td>
+<td><em>Actual take off time</em> means the actual date and time that an aircraft has taken off from the runway (wheels-up).</td>
+<td>Airport data</td>
+</tr>
+<tr class="even">
+<td>DRWY</td>
+<td>‘Departure runway designator’ means the ICAO designator of the runway used for take-off (e.g. 10L).</td>
+<td>Airport data</td>
+</tr>
+<tr class="odd">
+<td>DSTND</td>
+<td>The designator of the departure stand, i.e. the last parking position where the aircraft was parked before departing from the airport.</td>
+<td>Airport data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="group-of-stands" class="section level3">
+<h3>Group of stands</h3>
+<p>Actual taxi-out time depends on the distance between the departure stand and the
+departure runway. Because of the great number of possible stand-runway
+combinations, stands are grouped at some airports.</p>
+</div>
+<div id="unimpeded-taxi-out-time-calculation" class="section level3">
+<h3>Unimpeded taxi-out time calculation</h3>
+<p>Unimpeded taxi-out time is calculated in five steps:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Input data quality check</em></p>
+<ul>
+<li>Off-block and take-off times received from airports are cross-checked for
+consistency and completeness, as described in the
+<a href="#quality-assessment">Quality assessment</a> section here below.</li>
+<li>Detection and filtering of statistical outliers:
+<ul>
+<li>Flights with a negative actual taxi-out time are rejected from the
+traffic sample;</li>
+<li>Flights with a actual taxi-out time greater than 5 hours are rejected
+from the traffic sample.</li>
+</ul></li>
+</ul></li>
+<li><p><em>For each departing flight of the traffic sample</em></p>
+<ul>
+<li>Computation of the actual taxi-out time, that is the difference between
+the actual off-block time (AOBT) and the actual take-off time (ATOT).</li>
+<li>Determination of the congestion level by counting the number of other
+take-offs and landings during the time interval ]off-block time, take-off
+time[ of the respective flight.</li>
+<li>Determination of the airport throughput (total number of movements,
+both take-offs and landings included, at the airport) observed in the hour
+preceding the actual off-block time (AOBT).</li>
+<li>Determination of the couple (departure runway, group of stands) which the
+respective flight belongs to.</li>
+</ul></li>
+<li><p><em>Determination of the saturation level</em></p>
+<ul>
+<li>Estimation of the peak airport throughput (<span class="math inline">\(R\)</span>) of the airport using the
+90th percentile of the airport throughput within the preceding hour of
+all flights in the reference sample.
+For each couple (departure runway, group of stands):
+<ul>
+<li><p>Computation of a first estimation of the unimpeded taxi-out time (<span class="math inline">\(U_1\)</span>)
+using the 20th percentile of the actual taxi-out times of the flights
+belonging to that couple.</p></li>
+<li><p>Computation of the saturation level (<span class="math inline">\(L\)</span>):</p>
+<p><span class="math display">\[
+L= U_1 \cdot \frac{R}{60}
+\]</span></p></li>
+</ul></li>
+</ul></li>
+<li><p><em>Identification of the unimpeded flights</em></p>
+<p>For each group (departure stand(s); departure runway):</p>
+<ul>
+<li><p>Selection of flights with a</p>
+<p><span class="math display">\[
+\text{congestion index} &lt;= 0.5 * \text{saturation level}
+\]</span></p></li>
+</ul></li>
+<li><p><em>Computation of the unimpeded taxi-out time</em></p>
+<p>For each group (departure stand(s); departure runway):</p>
+<ul>
+<li>If the number of unimpeded flights in the group is less than 10,
+no unimpeded taxi-out time time is computed for that couple;</li>
+<li>If the number of unimpeded flights is greater or equal to 10,
+the unimpeded taxi-out time for this couple is defined as the median
+of the observed actual taxi-out times of the unimpeded flights.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="quality-assessment" class="section level2">
+<h2>Quality Assessment</h2>
+<div id="input-data-validation" class="section level3">
+<h3>Input data validation</h3>
+<!--to be completed further to coordination with CODA-->
+<ul>
+<li>Consistency analysis between the off-block times (AOBT) received from airports
+and airlines;</li>
+<li>Consistency analysis between the take-off times (ATOT) received from airports,
+airlines and NM.</li>
+</ul>
+</div>
+<div id="unimpeded-taxi-out-time-validation" class="section level3">
+<h3>Unimpeded taxi-out time validation</h3>
+<p>The following checks are performed to test the validity of the results:</p>
+<div id="coverage" class="section level4">
+<h4>Coverage</h4>
+<p>The percentage of flights with valid data and for which it was possible
+to define an unimpeded reference time should be at least 90%.</p>
+</div>
+<div id="distribution-of-residual-errors" class="section level4">
+<h4>Distribution of residual errors</h4>
+<p><a href="/definition/additional-taxi-out-time/" title="Additional Taxi-out Time definition">Additional taxi-out time</a>
+for unimpeded flights should have a distribution centered around zero and with
+a standard deviation below 3 minutes.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:check1"></span>
+<img src="../../../../../../../images/check1.jpg" alt="Distribution of residual errors." width="300px" />
+<p class="caption">
+Figure 2: Distribution of residual errors.
+</p>
+</div>
+</div>
+<div id="evolution-of-the-additional-taxi-out-time-with-the-congestion-level" class="section level4">
+<h4>Evolution of the additional taxi-out time with the congestion level</h4>
+<p>In order to be able to consolidate in a single graph for a given airport
+with different groups (departure stand and departure runway) and different
+saturation levels the data has to be normalised.</p>
+<p>For this reason a congestion index is defined as</p>
+<p><span class="math display">\[
+\text{congestion index}  = 100 * \frac{\text{congestion level}}{\text{saturation level}}
+\]</span></p>
+<p>By construction, a value of 100 always corresponds to saturation independent
+of the departure stand or runway used.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:check3"></span>
+<img src="../../../../../../../images/check3.jpg" alt="Evolution of the additional time with the congestion level." width="300px" />
+<p class="caption">
+Figure 3: Evolution of the additional time with the congestion level.
+</p>
+</div>
+<p>The additional time as a function of the congestion index should:</p>
+<ul>
+<li>remains close to zero for a low level of congestion; and,</li>
+<li>tends to a linear relationship when the congestion index is above 100.</li>
+</ul>
+</div>
+</div>
+<div id="unimpeded-taxi-out-time-monitoring" class="section level3">
+<h3>Unimpeded taxi-out time Monitoring</h3>
+<p><a href="/definition/additional-taxi-out-time/" title="Additional Taxi-out Time definition">Additional taxi-out time</a>
+for unimpeded flights should remain close to zero.
+A change in the unimpeded taxi-out time might indicate a change in operational
+procedures or use of infrastructure during the reference period under
+consideration.
+In such a case, new unimpeded taxi-out times will be calculated in order
+to consider the impact of these changes.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:check2"></span>
+<img src="../../../../../../../images/check2.jpg" alt="Verification of monthly statistics." width="300px" />
+<p class="caption">
+Figure 4: Verification of monthly statistics.
+</p>
+</div>
+<p>Every month the following checks are carried out for each of the airports:</p>
+<ul>
+<li>Percentage of flights with valid data and associated unimpeded times should
+remain greater than 90%.</li>
+<li>For unimpeded flights,
+<ul>
+<li>the median of the <a href="/definition/additional-taxi-out-time/" title="Additional Taxi-out Time definition">additional taxi-out times</a>
+distribution should remain within the interval
+<span class="math inline">\(\mathopen] -1\ \text{minute}, +1\ \text{minute} \mathclose[\)</span>,</li>
+<li>The standard deviation of the
+<a href="/definition/additional-taxi-out-time/" title="Additional Taxi-out Time definition">additional taxi-out times</a>
+distribution should be smaller than 3 minutes, and</li>
+<li>P75-P25 should be smaller than 3 minutes.</li>
+</ul></li>
+</ul>
+<p>If one of these conditions is not met, new unimpeded taxi-out times are calculated.</p>
+</div>
+</div>

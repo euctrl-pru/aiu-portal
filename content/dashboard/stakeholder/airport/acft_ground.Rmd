@@ -1,0 +1,44 @@
+---
+title: Active and inactive aircraft parked across EUROCONTROL area
+date: '2020-04-16'
+---
+
+<div class="container">
+<div class="row align-items-start">
+The drastic reduction in traffic due to the COVID crisis forced many aircraft operators to withdraw from service a significant part of their fleet, be it temporarily or permanently. The analysis of these massive groundings of aircraft across Europe in the dashboard below provided another perspective on the magnitude of the impact on the airline sector, with more than 6000 aircraft inactive in Europe in April and May 2020.
+
+The timeline shows how the majority of the groundings took place in the second half of March 2020, while a clear recovery was observed since the beginning of June 2020, with progressively more aircraft returning to fly in the EUROCONTROL area.
+
+The interactive dashboard below enables an analysis of the number of active and inactive aircraft by state, airport they sleep at, or aircraft operator.
+</div></div>
+ 
+<small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.<br>
+<div class="resp-container">
+<iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/2b9d2307-db40-4239-a72b-fb68eeb4f910/page/6wMXB" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+For feedback or questions please contact us at:
+[Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
+
+
+<style type="text/css">
+.img-responsive {
+    margin: 0 auto;
+    max-width: 75%
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 90.0%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    border: 0;
+}
+</style>

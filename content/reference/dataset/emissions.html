@@ -1,0 +1,70 @@
+---
+title: CO₂ emissions by State
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+slug: emissions
+---
+
+
+
+<p><br></p>
+<div id="data-source" class="section level2">
+<h2>Data source</h2>
+<p>The data is supplied by the <a href="https://www.eurocontrol.int/aviation-sustainability" title="EUROCONTROL Aviation Sustainability Unit">EUROCONTROL Aviation Sustainability Unit</a>.</p>
+</div>
+<div id="data-description" class="section level2">
+<h2>Data description</h2>
+<p>The CO<sub>2</sub> emissions were calculated with the EUROCONTROL <a href="https://www.eurocontrol.int/tool/small-emitters-tool" title="small emitters tool">Small Emitters Tool (SET)</a>,
+which enables to estimate the fuel burn and associated CO<sub>2</sub> emissions for an entire flight.
+Hence, the results reflect total CO<sub>2</sub> emissions from controlled flights rather than ANSP/ATM performance.</p>
+<p>The <strong>total CO<sub>2</sub> emissions for each State</strong> were calculated based on <strong>departing <a href="/acronym/ifr/">IFR</a> flights</strong>
+billed by the <a href="https://www.eurocontrol.int/crco" title="EUROCONTROL Route Charges Office">EUROCONTROL Route Charges Office</a>,
+<strong>aircraft type</strong> and <strong>actual flown distance</strong> (full trajectory from origin to destination).</p>
+<p>For instance, the total CO<sub>2</sub> emissions for the full trajectory of a flight from Brussels to
+New York would be included in the results for Belgium.
+A flight from New York to Brussels would however NOT be included in the results for Belgium.</p>
+</div>
+<div id="column-naming-and-types" class="section level2">
+<h2>Column naming and types</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>YEAR</td>
+<td>Year</td>
+<td>2019</td>
+</tr>
+<tr class="even">
+<td>MONTH</td>
+<td>Month</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>STATE_NAME</td>
+<td>State Name</td>
+<td>ALBANIA</td>
+</tr>
+<tr class="even">
+<td>STATE_CODE</td>
+<td>State Code</td>
+<td>LA</td>
+</tr>
+<tr class="odd">
+<td>CO2_QTY_TONNES</td>
+<td>CO2 Qty (for that state)</td>
+<td>8318.42</td>
+</tr>
+<tr class="even">
+<td>TF</td>
+<td>traffic (for that state)</td>
+<td>821</td>
+</tr>
+</tbody>
+</table>
+</div>

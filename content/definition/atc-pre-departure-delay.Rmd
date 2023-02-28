@@ -1,0 +1,16 @@
+---
+title: ATC Pre-departure Delay
+slug: atc-pre-departure-delay
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+ATC pre-departure delay is the additional time that the aircraft is held at the
+stand to avoid queuing at the departure runway.
+
+```{r pre-departure-delay, echo = FALSE, fig.cap="ATC pre-departure delay", out.width="90%"}
+library(png)
+knitr::include_graphics("/images/atc_pre-departure_delay.png")
+```

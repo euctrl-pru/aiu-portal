@@ -1,0 +1,336 @@
+---
+title: Horizontal Flight Efficiency Dataset
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+slug: horizontal-flight-efficiency
+---
+
+
+
+<p>Please note that additional quality control measures detected a limited number of abnormal flight
+trajectories starting towards the end of 2015 which were removed by applying an additional filter
+as of 01 January 2015. Due to this quality improvement, the period January 2015 - May 2016 might
+differ slightly from older data releases.</p>
+<div id="data-description" class="section level2">
+<h2>Data description</h2>
+<p>Horizontal en-route flight efficiency compares the length of actual or planned flight trajectories
+to the corresponding “achieved” distance.</p>
+<p>The achieved distance apportions the
+<a href="/acronym/gcd/">Great Circle Distance</a>
+between two points within the European airspace (reference area).
+If the origin/destination airport is located outside of European airspace, the
+entry/exit point into the reference area is used for the calculation.</p>
+<p>The planned trajectory is derived from the flight plans submitted by airspace
+users to the Network Manager.
+The actual flown trajectory is based on processed radar track data (a.k.a. correlated
+position reports or <a href="/acronym/cpr">CPR</a>) submitted by ANSPs
+to the EUROCONTROL Enhanced Tactical Flow Management System
+(<a href="/acronym/etfms/">ETFMS</a>).</p>
+<p><strong><a href="/acronym/kep/">KEP</a></strong> and
+<strong><a href="/acronym/kea/">KEA</a></strong> are performance indicators measuring
+horizontal en-route flight inefficiency in flight plans (KEP) and in actual
+flown trajectories (KEA) over a period of 12 months.
+<strong>Please note that the values are NOT monthly averages but the average over the
+entire 12 months period preceding the given END-DATE.</strong></p>
+<p>The <strong>KEP</strong> indicator is the horizontal flight efficiency calculated using the
+<em>last filed flight plans</em> to describe the trajectories, while <strong>KEA</strong> uses the
+<em>actual trajectories</em> generated via <em>radar data</em>.
+In order to smooth out the influence of unusual events, the ten best days and
+the ten worst days (for each measured area) are excluded from the computation.</p>
+</div>
+<div id="methodology" class="section level2">
+<h2>Methodology</h2>
+<p><a href="/methodology/horizontal-flight-efficiency-pi/">Horizontal en-route flight efficiency methodology</a>
+is fully consistent with the Single European Sky (SES) Performance Scheme
+[see <span class="citation">(<a href="#ref-pru-hfe-pi" role="doc-biblioref">Guastalla 2014</a>)</span> ].</p>
+</div>
+<div id="column-naming-and-types" class="section level2">
+<h2>Column naming and types</h2>
+<div id="hfe-data" class="section level3">
+<h3>HFE data</h3>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="55%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Data source</th>
+<th>Label</th>
+<th>Column description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>YEAR</td>
+<td>Network Manager</td>
+<td>YEAR</td>
+<td>Reference year</td>
+<td>2014</td>
+</tr>
+<tr class="even">
+<td>MONTH_NUM</td>
+<td>Network Manager</td>
+<td>MONTH_NUM</td>
+<td>Month (numeric)</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>MONTH_MON</td>
+<td>Network Manager</td>
+<td>MONTH_MON</td>
+<td>Month (3-letter code)</td>
+<td>SEP</td>
+</tr>
+<tr class="even">
+<td>ENTRY_DATE</td>
+<td>Network Manager</td>
+<td>ENTRY_DATE</td>
+<td>The entry date considered</td>
+<td>06-Sep-14 (*)</td>
+</tr>
+<tr class="odd">
+<td>ENTITY_NAME</td>
+<td>Network Manager</td>
+<td>ENTITY_NAME</td>
+<td>Name of the entity to with the data refers</td>
+<td>FABEC</td>
+</tr>
+<tr class="even">
+<td>ENTITY_TYPE</td>
+<td>Network Manager</td>
+<td>ENTITY_TYPE</td>
+<td>Type of the entity</td>
+<td>FAB (FIR)</td>
+</tr>
+<tr class="odd">
+<td>MODEL_TYPE</td>
+<td>Network Manager</td>
+<td>MODEL_TYPE</td>
+<td>The type of trajectory used for the calculation (CPF=actual, FTFM=flight plan, SCR= Shortest constrained route)</td>
+<td>FTFM</td>
+</tr>
+<tr class="even">
+<td>DIST_FLOWN_KM</td>
+<td>Network Manager</td>
+<td>DIST_FLOWN_KM</td>
+<td>Sum of flown distances in kilometre</td>
+<td>8699586</td>
+</tr>
+<tr class="odd">
+<td>DIST_DIRECT_KM</td>
+<td>Network Manager</td>
+<td>DIST_DIRECT_KM</td>
+<td>Sum of direct flown distances in kilometre</td>
+<td>8405033</td>
+</tr>
+<tr class="even">
+<td>DIST_ACHIEVED_KM</td>
+<td>Network Manager</td>
+<td>DIST_ACHIEVED_KM</td>
+<td>Sum of achieved distances in kilometre</td>
+<td>8255220</td>
+</tr>
+</tbody>
+</table>
+<p>(*) The <a href="/csv/">HFE CSV files</a>
+use <a href="https://en.wikipedia.org/wiki/ISO_8601" title="Wikipedia: ISO 8601">ISO 8601</a> date time format, i.e. <code>2017-01-02T00:00:00Z</code></p>
+</div>
+<div id="kepkea-kpi-data" class="section level3">
+<h3>KEP/KEA KPI data</h3>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="41%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Data source</th>
+<th>Label</th>
+<th>Column description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ENTITY_NAME</td>
+<td>Network Manager</td>
+<td>ENTITY_NAME</td>
+<td>Name of the entity to with the data refers</td>
+<td>BLUE MED FAB</td>
+</tr>
+<tr class="even">
+<td>ENTITY_TYPE</td>
+<td>Network Manager</td>
+<td>ENTITY_TYPE</td>
+<td>Type of the entity</td>
+<td>FAB (FIR)</td>
+</tr>
+<tr class="odd">
+<td>END_DATE</td>
+<td>Network Manager</td>
+<td>END_DATE</td>
+<td>End date of the running 12 month</td>
+<td>29-Feb-2016</td>
+</tr>
+<tr class="even">
+<td>INDICATOR_TYPE</td>
+<td>Network Manager</td>
+<td>INDICATOR_TYPE</td>
+<td>The type of indicator</td>
+<td>KEP</td>
+</tr>
+<tr class="odd">
+<td>HFE_ALL</td>
+<td>Network Manager</td>
+<td>HFE_ALL</td>
+<td>En-route flight efficiency for all days of the 12 month preceding the END_DATE in percent</td>
+<td>5.19</td>
+</tr>
+<tr class="even">
+<td>HFE_KPI</td>
+<td>Network Manager</td>
+<td>HFE_KPI</td>
+<td>Key performance indicator (without 10 worst and 10 best days of the 12 month preceding the END_DATE) in percent</td>
+<td>5.19</td>
+</tr>
+<tr class="odd">
+<td>EXCLUDED_LOW</td>
+<td>Network Manager</td>
+<td>EXCLUDED_LOW</td>
+<td>Dates of the 10 worst days of the 12 month preceding the END_DATE</td>
+<td>08-MAR-15, 15-MAR-15, 26-APR-15, 31-OCT-15, 01-NOV-15, 07-NOV-15, 14-NOV-15, 15-NOV-15, 25-DEC-15, 26-DEC-15</td>
+</tr>
+<tr class="even">
+<td>HFE_BEST_10</td>
+<td>Network Manager</td>
+<td>HFE_BEST_10</td>
+<td>En-route flight efficiency for the 10 best days of the 12 month preceding the END_DATE in percent</td>
+<td>4.50</td>
+</tr>
+<tr class="odd">
+<td>EXCLUDED_HIGH</td>
+<td>Network Manager</td>
+<td>EXCLUDED_HIGH</td>
+<td>Dates of the 10 best days of the 12 month preceding the END_DATE</td>
+<td>27-MAR-15, 30-MAR-15, 01-APR-15, 08-APR-15, 09-APR-15, 23-SEP-15, 23-NOV-15, 25-NOV-15, 27-NOV-15, 26-JAN-16</td>
+</tr>
+<tr class="even">
+<td>HFE_WORST_10</td>
+<td>Network Manager</td>
+<td>HFE_WORST_10</td>
+<td>En-route flight efficiency for the 10 worst days of the 12 month preceding the END_DATE in percent</td>
+<td>6.07</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="calculated-fields" class="section level3">
+<h3>Calculated Field(s)</h3>
+<p>The indicator is calculated as the ratio of the two sums (length of trajectories
+and achieved distances), over all flights considered:</p>
+<p><span class="math display">\[
+{HFE}_j = ( \frac{\sum_{f,p} L_{fjp}}{\sum_{f,p} H_{fjp}} - 1 ) %
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is the length of the trajectory and <span class="math inline">\(H\)</span> is the achieved distance;
+the index <span class="math inline">\(f\)</span> is the flight, <span class="math inline">\(j\)</span> is the airspace and <span class="math inline">\(p\)</span> is the portion
+considered.</p>
+<p>From the table above <span class="math inline">\(L\)</span> is <span class="math inline">\(\text{DIST_FLOWN_KM}\)</span>, while <span class="math inline">\(H\)</span> is
+<span class="math inline">\(\text{DIST_ACHIEVED_KM}\)</span>.</p>
+</div>
+</div>
+<div id="fab-definitions" class="section level2">
+<h2>FAB definitions</h2>
+<p>The FAB level information is based on an aggregation of Flight Information
+Regions (FIRs) (ENTITY_TYPE = FAB (FIR)).</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>FAB Name</th>
+<th>FIRs included</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Baltic FAB</td>
+<td>EPWWFIR, EYVLFIR, EYVLUIR</td>
+</tr>
+<tr class="even">
+<td>BLUE MED FAB</td>
+<td>LCCCFIR, LCCCUIR, LGGGFIR, LGGGUIR, LIBBFIR, LIBBUIR, LIMMFIR, LIMMUIR, LIRRFIR, LIRRUIR, LMMMFIR, LMMMUIR</td>
+</tr>
+<tr class="odd">
+<td>DANUBE FAB</td>
+<td>LBSRFIR, LRBBFIR</td>
+</tr>
+<tr class="even">
+<td>DK-SE FAB</td>
+<td>EKDKFIR, ESAAFIR</td>
+</tr>
+<tr class="odd">
+<td>FABEC</td>
+<td>EBBUFIR, EBURUIR, EDGGFIR, EDMMFIR, EDUUUIR, EDVVUIR, EDWWFIR, EHAAFIR, LFBBFIR, LFEEFIR, LFFFFIR, LFFFUIR, LFMMFIR, LFRRFIR, LSASFIR, LSASUIR</td>
+</tr>
+<tr class="even">
+<td>FAB CE</td>
+<td>LDZOFIR, LHCCFIR, LJLAFIR, LKAAFIR, LOVVFIR, LQSBFIR, LQSBUIR, LZBBFIR</td>
+</tr>
+<tr class="odd">
+<td>FAB CE (SES RP1)</td>
+<td>LHCCFIR, LJLAFIR, LKAAFIR, LOVVFIR, LZBBFIR</td>
+</tr>
+<tr class="even">
+<td>FAB CE (SES RP2)</td>
+<td>LDZOFIR, LHCCFIR, LJLAFIR, LKAAFIR, LOVVFIR, LZBBFIR</td>
+</tr>
+<tr class="odd">
+<td>NEFAB</td>
+<td>EETTFIR, EFINFIR, EFINUIR, ENOBFIR, ENORFIR, EVRRFIR</td>
+</tr>
+<tr class="even">
+<td>SW FAB</td>
+<td>GCCCFIR, GCCCUIR, LECBFIR, LECBUIR, LECMFIR, LECMUIR, LPPCFIR</td>
+</tr>
+<tr class="odd">
+<td>UK-Ireland FAB</td>
+<td>EGPXFIR, EGPXUIR, EGTTFIR, EGTTUIR, EISNFIR, EISNUIR</td>
+</tr>
+</tbody>
+</table>
+<p>The map below shows all Eurocontrol Member States FIRs and the nine FABs
+relevant for <strong>SES RP2</strong>.</p>
+<p>Click to zoom in/out. Hoover with the mouse to get further information.</p>
+<div>
+<div id="fabs_firs_map">
+
+</div>
+</div>
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>
+ var pymParent = new pym.Parent(
+   'fabs_firs_map',
+   '/graphic/fabs-firs-map/index.html',
+   {});
+</script>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-pru-hfe-pi" class="csl-entry">
+Guastalla, Guglielmo. 2014. <span>“Performance <span>Indicator</span> – <span>Horizontal Flight Efficiency</span>.”</span> 01-00. <span>Eurocontrol/PRU</span>. <a href="http://ansperformance.eu/methodology/horizontal-flight-efficiency-pi/">http://ansperformance.eu/methodology/horizontal-flight-efficiency-pi/</a>.
+</div>
+</div>
+</div>

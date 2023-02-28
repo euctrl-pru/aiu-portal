@@ -1,0 +1,258 @@
+---
+title: "Aviation Intelligence Unit Portal"
+date: "2018-02-07T11:26:51+01:00"
+
+---
+
+<style type="text/css">
+  .img-responsive {
+      margin: 0 auto;
+      max-width: 75%
+  }
+  
+  .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 50.0%;
+  }
+  
+  .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+      border: 0;
+  }
+      
+  .Scorecard_subt {
+    margin: 0px; 
+    padding-bottom: 0px;  
+    text-align: left; 
+    color:#7f7f7f
+  }
+
+  .Scorecard_net {
+    margin: 0px; 
+    padding-bottom: 0px;
+    font-weight: bold;  
+    text-align: left;
+    color: #0070c0; 
+  }
+
+
+.col-4 {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+
+  </style>
+
+<!-- Daily traffic graphs and scorecards Scorecard_net-->
+<div class="w3-container">
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+<div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div></div>
+</div>
+
+<div class="w3-container">
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+
+<div class="col">
+  <p class="Scorecard_subt">total flights</p>
+  <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;"></p> 
+</div>
+
+<div class="col">
+  <p class="Scorecard_subt">avg. daily</p>
+  <p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;"></p>
+</div>
+
+<div class="col-2" ; style="margin: 0px; ">
+  <p class="Scorecard_subt">vs 2019</p>
+  <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;"></p>
+</div>
+
+<div class="col-2" ; style="margin: 0px;  ">
+  <p class="Scorecard_subt">vs 2021</p>
+  <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;"></p>
+</div>
+
+<div class="col" ; style="margin: 0px;  ">
+</div>
+<div class="col" ; style="align=center">
+<!--<a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"><p>Click for direct access to the daily traffic dashboard </p></a></div>-->
+<div class="card bg-light border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"><img class="card-img-top" src="/images/landing/daily_db.png" alt=""></a></div></div>
+
+</div>
+</div>
+
+<!-- script for traffic figures -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  var Data
+  var my_view_traffic
+  var last_day
+  var y2d_traffic
+  var y2d_prev_year_traffic
+  var y2d_2019_traffic 
+  var avg_y2d_traffic
+  var dif_y2d_2019
+  var dif_y2d_prev_year
+
+  google.load("visualization", "1.1", {
+    packages: ["corechart", "table", "controls", "bar"]
+  });
+  google.setOnLoadCallback(Initialisation);
+
+  function Initialisation() {
+    var query = new google.visualization.Query(
+      "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
+    );
+
+  query.send(drawDashboard);
+  }
+
+  function drawDashboard(response) {
+    Data = response.getDataTable();
+    UpdateTraffic();
+   }
+//---------------------------Update traffic---------------------------------------------
+  function UpdateTraffic() {
+  my_view_traffic = new google.visualization.DataView(Data);
+
+  //       for (var y = 1; y < my_view_traffic.getNumberOfColumns(); y++) {
+  //        // my_view_traffic.getValue(x, y) 
+  //        last_day = my_view_traffic.getValue(0, y)
+  //      }
+  last_day = my_view_traffic.getValue(0, 38); 
+  my_view_traffic.setRows(
+  Data.getFilteredRows([{ column: 7, value: last_day }])
+  );
+
+// Calculate datestrings
+last_day_text = last_day.toDateString();
+  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11)
+  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 - " + last_day_text : "01 Jan - " + last_day_text
+
+// Calculate traffic scorecard values
+  y2d_traffic = my_view_traffic.getValue(0, 30);
+  y2d_prev_year_traffic = my_view_traffic.getValue(0, 31);
+  y2d_2019_traffic = my_view_traffic.getValue(0, 32);
+  
+  avg_y2d_traffic = Math.round(my_view_traffic.getValue(0, 33));
+  dif_y2d_2019 = Math.round(my_view_traffic.getValue(0, 37)*100);
+     dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019
+  dif_y2d_prev_year = Math.round(my_view_traffic.getValue(0, 36)*100);
+     dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year
+
+// Update scorecard values
+  document.getElementById("y2d_day_text").innerHTML =  "Latest Network traffic situation - " + y2d_day_text; 
+  document.getElementById("y2d_traffic").innerHTML = String(y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
+  document.getElementById("avg_y2d_traffic").innerHTML = String(avg_y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
+  document.getElementById("dif_y2d_2019").innerHTML = String(dif_y2d_2019) + '%' ;
+  document.getElementById("dif_y2d_prev_year").innerHTML = String(dif_y2d_prev_year) + '%';
+  }
+  
+</script>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-sm-8"><h4>Aviation Intelligence Portal</h4>
+
+This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU). 
+
+In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
+
+* ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
+* stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
+* further develop the [ANS](/acronym/ans/) performance analysis framework and the understanding of key [ANS](/acronym/ans/) performance issues.
+
+For feedback or questions please contact us at:
+[Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
+</div>
+
+<div class="col-sm-4"><h4>What's new?</h4><br>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-inner">
+
+<!--
+<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-39-ransomware-groups-targeting-aviations-supply-chain" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
+Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
+-->
+
+<div class="carousel-item active"><div class="card bg-light border-0"><a href="/efficiency/vfe/"><img class="card-img-top" src="/images/landing/cdo_db.png" alt=""><div class="card-body"><h5 class="card-title">Continuous descent operations</h5></a><small><p class="card-text">Explore our improved dashboard addressing the vertical flight efficiency at European airports</p></small></div></div></div>
+
+<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-39-ransomware-groups-targeting-aviations-supply-chain" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Ransomware events in aviation</h5></a><small><p class="card-text">
+Read the latest Data Snapshot to learn how ransomware groups are targeting aviation in Europe</p></small></div></div></div>
+
+<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
+Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
+
+<!--
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
+Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
+-->
+
+<!--
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Punctuality performance</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
+-->
+<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">January 2023 data <br> available for download now</p></small></div></div></div>
+
+</div>
+
+<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
+<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+</div>
+</div>
+
+<!-- 
+<div class="col-sm-2"><h4></h4><br>
+<div class="card bg-light text-center border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
+  <img class="card-img-top" src="/images/landing/ectl_int_db.png" alt="Daily traffic statistics"><br>
+  <div class="card-body"><h6 class="card-title">Performance Snapshot</h6></a><small><p class="card-text">Click to see the latest monthly snapshot!</p></small>
+  </div>
+</div>
+</div>-->
+
+</div>
+
+#### Focus areas
+<!-- cards with Key Performance Areas -->
+<div class="container">
+<div class="row">
+<div class="card-deck">
+<div class="card"><a href="/traffic">
+  <img class="card-img-top" src="/images/landing/ectl_traff_th.jpg" alt="Traffic">
+  <div class="card-body"><h6 class="card-title">Traffic</h6></a><small><p class="card-text">[IFR](/acronym/ifr/) flight and [service unit](/acronym/su/) evolution and forecast </p></small>
+  </div>
+</div>
+<div class="card"><a href="/capacity">
+  <img class="card-img-top" src="/images/landing/ectl_cap_th.jpg" alt="Capacity">
+  <div class="card-body"><h6 class="card-title">Capacity & Delays</h6></a><small><p class="card-text">En-route and airport [ATFM](/acronym/atfm/) delays</p></small>
+  </div>
+</div>
+<div class="card"><a href="/efficiency">
+  <img class="card-img-top" src="/images/landing/ectl_env_th.jpg" alt="Efficiency & Environment">
+  <div class="card-body"><h6 class="card-title">Efficiency & Environment</h6></a><small><p class="card-text">Flight efficiency affecting fuel burn and emissions</p></small>
+  </div>
+</div>
+<div class="card"><a href="/economics">
+  <img class="card-img-top" src="/images/landing/ectl_cef_th.jpg" alt="Economics">
+  <div class="card-body"><h6 class="card-title">Economics</h6></a><small><p class="card-text">Analysis of ANS cost-efficiency</p></small>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+<div class="container text-center">
+{{% subscribe-button %}}
+
+[Read our Privacy protection statement](/about/privacy/)
+</div>
+
+[ectl_daily]: https://www.eurocontrol.int/Economics/DailyTrafficVariation "Daily traffic updates"
+[ectlweb]: https://www.eurocontrol.int/ "EUROCONTROL web page"

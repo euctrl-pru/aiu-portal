@@ -1,0 +1,34 @@
+---
+title: Datasets in CSV format
+---
+
+
+
+<p>PRU provides some relevant datasets in CSV format (compressed using <a href="https://en.wikipedia.org/wiki/Bzip2" title="Wikipedia: bzip2">bzip2</a>):</p>
+<p>The filename convention we adopted is as follows:</p>
+<blockquote>
+<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv.bz2</code></p>
+</blockquote>
+<p>where
+&gt; <code>&lt;dataset group&gt; = &lt;dataset&gt;_&lt;group&gt;</code></p>
+<p>The datasets made available are:</p>
+<ul>
+<li>Daily en-route delays: <code>ert_dly</code>
+<ul>
+<li>[ANSP][ansp_acronym] group (see [list of ANSP’s considered by PRU][ansps]): <code>ansp</code></li>
+<li>Country FIR group: <code>fir</code></li>
+</ul></li>
+<li>Horizontal Flight Efficiency: <code>hfe</code>
+<ul>
+<li>Entity type can be <code>State (FIR)</code> or <code>FAB (FIR)</code></li>
+<li>Please note that the code <code>SFR</code> in <code>Model type</code> corresponds to the Shortest constrained route (<code>SCR</code>).</li>
+</ul></li>
+<li>Airport Arrival ATFM Delays: <code>apt_dly</code></li>
+</ul>
+<p>For example <code>ert_dly_ansp_2012.csv.bz2</code> refers to en-rote delays dataset with ANSP breakdown for year 2012.</p>
+<div id="dataset-files" class="section level2">
+<h2>Dataset files</h2>
+<p>TODO</p>
+<p>[ansp_acronym]: {{&lt; relref “/acronym/ansp.md” &gt;}} “ANSP”
+[ansps]: {{&lt; ref “../ansp/” &gt;}} “ANSP’s”</p>
+</div>

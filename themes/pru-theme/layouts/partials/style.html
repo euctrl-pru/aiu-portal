@@ -1,0 +1,325 @@
+<style>
+  .container {
+    max-width: {{ .Site.Params.containerMaxWidth | default "700px" | safeCSS }};
+  }
+  #nav a {
+    font-weight: bold;
+    color: inherit;
+  }
+  #nav a.nav-link-active {
+    background-color: #212529;
+    color: #fff;
+  }
+  #nav-border {
+    border-bottom: 1px solid #212529;
+  }
+  #main {
+    margin-top: 1em;
+    margin-bottom: 4em;
+  }
+  #home-jumbotron {
+    background-color: inherit;
+  }
+  #footer .container {
+    padding: 1em 0;
+  }
+  #footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  .font-125 {
+    font-size: 125%;
+  }
+  .tag-btn {
+    margin-bottom: 0.3em;
+  }
+  pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit; 
+    background-color: transparent;
+    border-radius: 0;
+  }
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+  }
+  img,
+  iframe,
+  embed,
+  video,
+  audio {
+    max-width: 100%;
+  }
+  
+  
+  
+  
+  /* specific */
+  
+  #footer {
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .footer-links li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  .footer-links a {
+    text-decoration: underline;
+    transition: color 150ms ease;
+    margin: 0 15px;
+  }
+  
+  .footer-links a:hover,
+  .footer-links a:focus {
+    color: #222;
+  }
+  
+  .footer-links a > .fa {
+    text-decoration: underline;
+  }
+  
+  
+  .footer-links li::before {
+    content: '/';
+    position: relative;
+    left: -2px;
+  }
+  
+  .footer-links li:first-child::before {
+    display: none;
+  }
+  .footer-links-kudos img {
+    position: relative;
+    top: 6px;
+    margin-left: 2px;
+  }
+  
+  
+  /* Acronyms and similar lists */
+  /* styling for indexes, i.e. index of acronyms */
+  .index-links {
+    /* margin: 0; */
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+    display: inline;
+  }
+  
+  .index-links li {
+    display: inline-block;
+    margin: 0 0 0 5px;
+  }
+  
+  /* separate by comma*/
+  .index-links li:after {
+    content: ", ";
+  }
+  
+  .index-links li:first-child {
+    margin-left: 0;
+  }
+  
+  .index-links li:last-child:after {
+      content: "";
+  }
+  .index-links a {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #111;
+    padding: 2px 0;
+    border-bottom: 1px solid #ddd;
+  
+    text-overflow: ellipsis;
+    max-width: calc(100% - 120px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .index-links a:hover {
+    color: #555;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Acronyms & Co entries */
+  
+  /* tables */
+  /* ==========================================================================
+     Tables
+     ========================================================================== */
+  
+  /*  A clean textbook-like style with horizontal lines above and below and under
+      the header. Rows highlight on hover to help scanning the table on screen.
+  */
+  
+  table, th, td {
+    border-bottom: 1px solid #CCCCCC; /* dim gray for reduced non-data ink */
+  }
+  
+  table
+      {
+      width: 100% !important;
+      border-collapse: collapse;
+      border-spacing: 0; /* IE 6 */
+  
+      border-bottom: 2pt solid #CCC;
+      border-top: 2pt solid #CCC; /* The caption on top will not have a bottom-border */
+  
+      /* Center */
+      margin-left: 2em;
+      margin-right: auto;
+      margin-bottom: 2em;
+      }
+  
+  thead /* Entire table header */
+      {
+      border-bottom: 1pt solid #000;
+      background-color: #eee; /* Does this BG print well? */
+      }
+  
+  tr.header /* Each header row */
+      {
+      }
+  
+  tbody /* Entire table  body */
+      {
+      }
+  
+  /* Table body rows */
+  
+  tr  {
+      }
+  tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
+      {
+      background-color: #eee;
+      }
+  
+  /* Odd and even rows */
+  tr.odd {}
+  tr.even {}
+  
+  td, th /* Table cells and table header cells */ {
+      vertical-align: top; /* Word */
+      vertical-align: baseline; /* Others */
+      padding-left:   0.5em;
+      padding-right:  0.5em;
+      padding-top:    0.2em;
+      padding-bottom: 0.2em;
+      border-bottom: 1px solid #CCCCCC; /* dim gray for reduced non-data ink */
+  }
+  
+  /* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
+  /*
+  tr td:last-child, tr th:last-child
+      {
+      padding-right: 0;
+      }
+  tr td:first-child, tr th:first-child
+      {
+      padding-left: 0;
+      }
+  */
+  
+  th /* Table header cells */
+      {
+      font-weight: bold;
+      }
+  
+  tfoot /* Table footer (what appears here if caption is on top?) */
+      {
+      }
+  
+  caption /* This is for a table caption tag, not the p.caption Pandoc uses in a div.figure */
+      {
+      caption-side: top;
+      border: none;
+      font-size: 0.9em;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 0.3em; /* Good for when on top */
+      padding-bottom: 0.2em;
+  }
+  
+  
+  /* Figures */
+  .figure {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+  
+  
+  
+  /* sidenav */
+  .sidenav {
+    padding: 1em;
+  }
+  .sidenav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+  }
+  
+  .sidenav-links li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  .sidenav-links a {
+    text-decoration: underline;
+    transition: color 150ms ease;
+    margin: 0 15px;
+  }
+  
+  .sidenav-links a:hover,
+  .sidenav-links a:focus {
+    color: #222;
+  }
+  
+  .sidenav-links a > .fa {
+    text-decoration: underline;
+  }
+  
+  
+  .sidenav-links li::before {
+    content: '|';
+    position: relative;
+    left: -2px;
+  }
+  
+  .sidenav-links li:first-child::before {
+    display: none;
+  }
+
+  .navbar {
+    padding: unset!important;
+  }
+</style>

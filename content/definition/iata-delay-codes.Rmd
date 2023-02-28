@@ -1,0 +1,63 @@
+---
+title: IATA delay codes
+slug: iata-delay-codes
+bibliography: [../../static/bib/aviation.bib]
+link-citations: true
+biblio-style: apalike
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+
+The following IATA delay codes (from "AHM 780 Aircraft Movement Message"
+[@wiki:iatadelaycodes; @iata:delaycodes]
+specification") standardise the reporting of commercial flight departure delays
+by airlines.
+
+```{r}
+library(readr)
+library(gt)
+library(here)
+library(dplyr)
+library(glue)
+
+dc <- read_csv("https://www.eurocontrol.int/performance/data/download/other/iata_delay_codes.csv")
+
+dc %>% 
+  mutate(ii = if_else(!is.na(cd), glue("{id} ({cd})"), glue("{id} (  )"))) %>% 
+  group_by(group) %>% 
+  gt(rowname_col = "ii") %>% 
+   tab_header(
+    title = "IATA delay codes"
+  ) %>% 
+  fmt_missing(
+    columns = 2,
+    missing_text = "..."
+  ) %>% 
+   cols_width(
+    ii ~ px(80),
+    id ~ px(30),
+    cd ~ px(40)
+  ) %>% 
+    cols_label(
+    id = "ID",
+    cd = "Code",
+    description = "Description"
+  ) %>% 
+    tab_style(
+    style = list(cell_text(weight = "bold")),
+    locations = cells_row_groups()
+  )
+```
+
+
+## See Also
+
+* [IATA Delay Code 89](/definition/iata-code-89/)
+* IATA Delay codes table ([PDF](/library/iata-delay-codes.pdf))
+* Appendix of [All-causes delay and cancellations to Air Transport Europe Quaterly Reports](https://www.eurocontrol.int/library/search?keywords=All-causes+delay+and+cancellations+to+Air+Transport+Europe&sort_by=search_api_relevance)
+
+## References
+

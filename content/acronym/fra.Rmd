@@ -1,0 +1,28 @@
+---
+title: FRA - Free Route Airspace
+slug: fra
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+FRA refers to a  specified airspace within which users may freely plan
+a route between a defined entry point and a defined exit point,
+with the possibility to route via intermediate (published or unpublished)
+way points, without reference to the ATS route network,
+subject to airspace availability.
+Within this airspace, flights remain subject to air traffic control.
+
+
+## Free route airspace implementation status December 2020
+
+```{r fra, fig.lab="FRA implementation - End 2022", echo=FALSE, out.height="700px"}
+library(png)
+knitr::include_graphics("/images/eurocontrol-fra-implementation-end-2020.png")
+```
+
+
+## See Also
+
+* `r blogdown::shortcode("a_blank_skybrary", "FRA", "https://skybrary.aero/articles/free-route-airspace-fra")`

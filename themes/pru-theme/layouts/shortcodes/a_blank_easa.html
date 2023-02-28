@@ -1,0 +1,4 @@
+<!-- {{/*
+Usage: {{% a_blank_easa "TITLE" "URL" %}}
+*/}}-->
+<a target="_blank" href="{{ .Get 1 }}" title="{{ .Get 0 }}">{{ .Get 0 | markdownify }}</a> <i class="fa fa-external-link"></i> page at <a target="_blank" href="https://www.easa.europa.eu" title="EASA">EASA</a> <i class="fa fa-external-link"></i> website.

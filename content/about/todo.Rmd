@@ -1,0 +1,38 @@
+---
+title: To Do's
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+This is what needs to be checked for full migration to Hugo:
+
+* re-add search box in nav
+* paginatilast 5 or so
+* sidebar menu navigation for PRU Quaterly, see Hugo dos in github
+* style header, fonts,...
+* anti-spammer subscriber
+* fix table extent in data download page
+* fix links to XLS files in data download table
+* clean dashboard layout, i.e. google charst, pym.js,...
+* fixed nav bar
+* dataset HFE: fix Pym iframe height
+* fix "APT DLY filter and CSV download" link, http://localhost:8000/reference/dataset/airport-arrival-atfm-delay/
+  in http://localhost:8000/reference/dataset/airport-arrival-atfm-delay/
+* should 'crt_ertfltsMM_15.js' be deleted?
+* pages for filtered CSV download: do we move?
+* consider using excerpt in yaml for list of studies (it gives a sort of summary of the thing)
+* D3 logo. Keep only the D3 fancy logo in the template.
+* Netlify HUGO_ENV for activating Google Analitics, see layouts/partials/footer.html
+
+
+
+## New stuff
+
+* generate yearly CSV for HFE, APT_DLY,... (see export<>.R scripts)
+* investigate use of http://tachyons.io/
+* use ggplotly for graphs
+* check htmlwidgets: http://gallery.htmlwidgets.org/ and blogdown
+* Improve `howbuilt`
+* check google tag manager, see Hugo's partial gtag.html

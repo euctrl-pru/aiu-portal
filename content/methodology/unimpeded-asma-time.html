@@ -1,0 +1,307 @@
+---
+title: Unimpeded ASMA Time - Technical Note
+slug: unimpeded-asma-time
+---
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The actual time spent by a flight between its last entry in the
+<a href="/acronym/asma/">ASMA</a> (Entry-time at 40 NM upstream -
+<span class="math inline">\(A_\text{LET}\)</span>) and the <a href="/acronym/aldt/">actual landing time</a>
+(<span class="math inline">\(A_\text{ALDT}\)</span>) is denoted
+<a href="/definition/asma-transit-time/"><em>ASMA transit time</em></a>
+(<span class="math inline">\(A_\text{TT}\)</span>).</p>
+<p><span class="math display">\[
+A_\text{TT} = A_\text{LET} - A_\text{ALDT}
+\]</span></p>
+<p>The <a href="/definition/unimpeded-asma-time/"><em>unimpeded ASMA time</em></a> is the
+ASMA transit time in non congested conditions at arrival airports.
+The unimpeded ASMA time is used in the calculation of the
+<a href="/definition/additional-asma-time/">Arrival sequencing and metering area (ASMA) additional time</a>.</p>
+<p>This technical note describes the methodology used in order to calculate the
+unimpeded ASMA time.</p>
+</div>
+<div id="general-approach" class="section level2">
+<h2>General approach</h2>
+<p>The computation of the unimpeded ASMA time is based on the statistical analysis
+of flights in non congested conditions.</p>
+<p>In order to determine whether a flight is unimpeded or not, its <em>congestion level</em>
+is computed as the number of other aircraft ahead in the arrival queue,
+i.e. the number of aircraft that landed between the time the flight under
+consideration crossed the ASMA border and its own landing.</p>
+<p>The graphic here below illustrates the evolution of the ASMA transit time as a
+function of the congestion level. In this picture, the range between the first
+quartile (bottom bar of each rectangle), third quartile (top bar) and the median
+(medium line) is depicted for each level of congestion.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:saturationlevel"></span>
+<img src="../../../../../../../images/saturationlevel.jpg" alt="Congestion level vs. saturation level." width="400px" />
+<p class="caption">
+Figure 1: Congestion level vs. saturation level.
+</p>
+</div>
+<p>As shown in Figure <a href="#fig:saturationlevel">1</a>, as soon as a certain level of congestion
+is reached (at
+the inflection point of the curve), the ASMA transit time increases linearly
+with the level of congestion (red line passing through the origin). Beyond that
+inflection point, the ASMA transit time is directly proportional to the number
+of aircraft ahead. At a low level of congestion (before the inflection point),
+the ASMA transit time tends to be constant (horizontal red line). This constant
+ASMA transit time is considered to be the unimpeded time required by any flight
+to approach and land on the runway from the ASMA border. The intersection
+between the two red lines corresponds to the <em>saturation level</em>.</p>
+<p>The greater the level of congestion compared to the saturation level, the
+greater the likelihood of a flight’s being delayed due to traffic ahead.
+Therefore, to ensure that a flight is unimpeded, its congestion level needs to
+be sufficiently small compared to the saturation level. However, it needs to be
+ensured that the flight sample is big enough to produce a robust estimate of
+unimpeded ASMA time. Considering a flight as unimpeded if its congestion level
+is smaller than 50% of the saturation level has proved to be a good compromise
+between this two conflicting facts.</p>
+<p>Night flights may be subject to special procedures that are not representative
+of daytime operations. In addition, when the airport is subject of a curfew, the
+first flights in the morning might be delayed in order to land after the curfew
+end time. In order to avoid that both night flights and ‘first post-curfew’
+flights bias the traffic sample, flights between 6:30 and 22:00 only are used
+for the calculation of unimpeded ASMA time.</p>
+<p>A different unimpeded ASMA time is determined for each combination of:</p>
+<ul>
+<li>landing runway;</li>
+<li>angular sector in which the flight enters the ASMA cylinder; and,</li>
+<li>aircraft class;</li>
+</ul>
+<p>Although unimpeded ASMA time is relatively static in time, regular checks are
+made to ensure that it remains representative of the operations for the airport
+under consideration. In case a change of unimpeded time is detected, the causes
+of that change (new procedure implementation, change of TMA design) are
+investigated. When required, new unimpeded times are calculated. However,
+because this method is based on statistical analysis of the actual ASMA transit
+time, a period of several months after the change is required before new robust
+unimpeded times can be established.</p>
+</div>
+<div id="determination-of-the-unimpeded-asma-time" class="section level2">
+<h2>Determination of the unimpeded ASMA time</h2>
+<div id="methodological-assumptions" class="section level3">
+<h3>Methodological assumptions</h3>
+<p>In this methodology, it is assumed that</p>
+<ul>
+<li>priority is given to approaches rather than departures and, consequently,
+departures do not affect congestion level for unimpeded ASMA time.</li>
+</ul>
+</div>
+<div id="input-data-required" class="section level3">
+<h3>Input data required</h3>
+<p>The following input data are required in order to calculate the actual ASMA transit time:</p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="43%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Acronym</th>
+<th>Description</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ASMA entry-point</td>
+<td>Date-time + bearing from airport reference point (long. &amp; lat.)</td>
+<td>Actual trajectory from <a href="/acronym/cpr/">Correlated Position Report (CPR)</a> provided by NM</td>
+</tr>
+<tr class="even">
+<td>Aircraft type</td>
+<td>Aircraft ICAO designator</td>
+<td>Network Manager</td>
+</tr>
+<tr class="odd">
+<td>ALDT</td>
+<td>‘Actual landing time’ (ALDT) means the actual date and time when the aircraft has landed (touch down).</td>
+<td>Airport data</td>
+</tr>
+<tr class="even">
+<td>Arrival runway designator</td>
+<td>ICAO designator of the runway used for landing (e.g. 10L).</td>
+<td>Airport data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="aircraft-classification" class="section level3">
+<h3>Aircraft Classification</h3>
+<p>Because aircraft have different approach performances, aircraft are classified,
+based on their ICAO designator, into:</p>
+<ul>
+<li>Heavy (H),</li>
+<li>Medium Jet (MJ),</li>
+<li>Medium Turbo Prop (MT),</li>
+<li>Light jet (LJ),</li>
+<li>Light turbo prop (LT), and</li>
+<li>Light piston (LP).</li>
+</ul>
+<p>In most of the cases helicopters do not interfere with other traffic. It was
+however experienced, in some cases, that helicoper traffic had to follow the
+published procedures and be sequenced with other aircraft. In order not to
+consider a flight that could be delayed by preceding helicopter traffic as
+unimpeded, helicopter movements are counted in the congestion index. Helicopter
+movements are however not counted in the computation of the throughput used for
+the saturation level.</p>
+</div>
+<div id="determination-of-the-asma-entry-sectors" class="section level3">
+<h3>Determination of the ASMA entry sectors</h3>
+<p>For a given runway configuration, the ASMA transit time depends on the direction
+from which the ASMA cylinder is entered. For this reasons the ASMA cylinder is
+divided into <em>ASMA sectors</em>. The ASMA sectors are defined further to statistical
+clustering analysis of traffic distribution, as illustrated here below.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:asmasectors"></span>
+<img src="../../../../../../../images/asmasectors.jpg" alt="Determination on the ASMA sectors." width="600px" />
+<p class="caption">
+Figure 2: Determination on the ASMA sectors.
+</p>
+</div>
+</div>
+<div id="unimpeded-asma-time-calculation" class="section level3">
+<h3>Unimpeded ASMA time calculation</h3>
+<p>Unimpeded ASMA times are calculated in five steps:</p>
+<ol style="list-style-type: decimal">
+<li>Input data quality check
+<ul>
+<li>Landing times and ASMA-entry points are cross-checked for consistency and
+completeness, as described in the
+[[#Quality assessment|Quality assessment]] section here below.</li>
+<li>Detection and filtering of statistical outliers:</li>
+<li>Flights with a transit time longer than 120 minutes are removed from the sample.</li>
+</ul></li>
+<li>For each arrival flight of the traffic sample
+<ul>
+<li>Computation of the transit time between the ASMA entry-point and the actual
+landing time (ALDT).</li>
+<li>Determination of the congestion level by counting the number of other
+landings during the time interval ASMA entry time,
+ALDT of the respective flight.</li>
+<li>Determination of the arrival throughput (total number of landings at the
+airport) observed in the hour preceding the the actual landing time (ALDT).</li>
+<li>Determination of the triplet (arrival runway, aircraft class, ASMA sector)
+which the respective flight belongs to.</li>
+</ul></li>
+<li>Determination of the saturation level
+<ul>
+<li>Estimation of the peak arrival throughput (<span class="math inline">\(R\)</span>) of the airport using the 90th
+percentile of the arrival throughput within the preceding hour of all
+flights in the reference sample.
+For each triplet (arrival runway, aircraft class, ASMA sector):
+<ul>
+<li>Computation of a first unimpeded ASMA time estimate (<span class="math inline">\(U1\)</span>) using the 20th
+percentile of all the ASMA transit times of the flights belonging to that
+triplet.</li>
+<li>Computation of the saturation level (<span class="math inline">\(L\)</span>):
+<span class="math display">\[ L = U1 * R / 60 \]</span></li>
+</ul></li>
+</ul></li>
+<li>Identification of the unimpeded flights
+For each triplet (arrival runway, aircraft class, ASMA sector):
+<ul>
+<li>Selection of flights with a <span class="math inline">\(\text{congestion index} &lt;= 0.5 * \text{saturation level}\)</span></li>
+</ul></li>
+<li>Computation of the unimpeded time
+For each triplet (arrival runway, aircraft class, ASMA sector):
+<ul>
+<li>If the number of unimpeded flights in the group is less than 20, no
+unimpeded ASMA time is computed for that triplet;</li>
+<li>If the number of unimpeded flights is greater or equal to 20, the unimpeded
+time for this triplet is defined as the median of the observed transit
+times of the unimpeded flights.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="quality-assessment" class="section level2">
+<h2>Quality Assessment</h2>
+<div id="input-data-validation" class="section level3">
+<h3>Input data validation</h3>
+<ul>
+<li>Consistency analysis between the landing times received from airports and the
+landing times computed by
+<a href="/acronym/etfms/">ETFMS</a>
+system;</li>
+<li>Completeness analysis of the <em>Correlated Positions reports for a Flight (CPF)</em> trajectory;</li>
+<li>Existence of the aircraft type ICAO Code to be matched with <em>aircraft class</em>.</li>
+</ul>
+</div>
+<div id="unimpeded-asma-time-validation" class="section level3">
+<h3>Unimpeded ASMA time validation</h3>
+<p>The following checks are performed to test the validity of the results:</p>
+<ul>
+<li><p><em>Coverage test</em>
+The percentage of flights with valid data and for which it was possible to
+define an unimpeded reference time should be greater or equal to 90%.</p></li>
+<li><p><em>Distribution of residual errors</em>
+<em>Additional ASMA times</em> for unimpeded flights should have a distribution
+centered around zero and with a standard deviation smaller than 3 minutes.</p></li>
+</ul>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hfe-01"></span>
+<img src="../../../../../../../images/check1.jpg" alt="Distribution of residual errors." width="300px" />
+<p class="caption">
+Figure 3: Distribution of residual errors.
+</p>
+</div>
+<ul>
+<li><p>Evolution of the additional ASMA time with the congestion level*
+In order to be able to consolidate in a single graph for a given airport with
+different triplet (arrival runway, aircraft class, ASMA sector) and different
+saturation levels, the data has to be normalised.</p>
+<p>For this reason a <span class="math inline">\(\text{congestion index}\)</span> is defined as</p>
+<p><span class="math display">\[\text{congestion index}  = 100 * \frac{\text{congestion level}}{\text{saturation level}}\]</span></p>
+<p>A value of 100 of the congestion index corresponds to a saturation level
+independent of arrival runway and ASMA Sector.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:check3"></span>
+<img src="../../../../../../../images/check3.jpg" alt="Evolution of the additional time with the congestion level." width="300px" />
+<p class="caption">
+Figure 4: Evolution of the additional time with the congestion level.
+</p>
+</div>
+<p>As a function of the congestion index, the <em>additional ASMA times</em> should:</p>
+<ul>
+<li>remain close to zero for low level of congestion (congestion index smaller than 100), and</li>
+<li>increase linearly for congestion index greater than 100.</li>
+</ul></li>
+</ul>
+</div>
+<div id="unimpeded-asma-times-monitoring" class="section level3">
+<h3>Unimpeded ASMA times Monitoring</h3>
+<p><em>Additional ASMA times</em> for unimpeded flights should remain close to zero. A
+change in the unimpeded time might indicate a change in operational procedures
+or a re-design of the TMA during the reference period under consideration. In
+such a case, new unimpeded ASMA times will be calculated in order to consider
+the impact of these changes.</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:check2"></span>
+<img src="../../../../../../../images/check2.jpg" alt="Verification of monthly statistics." width="300px" />
+<p class="caption">
+Figure 5: Verification of monthly statistics.
+</p>
+</div>
+<p>Every month the following checks are carried out for each airport:</p>
+<ul>
+<li>The percentage of flight with valid data and associated unimpeded times should
+remain greater than 90%.</li>
+<li>For unimpeded flights,
+<ul>
+<li>the median of the <em>Additional ASMA times</em> distribution should remain within
+the interval <span class="math inline">\(]-1\ \text{minute}, +1\ \text{minute}[\)</span>,</li>
+<li>the standard deviation of the <em>Additional ASMA times</em> distribution should be
+smaller than 3 minutes, and</li>
+<li>P75-P25 should be smaller than 3 minutes.</li>
+</ul></li>
+</ul>
+<p>If one of these conditions is not met, reasons for the changes are investigated
+and new unimpeded ASMA times are calculated if required.</p>
+</div>
+</div>
