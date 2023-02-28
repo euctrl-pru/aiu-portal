@@ -19,7 +19,7 @@ where
 The datasets made available are:
 
 * Daily en-route delays: `ert_dly`
-    * [ANSP][ansp_acronym] group (see [list of ANSP's considered by PRU][ansps]): `ansp`
+    * [ANSP](/acronym/ansp/) group (see [list of ANSP's considered by PRU](../ansp)): `ansp`
     * Country FIR group: `fir`
 
 * Horizontal Flight Efficiency: `hfe`
@@ -52,14 +52,27 @@ dir_info(base_dir, glob = "*.csv.bz2") |>
     url = str_c(dwnl_url, path, sep = "/"),
     path = glue::glue("[{path}]({url})"),
     path = map(path, gt::md)) |> 
-  rename(filename = path) |> 
-  select(filename, size) |> 
-  gt()
+  select(path, size) |> 
+  gt() |> 
+  cols_label(
+    path = gt::md("**Name**"),
+    size = gt::md("**Size (bytes)**"),
+  ) |> 
+  cols_align(
+    align = "left",
+    columns = c(path)
+  ) |> 
+  cols_align(
+    align = "right",
+    columns = c(size)
+  ) |> 
+  tab_options(
+    table.width = "fit-content!important",
+    table.margin.left = "2em",
+    table.margin.right= "auto")
 
 ```
 
 
-
 [bzip2]: <https://en.wikipedia.org/wiki/Bzip2> "Wikipedia: bzip2"
-[ansp_acronym]: {{< relref "/acronym/ansp.md" >}} "ANSP"
-[ansps]: {{< ref "../ansp/" >}} "ANSP's"
+
