@@ -1,6 +1,11 @@
 ---
 title: Datasets in CSV format
 ---
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
 
 PRU provides some relevant datasets in CSV format (compressed using [bzip2][bzip2]):
 
@@ -27,7 +32,32 @@ For example `ert_dly_ansp_2012.csv.bz2` refers to en-rote delays dataset with AN
 
 ## Dataset files
 
-TODO
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(fs)
+library(magrittr)
+library(purrr)
+library(dplyr)
+library(stringr)
+library(gt)
+
+dwnl_url <- "https://www.eurocontrol.int/performance/data/download/csv"
+base_dir <- "//ihx-vdm05/LIVE_var_www_performance$/data/download/csv"
+
+dir_info(base_dir, glob = "*.csv.bz2") |>
+  select(path, size) |> 
+  mutate(
+    path = path_file(path),
+    url = str_c(dwnl_url, path, sep = "/"),
+    path = glue::glue("[{path}]({url})"),
+    path = map(path, gt::md)) |> 
+  rename(filename = path) |> 
+  select(filename, size) |> 
+  gt()
+
+```
+
 
 
 [bzip2]: <https://en.wikipedia.org/wiki/Bzip2> "Wikipedia: bzip2"
