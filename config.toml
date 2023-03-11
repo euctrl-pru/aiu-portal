@@ -346,6 +346,15 @@ ignoreFiles = [
     identifier = "economics"
     parent = "dashboard"
     weight = 4
+  [[menu.main]]
+    name = "divider3"
+    parent = "dashboard"
+    weight = 5
+  [[menu.main]]
+    name = "Transformation"
+    url = "/transformation/"
+    parent = "dashboard"
+    weight = 6
 
   [[menu.main]]
     name = "Views"

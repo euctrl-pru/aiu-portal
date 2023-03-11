@@ -1,0 +1,137 @@
+---
+title: PRC Performance Insights
+type: "PRC Performance Insights"
+date: '2023-03-10'
+tags:  PRC Performance Insights
+
+---
+
+
+## 2023
+
+<!-- PI#7 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[PRC Performance Insight #7 - Reorganising ATS with Virtual Centres][PI7]</h5>
+<small><strong><p style="color:#808080">Published: 17 Jan 2023</p></strong></small>
+    
+The objective of this PRC Performance Insight edition is to look at how ATM capacity and scalability will be impacted by the technical transformation process and new operational concepts, taking the example of virtualisation in general and virtual centres in particular<br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres"  target="_blank"><img src="/images/pi/prc_pi7.png" alt="PRC Performance Insight #7 - Reorganising ATS with Virtual Centres" style="width:100%"></a></div>
+</div>
+</div></div>
+
+## 2022
+
+<!-- PI#6 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe][PI6]</h5>
+<small><strong><p style="color:#808080">Published: 1 Dec 2022</p></strong></small>
+        
+The objective of this PRC performance insight edition is to look at the major developments and trends in terms of ATM performance over the past 20 years before the start of the COVID crisis in 2020.<br>
+        
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe"  target="_blank"><img src="/images/pi/prc_pi6.png" alt="Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe" style="width:100%"></a></div>
+</div>
+</div></div>
+
+<!-- PI#5 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #5 - Open performance data - An enabler to further performance enhancements?][PI5]</h5>
+<small><strong><p style="color:#808080">Published: 14 Oct 2022</p></strong></small>
+            
+Pursuing an open data-based approach will allow all interested parties to tap into a harmonised data environment to build their assessments, validate results published by other parties, and reproduce findings in support of the political and operational discussion about observed performance.<br>
+            
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data"  target="_blank"><img src="/images/pi/prc_pi5.png" alt="Performance Insight #5 - Open performance data - An enabler to further performance enhancements?" style="width:100%"></a></div>
+</div>
+</div></div>
+ 
+<!-- PI#4 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #4: Impact of COVID-19 on en-route unit rates and charges billed to airspace users][PI4]</h5>
+<small><strong><p style="color:#808080">Published: 13 May 2022</p></strong></small>
+                
+The pan-European ATM system is primarily financed through the collection of en-route charges. This continuous flow of revenue is ensured via the Route Charges System and managed by the EUROCONTROL Central Route Charges Office (CRCO) which is tasked with billing, collection and disbursement of route charges for the contracting Member States.<br>
+                
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/performance-insight-4-impact-covid-19-en-route-unit-rates-and-charges-billed-airspace" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/performance-insight-4-impact-covid-19-en-route-unit-rates-and-charges-billed-airspace"  target="_blank"><img src="/images/pi/prc_pi4.png" alt="Performance Insight #4: Impact of COVID-19 on en-route unit rates and charges billed to airspace users" style="width:100%"></a></div>
+</div>
+</div></div>
+
+## 2021
+<!-- PI#3 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world][PI3]</h5>
+<small><strong><p style="color:#808080">Published: 18 October 2021</p></strong></small>
+                    
+Read the latest PRC Performance Insight on the role of ANS in a decarbonising world. It gives an overview of aviation’s environmental performance in general and the role of Air Navigation Services (ANS) in particular, in order to identify and formulate relevant questions for further debate.<br>
+                    
+<a class="btn btn-primary btn-sm" href="/publications/prc/pi/2021_10_18_pi_ops_decarb.html" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="/publications/prc/pi/2021_10_18_pi_ops_decarb.html" ><img src="/images/pi/prc_pi3.png" alt="Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world" style="width:100%"></a></div>
+</div>
+</div></div>
+
+
+<!-- PI#2 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #2: The economic impact of COVID-19 on the ANS system][PI2]</h5>
+<small><strong><p style="color:#808080">Published: 23 March 2021</p></strong></small>
+                    
+COVID-19 continues to have a huge impact on the aviation industry, not just the airlines and the airports but also the Air Navigation Services (ANS) system that keep the skies safe for all of us. The independent Performance Review Commission (PRC) has prepared a preliminary analysis looking at the impact of this unprecedented crisis on the ANS system and the implications for the future.<br>
+                    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/new-prc-performance-insight-economic-impact-covid-19-ans-system" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/new-prc-performance-insight-economic-impact-covid-19-ans-system"  target="_blank"><img src="/images/pi/prc_pi2.png" alt="Performance Insight #4: Impact of COVID-19 on en-route unit rates and charges billed to airspace users" style="width:100%"></a></div>
+</div>
+</div></div>
+
+## 2020
+
+<!-- PI#1 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[Performance Insight #1: Future Challenges to Safety][PI1]</h5>
+<small><strong><p style="color:#808080">Published: 15 October 2020</p></strong></small>
+                        
+Read the new PRC Performance Insight on future challenges to safety. In view of the numerous technological and institutional changes in the future, the PRC initiated a discussion in early 2020 to collect views on future challenges to safety and how to identify and measure potential risks in a changing ATM environment.<br>
+                        
+<a class="btn btn-primary btn-sm" href="/publications/prc/pi/2020_10_15_pi_safety.html" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="/publications/prc/pi/2020_10_15_pi_safety.html" ><img src="/images/pi/prc_pi1.png" alt="Future Challenges to Safety" style="width:100%"></a></div>
+</div>
+</div></div>
+
+[PI1]: https://ansperformance.eu/publications/prc/pi/2020_10_15_pi_safety/ "Performance Insight #1 - Future Challenges to Safety"
+[PI2]: https://www.eurocontrol.int/publication/new-prc-performance-insight-economic-impact-covid-19-ans-system "Performance Insight #2 - The economic impact of COVID-19 on the ANS system"
+[PI3]: https://ansperformance.eu/publications/prc/pi/2021_10_18_pi_ops_decarb/  "Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world"
+[PI4]: https://www.eurocontrol.int/publication/performance-insight-4-impact-covid-19-en-route-unit-rates-and-charges-billed-airspace "Performance Insight #4 - Impact of COVID-19 on en-route unit rates and charges billed to airspace users"
+[PI5]: https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data "Performance Insight #5 - Open performance data - An enabler to further performance enhancements?"
+[PI6]: https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe "Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe"
+[PI7]: https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres "PRC Performance Insight #7 - Reorganising ATS with Virtual Centres"
+
