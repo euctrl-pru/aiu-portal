@@ -13,7 +13,20 @@ dwnld_i: <i class="fa pru fa-download"></i>
       width: 100%;
       height: 100%;
       border: 0;
-   }  
+   }
+   
+  .scorecard-subt {
+    font-size: 1rem;
+  }
+  
+  .period {
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 0px;
+      color: #0070c0;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+  }
   
 @media screen and (min-width:992px) {
 
@@ -29,6 +42,7 @@ dwnld_i: <i class="fa pru fa-download"></i>
   .Scorecard {
     margin: 0px;
     padding: 0px;
+    font-family: "Roboto", sans-serif; 
     font-size: 32px;
     font-weight: bold;
     color: #161b21;
@@ -39,6 +53,7 @@ dwnld_i: <i class="fa pru fa-download"></i>
     margin: 0px;
     padding: 0px;
     padding-top: 7px;
+    font-family: "Roboto", sans-serif; 
     font-size: 26px;
     font-weight: bold;
     color: #161b21;
@@ -56,6 +71,7 @@ dwnld_i: <i class="fa pru fa-download"></i>
   .Scorecard {
     margin: 0px;
     padding: 0px;
+    font-family: "Roboto", sans-serif; 
     font-size: 20px;
     font-weight: bold;
     color: #161b21;
@@ -72,6 +88,7 @@ dwnld_i: <i class="fa pru fa-download"></i>
     margin: 0px;
     padding: 0px;
     padding-top: 7px;
+    font-family: "Roboto", sans-serif; 
     font-size: 18px;
     font-weight: bold;
     color: #161b21;
@@ -113,89 +130,89 @@ dwnld_i: <i class="fa pru fa-download"></i>
 <div class="row align-items-start">
 <div class="col-md-6">
 <!-- day -->
-<div class="row align-items-start mb-1" style="background-color: #f2f2f2; border-radius: 5px;">
+<div class="row align-items-start mb-1" style="background-color: #F7F7F7; border-radius: 5px;">
 <div class="col-12">
-<p id="last_day" style="font-weight: bold; margin-bottom: 0px; color: #0070c0;">
+<p id="last_day" class="period">
 Day
 </p>
 </div>
 <div class="col-3">
 <p id="day_traffic" class="Scorecard">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 flights
 </p>
 </div>
 <div class="col-3">
 <p id="dif_day_prev_week" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs prev. week
 </p>
 </div>
 <div class="col-3">
 <p id="dif_day_prev_year" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs prev. year
 </p>
 </div>
 <div class="col-3">
 <p id="dif_day_2019" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs 2019
 </p>
 </div>
 </div>
 <!-- closes day row -->
 <!-- week -->
-<div class="row align-items-start mb-1" style="background-color: #f2f2f2; border-radius: 5px;">
+<div class="row align-items-start mb-1" style="background-color: #F7F7F7; border-radius: 5px;">
 <div class="col-12">
-<p id="last_week" style="font-weight: bold; margin-bottom: 0px; color: #0070c0;">
+<p id="last_week" class="period">
 Week
 </p>
 </div>
 <div class="col-3">
 <p id="week_traffic" class="Scorecard">
 </p>
-<p id="avg_week_traffic" class="Scorecard_subt">
+<p id="avg_week_traffic" class="scorecard-subt">
 </p>
 </div>
 <div class="col-3">
 <p id="dif_week_prev_week" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs prev. week
 </p>
 </div>
 <div class="col-3">
 <p id="dif_week_prev_year" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs prev. year
 </p>
 </div>
 <div class="col-3">
 <p id="dif_week_2019" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs 2019
 </p>
 </div>
 </div>
 <!-- closes week row -->
 <!-- y2d-->
-<div class="row align-items-start mb-1" style="background-color: #f2f2f2; border-radius: 5px;">
+<div class="row align-items-start mb-1" style="background-color: #F7F7F7; border-radius: 5px;">
 <div class="col-12">
-<p id="y2d_day_text" style="font-weight: bold; margin-bottom: 0px; color: #0070c0;">
+<p id="y2d_day_text" class="period">
 Year to date
 </p>
 </div>
 <div class="col-3">
 <p id="y2d_traffic" class="Scorecard">
 </p>
-<p id="avg_y2d_traffic" class="Scorecard_subt">
+<p id="avg_y2d_traffic" class="scorecard-subt">
 </p>
 </div>
 <div class="col-3">
@@ -204,14 +221,14 @@ Year to date
 <div class="col-3">
 <p id="dif_y2d_prev_year" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs prev. year
 </p>
 </div>
 <div class="col-3">
 <p id="dif_y2d_2019" class="Scorecard2">
 </p>
-<p class="Scorecard_subt">
+<p class="scorecard-subt">
 vs 2019
 </p>
 </div>
