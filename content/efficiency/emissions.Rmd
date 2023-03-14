@@ -81,7 +81,6 @@ query <- str_glue("
 co2_data_raw <- export_query("PRU_DEV", query = query)%>%
   mutate(across(.cols = where(is.instant), ~ as.Date(.x)))
 
-
 co2_data_plot_nw <- co2_data_raw %>%
   select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH)%>%
   group_by(FLIGHT_MONTH)%>%
@@ -89,6 +88,15 @@ co2_data_plot_nw <- co2_data_raw %>%
   mutate(YEAR = as.numeric(format(FLIGHT_MONTH,'%Y')), MONTH = as.numeric(format(FLIGHT_MONTH,'%m')))%>%
   arrange(FLIGHT_MONTH)%>%
   mutate(TTF_IDX=TTF/first(TTF)*100, CO2_IDX=TCO2/first(TCO2)*100)
+
+#check last month number of flights
+check_flights <- co2_data_plot_nw %>% 
+  filter (YEAR == max(YEAR)) %>% filter(MONTH == max(MONTH)) %>%  select(TTF) %>% pull()
+
+if (check_flights < 1000) {
+  co2_data_raw <-  co2_data_raw %>% filter (FLIGHT_MONTH < max(FLIGHT_MONTH))
+  co2_data_plot_nw <- co2_data_plot_nw %>% filter (FLIGHT_MONTH < max(FLIGHT_MONTH))
+}
 
 co2_data_plot_nw_ld <- co2_data_plot_nw %>% 
   mutate(FLIGHT_MONTH = ceiling_date(as_date(FLIGHT_MONTH), unit='month')-1)
