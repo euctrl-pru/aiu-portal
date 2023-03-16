@@ -1,0 +1,34 @@
+---
+title: Taxi-In Additional Time Dataset
+slug: taxi-in-additional-time
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+## Definiton
+
+[Additional taxi-in time](/definition/additional-taxi-in-time/)
+
+## Column naming and types
+
+| Column name        | Data source     | Label                        | Column description                                              | Example          |
+| ------------------ | --------------- | ---------------------------- | --------------------------------------------------------------- | ---------------- |
+| YEAR               | Network Manager | YEAR                         | Reference year                                                  | 2014             |
+| MONTH_NUM          | Network Manager | MONTH_NUM                    | Month (numeric)                                                 | 1                |
+| MONTH_MON          | Network Manager | MONTH_MON                    | Month (3-letter code)                                           | JAN              |
+| APT_ICAO           | Network Manager | APT_ICAO                     | ICAO 4-letter airport designator                                | EBBR             |
+| APT_NAME           | PRU             | APT_NAME                     | Airport name                                                    | Brussels         |
+| STATE_NAME         | PRU             | STATE_NAME                   | State in which the airport is located                           | Belgium          |
+| TF                 | Airport         | TF                           | Total arrival                                                   | 6472             |
+| VALID_FL           | Airport         | VALID_FL                     | Total arrival flight with valid data                            | 6328             |
+| NO_REF             | Airport         | NO_REF                       | Total arrival flight with valid data but without reference time | 264              |
+| TOTAL_REF_NB_FL    | Airport         | TOTAL_REF_NB_FL              | Total arrival flight with valid data and reference time         | 6064             |
+| TOTAL_REF_TIME_MIN | Airport         | TOTAL_REF_TIME_MIN           | Total reference taxi-in time in minutes                         | 48,260.40        |
+| TOTAL_ADD_TIME_MIN | Airport         | TOTAL_ADD_TIME_MIN           | Total additional taxi-in time in minutes                        | 1,718.60         |
+| COMMENT            | PRU             | COMMENT                      | Comment on data status                                          | NO DATA RECEIVED |
+| PIVOT_LABEL        | PRU             | PIVOT_LABEL                  | Airport name (ICAO 4-letter airport designator)                 | Brussels (EBBR)  |
+|                    |                 | Avg. Reference Taxi-In Time  | \= ROUND( TOTAL_REF_TIME_MIN / TOTAL_REF_NB_FL ; 2 )            |                  |
+|                    |                 | Avg. Additional Taxi-In Time | \= ROUND( TOTAL_ADD_TIME_MIN / TOTAL_REF_NB_FL ; 2 )            |                  |
+|                    |                 | No Ref Pct                   | \= ROUND( NO_REF / VALID_FL ; 2 )                               |                  |

@@ -1,13 +1,13 @@
 ---
-title: Taxi-Out Additional Time Dataset
-slug: taxi-out-additional-time
+title: Taxi-In Additional Time Dataset
+slug: taxi-in-additional-time
 ---
 
 
 
 <div id="definiton" class="section level2">
 <h2>Definiton</h2>
-<p><a href="/definition/additional-taxi-out-time/">Additional taxi-out time</a></p>
+<p><a href="/definition/additional-taxi-in-time/">Additional taxi-in time</a></p>
 </div>
 <div id="column-naming-and-types" class="section level2">
 <h2>Column naming and types</h2>
@@ -75,42 +75,42 @@ slug: taxi-out-additional-time
 <td>TF</td>
 <td>Airport</td>
 <td>TF</td>
-<td>Total departure</td>
+<td>Total arrival</td>
 <td>6472</td>
 </tr>
 <tr class="even">
 <td>VALID_FL</td>
 <td>Airport</td>
 <td>VALID_FL</td>
-<td>Total departure flight with valid data</td>
+<td>Total arrival flight with valid data</td>
 <td>6328</td>
 </tr>
 <tr class="odd">
 <td>NO_REF</td>
 <td>Airport</td>
 <td>NO_REF</td>
-<td>Total departure flight with valid data but without reference time</td>
+<td>Total arrival flight with valid data but without reference time</td>
 <td>264</td>
 </tr>
 <tr class="even">
 <td>TOTAL_REF_NB_FL</td>
 <td>Airport</td>
 <td>TOTAL_REF_NB_FL</td>
-<td>Total departure flight with valid data and reference time</td>
+<td>Total arrival flight with valid data and reference time</td>
 <td>6064</td>
 </tr>
 <tr class="odd">
 <td>TOTAL_REF_TIME_MIN</td>
 <td>Airport</td>
 <td>TOTAL_REF_TIME_MIN</td>
-<td>Total reference taxi-out time in minutes</td>
+<td>Total reference taxi-in time in minutes</td>
 <td>48,260.40</td>
 </tr>
 <tr class="even">
 <td>TOTAL_ADD_TIME_MIN</td>
 <td>Airport</td>
 <td>TOTAL_ADD_TIME_MIN</td>
-<td>Total additional taxi-out time in minutes</td>
+<td>Total additional taxi-in time in minutes</td>
 <td>1,718.60</td>
 </tr>
 <tr class="odd">
@@ -130,14 +130,14 @@ slug: taxi-out-additional-time
 <tr class="odd">
 <td></td>
 <td></td>
-<td>Avg. Reference Taxi-Out Time</td>
+<td>Avg. Reference Taxi-In Time</td>
 <td>= ROUND( TOTAL_REF_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
 <td></td>
-<td>Avg. Additional Taxi-Out Time</td>
+<td>Avg. Additional Taxi-In Time</td>
 <td>= ROUND( TOTAL_ADD_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
 <td></td>
 </tr>
