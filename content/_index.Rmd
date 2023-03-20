@@ -178,14 +178,14 @@ For feedback or questions please contact us at:
 <div class="carousel-inner">
 
 <!--
-<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-39-ransomware-groups-targeting-aviations-supply-chain" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
+<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2022-consultation" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
 Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
 -->
 
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="/efficiency/vfe/"><img class="card-img-top" src="/images/landing/cdo_db.png" alt=""><div class="card-body"><h5 class="card-title">Continuous descent operations</h5></a><small><p class="card-text">Explore our improved dashboard addressing the vertical flight efficiency at European airports</p></small></div></div></div>
+<div class="carousel-item active"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2022-consultation" target="_blank"><img class="card-img-top" src="/images/landing/prr2022.png" alt=""><div class="card-body"><h5 class="card-title">Performance Review Report 2022</h5></a><small><p class="card-text">Performance Review Report (PRR) 2022 available now for stakeholder consultation</p></small></div></div></div>
 
-<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-39-ransomware-groups-targeting-aviations-supply-chain" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Ransomware events in aviation</h5></a><small><p class="card-text">
-Read the latest Data Snapshot to learn how ransomware groups are targeting aviation in Europe</p></small></div></div></div>
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/data/#img-srcimagesprcq-operations-airportpng-width50-height50-altoperations-at-airports-operations-at-airports"><img class="card-img-top" src="/images/landing/add_times.png" alt=""><div class="card-body"><h5 class="card-title">New additional times</h5></a><small><p class="card-text">
+Results based on the new methodologies for additional times available now in the download area</p></small></div></div></div>
 
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
 Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
