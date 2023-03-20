@@ -2,14 +2,16 @@
 
 "Export en-route daily delay and traffic to yearly CSV files.
 
-Usage: export_ert_dly [-h] [-t TYPE] WEF TIL
+Usage: export_ert_dly [-h] [-t TYPE] [-o DIR] WEF TIL
 
   -h --help             show this help text
   -t TYPE, --type=TYPE  the TYPE of entity; one of ansp, fir [default: ansp]
+  -o DIR                directory where to save the output [default: .]
 
 Arguments:
   WEF  date from when to export data, format YYYY-MM-DD
   TIL  date till when to export data, format YYYY-MM-DD (non-inclusive)
+  DIR  directory where to save the data file
 " -> doc
 
 suppressWarnings(suppressMessages(library(docopt)))
@@ -29,7 +31,7 @@ if (!(opts$type %in% types)) {
 
 suppressWarnings(suppressMessages(library(lubridate)))
 suppressWarnings(suppressMessages(library(purrr)))
-suppressWarnings(suppressMessages(library('ROracle')))
+suppressWarnings(suppressMessages(library(fr24gu)))
 suppressWarnings(suppressMessages(library(stringr)))
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(readr)))
@@ -37,6 +39,8 @@ suppressWarnings(suppressMessages(library(readr)))
 safe_ymd <- safely(ymd)
 wef <- safe_ymd(opts$WEF, quiet = TRUE)
 til <- safe_ymd(opts$TIL, quiet = TRUE)
+out_dir <- opts$o
+
 
 if (is.null(wef$result) || is.null(til$result)) {
   cat("Error: invalid WEF and/or TIL, it must be in YYYY-MM-DD format", "\n")
@@ -47,25 +51,27 @@ if (is.null(wef$result) || is.null(til$result)) {
   til <- format(til$result, "%Y-%m-%d")
 }
 
-usr <- Sys.getenv("PRU_DEV_USR")
-pwd <- Sys.getenv("PRU_DEV_PWD")
-dbn <- Sys.getenv("PRU_DEV_DBNAME")
 
-if (usr == "") {
-  cat("Error: you should at least set your DB user via PRU_DEV_USR")
+if (!fs::dir_exists(out_dir)) {
+  cat("Error: non-existing DIR", "\n")
+  cat(doc, "\n")
   q(status = -1)
 }
 
+out_dir <- fs::path_abs(out_dir)
 
 
-# NOTE: to be set before you create your ROracle connection!
-# See http://www.oralytics.com/2015/05/r-roracle-and-oracle-date-formats_27.html
-tz <- "UDT"
-Sys.setenv("TZ" = tz)
-Sys.setenv("ORA_SDTZ" = "UTC")
 
-drv <- dbDriver("Oracle")
-con <- dbConnect(drv, usr, pwd, dbname='porape5')
+# # NOTE: to be set before you create your ROracle connection!
+# # See http://www.oralytics.com/2015/05/r-roracle-and-oracle-date-formats_27.html
+# tz <- "UDT"
+# Sys.setenv("TZ" = tz)
+# Sys.setenv("ORA_SDTZ" = "UTC")
+
+
+con <- db_connection(schema = "PRU_DEV")
+
+
 
 sqlq_ansp <- "WITH data AS (
 SELECT
@@ -278,13 +284,15 @@ if (type == "ansp") {
   q(status = -1)
 }
 
-query <- sqlInterpolate(con, sqlq, WEF = wef, TIL = til)
-flt <- dbSendQuery(con, query)
-data <- fetch(flt, n = -1) 
+
+query <- DBI::sqlInterpolate(con, sqlq, WEF = wef, TIL = til)
+t <- tbl(con, sql(query))
+
+data <- t.collect()
 
 dbDisconnect(con)
-Sys.unsetenv("TZ")
-Sys.unsetenv("ORA_SDTZ")
+# Sys.unsetenv("TZ")
+# Sys.unsetenv("ORA_SDTZ")
 
 data <- data %>%
   as_tibble() %>%
@@ -317,7 +325,7 @@ data <- data %>%
 mySave <- function(df, ftype) {
   y <- unique(df$YEAR)
   write_csv(df,
-            file = here::here("static", "download", "csv", str_c("ert_dly_", ftype, "_", y, ".csv.bz2")),
+            file = paste0(out_dir, "/", str_c("ert_dly_", ftype, "_", y, ".csv.bz2")),
             na = "")
   df
 }
