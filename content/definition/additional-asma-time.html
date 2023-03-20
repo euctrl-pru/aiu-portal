@@ -1,47 +1,18 @@
 ---
 title: Additional ASMA Time
 slug: additional-asma-time
+bibliography: [../../static/bib/aviation.bib]
 ---
 
 
 
-<p>The Additional ASMA time is the difference between the actual ASMA transit time
-and the unimpeded ASMA time calculated for non-congested conditions.</p>
+<p>The additional Arrival Sequencing and Metering (ASMA) time provides an approximate measure of the average inbound queuing time on the inbound traffic flow, during times that the airport is congested.
+This indicator is calculated as the difference between the actual ASMA transit time and a reference ASMA time estimated for each inbound flow.</p>
 <div id="unit-of-measurement" class="section level2">
 <h2>Unit of Measurement</h2>
-<p>Minute.</p>
+<p>Minutes per IFR arrival [min/arr].</p>
 </div>
-<div id="calculation-of-the-indicator" class="section level2">
-<h2>Calculation of the indicator</h2>
-<p>Let</p>
-<ul>
-<li><span class="math inline">\(c\)</span>, a combination of aircraft class, ASMA sectors and arrival runway, as
-described in the technical note for
-<a href="/definition/unimpeded-asma-time/">unimpeded ASMA time</a>,</li>
-<li><span class="math inline">\(f(c)\)</span>, a flight characterised by a combination <span class="math inline">\(c\)</span>,</li>
-<li><span class="math inline">\(\textrm{AcASMA}(f(c))\)</span>, the actual
-<a href="/definition/asma-transit-time/">ASMA transit time</a>
-for a flight <span class="math inline">\(f(c)\)</span>, i.e. the
-elapsed time between the last entry of the flight <span class="math inline">\(f(c)\)</span> in its ASMA sector and
-its actual landing time (<a href="/acronym/aldt/">ALDT</a>),</li>
-<li><span class="math inline">\(\textrm{UASMA}(c)\)</span>, the
-<a href="/definition/unimpeded-asma-time/">unimpeded ASMA time</a>
-for a combination <span class="math inline">\(c\)</span>.</li>
-</ul>
-<p>The <em>additional ASMA time</em>, <span class="math inline">\(\textrm{AdASMA}(f(c))\)</span>, is calculated for each flight <span class="math inline">\(f(c)\)</span>
-as the difference between the actual ASMA transit time <span class="math inline">\(\textrm{AcASMA}(f(c))\)</span> of the
-flight and the unimpeded ASMA time <span class="math inline">\(\textrm{UASMA}(c)\)</span>:</p>
-<p><span class="math display">\[
-\textrm{AdASMA}(f(c)) = \textrm{AcASMA}(f(c)) - \textrm{UASMA}(c)
-\]</span></p>
-<p>The additional ASMA time, <span class="math inline">\(\textrm{AdASMA}(c)\)</span>, for a given combination <span class="math inline">\(c\)</span> is the
-average of the additional ASMA time, <span class="math inline">\(\textrm{AdASMA}(f(c))\)</span> of all the flight <span class="math inline">\(f(c)\)</span>
-characterised by that combination <span class="math inline">\(c\)</span>.</p>
-<p>The additional ASMA time, <span class="math inline">\(\textrm{AdASMA}\)</span>, for a given airport is the weighted
-average of the additional ASMA time, <span class="math inline">\(\textrm{AdASMA}(c)\)</span>, for all the combinations
-<span class="math inline">\(c\)</span> at that airport with their probability of occurrence.</p>
-</div>
-<div id="see-also" class="section level2">
-<h2>See also</h2>
-<p><a href="/methodology/additional-asma-time-pi/">Additional ASMA time methodology</a></p>
+<div id="methodology" class="section level2">
+<h2>Methodology</h2>
+<p>The methodology for the calculation of the additional taxi-in time can be found <a href="/methodology/additional-asma-time/">here</a>.</p>
 </div>

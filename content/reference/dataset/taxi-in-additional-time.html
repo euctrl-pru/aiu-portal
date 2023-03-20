@@ -1,0 +1,153 @@
+---
+title: Taxi-In Additional Time Dataset
+slug: taxi-in-additional-time
+---
+
+
+
+<div id="definiton" class="section level2">
+<h2>Definiton</h2>
+<p><a href="/definition/additional-taxi-in-time/">Additional taxi-in time</a></p>
+</div>
+<div id="column-naming-and-types" class="section level2">
+<h2>Column naming and types</h2>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="10%" />
+<col width="20%" />
+<col width="45%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Data source</th>
+<th>Label</th>
+<th>Column description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>YEAR</td>
+<td>Network Manager</td>
+<td>YEAR</td>
+<td>Reference year</td>
+<td>2014</td>
+</tr>
+<tr class="even">
+<td>MONTH_NUM</td>
+<td>Network Manager</td>
+<td>MONTH_NUM</td>
+<td>Month (numeric)</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>MONTH_MON</td>
+<td>Network Manager</td>
+<td>MONTH_MON</td>
+<td>Month (3-letter code)</td>
+<td>JAN</td>
+</tr>
+<tr class="even">
+<td>APT_ICAO</td>
+<td>Network Manager</td>
+<td>APT_ICAO</td>
+<td>ICAO 4-letter airport designator</td>
+<td>EBBR</td>
+</tr>
+<tr class="odd">
+<td>APT_NAME</td>
+<td>PRU</td>
+<td>APT_NAME</td>
+<td>Airport name</td>
+<td>Brussels</td>
+</tr>
+<tr class="even">
+<td>STATE_NAME</td>
+<td>PRU</td>
+<td>STATE_NAME</td>
+<td>State in which the airport is located</td>
+<td>Belgium</td>
+</tr>
+<tr class="odd">
+<td>TF</td>
+<td>Airport</td>
+<td>TF</td>
+<td>Total arrival</td>
+<td>6472</td>
+</tr>
+<tr class="even">
+<td>VALID_FL</td>
+<td>Airport</td>
+<td>VALID_FL</td>
+<td>Total arrival flight with valid data</td>
+<td>6328</td>
+</tr>
+<tr class="odd">
+<td>NO_REF</td>
+<td>Airport</td>
+<td>NO_REF</td>
+<td>Total arrival flight with valid data but without reference time</td>
+<td>264</td>
+</tr>
+<tr class="even">
+<td>TOTAL_REF_NB_FL</td>
+<td>Airport</td>
+<td>TOTAL_REF_NB_FL</td>
+<td>Total arrival flight with valid data and reference time</td>
+<td>6064</td>
+</tr>
+<tr class="odd">
+<td>TOTAL_REF_TIME_MIN</td>
+<td>Airport</td>
+<td>TOTAL_REF_TIME_MIN</td>
+<td>Total reference taxi-in time in minutes</td>
+<td>48,260.40</td>
+</tr>
+<tr class="even">
+<td>TOTAL_ADD_TIME_MIN</td>
+<td>Airport</td>
+<td>TOTAL_ADD_TIME_MIN</td>
+<td>Total additional taxi-in time in minutes</td>
+<td>1,718.60</td>
+</tr>
+<tr class="odd">
+<td>COMMENT</td>
+<td>PRU</td>
+<td>COMMENT</td>
+<td>Comment on data status</td>
+<td>NO DATA RECEIVED</td>
+</tr>
+<tr class="even">
+<td>PIVOT_LABEL</td>
+<td>PRU</td>
+<td>PIVOT_LABEL</td>
+<td>Airport name (ICAO 4-letter airport designator)</td>
+<td>Brussels (EBBR)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Avg. Reference Taxi-In Time</td>
+<td>= ROUND( TOTAL_REF_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>Avg. Additional Taxi-In Time</td>
+<td>= ROUND( TOTAL_ADD_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>No Ref Pct</td>
+<td>= ROUND( NO_REF / VALID_FL ; 2 )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>

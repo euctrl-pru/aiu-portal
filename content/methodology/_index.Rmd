@@ -37,12 +37,12 @@ In order to encourage collaboration, transparency and reproducibility of perform
 </div></div>
 <div class="col-10">
 #### Efficiency/ Environment
+  * [Additional Taxi Out Time][ATXOT]
   * [Horizontal Flight Efficiency performance indicators][hfe]
   * [En-route Vertical Flight Efficiency][ervfe]
   * [Vertical Flight Efficiency during Climb and Descent][cdvfe]
-  * [Unimpeded ASMA Time metric][uasma]
-  * [Additional ASMA Time performance indicator][aasma]
-  * [Unimpeded Taxi-out Time metric][tasma]
+  * [Additional ASMA Time][ASMA]
+  * [Additional Taxi In Time][ATXIT]
 </div>
 </div></div>
 
@@ -64,9 +64,9 @@ In order to encourage collaboration, transparency and reproducibility of perform
 [ervfe]: /methodology/en-route-vertical-flight-efficiency-pi/ "En-route Vertical Flight Efficiency"
 [cri-pi]: /methodology/cri-pi/ "Composite Risk Index"
 
-[uasma]: /methodology/unimpeded-asma-time "Unimpeded ASMA Time metric"
-[aasma]: /methodology/additional-asma-time-pi/ "Additional ASMA Time performance indicator"
-[tasma]: /methodology/unimpeded-taxi-out-time/ "Unimpeded Taxi-out Time metric"
+[ASMA]: /methodology/additional-asma-time/ "Additional ASMA Time"
+[ATXOT]: /methodology/additional-taxi-out-time/ "Additional Taxi-out Time"
+[ATXIT]: /methodology/additional-taxi-in-time/ "Additional Taxi-in Time"
 [cdvfe]: /methodology/cd-vertical-flight-efficiency-pi/ "Vertical Flight Efficiency during Climb and Descent"
 [acu]: /methodology/airport-capacity-utilisation/ "Airport Capacity Utilisation"
 [ace]: /economics/ace/ace-handbook/ "ATM Cost-Efficiency (ACE)"

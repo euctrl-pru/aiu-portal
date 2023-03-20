@@ -5,30 +5,19 @@ slug: asma-additional-time
 
 
 
-<div id="data-description" class="section level2">
-<h2>Data description</h2>
-<p>The <a href="/definition/additional-asma-time/">additional ASMA time</a>
-is a proxy for the average arrival runway queuing time on the inbound traffic flow,
-during congestion periods at airports.</p>
-<p>It is the difference between the actual
-<a href="/acronym/asma/">ASMA</a>
-time of a flight and a statistically determined
-<a href="/definition/unimpeded-asma-time/">unimpeded ASMA time</a>
-based on ASMA times in periods of low traffic demand.</p>
-<p>When monitoring ASMA performance at airports, it is important to note that the
-goal is not to reduce ASMA time to the unimpeded reference time - as this could
-negatively impact on runway throughput - but rather to reduce additional ASMA
-time and associated fuel burnt to the necessary minimum.</p>
+<div id="definiton" class="section level2">
+<h2>Definiton</h2>
+<p><a href="/definition/additional-asma-time/">Additional Arrival Sequencing and Metering (ASMA) time</a></p>
 </div>
 <div id="column-naming-and-types" class="section level2">
 <h2>Column naming and types</h2>
 <table>
 <colgroup>
-<col width="14%" />
 <col width="13%" />
 <col width="10%" />
-<col width="53%" />
-<col width="7%" />
+<col width="18%" />
+<col width="45%" />
+<col width="11%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -50,7 +39,7 @@ time and associated fuel burnt to the necessary minimum.</p>
 <tr class="even">
 <td>MONTH_NUM</td>
 <td>Network Manager</td>
-<td>MONTH</td>
+<td>MONTH_NUM</td>
 <td>Month (numeric)</td>
 <td>1</td>
 </tr>
@@ -63,7 +52,7 @@ time and associated fuel burnt to the necessary minimum.</p>
 </tr>
 <tr class="even">
 <td>APT_ICAO</td>
-<td>PRU</td>
+<td>Network Manager</td>
 <td>APT_ICAO</td>
 <td>ICAO 4-letter airport designator</td>
 <td>EBBR</td>
@@ -79,50 +68,86 @@ time and associated fuel burnt to the necessary minimum.</p>
 <td>STATE_NAME</td>
 <td>PRU</td>
 <td>STATE_NAME</td>
-<td>Country in which the airport is located</td>
+<td>State in which the airport is located</td>
 <td>Belgium</td>
 </tr>
 <tr class="odd">
-<td>ASMA_RADIUS</td>
-<td>PRU</td>
-<td>ASMA_RADIUS</td>
-<td>The radius around the airport (in NM) used for the ASMA calculation</td>
-<td>40</td>
+<td>TF</td>
+<td>Airport</td>
+<td>TF</td>
+<td>Total arrival</td>
+<td>6472</td>
 </tr>
 <tr class="even">
-<td>FLT_ASMA_UNIMP_2</td>
-<td>NM_Airport</td>
-<td></td>
-<td>IFR flights with unimpeded reference time</td>
-<td>7290</td>
+<td>VALID_FL</td>
+<td>Airport</td>
+<td>VALID_FL</td>
+<td>Total arrival flight with valid data</td>
+<td>6328</td>
 </tr>
 <tr class="odd">
-<td>TIME_ASMA_UNIMP_2</td>
-<td>NM_Airport</td>
-<td></td>
-<td>Total unimpeded reference ASMA time in minutes</td>
-<td>60081</td>
+<td>NO_REF</td>
+<td>Airport</td>
+<td>NO_REF</td>
+<td>Total arrival flight with valid data but without reference time</td>
+<td>264</td>
 </tr>
 <tr class="even">
-<td>TIME_ASMA_ADD_2</td>
-<td>NM_Airport</td>
-<td></td>
+<td>TOTAL_REF_NB_FL</td>
+<td>Airport</td>
+<td>TOTAL_REF_NB_FL</td>
+<td>Total arrival flight with valid data and reference time</td>
+<td>6064</td>
+</tr>
+<tr class="odd">
+<td>TOTAL_REF_TIME_MIN</td>
+<td>Airport</td>
+<td>TOTAL_REF_TIME_MIN</td>
+<td>Total reference ASMA time in minutes</td>
+<td>48,260.40</td>
+</tr>
+<tr class="even">
+<td>TOTAL_ADD_TIME_MIN</td>
+<td>Airport</td>
+<td>TOTAL_ADD_TIME_MIN</td>
 <td>Total additional ASMA time in minutes</td>
-<td>15175</td>
+<td>1,718.60</td>
+</tr>
+<tr class="odd">
+<td>COMMENT</td>
+<td>PRU</td>
+<td>COMMENT</td>
+<td>Comment on data status</td>
+<td>NO DATA RECEIVED</td>
+</tr>
+<tr class="even">
+<td>PIVOT_LABEL</td>
+<td>PRU</td>
+<td>PIVOT_LABEL</td>
+<td>Airport name (ICAO 4-letter airport designator)</td>
+<td>Brussels (EBBR)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Avg. Reference ASMA Time</td>
+<td>= ROUND( TOTAL_REF_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>Avg. Additional ASMA Time</td>
+<td>= ROUND( TOTAL_ADD_TIME_MIN / TOTAL_REF_NB_FL ; 2 )</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>No Ref Pct</td>
+<td>= ROUND( NO_REF / VALID_FL ; 2 )</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<div id="calculated-fields" class="section level3">
-<h3>Calculated Field(s)</h3>
-<p><span class="math display">\[
-\begin{align*}
-\text{Average additional ASMA time} &amp; = \frac{\text{TIME_ASMA_ADD_2}}{\text{FLT_ASMA_UNIMP_2}}
-\end{align*}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align*}
-\text{Average unimpeded ASMA time} &amp; = \frac{\text{TIME_ASMA_UNIMP_2}}{\text{FLT_ASMA_UNIMP_2}}
-\end{align*}
-\]</span></p>
-</div>
 </div>

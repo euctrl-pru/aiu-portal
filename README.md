@@ -28,3 +28,6 @@ blogdown::serve_site(.site_dir = "../pru-portal-generated")
 
 and then browsing at http://localhost:4321
 
+# WARNINGS
+
+In order to regenerate `csv.Rmd` you need access to the `performance/download`

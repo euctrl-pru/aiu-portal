@@ -1,0 +1,13 @@
+---
+title: Additional Taxi-in Time
+slug: additional-taxi-in-time
+bibliography: [../../static/bib/aviation.bib]
+---
+
+The *additional taxi-in time* provides an approximate measure of for the average holding time during the taxi-in phase, during times that the apron and stands are congested. This indicator is calculated as the difference between the actual taxi-in time and a reference taxi-in time estimated for each runway-stand combination.
+
+## Unit of Measurement
+Minutes per IFR arrival [min/arr].
+
+## Methodology
+The methodology for the calculation of the additional taxi-in time can be found [here](/methodology/additional-taxi-in-time/).
