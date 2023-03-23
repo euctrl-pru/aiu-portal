@@ -198,7 +198,7 @@ Learn about the PRC's strategy to support the transformation process in ANS.</p>
 <!--
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Punctuality performance</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
 -->
-<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">January 2023 data <br> available for download now</p></small></div></div></div>
+<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">February 2023 data <br> available for download now</p></small></div></div></div>
 
 </div>
 
