@@ -2,9 +2,10 @@
 
 "Export to CSV daily HFE kpi's.
 
-Usage: export_hfe [-h]
+Usage: export_hfe [-h] [-o DIR]
 
   -h --help             show this help text
+  -o DIR                directory where to save the output [default: .]
 " -> doc
 
 suppressWarnings(suppressMessages(library(docopt)))
@@ -14,6 +15,8 @@ suppressWarnings(suppressMessages(library(readr)))
 
 # retrieve the command-line arguments
 opts <- docopt(doc)
+
+out_dir <- opts$o
 
 
 usr <- Sys.getenv("PRU_TEST_USR")
@@ -25,6 +28,13 @@ if (usr == "") {
   q(status = -1)
 }
 
+if (!fs::dir_exists(out_dir)) {
+  cat("Error: non-existing DIR", "\n")
+  cat(doc, "\n")
+  q(status = -1)
+}
+
+out_dir <- fs::path_abs(out_dir)
 
 
 # NOTE: to be set before you create your ROracle connection!
@@ -65,7 +75,7 @@ query <- sqlq
 flt <- dbSendQuery(con, query)
 data <- fetch(flt, n = -1) 
 
-dbDisconnect(con)
+DBI::dbDisconnect(con)
 Sys.unsetenv("TZ")
 Sys.unsetenv("ORA_SDTZ")
 
@@ -73,8 +83,6 @@ Sys.unsetenv("ORA_SDTZ")
 data %>%
   group_by(YEAR) %>% 
   group_walk(~ write_csv(.x, 
-                         here::here("static",
-                                    "download",
-                                    "csv",
+                         paste0(out_dir, "/",
                                     stringr::str_c("hfe_", .y$YEAR, ".csv.bz2")),
                          na = ""))

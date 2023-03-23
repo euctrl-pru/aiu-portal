@@ -2,9 +2,10 @@
 
 "Export to CSV daily airport arrival ATFM delays.
 
-Usage: export_apt_dly [-h] WEF TIL
+Usage: export_apt_dly [-h] [-o DIR] WEF TIL
 
   -h --help             show this help text
+  -o DIR                directory where to save the output [default: .]
 
 Arguments:
   WEF  date from when to export data, format YYYY-MM-DD
@@ -20,9 +21,12 @@ suppressWarnings(suppressMessages(library(lubridate)))
 suppressWarnings(suppressMessages(library('ROracle')))
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(readr)))
+suppressWarnings(suppressMessages(library(purrr)))
 
 wef <- ymd(opts$WEF, quiet = TRUE)
 til <- ymd(opts$TIL, quiet = TRUE)
+
+out_dir <- opts$o
 
 
 if (is.na(wef) || is.na(til)) {
@@ -33,6 +37,13 @@ if (is.na(wef) || is.na(til)) {
   til <- format(til, "%Y-%m-%d")
 }
 
+if (!fs::dir_exists(out_dir)) {
+  cat("Error: non-existing DIR", "\n")
+  cat(doc, "\n")
+  q(status = -1)
+}
+
+out_dir <- fs::path_abs(out_dir)
 
 
 usr <- Sys.getenv("PRU_DEV_USR")
@@ -96,13 +107,13 @@ query <- sqlInterpolate(con, sqlq, WEF = wef, TIL = til)
 flt <- dbSendQuery(con, query)
 data <- fetch(flt, n = -1) 
 
-dbDisconnect(con)
+DBI::dbDisconnect(con)
 Sys.unsetenv("TZ")
 Sys.unsetenv("ORA_SDTZ")
 
 s <- function(df) {
   y <- unique(df$YEAR)
-  write_csv(df, here::here("static", "download", "csv", stringr::str_c("apt_dly_", y, ".csv.bz2")), na = "")
+  write_csv(df, paste0(out_dir, "/", stringr::str_c("apt_dly_", y, ".csv.bz2")), na = "")
   df
 }
 
