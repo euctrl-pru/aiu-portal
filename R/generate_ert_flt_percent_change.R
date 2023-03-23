@@ -2,10 +2,11 @@
 
 "Generate yearly en-route ATFM traffic (and % change) per ANSP (AUA based) for graphics.
 
-Usage: generate_ert_flt_percent_change [-h] TIL
+Usage: generate_ert_flt_percent_change [-h] [-o DIR] TIL
 
 -h --help             show this help text
 TIL                   year, month and day (YYYY-MM-DD, i.e. 2017-08-01) till when compute (non inclusive)
+  -o DIR              directory where to save the output [default: .]
 " -> doc
 
 suppressMessages(library(docopt))
@@ -15,9 +16,11 @@ opts <- docopt(doc)
 
 suppressMessages(library(lubridate))
 suppressMessages(library(purrr))
+suppressWarnings(suppressMessages(library(fs)))
 
 safe_ymd <- safely(ymd)
 til <- safe_ymd(opts$TIL, quiet = TRUE)
+out_dir <- opts$o
 
 if (is.null(til$result)) {
   cat("Error: invalid TIL, it must be in YYYY-MM-DD format", "\n")
@@ -31,6 +34,14 @@ if (is.null(til$result)) {
   curr_year <- year(curr)
 }
 
+if (!fs::dir_exists(out_dir)) {
+  cat("Error: non-existing DIR", "\n")
+  cat(doc, "\n")
+  q(status = -1)
+}
+
+out_dir <- fs::path_abs(out_dir)
+
 
 
 suppressMessages(library(dplyr))
@@ -41,7 +52,7 @@ suppressMessages(library(tidyr))
 
 ftype <- "ansp"
 csvs <- list.files(
-  here::here("static", "download", "csv"),
+  out_dir,
   pattern = stringr::str_c("ert_dly_", ftype,"_\\d{4}\\.csv\\.bz2"),
   full.names = TRUE)
 
@@ -96,7 +107,7 @@ all <- all %>%
   ungroup()
 
 all %>%
-  # IMPORTANT because order matters for percentance change
+  # IMPORTANT because order matters for percentage change
   arrange(entity, YEAR) %>%
   spread(YEAR, flt) %>% 
   filter(!entity %in% c("NAV Portugal")) %>% 
