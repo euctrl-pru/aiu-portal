@@ -6,7 +6,7 @@ Usage: generate_ert_flt_percent_change [-h] [-o DIR] TIL
 
 -h --help             show this help text
 TIL                   year, month and day (YYYY-MM-DD, i.e. 2017-08-01) till when compute (non inclusive)
-  -o DIR              directory where to save the output [default: .]
+-o DIR                directory where to save the output [default: .]
 " -> doc
 
 suppressMessages(library(docopt))
