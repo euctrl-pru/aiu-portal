@@ -182,7 +182,9 @@ For feedback or questions please contact us at:
 Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
 -->
 
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029" target="_blank"><img class="card-img-top" src="/images/landing/fcst.png" alt=""><div class="card-body"><h5 class="card-title">Forecast Update 2023-29</h5></a><small><p class="card-text">Check out the Spring 2023 forecast which is an update of the 7-year forecast published in Autumn 2022.</p></small></div></div></div>
+<div class="carousel-item active"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/impact-strikes-european-aviation" target="_blank"><img class="card-img-top" src="/images/landing/ectl_strikes.png" alt=""><div class="card-body"><h5 class="card-title">Impact of strikes on aviation</h5></a><small><p class="card-text">Read the new EUROCONTROL paper on the impact of strikes experienced by aviation so far this year.</p></small></div></div></div>
+
+<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029" target="_blank"><img class="card-img-top" src="/images/landing/fcst.png" alt=""><div class="card-body"><h5 class="card-title">Forecast Update 2023-29</h5></a><small><p class="card-text">Check out the Spring 2023 forecast which is an update of the 7-year forecast published in Autumn 2022.</p></small></div></div></div>
 
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://ansperformance.eu/economics/cba/"><img class="card-img-top" src="/images/landing/std_inputs.png" alt=""><div class="card-body"><h5 class="card-title">Inputs for Economic Analyses</h5></a><small><p class="card-text">
 The EUROCONTROL Standard Inputs for Economic Analyses is now fully online</p></small></div></div></div>
