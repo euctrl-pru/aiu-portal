@@ -35,6 +35,7 @@ suppressWarnings(suppressMessages(library(fr24gu)))
 suppressWarnings(suppressMessages(library(stringr)))
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(readr)))
+suppressWarnings(suppressMessages(library(fs)))
 
 safe_ymd <- safely(ymd)
 wef <- safe_ymd(opts$WEF, quiet = TRUE)

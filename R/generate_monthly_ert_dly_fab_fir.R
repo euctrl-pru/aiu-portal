@@ -2,15 +2,17 @@
 
 "Generate monthly en-route ATFM delay per FAB (FIR based) for graphics.
 
-Usage: generate_ert_dly_fab_fir [-h]
+Usage: generate_ert_dly_fab_fir [-h] [-o DIR]
 
 -h --help             show this help text
+-o DIR              directory where to save the output [default: .]
 " -> doc
 
 suppressMessages(library(docopt))
 
 # retrieve the command-line arguments
 opts <- docopt(doc)
+out_dir <- opts$o
 
 
 suppressMessages(library(readr))
@@ -18,10 +20,21 @@ suppressMessages(library(stringr))
 suppressMessages(library(tidyr))
 suppressMessages(library(purrr))
 suppressMessages(library(dplyr))
+suppressWarnings(suppressMessages(library(fs)))
+
+
+if (!fs::dir_exists(out_dir)) {
+  cat("Error: non-existing DIR", "\n")
+  cat(doc, "\n")
+  q(status = -1)
+}
+
+out_dir <- fs::path_abs(out_dir)
+
 
 ftype <- "fir"
 csvs <- list.files(
-  here::here("static", "download", "csv"),
+  out_dir,
   pattern = str_c("ert_dly_", ftype,"_\\d{4}\\.csv\\.bz2"),
   full.names = TRUE)
 

@@ -22,6 +22,7 @@ suppressWarnings(suppressMessages(library('ROracle')))
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(purrr)))
+suppressWarnings(suppressMessages(library(fs)))
 
 wef <- ymd(opts$WEF, quiet = TRUE)
 til <- ymd(opts$TIL, quiet = TRUE)

@@ -1,8 +1,11 @@
 ---
-title: EUROCONTROL Think/Analysis Papers
+title: EUROCONTROL Think/Analysis Papers and Aviation Trends
 date: '2021-03-01'
 tags:  Think Paper
 ---
+
+## 2023
+* [EUROCONTROL Aviation Trends #1 (18 Apr 2023) - Impact of strikes on European Aviation][AT1]
 
 ## 2022
 * [EUROCONTROL Analysis Paper #1 (31 Dec 2022) - 2022 – The year European aviation bounced back, despite war & Omicron/COVID][AP1]
@@ -54,3 +57,4 @@ tags:  Think Paper
 [TP18]: https://www.eurocontrol.int/publication/eurocontrol-think-paper-18-one-size-fits-all-common-unit-rate-europe "EUROCONTROL Think Paper #18 - One size fits all - A common unit rate for Europe?"
 [TP19]: https://www.eurocontrol.int/publication/eurocontrol-think-paper-19-atc-mobility-and-capacity-shortfalls "EUROCONTROL Think Paper #19 - ATC Mobility and Capacity Shortfalls"
 [AP1]: https://www.eurocontrol.int/publication/eurocontrol-analysis-paper-2022-year-european-aviation-bounced-back "EUROCONTROL Analysis Paper #1 - 2022 – The year European aviation bounced back, despite war & Omicron/COVID"
+[AT1]: https://www.eurocontrol.int/publication/impact-strikes-european-aviation "EUROCONTROL Aviation Trends #1 - Impact of strikes on European Aviation"

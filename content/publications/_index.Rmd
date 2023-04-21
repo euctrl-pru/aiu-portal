@@ -77,8 +77,8 @@ layout: frontpage
 </div>
 
 <div class="card"><a href="/publications/ectl/think/">
-  <img class="card-img-top" src="/images/ectl_tp.jpg" alt="EUROCONTROL Think/Analysis Papers">
-  <div class="card-body"><h5 class="card-title">EUROCONTROL Think/Analysis Papers</h5></a><p class="card-text"></p>
+  <img class="card-img-top" src="/images/ectl_tp.jpg" alt="EUROCONTROL Think/Analysis Papers & Aviation Trends">
+  <div class="card-body"><h5 class="card-title">EUROCONTROL Think/Analysis Papers & Aviation Trends</h5></a><p class="card-text"></p>
   </div>
 </div>
 

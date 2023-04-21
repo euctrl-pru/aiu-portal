@@ -2,26 +2,33 @@
 title: "ace-factsheets"
 output: html_document
 ---
+<style type="text/css">
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 170%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    border: 0;
+}
+</style>
 
 Test 
 
 <div class="flex-container mt-2">
 
-<div class="row align-items-start">
-<div class="col-md-12" >
-<div class="row align-items-start">
-<!-- <button onclick="myFunction()">test pdf generation</button> -->
-<div id="ansp-fsheet">
-<iframe title="PBI 2020 Onedrive database" width="1200" height="2200" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
-</div><!-- closes iframe container -->
-</div><!-- closes secondary row-->
-</div><!-- closes col 12-->
+<div class="resp-container">
 
-</div><!-- closes row -->
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+
+</div><!-- closes iframe container -->
+      
+
 </div><!-- closes container -->
 
-<script>
-function myFunction() {
-
-}
-</script>
