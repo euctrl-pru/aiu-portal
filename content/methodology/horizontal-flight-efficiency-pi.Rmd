@@ -132,7 +132,7 @@ Table: (\#tab:acronyms) Acronyms and terminology
 | KES   | Key performance Environment indicator based on shortest constrained route available for flight planning |
 | KPA   | Key Performance Area |
 | KPI   | Key Performance Indicator |
-| LOBT  | Last Off-Block Time |
+| LOBT  | Last received Off-Block Time |
 | NM    | Network Manager |
 | PRR   | Performance Review Report |
 | PRU   | Performance Review Unit |
