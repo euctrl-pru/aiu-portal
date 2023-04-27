@@ -59,22 +59,22 @@ date: "2018-02-07T11:26:51+01:00"
 <div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
 
 <div class="col">
-  <p class="Scorecard_subt">total flights</p>
+  <p class="Scorecard_subt">Total flights</p>
   <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;"></p> 
 </div>
 
 <div class="col">
-  <p class="Scorecard_subt">avg. daily</p>
+  <p class="Scorecard_subt">Avg. daily flights</p>
   <p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 
 <div class="col-2" ; style="margin: 0px; ">
-  <p class="Scorecard_subt">vs 2019</p>
+  <p class="Scorecard_subt">Vs 2019</p>
   <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 
 <div class="col-2" ; style="margin: 0px;  ">
-  <p class="Scorecard_subt">vs 2021</p>
+  <p class="Scorecard_subt">Vs 2021</p>
   <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 
@@ -148,7 +148,7 @@ last_day_text = last_day.toDateString();
      dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year
 
 // Update scorecard values
-  document.getElementById("y2d_day_text").innerHTML =  "Latest Network traffic situation - " + y2d_day_text; 
+  document.getElementById("y2d_day_text").innerHTML =  "Latest network traffic situation: " + y2d_day_text; 
   document.getElementById("y2d_traffic").innerHTML = String(y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
   document.getElementById("avg_y2d_traffic").innerHTML = String(avg_y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
   document.getElementById("dif_y2d_2019").innerHTML = String(dif_y2d_2019) + '%' ;
@@ -253,7 +253,7 @@ Learn about the PRC's strategy to support the transformation process in ANS.</p>
 <div class="container text-center">
 {{% subscribe-button %}}
 
-[Read our Privacy protection statement](/about/privacy/)
+[Read our privacy protection statement](/about/privacy/)
 </div>
 
 [ectl_daily]: https://www.eurocontrol.int/Economics/DailyTrafficVariation "Daily traffic updates"
