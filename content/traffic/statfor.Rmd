@@ -36,7 +36,9 @@ date: '2020-05-15'
 }
 </style>
 
-Welcome to the EUROCONTROL traffic forecasts by the Aviation Intelligence Unit (STATFOR). The visual below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights. The data includes actual traffic data up to 2022 and forecasts for the following years. The graph shows the forecast for different scenarios, including high, base, and low scenarios, as well as the actual traffic data for 2019. The data is presented for various Traffic Zones (TZ) across Europe, and the graph allows for easy comparison between scenarios and between different TZs. Select the desired Traffic Zone (TZ) from the drop-down menu and hover over the graph to view detailed information for each data point.
+EUROCONTROL works with stakeholders to produce forecasts of future network traffic.
+
+The figure below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights (Edition March 2023). The information is available by traffic zone (TZ) and includes actual traffic up to 2022 and different forecast scenarios (high, base, low) up to 2029. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Embedding statfor_forecasts_2023 -->
 <div class="plotly-container">
@@ -205,7 +207,7 @@ for (i in 1:length(tz_values)) {
 
 # Create updatemenu buttons for selecting Traffic Zones
 updatemenus = list(list(
-  x = 0.95,
+  x = 0.92,
   y = 1.10,
   active = 0,
   buttons = lapply(1:length(tz_values), function(i) {
@@ -239,7 +241,7 @@ plot <-
       spikethickness = 1,  # Set the spike line thickness
       spikecolor = "#999999"  # Set the spike line color
     ),
-    yaxis = list(title = "Millions in flights"),
+    yaxis = list(title = "Flights (Millions)"),
     updatemenus = updatemenus,
     hovermode = "x",  # Set hover mode to display information for all points with the same x value
     legend = list(
@@ -280,17 +282,17 @@ plot
 
 </div>
 
+<br>
 
-### STATFOR Services
+### Learn more about EUROCONTROL forecasts and STATFOR services
 
-The various services provided by STATFOR can be found here. For additional information and services, see the about below.
-
+<br>
 <div class="container">
 <div class="row">
 <div class="card-deck">
 <div class="card"><a href="https://www.eurocontrol.int/dashboard/statfor-interactive-dashboard" target="_blank">
   <img class="card-img-top" src="/images/traff/ectl_statfor_dash.jpg" alt="STATFOR interactive dashboard">
-  <div class="card-body"><h4 class="card-title">Data and Interactive Dashboards</h4><p class="card-text">View the data and interactive dashboards by STATFOR to gain insights in flight forecasting <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  <div class="card-body"><h4 class="card-title">Data and Interactive Dashboards</h4><p class="card-text">View the data and interactive dashboards by STATFOR <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/forecasting#deliverables" target="_blank">
@@ -300,7 +302,7 @@ The various services provided by STATFOR can be found here. For additional infor
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteForecasts.html">
   <img class="card-img-top" src="/images/traff/ectl_statfor_sufc.jpg" alt="Latest STATFOR reports">
-  <div class="card-body"><h4 class="card-title">Service Unit Forecasting</h4><p class="card-text"> View the interactive en-route Service Unit forecasts by STATFOR <i class='fas fa-xs fa-external-link-alt'></i> </p></a>
+  <div class="card-body"><h4 class="card-title">Service Unit Forecasting</h4><p class="card-text"> View the interactive en-route Service Unit forecasts <i class='fas fa-xs fa-external-link-alt'></i> </p></a>
   </div>
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/forecasting" target="_blank">
