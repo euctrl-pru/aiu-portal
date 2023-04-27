@@ -218,8 +218,8 @@ for (i in 1:length(tz_values)) {
 
 # Create updatemenu buttons for selecting Traffic Zones
 updatemenus = list(list(
-  x = 0.92,
-  y = 1.10,
+  x = 0.15,
+  y = 1.11,
   active = 0,
   buttons = lapply(1:length(tz_values), function(i) {
     list(method = "update",
