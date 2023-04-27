@@ -1,5 +1,5 @@
 ---
-title: EUROCONTROL traffic forecasts
+title: EUROCONTROL Traffic Forecasts
 date: '2020-05-15'
 ---
 <script>
@@ -19,39 +19,297 @@ date: '2020-05-15'
     padding-top: 60.0%;
 }
 
+.plotly-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 .resp-iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 100%;
     border: 0;
 }
 </style>
 
+Welcome to the EUROCONTROL traffic forecasts by the Aviation Intelligence Unit (STATFOR). The visual below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights. The data includes actual traffic data up to 2022 and forecasts for the following years. The graph shows the forecast for different scenarios, including high, base, and low scenarios, as well as the actual traffic data for 2019. The data is presented for various Traffic Zones (TZ) across Europe, and the graph allows for easy comparison between scenarios and between different TZs. Select the desired Traffic Zone (TZ) from the drop-down menu and hover over the graph to view detailed information for each data point.
+
+<!-- Embedding statfor_forecasts_2023 -->
+<div class="plotly-container">
+```{r, echo=FALSE,warning = FALSE,message=FALSE}
+
+# Load required libraries
+library(plotly)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(htmlwidgets)
+
+# Read and process data
+data <- read_csv("eurocontrol-forecast-2023-2029-traffic-table-march23.csv",show_col_types = FALSE)
+
+# Convert the data to long format
+data <- data %>%
+  pivot_longer(cols = c('2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029'),
+               names_to = "Yr",
+               values_to = "mvts") %>%
+  mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
+  transmute(
+    Rank = scenario,
+    TZ = ifelse(country=='Bosnia and Herzego',"Bosnia and Herzegovina", country),
+    DAIO = "T", 
+    Yr = as.integer(Yr),
+    mvts = mvts)
+
+# Read CSV data and select required columns
+filtered_data <- data %>%
+  filter(DAIO == "T") %>%
+  select(Rank, TZ, Yr, mvts)
+
+# Set maximum year for actual data
+actual_max_year <- 2022
+
+# Filter actual data
+filtered_data_actual <- filtered_data %>%
+  filter(Yr <= actual_max_year, Rank == "Base") %>%
+  mutate(Rank = "Actual")
+
+# Filter forecast data
+filtered_data <- filtered_data %>%
+  filter(Yr >= actual_max_year)
+
+# Combine actual and forecast data
+data <- filtered_data %>%
+  rbind(filtered_data_actual) %>%
+  arrange(Yr, TZ, Rank)
+
+# Create data frame for horizontal reference lines (2019 actual data)
+reference_data <- data %>%
+  filter(Yr == 2019, Rank == "Actual") %>%
+  mutate(Rank = "Reference")
+
+# Replicate reference_data for each year in the forecast period
+reference_data <- reference_data %>%
+  uncount(length(unique(data$Yr))) %>%
+  group_by(TZ) %>%
+  mutate(Yr = unique(data$Yr)) %>%
+  ungroup()
+
+# Add reference data to the main data frame
+data <- data %>%
+  rbind(reference_data) %>%
+  arrange(Yr, TZ, Rank)
+
+# Identify complete Traffic Zones (with all required data points)
+complete_tz <- data %>%
+  select(Rank, TZ) %>%
+  group_by(TZ) %>%
+  ungroup() %>% distinct() %>% arrange(TZ) %>% group_by(TZ) %>%
+  summarize(c = n()) %>% filter(c == 5) %>% pull(TZ)
+
+# Filter data for complete Traffic Zones and years greater than or equal to 2019
+data <- data %>%
+  filter(TZ %in% complete_tz, Yr >= 2019)
+
+# Calculate percentage change in mvts relative to 2019 for each data point
+data <- data %>%
+  group_by(TZ) %>%
+  mutate(relative_pct = ifelse(Rank == "Reference", NA,
+                               mvts / (mvts[Yr == 2019 & Rank == "Actual"]) * 100)) %>%
+  ungroup()
+
+# Get sorted unique Traffic Zone values
+tz_values <- sort(unique(data$TZ))
+
+# Modify the order of tz_values so that "NM Area" is the first value
+nm_area_index <- which(tz_values == "NM Area")
+tz_values <- c(tz_values[nm_area_index], tz_values[-nm_area_index])
+
+# Add 2022 data points for high and low scenarios based on base scenario
+base_scenario_2022 <- data %>%
+  filter(Yr == 2022, Rank == "Base")
+
+high_scenario_2022 <- base_scenario_2022 %>%
+  mutate(Rank = "High")
+
+low_scenario_2022 <- base_scenario_2022 %>%
+  mutate(Rank = "Low")
+
+data <- data %>%
+  rbind(high_scenario_2022, low_scenario_2022) %>%
+  arrange(Yr, TZ, Rank)
+
+
+# Initialize plot
+plot <- plot_ly()
+
+# Add traces to the plot for each Traffic Zone and scenario
+for (i in 1:length(tz_values)) {
+  plot_data <- filter(data, TZ == tz_values[i])
+  for (j in unique(plot_data$Rank)) {
+    plot_data_rank <- plot_data %>% filter(Rank == j)
+    
+    # Define scenario labels and line colors
+    new_name <- switch(j,
+                       "High" = "High scenario",
+                       "Base" = "Base scenario",
+                       "Low" = "Low scenario",
+                       "Actual" = "Actual",
+                       "Reference" = "2019 levels"
+    )
+    
+    
+    line_color <- switch(j,
+                         "High" = "#a9d41c",
+                         "Base" = "#2990ea",
+                         "Low" = "#ffc000",
+                         "Actual" = "#000000",
+                         "Reference" = "black"
+    )
+    
+    line_dash <- ifelse(j == "Reference", "dash", "solid")
+    
+    # Add trace to the plot for each scenario
+    plot <- plot %>% add_trace(
+      data = plot_data_rank,
+      x = ~ Yr,
+      y = ~ (mvts / 1000000)*1000,
+      color = ~ Rank,
+      colors = c(
+        "Actual" = "#000000",
+        "High" = "#a9d41c",
+        "Base" = "#2990ea",
+        "Low" = "#ffc000",
+        "Reference" = "black"
+      ),
+      type = "scatter",
+      visible = ifelse(i == 1, TRUE, FALSE),  # Set the initial visibility
+      mode = ifelse(j == "Reference", "lines", "lines+markers"),
+      line = list(shape = "spline", dash = line_dash, color = line_color),
+      marker = ifelse(j == "Reference", list(size = 0), list(size = 6)),
+      hoverinfo = "text",
+      hovertemplate = ifelse(j == "Reference",
+                             paste0("2019 levels: <b>%{y:.1f} million flights</b> </b><extra></extra>"),
+                             paste0(new_name, ": <b>%{y:.1f}",
+                                    " million flights - %{customdata:.0f}% of 2019 </b><extra></extra>")),
+      customdata = ~ relative_pct,
+      showlegend = ifelse(j == "Reference", TRUE, TRUE),
+      name = new_name
+    )
+  }
+}
+
+# Create updatemenu buttons for selecting Traffic Zones
+updatemenus = list(list(
+  x = 0.95,
+  y = 1.10,
+  active = 0,
+  buttons = lapply(1:length(tz_values), function(i) {
+    list(method = "update",
+         args = list(
+           list(visible = replace(
+             rep(FALSE, length(tz_values) * 5), seq((i - 1) * 5 + 1, i * 5, by = 1), TRUE
+           )),
+           list(title = list(
+             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
+           ))
+         ),
+         label = tz_values[i])
+  })
+))
+
+# Update the layout
+plot <-
+  plot %>% layout(
+    title = list(
+      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
+    ),
+    xaxis = list(
+      title = "",
+      tick0 = 2019,
+      dtick = 1,
+      showspikes = TRUE,  # Show spikes on hover
+      spikemode = "across",  # Show a vertical line across all subplots
+      spikesnap = "cursor",  # Snap the spike line to the data point or cursor
+      spikedash = "dash",  # Set the spike line style to dashed
+      spikethickness = 1,  # Set the spike line thickness
+      spikecolor = "#999999"  # Set the spike line color
+    ),
+    yaxis = list(title = "Millions in flights"),
+    updatemenus = updatemenus,
+    hovermode = "x",  # Set hover mode to display information for all points with the same x value
+    legend = list(
+      x = 0.5,
+      y = -0.1,
+      xanchor = "center",
+      yanchor = "top",
+      orientation = "h",
+      font = list(size = 12, color = "black", family = "", weight = "bold")
+    ),
+    width = "1150"
+  )
+
+
+# Configure the plot to show only the screenshot option
+plot <-
+  plot %>% config(
+    displayModeBar = "hover",
+    modeBarButtonsToRemove = list(
+      "zoom2d",
+      "pan2d",
+      "select2d",
+      "lasso2d",
+      "zoomIn2d",
+      "zoomOut2d",
+      "autoScale2d",
+      "resetScale2d",
+      "toggleSpikelines",
+      "hoverClosestCartesian",
+      "hoverCompareCartesian",
+      "sendDataToCloud"
+    )
+  )
+
+# Render and save the plot
+plot
+```
+
+</div>
+
+
+### STATFOR Services
+
+The various services provided by STATFOR can be found here. For additional information and services, see the about below.
+
 <div class="container">
 <div class="row">
 <div class="card-deck">
-<div class="card"><a href="https://www.eurocontrol.int/forecasting" target="_blank">
-  <img class="card-img-top" src="/images/traff/ectl_statfor_web.jpg" alt="STATFOR web page">
-  <div class="card-body"><h4 class="card-title">Get to know STATFOR!</h4><p class="card-text">Click here to learn more about STATFOR! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+<div class="card"><a href="https://www.eurocontrol.int/dashboard/statfor-interactive-dashboard" target="_blank">
+  <img class="card-img-top" src="/images/traff/ectl_statfor_dash.jpg" alt="STATFOR interactive dashboard">
+  <div class="card-body"><h4 class="card-title">Data and Interactive Dashboards</h4><p class="card-text">View the data and interactive dashboards by STATFOR to gain insights in flight forecasting <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/forecasting#deliverables" target="_blank">
   <img class="card-img-top" src="/images/traff/ectl_statfor_del.jpg" alt="Latest STATFOR reports">
-  <div class="card-body"><h4 class="card-title">STATFOR reports!</h4><p class="card-text">Click to view the latest STATFOR reports <i class='fas fa-xs fa-external-link-alt'></i></p></a>
-  </div>
-</div>
-<div class="card"><a href="https://www.eurocontrol.int/dashboard/statfor-interactive-dashboard" target="_blank">
-  <img class="card-img-top" src="/images/traff/ectl_statfor_dash.jpg" alt="STATFOR interactive dashboard">
-  <div class="card-body"><h4 class="card-title">Show me the data!</h4><p class="card-text">Click to explore the STATFOR interactive dashboard <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  <div class="card-body"><h4 class="card-title">Forecast reports</h4><p class="card-text"> View the latest STATFOR reports <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteForecasts.html">
   <img class="card-img-top" src="/images/traff/ectl_statfor_sufc.jpg" alt="Latest STATFOR reports">
-  <div class="card-body"><h4 class="card-title">STATFOR Service Unit forecast!</h4><p class="card-text">Click to view the interactive en-route Service Unit forecast</p></a>
+  <div class="card-body"><h4 class="card-title">Service Unit Forecasting</h4><p class="card-text"> View the interactive en-route Service Unit forecasts by STATFOR <i class='fas fa-xs fa-external-link-alt'></i> </p></a>
   </div>
 </div>
+<div class="card"><a href="https://www.eurocontrol.int/forecasting" target="_blank">
+  <img class="card-img-top" src="/images/traff/ectl_statfor_web.jpg" alt="STATFOR web page">
+  <div class="card-body"><h4 class="card-title">About</h4><p class="card-text">Learn more about the forecasting done by STATFOR at EUROCONTROL <i class='fas fa-xs fa-external-link-alt'></i></p></a>
 </div>
 </div>
 </div>
+</div>
+</div>
+
+
