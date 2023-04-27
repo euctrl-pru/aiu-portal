@@ -297,7 +297,7 @@ plot
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/forecasting#deliverables" target="_blank">
   <img class="card-img-top" src="/images/traff/ectl_statfor_del.jpg" alt="Latest STATFOR reports">
-  <div class="card-body"><h4 class="card-title">Forecast reports</h4><p class="card-text"> View the latest STATFOR reports <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  <div class="card-body"><h4 class="card-title">Forecast Reports</h4><p class="card-text"> View the latest STATFOR reports <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 <div class="card"><a href="https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteForecasts.html">
