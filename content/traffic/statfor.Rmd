@@ -7,6 +7,17 @@ date: '2020-05-15'
       obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
   </script>
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var graphDiv = document.querySelector('.plotly-container');
+        graphDiv.addEventListener('wheel', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }, { passive: false });
+    });
+</script>
+
 <style type="text/css">
 .img-responsive {
     margin: 0 auto;
