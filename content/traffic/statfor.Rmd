@@ -228,7 +228,7 @@ updatemenus = list(list(
              rep(FALSE, length(tz_values) * 5), seq((i - 1) * 5 + 1, i * 5, by = 1), TRUE
            )),
            list(title = list(
-             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
+             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
            ))
          ),
          label = tz_values[i])
