@@ -177,7 +177,7 @@ For feedback or questions please contact us at:
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="https://fsr.eui.eu/publications/?handle=1814/75525" target="_blank"><img class="card-img-top" src="/images/landing/prc_tss1.png" alt=""><div class="card-body"><h5 class="card-title">ATM transformation flagships</h5></a><small><p class="card-text">
+<div class="carousel-item active"><div class="card bg-light border-0"><a href="/publications/prc/news/2023_05_16_prc_news/"><img class="card-img-top" src="/images/landing/prc_tss1.png" alt=""><div class="card-body"><h5 class="card-title">ATM transformation flagships</h5></a><small><p class="card-text">
 Read the policy brief from the Florence School of Regulation to learn about the workshop takeaways.</p></small></div></div></div>
 
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/impact-strikes-european-aviation" target="_blank"><img class="card-img-top" src="/images/landing/ectl_strikes.png" alt=""><div class="card-body"><h5 class="card-title">Impact of strikes on aviation</h5></a><small><p class="card-text">Read the new EUROCONTROL paper on the impact of strikes experienced by aviation so far this year.</p></small></div></div></div>
