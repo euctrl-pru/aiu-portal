@@ -49,7 +49,7 @@ date: '2020-05-15'
 
 EUROCONTROL works with stakeholders to produce forecasts of future network traffic.
 
-The figure below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights (Edition March 2023). The information is available by traffic zone (TZ) and includes actual traffic up to 2022 and different forecast scenarios (high, base, low) up to 2029. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
+The figure below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights (Edition March 2023). The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2022 and different forecast scenarios (high, base, low) up to 2029. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Embedding statfor_forecasts_2023 -->
 <div class="plotly-container">
@@ -63,18 +63,14 @@ library(tidyr)
 library(htmlwidgets)
 
 # Read and process data
-data <- read_csv("eurocontrol-forecast-2023-2029-traffic-table-march23.csv",show_col_types = FALSE)
+data <- read_csv("eurocontrol-forecast-2023-2029-traffic-table-march23-unrounded.csv",show_col_types = FALSE)
 
-# Convert the data to long format
 data <- data %>%
-  pivot_longer(cols = c('2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029'),
-               names_to = "Yr",
-               values_to = "mvts") %>%
   mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
   transmute(
-    Rank = scenario,
-    TZ = ifelse(country=='Bosnia and Herzego',"Bosnia and Herzegovina", country),
-    DAIO = "T", 
+    Rank = Rank,
+    TZ = ifelse(TZ=='Bosnia and Herzego',"Bosnia and Herzegovina", TZ),
+    DAIO = DAIO, 
     Yr = as.integer(Yr),
     mvts = mvts)
 
@@ -164,7 +160,17 @@ plot <- plot_ly()
 for (i in 1:length(tz_values)) {
   plot_data <- filter(data, TZ == tz_values[i])
   for (j in unique(plot_data$Rank)) {
-    plot_data_rank <- plot_data %>% filter(Rank == j)
+    plot_data_rank <- plot_data %>% filter(Rank == j) %>% 
+      mutate(
+        mvts_millions = mvts/1000000,
+        mvts_thousands = mvts/1000,
+        hovertext = case_when(
+          mvts >= 1e6 ~ sprintf("%.1fM flights", mvts_millions),
+          mvts < 1e6 ~ sprintf("%.1fK flights", mvts_thousands)
+        )
+      )  
+    
+
     
     # Define scenario labels and line colors
     new_name <- switch(j,
@@ -190,7 +196,8 @@ for (i in 1:length(tz_values)) {
     plot <- plot %>% add_trace(
       data = plot_data_rank,
       x = ~ Yr,
-      y = ~ (mvts / 1000000)*1000,
+      y = ~ mvts,
+      text = ~ hovertext,
       color = ~ Rank,
       colors = c(
         "Actual" = "#000000",
@@ -206,9 +213,8 @@ for (i in 1:length(tz_values)) {
       marker = ifelse(j == "Reference", list(size = 0), list(size = 6)),
       hoverinfo = "text",
       hovertemplate = ifelse(j == "Reference",
-                             paste0("2019 levels: <b>%{y:.1f} million flights</b> </b><extra></extra>"),
-                             paste0(new_name, ": <b>%{y:.1f}",
-                                    " million flights - %{customdata:.0f}% of 2019 </b><extra></extra>")),
+                       paste0("2019 levels: <b>%{text}</b><extra></extra>"),
+                       paste0(new_name, ": <b>%{text} - %{customdata:.0f}% of 2019</b><extra></extra>")),
       customdata = ~ relative_pct,
       showlegend = ifelse(j == "Reference", TRUE, TRUE),
       name = new_name
@@ -228,7 +234,7 @@ updatemenus = list(list(
              rep(FALSE, length(tz_values) * 5), seq((i - 1) * 5 + 1, i * 5, by = 1), TRUE
            )),
            list(title = list(
-             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
+             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
            ))
          ),
          label = tz_values[i])
@@ -239,7 +245,7 @@ updatemenus = list(list(
 plot <-
   plot %>% layout(
     title = list(
-      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements, in millions of flights</span>")
+      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
     ),
     xaxis = list(
       title = "",
@@ -252,7 +258,7 @@ plot <-
       spikethickness = 1,  # Set the spike line thickness
       spikecolor = "#999999"  # Set the spike line color
     ),
-    yaxis = list(title = "Flights (Millions)"),
+    yaxis = list(title = "Flights"),
     updatemenus = updatemenus,
     hovermode = "x",  # Set hover mode to display information for all points with the same x value
     legend = list(
@@ -270,9 +276,11 @@ plot <-
 # Configure the plot to show only the screenshot option
 plot <-
   plot %>% config(
+    displayLogo = FALSE,
     displayModeBar = "hover",
     modeBarButtonsToRemove = list(
       "zoom2d",
+      "logo",
       "pan2d",
       "select2d",
       "lasso2d",
@@ -287,11 +295,17 @@ plot <-
     )
   )
 
-# Render and save the plot
+# Render and save the plots 
 plot
 ```
 
 </div>
+
+<br>
+
+For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2023-2029 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029).
+
+Note: The traffic zone 'Spain' is the aggregated zone composed of 'Spain-Canaries' and 'Spain-Continental'.
 
 <br>
 
