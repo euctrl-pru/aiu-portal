@@ -1,5 +1,5 @@
 ---
-title: AFIL - Air filled (flight plan)
+title: AFIL - Air filed (flight plan)
 slug: afil
 ---
 

@@ -323,7 +323,7 @@ extract_dly_fir <- function(con, wef, til) {
   
   df_fir <- t1 |>
     union_all(t2) |>
-    union_all(t2) |>
+    union_all(t3) |>
     collect()
   
   df_fir

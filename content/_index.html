@@ -133,7 +133,7 @@ Avg. daily flights
 // Calculate datestrings
 last_day_text = last_day.toDateString();
   last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11)
-  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 - " + last_day_text : "01 Jan - " + last_day_text
+  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text
 
 // Calculate traffic scorecard values
   y2d_traffic = my_view_traffic.getValue(0, 30);
@@ -179,11 +179,22 @@ What’s new?
 <br>
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
-<!--
-<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2022-consultation" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
-Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
--->
 <div class="carousel-item active">
+<div class="card bg-light border-0">
+<a href="/publications/prc/news/2023_05_16_prc_news/"><img class="card-img-top" src="/images/landing/prc_tss1.png" alt="">
+<div class="card-body">
+<h5 class="card-title">
+ATM transformation flagships
+</h5>
+</a><small>
+<p class="card-text">
+Read the policy brief from the Florence School of Regulation to learn about the workshop takeaways.
+</p>
+</small>
+</div>
+</div>
+</div>
+<div class="carousel-item">
 <div class="card bg-light border-0">
 <a href="https://www.eurocontrol.int/publication/impact-strikes-european-aviation" target="_blank"><img class="card-img-top" src="/images/landing/ectl_strikes.png" alt="">
 <div class="card-body">
@@ -214,43 +225,6 @@ Check out the Spring 2023 forecast which is an update of the 7-year forecast pub
 </div>
 </div>
 <div class="carousel-item">
-<div class="card bg-light border-0">
-<a href="https://ansperformance.eu/economics/cba/"><img class="card-img-top" src="/images/landing/std_inputs.png" alt="">
-<div class="card-body">
-<h5 class="card-title">
-Inputs for Economic Analyses
-</h5>
-</a><small>
-<p class="card-text">
-The EUROCONTROL Standard Inputs for Economic Analyses is now fully online
-</p>
-</small>
-</div>
-</div>
-</div>
-<div class="carousel-item">
-<div class="card bg-light border-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt="">
-<div class="card-body">
-<h5 class="card-title">
-European Aviation Overview
-</h5>
-</a><small>
-<p class="card-text">
-Read our EUROCONTROL aviation briefings on the latest trends in the European network.
-</p>
-</small>
-</div>
-</div>
-</div>
-<!--
-<div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
-Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
--->
-<!--
-<div class="carousel-item"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Punctuality performance</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
--->
-<div class="carousel-item">
 <div class="card border-0">
 <a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update">
 <div class="card-body">
@@ -259,12 +233,27 @@ Performance data update
 </h5>
 </a><small>
 <p class="card-text">
-March 2023 data <br> available for download now
+April 2023 data <br> available for download now
 </p>
 </small>
 </div>
 </div>
 </div>
+<!--
+<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
+Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
+-->
+<!--
+<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2022-consultation" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
+Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
+-->
+<!--
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
+Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
+-->
+<!--
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Punctuality performance</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
+-->
 </div>
 <p><a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
 <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></p>
