@@ -109,13 +109,13 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 [ASMA_o_xlsx]: https://www.eurocontrol.int/performance/data/download/xls/ASMA_Additional_Time_old.xlsx "ASMA (Excel)"
 [ASMAcsv]: /404/ "ASMA (CSV)"
 [ASMAmeta]: /reference/dataset/asma-additional-time/ "ASMA (Meta)"
-[ASMA_o_meta]: /reference/dataset/asma-additional-time_old/ "ASMA (Meta)"
+[ASMA_o_meta]: /reference/dataset/asma-additional-time-old/ "ASMA (Meta)"
 
 [TX-OUTxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-Out_Additional_Time.xlsx "TX-OUT (Excel)"
 [TX-OUT_o_xlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-Out_Additional_Time_old.xlsx "TX-OUT (Excel)"
 [TX-OUTcsv]:  /404/ "TX-OUT (CSV)"
 [TX-OUTmeta]: /reference/dataset/taxi-out-additional-time/ "TX-OUT (Meta)"
-[TX-OUT_o_meta]: /reference/dataset/taxi-out-additional-time_old/ "TX-OUT (Meta)"
+[TX-OUT_o_meta]: /reference/dataset/taxi-out-additional-time-old/ "TX-OUT (Meta)"
 
 [TX-INxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-In_Additional_Time.xlsx "TX-IN (Excel)"
 [TX-INcsv]:  /404/ "TX-IN (CSV)"
