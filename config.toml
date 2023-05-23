@@ -594,7 +594,7 @@ ignoreFiles = [
   #       does not work. So use 'OR site:' from the second on
   sitetosearch = "ansperformance.eu OR site:www.eurocontrol.int/prudata/dashboard/ OR site:www.eurocontrol.int/ACE/ OR site:www.eurocontrol.int/ServiceUnits/Dashboard/ OR site:www.eurocontrol.int/Economics/"
   privacyURL = "https://www.eurocontrol.int/info/privacy-and-website-terms-use"
-  MathJaxCDN = "https://mathjax.rstudio.com/latest"
+  MathJaxCDN = "https://cdn.jsdelivr.net/npm/mathjax@2"
 
   [params.logo]
     url = "images/EUROCONTROL-logo-standard-rgb.png"
