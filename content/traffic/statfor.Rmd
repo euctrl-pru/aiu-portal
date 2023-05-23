@@ -61,9 +61,10 @@ library(dplyr)
 library(readr)
 library(tidyr)
 library(htmlwidgets)
+library(here)
 
 # Read and process data
-data <- read_csv("eurocontrol-forecast-2023-2029-traffic-table-march23-unrounded.csv",show_col_types = FALSE)
+data <- read_csv(here("content", "traffic", "eurocontrol-forecast-2023-2029-traffic-table-march23-unrounded.csv"), show_col_types = FALSE)
 
 data <- data %>%
   mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
