@@ -218,17 +218,34 @@ Learn about the scope of the ACE analysis, the processes involved in the product
 #### ANSPs individual factsheets
 <div class="row align-items-start">
 <div class="col-sm-2">
+![](/images/eco/factsheet1_thmb.png)
+</div>
+
+<div class="col-sm-10">
+<div style="background-color: #F2F2F2; "  >
+
+<a href="/economics/ace/ansp-institutional/" target="_blank">**Institutional arrangements**</a>
+</div>
+Access information on individual ANSPs institution arrangements, legal status, corporate governance structure, scope of services, etc.
+</div>
+</div> <!-- closes secondary row -->
+
+<div class="row align-items-start">
+<div class="col-sm-2">
 ![](/images/eco/ace_partII_thmb.png)
 </div>
 
 <div class="col-sm-10">
 <div style="background-color: #F2F2F2; "  >
-<!-- <a href="https://www.eurocontrol.int/ACE/ACE-Reports/ACE2019.pdf" target="_blank"><i class="fas fa-download"></i></a> -->
-<a href="/economics/ace/ace-ansp-factsheets/" target="_blank">**Factsheets (Former Part II of the ACE Report)**</a>
+
+<a href="/economics/ace/ansp-ceff/" target="_blank">**ANSPs cost-effectiveness performance**</a>
 </div>
-Access information on ANSP institutional arrangements, corporate governance structure, historical developments of financial cost-effectiveness, comparison with peers and capital expenditures.
+Access information on individual ANSPs cost-effectiveness performance (2016-2021), comparison with peers and historical information on capital investments projects.
 </div>
 </div> <!-- closes secondary row -->
+
+
+
 </div> <!-- closes col-md-6 -->
 </div> <!-- closes main row -->
 <br>

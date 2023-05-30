@@ -1,0 +1,104 @@
+---
+title: "ANSPs institutional arrangements"
+output: html_document
+---
+
+```{r,  echo = FALSE, eval = TRUE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(readxl)
+library(jsonlite)
+
+ansp <- read_xlsx(
+  path  = here::here ("content","economics","ace_landing_page_data.xlsx"),
+  sheet = "ANSP",
+  range = cell_limits(c(1, 1), c(NA, NA))
+  )%>%
+  as_tibble()%>%
+  toJSON() 
+
+```
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-6 pl-0 text-justify">
+<br>
+
+This page presents qualitative information about the institutional arrangements and corporate governance structure for each ANSP participating to the ACE analysis.
+
+This page also includes information relating to the scope of services provided by the ANSP, the number of ACC, APP and TWR operational units where it is responsible to provide ATC services, as well as a map of the area controlled by the ANSP. Finally, this page also shows high level financial and operational data for each organisation.
+
+
+</div><!-- closes col -->
+  
+<div class="col-lg-6">
+<div class="row">
+<div class="col-8 float-left" id="ansp_list">
+<label class="mb-0" for="ansp">Select ANSP:</label>
+<select name="ansp" id="ansp" onchange="changeANSP(this.value)"></select>
+</div>
+
+<div class="col-4">
+<a id="mydownload" href="/library/ace/ansp-factsheets/Albcontrol.pdf" role="button" target="_blank"
+class="float-right pr-1 pl-1" style="padding-top:2px; padding-bottom:2px; color:black; border-radius:2px; border:1px solid #aaaaaa; background: linear-gradient(to bottom, #fcfcfc, #dddddd)" type="button" download>Download .pdf
+</a>
+</div>
+</div><!-- closes row -->
+
+<div>
+<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/Albcontrol.pdf" width="100%" height="850pt">
+</iframe>
+</div>
+</div><!-- closes col -->
+</div><!-- closes row -->
+</div><!-- closes container -->
+
+
+<script id="json_ansp" type="application/json">`r ansp`</script>
+
+<script type="text/javascript">
+var data = document.getElementById("json_ansp").textContent
+data = JSON.parse(data);
+
+var myselect = document.getElementById("ansp")
+var i = 0;
+
+for (const val of data)
+    {
+        var option = document.createElement("option");
+        option.value = data[i].ANSP_NAME;
+        option.text = data[i].ANSP_NAME;
+        myselect.appendChild(option);
+        myselect.style.border="1px solid #aaaaaa";
+        myselect.style.padding="2px";
+        myselect.style.borderRadius="2px";
+        myselect.style.background="linear-gradient(to bottom, #fcfcfc, #dddddd)";
+        <!-- myselect.style.padding-bottom="2px"; -->
+        <!-- console.log(data[i].ANSP_NAME); -->
+        i = i+1;
+    }
+
+  document.getElementById("ansp_list").appendChild(label).appendChild(select);
+  
+
+</script>
+
+<script type="text/javascript">
+
+function changeANSP (value) {
+
+		var element1 = document.getElementById("MyEmbed_div");
+	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
+
+		var element2 = document.getElementById("mydownload");
+		var myurl = '/library/ace/ansp-factsheets/'+value+'.pdf';
+	  element2.setAttribute("href", myurl) ;
+	  
+	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
+
+}
+</script>
+
+
+

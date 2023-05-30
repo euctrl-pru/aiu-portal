@@ -1,0 +1,46 @@
+---
+title: "ANSPs individual cost-effectiveness performance"
+output: html_document
+---
+<style type="text/css">
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 170%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    border: 0;
+}
+</style>
+
+This page includes a dynamic dashboard allowing for consultation of the historic individual cost-efficiency performance of each ANSP participating to the ACE analysis. For each ANSP the dashboard contains two pages described below:
+
+#### First page
+The first page displays an analysis of the historical development of the financial cost-effectiveness indicator and its main components over a five-year period. It examines the overall economic cost-effectiveness indicator and its two components (ATM/CNS costs per composite flight-hour, ATFM delay costs per composite flight-hour), and their evolution over the period (top left). It puts these in the context of the traffic growth observed in the ANSP’s airspace (top right). In this page, financial data are all expressed in real terms. Developments in the components of financial cost-effectiveness (ATCO-hour productivity, ATCO employment costs per ATCO-hour, and support costs per composite flight-hour) are also examined (middle left), to help identify the underlying causes of changes in overall cost-effectiveness. The charts on the middle right provide additional information in order to better understand the drivers behind the changes in the three components of financial cost-effectiveness.
+
+#### Second page
+The top charts of the second page present the financial cost-effectiveness indicator and its main components for individual ANSPs in comparison with their respective comparator group. The approach is to consider each ANSP in the context of a group of other ANSPs (comparators) which operate in relatively similar operational and economic environments. These comparator groups were determined for the purposes of the RP2 cost-efficiency target-setting process using a two-step approach combining the use of statistical tools (cluster analysis) with expert judgement. For a full description of the process, methodology and results see Annex I.C of the PRB report on RP2 EU-Wide Targets Ranges released in May 2013. Nine groups of comparators have been identified, some comprising a relatively large number of ANSPs and others only comprising two organisations. Due to the unique nature of its airspace (upper airspace only, across four States), it was determined that Maastricht (MUAC) should be considered separately and therefore this ANSP was not included in the comparator group benchmarking analysis. Finally, two groups have been designed for the ANSPs not operating in SES States.
+
+The chart on the top-left shows the level and changes in unit ATM/CNS provision costs over a five-year period for each ANSP part of the comparator group. The chart on the top-right shows for each ANSP the deviations in unit ATM/CNS provision costs, ATCO-hour productivity, employment costs per ATCO-hour and unit support costs from the average of the comparator group at the start and at the end of the period considered.
+
+The chart in the middle of the second page shows the historical evolution of capital expenditure and depreciation, highlighting the ANSP’s investment cycles and their magnitude, across time. The ratio of these quantities is an indication of the rate at which the overall asset base is being expanded.
+
+<small>Please, note that the dashboard takes a few seconds to load.
+
+<div class="flex-container mt-2">
+
+<div class="resp-container">
+
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+
+</div><!-- closes iframe container -->
+      
+
+</div><!-- closes container -->
+
