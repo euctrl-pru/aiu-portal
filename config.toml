@@ -22,7 +22,7 @@ theme = "pru-theme"
 # googleAnalytics = "UA-62697169-2" 
 
 # Deni's one
-# googleAnalytics = "UA-61343306-1"
+googleAnalytics = "UA-61343306-1"
 summaryLength = 10
 
 ignoreFiles = [
