@@ -11,3 +11,4 @@ see where the aircraft is going.
 ## See Also
 
 * {{< a_blank_wiki "VFR" "https://en.wikipedia.org/wiki/Visual_flight_rules" >}}
+* [IFR]({{< relref "ifr.md" >}}).
