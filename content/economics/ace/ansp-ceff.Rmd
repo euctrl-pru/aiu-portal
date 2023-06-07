@@ -19,6 +19,12 @@ output: html_document
 }
 </style>
 
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-lg-4 pl-0 text-justify">
+<small>Please, note that the dashboard takes a few seconds to load.</small>
+
 This page includes a dynamic dashboard allowing for consultation of the historic individual cost-efficiency performance of each ANSP participating to the ACE analysis. For each ANSP the dashboard contains two pages described below:
 
 #### First page
@@ -31,16 +37,19 @@ The chart on the top-left shows the level and changes in unit ATM/CNS provision 
 
 The chart in the middle of the second page shows the historical evolution of capital expenditure and depreciation, highlighting the ANSP’s investment cycles and their magnitude, across time. The ratio of these quantities is an indication of the rate at which the overall asset base is being expanded.
 
-<small>Please, note that the dashboard takes a few seconds to load.
 
-<div class="flex-container mt-2">
+</div><!-- closes col -->
+
+<div class="col-lg-8 pl-0">
+
 
 <div class="resp-container">
 
-<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&rc:Zoom=200%" frameborder="0" allowFullScreen="true"></iframe>
 
 </div><!-- closes iframe container -->
-      
 
-</div><!-- closes container -->
+</div><!-- closes col -->
+</div><!-- closes row -->
 
+</div><!-- closes container fluid-->

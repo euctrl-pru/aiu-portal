@@ -22,7 +22,7 @@ ansp <- read_xlsx(
 
 <div class="container-fluid">
 <div class="row">
-<div class="col-lg-6 pl-0 text-justify">
+<div class="col-lg-3 pl-0 text-justify">
 <br>
 
 This page presents qualitative information about the institutional arrangements and corporate governance structure for each ANSP participating to the ACE analysis.
@@ -32,7 +32,7 @@ This page also includes information relating to the scope of services provided b
 
 </div><!-- closes col -->
   
-<div class="col-lg-6">
+<div class="col-lg-9">
 <div class="row">
 <div class="col-8 float-left" id="ansp_list">
 <label class="mb-0" for="ansp">Select ANSP:</label>
