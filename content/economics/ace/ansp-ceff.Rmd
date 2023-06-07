@@ -45,7 +45,7 @@ The chart in the middle of the second page shows the historical evolution of cap
 
 <div class="resp-container">
 
-<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&rc:Zoom=200%" frameborder="0" allowFullScreen="true"></iframe>
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYWQyMDU1MTAtOGZkMS00ZTg3LWIxOTMtOGJiMDU1ZGEzMzA1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&rc:Zoom=.66" frameborder="0" allowFullScreen="true"></iframe>
 
 </div><!-- closes iframe container -->
 
