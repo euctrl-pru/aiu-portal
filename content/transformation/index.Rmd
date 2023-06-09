@@ -58,3 +58,13 @@ The **EUROCONTROL PRC Transformation Support Strategy** and its **action plan** 
 <div class="card border-0"><a href="/library/prc_transformation_support_strategy_flyer.pdf" class="btn btn-secondary" role="button">
 <img class="card-img-top" src="/images/prc/prc_tss_flyer.png" alt="PRC Transformation Support Strategy">Download the PRC information paper</a>
 </div></div></div>
+
+
+#### Workshop Feb 2023
+
+To engage key executive stakeholders in this process, in February 2023 the PRC hosted a workshop entitled ‘In search of flagships for ATM transformation,’ which sought to better understand the business-level benefits of delivering transformations and overcoming the challenges rather than focussing on operational and technical details. In particular, the workshop aimed to identify disruptive, innovative and scalable flagships which have the potential to make a substantial contribution to the performance of the ATM system in Europe over the coming years. This policy brief summarises the main takeaways from the workshop discussions.
+
+<div class="col-sm-4">
+<div class="card border-0"><a href="https://fsr.eui.eu/publications/?handle=1814/75525" target= "blank" class="btn btn-secondary" role="button">
+<img class="card-img-top" src="/images/prc/pb_fsr_ws1.png" alt="Policy Brief - Florence School of Regulation Observer">Download the report</a> 
+</div></div>

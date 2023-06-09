@@ -5,6 +5,7 @@ tags:  Think Paper
 ---
 
 ## 2023
+* [EUROCONTROL Think Paper #20 (25 May 2023) - Dual-use CNS: The Civil-Military Interoperability Multiplier][TP20]
 * [EUROCONTROL Aviation Trends #1 (18 Apr 2023) - Impact of strikes on European Aviation][AT1]
 
 ## 2022
@@ -58,3 +59,4 @@ tags:  Think Paper
 [TP19]: https://www.eurocontrol.int/publication/eurocontrol-think-paper-19-atc-mobility-and-capacity-shortfalls "EUROCONTROL Think Paper #19 - ATC Mobility and Capacity Shortfalls"
 [AP1]: https://www.eurocontrol.int/publication/eurocontrol-analysis-paper-2022-year-european-aviation-bounced-back "EUROCONTROL Analysis Paper #1 - 2022 – The year European aviation bounced back, despite war & Omicron/COVID"
 [AT1]: https://www.eurocontrol.int/publication/impact-strikes-european-aviation "EUROCONTROL Aviation Trends #1 - Impact of strikes on European Aviation"
+[TP20]: https://www.eurocontrol.int/publication/eurocontrol-think-paper-20-dual-use-cns-civil-military-interoperability-multiplier "EUROCONTROL Think Paper #20 - Dual-use CNS: The Civil-Military Interoperability Multiplier"
