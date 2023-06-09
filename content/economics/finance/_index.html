@@ -554,6 +554,10 @@ title: ANSPs Financial Dashboard
   
   function drawDashboard(response) {
     Data = response.getDataTable();
+    Data = new google.visualization.DataView(Data);
+    Data.setRows(
+      Data.getFilteredRows([{ column: 0, minValue: 2018 }])
+    );
 
     //------------------------ANSP Picker--------------------------------------------
     EntityPicker = new google.visualization.ControlWrapper({
@@ -637,20 +641,13 @@ title: ANSPs Financial Dashboard
     UpdateMyANSPServices();
     UpdateMyShareTotalRevenue();
     UpdateMyCurrencyParameters();
-    UpdateMyChartIncome1();
-    UpdateMyChartIncome2();
     UpdateTitles();
     UpdateMyTableIncome();
-    UpdateMyChartBalance1();
-    UpdateMyChartBalance2();
-    UpdateMyChartBalance3();
     UpdateMyTableBalance();
     UpdateMyPieChartBalance();
-    UpdateMyChartCash1();
-    UpdateMyChartCash2();
     UpdateMyTableCash();
     UpdateMyTableFreeCash();
- 
+    
    }
   
     //---------------------------MyChart/TableX initialization ---------------------------------------------
@@ -822,7 +819,7 @@ title: ANSPs Financial Dashboard
 
     MyViewIncome1 = new google.visualization.DataView(Data);
     MyViewIncome1.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
 
     //--- find out if ANSP is EBITDA exception
@@ -981,7 +978,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartIncome2() {
     MyViewIncome2 = new google.visualization.DataView(Data);
     MyViewIncome2.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     
     //--- Select column for EBITDA Margin depending on EbitdaException and change header
@@ -1076,7 +1073,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyTableIncome() {
     MyViewTableIncome = new google.visualization.DataView(Data);
     MyViewTableIncome.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     
     //--- Select column for EBITDA depending on EbitdaException and change header
@@ -1466,7 +1463,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartBalance1() {
     MyViewBalance1 = new google.visualization.DataView(Data);
     MyViewBalance1.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewBalance1.setColumns([0, 14, 13, 16, 17, 18]);
     //Check negative values
@@ -1571,7 +1568,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartBalance2() {
     MyViewBalance2 = new google.visualization.DataView(Data);
     MyViewBalance2.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewBalance2.setColumns([0, 21, 22, { calc: "stringify", sourceColumn: 22, type: "string", role: "annotation"}]);
 
@@ -1642,7 +1639,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyTableBalance() {
     MyViewTableBalance = new google.visualization.DataView(Data);
     MyViewTableBalance.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewTableBalance.setColumns([0, 13, 14, 15, 16, 18, 17, 19]);
 
@@ -1704,7 +1701,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartBalance3() {
     MyViewBalance3 = new google.visualization.DataView(Data);
     MyViewBalance3.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewBalance3.setColumns([0, 14, 17,
      20, { calc: "stringify", sourceColumn: 20, type: "string", role: "annotation" }]);
@@ -1871,7 +1868,7 @@ title: ANSPs Financial Dashboard
   //   MyViewBalance4 = new google.visualization.DataView(Data);
 
   //   MyViewBalance4.setRows(
-  //       Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 0, value: SelectedYear }])
+  //       Data.getFilteredRows([{ column: 0, value: SelectedYear }])
   //     );
 
   //     //--- find out column index of selected metric
@@ -1937,7 +1934,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartCash1() {
     MyViewCash1 = new google.visualization.DataView(Data);
     MyViewCash1.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }]));
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }]));
 
     switch (PassCashType) {
      case 'Absolute':
@@ -2042,7 +2039,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyChartCash2() {
     MyViewCash2 = new google.visualization.DataView(Data);
     MyViewCash2.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
  
     switch (PassCashType2) {
@@ -2168,7 +2165,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyTableCash() {
     MyViewTableCash = new google.visualization.DataView(Data);
     MyViewTableCash.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewTableCash.setColumns([0, 25, 26, 33, 34]);
 
@@ -2229,7 +2226,7 @@ title: ANSPs Financial Dashboard
   function UpdateMyTableFreeCash() {
     MyViewTableFreeCash = new google.visualization.DataView(Data);
     MyViewTableFreeCash.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: SelectedYear-4, maxValue: SelectedYear}, { column: 1, value: SelectedEntity }])
+      Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewTableFreeCash.setColumns([0, 25, 41, 27]);
 
