@@ -29,7 +29,7 @@ The economics dashboards page provides an overview of the economic aspects of pa
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="/economics/ace-overview/"><img class="card-img-top" src="/images/landing/ace_hlsr2021.png" alt=""><div class="card-body"><h5 class="card-title">New ACE Report available! </h5></a><small><p class="card-text">
+<div class="carousel-item active"><div class="card bg-light border-0"><a href="/economics/ace-overview/"><img class="card-img-top" src="/images/eco/ace2021_sm_thmb.png" alt=""><div class="card-body"><h5 class="card-title">New ACE Report available! </h5></a><small><p class="card-text">
 Read the latest ACE Report (May 2023 edition) with analysis on 2021 ANSPs cost-effectiveness performance.</p></small></div></div></div>
 
 
