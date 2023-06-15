@@ -107,34 +107,57 @@ date: "2018-02-07T11:26:51+01:00"
   google.setOnLoadCallback(Initialisation);
 
   function Initialisation() {
-    var query = new google.visualization.Query(
-      "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
-    );
+	var request = new XMLHttpRequest();
+	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false);
+	request.send(null);
+	var oscardata = JSON.parse(request.responseText);
+	Datastring = google.visualization.arrayToDataTable(oscardata);
 
-  query.send(drawDashboard);
-  }
+	Data = new google.visualization.DataTable();
 
-  function drawDashboard(response) {
-    Data = response.getDataTable();
-    UpdateTraffic();
+  for(j = 0; j < Datastring.getNumberOfColumns(); j++) {
+				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j));
+//				 console.log(Datastring.getValue(0,j));
+	}
+
+	Datastring.removeRow(0)
+	Data.addRows(Datastring.getNumberOfRows());
+
+			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() );
+
+	for(j = 0; j < Data.getNumberOfColumns(); j++) {
+
+	if (Data.getColumnType(j) == 'number') {
+	for(i = 0; i < Data.getNumberOfRows(); i++) {
+	Data.setCell(i,j, Number (Datastring.getValue(i,j)));
+	}
+	}
+	else if (Data.getColumnType(j) == 'date') {
+	for(i = 0; i < Data.getNumberOfRows(); i++) {
+	Data.setCell(i,j, new Date(Datastring.getValue(i,j)));
+	}
+	}
+	else {
+	for(i = 0; i < Data.getNumberOfRows(); i++) {
+	Data.setCell(i,j,Datastring.getValue(i,j));
+	}
+	}
+	}
+  UpdateTraffic();
    }
 //---------------------------Update traffic---------------------------------------------
   function UpdateTraffic() {
   my_view_traffic = new google.visualization.DataView(Data);
 
-  //       for (var y = 1; y < my_view_traffic.getNumberOfColumns(); y++) {
-  //        // my_view_traffic.getValue(x, y) 
-  //        last_day = my_view_traffic.getValue(0, y)
-  //      }
   last_day = my_view_traffic.getValue(0, 38); 
   my_view_traffic.setRows(
   Data.getFilteredRows([{ column: 7, value: last_day }])
   );
 
 // Calculate datestrings
-last_day_text = last_day.toDateString();
-  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11)
-  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text
+  last_day_text = last_day.toDateString();
+  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11);
+  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text;
 
 // Calculate traffic scorecard values
   y2d_traffic = my_view_traffic.getValue(0, 30);
@@ -143,9 +166,9 @@ last_day_text = last_day.toDateString();
   
   avg_y2d_traffic = Math.round(my_view_traffic.getValue(0, 33));
   dif_y2d_2019 = Math.round(my_view_traffic.getValue(0, 37)*100);
-     dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019
+  dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019;
   dif_y2d_prev_year = Math.round(my_view_traffic.getValue(0, 36)*100);
-     dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year
+  dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year;
 
 // Update scorecard values
   document.getElementById("y2d_day_text").innerHTML =  "Latest network traffic situation: " + y2d_day_text; 
