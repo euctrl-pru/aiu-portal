@@ -107,42 +107,54 @@ date: "2018-02-07T11:26:51+01:00"
   google.setOnLoadCallback(Initialisation);
 
   function Initialisation() {
-	var request = new XMLHttpRequest();
-	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false);
-	request.send(null);
-	var oscardata = JSON.parse(request.responseText);
-	Datastring = google.visualization.arrayToDataTable(oscardata);
+<!-- 	var request = new XMLHttpRequest(); -->
+<!-- 	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false); -->
+<!-- 	request.send(null); -->
+<!-- 	var tempdata = JSON.parse(request.responseText); -->
+<!-- 	Datastring = google.visualization.arrayToDataTable(tempdata); -->
 
-	Data = new google.visualization.DataTable();
+<!-- 	Data = new google.visualization.DataTable(); -->
 
-  for(j = 0; j < Datastring.getNumberOfColumns(); j++) {
-				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j));
-//				 console.log(Datastring.getValue(0,j));
-	}
+<!--   for(j = 0; j < Datastring.getNumberOfColumns(); j++) { -->
+<!-- 				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j)); -->
+<!-- //				 console.log(Datastring.getValue(0,j)); -->
+<!-- 	} -->
 
-	Datastring.removeRow(0)
-	Data.addRows(Datastring.getNumberOfRows());
+<!-- 	Datastring.removeRow(0) -->
+<!-- 	Data.addRows(Datastring.getNumberOfRows()); -->
 
-			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() );
+<!-- 			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() ); -->
 
-	for(j = 0; j < Data.getNumberOfColumns(); j++) {
+<!-- 	for(j = 0; j < Data.getNumberOfColumns(); j++) { -->
 
-	if (Data.getColumnType(j) == 'number') {
-	for(i = 0; i < Data.getNumberOfRows(); i++) {
-	Data.setCell(i,j, Number (Datastring.getValue(i,j)));
-	}
-	}
-	else if (Data.getColumnType(j) == 'date') {
-	for(i = 0; i < Data.getNumberOfRows(); i++) {
-	Data.setCell(i,j, new Date(Datastring.getValue(i,j)));
-	}
-	}
-	else {
-	for(i = 0; i < Data.getNumberOfRows(); i++) {
-	Data.setCell(i,j,Datastring.getValue(i,j));
-	}
-	}
-	}
+<!-- 	if (Data.getColumnType(j) == 'number') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, Number (Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else if (Data.getColumnType(j) == 'date') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, new Date(Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j,Datastring.getValue(i,j)); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	} -->
+
+  var query = new google.visualization.Query(
+      "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
+    );
+
+  query.send(drawDashboard);
+  }
+
+  function drawDashboard(response) {
+    Data = response.getDataTable();
+
+
   UpdateTraffic();
    }
 //---------------------------Update traffic---------------------------------------------
