@@ -74,7 +74,7 @@ date: "2018-02-07T11:26:51+01:00"
 </div>
 
 <div class="col-2" ; style="margin: 0px;  ">
-  <p class="Scorecard_subt">Vs 2021</p>
+  <p class="Scorecard_subt">Vs 2022</p>
   <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 
