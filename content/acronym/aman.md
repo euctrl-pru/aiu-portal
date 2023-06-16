@@ -4,7 +4,7 @@ slug: aman
 ---
 
 An Arrival Manager system is primarily designed to provide automated sequencing
-support for the [ATCO]({{ relref . "reference/acronym/atco.md" }})s handling traffic arriving at an airport, continuously calculating
+support for the [ATCO]({{< relref "atco.md" >}})s handling traffic arriving at an airport, continuously calculating
 arrival sequences and times for flights, taking into account the locally defined landing rate,
 the required spacing for flights arriving to the runway and other criteria.
 
