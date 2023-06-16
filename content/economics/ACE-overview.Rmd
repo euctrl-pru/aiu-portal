@@ -207,7 +207,7 @@ plot_ACE
 <!-- <a href="/library/ACE-handbook.pdf" download><i class="fas fa-download" data-toggle="tooltip" title="Download pdf"></i></a> -->
 <a href="/economics/ace/ace-handbook/" data-toggle="tooltip" title="Access electronic version" target="_blank">**ACE Handbook**</a>
 <span class="float-right">
-<a href="/library/ace/ace-handbook-june-2022-edition.pdf" data-toggle="tooltip" title="Download pdf version" target="_blank" download><i class="fas fa-download"></i></a>
+<a href="/library/ace/ace-handbook-june-2023-edition.pdf" data-toggle="tooltip" title="Download pdf version" target="_blank" download><i class="fas fa-download"></i></a>
 </span>
 </div>
 Learn about the scope of the ACE analysis, the processes involved in the production of the report, the factors affecting performance and  the indicators used in the ACE analysis.
