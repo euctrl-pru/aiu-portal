@@ -1,0 +1,27 @@
+---
+title: Performance Review Report (PRR) 2022
+type: "PRR"
+date: '2023-06-15'
+bibliography: [../../../../static/bib/aviation.bib]
+link-citations: true
+dwnld_i: <i class="fa pru fa-download"></i>
+tags: PRR 2022
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+ 
+<br>
+<div class="container">
+<div class="row align-items-start">
+
+<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2022" target="_blank" class="btn btn-info" role="button"> Performance Review Report (PRR) 2022 <br> {{% dwnld_i %}} Download </a>
+
+#### Notice
+*The PRC has made every effort to ensure that the information and analysis contained in this document are as accurate and 
+complete as possible. Despite these precautions, should you find any errors or inconsistencies we would be grateful if you 
+could please bring them to the [Aviation Intelligence Unit's attention](mailto:PRU-Support@eurocontrol.int).*
+
+</div>
+</div>

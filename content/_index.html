@@ -77,7 +77,7 @@ Avg. daily flights
   <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 <div class="col-2" ; style="margin: 0px;  ">
-  <p class="Scorecard_subt">Vs 2021</p>
+  <p class="Scorecard_subt">Vs 2022</p>
   <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 <div class="col" ; style="margin: 0px;  ">
@@ -106,7 +106,44 @@ Avg. daily flights
   google.setOnLoadCallback(Initialisation);
 
   function Initialisation() {
-    var query = new google.visualization.Query(
+<!-- 	var request = new XMLHttpRequest(); -->
+<!-- 	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false); -->
+<!-- 	request.send(null); -->
+<!-- 	var tempdata = JSON.parse(request.responseText); -->
+<!-- 	Datastring = google.visualization.arrayToDataTable(tempdata); -->
+
+<!-- 	Data = new google.visualization.DataTable(); -->
+
+<!--   for(j = 0; j < Datastring.getNumberOfColumns(); j++) { -->
+<!-- 				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j)); -->
+<!-- //				 console.log(Datastring.getValue(0,j)); -->
+<!-- 	} -->
+
+<!-- 	Datastring.removeRow(0) -->
+<!-- 	Data.addRows(Datastring.getNumberOfRows()); -->
+
+<!-- 			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() ); -->
+
+<!-- 	for(j = 0; j < Data.getNumberOfColumns(); j++) { -->
+
+<!-- 	if (Data.getColumnType(j) == 'number') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, Number (Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else if (Data.getColumnType(j) == 'date') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, new Date(Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j,Datastring.getValue(i,j)); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	} -->
+
+  var query = new google.visualization.Query(
       "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
     );
 
@@ -115,25 +152,23 @@ Avg. daily flights
 
   function drawDashboard(response) {
     Data = response.getDataTable();
-    UpdateTraffic();
+
+
+  UpdateTraffic();
    }
 //---------------------------Update traffic---------------------------------------------
   function UpdateTraffic() {
   my_view_traffic = new google.visualization.DataView(Data);
 
-  //       for (var y = 1; y < my_view_traffic.getNumberOfColumns(); y++) {
-  //        // my_view_traffic.getValue(x, y) 
-  //        last_day = my_view_traffic.getValue(0, y)
-  //      }
   last_day = my_view_traffic.getValue(0, 38); 
   my_view_traffic.setRows(
   Data.getFilteredRows([{ column: 7, value: last_day }])
   );
 
 // Calculate datestrings
-last_day_text = last_day.toDateString();
-  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11)
-  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text
+  last_day_text = last_day.toDateString();
+  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11);
+  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text;
 
 // Calculate traffic scorecard values
   y2d_traffic = my_view_traffic.getValue(0, 30);
@@ -142,9 +177,9 @@ last_day_text = last_day.toDateString();
   
   avg_y2d_traffic = Math.round(my_view_traffic.getValue(0, 33));
   dif_y2d_2019 = Math.round(my_view_traffic.getValue(0, 37)*100);
-     dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019
+  dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019;
   dif_y2d_prev_year = Math.round(my_view_traffic.getValue(0, 36)*100);
-     dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year
+  dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year;
 
 // Update scorecard values
   document.getElementById("y2d_day_text").innerHTML =  "Latest network traffic situation: " + y2d_day_text; 
@@ -180,6 +215,51 @@ What’s new?
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
+<div class="card border-0">
+<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2022" target="_blank"><img class="card-img-top" src="/images/landing/prr2022.png" alt="">
+<div class="card-body">
+<h5 class="card-title">
+Just published: PRR 2022
+</h5>
+</a><small>
+<p class="card-text">
+Read the Performance Review Commission’s final report on European ATM performance in 2022
+</p>
+</small>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-light border-0">
+<a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2023-edition" target="_blank"><img class="card-img-top" src="/images/landing/ace_23.png" alt="">
+<div class="card-body">
+<h5 class="card-title">
+ACE benchmarking report
+</h5>
+</a><small>
+<p class="card-text">
+Read our latest ATM Cost-Effectiveness Benchmarking Report (Edition 2023)
+</p>
+</small>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-light border-0">
+<a href="/traffic/statfor/"><img class="card-img-top" src="/images/landing/fcst.png" alt="">
+<div class="card-body">
+<h5 class="card-title">
+Interactive forecast chart
+</h5>
+</a><small>
+<p class="card-text">
+Check out our new interactive chart showing the latest 7-year forecast for all traffic zones
+</p>
+</small>
+</div>
+</div>
+</div>
+<div class="carousel-item">
 <div class="card bg-light border-0">
 <a href="/publications/prc/news/2023_05_16_prc_news/"><img class="card-img-top" src="/images/landing/prc_tss1.png" alt="">
 <div class="card-body">
@@ -195,36 +275,6 @@ Read the policy brief from the Florence School of Regulation to learn about the 
 </div>
 </div>
 <div class="carousel-item">
-<div class="card bg-light border-0">
-<a href="https://www.eurocontrol.int/publication/impact-strikes-european-aviation" target="_blank"><img class="card-img-top" src="/images/landing/ectl_strikes.png" alt="">
-<div class="card-body">
-<h5 class="card-title">
-Impact of strikes on aviation
-</h5>
-</a><small>
-<p class="card-text">
-Read the new EUROCONTROL paper on the impact of strikes experienced by aviation so far this year.
-</p>
-</small>
-</div>
-</div>
-</div>
-<div class="carousel-item">
-<div class="card bg-light border-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029" target="_blank"><img class="card-img-top" src="/images/landing/fcst.png" alt="">
-<div class="card-body">
-<h5 class="card-title">
-Forecast Update 2023-29
-</h5>
-</a><small>
-<p class="card-text">
-Check out the Spring 2023 forecast which is an update of the 7-year forecast published in Autumn 2022.
-</p>
-</small>
-</div>
-</div>
-</div>
-<div class="carousel-item">
 <div class="card border-0">
 <a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update">
 <div class="card-body">
@@ -233,7 +283,7 @@ Performance data update
 </h5>
 </a><small>
 <p class="card-text">
-April 2023 data <br> available for download now
+May 2023 data <br> available for download now
 </p>
 </small>
 </div>
@@ -242,16 +292,10 @@ April 2023 data <br> available for download now
 <!--
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
 Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
--->
-<!--
-<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/draft-performance-review-report-prr-2022-consultation" target="_blank"><img class="card-img-top" src="/images/landing/ransom.png" alt=""><div class="card-body"><h5 class="card-title">Data Snapshot</h5></a><small><p class="card-text">
-Read the Performance Review Commission's final report on European ATM performance in 2021</p></small></div></div></div>
--->
-<!--
+
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
 Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
--->
-<!--
+
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Punctuality performance</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
 -->
 </div>
