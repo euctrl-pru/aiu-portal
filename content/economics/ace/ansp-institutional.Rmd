@@ -92,7 +92,7 @@ function changeANSP (value) {
 	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
 
 		var element2 = document.getElementById("mydownload");
-		var myurl = '/library/ace/ansp-factsheets/'+value+'.pdf';
+		var myurl = 'https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf';
 	  element2.setAttribute("href", myurl) ;
 	  
 	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
