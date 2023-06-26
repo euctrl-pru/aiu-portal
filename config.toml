@@ -18,11 +18,8 @@ languageCode = "en-us"
 title = "Aviation Intelligence Unit Portal"
 theme = "pru-theme"
 
-# PRU Portal one
-# googleAnalytics = "UA-62697169-2" 
-
 # Deni's one
-googleAnalytics = "UA-61343306-1"
+googleAnalytics = "G-RJ3R0C35X7"
 summaryLength = 10
 
 ignoreFiles = [
