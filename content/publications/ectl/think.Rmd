@@ -5,6 +5,7 @@ tags:  Think Paper
 ---
 
 ## 2023
+* [EUROCONTROL Analysis Paper #2 (30 Jun 2023) - 2023 – Air Defender 2023: Military mission effectiveness with minimal network impacts][AP2]
 * [EUROCONTROL Think Paper #20 (25 May 2023) - Dual-use CNS: The Civil-Military Interoperability Multiplier][TP20]
 * [EUROCONTROL Aviation Trends #1 (18 Apr 2023) - Impact of strikes on European Aviation][AT1]
 
@@ -60,3 +61,4 @@ tags:  Think Paper
 [AP1]: https://www.eurocontrol.int/publication/eurocontrol-analysis-paper-2022-year-european-aviation-bounced-back "EUROCONTROL Analysis Paper #1 - 2022 – The year European aviation bounced back, despite war & Omicron/COVID"
 [AT1]: https://www.eurocontrol.int/publication/impact-strikes-european-aviation "EUROCONTROL Aviation Trends #1 - Impact of strikes on European Aviation"
 [TP20]: https://www.eurocontrol.int/publication/eurocontrol-think-paper-20-dual-use-cns-civil-military-interoperability-multiplier "EUROCONTROL Think Paper #20 - Dual-use CNS: The Civil-Military Interoperability Multiplier"
+[AT2]: https://www.eurocontrol.int/publication/air-defender-2023-military-mission-effectiveness-minimal-network-impacts "EUROCONTROL Aviation Trends #2 - Air Defender 2023: Military mission effectiveness with minimal network impacts"
