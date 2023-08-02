@@ -12,7 +12,7 @@ and a time in mode.
 
 ![LTO](/images/lto-cycle_eea.png)
 
-<figcaption>LTO cycle from European Environment Agency, European Union Aviation Safety Agency, "European aviation environmental report 2016", Publications Office of the European Union, 2016, https://data.europa.eu/doi/10.2822/385503</figcaption>
+<figcaption>LTO cycle from European Environment Agency, European Union Aviation Safety Agency, "European aviation environmental report 2016", Publications Office of the European Union, 2016, <a href="https://data.europa.eu/doi/10.2822/385503">https://data.europa.eu/doi/10.2822/385503</a> </figcaption>
 </figure>
     
 
