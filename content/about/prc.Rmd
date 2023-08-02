@@ -48,16 +48,16 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 <div class="card-deck">
 
 <div class="card">
-  <img class="card-img-top" src="/images/prc/prc_JMC.jpg" alt="José-Manuel CORDERO-GARCIA">
-  <div class="card-body"><h5 class="card-title">José-Manuel CORDERO-GARCIA</h5><p class="card-text" style="color:grey">Focus: ANSP/Management</p>
+  <img class="card-img-top" src="" alt="Xavier FRON">
+  <div class="card-body"><h5 class="card-title">Xavier FRON</h5><p class="card-text" style="color:grey">Focus: Economics</p>
   </div></div>
 <div class="card">
-  <img class="card-img-top" src="/images/prc/prc_MDJ.jpg" alt="Marinus DE JONG">
-  <div class="card-body"><h5 class="card-title">Marinus DE JONG</h5><p class="card-text">PRC Chairman</p><p class="card-text" style="color:grey">Focus: Safety</p>
+  <img class="card-img-top" src="" alt="Piotr IKANOWICZ">
+  <div class="card-body"><h5 class="card-title">Piotr IKANOWICZ</h5><p class="card-text" style="color:grey">Focus: Airlines</p>
   </div></div>
 <div class="card">
-  <img class="card-img-top" src="/images/prc/prc_LH.jpg" alt="Lubos HLINOVSKY">
-  <div class="card-body"><h5 class="card-title">Lubos HLINOVSKY</h5><p class="card-text" style="color:grey">Focus: Economics</p>
+  <img class="card-img-top" src="" alt="José Miguel de PABLO GUERRERO">
+  <div class="card-body"><h5 class="card-title">José Miguel de PABLO GUERRERO</h5><p class="card-text" style="color:grey">Focus: ANSP/Management</p>
   </div></div> 
   <div class="card">
   <img class="card-img-top" src="/images/prc/prc_IP.jpg" alt="Ismail Hakki POLAT ">
@@ -73,8 +73,8 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 <div class="card-deck">
 
  <div class="card">
-  <img class="card-img-top" src="" alt="">
-  <div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p>
+  <img class="card-img-top" src="" alt="Michael STEINFURTH">
+  <div class="card-body"><h5 class="card-title">Michael STEINFURTH</h5><p class="card-text" style="color:grey">Focus: Safety</p>
   </div></div> 
   <div class="card">
   <img class="card-img-top" src="/images/prc/prc_DW.jpg" alt="Daniel WEDER ">
@@ -82,7 +82,7 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
   </div></div>
 <div class="card">
   <img class="card-img-top" src="/images/prc/prc_PW.jpg" alt="Peter WHYSALL ">
-  <div class="card-body"><h5 class="card-title">Dr Peter WHYSALL </h5><p class="card-text">PRC Vice Chairman</p><p class="card-text" style="color:grey">Focus: Environment</p>
+  <div class="card-body"><h5 class="card-title">Dr Peter WHYSALL </h5><p class="card-text">Acting PRC Chairman</p><p class="card-text" style="color:grey">Focus: Environment</p>
   </div></div> 
 <div class="card">
   <img class="card-img-top" src="" alt="">
