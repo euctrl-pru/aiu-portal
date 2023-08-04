@@ -74,7 +74,7 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 
  <div class="card">
   <img class="card-img-top" src="" alt="Michael STEINFURTH">
-  <div class="card-body"><h5 class="card-title">Michael STEINFURTH</h5><p class="card-text" style="color:grey">Focus: Safety</p>
+  <div class="card-body"><h5 class="card-title">Michael STEINFURTH</h5><p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
   </div></div> 
   <div class="card">
   <img class="card-img-top" src="/images/prc/prc_DW.jpg" alt="Daniel WEDER ">
