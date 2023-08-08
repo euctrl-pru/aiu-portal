@@ -56,7 +56,11 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
   <div class="card-body"><h5 class="card-title">Piotr IKANOWICZ</h5><p class="card-text" style="color:grey">Focus: Airlines</p>
   </div></div>
 <div class="card">
+<<<<<<< HEAD
   <img class="card-img-top" src="/images/person_image_placeholder.png" alt="José Miguel de PABLO GUERRERO">
+=======
+  <img class="card-img-top" src="" alt="José Miguel de PABLO GUERRERO">
+>>>>>>> origin/202308-release
   <div class="card-body"><h5 class="card-title">José Miguel de PABLO GUERRERO</h5><p class="card-text" style="color:grey">Focus: ANSP/Management</p>
   </div></div> 
   <div class="card">
