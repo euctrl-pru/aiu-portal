@@ -123,13 +123,6 @@ command = "hugo --gc --minify"
   status = 200
   force = true
 
-# TEST
-[[redirects]]
-  from = "https://deploy-preview-10--aiu-portal.netlify.app/economics/cba/standard-inputs/*"
-  to = "https://standard-inputs.netlify.app/:splat"
-  status = 200
-  force = true
-
 [[redirects]]
   from = "/dashboard/stakeholder/airport/db/*"
   to = "https://aiu-airport-dashboard.netlify.app/:splat"
