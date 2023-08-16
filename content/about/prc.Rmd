@@ -48,15 +48,15 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 <div class="card-deck">
 
 <div class="card">
-  <img class="card-img-top" src="" alt="Xavier FRON">
+  <img class="card-img-top" src="/images/prc/prc_XF.jpg" alt="Xavier FRON">
   <div class="card-body"><h5 class="card-title">Xavier FRON</h5><p class="card-text" style="color:grey">Focus: Economics</p>
   </div></div>
 <div class="card">
-  <img class="card-img-top" src="" alt="Piotr IKANOWICZ">
+  <img class="card-img-top" src="/images/prc/prc_PI.jpg" alt="Piotr IKANOWICZ">
   <div class="card-body"><h5 class="card-title">Piotr IKANOWICZ</h5><p class="card-text" style="color:grey">Focus: Airlines</p>
   </div></div>
 <div class="card">
-  <img class="card-img-top" src="" alt="José Miguel de PABLO GUERRERO">
+  <img class="card-img-top" src="/images/person_image_placeholder.png" alt="José Miguel de PABLO GUERRERO">
   <div class="card-body"><h5 class="card-title">José Miguel de PABLO GUERRERO</h5><p class="card-text" style="color:grey">Focus: ANSP/Management</p>
   </div></div> 
   <div class="card">
@@ -73,7 +73,7 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 <div class="card-deck">
 
  <div class="card">
-  <img class="card-img-top" src="" alt="Michael STEINFURTH">
+  <img class="card-img-top" src="/images/prc/prc_MS.jpg" alt="Michael STEINFURTH">
   <div class="card-body"><h5 class="card-title">Michael STEINFURTH</h5><p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
   </div></div> 
   <div class="card">
