@@ -214,6 +214,9 @@ For feedback or questions please contact us at:
 
 <div class="carousel-item active"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Are flights punctual?</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
 
+<div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-21-long-haul-flight-decarbonisation-when-can-cutting-edge" target="_blank"><img class="card-img-top" src="/images/landing/tp21.png" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL Think Paper #21</h5></a><small><p class="card-text">
+Long-haul flight decarbonisation: When can cutting-edge energies & technologies make a difference?</p></small></div></div></div>
+
 <div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2022" target="_blank"><img class="card-img-top" src="/images/landing/prr2022.png" alt=""><div class="card-body"><h5 class="card-title">Published: PRR 2022</h5></a><small><p class="card-text">
 Read the Performance Review Commission's final report on European ATM performance in 2022</p></small></div></div></div>
 
