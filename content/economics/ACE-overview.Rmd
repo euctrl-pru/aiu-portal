@@ -266,9 +266,9 @@ Access information on individual ANSPs cost-effectiveness performance (2016-2021
   </div>
 </div>
 
-<div class="card" ><a href="/economics/ace/ace-hlsr/" target="_blank">
-  <img class="card-img-top" src="/images/eco/ace-hlsr2021.png" alt="Preliminary results">
-  <div class="card-body"><h5 class="card-title">Preliminary results (Dec. 2022 edition)</h5></a><p class="card-text"></p>
+<div class="card" ><a href="https://www.eurocontrol.int/news/atm-cost-effectiveness-ace-first-look-ace-2022-data" target="_blank">
+  <img class="card-img-top" src="/images/eco/first-look2022.png" alt="First look at 2022 ACE data">
+  <div class="card-body"><h5 class="card-title">First look at ANSPs'2022 ACE data</h5></a><p class="card-text"></p>
   </div>
 </div>
 
