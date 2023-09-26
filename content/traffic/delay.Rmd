@@ -211,11 +211,12 @@ This page provides an overview of the traffic, [ATFM delay](/definition/atfm-del
 <div class="row align-items-start">
 <div class="col-md-6" >
 #### ACC view
-Total [ATFM delay](/definition/atfm-delay/) per ACC.
+En-route [ATFM delay](/definition/atfm-delay/) per ACC.<br>
+<small>*Note that since xx October 2023, the table below shows 'en-route' instead of 'total' (en-route + airport) ATFM delay. For continuity, the download file contains both metrics.*</small>
 <div class="row align-items-start">
 <div class="col-12">
 <div id="acc-delay">
-<iframe id="acc-delay-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-acc-delay-ranking-table.html" frameborder="0" style="border:0;" >
+<iframe id="acc-delay-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-acc-erdelay-ranking-table.html" frameborder="0" style="border:0;" >
 </iframe>
 </div><!-- closes iframe container -->
 </div><!-- closes col 12-->
@@ -224,11 +225,12 @@ Total [ATFM delay](/definition/atfm-delay/) per ACC.
 
 <div class="col-md-6" >
 #### Airport view
-Total [ATFM delay](/definition/atfm-delay/) (arrival + departure) for main EUROCONTROL airports.
+Arrival [ATFM delay](/definition/atfm-delay/) for main EUROCONTROL airports.<br>
+<small>*Note that since xx October 2023, the table below shows 'arrival' instead of 'total' (arrival + departure) ATFM delay. For continuity, the download file contains both metrics.*</small>
 <div class="row align-items-start">
 <div class="col-12">
 <div id="apt-delay">
-<iframe id="acc-delay-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-apt-delay-ranking-table.html" frameborder="0" style="border:0;" >
+<iframe id="acc-delay-table" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-apt-arrdelay-ranking-table.html" frameborder="0" style="border:0;" >
 </iframe>
 </div><!-- closes iframe container -->
 </div><!-- closes col 12-->
