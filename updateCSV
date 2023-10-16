@@ -98,30 +98,25 @@ TIL=${month_beg}
 echo "[WEF, TIL) = [${year_beg}, ${TIL})"
 
 (
-    cd "${SCRIPT_DIR}/" || exit;
-    # echo "Exporting ERT_DLY ansp ${ERT_DLY_WEF} ${TIL}..."
-    # Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL};
-    # echo "Exporting ERT_DLY ansp ... done."
-    # echo "Exporting ERT_DLY fir ${ERT_DLY_WEF} ${TIL}..."
-    # Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL};
-    # echo "Exporting ERT_DLY fir ... done."
-    echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
-    Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL};
-    echo "Exporting APT_DLY ... done"
-    # echo "Exporting HFE ..."
-    # Rscript R/export_hfe.R;
-    # echo "Exporting HFE ... done"
-    # 
-    # echo "Exporting ERT flight % change ... "
-    # Rscript R/generate_ert_flt_percent_change.R -o '//ihx-vdm05/LIVE_var_www_performance$/data/download/csv' ${TIL};
-    # echo "Exporting ERT flight % change ... done"
-    # 
-    # echo "Exporting ERT delay at (FIR) FAB level ... "
-    # Rscript R/generate_monthly_ert_dly_fab_fir.R -o '//ihx-vdm05/LIVE_var_www_performance$/data/download/csv';
-    # echo "Exporting ERT delay at (FIR) FAB level ... done"
-    # 
-    # echo "Exporting ANSP composition ... "
-    # Rscript R/export_ansp_composition.R ${TIL};
-    # echo "Exporting ANSP composition ... done"
-
+  cd "${SCRIPT_DIR}/" || exit;
+  
+  echo "Exporting ERT_DLY ansp ${ERT_DLY_WEF} ${TIL}..."
+  Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL};
+  echo "Exporting ERT_DLY ansp ... done."
+  
+  echo "Exporting ERT_DLY fir ${ERT_DLY_WEF} ${TIL}..."
+  Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL};
+  echo "Exporting ERT_DLY fir ... done."
+  
+  echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
+  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL};
+  echo "Exporting APT_DLY ... done"
+  
+  echo "Exporting HFE ..."
+  Rscript R/export_hfe.R;
+  echo "Exporting HFE ... done"
+  
+  echo "Exporting ANSP composition ... "
+  Rscript R/export_ansp_composition.R ${TIL};
+  echo "Exporting ANSP composition ... done"
 )
