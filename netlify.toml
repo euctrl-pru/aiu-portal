@@ -140,3 +140,4 @@ command = "hugo --gc --minify"
   to = "https://www.eurocontrol.int/performance/data/download/:splat"
   status = 200
   force = true
+
