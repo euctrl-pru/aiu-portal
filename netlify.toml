@@ -140,3 +140,27 @@ command = "hugo --gc --minify"
   to = "https://www.eurocontrol.int/performance/data/download/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/traffic/airport/*"
+  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-Airports.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/traffic/acc/*"
+  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-ACCs.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/traffic/ansp/*"
+  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-ACCs.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/traffic/state/*"
+  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
+  status = 200
+  force = true
