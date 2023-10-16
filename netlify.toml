@@ -141,26 +141,3 @@ command = "hugo --gc --minify"
   status = 200
   force = true
 
-[[redirects]]
-  from = "/traffic/airport/index.html"
-  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-Airports.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/traffic/acc/index.html"
-  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-ACCs.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/traffic/ansp/index.html"
-  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-ACCs.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/traffic/state/index.html"
-  to = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
-  status = 200
-  force = true
