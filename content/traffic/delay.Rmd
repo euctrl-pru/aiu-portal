@@ -212,7 +212,7 @@ This page provides an overview of the traffic, [ATFM delay](/definition/atfm-del
 <div class="col-md-6" >
 #### ACC view
 En-route [ATFM delay](/definition/atfm-delay/) per ACC.<br>
-<small>*Note that since 18 October 2023, the table below shows 'en-route' instead of 'total' (en-route + airport) ATFM delay. For continuity, the download file contains both metrics.*</small>
+<small>*Note that since 17 October 2023, the table below shows 'en-route' instead of 'total' (en-route + airport) ATFM delay. For continuity, the download file contains both metrics.*</small>
 <div class="row align-items-start">
 <div class="col-12">
 <div id="acc-delay">
@@ -226,7 +226,7 @@ En-route [ATFM delay](/definition/atfm-delay/) per ACC.<br>
 <div class="col-md-6" >
 #### Airport view
 Arrival [ATFM delay](/definition/atfm-delay/) for main EUROCONTROL airports.<br>
-<small>*Note that since 18 October 2023, the table below shows 'arrival' instead of 'total' (arrival + departure) ATFM delay. For continuity, the download file contains both metrics.*</small>
+<small>*Note that since 17 October 2023, the table below shows 'arrival' instead of 'total' (arrival + departure) ATFM delay. For continuity, the download file contains both metrics.*</small>
 <div class="row align-items-start">
 <div class="col-12">
 <div id="apt-delay">
