@@ -29,7 +29,7 @@ blogdown::shortcode(
   img="aiu_apt_daily.jpg",
   link="https://www.eurocontrol.int/Economics/DailyTrafficVariation-Airports.html",
   title="Daily traffic @ airports",
-  text="Monitor the daily traffic variation @ major European airports since the start of the COVID-19 crisis", 
+  text="Monitor the daily traffic variation @ major European airports", 
   alt="Daily traffic @ airports", 
   command="Resize", 
   options="300x", 

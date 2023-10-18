@@ -1,0 +1,6 @@
+---
+layout: default
+title: Ismail Hakki POLAT
+permalink: /about/prc/prc_IP
+---
+
