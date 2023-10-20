@@ -85,10 +85,10 @@ The pan-European ATM system is primarily financed through the collection of en-r
                     
 Read the latest PRC Performance Insight on the role of ANS in a decarbonising world. It gives an overview of aviation’s environmental performance in general and the role of Air Navigation Services (ANS) in particular, in order to identify and formulate relevant questions for further debate.<br>
                     
-<a class="btn btn-primary btn-sm" href="/publications/prc/pi/2021_10_18_pi_ops_decarb.html" role="button">Learn more</a>
+<a class="btn btn-primary btn-sm" href="/publications/prc/news/2021_10_18_pi_ops_decarb" role="button">Learn more</a>
 </div>
 <div class="col-sm-3">
-<div class="card border-0"><a href="/publications/prc/pi/2021_10_18_pi_ops_decarb.html" ><img src="/images/pi/prc_pi3.png" alt="Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world" style="width:100%"></a></div>
+<div class="card border-0"><a href="/publications/prc/news/2021_10_18_pi_ops_decarb" ><img src="/images/pi/prc_pi3.png" alt="Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world" style="width:100%"></a></div>
 </div>
 </div></div>
 
@@ -120,16 +120,16 @@ COVID-19 continues to have a huge impact on the aviation industry, not just the 
                         
 Read the new PRC Performance Insight on future challenges to safety. In view of the numerous technological and institutional changes in the future, the PRC initiated a discussion in early 2020 to collect views on future challenges to safety and how to identify and measure potential risks in a changing ATM environment.<br>
                         
-<a class="btn btn-primary btn-sm" href="/publications/prc/pi/2020_10_15_pi_safety.html" role="button">Learn more</a>
+<a class="btn btn-primary btn-sm" href="/publications/prc/news/2020_10_15_pi_safety" role="button">Learn more</a>
 </div>
 <div class="col-sm-3">
-<div class="card border-0"><a href="/publications/prc/pi/2020_10_15_pi_safety.html" ><img src="/images/pi/prc_pi1.png" alt="Future Challenges to Safety" style="width:100%"></a></div>
+<div class="card border-0"><a href="/publications/prc/news/2020_10_15_pi_safety" ><img src="/images/pi/prc_pi1.png" alt="Future Challenges to Safety" style="width:100%"></a></div>
 </div>
 </div></div>
 
-[PI1]: https://ansperformance.eu/publications/prc/pi/2020_10_15_pi_safety/ "Performance Insight #1 - Future Challenges to Safety"
+[PI1]: https://ansperformance.eu/publications/prc/news/2020_10_15_pi_safety/ "Performance Insight #1 - Future Challenges to Safety"
 [PI2]: https://www.eurocontrol.int/publication/new-prc-performance-insight-economic-impact-covid-19-ans-system "Performance Insight #2 - The economic impact of COVID-19 on the ANS system"
-[PI3]: https://ansperformance.eu/publications/prc/pi/2021_10_18_pi_ops_decarb/  "Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world"
+[PI3]: https://ansperformance.eu/publications/prc/news/2021_10_18_pi_ops_decarb/  "Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world"
 [PI4]: https://www.eurocontrol.int/publication/performance-insight-4-impact-covid-19-en-route-unit-rates-and-charges-billed-airspace "Performance Insight #4 - Impact of COVID-19 on en-route unit rates and charges billed to airspace users"
 [PI5]: https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data "Performance Insight #5 - Open performance data - An enabler to further performance enhancements?"
 [PI6]: https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe "Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe"
