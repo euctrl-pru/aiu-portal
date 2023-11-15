@@ -215,7 +215,7 @@ For feedback or questions please contact us at:
 <div class="carousel-item active"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Are flights punctual?</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
 -->
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://ansperformance.eu/about/prc/" target="_blank"><img class="card-img-top" src="/images/landing/prc_new.png" alt=""><div class="card-body"><h5 class="card-title">Meet the new Performance Review Commission (PRC) members</h5></a><small><p class="card-text">
+<div class="carousel-item"><div class="card  border-0"><a href="https://ansperformance.eu/about/prc/" target="_blank"><img class="card-img-top" src="/images/landing/new_prc.png" alt=""><div class="card-body"><h5 class="card-title">Meet the new Performance Review Commission (PRC) members</h5></a><small><p class="card-text">
 Learn more about the Performance Review Commission (PRC) and the new members</p></small></div></div></div>
 
 <div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029-autumn-2023" target="_blank"><img class="card-img-top" src="/images/landing/ectl_fcst.jpg" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL traffic forecast</h5></a><small><p class="card-text">See the latest update of the 7-year forecast (2023-2029)</p></small></div></div></div>
