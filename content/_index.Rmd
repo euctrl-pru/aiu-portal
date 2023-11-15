@@ -227,7 +227,7 @@ Have a first look at the ANSP's 2022 cost-effectiveness data!</p></small></div><
 <div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-21-long-haul-flight-decarbonisation-when-can-cutting-edge" target="_blank"><img class="card-img-top" src="/images/landing/tp21.png" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL Think Paper #21</h5></a><small><p class="card-text">
 Long-haul flight decarbonisation: When can cutting-edge energies & technologies make a difference?</p></small></div></div></div>
 
-<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">September 2023 data <br> available for download now</p></small></div></div></div>
+<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">October 2023 data <br> available for download now</p></small></div></div></div>
 
 <!--
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
