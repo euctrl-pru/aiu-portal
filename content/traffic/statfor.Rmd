@@ -64,7 +64,7 @@ library(htmlwidgets)
 library(here)
 
 # Read and process data
-data <- read_csv2(here("content", "traffic", "eurocontrol-forecast-2023-2029-traffic-table-october2023-unrounded.csv"))
+data <- read_csv2(here("content", "traffic", "eurocontrol-forecast-2023-2029-traffic-table-october2023-unroundedUPDATE.csv"))
 
 data <- data %>%
   mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
