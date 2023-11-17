@@ -2,12 +2,8 @@
 title: "Copyright notice and Disclaimer"
 ---
 
-This data is published by the <small style="font-variant: small-caps;">EUROCONTROL</small>
-Performance Review Unit in the interest of the exchange of information.
-It may be copied in whole or in part providing that this copyright notice
-<small><span style="text-aligh:left">&copy;</span></small> and disclaimer are included.
-The information may not be modified without prior written permission from the
-<small style="font-variant: small-caps;">EUROCONTROL</small> Performance Review Unit.
+This data is published by EUROCONTROL for information purposes. 
+It may be copied in whole or in part, provided that EUROCONTROL is mentioned as the source and it is not used for commercial purposes (i.e. for financial gain). The information in this document may not be modified without prior written permission from EUROCONTROL.
 
 The information does not necessarily reflect the official views or policy of
 <small style="font-variant: small-caps;">EUROCONTROL</small>,

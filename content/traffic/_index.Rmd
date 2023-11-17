@@ -214,7 +214,6 @@ This page provides an overview of the traffic, [ATFM delay](/definition/atfm-del
 <div id="graphcontainer" style=" height: 350px;" >
 <iframe id="traffic-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" style="border:0; margin-top: 38px;" >
 </iframe>
-<!-- <iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/4efb3da2-6cd8-4778-ab2b-0fd0cbe71db2/page/tvomC" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 </div><!-- closes iframe container -->
 </div><!-- closes col -->
 </div><!-- closes row -->
@@ -244,7 +243,6 @@ Only the top 40 in terms of flights are shown in the tables (latest day, rolling
 <h5>Airports</h5>
 <div id="apts" class="resp-container">
 <iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-apt-ranking-table.html" frameborder="0" style="border:0" allowfullscreen></iframe>
-<!-- <iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/71726332-25f1-412b-a902-50182fbc00c7/page/obGnC" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe> -->
 </div><!-- closes iframe container -->
 </div><!-- closes col -->
 </div><!-- closes row -->
@@ -258,12 +256,31 @@ Only the top 40 in terms of flights are shown in the tables (latest day, rolling
 </div><!-- closes col -->
 
 <div class="col-md-6 pr-0">
-<h5>Country Pairs</h5>
+<h5>Countries</h5>
 <div id="cps" class="resp-container">
-<iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-ctrypair-ranking-table.html" frameborder="0" style="border:0;" allowfullscreen></iframe><!-- <iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/74850727-d77f-4508-b312-114d40a3a7e6/page/tAPnC" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe> -->
+<iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-ctry-dai-ranking-table.html" frameborder="0" style="border:0;" allowfullscreen></iframe>
 </div><!-- closes iframe container -->
 </div><!-- closes col -->
 </div><!-- closes row -->
+
+<br>
+<div class="row align-items-start">
+<div class="col-md-6 pl-3 pr-0">
+<h5>Country Pairs</h5>
+<div id="ansps" class="resp-container" style="align-text: center">
+<iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-ctrypair-ranking-table.html" frameborder="0" style="border:0;" allowfullscreen></iframe>
+</div><!-- closes iframe container -->
+</div><!-- closes col -->
+
+<div class="col-md-6 pr-0">
+<h5>Region* Pairs</h5>
+<div id="cps" class="resp-container">
+<iframe class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-regionpair-ranking-table.html" frameborder="0" style="border:0;" allowfullscreen></iframe>
+</div><!-- closes iframe container -->
+[*See Region definition](https://www.eurocontrol.int/sites/default/files/2020-11/eurocontrol-forecast-2020-2024-region-definition.pdf){target="_blank"}
+</div><!-- closes col -->
+</div><!-- closes row -->
+
 </div><!-- closes container -->
 <br>
 <a href="https://www.eurocontrol.int/Economics/Download/Stakeholder_Traffic.xlsx" class="btn btn-info" role="button" target="_blank">{{% dwnld_i %}} Download stakeholder data</a>
