@@ -88,8 +88,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### Latest ACE benchmarking report (May 2023 edition)
-This report is based on the 2021 data submitted by ANSPs in July 2022, and thoroughly reviewed by the PRU. It puts a special emphasis on changes in cost-effectiveness performance following the COVID-19 crisis and the progressive traffic recovery, including an examination of the mitigation measures implemented by ANSPs. This report also puts a special focus on how ANSPs capital expenditures have evolved compared to their pre-crisis levels.
+#### High-level summary report on preliminary ACE 2022 data (December 2023)
+This report is based on the 2022 data submitted by ANSPs in July 2023.  It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
 
 <div class="row">
 <div class="col-md-6" >
@@ -135,13 +135,16 @@ plot_ACE
 
 <br>
 <div class="container" >
-*	ANSPs gate-to-gate **revenues rose by +19%** in 2021, however they remained -45.% lower than in 2019.
 
-*	Cost containment measures were implemented, and **ATM/CNS provision costs fell by -€413M**, mainly through reduced staff costs (-€223M) and lower non-staff operating costs (-€102M). When considering the savings already achieved in 2020, **the cumulative decrease in ATM/CNS provision costs since 2019 is almost €800M**.
+*	Traffic (measured in composite flight-hours) rose by +58% in 2022 but remained -13% lower than in 2019. At ANSP level, a wide range of recovery rates is observed (from -51% to +14%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
 
-*	Many ANSPs contracted new loans to respond to liquidity issues. Short and long-term **borrowings reached €5.9 billion in 2021, which is three times higher than in 2019**.
+*	ATFM delays in 2022 almost reached their 2019 level, which was a year marked by significant capacity issues for several ANSPs. As a result, the share of ATFM delays in the 2022 unit economic costs amounted to 20%.
 
-*	After a drop of -28% in 2020, **capital expenditures rose by +7%** in 2021. The situation at individual ANSP level is contrasted, and some ANSPs invested significantly more in 2020 and 2021 than in the preceding decade (on average per annum).
+*	After two years of consecutive decreases, total ATM/CNS provision costs rose by +3% (+€297M) in 2022, reflecting cost increases for 26 out of 38 ANSPs.
+
+*	In 2022, the number of ATM/CNS staff was slightly lower than in 2021 (-1% or -473 FTEs), mainly because of support staff reductions. The number of ATCOs in OPS increased by +2% (+356 FTEs).
+
+*	Although the level of debt fell by -10% in 2022, short and long-term borrowings still represent nearly 3 times the amount recorded in 2019.
 
 </div>
 
