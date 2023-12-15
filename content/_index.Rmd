@@ -231,6 +231,8 @@ Long-haul flight decarbonisation: When can cutting-edge energies & technologies 
 
 <div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">October 2023 data <br> available for download now</p></small></div></div></div>
 
+<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/connectivity-update.png" alt="Connectivity update"><div class="card-body"><h5 class="card-title">European Aviation Connectivity Tool has been updated</h5></a><small><p class="card-text">The European Aviation Connectivity Tool has been updated with the inclusion of two additional countries (Norway and Switzerland) and updated geographical regions definitions. Data up to Q3 2023 is now available.</p></small></div></div></div>
+
 <!--
 <div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
 Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
