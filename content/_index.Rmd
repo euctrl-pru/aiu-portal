@@ -220,8 +220,8 @@ Learn more about the Performance Review Commission (PRC) and the new members</p>
 
 <div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029-autumn-2023" target="_blank"><img class="card-img-top" src="/images/landing/ectl_fcst.jpg" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL traffic forecast</h5></a><small><p class="card-text">See the latest update of the 7-year forecast (2023-2029)</p></small></div></div></div>
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://ext.eurocontrol.int/connectivity_web/from" target="_blank"><img class="card-img-top" src="/images/landing/aiu_connex.png" alt=""><div class="card-body"><h5 class="card-title">Are you connected?</h5></a><small><p class="card-text">
-Check out our European aviation connectivity dashboard!</p></small></div></div></div>
+<div class="carousel-item"><div class="card  border-0"><a href="https://ext.eurocontrol.int/connectivity_web/from" target="_blank"><img class="card-img-top" src="/images/landing/connectivity_update.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Connectivity Tool Updated</h5></a><small><p class="card-text">
+Now with additional countries and data up to Q3 2023</p></small></div></div></div>
 
 <div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/news/atm-cost-effectiveness-ace-first-look-ace-2022-data" target="_blank"><img class="card-img-top" src="/images/landing/prc_ace.png" alt=""><div class="card-body"><h5 class="card-title">ATM Cost-effectiveness 2022</h5></a><small><p class="card-text">
 Have a first look at the ANSP's 2022 cost-effectiveness data!</p></small></div></div></div>
