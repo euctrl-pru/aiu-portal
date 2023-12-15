@@ -52,7 +52,7 @@ Analyse information and data on ANSP cost-effectiveness performance (2002-2020)
 
 <div class="card">
 <a href="/economics/finance/" target="_blank">
-<img class="card-img-top" src="/images/eco/fin_db.png" alt="ANSPs Financial Dashboard">
+<img class="card-img-top" src="/images/eco/fin_db_2022_thmb.png" alt="ANSPs Financial Dashboard">
 <div class="card-body">
 <h5 class="card-title">
 ANSP Financial Dashboard
