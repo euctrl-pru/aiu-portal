@@ -258,29 +258,29 @@ Learn about the PRC's strategy to support the transformation process in ANS.</p>
 
 </div>
 
-#### Focus areas
+#### Performance Areas
 <!-- cards with Key Performance Areas -->
 <div class="container">
 <div class="row">
 <div class="card-deck">
 <div class="card"><a href="/traffic">
   <img class="card-img-top" src="/images/landing/ectl_traff_th.jpg" alt="Traffic">
-  <div class="card-body"><h6 class="card-title">Traffic</h6></a><small><p class="card-text">[IFR](/acronym/ifr/) flight and [service unit](/acronym/su/) evolution and forecast </p></small>
+  <div class="card-body"><h6 class="card-title"><i class='fas fa-plane-departure'></i>&nbsp;Traffic</h6></a><small><p class="card-text">[IFR](/acronym/ifr/) flight and [service unit](/acronym/su/) evolution and forecast </p></small>
   </div>
 </div>
 <div class="card"><a href="/capacity">
   <img class="card-img-top" src="/images/landing/ectl_cap_th.jpg" alt="Capacity">
-  <div class="card-body"><h6 class="card-title">Capacity & Delays</h6></a><small><p class="card-text">En-route and airport [ATFM](/acronym/atfm/) delays</p></small>
+  <div class="card-body"><h6 class="card-title"><i class='fas fa-clock'></i>&nbsp;Capacity & Delays</h6></a><small><p class="card-text">En-route and airport [ATFM](/acronym/atfm/) delays</p></small>
   </div>
 </div>
 <div class="card"><a href="/efficiency">
   <img class="card-img-top" src="/images/landing/ectl_env_th.jpg" alt="Efficiency & Environment">
-  <div class="card-body"><h6 class="card-title">Efficiency & Environment</h6></a><small><p class="card-text">Flight efficiency affecting fuel burn and emissions</p></small>
+  <div class="card-body"><h6 class="card-title"><i class='fas fa-leaf'></i>&nbsp;Efficiency & Environment</h6></a><small><p class="card-text">Flight efficiency affecting fuel burn and emissions</p></small>
   </div>
 </div>
 <div class="card"><a href="/economics">
   <img class="card-img-top" src="/images/landing/ectl_cef_th.jpg" alt="Economics">
-  <div class="card-body"><h6 class="card-title">Economics</h6></a><small><p class="card-text">Analysis of ANS cost-efficiency</p></small>
+  <div class="card-body"><h6 class="card-title"><i class='fas fa-euro-sign'></i>&nbsp;Economics</h6></a><small><p class="card-text">Analysis of ANS cost-efficiency</p></small>
   </div>
 </div>
 </div>
