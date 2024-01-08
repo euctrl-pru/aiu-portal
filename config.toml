@@ -56,346 +56,209 @@ ignoreFiles = [
 [menu]
 
  [[menu.main]]
-#   pre = "<i class='far fa-star fa-spin fa-fw'></i>"
-#   pre = "<i class='fas fa-home'></i>"
-    name = "AIU Home"
+    name = "Home"
     identifier= "aiu"
     url = "/#/"
     weight = 5
 
   [[menu.main]]
-    name = "&nbsp;Home"
-    pre = "<i class='fas fa-home'></i>"
-    url = "/#"
-    identifier = "key-home"
-    parent = "aiu"
-    weight = 1
+    name = "Performance Areas"
+    identifier = "dashboard"
+    pre = ""
+    url = "/dashboard/"
+    weight = 15
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-plane-departure'></i>"
     name = "&nbsp;Traffic"
     url = "/traffic/"
     identifier = "key-traffic"
-    parent = "aiu"
+    parent = "dashboard"
     weight = 15
     [[menu.main]]
   #   pre = "&nbsp;&nbsp;&nbsp;<i class='far fa-star fa-spin fa-fw'></i>"
       name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Daily Traffic Dashboard</span></i>"
       url = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
       identifier = "key-traffic-daily-traffic"
-      parent = "aiu"
+      parent = "dashboard"
       weight = 17
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Service Units</span>"
+      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+      identifier = "key-service-units"
+      parent = "dashboard"
+      weight = 19
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Traffic Forecast</span>"
       url = "/traffic/statfor/"
       identifier = "key-traffic-forecast"
-      parent = "aiu"
+      parent = "dashboard"
       weight = 19
+  #----------------------
+  [[menu.main]]
+    pre = "<i class='fas fa-leaf'></i>"
+    name = "&nbsp;Capacity & Delays"
+    url = "/capacity/"
+    identifier = "key-capacity"
+    parent = "dashboard"
+    weight = 21
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>En-route ATFM delays</span>"
+      url = "/capacity/atfm_ert/"
+      identifier = "key-enroute-atfm"
+      parent = "dashboard"
+      weight = 22
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Airport ATFM delays</span>"
+      url = "/capacity/atfm_apt/"
+      identifier = "key-atfm-apt"
+      parent = "dashboard"
+      weight = 23
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>All-causes delays</span>"
+      url = "/capacity/tot_dly/"
+      identifier = "key-tot-dly"
+      parent = "dashboard"
+      weight = 24
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-leaf'></i>"
     name = "&nbsp;Efficiency & Environment"
     url = "/efficiency/"
     identifier = "key-environment"
-    parent = "aiu"
-    weight = 21
+    parent = "dashboard"
+    weight = 25
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>CO<sub>2</sub> emissions</span>"
       url = "/efficiency/emissions/"
       identifier = "key-environment-emissions"
-      parent = "aiu"
-      weight = 22
+      parent = "dashboard"
+      weight = 26
      [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Horizontal Flight Efficiency</span>"
       url = "/efficiency/hfe/"
       identifier = "key-environment-hfe"
-      parent = "aiu"
-      weight = 23
+      parent = "dashboard"
+      weight = 27
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Vertical Flight Efficiency</span>"
       url = "/efficiency/vfe/"
       identifier = "key-environment-vfe"
-      parent = "aiu"
-      weight = 25
+      parent = "dashboard"
+      weight = 28
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Terminal Holdings</span>"
       url = "/efficiency/asma/"
       identifier = "key-environment-holding"
-      parent = "aiu"
-      weight = 27
+      parent = "dashboard"
+      weight = 29
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Taxi-out</span>"
       url = "/efficiency/taxiout/"
       identifier = "key-environment-taxiout"
-      parent = "aiu"
-      weight = 29
+      parent = "dashboard"
+      weight = 30
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-euro-sign'></i>"
     name = "&nbsp;Economics"
     url = "/economics/"
     identifier = "key-economics"
-    parent = "aiu"
+    parent = "dashboard"
     weight = 31
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Service Units</span>"
-      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
-      identifier = "key-economics-service-units"
-      parent = "aiu"
-      weight = 33
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Unit Rates and Costs</span>"
-      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
-      identifier = "key-economics-unit-rates"
-      parent = "aiu"
-      weight = 35
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>ATM Cost Effectiveness</span>"
       url = "/economics/ace-overview/"
       identifier = "key-economics-ace"
-      parent = "aiu"
-      weight = 36
+      parent = "dashboard"
+      weight = 32
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>ANSPs Financial Situation</span>"
+      name = " <span style='font-weight: normal'>Unit Rates and Costs</span>"
+      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
+      identifier = "key-economics-unit-rates"
+      parent = "dashboard"
+      weight = 33
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>Service Units</span>"
+      url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
+      identifier = "key-economics-service-units"
+      parent = "dashboard"
+      weight = 34
+    [[menu.main]]
+      pre = "&nbsp;&nbsp;&nbsp;"
+      name = " <span style='font-weight: normal'>ANSPs Financial Dashboard</span>"
       url = "/economics/finance/"
       identifier = "key-economics-financial"
-      parent = "aiu"
+      parent = "dashboard"
       weight = 37
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>CBA</span>"
       url = "/economics/cba/"
       identifier = "key-economics-cba"
-      parent = "aiu"
-      weight = 38
-  #----------------------
-  [[menu.main]]
-    pre = "<i class='fas fa-user-friends'></i>"
-    name = "&nbsp;Stakeholder views"
-    url = "/dashboard/stakeholder/"
-    identifier = "key-stakeholder"
-    parent = "aiu"
-    weight = 39
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Airport View</span>"
-      url = "/dashboard/stakeholder/airport/"
-      identifier = "key-stakeholder-airport"
-      parent = "aiu"
-      weight = 41
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>ANSP View</span>"
-      url = "/dashboard/stakeholder/ansp/"
-      identifier = "key-stakeholder-ansp"
-      parent = "aiu"
-      weight = 43
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>FAB View</span>"
-      url = "/dashboard/stakeholder/fab/"
-      identifier = "key-stakeholder-fab"
-      parent = "aiu"
-      weight = 45 
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>State View</span>"
-      url = "/dashboard/stakeholder/state/"
-      identifier = "key-stakeholder-state"
-      parent = "aiu"
-      weight = 47
-  #----------------------
-  [[menu.main]]
-    pre = "<i class='fas fa-book'></i>"
-    name = "&nbsp;Publications"
-    url = "/publications/"
-    identifier = "key-publications"
-    parent = "aiu"
-    weight = 49
-  #----------------------
-  [[menu.main]]
-    pre = "<i class='fas fa-database'></i>"
-    name = "&nbsp;Data"
-    url = "/data/"
-    identifier = "key-data"
-    parent = "aiu"
-    weight = 50
-  #----------------------
-  [[menu.main]]
-    pre = "<i class='fas fa-hands-helping'></i>"
-    name = "&nbsp;Reference"
-    url = "/reference/"
-    identifier = "key-support"
-    parent = "aiu"
-    weight = 51
-  #  [[menu.main]]
-  #    pre = "&nbsp;&nbsp;&nbsp;"
-  #    name = " <span style='font-weight: normal'>Definitions</span>"
-  #    url = "/definition/"
-  #    identifier = "key-support-definitions"
-  #    parent = "aiu"
-  #    weight = 52
-  #  [[menu.main]]
-  #    pre = "&nbsp;&nbsp;&nbsp;"
-  #    name = " <span style='font-weight: normal'>Methodology</span>"
-  #    url = "/methodology/"
-  #    identifier = "key-support-methodology"
-  #    parent = "aiu"
-  #    weight = 53
-  #  [[menu.main]]
-  #    pre = "&nbsp;&nbsp;&nbsp;"
-  #    name = " <span style='font-weight: normal'>Acronyms</span>"
-  #    url = "/acronym/"
-  #    identifier = "key-support-acronyms"
-  #    parent = "aiu"
-  #    weight = 54
-  #----------------------
-  [[menu.main]]
-    pre = "<i class='fas fa-external-link-alt'></i>"
-    name = "&nbsp;External"
-    url = ""
-    identifier = "key-external"
-    parent = "aiu"
-    weight = 61
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Single European Sky Portal</span>"
-      url = "https://www.eurocontrol.int/prudata/dashboard/"
-      identifier = "key-external-ses"
-      parent = "aiu"
-      weight = 63
-    [[menu.main]]
-      pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>ICAO GANP</span>"
-      url = "https://www4.icao.int/ganpportal/"
-      identifier = "key-external-ganp"
-      parent = "aiu"
-      weight = 65
-
-
- [[menu.main]]
-    name = "About"
-    identifier= "about"
-    url = "/about/us/"
-    weight = 10
-   [[menu.main]]
-    name = "About the PRC"
-    url = "/about/prc/"
-    parent = "about"
-    identifier = "prc"   
-    weight = 1
-  [[menu.main]]
-    name = "About the PRU"
-    url = "/about/us/"
-    identifier = "pru"
-    parent = "about"
-    weight = 2
-  [[menu.main]]
-    name = "Release notes"
-    url = "/post/"
-    identifier = "release"
-    parent = "about"
-    weight = 3
-  [[menu.main]]
-    name = "Disclaimer"
-    url = "/about/disclaimer/"
-    identifier = "disclaimer"
-    parent = "about"
-    weight = 4
+      parent = "dashboard"
+      weight = 38 
 
   [[menu.main]]
-    name = "Areas"
-    identifier = "dashboard"
-    pre = ""
-    url = "/dashboard/"
-    weight = 15
-  [[menu.main]]
-    name = "Traffic"
-    url = "/traffic/"
-    identifier = "traffic"
-    parent = "dashboard"
-    weight = 1
-  [[menu.main]]
-    name = "Capacity & delays"
-    url = "/capacity/"
-    identifier = "capacity"
-    parent = "dashboard"
-    weight = 2
-  [[menu.main]]
-    name = "Efficiency & environment"
-    url = "/efficiency/"
-    identifier = "efficiency"
-    parent = "dashboard"
-    weight = 3
-  [[menu.main]]
-    name = "Economics"
-    url = "/economics/"
-    identifier = "economics"
-    parent = "dashboard"
-    weight = 4
-  [[menu.main]]
-    name = "divider3"
-    parent = "dashboard"
-    weight = 5
-  [[menu.main]]
-    name = "Transformation"
-    url = "/transformation/"
-    parent = "dashboard"
-    weight = 6
-
-  [[menu.main]]
-    name = "Views"
+    name = "Stakeholder Views"
     pre = ""
     url = "/dashboard/stakeholder/"
     identifier = "stakeholder"   
     weight = 20
   [[menu.main]]
-    name = "Airports"
+    pre = "<i class='fas fa-plane-arrival'></i>"
+    name = "&nbsp;Airports"
     url = "/dashboard/stakeholder/airport/"
     identifier = "Airport"
     parent = "stakeholder"
     weight = 1  
     [[menu.main]]
-    name = "Air Navigation Service Provider"
+    pre = "<i class='fas fa-compass'></i>"
+    name = "&nbsp;Air Navigation Service Provider"
     url = "/dashboard/stakeholder/ansp/"
     identifier = "Ansp"
     parent = "stakeholder"
     weight = 2
   [[menu.main]]
-    name = "Functional Airspace Block"
+    pre = "<i class='fas fa-layer-group'></i>"
+    name = "&nbsp;Functional Airspace Block"
     url = "/dashboard/stakeholder/fab/"
     identifier = "fab"
     parent = "stakeholder"
     weight = 3
   [[menu.main]]
-    name = "States"
+    pre = "<i class='fas fa-globe'></i>"
+    name = "&nbsp;States"
     url = "/dashboard/stakeholder/state/"
     identifier = "State"
     parent = "stakeholder"
     weight = 4
 
   [[menu.main]]
-    name = "Publications"
-    pre = ""
-    url = "/publications/"
-    identifier = "publications" 
-    weight = 30
-
-  [[menu.main]]
     name = "Data"
     pre = ""
     url = "/data/"
     identifier = "data" 
+    weight = 30
+
+  [[menu.main]]
+    name = "Publications"
+    pre = ""
+    url = "/publications/"
+    identifier = "publications" 
     weight = 40
 
   [[menu.main]]
@@ -429,29 +292,82 @@ ignoreFiles = [
     url = "/bibliography/"
     parent = "reference"
     weight = 5
-  [[menu.main]]
-    name = "divider2"
-    parent = "reference"
-    weight = 6
-  [[menu.main]]
-    name = "ICAO GANP"
-    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
-    url = "https://www4.icao.int/ganpportal/"
-    parent = "reference"
-    weight = 7
 
   [[menu.main]]
-    name = "SES"
-    identifier= "ses"
+    name = "Links"
+    identifier= "links"
     url = " "
     weight = 60
+  [[menu.main]]
+    name = "EUROCONTROL"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://www.eurocontrol.int/"
+    identifier = "ectl-link"
+    parent = "links"
+    weight = 1
   [[menu.main]]
     name = "Single European Sky (SES) Portal"
     post = " <i class='fas fa-xs fa-external-link-alt'></i>"
     url = "https://www.eurocontrol.int/prudata/dashboard/"
     identifier = "ses-link"
-    parent = "ses"
+    parent = "links"
+    weight = 2
+  [[menu.main]]
+    name = "ICAO GANP"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://www4.icao.int/ganpportal/"
+    identifier = "icao-ganp-link"
+    parent = "links"
+    weight = 3
+  [[menu.main]]
+    name = "Connectivity Dashboard"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://ext.eurocontrol.int/connectivity_web/from"
+    identifier = "connectivity-link"
+    parent = "links"
+    weight = 4
+  [[menu.main]]
+    name = "divider2"
+    parent = "links"
+    weight = 5
+  [[menu.main]]
+    name = "PRC Transformation Strategy"
+    url = "/transformation/"
+    parent = "links"
+    weight = 6
+  
+    
+ [[menu.main]]
+    name = "About"
+    identifier= "about"
+    url = "/about/us/"
+    weight = 70
+   [[menu.main]]
+    name = "About the PRC"
+    url = "/about/prc/"
+    parent = "about"
+    identifier = "prc"   
     weight = 1
+  [[menu.main]]
+    name = "About the PRU"
+    url = "/about/us/"
+    identifier = "pru"
+    parent = "about"
+    weight = 2
+  [[menu.main]]
+    name = "Release notes"
+    url = "/post/"
+    identifier = "release"
+    parent = "about"
+    weight = 3
+  [[menu.main]]
+    name = "Disclaimer"
+    url = "/about/disclaimer/"
+    identifier = "disclaimer"
+    parent = "about"
+    weight = 4
+    
+
 
 [[menu.traffic]]
     name = "Traffic Overview"
