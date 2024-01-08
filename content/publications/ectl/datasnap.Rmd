@@ -14,6 +14,23 @@ extrajs: [
 
 ## 2023
 
+<!-- #41 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Comparing airline flight and seat recovery - EUROCONTROL Data Snapshot #41][DS41]</h5>
+<small><strong><p style="color:#808080">Published: 21 December 2023</p></strong></small>
+The 41. EUROCONTROL Data Snapshot shows that the recovery of airline activity from COVID-19 can depend greatly on whether flights or seats are considered, which is linked to fleet evolution.<br><br>
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-41-comparing-airline-flight-and-seat-recovery" target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds41.png" alt="Comparing airline flight and seat recovery"></div>
+</div>
+</div></div>
+
+
 <!-- #40 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -783,3 +800,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS38]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-38-path-recovery-intra-european-and-intercontinental-flights "Path to recovery for intra-European and intercontinental flights"
 [DS39]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-39-ransomware-groups-targeting-aviations-supply-chain "Ransomware groups targeting aviation's supply chain"
 [DS40]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-40-taxi-times "Taxi times"
+[DS41]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-41-comparing-airline-flight-and-seat-recovery "Comparing airline flight and seat recovery"
