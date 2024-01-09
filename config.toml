@@ -108,21 +108,21 @@ ignoreFiles = [
     weight = 21
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>En-route ATFM delays</span>"
+      name = " <span style='font-weight: normal'>En-route ATFM Delays</span>"
       url = "/capacity/atfm_ert/"
       identifier = "key-enroute-atfm"
       parent = "dashboard"
       weight = 22
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Airport ATFM delays</span>"
+      name = " <span style='font-weight: normal'>Airport ATFM Delays</span>"
       url = "/capacity/atfm_apt/"
       identifier = "key-atfm-apt"
       parent = "dashboard"
       weight = 23
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>All-causes delays</span>"
+      name = " <span style='font-weight: normal'>All-causes Delays</span>"
       url = "/capacity/tot_dly/"
       identifier = "key-tot-dly"
       parent = "dashboard"
@@ -137,7 +137,7 @@ ignoreFiles = [
     weight = 25
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>CO<sub>2</sub> emissions</span>"
+      name = " <span style='font-weight: normal'>CO<sub>2</sub> Emissions</span>"
       url = "/efficiency/emissions/"
       identifier = "key-environment-emissions"
       parent = "dashboard"
@@ -210,7 +210,7 @@ ignoreFiles = [
       weight = 37
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>CBA</span>"
+      name = " <span style='font-weight: normal'>Cost-Benefit Analysis (CBA)</span>"
       url = "/economics/cba/"
       identifier = "key-economics-cba"
       parent = "dashboard"
@@ -276,23 +276,27 @@ ignoreFiles = [
   #  parent = "reference"
   #  weight = 1  
   [[menu.main]]
-    name = "Definitions"
+    pre = "<i class='fas fa-marker'></i>"
+    name = "&nbsp;Definitions"
     url = "/definition/"
     parent = "reference"
     weight = 2
   [[menu.main]]
-    name = "Methodology"
+    pre = "<i class='fas fa-wrench'></i>"
+    name = "&nbsp;Methodology"
     url = "/methodology/"
     identifier = "methodology"
     parent = "reference"
     weight = 3
   [[menu.main]]
-    name = "Acronyms"
+    pre = "<i class='fas fa-quote-left'></i>"
+    name = "&nbsp;Acronyms"
     url = "/acronym/"
     parent = "reference"
     weight = 4
   [[menu.main]]
-    name = "Bibliography"
+    pre = "<i class='fas fa-book'></i>"
+    name = "&nbsp;Bibliography"
     url = "/bibliography/"
     parent = "reference"
     weight = 5
@@ -422,7 +426,7 @@ ignoreFiles = [
     identifier= "overview"
     weight = 10
 [[menu.efficiency]]
-    name = "CO2 emissions"
+    name = "CO2 Emissions"
     url = "/efficiency/emissions"
     identifier= "emissions"
     weight = 15
