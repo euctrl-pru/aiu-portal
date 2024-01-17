@@ -21,6 +21,6 @@ This report is a factual high-level comparison of Air Navigation Services (ANS) 
 It is an update of the comparison of ANS operational performance trends published in 2018. It focuses on the period from January 2019 to December 2022.
 <br>
 
-<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/chneur" target="_blank" role="button">Learn more...</a>
+<a class="btn btn-primary btn-sm" href="/library/chn-eur-report-ops-ans-2024.pdf" target="_blank" role="button">Learn more...</a>
 </div>
 </div></div>
