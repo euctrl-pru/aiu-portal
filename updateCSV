@@ -105,9 +105,10 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   echo "Exporting ERT_DLY ansp ... done."
   
   echo "Exporting ERT_DLY fir ${ERT_DLY_WEF} ${TIL}..."
+  echo "**NOTE*: this takes quite a long time."
   Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL};
   echo "Exporting ERT_DLY fir ... done."
-  
+
   echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
   Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL};
   echo "Exporting APT_DLY ... done"
