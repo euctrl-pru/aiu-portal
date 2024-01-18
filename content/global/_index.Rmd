@@ -9,11 +9,11 @@ EUROCONTROL PRU is engaged in a series of international comparison projects.
 
 *	Singapore, Japan, Thailand, Brazil, United States, Europe - Under the umbrella of a tri-partite benchmarking, Singapore CAA, FAA, and EUROCONTROL prepared a first joint internal report in 2017. The scope of this initial study comprised Changi airport and a set of comparable airports in the US and Europe. Japan and Thailand have subsequently joined this project. As of 2020 Brazil is also participating to this multi-regional project. The parties cooperate on the basis of the operational ICAO GANP KPIs harmonising the common understanding of data and analytical concepts. Technical papers about the multi-regional comparison have been presented to ICAO Asia-Pacific over the past years and to the ICAO ANS Conference 13 (summer 2018). An update of the internal report is planned for 2021. Work is also on-going on a COVID related public briefing.  
 
-*	In collaboration with the Chinese Civil Aviation Authority and Civil Aviation University work on an initial comparison was completed in December 2021 with a view to update the bi-regional comparison on a regular basis. The work revolves around a subset of mutually agreed indicators on the basis of the operational ICAO GANP indicators.
+*	In collaboration with the Chinese Civil Aviation Authority and Civil Aviation University work on an initial comparison was completed in December 2021 with a view to update the bi-regional comparison on a regular basis. The work revolves around a subset of mutually agreed indicators on the basis of the operational ICAO GANP indicators. A second report completed in January 2024, it is an extension and update of the initial report.
 
 *	A further benchmarking activity has been launched with Brazil (DECEA) and revolves around assessing the operational ANS performance at airports and en-route airspace capacity. The publication of the initial comparison report is foreseen during the first half of 2021.
 
-::: {class="col-sm-6"}
+::: {class="col-sm-10"}
 :::: {class="container"}
 ::::: {class="row"}
 :::::: {class="card-deck"}
@@ -27,12 +27,12 @@ blogdown::shortcode(
   text="Our collaboration with Brazil.", 
   alt="Brazil", 
   command="Resize", 
-  options="300x", 
+  options="600x", 
   class="mb-2"
   )
 ```
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
   img="flag_of_china.png",

@@ -217,6 +217,8 @@ For feedback or questions please contact us at:
 
 <div class="carousel-item active"><div class="card  border-0"><a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405" target="_blank"><img class="card-img-top" src="/images/landing/eurocontrol-data.png" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL DATA mobile application released </h5></a><small><p class="card-text">Download our new EUROCONTROL DATA app (on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play</a>) to access our unique aviation data.</p></small></div></div></div>
 
+<div class="carousel-item active"><div class="card  border-0"><a href="/global/china/" target="_blank"><img class="card-img-top" src="/images/landing/CHN-EUR-Biregional-Report.png" alt=""><div class="card-body"><h5 class="card-title">China/Europe Bi-Regional Report Published</h5></a><small><p class="card-text"> Read more about the China/Europe Comparison of Operational ANS Performance.</p></small></div></div></div>
+
 <div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-41-comparing-airline-flight-and-seat-recovery" target="_blank"><img class="card-img-top" src="/images/landing/ds41.jpg" alt=""><div class="card-body"><h5 class="card-title">Data snapshot #41: Comparing airline flight and seat recovery</h5></a><small><p class="card-text">
 Learn more about airline flight and seat recovery in the new data snapshot. </p></small></div></div></div>
 
