@@ -5,8 +5,13 @@
   <ul class="sidenav-links">
     {{ $currentPage := . }}
     {{ range .Site.Menus.economics }}
-      <li class="">
-        <a href="{{ .URL }}" id="{{ .Identifier }}-item" aria-controls="{{ .Identifier }}" aria-selected='{{ if $currentPage.IsMenuCurrent "economics" . }}true{{ else}}false{{end}}'>{{ .Pre }}<span>{{ .Name }}</span></a>
+      <li>
+        <!-- Add trailing slash for consistent comparison -->
+        {{ $currentURL := printf "%s/" $currentPage.RelPermalink | strings.TrimRight "/" }}
+        {{ $menuURL := printf "%s/" .URL | strings.TrimRight "/" }}
+        <a href="{{ .URL }}" id="{{ .Identifier }}-item" class="{{ if eq $currentURL $menuURL }}active{{ end }}">
+          {{ .Pre }}<span>{{ .Name }}</span>
+        </a>
       </li>
     {{ end }}
   </ul>

@@ -6,14 +6,18 @@
     {{ $currentPage := . }}
     {{ range .Site.Menus.efficiency }}
       <li>
-        <!-- Determine if the menu item is the current page -->
-        {{ $isActive := or (eq $currentPage.RelPermalink .URL) (eq $currentPage.URL .URL) }}
-        <a href="{{ .URL }}" id="{{ .Identifier }}-item" aria-controls="{{ .Identifier }}" 
-           class="{{ if $isActive }}active{{ end }}">
+        <!-- Add trailing slash for consistent comparison -->
+        {{ $currentURL := printf "%s/" $currentPage.RelPermalink | strings.TrimRight "/" }}
+        {{ $menuURL := printf "%s/" .URL | strings.TrimRight "/" }}
+        <a href="{{ .URL }}" id="{{ .Identifier }}-item" class="{{ if eq $currentURL $menuURL }}active{{ end }}">
           {{ .Pre }}<span>{{ .Name }}</span>
         </a>
       </li>
     {{ end }}
   </ul>
 </nav>
+
+
+
+
 
