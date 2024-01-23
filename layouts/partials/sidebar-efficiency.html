@@ -1,11 +1,19 @@
+<link rel="stylesheet" href="/custom_css/sidebar-style.css">
+
 <!-- sidebar start -->
 <nav class="sidenav">
   <ul class="sidenav-links">
     {{ $currentPage := . }}
     {{ range .Site.Menus.efficiency }}
-      <li class="">
-        <a href="{{ .URL }}" id="{{ .Identifier }}-item" aria-controls="{{ .Identifier }}" aria-selected='{{ if $currentPage.IsMenuCurrent "efficiency" . }}true{{ else}}false{{end}}'>{{ .Pre }}<span>{{ .Name }}</span></a>
+      <li>
+        <!-- Determine if the menu item is the current page -->
+        {{ $isActive := or (eq $currentPage.RelPermalink .URL) (eq $currentPage.URL .URL) }}
+        <a href="{{ .URL }}" id="{{ .Identifier }}-item" aria-controls="{{ .Identifier }}" 
+           class="{{ if $isActive }}active{{ end }}">
+          {{ .Pre }}<span>{{ .Name }}</span>
+        </a>
       </li>
     {{ end }}
   </ul>
 </nav>
+
