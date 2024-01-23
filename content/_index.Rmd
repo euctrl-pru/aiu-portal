@@ -37,6 +37,7 @@ date: "2018-02-07T11:26:51+01:00"
     font-weight: bold;  
     text-align: left;
     color: #0070c0; 
+    
   }
 
 
@@ -45,17 +46,20 @@ date: "2018-02-07T11:26:51+01:00"
   padding: 0px;
   text-align: right;
 }
+.w3-container {
+  border-radius: 10px; 
+}
 
   </style>
 
 <!-- Daily traffic graphs and scorecards Scorecard_net-->
-<div class="w3-container">
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+<div class="w3-container" >
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 10px 10px 0 0; width: 100%;">
 <div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div></div>
 </div>
 
 <div class="w3-container">
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0 010px 10px; width: 100%;">
 
 <div class="col">
   <p class="Scorecard_subt">Total flights</p>
