@@ -1,0 +1,46 @@
+/* Sidebar Navigation Styling */
+.sidenav {
+    background-color: #d9e1f2; /* Slightly darker grey background */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners for the whole sidebar */
+    font-family: Arial, sans-serif; /* Change the font-family as per your preference */
+    margin-bottom: 15px; /* Space below the box */
+}
+
+.sidenav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav-links a {
+    display: block;
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary blue, change as needed */
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners for each button */
+    border: 2px solid transparent; /* Transparent border makes sure the layout doesn't change on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-align: left; /* Align text to the left */
+}
+
+.sidenav-links a:hover, .sidenav-links a[aria-selected='true'] {
+    background-color: #007bff; /* Bootstrap primary blue, change as needed */
+    color: white; /* White text on hover/active */
+    border-color: #0056b3; /* Darker blue border for a slight 3D effect */
+    text-decoration: none; /* No underline on hover */
+}
+
+/* Highlighting the current page's button */
+.sidenav-links a.active {
+    background-color: #0056b3; /* Darker blue for the active page */
+    color: white;
+    border-color: #003580; /* Even darker blue for the border */
+}
+
+.sidenav-links li::before {
+    content: none; /* This will remove the '|' or any content added before each li */
+}
+
+/* Responsive adjustments can be added here if necessary */
