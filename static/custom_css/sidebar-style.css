@@ -18,7 +18,7 @@
     text-decoration: none;
     color: #007bff; /* Bootstrap primary blue, change as needed */
     background-color: white;
-    padding: 5px 10px;
+    padding: 5px; /* 5px padding on each side */
     border-radius: 5px; /* Rounded corners for each button */
     border: 2px solid transparent; /* Transparent border makes sure the layout doesn't change on hover */
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
