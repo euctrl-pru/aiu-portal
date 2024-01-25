@@ -8,6 +8,24 @@ The cooperation started back in 2003. As of 2013, the cooperation is framed by A
 
 The overall objective is to make a factual high-level comparison of Air Traffic Management performance between the U.S. and Europe with a view to its economic and operational performance. The work is based on a set of comparable performance indicators, developed jointly and reviewed year after year, creating a sound basis for factual comparisons between countries and world regions. The specific Key Performance Indicators (KPIs) are based on best practices from both the Air Traffic Organization System Operations Services and the Performance Scheme of the Single European Sky initiative and EUROCONTROL’s Performance Review System.
 
+## 2024
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-2">
+<div class="card border-0"><img class="card-img-top" src="/images/global/us_eur_2024.png" alt="U.S.-Europe comparison of Air Traffic Management related operational and economic performance"></div>
+</div>
+<div class="col-sm-10"> 
+<h5>U.S.-Europe comparison of Air Traffic Management related operational and economic performance</h5>
+<small><strong><p style="color:#808080">Published: 25 January 2024</p></strong></small>
+
+This report is the eighth in a series of comparisons between the U.S. and Europe.
+
+The report looks at the operational and economic ATM performance in both systems since the outbreak of the pandemic in 2020. Where appropriate, it also follows up on longer term trends and differences in ATM performance between the U.S. and Europe, identified in previous reports.
+
+<br>
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/comparison-air-traffic-management-related-operational-and-economic-performance" target="_blank" role="button">Learn more...</a>
+</div>
+</div></div>
 
 ## 2021
 <div class="container alert alert-secondary">
