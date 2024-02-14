@@ -6,6 +6,22 @@ tags:  PRC Performance Insights
 
 ---
 
+## 2024
+<!-- PI#8 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9"> 
+<h5>[PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination][PI8]</h5>
+<small><strong><p style="color:#808080">Published: 14 Feb 2024</p></strong></small>
+    
+The objective of this PRC Performance Insight edition is to identify ATM performance benefit pools for improved civil-military cooperation and coordination in Europe.<br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres"  target="_blank"><img src="/images/pi/prc_pi8.png" alt="PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination" style="width:100%"></a></div>
+</div>
+</div></div>
 
 ## 2023
 
@@ -134,4 +150,5 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 [PI5]: https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data "Performance Insight #5 - Open performance data - An enabler to further performance enhancements?"
 [PI6]: https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe "Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe"
 [PI7]: https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres "PRC Performance Insight #7 - Reorganising ATS with Virtual Centres"
+[PI8]: https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres "PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination"
 
