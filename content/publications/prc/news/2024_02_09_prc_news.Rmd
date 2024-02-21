@@ -1,0 +1,40 @@
+---
+title: "Florence School of Regulation Policy Brief on PRC transformation workshop #2"
+type: "PRC Transformation Support Strategy"
+date: "2024-02-09"
+excerpt: "PRC Transformation Support Strategy"
+bibliography: ["../../../../static/bib/aviation.bib"]
+link-citations: true
+dwnld_i: <i class="fa pru fa-download"></i>
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+<br>
+<div class="container">
+
+<div class="row align-items-start">
+
+<div class="col-sm-8">
+To meet the challenges of the future, the successful and targeted deployment of agreed transformation steps is required. 
+
+With the aim of identifying, reviewing and championing successful transformation projects based on the ATM Master Plan and the European Green Deal, the EUROCONTROL [Performance Review Commission (PRC)](/about/prc/) has produced a <a href="/transformation/">Transformation Support Strategy</a>. 
+
+The PRC aims to identify flagship projects, monitor their performance over time, help stakeholders understand the challenges involved in implementing these innovative transformational projects and the resulting benefits, and thus stimulate and encourage improvements in ATM. 
+
+In order to involve key stakeholders in this process, in February 2023 the PRC, together with the Florence School of Regulation Transport Area, hosted a first workshop entitled "<a href="https://ansperformance.eu/publications/prc/news/2023_05_16_prc_news/">In search of flagships for ATM transformation</a>". In this workshop a series of disruptive, innovative and potentially scalable flagships were identified pertaining to virtual centres, optimal routing, time- and distance-based separation, remote towers and airport operation centres.
+
+In November 2023, the PRC organised a second workshop entitled **ATM transformation flagships – continuing the journey** with the aim to determine more precisely each flagship´s impact on performance, identify the factors preventing flagships from delivering their full result and identifying new possible flagships.
+
+This policy brief summarises the main takeaways from the 2nd workshop discussions.
+
+</div>
+
+<div class="col-sm-4">
+<div class="card border-0"><a href="https://cadmus.eui.eu/handle/1814/76498" target= "blank" class="btn btn-secondary" role="button">
+<img class="card-img-top" src="/images/prc/pb_fsr_ws2.png" alt="Policy Brief - Florence School of Regulation Observer">Download the report</a> 
+</div></div>
+
+</div>
+</div>
