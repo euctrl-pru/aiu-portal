@@ -98,7 +98,7 @@ date: "2018-02-07T11:26:51+01:00"
 
 <script type="text/javascript">
 async function fetchLatestNetworkSituation() {
-    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&limit=1';
+    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {

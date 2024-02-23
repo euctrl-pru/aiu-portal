@@ -97,7 +97,7 @@ Avg. daily flights
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 async function fetchLatestNetworkSituation() {
-    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&limit=1';
+    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
