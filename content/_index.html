@@ -56,7 +56,9 @@ date: "2018-02-07T11:26:51+01:00"
 <!-- Daily traffic graphs and scorecards Scorecard_net-->
 <div class="w3-container">
 <div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 10px 10px 0 0; width: 100%;">
-<div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div>
+<div class="col-12"; style="margin: 0px; ">
+<p style="font-weight: bold; color: #0070c0;">Latest network traffic situation: <span id="y2d_day_text">N/A</span></p>
+</div>
 </div>
 </div>
 <div class="w3-container">
@@ -66,6 +68,7 @@ date: "2018-02-07T11:26:51+01:00"
 Total flights
 </p>
 <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">
+N/A
 </p>
 </div>
 <div class="col">
@@ -120,7 +123,7 @@ async function updateNetworkSituationOnPage() {
         const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
         const dateRangeString = `${startDateString} – ${endDateString}`;
         // Update webpage elements with the latest data, rounding numbers to integers
-        document.getElementById("y2d_day_text").innerHTML = "Latest network traffic situation: " + dateRangeString;
+        document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString;
         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
         document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
         document.getElementById("dif_y2d_2019").innerHTML = Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%';
