@@ -73,8 +73,7 @@ data <- data %>%
     TZ = ifelse(TZ=='Bosnia and Herzego',"Bosnia and Herzegovina", TZ),
     DAIO = DAIO, 
     Yr = as.integer(Yr),
-    mvts = mvts) |> 
-  filter(TZ != 'Ukraine')
+    mvts = mvts)
 
 # Read CSV data and select required columns
 filtered_data <- data %>%
@@ -278,23 +277,7 @@ plot <-
 # Configure the plot to show only the screenshot option
 plot <-
   plot %>% config(
-    displayLogo = FALSE,
-    displayModeBar = "hover",
-    modeBarButtonsToRemove = list(
-      "zoom2d",
-      "logo",
-      "pan2d",
-      "select2d",
-      "lasso2d",
-      "zoomIn2d",
-      "zoomOut2d",
-      "autoScale2d",
-      "resetScale2d",
-      "toggleSpikelines",
-      "hoverClosestCartesian",
-      "hoverCompareCartesian",
-      "sendDataToCloud"
-    )
+    displayModeBar = FALSE
   )
 
 # Render and save the plots 
