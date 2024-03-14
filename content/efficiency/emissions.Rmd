@@ -71,15 +71,20 @@ export_query <- function(schema, query) {
 }
 
 query <- str_glue("
-    SELECT *
-      FROM TABLE (emma_pub.api_aiu_stats.MM_AIU_STATE_DEP ())
+    SELECT a.*,
+      case when state_code = 'LT' then 'TURKIYE'
+        else state_name
+      end state_name_mod
+      FROM TABLE (emma_pub.api_aiu_stats.MM_AIU_STATE_DEP ()) a
       where year >= 2019 and STATE_NAME not in ('LIECHTENSTEIN')
     ORDER BY 2, 3, 4
    ")
 
 
-co2_data_raw <- export_query("PRU_DEV", query = query)%>%
-  mutate(across(.cols = where(is.instant), ~ as.Date(.x)))
+co2_data_raw <- export_query("PRU_DEV", query = query) %>%
+  mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>% 
+  mutate(STATE_NAME = STATE_NAME_MOD) %>% 
+    select(-STATE_NAME_MOD)
 
 co2_data_plot_nw <- co2_data_raw %>%
   select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH)%>%
