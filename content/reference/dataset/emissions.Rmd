@@ -30,14 +30,29 @@ A flight from New York to Brussels would however NOT be included in the results 
 
 ## Column naming and types
 
-| Column name    | Description              | Example |
-|----------------|--------------------------|---------|
-| YEAR           | Year                     | 2019    |
-| MONTH          | Month                    | 1       |
-| STATE_NAME     | State Name               | ALBANIA |
-| STATE_CODE     | State Code               | LA      |
-| CO2_QTY_TONNES | CO2 Qty (for that state) | 8318.42 |
-| TF             | traffic (for that state) | 821     |
+| Column name    | Description              | Example | Note |
+|----------------|--------------------------|---------|------|
+| YEAR           | Year                     | 2019    |      |
+| MONTH          | Month                    | 1       |      |
+| STATE_NAME     | State Name               | ALBANIA |For Excel, see META  sheet for presence of * |
+| STATE_CODE     | State Code               | LA      |      |
+| CO2_QTY_TONNES | CO2 Qty (for that state) | 8318.42 |      |
+| TF             | traffic (for that state) | 821     |      |
+| NOTE           | TRUE/FALSE for note      | TRUE    |Only in CSV |
+
+Certain States' emissions have been aggregated specially:
+
+* for the Excel file the STATE_NAME is marked with a '*' and the relevant info can be found in the META sheet.
+* for CSV files an extra column NOTE has been added to note the special treatment (TRUE)
+  - UNITED KINGDOM includes emissions for JERSEY, GUERNESEY, ISLE OF MAN
+  - CYPRUS includes emissions for UK Sovereign Military bases on the island.
+  - NORWAY includes emissions for Jan Mayen and Slavbarden.
+  - DANEMARK includes emissions for FAROE ISLANDS.
+  - PORTUGAL includes emissions for Azores and Madeira.
+  - SPAIN does NOT included emissions for Canary Islands which are under 'CANARY ISLANDS'.
+  - FRANCE emissions do NOT include those for French overseas territories.
+
+
 
 
 
