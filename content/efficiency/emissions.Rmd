@@ -263,10 +263,10 @@ co2_data_plot_state <- co2_data_raw %>%
          MOM_GROWTH_TF = if_else(YEAR == last_year, TF/lag(TF, 12*(last_year-2019))-1,NA))%>%
   filter(FLIGHT_MONTH ==last_date)%>%
   select(STATE_NAME, CO2_QTY_TONNES, TF, MOM_GROWTH_CO2, MOM_GROWTH_TF)%>%
-  mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
-  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE))%>%
-  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE))%>%
-  mutate(STATE_NAME = gsub("TüRkiye", "Türkiye",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = str_to_title(STATE_NAME)) %>% 
+  # mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
+  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE)) %>%
+  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE)) %>% 
   # mutate(CO2_DEP = ifelse(TF!=0,CO2_QTY_TONNES/TF,0))%>%
   # mutate(CO2_DEP_2019 = ifelse(TF!=0, CO2_QTY_TONNES/TF *(MOM_GROWTH_TF+1)/(MOM_GROWTH_CO2+1), 0))%>%
   # mutate(MOM_GROWTH_CO2_DEP = ifelse(CO2_DEP_2019!=0, CO2_DEP/CO2_DEP_2019-1, 0))%>%
