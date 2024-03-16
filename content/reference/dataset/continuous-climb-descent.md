@@ -19,28 +19,6 @@ in the relevant [methodology page][cdo_cco_meth].
 
 ## Column naming and types
 
-#' * NBR_FLIGHTS_DESCENT: the number of arriving flights
-#' * TOT_DIST_LEVEL_NM_DESCENT: total distance flown level during descent (nautical miles)
-#' * TOT_DIST_LVL_NM_DESC_BLW_70: total distance flown level during descent below FL075 (nautical miles)
-#' * TOT_TIME_LEVEL_SECONDS_DESCENT: total time flown level during descent (seconds)
-#' * TOT_TIME_LEVEL_SEC_DESC_BLW_70: total time flown level during descent below FL075 (seconds)
-#' * MEDIAN_CDO_ALT: median CDO altitude (feet)
-#' * NBR_CDO_FLIGHTS: the number of flights that are considered CDO during the whole descent (and don't have any considered level flight)
-#' * NBR_CDO_FLIGHTS_BELOW_7000: the number of flights that are considered CDO below FL075 (and don't have any considered level flight below FL075)
-#' * TOT_DELTA_CO2_KG_DESCENT: total delta of CO2 (kg) resulting from the time flown level in descent
-#' * TOT_DELTA_CO2_KG_DESC_BLW_70: total delta of CO2 (kg) resulting from the time flown level below FL075 in descent
-#' * NBR_FLIGHTS_CLIMB: the number of departing flights
-#' * TOT_DIST_LEVEL_NM_CLIMB: total distance flown level during climb (nautical miles)
-#' * TOT_DIST_LVL_NM_CLIMB_BLW_100: total distance flown level during climb below FL105 (nautical miles)
-#' * TOT_TIME_LEVEL_SECONDS_CLIMB: total time flown level during climb (seconds)
-#' * TOT_TIME_LVL_SEC_CLIMB_BLW_100: total time flown level during climb below FL105 (seconds)
-#' * MEDIAN_CCO_ALT: median CCO altitude (feet)
-#' * NBR_CCO_FLIGHTS: the number of flights that are considered CCO during the whole climb (and don't have any considered level flight)
-#' * NBR_CCO_FLIGHTS_BELOW_10000: the number of flights that are considered CCO below FL105 (and don't have any considered level flight below FL105)
-#' * TOT_DELTA_CO2_KG_CLIMB: total delta of CO2 (kg) resulting from the time flown level in climb
-#' * TOT_DELTA_CO2_KG_CLIMB_BLW_100: total delta of CO2 (kg) resulting from the time flown level below FL075 in climb
-#' * AIRPORT_NAME: the airport name and ICAO code
-
 
 
 | Column name |	Data source |	Label	| Column description | Example |
