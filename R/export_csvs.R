@@ -81,3 +81,16 @@ ss |>
     na = ""),
     .keep = TRUE)
 
+
+export_horizontal_flight_efficiency(wef = "2024-01-01") -> hh
+hh |>
+  arrange(YEAR, MONTH_NUM, ENTRY_DATE, ENTITY_NAME, ENTITY_TYPE, TYPE_MODEL) |>
+  group_by(YEAR) |> 
+  group_walk(~ write_csv(
+    .x, 
+    fs::path(dest_dir_root,
+             dest_folder ,
+             stringr::str_glue("horizontal_flight_efficiency_{YYYY}.csv", YYYY = .y$YEAR)),
+    na = ""),
+    .keep = TRUE)
+
