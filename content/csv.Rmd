@@ -7,11 +7,15 @@ title: Datasets in CSV format
 source(here::here("_common.R"))
 ```
 
-PRU provides some relevant datasets in CSV format (compressed using [bzip2][bzip2]):
+PRU provides some relevant datasets in CSV format (sometimes compressed using [bzip2][bzip2]):
 
 The filename convention we adopted is as follows:
 
 > `<dataset group>_<YYYY>.csv.bz2`
+
+or
+
+> `<dataset group>_<YYYY>.csv`
 
 where
 > `<dataset group> = <dataset>_<group>`

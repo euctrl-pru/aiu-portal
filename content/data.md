@@ -32,7 +32,7 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 | Monthly CO2 emissions by State<br><small>supplied by the [EUROCONTROL Aviation Sustainability Unit][ENV]</small>  | {{< getdata "dwnld" "co_opt_beg" >}} - {{< getdata "dwnld" "co_opt_end" >}}  | [{{< dwnld_i >}}][COxlsx]  |               | [{{< info_i >}}][COmeta] |                                    |
 
 [COxlsx]: https://www.eurocontrol.int/performance/data/download/xls/CO2_emissions_by_state.xlsx "CO2 (Excel)"
-[COcsv]:  /404/ "CO2 (CSV)"
+[COcsv]:  {{< relref "csv.md" >}} "CO2 (CSV)"
 [COmeta]: /reference/dataset/emissions/ "CO2 (Meta)"
 [ENV]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
 
@@ -59,7 +59,7 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 [ERT-DLY-FIR-meta]: /reference/dataset/en-route-atfm-delay-fir/ "ERT-DLY (Meta)"
 
 [HFExlsx]: https://www.eurocontrol.int/performance/data/download/xls/Horizontal_Flight_Efficiency.xlsx "HFE (Excel)"
-[HFEcsv]: {{< relref "csv.md" >}} "CSV files"
+[HFEcsv]: {{< relref "csv.md" >}} "HFE (CSV)"
 [HFEmeta]: /reference/dataset/horizontal-flight-efficiency/ "HFE (Meta)"
 
 [DefAUA]: /acronym/aua/ "AUA definition"
@@ -122,7 +122,7 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 [TX-INmeta]: /reference/dataset/taxi-in-additional-time/ "TX-IN (Meta)"
 
 [CDOxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Vertical_Flight_Efficiency_cdo_cco.xlsx "CDO/CCO (Excel)"
-[CDOcsv]:  /404/ "CDO/CCO (CSV)"
+[CDOcsv]:  {{< relref "csv.md" >}} "CDO/CCO (CSV)"
 [CDOmeta]: /reference/dataset/continuous-climb-descent/ "CDO/CCO (Meta)"
 
 [TX-Stdxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi_times_Planning_Data_S14_S22.xlsx "TX-Std (Excel)"
@@ -131,12 +131,14 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 [coda]: /capacity/tot_dly/ "Coda"
 
 [ATC-PRExlsx]: https://www.eurocontrol.int/performance/data/download/xls/ATC_Pre-Departure_Delay.xlsx "ATC-PRE (Excel)"
+[ATC-PREcsv]:  {{< relref "csv.md" >}} "ATC-PRE (CSV)"
 [ATC-PREmeta]: /reference/dataset/atc-pre-departure-delay/  "ATC-PRE (Meta)"
 
 [ALL-PRExlsx]: https://www.eurocontrol.int/performance/data/download/xls/All_Pre-Departure_Delay.xlsx "All-PRE (Excel)"
 [ALL-PREmeta]: /reference/dataset/all-pre-departure-delay/  "All-PRE (Meta)"
 
 [SLT-ADHxlsx]: https://www.eurocontrol.int/performance/data/download/xls/ATFM_Slot_Adherence.xlsx "SLT-ADH (Excel)"
+[SLT-ADHcsv]:  {{< relref "csv.md" >}} "SLT-ADH (CSV)"
 [SLT-ADHmeta]: /reference/dataset/atfm-slot-adherence/ "SLT-ADH (Meta)"
 
 
