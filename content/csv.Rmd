@@ -41,6 +41,18 @@ The available data sets are:
   ```{r echo = FALSE, message = FALSE, warning = FALSE}
   gt_for_csvs("vertical_flight_efficiency_\\d{4}.csv")
   ```
+* Taxi-in Additional Time (from 2018), `<dataset group>`=`taxi_in_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("taxi_in_additional_time_\\d{4}.csv")
+  ```
+* Taxi-out Additional Time (from 2018), `<dataset group>`=`taxi_out_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("taxi_out_additional_time_\\d{4}.csv")
+  ```
+* ASMA Additional Time (from 2018), `<dataset group>`=`asma_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("asma_additional_time_\\d{4}.csv")
+  ```
 
 
 ## Legacy CSVs

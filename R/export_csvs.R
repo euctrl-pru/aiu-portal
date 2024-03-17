@@ -149,8 +149,8 @@ oo |>
 
 
 #---------- taxi-in additional time ----
-export_taxi_in_additional_time(wef = "2018-01-01") -> oo
-oo |>
+export_taxi_in_additional_time(wef = "2018-01-01") -> ii
+ii |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -163,8 +163,8 @@ oo |>
 
 
 #---------- asma additional time ----
-export_asma_additional_time(wef = "2018-01-01") -> oo
-oo |>
+export_asma_additional_time(wef = "2018-01-01") -> ss
+ss |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(

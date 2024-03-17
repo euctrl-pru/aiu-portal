@@ -79,10 +79,10 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 | Airport traffic<br><small> Daily IFR arrivals and departures by airport</small>                                                                                                                  | {{< getdata "dwnld" "apt_flt_beg" >}} - {{< getdata "dwnld" "apt_flt_end" >}}           | [{{< dwnld_i >}}][APT-FLTxlsx]      |                                | [{{< info_i >}}][APT-FLTmeta]   |                                    |
 | Airport arrival ATFM delays - <em> (no post ops adjustments)</em><br><small> Daily IFR arrivals and airport arrival [ATFM delay][ATFMdelay] by airport and delay category</small>                | {{< getdata "dwnld" "apt_dly_beg" >}} - {{< getdata "dwnld" "apt_dly_end" >}}           | [{{< dwnld_i >}}][APT-DLYxlsx]      | [{{< dwnld_i >}}][APT-DLYcsv]  | [{{< info_i >}}][APT-DLYmeta]   | [KPI 12][ganp12]                   |
 | Airport arrival ATFM delays - <em> [(with post ops adjustments)][PostOps]</em><br><small> Monthly IFR arrivals and airport arrival [ATFM delay][ATFMdelay] by airport and delay category</small> | {{< getdata "dwnld" "apt_dly_post_beg" >}} - {{< getdata "dwnld" "apt_dly_post_end" >}} | [{{< dwnld_i >}}][APT-DLY-postxlsx] |                                | [{{< info_i >}}][APT-DLYmeta]   | [KPI 12][ganp12]                   |                               |
-|<span style="color:#C0504D;">NEW methodology:</span> Arrival Sequencing and Metering (ASMA) additional time<br><small> Monthly [ASMA additional][ASMAadditional] time</small>                     | {{< getdata "dwnld" "asma_beg" >}} - {{< getdata "dwnld" "asma_end" >}}                 | [{{< dwnld_i >}}][ASMAxlsx]         |                                | [{{< info_i >}}][ASMAmeta]      | [KPI 08][ganp08]                   |
+|<span style="color:#C0504D;">NEW methodology:</span> Arrival Sequencing and Metering (ASMA) additional time<br><small> Monthly [ASMA additional][ASMAadditional] time</small>                     | {{< getdata "dwnld" "asma_beg" >}} - {{< getdata "dwnld" "asma_end" >}}                 | [{{< dwnld_i >}}][ASMAxlsx]         | [{{< dwnld_i >}}][ASMAcsv]     | [{{< info_i >}}][ASMAmeta]      | [KPI 08][ganp08]                   |
 | Vertical flight efficiency - Continuous climb and descent operations<br><small> Monthly continuous climb and descent data including CO<sub>2</sub> emissions</small>                             | {{< getdata "dwnld" "cdo_beg" >}} - {{< getdata "dwnld" "cdo_end" >}}                   | [{{< dwnld_i >}}][CDOxlsx]          | [{{< dwnld_i >}}][CDOcsv]      | [{{< info_i >}}][CDOmeta]       | [KPI 17][ganp17], [KPI 19][ganp19] |
-|<span style="color:#C0504D;">NEW methodology:</span> Taxi-out additional time<br><small> Monthly [taxi out additional][TX-OUTadditional] time</small>                                             | {{< getdata "dwnld" "tx_out_beg" >}} - {{< getdata "dwnld" "tx_out_end" >}}             | [{{< dwnld_i >}}][TX-OUTxlsx]       |                                | [{{< info_i >}}][TX-OUTmeta]    | [KPI 02][ganp02]                   |
-|<span style="color:#C0504D;">NEW methodology:</span> Taxi-in additional time<br><small> Monthly [taxi in additional][TX-INadditional] time</small>                                                | {{< getdata "dwnld" "tx_in_beg" >}} - {{< getdata "dwnld" "tx_in_end" >}}               | [{{< dwnld_i >}}][TX-INxlsx]        |                                | [{{< info_i >}}][TX-INmeta]     | [KPI 13][ganp13]                   |
+|<span style="color:#C0504D;">NEW methodology:</span> Taxi-out additional time<br><small> Monthly [taxi out additional][TX-OUTadditional] time</small>                                             | {{< getdata "dwnld" "tx_out_beg" >}} - {{< getdata "dwnld" "tx_out_end" >}}             | [{{< dwnld_i >}}][TX-OUTxlsx]       | [{{< dwnld_i >}}][TX-OUTcsv]   | [{{< info_i >}}][TX-OUTmeta]    | [KPI 02][ganp02]                   |
+|<span style="color:#C0504D;">NEW methodology:</span> Taxi-in additional time<br><small> Monthly [taxi in additional][TX-INadditional] time</small>                                                | {{< getdata "dwnld" "tx_in_beg" >}} - {{< getdata "dwnld" "tx_in_end" >}}               | [{{< dwnld_i >}}][TX-INxlsx]        | [{{< dwnld_i >}}][TX-INcsv]    | [{{< info_i >}}][TX-INmeta]     | [KPI 13][ganp13]                   |
 | Taxi-time planning values<br><small> Taxi time planning values, by IATA season for airline schedulers supplied by [CODA][coda]</small>                                                           | {{< getdata "dwnld" "tx_std_beg" >}} - {{< getdata "dwnld" "tx_std_end" >}}             | [{{< dwnld_i >}}][TX-Stdxlsx]       |                                | [{{< info_i >}}][TX-Stdmeta]    |                                    |
 | ATC pre-departure delays<br><small> Daily [ATC pre-departure delay][ATCpredepdelay] by airport</small>                                                                                           | {{< getdata "dwnld" "atc_pre_beg" >}} - {{< getdata "dwnld" "atc_pre_end" >}}           | [{{< dwnld_i >}}][ATC-PRExlsx]      | [{{< dwnld_i >}}][ATC-PREcsv]  | [{{< info_i >}}][ATC-PREmeta]   |                                    |
 | Total pre-departure delays<br><small> Daily total pre-departure delay by airport (all causes)</small>                                                                                            | {{< getdata "dwnld" "all_pre_beg" >}} - {{< getdata "dwnld" "all_pre_end" >}}           | [{{< dwnld_i >}}][ALL-PRExlsx]      | [{{< dwnld_i >}}][ALL-PREcsv]  | [{{< info_i >}}][ALL-PREmeta]   |                                    |
@@ -107,18 +107,18 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 
 [ASMAxlsx]: https://www.eurocontrol.int/performance/data/download/xls/ASMA_Additional_Time.xlsx "ASMA (Excel)"
 [ASMA_o_xlsx]: https://www.eurocontrol.int/performance/data/download/xls/ASMA_Additional_Time_old.xlsx "ASMA (Excel)"
-[ASMAcsv]: /404/ "ASMA (CSV)"
+[ASMAcsv]: {{< relref "csv.md" >}} "ASMA (CSV)"
 [ASMAmeta]: /reference/dataset/asma-additional-time/ "ASMA (Meta)"
 [ASMA_o_meta]: /reference/dataset/asma-additional-time-old/ "ASMA (Meta)"
 
 [TX-OUTxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-Out_Additional_Time.xlsx "TX-OUT (Excel)"
 [TX-OUT_o_xlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-Out_Additional_Time_old.xlsx "TX-OUT (Excel)"
-[TX-OUTcsv]:  /404/ "TX-OUT (CSV)"
+[TX-OUTcsv]:  {{< relref "csv.md" >}} "TX-OUT (CSV)"
 [TX-OUTmeta]: /reference/dataset/taxi-out-additional-time/ "TX-OUT (Meta)"
 [TX-OUT_o_meta]: /reference/dataset/taxi-out-additional-time-old/ "TX-OUT (Meta)"
 
 [TX-INxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Taxi-In_Additional_Time.xlsx "TX-IN (Excel)"
-[TX-INcsv]:  /404/ "TX-IN (CSV)"
+[TX-INcsv]:  {{< relref "csv.md" >}} "TX-IN (CSV)"
 [TX-INmeta]: /reference/dataset/taxi-in-additional-time/ "TX-IN (Meta)"
 
 [CDOxlsx]: https://www.eurocontrol.int/performance/data/download/xls/Vertical_Flight_Efficiency_cdo_cco.xlsx "CDO/CCO (Excel)"
