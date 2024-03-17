@@ -21,6 +21,10 @@ The available data sets are:
   ```{r echo = FALSE, message = FALSE, warning = FALSE}
   gt_for_csvs("atc_pre_departure_delays_\\d{4}.csv")
   ```
+* All Pre-Departure Delays (from 2020), `<dataset group>`=`all_pre_departure_delays`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("all_pre_departure_delays_\\d{4}.csv")
+  ```
 * ATFM Slot Adherence (from 2016), `<dataset group>`=`atfm_slot_adherence`
   ```{r echo = FALSE, message = FALSE, warning = FALSE}
   gt_for_csvs("atfm_slot_adherence_\\d{4}.csv")
