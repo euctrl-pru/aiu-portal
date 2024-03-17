@@ -81,6 +81,7 @@ Sys.unsetenv("ORA_SDTZ")
 
 
 data %>%
+  dplyr::mutate(ENTRY_DATE = lubridate::as_date(.data$ENTRY_DATE, tz = "UTC")) %>%
   group_by(YEAR) %>% 
   group_walk(~ write_csv(.x, 
                          paste0(out_dir, "/",
