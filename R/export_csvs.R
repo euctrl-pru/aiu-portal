@@ -14,8 +14,7 @@ dest_dir_root <- "C:\\Users\\spi\\EUROCONTROL\\ECTL - Aviation Intelligence Unit
 dest_folder <- "csv"
 
 #---------- co2 emissions ----
-export_co2_emissions(wef = "2024-01-01") -> cc
-cc |>
+export_co2_emissions(wef = "2024-01-01") |>
   arrange(YEAR, MONTH, STATE_NAME) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -27,8 +26,7 @@ cc |>
     .keep = TRUE)
 
 #---------- vertical flight efficiency ----
-export_vertical_flight_efficiency(wef = "2024-01-01") -> vv
-vv |>
+export_vertical_flight_efficiency(wef = "2024-01-01") |>
   arrange(YEAR, MONTH_NUM, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -59,8 +57,7 @@ vv |>
 
 #---------- atc pre-departure delay ----
 # ... and then overwrite with what comes from DB
-export_atc_predeparture_delay(wef = "2023-01-01") -> aa
-aa |>
+export_atc_predeparture_delay(wef = "2023-01-01") |>
   arrange(YEAR, MONTH_NUM, FLT_DATE, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -91,8 +88,7 @@ aa |>
 
 #---------- all pre-departure delay ----
 # ... and then overwrite with what comes from DB
-export_all_predeparture_delay(wef = "2023-01-01") -> ll
-ll |>
+export_all_predeparture_delay(wef = "2023-01-01") |>
   arrange(YEAR, MONTH_NUM, FLT_DATE, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -107,8 +103,7 @@ ll |>
 #---------- atfm slot adherence ----
 # we have data from previous years, BUT Excel starts at 2016
 # Export initially from 2016, then from 2024 onward
-export_atfm_slot_adherence(wef = "2024-01-01") -> ss
-ss |>
+export_atfm_slot_adherence(wef = "2024-01-01") |>
   arrange(YEAR, MONTH_NUM, FLT_DATE, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -121,8 +116,7 @@ ss |>
 
 
 #---------- horizontal flight efficiency ----
-export_horizontal_flight_efficiency(wef = "2024-01-01") -> hh
-hh |>
+export_horizontal_flight_efficiency(wef = "2024-01-01") |>
   arrange(YEAR, MONTH_NUM, ENTRY_DATE, ENTITY_NAME, ENTITY_TYPE, TYPE_MODEL) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -135,8 +129,7 @@ hh |>
 
 
 #---------- taxi-out additional time ----
-export_taxi_out_additional_time(wef = "2018-01-01") -> oo
-oo |>
+export_taxi_out_additional_time(wef = "2018-01-01") |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -149,8 +142,7 @@ oo |>
 
 
 #---------- taxi-in additional time ----
-export_taxi_in_additional_time(wef = "2018-01-01") -> ii
-ii |>
+export_taxi_in_additional_time(wef = "2018-01-01") |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -163,8 +155,7 @@ ii |>
 
 
 #---------- asma additional time ----
-export_asma_additional_time(wef = "2018-01-01") -> ss
-ss |>
+export_asma_additional_time(wef = "2018-01-01") |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -172,5 +163,43 @@ ss |>
     fs::path(dest_dir_root,
              dest_folder ,
              stringr::str_glue("asma_additional_time_{YYYY}.csv", YYYY = .y$YEAR)),
+    na = ""),
+    .keep = TRUE)
+
+
+#---------- airport traffic (Excel) ----
+# DB contains only from 2020...so spit from Excel first...
+# excel <- "Airport_Traffic.xlsx"
+# aa <- read_xlsx(fs::path(dest_dir_root, excel), sheet = "DATA")
+# aa |>
+#   dplyr::select(-`Pivot Label`) |>
+#   dplyr::mutate(FLT_DATE = lubridate::as_date(.data$FLT_DATE, tz = "UTC")) |>
+#   dplyr::arrange(YEAR,
+#                  MONTH_NUM,
+#                  FLT_DATE,
+#                  STATE_NAME,
+#                  APT_ICAO) |>
+#   group_by(YEAR) |>
+#   group_walk(~ write_csv(
+#     .x,
+#     fs::path(dest_dir_root,
+#              dest_folder ,
+#              stringr::str_glue("airport_traffic_{YYYY}.csv", YYYY = .y$YEAR)),
+#     na = ""),
+#     .keep = TRUE)
+
+#---------- airport traffic ----
+export_airport_traffic(wef = "2024-01-01") |>
+  dplyr::arrange(YEAR,
+                 MONTH_NUM,
+                 FLT_DATE,
+                 STATE_NAME,
+                 APT_ICAO) |>
+  group_by(YEAR) |> 
+  group_walk(~ write_csv(
+    .x, 
+    fs::path(dest_dir_root,
+             dest_folder ,
+             stringr::str_glue("airport_traffic_{YYYY}.csv", YYYY = .y$YEAR)),
     na = ""),
     .keep = TRUE)

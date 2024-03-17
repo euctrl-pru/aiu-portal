@@ -53,6 +53,10 @@ The available data sets are:
   ```{r echo = FALSE, message = FALSE, warning = FALSE}
   gt_for_csvs("asma_additional_time_\\d{4}.csv")
   ```
+* Airport Traffic (from 2016), `<dataset group>`=`airport_traffic`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("airport_traffic_\\d{4}.csv")
+  ```
 
 
 ## Legacy CSVs
