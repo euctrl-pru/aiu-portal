@@ -100,6 +100,7 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
 (
   cd "${SCRIPT_DIR}/" || exit;
   
+  #------------ export old CSVs ---------------
   echo "Exporting ERT_DLY ansp ${ERT_DLY_WEF} ${TIL}..."
   Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL};
   echo "Exporting ERT_DLY ansp ... done."
@@ -117,6 +118,12 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   Rscript R/export_hfe.R;
   echo "Exporting HFE ... done"
   
+  #------------ export new CSVs ---------------
+  echo "Exporting new CSVs ..."
+  Rscript R/export_csvs.R;
+  echo "Exporting new CSVs ... done"
+  
+  #------------ export complementary data ---------------
   echo "Exporting ANSP composition ... "
   Rscript R/export_ansp_composition.R ${TIL};
   echo "Exporting ANSP composition ... done"
