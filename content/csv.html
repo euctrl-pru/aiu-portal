@@ -5,32 +5,46 @@ title: Datasets in CSV format
 
 
 <hr />
-<p>PRU provides some relevant datasets in CSV format (sometimes compressed using <a href="https://en.wikipedia.org/wiki/Bzip2" title="Wikipedia: bzip2">bzip2</a>):</p>
-<p>The filename convention we adopted is as follows:</p>
-<blockquote>
-<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv.bz2</code></p>
-</blockquote>
-<p>or</p>
+<p>AIU provides CSV files for some of its data sets so as to make it possible to
+automate download and processing by interested parties.</p>
+<p>The file names adhere to the following convention:</p>
 <blockquote>
 <p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv</code></p>
 </blockquote>
-<p>where
-&gt; <code>&lt;dataset group&gt; = &lt;dataset&gt;_&lt;group&gt;</code></p>
+<p>The available data sets are:</p>
+<ul>
+<li>ATC Pre-Departure Delays (from 2016), <code>&lt;dataset group&gt;</code> = <code>atc_pre_departure_delays</code></li>
+<li>ATFM Slot Adherence (from 2016), <code>&lt;dataset group&gt;</code> = <code>atfm_slot_adherence</code></li>
+<li>CO2 Emission by State (from 2010), <code>&lt;dataset group&gt;</code> = <code>co2_emmissions_by_state</code></li>
+<li>Horizontal Flight Efficiency (from 2015), <code>&lt;dataset group&gt;</code> = <code>horizontal_flight_efficiency</code></li>
+<li>Vertical Flight Efficiency (from 2015), <code>&lt;dataset group&gt;</code> = <code>vertical_flight_efficiency</code></li>
+</ul>
+<div id="legacy-csvs" class="section level2">
+<h2>Legacy CSVs</h2>
+<p>AIU provides some data sets in CSV format (compressed using <a href="https://en.wikipedia.org/wiki/Bzip2" title="Wikipedia: bzip2">bzip2</a>).</p>
+<p><strong>These files will be migrated to pure CSV files with a new file name similar to
+the ones above.</strong></p>
+<p>The file name convention we adopted is as follows:</p>
+<blockquote>
+<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv.bz2</code></p>
+</blockquote>
+<p>where</p>
+<blockquote>
+<p><code>&lt;dataset group&gt; = &lt;dataset&gt;_&lt;group&gt;</code></p>
+</blockquote>
 <p>The datasets made available are:</p>
 <ul>
-<li>Daily en-route delays: <code>ert_dly</code>
+<li>Airport Arrival ATFM Delays (from 2014): <code>&lt;dataset group&gt;</code>=<code>apt_dly</code></li>
+<li>Daily en-route delays: <code>&lt;dataset&gt;</code>=<code>ert_dly</code>
 <ul>
-<li><a href="/acronym/ansp/">ANSP</a> group (see <a href="../ansp">list of ANSP’s considered by PRU</a>): <code>ansp</code></li>
-<li>Country FIR group: <code>fir</code></li>
+<li><a href="/acronym/ansp/">ANSP</a> group (see <a href="../ansp">list of ANSP’s considered by PRU</a>) (from 2008): <code>&lt;group&gt;</code>=<code>ansp</code></li>
+<li>Country FIR group (from 2013): <code>&lt;group&gt;</code>=<code>fir</code></li>
 </ul></li>
-<li>Horizontal Flight Efficiency: <code>hfe</code>
-<ul>
-<li>Entity type can be <code>State (FIR)</code> or <code>FAB (FIR)</code></li>
-<li>Please note that the code <code>SFR</code> in <code>Model type</code> corresponds to the Shortest constrained route (<code>SCR</code>).</li>
-</ul></li>
-<li>Airport Arrival ATFM Delays: <code>apt_dly</code></li>
+<li>Horizontal Flight Efficiency (from 2014): <code>hfe</code></li>
 </ul>
-<p>For example <code>ert_dly_ansp_2012.csv.bz2</code> refers to en-rote delays dataset with ANSP breakdown for year 2012.</p>
+<p>For example <code>ert_dly_ansp_2012.csv.bz2</code> refers to en-rote delays data set with
+ANSP breakdown for year 2012.</p>
+</div>
 <div id="dataset-files" class="section level2">
 <h2>Dataset files</h2>
 <div id="ltajiwcfhd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
