@@ -5,6 +5,7 @@ title: Datasets in CSV format
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 # run setup script
 source(here::here("_common.R"))
+library(aiuportal)
 ```
 
 AIU provides CSV files for some of its data sets so as to make it possible to
@@ -16,11 +17,26 @@ The file names adhere to the following convention:
 
 The available data sets are:
 
-* ATC Pre-Departure Delays (from 2016), `<dataset group>` = `atc_pre_departure_delays`
-* ATFM Slot Adherence (from 2016), `<dataset group>` = `atfm_slot_adherence`
-* CO2 Emission by State (from 2010), `<dataset group>` = `co2_emmissions_by_state`
-* Horizontal Flight Efficiency (from 2015), `<dataset group>` = `horizontal_flight_efficiency`
-* Vertical Flight Efficiency (from 2015), `<dataset group>` = `vertical_flight_efficiency`
+* ATC Pre-Departure Delays (from 2016), `<dataset group>`=`atc_pre_departure_delays`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("atc_pre_departure_delays_\\d{4}.csv")
+  ```
+* ATFM Slot Adherence (from 2016), `<dataset group>`=`atfm_slot_adherence`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("atfm_slot_adherence_\\d{4}.csv")
+  ```
+* CO2 Emission by State (from 2010), `<dataset group>`=`co2_emmissions_by_state`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("co2_emmissions_by_state_\\d{4}.csv")
+  ```
+* Horizontal Flight Efficiency (from 2015), `<dataset group>`=`horizontal_flight_efficiency`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("horizontal_flight_efficiency_\\d{4}.csv")
+  ```
+* Vertical Flight Efficiency (from 2015), `<dataset group>`=`vertical_flight_efficiency`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("vertical_flight_efficiency_\\d{4}.csv")
+  ```
 
 
 ## Legacy CSVs
@@ -38,59 +54,29 @@ where
 
 > `<dataset group> = <dataset>_<group>`
 
-The datasets made available are:
-
-* Airport Arrival ATFM Delays (from 2014): `<dataset group>`=`apt_dly`
-* Daily en-route delays: `<dataset>`=`ert_dly`
-    * [ANSP](/acronym/ansp/) group (see [list of ANSP's considered by PRU](../ansp)) (from 2008): `<group>`=`ansp`
-    * Country FIR group (from 2013): `<group>`=`fir`
-* Horizontal Flight Efficiency (from 2014): `hfe`
-
-
 For example `ert_dly_ansp_2012.csv.bz2` refers to en-rote delays data set with
 ANSP breakdown for year 2012.
 
-## Dataset files
 
+The datasets made available are:
 
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-library(fs)
-library(magrittr)
-library(purrr)
-library(dplyr)
-library(stringr)
-library(gt)
-
-dwnl_url <- "https://www.eurocontrol.int/performance/data/download/csv"
-base_dir <- "//ihx-vdm05/LIVE_var_www_performance$/data/download/csv"
-
-dir_info(base_dir, glob = "*.csv.bz2") |>
-  select(path, size) |> 
-  mutate(
-    path = path_file(path),
-    url = str_c(dwnl_url, path, sep = "/"),
-    path = glue::glue("[{path}]({url})"),
-    path = map(path, gt::md)) |> 
-  select(path, size) |> 
-  gt() |> 
-  cols_label(
-    path = gt::md("**Name**"),
-    size = gt::md("**Size (bytes)**"),
-  ) |> 
-  cols_align(
-    align = "left",
-    columns = c(path)
-  ) |> 
-  cols_align(
-    align = "right",
-    columns = c(size)
-  ) |> 
-  tab_options(
-    table.width = "fit-content!important",
-    table.margin.left = "2em",
-    table.margin.right= "auto")
-
-```
+* Airport Arrival ATFM Delays (from 2014): `<dataset group>`=`apt_dly`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("apt_dly_\\d{4}.csv")
+  ```
+* Daily en-route delays: `<dataset>`=`ert_dly`
+  - [ANSP](/acronym/ansp/) group (see [list of ANSP's considered by PRU](../ansp)) (from 2008): `<group>`=`ansp`
+    ```{r echo = FALSE, message = FALSE, warning = FALSE}
+    gt_for_csvs("ert_dly_ansp_\\d{4}.csv")
+    ```
+  - Country FIR group (from 2013): `<group>`=`fir`
+    ```{r echo = FALSE, message = FALSE, warning = FALSE}
+    gt_for_csvs("ert_dly_ansp_\\d{4}.csv")
+    ```
+* Horizontal Flight Efficiency (from 2014): `hfe`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("hfe_\\d{4}.csv")
+  ```
 
 
 [bzip2]: <https://en.wikipedia.org/wiki/Bzip2> "Wikipedia: bzip2"
