@@ -11,7 +11,7 @@ library(readxl)
 
 
 dest_dir_root <- "C:\\Users\\spi\\EUROCONTROL\\ECTL - Aviation Intelligence Unit - AIU Portal\\Download data files"
-dest_folder <- "test"
+dest_folder <- "csv"
 
 export_co2_emissions(wef = "2024-01-01") -> cc
 cc |>
