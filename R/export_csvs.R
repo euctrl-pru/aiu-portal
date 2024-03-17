@@ -146,3 +146,17 @@ oo |>
              stringr::str_glue("taxi_out_additional_time_{YYYY}.csv", YYYY = .y$YEAR)),
     na = ""),
     .keep = TRUE)
+
+
+#---------- taxi-in additional time ----
+export_taxi_in_additional_time(wef = "2018-01-01") -> oo
+oo |>
+  arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
+  group_by(YEAR) |> 
+  group_walk(~ write_csv(
+    .x, 
+    fs::path(dest_dir_root,
+             dest_folder ,
+             stringr::str_glue("taxi_in_additional_time_{YYYY}.csv", YYYY = .y$YEAR)),
+    na = ""),
+    .keep = TRUE)
