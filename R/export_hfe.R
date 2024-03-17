@@ -85,4 +85,5 @@ data %>%
   group_walk(~ write_csv(.x, 
                          paste0(out_dir, "/",
                                     stringr::str_c("hfe_", .y$YEAR, ".csv.bz2")),
-                         na = ""))
+                         na = ""),
+             .keep = TRUE)
