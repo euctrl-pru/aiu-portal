@@ -212,35 +212,76 @@ For feedback or questions please contact us at:
 </div>
 
 
-<div class="col-sm-4" style="min-height: 425px;"><h4>What's new?</h4><br> 
+<div class="col-sm-4" style="min-height: 450px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-<!--
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Are flights punctual?</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
--->
+::: {#carousel-item .carousel-item .active}
+::: {.card .border-0}
+[![Performance Review Report 2023](/images/landing/prr-2023.PNG)](https://www.eurocontrol.int/publication/performance-review-report-prr-2023){target="_blank"}
 
-<div class="carousel-item active"><div class="card  border-0"><a href="https://eurocontrol.int/publication/prc-performance-insight-8-atm-performance-benefit-pools-improved-civil-military" target="_blank"><img class="card-img-top" src="/images/landing/pi8.png" alt=""><div class="card-body"><h5 class="card-title">PRC Performance Insight #8</h5></a><small><p class="card-text">
-Learn more about ATM benefit pools for improved civil-military cooperation and coordination.</p></small></div></div></div>
+##### [Performance Review Report 2023](https://www.eurocontrol.int/publication/performance-review-report-prr-2023){target="_blank"}
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405" target="_blank"><img class="card-img-top" src="/images/landing/eurocontrol-data.png" alt=""><div class="card-body"><h5 class="card-title">Released: EUROCONTROL DATA App</h5></a><small><p class="card-text">Download our new DATA app (on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play</a>) to access our unique aviation data.</p></small></div></div></div>
+<small>The independent Performance Review Commission (PRC) has just released their review of ANS performance.</small>
+:::
+:::
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://cadmus.eui.eu/handle/1814/76498" target="_blank"><img class="card-img-top" src="/images/landing/prc_tss2.PNG" alt=""><div class="card-body"><h5 class="card-title">PRC Transformation Support Strategy</h5></a><small><p class="card-text">
-Learn more about the 2nd PRC workshop on innovative ATM transformation flagships in the new Florence School of Regulation (FSR) Policy Brief. </p></small></div></div></div>
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/comparison-air-traffic-management-related-operational-and-economic-performance" target="_blank"><img class="card-img-top" src="/images/landing/us_europe_2024.PNG" alt=""><div class="card-body"><h5 class="card-title">U.S.-Europe Comparison of ATM Performance Report 2024 </h5></a><small><p class="card-text">
-Read the new US-Europe 2024 comparison report of ATM related operational and economic performance. </p></small></div></div></div>
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: EUROCONTROL Data Snapshot #42](/images/landing/ds_snapshot_42.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
 
-<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">January 2024 data available for download now!</p></small></div></div></div>
+##### [Published: EUROCONTROL Data Snapshot #42](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
 
-<!--
-<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
-Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
+<small>Our 42st EUROCONTROL Data Snapshot delves into the growth of the new generation of narrow bodies.</small>
+:::
+:::
 
-<div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
-Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
 
--->
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](/images/landing/eurocontrol-spring-2024-7-year-forecast-banner.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
+
+##### [Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
+
+<small>The seven-year forecast edition Spring 2024 by EUROCONTROL STATFOR has been published. </small>
+:::
+:::
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Portal Update: Improved Data Access](/images/landing/portal_update_data_access.jpg)](https://ansperformance.eu/csv/){target="_blank"}
+
+##### [Portal Update: Improved Data Access](https://ansperformance.eu/csv/){target="_blank"}
+
+<small>The availability of CSV data sets for various performance topics have been extended on the portal.</small>
+:::
+:::
+
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data.png)](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
+
+##### [Released: EUROCONTROL DATA App](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
+
+<small>Download our new DATA app (on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play</a></small>
+:::
+:::
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Performance Data Update](/images/landing/data_icon.jpg)](/data/){target="_blank"}
+
+##### [Performance Data Update](/data/){target="_blank"}
+
+<small>February 2024 data available for download now!</small>
+:::
+:::
+
 
 </div>
 
