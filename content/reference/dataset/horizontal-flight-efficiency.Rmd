@@ -72,7 +72,13 @@ is fully consistent with the Single European Sky (SES) Performance Scheme
 | DIST_ACHIEVED_KM | Network Manager | DIST_ACHIEVED_KM | Sum of achieved distances in kilometre                                         | 8255220   |
 
 (*) The  [HFE CSV files](/csv/)
-use [ISO 8601][iso8601] date time format, i.e. `2017-01-02T00:00:00Z`
+use [ISO 8601][iso8601] date format, i.e. `2017-01-02`
+
+* Entity type can be `State (FIR)` or `FAB (FIR)	`
+* the code `SFR` in `Model type` corresponds to the Shortest constrained route (`SCR`),
+  see also [Flight trajectory models][flight-models].
+  
+[flight-models]: /definition/flight-models/ "Flight trajectory models"
 
 
 [iso8601]: https://en.wikipedia.org/wiki/ISO_8601 "Wikipedia: ISO 8601"

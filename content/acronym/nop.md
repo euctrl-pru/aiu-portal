@@ -13,3 +13,5 @@ principles of the Network Strategic Plan.
 ## See Also
 
 * {{< a_blank_ectrl "NOP" "https://www.eurocontrol.int/network-operations-planning" >}}
+
+[nm-cfmu]: {{< relref "nm-cfmu.md" >}} "NM"
