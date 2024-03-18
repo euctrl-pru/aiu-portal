@@ -222,7 +222,7 @@ For feedback or questions please contact us at:
 
 ##### [Performance Review Report 2023](https://www.eurocontrol.int/publication/performance-review-report-prr-2023){target="_blank"}
 
-<small>The independent Performance Review Commission (PRC) has just released their review of ANS performance.</small>
+<small>The independent Performance Review Commission (PRC) has just released their review of ANS performance for consultation.</small>
 :::
 :::
 
@@ -241,9 +241,9 @@ For feedback or questions please contact us at:
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](/images/landing/eurocontrol-spring-2024-7-year-forecast-banner.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
+[![Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](/images/landing/eurocontrol-spring-2024-7-year-forecast-banner.jpg)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"}
 
-##### [Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
+##### [Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"}
 
 <small>The seven-year forecast edition Spring 2024 by EUROCONTROL STATFOR has been published. </small>
 :::
