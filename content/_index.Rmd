@@ -212,7 +212,7 @@ For feedback or questions please contact us at:
 </div>
 
 
-<div class="col-sm-4" style="min-height: 450px;"><h4>What's new?</h4><br> 
+<div class="col-sm-4" style="min-height: 445px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
