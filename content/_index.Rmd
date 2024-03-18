@@ -55,7 +55,6 @@ date: "2018-02-07T11:26:51+01:00"
 <!-- Daily traffic graphs and scorecards Scorecard_net-->
 <div class="w3-container" >
 <div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 10px 10px 0 0; width: 100%;">
-
 <div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div></div>
 
 </div>
@@ -166,7 +165,6 @@ For feedback or questions please contact us at:
 </div>
 
 <div class="col-sm-4" style="min-height: 445px;"><h4>What's new?</h4><br> 
-
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
