@@ -5,30 +5,15 @@ title: Datasets in CSV format
 
 
 <hr />
-<p>PRU provides some relevant datasets in CSV format (compressed using <a href="https://en.wikipedia.org/wiki/Bzip2" title="Wikipedia: bzip2">bzip2</a>):</p>
-<p>The filename convention we adopted is as follows:</p>
+<p>AIU provides CSV files for some of its data sets so as to make it possible to
+automate download and processing by interested parties.</p>
+<p>The file names adhere to the following convention:</p>
 <blockquote>
-<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv.bz2</code></p>
+<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv</code></p>
 </blockquote>
-<p>where
-&gt; <code>&lt;dataset group&gt; = &lt;dataset&gt;_&lt;group&gt;</code></p>
-<p>The datasets made available are:</p>
+<p>The available data sets are:</p>
 <ul>
-<li>Daily en-route delays: <code>ert_dly</code>
-<ul>
-<li><a href="/acronym/ansp/">ANSP</a> group (see <a href="../ansp">list of ANSP’s considered by PRU</a>): <code>ansp</code></li>
-<li>Country FIR group: <code>fir</code></li>
-</ul></li>
-<li>Horizontal Flight Efficiency: <code>hfe</code>
-<ul>
-<li>Entity type can be <code>State (FIR)</code> or <code>FAB (FIR)</code></li>
-<li>Please note that the code <code>SFR</code> in <code>Model type</code> corresponds to the Shortest constrained route (<code>SCR</code>).</li>
-</ul></li>
-<li>Airport Arrival ATFM Delays: <code>apt_dly</code></li>
-</ul>
-<p>For example <code>ert_dly_ansp_2012.csv.bz2</code> refers to en-rote delays dataset with ANSP breakdown for year 2012.</p>
-<div id="dataset-files" class="section level2">
-<h2>Dataset files</h2>
+<li><p><span id="atcpre-csv">ATC Pre-Departure Delays</span> (from 2016), <code>&lt;dataset group&gt;</code>=<code>atc_pre_departure_delays</code></p>
 <div id="ltajiwcfhd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#ltajiwcfhd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -471,7 +456,4740 @@ title: Datasets in CSV format
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
-    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2016.csv">atc_pre_departure_delays_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.51M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2017.csv">atc_pre_departure_delays_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.47M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2018.csv">atc_pre_departure_delays_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.49M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2019.csv">atc_pre_departure_delays_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.47M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2020.csv">atc_pre_departure_delays_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.96M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2021.csv">atc_pre_departure_delays_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.29M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2022.csv">atc_pre_departure_delays_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.43M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2023.csv">atc_pre_departure_delays_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.44M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atc_pre_departure_delays_2024.csv">atc_pre_departure_delays_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">1.03M</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="allpre-csv">All Pre-Departure Delays</span> (from 2020), <code>&lt;dataset group&gt;</code>=<code>all_pre_departure_delays</code></p>
+<div id="pqaymeqeiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pqaymeqeiz table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pqaymeqeiz thead, #pqaymeqeiz tbody, #pqaymeqeiz tfoot, #pqaymeqeiz tr, #pqaymeqeiz td, #pqaymeqeiz th {
+  border-style: none;
+}
+
+#pqaymeqeiz p {
+  margin: 0;
+  padding: 0;
+}
+
+#pqaymeqeiz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pqaymeqeiz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pqaymeqeiz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pqaymeqeiz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pqaymeqeiz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pqaymeqeiz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pqaymeqeiz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pqaymeqeiz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pqaymeqeiz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pqaymeqeiz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pqaymeqeiz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pqaymeqeiz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pqaymeqeiz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pqaymeqeiz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pqaymeqeiz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqaymeqeiz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pqaymeqeiz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pqaymeqeiz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pqaymeqeiz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqaymeqeiz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pqaymeqeiz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqaymeqeiz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pqaymeqeiz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqaymeqeiz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqaymeqeiz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqaymeqeiz .gt_left {
+  text-align: left;
+}
+
+#pqaymeqeiz .gt_center {
+  text-align: center;
+}
+
+#pqaymeqeiz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pqaymeqeiz .gt_font_normal {
+  font-weight: normal;
+}
+
+#pqaymeqeiz .gt_font_bold {
+  font-weight: bold;
+}
+
+#pqaymeqeiz .gt_font_italic {
+  font-style: italic;
+}
+
+#pqaymeqeiz .gt_super {
+  font-size: 65%;
+}
+
+#pqaymeqeiz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pqaymeqeiz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pqaymeqeiz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pqaymeqeiz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pqaymeqeiz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pqaymeqeiz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pqaymeqeiz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/all_pre_departure_delays_2020.csv">all_pre_departure_delays_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.69M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/all_pre_departure_delays_2021.csv">all_pre_departure_delays_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.98M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/all_pre_departure_delays_2022.csv">all_pre_departure_delays_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.06M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/all_pre_departure_delays_2023.csv">all_pre_departure_delays_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.09M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/all_pre_departure_delays_2024.csv">all_pre_departure_delays_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">995.86K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="sltadh-csv">ATFM Slot Adherence</span> (from 2016), <code>&lt;dataset group&gt;</code>=<code>atfm_slot_adherence</code></p>
+<div id="qwwyntuamy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qwwyntuamy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qwwyntuamy thead, #qwwyntuamy tbody, #qwwyntuamy tfoot, #qwwyntuamy tr, #qwwyntuamy td, #qwwyntuamy th {
+  border-style: none;
+}
+
+#qwwyntuamy p {
+  margin: 0;
+  padding: 0;
+}
+
+#qwwyntuamy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qwwyntuamy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qwwyntuamy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qwwyntuamy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qwwyntuamy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qwwyntuamy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qwwyntuamy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qwwyntuamy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qwwyntuamy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qwwyntuamy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qwwyntuamy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qwwyntuamy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qwwyntuamy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qwwyntuamy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qwwyntuamy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qwwyntuamy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qwwyntuamy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qwwyntuamy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qwwyntuamy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qwwyntuamy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qwwyntuamy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qwwyntuamy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qwwyntuamy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qwwyntuamy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qwwyntuamy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qwwyntuamy .gt_left {
+  text-align: left;
+}
+
+#qwwyntuamy .gt_center {
+  text-align: center;
+}
+
+#qwwyntuamy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qwwyntuamy .gt_font_normal {
+  font-weight: normal;
+}
+
+#qwwyntuamy .gt_font_bold {
+  font-weight: bold;
+}
+
+#qwwyntuamy .gt_font_italic {
+  font-style: italic;
+}
+
+#qwwyntuamy .gt_super {
+  font-size: 65%;
+}
+
+#qwwyntuamy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qwwyntuamy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qwwyntuamy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qwwyntuamy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qwwyntuamy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qwwyntuamy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qwwyntuamy .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2016.csv">atfm_slot_adherence_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.68M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2017.csv">atfm_slot_adherence_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.68M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2018.csv">atfm_slot_adherence_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.70M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2019.csv">atfm_slot_adherence_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.71M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2020.csv">atfm_slot_adherence_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.28M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2021.csv">atfm_slot_adherence_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.52M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2022.csv">atfm_slot_adherence_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.65M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2023.csv">atfm_slot_adherence_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.67M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/atfm_slot_adherence_2024.csv">atfm_slot_adherence_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">1.15M</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="co2-csv">CO2 Emission by State</span> (from 2010), <code>&lt;dataset group&gt;</code>=<code>co2_emmissions_by_state</code></p>
+<div id="dyqgnffjwi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dyqgnffjwi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dyqgnffjwi thead, #dyqgnffjwi tbody, #dyqgnffjwi tfoot, #dyqgnffjwi tr, #dyqgnffjwi td, #dyqgnffjwi th {
+  border-style: none;
+}
+
+#dyqgnffjwi p {
+  margin: 0;
+  padding: 0;
+}
+
+#dyqgnffjwi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dyqgnffjwi .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dyqgnffjwi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dyqgnffjwi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dyqgnffjwi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dyqgnffjwi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dyqgnffjwi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dyqgnffjwi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dyqgnffjwi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dyqgnffjwi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dyqgnffjwi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dyqgnffjwi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dyqgnffjwi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dyqgnffjwi .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dyqgnffjwi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dyqgnffjwi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dyqgnffjwi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dyqgnffjwi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dyqgnffjwi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dyqgnffjwi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dyqgnffjwi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dyqgnffjwi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dyqgnffjwi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dyqgnffjwi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dyqgnffjwi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dyqgnffjwi .gt_left {
+  text-align: left;
+}
+
+#dyqgnffjwi .gt_center {
+  text-align: center;
+}
+
+#dyqgnffjwi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dyqgnffjwi .gt_font_normal {
+  font-weight: normal;
+}
+
+#dyqgnffjwi .gt_font_bold {
+  font-weight: bold;
+}
+
+#dyqgnffjwi .gt_font_italic {
+  font-style: italic;
+}
+
+#dyqgnffjwi .gt_super {
+  font-size: 65%;
+}
+
+#dyqgnffjwi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dyqgnffjwi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dyqgnffjwi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dyqgnffjwi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dyqgnffjwi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dyqgnffjwi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dyqgnffjwi .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2010.csv">co2_emmissions_by_state_2010.csv</a></td>
+<td headers="size" class="gt_row gt_right">19.98K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2011.csv">co2_emmissions_by_state_2011.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.16K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2012.csv">co2_emmissions_by_state_2012.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.25K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2013.csv">co2_emmissions_by_state_2013.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.23K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2014.csv">co2_emmissions_by_state_2014.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.69K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2015.csv">co2_emmissions_by_state_2015.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.71K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2016.csv">co2_emmissions_by_state_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.73K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2017.csv">co2_emmissions_by_state_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.99K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2018.csv">co2_emmissions_by_state_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">21.27K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2019.csv">co2_emmissions_by_state_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">21.29K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2020.csv">co2_emmissions_by_state_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">20.92K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2021.csv">co2_emmissions_by_state_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">21.59K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2022.csv">co2_emmissions_by_state_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">21.74K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2023.csv">co2_emmissions_by_state_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">21.82K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/co2_emmissions_by_state_2024.csv">co2_emmissions_by_state_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">3.65K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="hfe-csv">Horizontal Flight Efficiency</span> (from 2015), <code>&lt;dataset group&gt;</code>=<code>horizontal_flight_efficiency</code></p>
+<div id="loseujgoaq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#loseujgoaq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#loseujgoaq thead, #loseujgoaq tbody, #loseujgoaq tfoot, #loseujgoaq tr, #loseujgoaq td, #loseujgoaq th {
+  border-style: none;
+}
+
+#loseujgoaq p {
+  margin: 0;
+  padding: 0;
+}
+
+#loseujgoaq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#loseujgoaq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#loseujgoaq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#loseujgoaq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#loseujgoaq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#loseujgoaq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#loseujgoaq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#loseujgoaq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#loseujgoaq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#loseujgoaq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#loseujgoaq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#loseujgoaq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#loseujgoaq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#loseujgoaq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#loseujgoaq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#loseujgoaq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#loseujgoaq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#loseujgoaq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#loseujgoaq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#loseujgoaq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#loseujgoaq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#loseujgoaq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#loseujgoaq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#loseujgoaq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#loseujgoaq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#loseujgoaq .gt_left {
+  text-align: left;
+}
+
+#loseujgoaq .gt_center {
+  text-align: center;
+}
+
+#loseujgoaq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#loseujgoaq .gt_font_normal {
+  font-weight: normal;
+}
+
+#loseujgoaq .gt_font_bold {
+  font-weight: bold;
+}
+
+#loseujgoaq .gt_font_italic {
+  font-style: italic;
+}
+
+#loseujgoaq .gt_super {
+  font-size: 65%;
+}
+
+#loseujgoaq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#loseujgoaq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#loseujgoaq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#loseujgoaq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#loseujgoaq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#loseujgoaq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#loseujgoaq .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2015.csv">horizontal_flight_efficiency_2015.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.91M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2016.csv">horizontal_flight_efficiency_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.44M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2017.csv">horizontal_flight_efficiency_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.43M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2018.csv">horizontal_flight_efficiency_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.34M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2019.csv">horizontal_flight_efficiency_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.40M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2020.csv">horizontal_flight_efficiency_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.35M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2021.csv">horizontal_flight_efficiency_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.37M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2022.csv">horizontal_flight_efficiency_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.41M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2023.csv">horizontal_flight_efficiency_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.42M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/horizontal_flight_efficiency_2024.csv">horizontal_flight_efficiency_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">742.51K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="vfe-csv">Vertical Flight Efficiency</span> (from 2015), <code>&lt;dataset group&gt;</code>=<code>vertical_flight_efficiency</code></p>
+<div id="jjmmnrohpo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jjmmnrohpo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jjmmnrohpo thead, #jjmmnrohpo tbody, #jjmmnrohpo tfoot, #jjmmnrohpo tr, #jjmmnrohpo td, #jjmmnrohpo th {
+  border-style: none;
+}
+
+#jjmmnrohpo p {
+  margin: 0;
+  padding: 0;
+}
+
+#jjmmnrohpo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jjmmnrohpo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jjmmnrohpo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jjmmnrohpo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jjmmnrohpo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jjmmnrohpo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jjmmnrohpo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jjmmnrohpo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jjmmnrohpo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jjmmnrohpo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jjmmnrohpo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jjmmnrohpo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jjmmnrohpo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jjmmnrohpo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jjmmnrohpo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjmmnrohpo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jjmmnrohpo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jjmmnrohpo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jjmmnrohpo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjmmnrohpo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jjmmnrohpo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjmmnrohpo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jjmmnrohpo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjmmnrohpo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jjmmnrohpo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jjmmnrohpo .gt_left {
+  text-align: left;
+}
+
+#jjmmnrohpo .gt_center {
+  text-align: center;
+}
+
+#jjmmnrohpo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jjmmnrohpo .gt_font_normal {
+  font-weight: normal;
+}
+
+#jjmmnrohpo .gt_font_bold {
+  font-weight: bold;
+}
+
+#jjmmnrohpo .gt_font_italic {
+  font-style: italic;
+}
+
+#jjmmnrohpo .gt_super {
+  font-size: 65%;
+}
+
+#jjmmnrohpo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jjmmnrohpo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jjmmnrohpo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jjmmnrohpo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jjmmnrohpo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jjmmnrohpo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jjmmnrohpo .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2015.csv">vertical_flight_efficiency_2015.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.40M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2016.csv">vertical_flight_efficiency_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.47M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2017.csv">vertical_flight_efficiency_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.44M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2018.csv">vertical_flight_efficiency_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.42M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2019.csv">vertical_flight_efficiency_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.43M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2020.csv">vertical_flight_efficiency_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.27M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2021.csv">vertical_flight_efficiency_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.43M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2022.csv">vertical_flight_efficiency_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">2.61M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2023.csv">vertical_flight_efficiency_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">4.14M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/vertical_flight_efficiency_2024.csv">vertical_flight_efficiency_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">421.90K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="txin-csv">Taxi-in Additional Time</span> (from 2018), <code>&lt;dataset group&gt;</code>=<code>taxi_in_additional_time</code></p>
+<div id="xivckaxzxv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xivckaxzxv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xivckaxzxv thead, #xivckaxzxv tbody, #xivckaxzxv tfoot, #xivckaxzxv tr, #xivckaxzxv td, #xivckaxzxv th {
+  border-style: none;
+}
+
+#xivckaxzxv p {
+  margin: 0;
+  padding: 0;
+}
+
+#xivckaxzxv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xivckaxzxv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xivckaxzxv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xivckaxzxv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xivckaxzxv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xivckaxzxv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xivckaxzxv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xivckaxzxv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xivckaxzxv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xivckaxzxv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xivckaxzxv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xivckaxzxv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xivckaxzxv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xivckaxzxv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xivckaxzxv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xivckaxzxv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xivckaxzxv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xivckaxzxv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xivckaxzxv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xivckaxzxv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xivckaxzxv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xivckaxzxv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xivckaxzxv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xivckaxzxv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xivckaxzxv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xivckaxzxv .gt_left {
+  text-align: left;
+}
+
+#xivckaxzxv .gt_center {
+  text-align: center;
+}
+
+#xivckaxzxv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xivckaxzxv .gt_font_normal {
+  font-weight: normal;
+}
+
+#xivckaxzxv .gt_font_bold {
+  font-weight: bold;
+}
+
+#xivckaxzxv .gt_font_italic {
+  font-style: italic;
+}
+
+#xivckaxzxv .gt_super {
+  font-size: 65%;
+}
+
+#xivckaxzxv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xivckaxzxv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xivckaxzxv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xivckaxzxv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xivckaxzxv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xivckaxzxv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xivckaxzxv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2018.csv">taxi_in_additional_time_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.4K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2019.csv">taxi_in_additional_time_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.6K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2020.csv">taxi_in_additional_time_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">83.5K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2021.csv">taxi_in_additional_time_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">84.0K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2022.csv">taxi_in_additional_time_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.2K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2023.csv">taxi_in_additional_time_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.6K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_in_additional_time_2024.csv">taxi_in_additional_time_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">15.2K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="txout-csv">Taxi-out Additional Time</span> (from 2018), <code>&lt;dataset group&gt;</code>=<code>taxi_out_additional_time</code></p>
+<div id="knxjsotovv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#knxjsotovv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#knxjsotovv thead, #knxjsotovv tbody, #knxjsotovv tfoot, #knxjsotovv tr, #knxjsotovv td, #knxjsotovv th {
+  border-style: none;
+}
+
+#knxjsotovv p {
+  margin: 0;
+  padding: 0;
+}
+
+#knxjsotovv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#knxjsotovv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#knxjsotovv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#knxjsotovv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#knxjsotovv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#knxjsotovv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#knxjsotovv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#knxjsotovv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#knxjsotovv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#knxjsotovv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#knxjsotovv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#knxjsotovv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#knxjsotovv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#knxjsotovv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#knxjsotovv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#knxjsotovv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#knxjsotovv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#knxjsotovv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#knxjsotovv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#knxjsotovv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#knxjsotovv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#knxjsotovv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#knxjsotovv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#knxjsotovv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#knxjsotovv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#knxjsotovv .gt_left {
+  text-align: left;
+}
+
+#knxjsotovv .gt_center {
+  text-align: center;
+}
+
+#knxjsotovv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#knxjsotovv .gt_font_normal {
+  font-weight: normal;
+}
+
+#knxjsotovv .gt_font_bold {
+  font-weight: bold;
+}
+
+#knxjsotovv .gt_font_italic {
+  font-style: italic;
+}
+
+#knxjsotovv .gt_super {
+  font-size: 65%;
+}
+
+#knxjsotovv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#knxjsotovv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#knxjsotovv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#knxjsotovv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#knxjsotovv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#knxjsotovv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#knxjsotovv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2018.csv">taxi_out_additional_time_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.9K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2019.csv">taxi_out_additional_time_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2020.csv">taxi_out_additional_time_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">84.3K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2021.csv">taxi_out_additional_time_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">85.0K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2022.csv">taxi_out_additional_time_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">86.2K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2023.csv">taxi_out_additional_time_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">87.0K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/taxi_out_additional_time_2024.csv">taxi_out_additional_time_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">15.2K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="asma-csv">ASMA Additional Time</span> (from 2018), <code>&lt;dataset group&gt;</code>=<code>asma_additional_time</code></p>
+<div id="aksuriqcjw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aksuriqcjw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#aksuriqcjw thead, #aksuriqcjw tbody, #aksuriqcjw tfoot, #aksuriqcjw tr, #aksuriqcjw td, #aksuriqcjw th {
+  border-style: none;
+}
+
+#aksuriqcjw p {
+  margin: 0;
+  padding: 0;
+}
+
+#aksuriqcjw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#aksuriqcjw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#aksuriqcjw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#aksuriqcjw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#aksuriqcjw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#aksuriqcjw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#aksuriqcjw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#aksuriqcjw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#aksuriqcjw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#aksuriqcjw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#aksuriqcjw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#aksuriqcjw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#aksuriqcjw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#aksuriqcjw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#aksuriqcjw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aksuriqcjw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#aksuriqcjw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#aksuriqcjw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#aksuriqcjw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aksuriqcjw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#aksuriqcjw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aksuriqcjw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#aksuriqcjw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aksuriqcjw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aksuriqcjw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aksuriqcjw .gt_left {
+  text-align: left;
+}
+
+#aksuriqcjw .gt_center {
+  text-align: center;
+}
+
+#aksuriqcjw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#aksuriqcjw .gt_font_normal {
+  font-weight: normal;
+}
+
+#aksuriqcjw .gt_font_bold {
+  font-weight: bold;
+}
+
+#aksuriqcjw .gt_font_italic {
+  font-style: italic;
+}
+
+#aksuriqcjw .gt_super {
+  font-size: 65%;
+}
+
+#aksuriqcjw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#aksuriqcjw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#aksuriqcjw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#aksuriqcjw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#aksuriqcjw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#aksuriqcjw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#aksuriqcjw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2018.csv">asma_additional_time_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">91.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2019.csv">asma_additional_time_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">92.5K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2020.csv">asma_additional_time_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">91.3K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2021.csv">asma_additional_time_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">91.9K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2022.csv">asma_additional_time_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">92.4K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2023.csv">asma_additional_time_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">93.0K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/asma_additional_time_2024.csv">asma_additional_time_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">15.8K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="aptflt-csv">Airport Traffic</span> (from 2016), <code>&lt;dataset group&gt;</code>=<code>airport_traffic</code></p>
+<div id="nlgznpgcfg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nlgznpgcfg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nlgznpgcfg thead, #nlgznpgcfg tbody, #nlgznpgcfg tfoot, #nlgznpgcfg tr, #nlgznpgcfg td, #nlgznpgcfg th {
+  border-style: none;
+}
+
+#nlgznpgcfg p {
+  margin: 0;
+  padding: 0;
+}
+
+#nlgznpgcfg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nlgznpgcfg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nlgznpgcfg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nlgznpgcfg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nlgznpgcfg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nlgznpgcfg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nlgznpgcfg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nlgznpgcfg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nlgznpgcfg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nlgznpgcfg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nlgznpgcfg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nlgznpgcfg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nlgznpgcfg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nlgznpgcfg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nlgznpgcfg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nlgznpgcfg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nlgznpgcfg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nlgznpgcfg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nlgznpgcfg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nlgznpgcfg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nlgznpgcfg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nlgznpgcfg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nlgznpgcfg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nlgznpgcfg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nlgznpgcfg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nlgznpgcfg .gt_left {
+  text-align: left;
+}
+
+#nlgznpgcfg .gt_center {
+  text-align: center;
+}
+
+#nlgznpgcfg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nlgznpgcfg .gt_font_normal {
+  font-weight: normal;
+}
+
+#nlgznpgcfg .gt_font_bold {
+  font-weight: bold;
+}
+
+#nlgznpgcfg .gt_font_italic {
+  font-style: italic;
+}
+
+#nlgznpgcfg .gt_super {
+  font-size: 65%;
+}
+
+#nlgznpgcfg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nlgznpgcfg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nlgznpgcfg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nlgznpgcfg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nlgznpgcfg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nlgznpgcfg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nlgznpgcfg .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2016.csv">airport_traffic_2016.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.82M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2017.csv">airport_traffic_2017.csv</a></td>
+<td headers="size" class="gt_row gt_right">5.84M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2018.csv">airport_traffic_2018.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.91M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2019.csv">airport_traffic_2019.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.93M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2020.csv">airport_traffic_2020.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.37M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2021.csv">airport_traffic_2021.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.76M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2022.csv">airport_traffic_2022.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.88M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2023.csv">airport_traffic_2023.csv</a></td>
+<td headers="size" class="gt_row gt_right">6.89M</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/airport_traffic_2024.csv">airport_traffic_2024.csv</a></td>
+<td headers="size" class="gt_row gt_right">1.11M</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+</ul>
+<div id="legacy-csvs" class="section level2">
+<h2>Legacy CSVs</h2>
+<p>AIU provides some data sets in CSV format (compressed using <a href="https://en.wikipedia.org/wiki/Bzip2" title="Wikipedia: bzip2">bzip2</a>).</p>
+<p><strong>These files will be migrated to pure CSV files with a new file name similar to
+the ones above.</strong></p>
+<p>The file name convention we adopted is as follows:</p>
+<blockquote>
+<p><code>&lt;dataset group&gt;_&lt;YYYY&gt;.csv.bz2</code></p>
+</blockquote>
+<p>where</p>
+<blockquote>
+<p><code>&lt;dataset group&gt; = &lt;dataset&gt;_&lt;group&gt;</code></p>
+</blockquote>
+<p>For example <code>ert_dly_ansp_2012.csv.bz2</code> refers to en-rote delays data set with
+ANSP breakdown for year 2012.</p>
+<p>The datasets made available are:</p>
+<ul>
+<li><p><span id="aptdly-csv">Airport Arrival ATFM Delays</span> (from 2014): <code>&lt;dataset group&gt;</code>=<code>apt_dly</code></p>
+<div id="gumkpzyddg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gumkpzyddg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gumkpzyddg thead, #gumkpzyddg tbody, #gumkpzyddg tfoot, #gumkpzyddg tr, #gumkpzyddg td, #gumkpzyddg th {
+  border-style: none;
+}
+
+#gumkpzyddg p {
+  margin: 0;
+  padding: 0;
+}
+
+#gumkpzyddg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gumkpzyddg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gumkpzyddg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gumkpzyddg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gumkpzyddg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gumkpzyddg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gumkpzyddg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gumkpzyddg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gumkpzyddg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gumkpzyddg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gumkpzyddg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gumkpzyddg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gumkpzyddg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gumkpzyddg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gumkpzyddg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gumkpzyddg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gumkpzyddg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gumkpzyddg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gumkpzyddg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gumkpzyddg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gumkpzyddg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gumkpzyddg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gumkpzyddg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gumkpzyddg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gumkpzyddg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gumkpzyddg .gt_left {
+  text-align: left;
+}
+
+#gumkpzyddg .gt_center {
+  text-align: center;
+}
+
+#gumkpzyddg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gumkpzyddg .gt_font_normal {
+  font-weight: normal;
+}
+
+#gumkpzyddg .gt_font_bold {
+  font-weight: bold;
+}
+
+#gumkpzyddg .gt_font_italic {
+  font-style: italic;
+}
+
+#gumkpzyddg .gt_super {
+  font-size: 65%;
+}
+
+#gumkpzyddg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gumkpzyddg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gumkpzyddg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gumkpzyddg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gumkpzyddg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gumkpzyddg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gumkpzyddg .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
     <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
@@ -497,7 +5215,465 @@ title: Datasets in CSV format
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/apt_dly_2022.csv.bz2">apt_dly_2022.csv.bz2</a></td>
 <td headers="size" class="gt_row gt_right">381.9K</td></tr>
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/apt_dly_2023.csv.bz2">apt_dly_2023.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">274.7K</td></tr>
+<td headers="size" class="gt_row gt_right">126.5K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/apt_dly_2024.csv.bz2">apt_dly_2024.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">65.4K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+<li><p><span id="ertdly-csv">Daily en-route delays</span>, <code>&lt;dataset&gt;</code>=<code>ert_dly</code></p>
+<ul>
+<li><p><a href="/acronym/ansp/">ANSP</a> group (see <a href="../ansp">list of ANSP’s considered by PRU</a>) (from 2008), <code>&lt;group&gt;</code>=<code>ansp</code></p>
+<div id="crlvtugwlr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#crlvtugwlr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#crlvtugwlr thead, #crlvtugwlr tbody, #crlvtugwlr tfoot, #crlvtugwlr tr, #crlvtugwlr td, #crlvtugwlr th {
+  border-style: none;
+}
+
+#crlvtugwlr p {
+  margin: 0;
+  padding: 0;
+}
+
+#crlvtugwlr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#crlvtugwlr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#crlvtugwlr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#crlvtugwlr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#crlvtugwlr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#crlvtugwlr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#crlvtugwlr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#crlvtugwlr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#crlvtugwlr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#crlvtugwlr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#crlvtugwlr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#crlvtugwlr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#crlvtugwlr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#crlvtugwlr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#crlvtugwlr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#crlvtugwlr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#crlvtugwlr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#crlvtugwlr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#crlvtugwlr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#crlvtugwlr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#crlvtugwlr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#crlvtugwlr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#crlvtugwlr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#crlvtugwlr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#crlvtugwlr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#crlvtugwlr .gt_left {
+  text-align: left;
+}
+
+#crlvtugwlr .gt_center {
+  text-align: center;
+}
+
+#crlvtugwlr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#crlvtugwlr .gt_font_normal {
+  font-weight: normal;
+}
+
+#crlvtugwlr .gt_font_bold {
+  font-weight: bold;
+}
+
+#crlvtugwlr .gt_font_italic {
+  font-style: italic;
+}
+
+#crlvtugwlr .gt_super {
+  font-size: 65%;
+}
+
+#crlvtugwlr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#crlvtugwlr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#crlvtugwlr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#crlvtugwlr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#crlvtugwlr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#crlvtugwlr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#crlvtugwlr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2008.csv.bz2">ert_dly_ansp_2008.csv.bz2</a></td>
 <td headers="size" class="gt_row gt_right">101.8K</td></tr>
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2009.csv.bz2">ert_dly_ansp_2009.csv.bz2</a></td>
@@ -529,52 +5705,978 @@ title: Datasets in CSV format
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2022.csv.bz2">ert_dly_ansp_2022.csv.bz2</a></td>
 <td headers="size" class="gt_row gt_right">106.8K</td></tr>
     <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2023.csv.bz2">ert_dly_ansp_2023.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">74.5K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2013.csv.bz2">ert_dly_fir_2013.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">90.0K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2014.csv.bz2">ert_dly_fir_2014.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">89.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2015.csv.bz2">ert_dly_fir_2015.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">127.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2016.csv.bz2">ert_dly_fir_2016.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">132.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2017.csv.bz2">ert_dly_fir_2017.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">137.2K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2018.csv.bz2">ert_dly_fir_2018.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">157.2K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2019.csv.bz2">ert_dly_fir_2019.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">156.5K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2020.csv.bz2">ert_dly_fir_2020.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">89.4K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2021.csv.bz2">ert_dly_fir_2021.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">97.3K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2022.csv.bz2">ert_dly_fir_2022.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">147.9K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_fir_2023.csv.bz2">ert_dly_fir_2023.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">103.5K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2014.csv.bz2">hfe_2014.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">532.1K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2015.csv.bz2">hfe_2015.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">527.5K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2016.csv.bz2">hfe_2016.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">803.1K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2017.csv.bz2">hfe_2017.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">802.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2018.csv.bz2">hfe_2018.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">787.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2019.csv.bz2">hfe_2019.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">790.7K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2020.csv.bz2">hfe_2020.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">774.6K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2021.csv.bz2">hfe_2021.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">783.3K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2022.csv.bz2">hfe_2022.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">800.5K</td></tr>
-    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2023.csv.bz2">hfe_2023.csv.bz2</a></td>
-<td headers="size" class="gt_row gt_right">535.2K</td></tr>
+<td headers="size" class="gt_row gt_right">30.4K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2024.csv.bz2">ert_dly_ansp_2024.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">14.4K</td></tr>
   </tbody>
-  
-  
+
+
 </table>
-</div>
+</div></li>
+<li><p>Country FIR group (from 2013), <code>&lt;group&gt;</code>=<code>fir</code></p>
+<div id="pqdfcsunon" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pqdfcsunon table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pqdfcsunon thead, #pqdfcsunon tbody, #pqdfcsunon tfoot, #pqdfcsunon tr, #pqdfcsunon td, #pqdfcsunon th {
+  border-style: none;
+}
+
+#pqdfcsunon p {
+  margin: 0;
+  padding: 0;
+}
+
+#pqdfcsunon .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pqdfcsunon .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pqdfcsunon .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pqdfcsunon .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pqdfcsunon .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pqdfcsunon .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pqdfcsunon .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pqdfcsunon .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pqdfcsunon .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pqdfcsunon .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pqdfcsunon .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pqdfcsunon .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pqdfcsunon .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pqdfcsunon .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pqdfcsunon .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqdfcsunon .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pqdfcsunon .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pqdfcsunon .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pqdfcsunon .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqdfcsunon .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pqdfcsunon .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqdfcsunon .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pqdfcsunon .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqdfcsunon .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqdfcsunon .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqdfcsunon .gt_left {
+  text-align: left;
+}
+
+#pqdfcsunon .gt_center {
+  text-align: center;
+}
+
+#pqdfcsunon .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pqdfcsunon .gt_font_normal {
+  font-weight: normal;
+}
+
+#pqdfcsunon .gt_font_bold {
+  font-weight: bold;
+}
+
+#pqdfcsunon .gt_font_italic {
+  font-style: italic;
+}
+
+#pqdfcsunon .gt_super {
+  font-size: 65%;
+}
+
+#pqdfcsunon .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pqdfcsunon .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pqdfcsunon .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pqdfcsunon .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pqdfcsunon .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pqdfcsunon .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pqdfcsunon .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2008.csv.bz2">ert_dly_ansp_2008.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">101.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2009.csv.bz2">ert_dly_ansp_2009.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">91.2K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2010.csv.bz2">ert_dly_ansp_2010.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">97.9K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2011.csv.bz2">ert_dly_ansp_2011.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">91.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2012.csv.bz2">ert_dly_ansp_2012.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">94.7K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2013.csv.bz2">ert_dly_ansp_2013.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">93.2K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2014.csv.bz2">ert_dly_ansp_2014.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">93.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2015.csv.bz2">ert_dly_ansp_2015.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">94.0K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2016.csv.bz2">ert_dly_ansp_2016.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">96.9K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2017.csv.bz2">ert_dly_ansp_2017.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">100.2K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2018.csv.bz2">ert_dly_ansp_2018.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">112.3K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2019.csv.bz2">ert_dly_ansp_2019.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">114.1K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2020.csv.bz2">ert_dly_ansp_2020.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">67.5K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2021.csv.bz2">ert_dly_ansp_2021.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">73.7K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2022.csv.bz2">ert_dly_ansp_2022.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">106.8K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2023.csv.bz2">ert_dly_ansp_2023.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">30.4K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/ert_dly_ansp_2024.csv.bz2">ert_dly_ansp_2024.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">14.4K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+</ul></li>
+<li><p>Horizontal Flight Efficiency (from 2014), <code>&lt;dataset group&gt;</code>=<code>hfe</code></p>
+<div id="pbjoezkfmh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pbjoezkfmh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pbjoezkfmh thead, #pbjoezkfmh tbody, #pbjoezkfmh tfoot, #pbjoezkfmh tr, #pbjoezkfmh td, #pbjoezkfmh th {
+  border-style: none;
+}
+
+#pbjoezkfmh p {
+  margin: 0;
+  padding: 0;
+}
+
+#pbjoezkfmh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: 2em;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: fit-content !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pbjoezkfmh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pbjoezkfmh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pbjoezkfmh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pbjoezkfmh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pbjoezkfmh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pbjoezkfmh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pbjoezkfmh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pbjoezkfmh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pbjoezkfmh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pbjoezkfmh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pbjoezkfmh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pbjoezkfmh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pbjoezkfmh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pbjoezkfmh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pbjoezkfmh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pbjoezkfmh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pbjoezkfmh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pbjoezkfmh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pbjoezkfmh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pbjoezkfmh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pbjoezkfmh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pbjoezkfmh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pbjoezkfmh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pbjoezkfmh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pbjoezkfmh .gt_left {
+  text-align: left;
+}
+
+#pbjoezkfmh .gt_center {
+  text-align: center;
+}
+
+#pbjoezkfmh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pbjoezkfmh .gt_font_normal {
+  font-weight: normal;
+}
+
+#pbjoezkfmh .gt_font_bold {
+  font-weight: bold;
+}
+
+#pbjoezkfmh .gt_font_italic {
+  font-style: italic;
+}
+
+#pbjoezkfmh .gt_super {
+  font-size: 65%;
+}
+
+#pbjoezkfmh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pbjoezkfmh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pbjoezkfmh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pbjoezkfmh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pbjoezkfmh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pbjoezkfmh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pbjoezkfmh .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Name&lt;/strong&gt;"><strong>Name</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Size (bytes)&lt;/strong&gt;"><strong>Size (bytes)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2014.csv.bz2">hfe_2014.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">532K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2015.csv.bz2">hfe_2015.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">531K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2016.csv.bz2">hfe_2016.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">803K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2017.csv.bz2">hfe_2017.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">803K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2018.csv.bz2">hfe_2018.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">788K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2019.csv.bz2">hfe_2019.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">802K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2020.csv.bz2">hfe_2020.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">773K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2021.csv.bz2">hfe_2021.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">783K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2022.csv.bz2">hfe_2022.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">802K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2023.csv.bz2">hfe_2023.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">805K</td></tr>
+    <tr><td headers="path" class="gt_row gt_left"><a href="https://www.eurocontrol.int/performance/data/download/csv/hfe_2024.csv.bz2">hfe_2024.csv.bz2</a></td>
+<td headers="size" class="gt_row gt_right">131K</td></tr>
+  </tbody>
+
+
+</table>
+</div></li>
+</ul>
 </div>
