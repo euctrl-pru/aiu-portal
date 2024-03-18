@@ -155,7 +155,7 @@ async function updateNetworkSituationOnPage() {
 
 This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU). 
 
-In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
+In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to: 
 
 * ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
 * stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
