@@ -5,32 +5,76 @@ output: html_document
 
 
 
-<style type="text/css">
-.resp-container {
-    margin-left: -20px;
-    margin-right: -20px;
-    position: relative;
-    overflow: hidden;
-    padding-top: 170%;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 110%;
-    border: 0;
-}
-</style>
 <div class="container-fluid">
-<div class="pl-0 ml-0 text-justify">
+<div class="row">
+<div class="col-lg-3 pl-0 text-justify">
+<p><br></p>
 <p>This page presents qualitative information about the institutional arrangements and corporate governance structure for each ANSP participating to the ACE analysis.</p>
 <p>This page also includes information relating to the scope of services provided by the ANSP, the number of ACC, APP and TWR operational units where it is responsible to provide ATC services, as well as a map of the area controlled by the ANSP. Finally, this page also shows high level financial and operational data for each organisation.</p>
 </div>
-<div class="resp-container">
-<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiYTU2MmU0OTgtOWI4Yi00MWFmLThlMWItNmQxZGJjOWU2NDU5IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" allowFullScreen="true">
+<!-- closes col -->
+<div class="col-lg-9">
+<div class="row">
+<div id="ansp_list" class="col-8 float-left">
+<p><label class="mb-0" for="ansp">Select ANSP:</label>
+<select name="ansp" id="ansp" onchange="changeANSP(this.value)"></select></p>
+</div>
+<div class="col-4">
+<p><a id="mydownload" href="https://www.eurocontrol.int/ACE/ANSP-Factsheets/Albcontrol.pdf" role="button" target="_blank"
+class="float-right pr-1 pl-1" style="padding-top:2px; padding-bottom:2px; color:black; border-radius:2px; border:1px solid #aaaaaa; background: linear-gradient(to bottom, #fcfcfc, #dddddd)" type="button" download>Download .pdf
+</a></p>
+</div>
+</div>
+<!-- closes row -->
+<div>
+<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&amp;url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/Albcontrol.pdf" width="100%" height="850pt">
 </iframe>
 </div>
 </div>
+<!-- closes col -->
+</div>
+<!-- closes row -->
+</div>
 <!-- closes container -->
+<script id="json_ansp" type="application/json">[{"ANSP_NAME":"Albcontrol"},{"ANSP_NAME":"ANS CR"},{"ANSP_NAME":"ARMATS"},{"ANSP_NAME":"Austro Control"},{"ANSP_NAME":"Avinor (Continental)"},{"ANSP_NAME":"BHANSA"},{"ANSP_NAME":"BULATSA"},{"ANSP_NAME":"Croatia Control"},{"ANSP_NAME":"DCAC Cyprus"},{"ANSP_NAME":"DFS"},{"ANSP_NAME":"DHMI"},{"ANSP_NAME":"DSNA"},{"ANSP_NAME":"EANS"},{"ANSP_NAME":"ENAIRE"},{"ANSP_NAME":"ENAV"},{"ANSP_NAME":"Fintraffic ANS"},{"ANSP_NAME":"HASP"},{"ANSP_NAME":"HungaroControl"},{"ANSP_NAME":"IAA"},{"ANSP_NAME":"LFV"},{"ANSP_NAME":"LGS"},{"ANSP_NAME":"LPS"},{"ANSP_NAME":"LVNL"},{"ANSP_NAME":"MATS"},{"ANSP_NAME":"M-NAV"},{"ANSP_NAME":"MOLDATSA"},{"ANSP_NAME":"MUAC"},{"ANSP_NAME":"NATS (Continental)"},{"ANSP_NAME":"NAV Portugal (Continental)"},{"ANSP_NAME":"NAVIAIR"},{"ANSP_NAME":"Oro Navigacija"},{"ANSP_NAME":"PANSA"},{"ANSP_NAME":"ROMATSA"},{"ANSP_NAME":"Sakaeronavigatsia"},{"ANSP_NAME":"skeyes"},{"ANSP_NAME":"Skyguide"},{"ANSP_NAME":"Slovenia Control"},{"ANSP_NAME":"SMATSA"},{"ANSP_NAME":"UkSATSE"}]</script>
+<script type="text/javascript">
+var data = document.getElementById("json_ansp").textContent
+data = JSON.parse(data);
+
+var myselect = document.getElementById("ansp")
+var i = 0;
+
+for (const val of data)
+    {
+        var option = document.createElement("option");
+        option.value = data[i].ANSP_NAME;
+        option.text = data[i].ANSP_NAME;
+        myselect.appendChild(option);
+        myselect.style.border="1px solid #aaaaaa";
+        myselect.style.padding="2px";
+        myselect.style.borderRadius="2px";
+        myselect.style.background="linear-gradient(to bottom, #fcfcfc, #dddddd)";
+        <!-- myselect.style.padding-bottom="2px"; -->
+        <!-- console.log(data[i].ANSP_NAME); -->
+        i = i+1;
+    }
+
+  document.getElementById("ansp_list").appendChild(label).appendChild(select);
+  
+
+</script>
+<script type="text/javascript">
+
+function changeANSP (value) {
+
+		var element1 = document.getElementById("MyEmbed_div");
+	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
+
+		var element2 = document.getElementById("mydownload");
+		var myurl = 'https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf';
+	  element2.setAttribute("href", myurl) ;
+	  
+	  element1.src = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/'+value+'.pdf' ;
+
+}
+</script>
