@@ -91,7 +91,7 @@ The datasets made available are:
     ```
   - Country FIR group (from 2013), `<group>`=`fir`
     ```{r echo = FALSE, message = FALSE, warning = FALSE}
-    gt_for_csvs("ert_dly_ansp_\\d{4}.csv")
+    gt_for_csvs("ert_dly_fir_\\d{4}.csv")
     ```
 * Horizontal Flight Efficiency (from 2014), `<dataset group>`=`hfe`
   ```{r echo = FALSE, message = FALSE, warning = FALSE}
