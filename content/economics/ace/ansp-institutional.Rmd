@@ -99,6 +99,3 @@ function changeANSP (value) {
 
 }
 </script>
-
-
-
