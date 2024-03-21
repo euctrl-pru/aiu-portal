@@ -37,6 +37,7 @@ date: "2018-02-07T11:26:51+01:00"
     font-weight: bold;  
     text-align: left;
     color: #0070c0; 
+    
   }
 
 
@@ -45,17 +46,20 @@ date: "2018-02-07T11:26:51+01:00"
   padding: 0px;
   text-align: right;
 }
+.w3-container {
+  border-radius: 10px; 
+}
 
   </style>
 
 <!-- Daily traffic graphs and scorecards Scorecard_net-->
-<div class="w3-container">
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+<div class="w3-container" >
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 10px 10px 0 0; width: 100%;">
 <div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div></div>
 </div>
 
 <div class="w3-container">
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0px; width: 100%;">
+<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0 0 10px 10px; width: 100%;">
 
 <div class="col">
   <p class="Scorecard_subt">Total flights</p>
@@ -73,7 +77,7 @@ date: "2018-02-07T11:26:51+01:00"
 </div>
 
 <div class="col-2" ; style="margin: 0px;  ">
-  <p class="Scorecard_subt">Vs 2022</p>
+  <p class="Scorecard_subt">Vs prev. year</p>
   <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;"></p>
 </div>
 
@@ -207,38 +211,77 @@ For feedback or questions please contact us at:
 [Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
 </div>
 
-<div class="col-sm-4"><h4>What's new?</h4><br>
+
+<div class="col-sm-4" style="min-height: 445px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-<!--
-<div class="carousel-item active"><div class="card bg-light border-0"><a href="/traffic/punctuality/"><img class="card-img-top" src="/images/landing/ectl_pct.png" alt=""><div class="card-body"><h5 class="card-title">Are flights punctual?</h5></a><small><p class="card-text">Check out the latest punctuality situation in Europe, including a breakdown by airport and state!</p></small></div></div></div>
--->
+::: {#carousel-item .carousel-item .active}
+::: {.card .border-0}
+[![Performance Review Report 2023](/images/landing/prr-2023.PNG)](https://www.eurocontrol.int/publication/performance-review-report-prr-2023){target="_blank"}
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://ansperformance.eu/about/prc/" target="_blank"><img class="card-img-top" src="/images/landing/new_prc.png" alt=""><div class="card-body"><h5 class="card-title">Meet the new Performance Review Commission (PRC) members</h5></a><small><p class="card-text">
-Learn more about the Performance Review Commission (PRC) and the new members</p></small></div></div></div>
+##### [Performance Review Report 2023](https://www.eurocontrol.int/publication/performance-review-report-prr-2023){target="_blank"}
 
-<div class="carousel-item active"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029-autumn-2023" target="_blank"><img class="card-img-top" src="/images/landing/ectl_fcst.jpg" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL traffic forecast</h5></a><small><p class="card-text">See the latest update of the 7-year forecast (2023-2029)</p></small></div></div></div>
+<small>The independent Performance Review Commission (PRC) has just released their review of ANS performance for consultation.</small>
+:::
+:::
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://ext.eurocontrol.int/connectivity_web/from" target="_blank"><img class="card-img-top" src="/images/landing/aiu_connex.png" alt=""><div class="card-body"><h5 class="card-title">Are you connected?</h5></a><small><p class="card-text">
-Check out our European aviation connectivity dashboard!</p></small></div></div></div>
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/news/atm-cost-effectiveness-ace-first-look-ace-2022-data" target="_blank"><img class="card-img-top" src="/images/landing/prc_ace.png" alt=""><div class="card-body"><h5 class="card-title">ATM Cost-effectiveness 2022</h5></a><small><p class="card-text">
-Have a first look at the ANSP's 2022 cost-effectiveness data!</p></small></div></div></div>
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: EUROCONTROL Data Snapshot #42](/images/landing/ds_snapshot_42.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
 
-<div class="carousel-item"><div class="card  border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-21-long-haul-flight-decarbonisation-when-can-cutting-edge" target="_blank"><img class="card-img-top" src="/images/landing/tp21.png" alt=""><div class="card-body"><h5 class="card-title">EUROCONTROL Think Paper #21</h5></a><small><p class="card-text">
-Long-haul flight decarbonisation: When can cutting-edge energies & technologies make a difference?</p></small></div></div></div>
+##### [Published: EUROCONTROL Data Snapshot #42](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies){target="_blank"}
 
-<div class="carousel-item"><div class="card  border-0"><a href="/data/"><img class="card-img-top"  src="/images/landing/data_icon.jpg" alt="Data update"><div class="card-body"><h5 class="card-title">Performance data update</h5></a><small><p class="card-text">October 2023 data <br> available for download now</p></small></div></div></div>
+<small>Our 42st EUROCONTROL Data Snapshot delves into the growth of the new generation of narrow bodies.</small>
+:::
+:::
 
-<!--
-<div class="carousel-item"><div class="card bg-light border-0"><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank" ><img class="card-img-top" src="/images/landing/eao.png" alt=""><div class="card-body"><h5 class="card-title">European Aviation Overview</h5></a><small><p class="card-text">
-Read our EUROCONTROL aviation briefings on the latest trends in the European network.</p></small></div></div></div>
 
-<div class="carousel-item"><div class="card bg-light border-0"><a href="/prc/transformation/"><img class="card-img-top" src="/images/landing/prc_tss.png" alt=""><div class="card-body"><h5 class="card-title">Transformation</h5></a><small><p class="card-text">
-Learn about the PRC's strategy to support the transformation process in ANS.</p></small></div></div></div>
 
--->
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](/images/landing/eurocontrol-spring-2024-7-year-forecast-banner.jpg)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"}
+
+##### [Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"}
+
+<small>The seven-year forecast edition Spring 2024 by EUROCONTROL STATFOR has been published. </small>
+:::
+:::
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Portal Update: Improved Data Access](/images/landing/portal_update_data_access.jpg)](https://ansperformance.eu/csv/){target="_blank"}
+
+##### [Portal Update: Improved Data Access](https://ansperformance.eu/csv/){target="_blank"}
+
+<small>The availability of CSV data sets for various performance topics have been extended on the portal.</small>
+:::
+:::
+
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data.png)](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
+
+##### [Released: EUROCONTROL DATA App](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
+
+<small>Download our new DATA app (on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play</a></small>
+:::
+:::
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Performance Data Update](/images/landing/data_icon.jpg)](/data/){target="_blank"}
+
+##### [Performance Data Update](/data/){target="_blank"}
+
+<small>February 2024 data available for download now!</small>
+:::
+:::
+
 
 </div>
 

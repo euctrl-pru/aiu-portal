@@ -1468,10 +1468,12 @@ title: ANSPs Financial Dashboard
     MyViewBalance1.setColumns([0, 14, 13, 16, 17, 18]);
     //Check negative values
     for (var y = 1; y < MyViewBalance1.getNumberOfColumns(); y++) {
-      var NegativeValues_Balance
-      if (MyViewBalance1.getValue(SelectedYear - MinYear, y) < 0) {
-        NegativeValues_Balance = 1
-      };
+      for (var x = MinYear; x <= MaxYear; x++) {
+        var NegativeValues_Balance
+        if (MyViewBalance1.getValue(x - MinYear, y) < 0) {
+          NegativeValues_Balance = 1
+        };
+      }
     } 
 
     // Set chart options
@@ -2445,7 +2447,7 @@ title: ANSPs Financial Dashboard
     document.getElementById("Dif_Capex").innerHTML = (SelectedYear == MinYear) ? "" : Dif_Capex + "% vs. " + (SelectedYear - 1);
 
     document.getElementById("Scorecard_Liab").innerHTML = String(Scorecard_Liab).replace(/(.)(?=(\d{3})+$)/g, '$1,'); 
-    document.getElementById("Scorecard_Equity").innerHTML = String(Scorecard_Equity).replace(/(.)(?=(\d{3})+$)/g, '$1,'); 
+    document.getElementById("Scorecard_Equity").innerHTML = (Scorecard_Equity < 0) ? Scorecard_Equity : String(Scorecard_Equity).replace(/(.)(?=(\d{3})+$)/g, '$1,'); 
     document.getElementById("Scorecard_LiabEqui").innerHTML = String(Scorecard_LiabEqui).replace(/(.)(?=(\d{3})+$)/g, '$1,');
 
   }

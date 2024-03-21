@@ -59,7 +59,9 @@ export_query <- function(schema, query) {
   USR <- Sys.getenv(paste0(schema, "_USR"))
   PWD <- Sys.getenv(paste0(schema, "_PWD"))
   DBN <- Sys.getenv(paste0(schema, "_DBNAME"))
-  withr::local_envvar(c("TZ" = "UTC", "ORA_SDTZ" = "UTC"))
+  withr::local_envvar(c("TZ" = "UTC", 
+                        "ORA_SDTZ" = "UTC",
+                        "NLS_LANG" = ".AL32UTF8"))
   withr::local_namespace("ROracle")
   con <- withr::local_db_connection(
     DBI::dbConnect(DBI::dbDriver("Oracle"),
@@ -72,14 +74,14 @@ export_query <- function(schema, query) {
 
 query <- str_glue("
     SELECT *
-      FROM TABLE (emma_pub.api_aiu_stats.MM_AIU_STATE_DEP ())
+      FROM TABLE (emma_pub.api_aiu_stats.MM_AIU_STATE_DEP ()) 
       where year >= 2019 and STATE_NAME not in ('LIECHTENSTEIN')
     ORDER BY 2, 3, 4
    ")
 
 
-co2_data_raw <- export_query("PRU_DEV", query = query)%>%
-  mutate(across(.cols = where(is.instant), ~ as.Date(.x)))
+co2_data_raw <- export_query("PRU_DEV", query = query) %>%
+  mutate(across(.cols = where(is.instant), ~ as.Date(.x))) 
 
 co2_data_plot_nw <- co2_data_raw %>%
   select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH)%>%
@@ -261,10 +263,10 @@ co2_data_plot_state <- co2_data_raw %>%
          MOM_GROWTH_TF = if_else(YEAR == last_year, TF/lag(TF, 12*(last_year-2019))-1,NA))%>%
   filter(FLIGHT_MONTH ==last_date)%>%
   select(STATE_NAME, CO2_QTY_TONNES, TF, MOM_GROWTH_CO2, MOM_GROWTH_TF)%>%
-  mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
-  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE))%>%
-  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE))%>%
-  mutate(STATE_NAME = gsub("Turkiye", "Türkiye",STATE_NAME, ignore.case = FALSE))%>%
+  mutate(STATE_NAME = str_to_title(STATE_NAME)) %>% 
+  # mutate(STATE_NAME = gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(STATE_NAME), perl=TRUE)) %>%
+  mutate(STATE_NAME = gsub("Of", "of",STATE_NAME, ignore.case = FALSE)) %>%
+  mutate(STATE_NAME = gsub("And", "and",STATE_NAME, ignore.case = FALSE)) %>% 
   # mutate(CO2_DEP = ifelse(TF!=0,CO2_QTY_TONNES/TF,0))%>%
   # mutate(CO2_DEP_2019 = ifelse(TF!=0, CO2_QTY_TONNES/TF *(MOM_GROWTH_TF+1)/(MOM_GROWTH_CO2+1), 0))%>%
   # mutate(MOM_GROWTH_CO2_DEP = ifelse(CO2_DEP_2019!=0, CO2_DEP/CO2_DEP_2019-1, 0))%>%
@@ -526,7 +528,7 @@ This page provides an overview of the [CO<sub>2</sub> emissions](/reference/data
 <p style="font-weight:bold; color:#2E75B6; font-size:18px;  ">Month: `r last_month` </p>
 </div>
 <div class="col-4" >
-<p style=" font-size:15px; margin-top:15px">vs 2022</p>
+<p style=" font-size:15px; margin-top:15px">vs 2023</p>
 </div>
 <div class="col-3" >
 <p style="font-size:15px; margin-top:15px">vs 2019</p>

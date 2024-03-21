@@ -5,73 +5,98 @@ title: Datasets in CSV format
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 # run setup script
 source(here::here("_common.R"))
+library(aiuportal)
 ```
 
-PRU provides some relevant datasets in CSV format (compressed using [bzip2][bzip2]):
+AIU provides CSV files for some of its data sets so as to make it possible to
+automate download and processing by interested parties.
 
-The filename convention we adopted is as follows:
+The file names adhere to the following convention:
+
+> `<dataset group>_<YYYY>.csv`
+
+The available data sets are:
+
+* [ATC Pre-Departure Delays]{#atcpre-csv} (from 2016), `<dataset group>`=`atc_pre_departure_delays`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("atc_pre_departure_delays_\\d{4}.csv")
+  ```
+* [All Pre-Departure Delays]{#allpre-csv} (from 2020), `<dataset group>`=`all_pre_departure_delays`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("all_pre_departure_delays_\\d{4}.csv")
+  ```
+* [ATFM Slot Adherence]{#sltadh-csv} (from 2016), `<dataset group>`=`atfm_slot_adherence`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("atfm_slot_adherence_\\d{4}.csv")
+  ```
+* [CO2 Emission by State]{#co2-csv} (from 2010), `<dataset group>`=`co2_emmissions_by_state`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("co2_emmissions_by_state_\\d{4}.csv")
+  ```
+* [Horizontal Flight Efficiency]{#hfe-csv} (from 2015), `<dataset group>`=`horizontal_flight_efficiency`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("horizontal_flight_efficiency_\\d{4}.csv")
+  ```
+* [Vertical Flight Efficiency]{#vfe-csv} (from 2015), `<dataset group>`=`vertical_flight_efficiency`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("vertical_flight_efficiency_\\d{4}.csv")
+  ```
+* [Taxi-in Additional Time]{#txin-csv} (from 2018), `<dataset group>`=`taxi_in_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("taxi_in_additional_time_\\d{4}.csv")
+  ```
+* [Taxi-out Additional Time]{#txout-csv} (from 2018), `<dataset group>`=`taxi_out_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("taxi_out_additional_time_\\d{4}.csv")
+  ```
+* [ASMA Additional Time]{#asma-csv} (from 2018), `<dataset group>`=`asma_additional_time`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("asma_additional_time_\\d{4}.csv")
+  ```
+* [Airport Traffic]{#aptflt-csv} (from 2016), `<dataset group>`=`airport_traffic`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("airport_traffic_\\d{4}.csv")
+  ```
+
+
+## Legacy CSVs
+
+AIU provides some data sets in CSV format (compressed using [bzip2][bzip2]).
+
+**These files will be migrated to pure CSV files with a new file name similar to
+the ones above.**
+
+The file name convention we adopted is as follows:
 
 > `<dataset group>_<YYYY>.csv.bz2`
 
 where
+
 > `<dataset group> = <dataset>_<group>`
+
+For example `ert_dly_ansp_2012.csv.bz2` refers to en-rote delays data set with
+ANSP breakdown for year 2012.
+
 
 The datasets made available are:
 
-* Daily en-route delays: `ert_dly`
-    * [ANSP](/acronym/ansp/) group (see [list of ANSP's considered by PRU](../ansp)): `ansp`
-    * Country FIR group: `fir`
-
-* Horizontal Flight Efficiency: `hfe`
-    * Entity type can be `State (FIR)` or `FAB (FIR)	`
-    * Please note that the code `SFR` in `Model type` corresponds to the Shortest constrained route (`SCR`). 
-
-* Airport Arrival ATFM Delays: `apt_dly`
-
-For example `ert_dly_ansp_2012.csv.bz2` refers to en-rote delays dataset with ANSP breakdown for year 2012.
-
-## Dataset files
-
-
-
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-library(fs)
-library(magrittr)
-library(purrr)
-library(dplyr)
-library(stringr)
-library(gt)
-
-dwnl_url <- "https://www.eurocontrol.int/performance/data/download/csv"
-base_dir <- "//ihx-vdm05/LIVE_var_www_performance$/data/download/csv"
-
-dir_info(base_dir, glob = "*.csv.bz2") |>
-  select(path, size) |> 
-  mutate(
-    path = path_file(path),
-    url = str_c(dwnl_url, path, sep = "/"),
-    path = glue::glue("[{path}]({url})"),
-    path = map(path, gt::md)) |> 
-  select(path, size) |> 
-  gt() |> 
-  cols_label(
-    path = gt::md("**Name**"),
-    size = gt::md("**Size (bytes)**"),
-  ) |> 
-  cols_align(
-    align = "left",
-    columns = c(path)
-  ) |> 
-  cols_align(
-    align = "right",
-    columns = c(size)
-  ) |> 
-  tab_options(
-    table.width = "fit-content!important",
-    table.margin.left = "2em",
-    table.margin.right= "auto")
-
-```
+* [Airport Arrival ATFM Delays]{#aptdly-csv} (from 2014): `<dataset group>`=`apt_dly`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("apt_dly_\\d{4}.csv")
+  ```
+* [Daily en-route delays]{#ertdly-csv}, `<dataset>`=`ert_dly`
+  - [ANSP](/acronym/ansp/) group (see [list of ANSP's considered by PRU](../ansp)) (from 2008), `<group>`=`ansp`
+    ```{r echo = FALSE, message = FALSE, warning = FALSE}
+    gt_for_csvs("ert_dly_ansp_\\d{4}.csv")
+    ```
+  - Country FIR group (from 2013), `<group>`=`fir`
+    ```{r echo = FALSE, message = FALSE, warning = FALSE}
+    gt_for_csvs("ert_dly_fir_\\d{4}.csv")
+    ```
+* Horizontal Flight Efficiency (from 2014), `<dataset group>`=`hfe`
+  ```{r echo = FALSE, message = FALSE, warning = FALSE}
+  gt_for_csvs("hfe_\\d{4}.csv")
+  ```
 
 
 [bzip2]: <https://en.wikipedia.org/wiki/Bzip2> "Wikipedia: bzip2"

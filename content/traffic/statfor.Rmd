@@ -49,7 +49,7 @@ date: '2020-05-15'
 
 EUROCONTROL works with stakeholders to produce forecasts of future network traffic.
 
-The figure below presents the EUROCONTROL 7-year forecast (2023-2029) for air traffic movements (IFR) in millions of flights (Autumn Edition 2023). The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2022 and different forecast scenarios (high, base, low) up to 2029. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
+The figure below presents the EUROCONTROL 7-year forecast (2024-2030) for air traffic movements (IFR) in millions of flights (Spring Edition 2024). The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2023 and different forecast scenarios (high, base, low) up to 2030. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Embedding statfor_forecasts_2023 -->
 <div class="plotly-container">
@@ -64,7 +64,7 @@ library(htmlwidgets)
 library(here)
 
 # Read and process data
-data <- read_csv2(here("content", "traffic", "eurocontrol-forecast-2023-2029-traffic-table-october2023-unroundedUPDATE.csv"))
+data <- read_csv(here("content", "traffic", "eurocontrol-forecast-2024-2030-traffic-table-february2024-unrounded.csv"))
 
 data <- data %>%
   mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
@@ -81,7 +81,7 @@ filtered_data <- data %>%
   select(Rank, TZ, Yr, mvts)
 
 # Set maximum year for actual data
-actual_max_year <- 2022
+actual_max_year <- 2023
 
 # Filter actual data
 filtered_data_actual <- filtered_data %>%
@@ -141,7 +141,7 @@ tz_values <- c(tz_values[nm_area_index], tz_values[-nm_area_index])
 
 # Add 2022 data points for high and low scenarios based on base scenario
 base_scenario_2022 <- data %>%
-  filter(Yr == 2022, Rank == "Base")
+  filter(Yr == 2023, Rank == "Base")
 
 high_scenario_2022 <- base_scenario_2022 %>%
   mutate(Rank = "High")
@@ -151,7 +151,7 @@ low_scenario_2022 <- base_scenario_2022 %>%
 
 data <- data %>%
   rbind(high_scenario_2022, low_scenario_2022) %>%
-  arrange(Yr, TZ, Rank)
+  arrange(Yr, TZ, Rank) 
 
 
 # Initialize plot
@@ -235,7 +235,7 @@ updatemenus = list(list(
              rep(FALSE, length(tz_values) * 5), seq((i - 1) * 5 + 1, i * 5, by = 1), TRUE
            )),
            list(title = list(
-             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
+             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2024-2030 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
            ))
          ),
          label = tz_values[i])
@@ -246,7 +246,7 @@ updatemenus = list(list(
 plot <-
   plot %>% layout(
     title = list(
-      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2023-2029 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
+      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2024-2030 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
     ),
     xaxis = list(
       title = "",
@@ -277,23 +277,7 @@ plot <-
 # Configure the plot to show only the screenshot option
 plot <-
   plot %>% config(
-    displayLogo = FALSE,
-    displayModeBar = "hover",
-    modeBarButtonsToRemove = list(
-      "zoom2d",
-      "logo",
-      "pan2d",
-      "select2d",
-      "lasso2d",
-      "zoomIn2d",
-      "zoomOut2d",
-      "autoScale2d",
-      "resetScale2d",
-      "toggleSpikelines",
-      "hoverClosestCartesian",
-      "hoverCompareCartesian",
-      "sendDataToCloud"
-    )
+    displayModeBar = FALSE
   )
 
 # Render and save the plots 
@@ -304,7 +288,7 @@ plot
 
 <br>
 
-For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2023-2029 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029-autumn-2023).
+For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2024-2030 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030).
 
 Note: The traffic zone 'Spain' is the aggregated zone composed of 'Spain-Canaries' and 'Spain-Continental'.
 
