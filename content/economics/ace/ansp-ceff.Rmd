@@ -1,6 +1,8 @@
 ---
 title: "ANSPs individual cost-effectiveness performance"
-output: html_document
+output:
+  blogdown::html_page:
+    pandoc_args: !expr c(paste0("--lua-filter=", here::here("themes", "color-text.lua")))
 ---
 <style type="text/css">
 .resp-container {
@@ -23,7 +25,8 @@ output: html_document
 
 <div class="container">
 
-**Draft ANSPs individual cost-effectiveness performance reports for review by the ACE Working Group until 26th April 2024**</br>[**Do not share this page outside of the ACE Working Group**]{color="red"}
+**Draft ANSPs individual cost-effectiveness performance reports for review by the ACE Working Group until 26th April 2024**</br>
+[**Do not share this page outside of the ACE Working Group**]{ color="red" }
 
 This web page presents ANSPs individual reports (2-pager), which are updated each year after the publication of the final ACE report. The current version reflects the draft 2022 data submitted by ANSPs in July 2023 and thoroughly reviewed by the PRU. The reports show developments in economic cost-effectiveness, financial cost-effectiveness (and its main components) over a five-year period. They also present how ANSPs perform within their respective comparator groups, the trends in capital expenditures, and the main projects driving these investments.
 <br>
