@@ -2,13 +2,15 @@
 title: Composite Risk Index Methodology
 bibliography: ["../../static/bib/aviation.bib"]
 link-citations: true
-output: html_document
+output:
+  blogdown::html_page:
+    pandoc_args: !expr c(paste0("--lua-filter=", here::here("themes", "color-text.lua")))
 ---
 
 
 
 <p>This page provides a technical description of the preliminary methodology used to calculate the Composite Risk Index (CRI).</p>
-<p><span style="color: #f30d0d">NOTE: The CRI methodology has been improved to also consider specific local operating conditions, airspace size, capacity and/or complexity. For more information please visit <a href="/methodology/cri-pi/" title="Composite Risk Index (CRI) Methodology Update">Composite Risk Index (CRI) Methodology Update</a>.</span></p>
+<p><span style="color: red;">NOTE: The CRI methodology has been improved to also consider specific local operating conditions, airspace size, capacity and/or complexity. For more information please visit <a href="/methodology/cri-pi/" title="Composite Risk Index (CRI) Methodology Update">Composite Risk Index (CRI) Methodology Update</a>.</span></p>
 <p>The CRI represents a cumulative risk value aggregating all reported, assessed and severity classified safety-related incidents to form an index. This measure of risk exposure is based on probability and severity that considers the human perception of equivalent risk.</p>
 <p>Note that CRI can be calculated for any given entity, provider or the State.</p>
 <p>Figure <a href="#fig:cri-components">1</a> shows all components of proposed CRI index.</p>

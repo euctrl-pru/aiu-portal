@@ -1,6 +1,6 @@
 ---
 title: "ANSPs individual factsheets"
-output: html_document
+output: blogdown::html_page
 ---
 
 This page comprises factsheets for each ANSP participating to the ACE analysis. These factsheets are made of three pages which comprise the following information:
