@@ -14,6 +14,21 @@ extrajs: [
 
 
 ## 2024
+<!-- #43 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Centre of gravity of European aviation - EUROCONTROL Data Snapshot #43][DS43]</h5>
+<small><strong><p style="color:#808080">Published: 27 March 2024</p></strong></small>
+The 43. EUROCONTROL Data Snapshot delves into the shifting of the centre of gravity of European aviation towards south and east.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds43.png" alt="Centre of gravity of European aviation"></div>
+</div>
+</div></div>
 
 <!-- #42 -->
 <div class="container alert alert-secondary">
@@ -21,13 +36,13 @@ extrajs: [
 
 <div class="col-sm-8"> 
 <h5>[Growth of new generation of narrow bodies - EUROCONTROL Data Snapshot #42][DS42]</h5>
-<small><strong><p style="color:#808080">Published: 21 December 2023</p></strong></small>
+<small><strong><p style="color:#808080">Published: 08 March 2024</p></strong></small>
 The 42. EUROCONTROL Data Snapshot delves into the growth of the new generation of narrow bodies, in particular the A320neo and B737MAX families.<br><br>
 <a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies" target="_blank" role="button">Learn more...</a>
 </div>
 
 <div class="col-sm-4"><br>
-<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds42.jpg" alt="Comparing airline flight and seat recovery"></div>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds42.jpg" alt="Growth of new gen of narrow bodies"></div>
 </div>
 </div></div>
 
@@ -822,3 +837,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS40]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-40-taxi-times "Taxi times"
 [DS41]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-41-comparing-airline-flight-and-seat-recovery "Comparing airline flight and seat recovery"
 [DS42]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies "Growth of new generation of narrow bodies"
+[DS43]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation "Centre of gravity of European aviation"
