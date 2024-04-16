@@ -10,7 +10,7 @@ library(fs)
 library(readxl)
 
 
-dest_dir_root <- "C:\Users\spi\OneDrive - EUROCONTROL\Download data files"
+dest_dir_root <- "C:/Users/spi/OneDrive - EUROCONTROL/Download data files"
 # to production directly
 #dest_dir_root <- "\\\\ihx-vdm05\\LIVE_var_www_performance$\\data\\download"
 dest_folder <- "csv"
