@@ -6,9 +6,8 @@
 # the new data in mom_co2.csv have to be attached in the notebook
 # via File attachments -> Replace file
 
-library(fr24gu)
 library(dplyr)
-library(DBI)
+library(eurocontrol)
 library(stringr)
 library(lubridate)
 library(readr)
@@ -118,15 +117,8 @@ com_ids <- tibble::tribble(
 
 
 export_query <- function(schema, query) {
-  USR <- Sys.getenv(paste0(schema, "_USR"))
-  PWD <- Sys.getenv(paste0(schema, "_PWD"))
-  DBN <- Sys.getenv(paste0(schema, "_DBNAME"))
   withr::local_envvar(c("TZ" = "UTC", "ORA_SDTZ" = "UTC"))
-  withr::local_namespace("ROracle")
-  con <- withr::local_db_connection(
-    DBI::dbConnect(DBI::dbDriver("Oracle"),
-                   USR, PWD, dbname = DBN,
-                   timezone = "UTC"))
+  con <- withr::local_db_connection(eurocontrol::db_connection(schema))
   con %>%
     dbSendQuery(query) %>%
     fetch(n = -1)
