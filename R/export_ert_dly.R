@@ -31,11 +31,12 @@ if (!(opts$type %in% types)) {
 
 suppressWarnings(suppressMessages(library(lubridate)))
 suppressWarnings(suppressMessages(library(purrr)))
-suppressWarnings(suppressMessages(library(fr24gu)))
+suppressWarnings(suppressMessages(library(eurocontrol)))
 suppressWarnings(suppressMessages(library(stringr)))
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(fs)))
+suppressWarnings(suppressMessages(library(withr)))
 
 safe_ymd <- safely(ymd)
 wef <- safe_ymd(opts$WEF, quiet = TRUE)
@@ -61,20 +62,11 @@ if (!fs::dir_exists(out_dir)) {
 
 out_dir <- fs::path_abs(out_dir)
 
-
-
-# # NOTE: to be set before you create your ROracle connection!
-# # See http://www.oralytics.com/2015/05/r-roracle-and-oracle-date-formats_27.html
-# tz <- "UDT"
-# Sys.setenv("TZ" = tz)
-# Sys.setenv("ORA_SDTZ" = "UTC")
-
-
-con <- db_connection(schema = "PRU_DEV")
-
-
-extract_dly_ansp <- function(con, wef, til) {
-  t_base <- con |> 
+extract_dly_ansp <- function(wef, til) {
+  withr::local_envvar("TZ" = "UTC", "ORA_SDTZ" = "UTC")
+  conn <- withr::local_db_connection(eurocontrol::db_connection(schema = "PRU_DEV"))
+  
+  t_base <- conn |> 
     tbl("V_PRU_FAC_TDC_DD") |> 
     filter(to_date(wef, 'YYYY-MM-DD') <= ENTRY_DATE, ENTRY_DATE < to_date(til, 'YYYY-MM-DD'))
   
@@ -172,8 +164,11 @@ extract_dly_ansp <- function(con, wef, til) {
   df_ansp
 }
 
-extract_dly_fir <- function(con, wef, til) {
-  t_base <- con |> 
+extract_dly_fir <- function(wef, til) {
+  withr::local_envvar("TZ" = "UTC", "ORA_SDTZ" = "UTC")
+  conn <- withr::local_db_connection(eurocontrol::db_connection(schema = "PRU_DEV"))
+  
+  t_base <- conn |> 
     tbl("V_PRU_FAC_TDC_DD") |> 
     filter(to_date(wef, 'YYYY-MM-DD') <= ENTRY_DATE, ENTRY_DATE < to_date(til, 'YYYY-MM-DD'))
   
@@ -269,7 +264,7 @@ extract_dly_fir <- function(con, wef, til) {
     )
   
   
-  t_country <- con |> 
+  t_country <- conn |> 
     tbl("V_PRU_REL_COUNTRY_ZONE") |> 
     filter(ZONE_ID == 58L) |> 
     select(COUNTRY_ICAO_CODE)
@@ -334,9 +329,9 @@ extract_dly_fir <- function(con, wef, til) {
 
 
 if (type == "ansp") {
-  data <- extract_dly_ansp(con, wef, til)
+  data <- extract_dly_ansp(wef, til)
 } else if (type == "fir") {
-  data <- extract_dly_fir(con, wef, til)
+  data <- extract_dly_fir(wef, til)
 } else {
   cat("Error: invalida TYPE,", type)
   q(status = -1)
@@ -366,9 +361,6 @@ data <- data |>
     DLY_ERT_NA_1 = as.integer(DLY_ERT_NA_1)
   ) |> 
   arrange(FLT_DATE, ENTITY_NAME)
-
-
-DBI::dbDisconnect(con)
 
 mySave <- function(df, ftype) {
   y <- unique(df$YEAR)
