@@ -91,56 +91,162 @@ date: "2018-02-07T11:26:51+01:00"
 </div>
 
 <!-- script for traffic figures -->
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+<!-- <script type="text/javascript"> -->
+<!-- async function fetchLatestNetworkSituation() { -->
+<!--     const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1'; -->
+<!--     try { -->
+<!--         const response = await fetch(apiUrl); -->
+<!--         if (!response.ok) { -->
+<!--             throw new Error(`API call failed: ${response.status}`); -->
+<!--         } -->
+<!--         const data = await response.json(); -->
+<!--         return data.items[0]; // Assuming the latest entry is what we need -->
+<!--     } catch (error) { -->
+<!--         console.error("Failed to fetch latest network situation:", error); -->
+<!--         // Implement any fallback logic or error handling here -->
+<!--         return null; -->
+<!--     } -->
+<!-- } -->
+
+<!-- async function updateNetworkSituationOnPage() { -->
+<!--     const latestData = await fetchLatestNetworkSituation(); -->
+<!--     if (latestData) { -->
+<!--         // Extract the year from the latest data's date -->
+<!--         const latestDate = new Date(latestData.date); -->
+<!--         const year = latestDate.getFullYear(); -->
+<!--         // Correctly construct the date range string -->
+<!--         const startDateString = `Latest network traffic situation: 01 Jan`; // Fixed start of the year -->
+<!--         const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`; -->
+<!--         const dateRangeString = `${startDateString} – ${endDateString}`; -->
+<!--         // Update webpage elements with the latest data, rounding numbers to integers -->
+<!--         document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString; -->
+<!--         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString(); -->
+<!--         document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString(); -->
+<!--         document.getElementById("dif_y2d_2019").innerHTML = -->
+<!--     (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') + -->
+<!--     Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%'; -->
+<!--         document.getElementById("dif_y2d_prev_year").innerHTML = -->
+<!--     (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') + -->
+<!--     Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%'; -->
+<!--     } else { -->
+<!--         // Handle case when no data could be fetched -->
+<!--         console.log("No data available to update the network situation."); -->
+<!--     } -->
+<!-- } -->
+<!-- </script> -->
+<!-- <script type="text/javascript"> -->
+<!--     document.addEventListener('DOMContentLoaded', function() { -->
+<!--         updateNetworkSituationOnPage(); -->
+<!--     }); -->
+<!-- </script> -->
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
-async function fetchLatestNetworkSituation() {
-    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`API call failed: ${response.status}`);
-        }
-        const data = await response.json();
-        return data.items[0]; // Assuming the latest entry is what we need
-    } catch (error) {
-        console.error("Failed to fetch latest network situation:", error);
-        // Implement any fallback logic or error handling here
-        return null;
-    }
-}
+  var Data
+  var my_view_traffic
+  var last_day
+  var y2d_traffic
+  var y2d_prev_year_traffic
+  var y2d_2019_traffic 
+  var avg_y2d_traffic
+  var dif_y2d_2019
+  var dif_y2d_prev_year
 
-async function updateNetworkSituationOnPage() {
-    const latestData = await fetchLatestNetworkSituation();
-    if (latestData) {
-        // Extract the year from the latest data's date
-        const latestDate = new Date(latestData.date);
-        const year = latestDate.getFullYear();
-        // Correctly construct the date range string
-        const startDateString = `Latest network traffic situation: 01 Jan`; // Fixed start of the year
-        const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
-        const dateRangeString = `${startDateString} – ${endDateString}`;
-        // Update webpage elements with the latest data, rounding numbers to integers
-        document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString;
-        document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
-        document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
-        document.getElementById("dif_y2d_2019").innerHTML =
-    (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%';
-        document.getElementById("dif_y2d_prev_year").innerHTML =
-    (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%';
-    } else {
-        // Handle case when no data could be fetched
-        console.log("No data available to update the network situation.");
-    }
-}
+  google.load("visualization", "1.1", {
+    packages: ["corechart", "table", "controls", "bar"]
+  });
+  google.setOnLoadCallback(Initialisation);
+
+  function Initialisation() {
+<!-- 	var request = new XMLHttpRequest(); -->
+<!-- 	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false); -->
+<!-- 	request.send(null); -->
+<!-- 	var tempdata = JSON.parse(request.responseText); -->
+<!-- 	Datastring = google.visualization.arrayToDataTable(tempdata); -->
+
+<!-- 	Data = new google.visualization.DataTable(); -->
+
+<!--   for(j = 0; j < Datastring.getNumberOfColumns(); j++) { -->
+<!-- 				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j)); -->
+<!-- //				 console.log(Datastring.getValue(0,j)); -->
+<!-- 	} -->
+
+<!-- 	Datastring.removeRow(0) -->
+<!-- 	Data.addRows(Datastring.getNumberOfRows()); -->
+
+<!-- 			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() ); -->
+
+<!-- 	for(j = 0; j < Data.getNumberOfColumns(); j++) { -->
+
+<!-- 	if (Data.getColumnType(j) == 'number') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, Number (Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else if (Data.getColumnType(j) == 'date') { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j, new Date(Datastring.getValue(i,j))); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	else { -->
+<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
+<!-- 	Data.setCell(i,j,Datastring.getValue(i,j)); -->
+<!-- 	} -->
+<!-- 	} -->
+<!-- 	} -->
+
+  var query = new google.visualization.Query(
+      "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
+    );
+
+  query.send(drawDashboard);
+  }
+
+  function drawDashboard(response) {
+    Data = response.getDataTable();
+
+
+  UpdateTraffic();
+   }
+//---------------------------Update traffic---------------------------------------------
+  function UpdateTraffic() {
+  my_view_traffic = new google.visualization.DataView(Data);
+
+  last_day = my_view_traffic.getValue(0, 38); 
+  my_view_traffic.setRows(
+  Data.getFilteredRows([{ column: 7, value: last_day }])
+  );
+
+// Calculate datestrings
+  last_day_text = last_day.toDateString();
+  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11);
+  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text;
+
+// Calculate traffic scorecard values
+  y2d_traffic = my_view_traffic.getValue(0, 30);
+  y2d_prev_year_traffic = my_view_traffic.getValue(0, 31);
+  y2d_2019_traffic = my_view_traffic.getValue(0, 32);
+  
+  avg_y2d_traffic = Math.round(my_view_traffic.getValue(0, 33));
+  dif_y2d_2019 = Math.round(my_view_traffic.getValue(0, 37)*100);
+  dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019;
+  dif_y2d_prev_year = Math.round(my_view_traffic.getValue(0, 36)*100);
+  dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year;
+
+// Update scorecard values
+  document.getElementById("y2d_day_text").innerHTML =  "Latest network traffic situation: " + y2d_day_text; 
+  document.getElementById("y2d_traffic").innerHTML = String(y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
+  document.getElementById("avg_y2d_traffic").innerHTML = String(avg_y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
+  document.getElementById("dif_y2d_2019").innerHTML = String(dif_y2d_2019) + '%' ;
+  document.getElementById("dif_y2d_prev_year").innerHTML = String(dif_y2d_prev_year) + '%';
+  }
+  
 </script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        updateNetworkSituationOnPage();
-    });
-</script>
+
+
 <br>
 <div class="container">
 <div class="row">
