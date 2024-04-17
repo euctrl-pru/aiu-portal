@@ -102,20 +102,20 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   
   #------------ export old CSVs ---------------
   echo "Exporting ERT_DLY ansp ${ERT_DLY_WEF} ${TIL}..."
-  Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL};
+  Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
   echo "Exporting ERT_DLY ansp ... done."
   
   echo "Exporting ERT_DLY fir ${ERT_DLY_WEF} ${TIL}..."
   echo "**NOTE*: this takes quite a long time."
-  Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL};
+  Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
   echo "Exporting ERT_DLY fir ... done."
 
   echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
-  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL};
+  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
   echo "Exporting APT_DLY ... done"
   
   echo "Exporting HFE ..."
-  Rscript R/export_hfe.R;
+  Rscript R/export_hfe.R -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
   echo "Exporting HFE ... done"
   
   #------------ export new CSVs ---------------

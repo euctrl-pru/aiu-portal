@@ -1,6 +1,6 @@
 ---
 title: "CO₂ emissions"
-output: html_document
+output: blogdown::html_page
 ---
 
 ```{r, echo=FALSE, include=FALSE}

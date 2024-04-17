@@ -1,6 +1,6 @@
 ---
 title: "ANSPs institutional arrangements"
-output: html_document
+output: blogdown::html_page
 ---
 
 ```{r,  echo = FALSE, eval = TRUE, message=FALSE, warning=FALSE}
@@ -99,6 +99,3 @@ function changeANSP (value) {
 
 }
 </script>
-
-
-

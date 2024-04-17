@@ -2,7 +2,7 @@
 title: Composite Risk Index (CRI) Methodology Update
 bibliography: ["../../static/bib/aviation.bib"]
 link-citations: true
-output: html_document
+output: blogdown::html_page
 ---
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 # run setup script

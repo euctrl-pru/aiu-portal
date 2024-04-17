@@ -10,7 +10,9 @@ library(fs)
 library(readxl)
 
 
-dest_dir_root <- "C:\\Users\\spi\\EUROCONTROL\\ECTL - Aviation Intelligence Unit - AIU Portal\\Download data files"
+dest_dir_root <- "C:/Users/spi/OneDrive - EUROCONTROL/Download data files"
+# to production directly
+#dest_dir_root <- "\\\\ihx-vdm05\\LIVE_var_www_performance$\\data\\download"
 dest_folder <- "csv"
 
 #---------- co2 emissions ----
@@ -27,6 +29,12 @@ export_co2_emissions(wef = "2024-01-01") |>
 
 #---------- vertical flight efficiency ----
 export_vertical_flight_efficiency(wef = "2024-01-01") |>
+  # filter out oil rig traffic
+  filter(!APT_ICAO %in% c("ENFB", "ENOA", "ENXA")) |>
+  # filter out Ukraine as from war start
+  mutate(date = lubridate::make_datetime(year = YEAR, month = MONTH_NUM)) |>
+  filter(!(STATE_NAME == "Ukraine" & date >= ymd("2022-03-01", tz = "UTC"))) |>
+  select(-date) |>
   arrange(YEAR, MONTH_NUM, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
