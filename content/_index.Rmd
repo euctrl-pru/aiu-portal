@@ -311,7 +311,7 @@ For feedback or questions please contact us at:
 
 ##### [Released: EUROCONTROL DATA App](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
 
-<small>Download our new DATA app (on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play</a></small>
+<small>Download our new DATA app on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play.</a></small>
 :::
 :::
 
