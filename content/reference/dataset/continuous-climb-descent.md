@@ -48,7 +48,7 @@ in the relevant [methodology page][cdo_cco_meth].
 | NBR_CCO_FLIGHTS   | PRU	             |  Number of flights that are considered CCO during the whole climb (and don't have any considered level flight) | 6028 |
 | NBR_CCO_FLIGHTS_BELOW_10000 | PRU    | Number of flights that are considered CCO below FL105 (and don't have any considered level flight below FL105) | 10262 |
 | TOT_DELTA_CO2_KG_CLIMB | PRU         | Total delta of CO2 (kg) resulting from the time flown level in climb | 125346  |
-| TOT_DELTA_CO2_KG_CLIMB_BELOW_10000 | PRU | Total delta of CO2 (kg) resulting from the time flown level below FL075 in climb | 4601 |
+| TOT_DELTA_CO2_KG_CLIMB_BELOW_10000 | PRU | Total delta of CO2 (kg) resulting from the time flown level below FL105 in climb | 4601 |
 | AIRPORT_NAME      | PRU              | airport name and ICAO code                                           | Frankfurt (EDDF) |
 
 
