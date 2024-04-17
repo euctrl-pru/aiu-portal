@@ -274,7 +274,7 @@ For feedback or questions please contact us at:
 ::: {.card .border-0}
 [![Published: EUROCONTROL Data Snapshot #42](/images/landing/ds_snapshot_43.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation){target="_blank"}
 
-##### [Published: EUROCONTROL Data Snapshot #42](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation){target="_blank"}
+##### [Published: EUROCONTROL Data Snapshot #43](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation){target="_blank"}
 
 <small>Our 43rd EUROCONTROL Data Snapshot delves into the shifting of the centre of gravity of European aviation towards south and east.</small>
 :::
@@ -321,7 +321,7 @@ For feedback or questions please contact us at:
 
 ##### [Performance Data Update](/data/){target="_blank"}
 
-<small>February 2024 data available for download now!</small>
+<small>March 2024 data available for download now!</small>
 :::
 :::
 
