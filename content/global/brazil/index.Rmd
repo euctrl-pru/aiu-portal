@@ -16,6 +16,19 @@ It also comprised the identification and validation of comparable data sources a
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
+  img="x-cover-bra-eur-2023.png",
+  link="bra-eur-2023/",
+  title="3 May 2024",
+  text="This third edition of the bi-regional Brazil-Europe comparison report of Air Navigation System Performance continues to add transparent and robust data to support an informed discussion about operational performance in both regions.", 
+  alt="Comparison of Operational Air Navigation System Performance in Brazil and Europe 2019-2023", 
+  command="Resize", 
+  options="300x", 
+  style="width: 18rem;", 
+  class="mb-2"
+  )
+
+blogdown::shortcode(
+  "bootstrap-card-alt",
   img="x-cover-bra-eur-2022.png",
   link="bra-eur/",
   title="28 October 2022",
