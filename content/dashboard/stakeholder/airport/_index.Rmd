@@ -40,19 +40,7 @@ blogdown::shortcode(
 ```
 
 
-```{r echo=FALSE}
-blogdown::shortcode(
-  "bootstrap-card-alt",
-  img="ectl_3.jpg",
-  link="/capacity/atfm_apt/",
-  title="ATFM Delays at Airports",
-  text="Analyse the airport ATFM arrival delays at airports. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
-  alt="ATFM delays @ airports", 
-  command="Resize", 
-  options="300x", 
-  class="mb-2"
-  )
-```
+
 
 ```{r echo=FALSE}
 blogdown::shortcode(
@@ -68,6 +56,19 @@ blogdown::shortcode(
   )
 ```
 
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="apt_taxi.jpg",
+  link="/efficiency/taxiout/",
+  title="Additional Taxi-Out Time",
+  text="See the taxi-out efficiency at airports. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
+  alt="Taxi-out additional time @ airports", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
 
 :::::
 ::::
@@ -94,34 +95,6 @@ blogdown::shortcode(
   )
 ```
 
-```{r echo=FALSE}
-blogdown::shortcode(
-  "bootstrap-card-alt",
-  img="apt_taxi.jpg",
-  link="/efficiency/taxiout/",
-  title="Additional Taxi-Out Time",
-  text="See the taxi-out efficiency at airports. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
-  alt="Taxi-out additional time @ airports", 
-  command="Resize", 
-  options="300x", 
-  class="mb-2"
-  )
-```
-
-
-```{r echo=FALSE}
-blogdown::shortcode(
-  "bootstrap-card-alt",
-  img="ectl_aircraft1.jpg",
-  link="acft_ground/",
-  title="Active and Inactive Aircraft at Airports",
-  text="See how many aircraft are parked across European airports. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
-  alt="Parked aircraft at European airports", 
-  command="Resize", 
-  options="300x", 
-  class="mb-2"
-  )
-```
 
 ```{r echo=FALSE}
 blogdown::shortcode(
@@ -137,17 +110,19 @@ blogdown::shortcode(
   )
 ```
 
-
-:::::
-::::
-:::
-
-<br>
-
-::: {class="container"}
-:::: {class="row"}
-::::: {class="card-deck"}
-
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_3.jpg",
+  link="/capacity/atfm_apt/",
+  title="ATFM Delays at Airports",
+  text="Analyse the airport ATFM arrival delays at airports. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  alt="ATFM delays @ airports", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
 
 ```{r echo=FALSE}
 blogdown::shortcode(
@@ -162,6 +137,31 @@ blogdown::shortcode(
   class="mb-2"
   )
 ```
+
+:::::
+::::
+:::
+
+<br>
+
+::: {class="container"}
+:::: {class="row"}
+::::: {class="card-deck"}
+
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_aircraft1.jpg",
+  link="acft_ground/",
+  title="Active and Inactive Aircraft at Airports",
+  text="See how many aircraft are parked across European airports. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  alt="Parked aircraft at European airports", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
 
 ```{r echo=FALSE}
 blogdown::shortcode(
