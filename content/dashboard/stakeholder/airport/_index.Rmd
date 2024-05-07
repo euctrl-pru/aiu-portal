@@ -155,7 +155,7 @@ blogdown::shortcode(
   img="ectl_mirror.jpg",
   link="https://www.eurocontrol.int/tool/mirror",
   title="MIRROR - Operational decision support tool <i class='fas fa-xs fa-external-link-alt'></i>",
-  text="Check out the innovative tool that helps stakeholders predict and mitigate delays <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  text="Check out the innovative tool that helps stakeholders predict and mitigate delays. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
   alt="MIRROR - Operational decision support tool", 
   command="Resize", 
   options="300x", 
