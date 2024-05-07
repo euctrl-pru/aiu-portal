@@ -1,25 +1,27 @@
 ---
-title: Airport portfolio
+title: Airport Performance Analysis Tools
 date: '2020-05-15'
 ---
+A collection of tools and dashboards which might be of use for Airport monitoring. 
+<br>
+
 
 ::: {class="container"}
 :::: {class="row"}
 ::::: {class="card-deck"}
 
-
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img="aiu_apt_db.jpg",
-  link="db/",
-  title="AIU airport performance dashboard",
-  text="Consolidated monthly overview of operational performance at European airports across a wide spectrum of indicators", 
-  alt="AIU airport performance dashboard", 
-  command="Resize", 
-  options="300x", 
-  class="mb-2"
-  )
+  img = "aiu_apt_db.jpg",
+  link = "db/",
+  title = "AIU Airport Performance Dashboard",
+  text = "Consolidated monthly overview of operational performance at European airports across a wide spectrum of indicators. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
+  alt = "AIU airport performance dashboard",
+  command = "Resize",
+  options = "300x",
+  class = "mb-2"
+)
 ```
 
 
@@ -28,8 +30,8 @@ blogdown::shortcode(
   "bootstrap-card-alt",
   img="aiu_apt_daily.jpg",
   link="https://www.eurocontrol.int/Economics/DailyTrafficVariation-Airports.html",
-  title="Daily traffic @ airports",
-  text="Monitor the daily traffic variation @ major European airports", 
+  title="Daily Traffic Variation Dashboard <i class='fas fa-xs fa-external-link-alt'></i>",
+  text="Monitor the daily traffic variation at major European airports. <br> <div class='badge-container'><span class='badge badge-primary'>Traffic</span></div>", 
   alt="Daily traffic @ airports", 
   command="Resize", 
   options="300x", 
@@ -43,8 +45,8 @@ blogdown::shortcode(
   "bootstrap-card-alt",
   img="ectl_3.jpg",
   link="/capacity/atfm_apt/",
-  title="ATFM delays @ airports",
-  text="Analyse the airport ATFM arrival delays @ airports", 
+  title="ATFM Delays at Airports",
+  text="Analyse the airport ATFM arrival delays at airports. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
   alt="ATFM delays @ airports", 
   command="Resize", 
   options="300x", 
@@ -57,8 +59,8 @@ blogdown::shortcode(
   "bootstrap-card-alt",
   img="cdo_icon.jpg",
   link="/efficiency/vfe/",
-  title="CCO/CDO @ airports",
-  text="Explore the vertical flight efficiency during climb (CCO) and descent (CDO)", 
+  title="CCO and CDO Overview",
+  text="Explore the vertical flight efficiency during continuous climb (CCO) and descent (CDO) operations. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
   alt="Vertical flight efficiency @ airports", 
   command="Resize", 
   options="300x", 
@@ -71,33 +73,35 @@ blogdown::shortcode(
 ::::
 :::
 
-
+<br>
 
 ::: {class="container"}
 :::: {class="row"}
 ::::: {class="card-deck"}
 
-<div class="card"><a href="/efficiency/asma/">
-  <img class="card-img-top" src="/images/apt/apt_asma.jpg" alt="ASMA additional time @ airports">
-  <div class="card-body"><h5 class="card-title">Additional ASMA time @ airports</h5></a><p class="card-text">Find out about the efficiency in the Arrival Sequencing and Metering Area (ASMA)</p>
-  </div>
-</div>
-
-<div class="card"><a href="/efficiency/taxiout/">
-  <img class="card-img-top" src="/images/apt/apt_taxi.jpg" alt="Taxi-out additional time @ airports">
-  <div class="card-body"><h5 class="card-title">Additional taxi-out time @ airports</h5></a><p class="card-text">See the taxi-out efficiency at airports</p>
-  </div>
-</div>
-
 
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img="ectl_aircraft1.jpg",
-  link="acft_ground/",
-  title="Active and inactive aircraft @ airports",
-  text="See how many aircraft are parked across European airports.", 
-  alt="Parked aircraft at European airports", 
+  img="apt_asma.jpg",
+  link="/efficiency/asma/",
+  title="Additional ASMA time",
+  text="Find out more about the efficiency in the Arrival Sequencing and Metering Area (ASMA) around airports. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
+  alt="ASMA additional time @ airports", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="apt_taxi.jpg",
+  link="/efficiency/taxiout/",
+  title="Additional Taxi-Out Time",
+  text="See the taxi-out efficiency at airports. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
+  alt="Taxi-out additional time @ airports", 
   command="Resize", 
   options="300x", 
   class="mb-2"
@@ -105,47 +109,101 @@ blogdown::shortcode(
 ```
 
 
-<div class="card"><a href="https://www.eurocontrol.int/publication/taxi-times-summer-2022" target="_blank">
-  <img class="card-img-top" src="/images/apt/ectl_tx_stand.jpeg" alt="Taxi-time planning values">
-  <div class="card-body"><h5 class="card-title">Taxi-time planning values</h5></a><p class="card-text">Taxi time planning values, by IATA season for airline schedulers <i class='fas fa-xs fa-external-link-alt'></i></p>
-  </div>
-</div>
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_aircraft1.jpg",
+  link="acft_ground/",
+  title="Active and Inactive Aircraft at Airports",
+  text="See how many aircraft are parked across European airports. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  alt="Parked aircraft at European airports", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_tx_stand.jpeg",
+  link="https://www.eurocontrol.int/publication/taxi-times-summer-2022",
+  title="Taxi-time planning values <i class='fas fa-xs fa-external-link-alt'></i>",
+  text="Taxi time planning values, by IATA season for airline schedulers. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  alt="Taxi-time planning values", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
 
 
 :::::
 ::::
 :::
 
-
-
+<br>
 
 ::: {class="container"}
 :::: {class="row"}
 ::::: {class="card-deck"}
 
-<div class="card"><a href="https://www.eurocontrol.int/tool/mirror">
-  <img class="card-img-top" src="/images/cap/ectl_mirror.jpg" alt="MIRROR - Operational decision support tool">
-  <div class="card-body"><h5 class="card-title">MIRROR - Operational decision support tool</h5></a><p class="card-text">Check out the innovative tool that helps stakeholders predict and mitigate delays</p>
-  </div>
-</div>
 
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_mirror.jpg",
+  link="https://www.eurocontrol.int/tool/mirror",
+  title="MIRROR - Operational decision support tool <i class='fas fa-xs fa-external-link-alt'></i>",
+  text="Check out the innovative tool that helps stakeholders predict and mitigate delays <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  alt="MIRROR - Operational decision support tool", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
 
-<div class="card"><a href="https://ext.eurocontrol.int/airport_corner_public/" target="_blank">
-  <img class="card-img-top" src="/images/apt/ectl_apt_corner1.jpg" alt="EUROCONTROL airport corner">
-  <div class="card-body"><h5 class="card-title">EUROCONTROL airport corner</h5></a><p class="card-text">Get information on airport infrastructure and ongoing and planned activities <i class='fas fa-xs fa-external-link-alt'></i></p>
-  </div>
-</div>
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_apt_corner1.jpg",
+  link="https://ext.eurocontrol.int/airport_corner_public/",
+  title="EUROCONTROL airport corner <i class='fas fa-xs fa-external-link-alt'></i>",
+  text="Get information on airport infrastructure and ongoing and planned activities. <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  alt="EUROCONTROL airport corner", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
 
-<div class="card"><a href="https://www.eurocontrol.int/airport-integration" target="_blank">
-  <img class="card-img-top" src="/images/apt/ectl_apt_int1.jpg" alt="Airport network integration">
-  <div class="card-body"><h5 class="card-title">EUROCONTROL airport network integration</h5></a><p class="card-text">Learn how EUROCONTROL helps to better integrate airports in the ATM network <i class='fas fa-xs fa-external-link-alt'></i></p>
-  </div>
-</div>
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="ectl_apt_int1.jpg",
+  link="https://www.eurocontrol.int/airport-integration",
+  title="EUROCONTROL airport network integration <i class='fas fa-xs fa-external-link-alt'></i>",
+  text="Learn how EUROCONTROL helps to better integrate airports in the ATM network. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  alt="EUROCONTROL airport network integration", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
 
 :::::
 ::::
 :::
 
+<style>
+.card-deck .card .badge-container {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 1.2rem;
+  display: block;
+}
+</style>
 
 
 <script>
