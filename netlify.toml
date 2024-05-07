@@ -33,7 +33,7 @@ command = "hugo --gc --minify"
     X-XSS-Protection = "1; mode=block"
     # Content-Security-Policy = "base-uri 'self'; block-all-mixed-content; default-src 'self' https: 'unsafe-eval' 'unsafe-inline'; font-src 'self' https://use.fontawesome.com data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: *.openstreetmap.org https://unpkg.com; script-src-elem 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://code.jquery.com https://stackpath.bootstrapcdn.com https://www.google-analytics.com https://cdn.bootcss.com data:; sandbox allow-forms allow-popups allow-same-origin allow-scripts"
     # new stuff: less strict than the above ;-)
-    Content-Security-Policy = "base-uri 'self'; default-src 'self' https:  data: 'unsafe-eval' ; font-src 'self' https://use.fontawesome.com data:; form-action 'self' https://duckduckgo.com/; frame-ancestors 'self'; object-src 'self'; sandbox allow-downloads allow-forms allow-popups allow-same-origin allow-scripts; upgrade-insecure-requests"
+    Content-Security-Policy = "base-uri 'self'; default-src 'self' https:  data: 'unsafe-eval' 'unsafe-inline'; font-src 'self' https://use.fontawesome.com data:; form-action 'self' https://duckduckgo.com/; frame-ancestors 'self'; object-src 'self'; sandbox allow-downloads allow-forms allow-popups allow-same-origin allow-scripts; upgrade-insecure-requests"
     Cache-Control = "no-cache, max-age=0"
     Expires = "0"
     Pragma = "no-cache"
