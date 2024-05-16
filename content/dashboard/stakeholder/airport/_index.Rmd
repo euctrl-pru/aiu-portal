@@ -5,7 +5,6 @@ date: '2020-05-15'
 A collection of tools and dashboards which might be of use for Airport monitoring. 
 <br>
 
-
 ::: {class="container"}
 :::: {class="row"}
 ::::: {class="card-deck"}
@@ -129,9 +128,9 @@ blogdown::shortcode(
   "bootstrap-card-alt",
   img="ectl_mirror.jpg",
   link="https://www.eurocontrol.int/tool/mirror",
-  title="MIRROR - Operational decision support tool <i class='fas fa-xs fa-external-link-alt'></i>",
+  title="MIRROR - Operational Decision Support Tool <i class='fas fa-xs fa-external-link-alt'></i>",
   text="Check out the innovative tool that helps stakeholders predict and mitigate delays. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
-  alt="MIRROR - Operational decision support tool", 
+  alt="MIRROR - Operational Decision Support Tool", 
   command="Resize", 
   options="300x", 
   class="mb-2"
