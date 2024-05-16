@@ -104,6 +104,12 @@ command = "hugo --gc --minify"
   to = "https://euctrl-pru.github.io/international-BRA-EUR2/:splat"
   status = 200
   force = true
+  
+[[redirects]]
+  from = "/global/brazil/bra-eur-2023/*"
+  to = "https://euctrl-pru.github.io/international-BRA-EUR-2023/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/economics/ace/ace-hlsr/*"

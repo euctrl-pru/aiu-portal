@@ -1,6 +1,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/75c7bf17-7a68-412a-8bb3-e747d528fd11/deploy-status)](https://app.netlify.com/sites/pru-portal/deploys)
 
+<<<<<<< HEAD
 # Website
+=======
+# website 
+>>>>>>> 202404-release-f3
 
 This is the source repository of the [PRU web site](https://ansperformance.eu).
 
