@@ -6,5 +6,5 @@ aliases:
 
 * [Traffic](/traffic/)
 * [Capacity & delays](/capacity/)
-* [Environment & environment](/efficiency/)
+* [Efficiency & environment](/efficiency/)
 * [Economics](/economics/)

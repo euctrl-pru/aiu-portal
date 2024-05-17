@@ -272,11 +272,11 @@ For feedback or questions please contact us at:
 
 ::: {#carousel-item .carousel-item .active}
 ::: {.card .border-0}
-[![Published: EUROCONTROL Data Snapshot #42](/images/landing/ds_snapshot_43.jpg)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation){target="_blank"}
+[![Published: Brazil - Europe Comparison of Operational ANS Performance #42](/images/landing/bra-eur-2023-report.png)](https://ansperformance.eu/global/brazil/){target="_blank"}
 
-##### [Published: EUROCONTROL Data Snapshot #43](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation){target="_blank"}
+##### [Published: Brazil - Europe Comparison of Operational ANS Performance](https://ansperformance.eu/global/brazil/){target="_blank"}
 
-<small>Our 43rd EUROCONTROL Data Snapshot delves into the shifting of the centre of gravity of European aviation towards south and east.</small>
+<small>The third edition of the bi-regional Brazil-Europe comparison report of ANS Performance adds a focus on Predictability, Capacity and Efficiency.</small>
 :::
 :::
 
@@ -295,23 +295,21 @@ For feedback or questions please contact us at:
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Portal Update: Improved Data Access](/images/landing/portal_update_data_access.jpg)](https://ansperformance.eu/csv/){target="_blank"}
-
-##### [Portal Update: Improved Data Access](https://ansperformance.eu/csv/){target="_blank"}
-
-<small>The availability of CSV data sets for various performance topics have been extended on the portal.</small>
-:::
-:::
-
-
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data.png)](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
+[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data-apple.png)](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
 
 ##### [Released: EUROCONTROL DATA App](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
 
-<small>Download our new DATA app on <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a> & <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play.</a></small>
+<small>Download our new DATA app on the <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store.</a></small>
+:::
+:::
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data-google.png)](https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata){target="_blank"}
+
+##### [Released: EUROCONTROL DATA App](https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata){target="_blank"}
+
+<small>Download our new DATA app on <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play.</a></small>
 :::
 :::
 
@@ -321,7 +319,7 @@ For feedback or questions please contact us at:
 
 ##### [Performance Data Update](/data/){target="_blank"}
 
-<small>March 2024 data available for download now!</small>
+<small>April 2024 data available for download now!</small>
 :::
 :::
 

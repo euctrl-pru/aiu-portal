@@ -5,6 +5,7 @@
 # https://observablehq.com/@espinielli/co2-emissions-variation-per-state
 # the new data in mom_co2.csv have to be attached in the notebook
 # via File attachments -> Replace file
+# Also copy on HARDOCODED OneDrive
 
 library(dplyr)
 library(eurocontrol)
@@ -120,8 +121,8 @@ export_query <- function(schema, query) {
   withr::local_envvar(c("TZ" = "UTC", "ORA_SDTZ" = "UTC"))
   con <- withr::local_db_connection(eurocontrol::db_connection(schema))
   con %>%
-    dbSendQuery(query) %>%
-    fetch(n = -1)
+    DBI::dbSendQuery(query) %>%
+    DBI::fetch(n = -1)
 }
 
 query <- str_glue("
@@ -230,9 +231,9 @@ co2_data_y2d_state <- co2_data_raw %>%
 
 
 co2_data_mom_state %>%
-  write_csv("mom_co2.csv")
+  write_csv("C:/Users/spi/OneDrive - EUROCONTROL/Download data files/csv/mom_co2.csv")
 co2_data_y2d_state %>%
-  write_csv("y2d_co2.csv")
+  write_csv("C:/Users/spi/OneDrive - EUROCONTROL/Download data files/csv/y2d_co2.csv")
 
 # ---------------------------------
 # We used to put the files in the download/csv/ as served by the Agency's website
