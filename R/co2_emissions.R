@@ -120,8 +120,8 @@ export_query <- function(schema, query) {
   withr::local_envvar(c("TZ" = "UTC", "ORA_SDTZ" = "UTC"))
   con <- withr::local_db_connection(eurocontrol::db_connection(schema))
   con %>%
-    dbSendQuery(query) %>%
-    fetch(n = -1)
+    DBI::dbSendQuery(query) %>%
+    DBI::fetch(n = -1)
 }
 
 query <- str_glue("
