@@ -11,7 +11,7 @@ EUROCONTROL PRU is engaged in a series of international comparison projects.
 
 *	In collaboration with the Chinese Civil Aviation Authority and Civil Aviation University work on an initial comparison was completed in December 2021 with a view to update the bi-regional comparison on a regular basis. The work revolves around a subset of mutually agreed indicators on the basis of the operational ICAO GANP indicators.
 
-*	A further benchmarking activity has been launched with Brazil (DECEA) and revolves around assessing the operational ANS performance at airports and en-route airspace capacity. The publication of the initial comparison report is foreseen during the first half of 2021.
+*	A further benchmarking activity has been launched with Brazil (DECEA) and revolves around assessing the operational ANS performance at airports and en-route airspace capacity. Initially, a comparison report was published in the first half of 2021. Since then, DECEA and PRU have produced additional comparative performance reports. Both organizations participate in international working groups related to the operational benchmarking performance of the air navigation system (ANS) and the Global Air Navigation Plan (GANP).
 
 ::: {class="col-sm-6"}
 :::: {class="container"}
