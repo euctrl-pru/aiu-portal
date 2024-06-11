@@ -130,6 +130,6 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   
   #------------ export CO2 emissions data ---------------
   echo "Exporting CO2 emissions ... "
-  Rscript R/co2_emissions.R ${TIL};
+  Rscript R/co2_emissions.R;
   echo "Exporting CO2 emissions ... done"
 )
