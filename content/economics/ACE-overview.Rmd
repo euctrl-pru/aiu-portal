@@ -179,16 +179,16 @@ A new analysis on the regulatory, institutional, and corporate governance aspect
 
 <details open>
 <summary>**Main Chapters:**</summary>
-  2. Pan-European cost-effectiveness performance in 2021
-  3. Trend analysis and COVID-19 impacts on cost-effectiveness
-  4. Impact of the COVID-19 pandemic on ANSPs financial situation
-  5. Overview of ANSP capex and impacts of the COVID-19 pandemic on investment
-  6. Forward-looking cost-effectiveness (2022-2024)
+  2. Overview of the Pan-European ANS system
+  3. Cost-effectiveness analysis
+  4. Forward-looking cost-effectiveness (2023-2027)
+  5. Financial indicators calculated from ANSPs financial statements
+  6. Regulatory, institutional and corporate governance arrangements
 </details>
 
 <details>
 <summary>**Annexes**</summary>
-  * ANNEX 1 – Status of ANSPs 2021 Annual Reports
+  * ANNEX 1 – Status of ANSPs 2022 Annual Reports
   * ANNEX 2 – Performance indicators used for the comparison of ANSPs
   * ANNEX 3 – Performance ratios
   * ANNEX 4 – Exchange rates, inflation rates and purchasing power parities (PPPS) data
