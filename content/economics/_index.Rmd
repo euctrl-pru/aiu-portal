@@ -34,7 +34,7 @@ Have a look at the main economic trends of cost-effectiveness performance both f
 
 
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/economics/finance/"><img class="card-img-top" src="/images/eco/fin_db_2022_thmb.png" alt=""><div class="card-body"><h5 class="card-title">ANSPs Financial Dashboard</h5></a><small><p class="card-text">
-The first 2022 financial data for some ANSPs are now available in our financial dashboard.</p></small></div></div></div>
+The 2022 financial data for ANSPs are now available in our financial dashboard.</p></small></div></div></div>
 
 
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/economics/cba/"><img class="card-img-top" src="/images/eco/stand-inputs_thmb.png" alt=""><div class="card-body"><h5 class="card-title">Inputs for Economic Analysis</h5></a><small><p class="card-text">
