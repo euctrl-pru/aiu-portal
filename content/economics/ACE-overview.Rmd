@@ -158,7 +158,7 @@ A new analysis on the regulatory, institutional, and corporate governance aspect
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2024.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2024ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 

@@ -13,7 +13,7 @@ tags: ["publications"]
 
 <div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2024-edition" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2024ed.png" alt="ACE Benchmarking Report (May 2024 Edition)">
-  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2023 Edition</h5></a>
+  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2024 Edition</h5></a>
   </div>
 </div>
 
