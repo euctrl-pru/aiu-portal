@@ -154,11 +154,11 @@ A new analysis on the regulatory, institutional, and corporate governance aspect
 <br>
 <div class="row align-items-start">
 <div class="col-md-6">
-#### Latest ACE Report (May 2023 edition)
+#### Latest ACE Report (May 2024 edition)
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2021.png" alt="ACE 2020 Report" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2024.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 
@@ -205,7 +205,7 @@ A new analysis on the regulatory, institutional, and corporate governance aspect
 #### ACE Handbook
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/eco/ace-handbook-thmb.png" alt="ACE 2020 Report" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/eco/ace-handbook-thmb.png" alt="ACE Handbook" style="border: 1px solid rgba(0,0,0,.125)">
 </div>
 <div class="col-sm-10">
 <div style="background-color: #F2F2F2; "  >
