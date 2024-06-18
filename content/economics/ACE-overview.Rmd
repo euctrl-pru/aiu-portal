@@ -74,7 +74,7 @@ support_costs_per_cph_change_perc <- paste0(if_else(support_costs_per_cph_change
 <div class="col-sm-9">
 The ACE benchmarking project analyses the cost-effectiveness and productivity of 38 European Air Navigation Service Providers (ANSPs) in Europe. It examines both individual ANSPs and the Pan-European ATM/CNS system as a whole.
 
-In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2021) has been developed. It enables the aviation community to build customised views on ANSPs economic performance.
+In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2022) has been developed. It enables the aviation community to build customised views on ANSPs economic performance. 
 </div><!-- closes col  -->
 
 <div class="col-sm-3">
@@ -88,8 +88,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### High-level summary report on preliminary ACE 2022 data (December 2023)
-This report is based on the 2022 data submitted by ANSPs in July 2023.  It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
+#### Latest ACE benchmarking report (May 2024 edition)
+This report is based on the 2022 data submitted by ANSPs in July 2023, and thoroughly reviewed by the PRU. It analyses ANSPs’ performance in a context marked by the traffic recovery following the shock caused by the COVID-19 pandemic. 
 
 <div class="row">
 <div class="col-md-6" >
@@ -136,15 +136,17 @@ plot_ACE
 <br>
 <div class="container" >
 
-*	Traffic (measured in composite flight-hours) rose by +58% in 2022 but remained -13% lower than in 2019. At ANSP level, a wide range of recovery rates is observed (from -51% to +14%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
+*	Traffic (measured in composite flight-hours) rose by +58.3% in 2022 but remained -13.3% lower than in 2019. At ANSP level, a wide range of recovery rates is observed (from -51% to +14%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
 
 *	ATFM delays in 2022 almost reached their 2019 level, which was a year marked by significant capacity issues for several ANSPs. As a result, the share of ATFM delays in the 2022 unit economic costs amounted to 20%.
 
-*	After two years of consecutive decreases, total ATM/CNS provision costs rose by +3% (+€297M) in 2022, reflecting cost increases for 26 out of 38 ANSPs.
+*	After two years of consecutive decreases, total ATM/CNS provision costs rose by +3.4% (+€295.8M) in 2022, reflecting cost increases for 26 out of 38 ANSPs.
 
-*	In 2022, the number of ATM/CNS staff was slightly lower than in 2021 (-1% or -473 FTEs), mainly because of support staff reductions. The number of ATCOs in OPS increased by +2% (+356 FTEs).
+*	In 2022, the number of ATM/CNS staff was slightly lower than in 2021 (-0.9% or -470 FTEs), mainly because of support staff reductions. The number of ATCOs in OPS increased by +2.1% (+348 FTEs).
 
 *	Although the level of debt fell by -10% in 2022, short and long-term borrowings still represent nearly 3 times the amount recorded in 2019.
+
+A new analysis on the regulatory, institutional, and corporate governance aspects shows interesting findings when considering different regulation regimes and legal statuses. Although interactions are complex and no straightforward relationships emerged at individual ANSP level, these factors can create incentives or constraints, which may affect ANSP performance.
 
 </div>
 
@@ -152,11 +154,11 @@ plot_ACE
 <br>
 <div class="row align-items-start">
 <div class="col-md-6">
-#### Latest ACE Report (May 2023 edition)
+#### Latest ACE Report (May 2024 edition)
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2021.png" alt="ACE 2020 Report" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2024ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 
@@ -168,7 +170,7 @@ plot_ACE
 <div style="background-color: #F2F2F2; "  >
 **Main report**
 <span class="float-right">
-<a href="/library/ace/eurocontrol-ace-benchmarking-report-2023-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
+<a href="/library/ace/eurocontrol-ace-benchmarking-report-2024-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
 <!-- <a href="library/eurocontrol-ace-2020-benchmarking-report.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a> -->
 </span>
 </div>
@@ -177,16 +179,16 @@ plot_ACE
 
 <details open>
 <summary>**Main Chapters:**</summary>
-  2. Pan-European cost-effectiveness performance in 2021
-  3. Trend analysis and COVID-19 impacts on cost-effectiveness
-  4. Impact of the COVID-19 pandemic on ANSPs financial situation
-  5. Overview of ANSP capex and impacts of the COVID-19 pandemic on investment
-  6. Forward-looking cost-effectiveness (2022-2024)
+  2. Overview of the Pan-European ANS system
+  3. Cost-effectiveness analysis
+  4. Forward-looking cost-effectiveness (2023-2027)
+  5. Financial indicators calculated from ANSPs financial statements
+  6. Regulatory, institutional and corporate governance arrangements
 </details>
 
 <details>
 <summary>**Annexes**</summary>
-  * ANNEX 1 – Status of ANSPs 2021 Annual Reports
+  * ANNEX 1 – Status of ANSPs 2022 Annual Reports
   * ANNEX 2 – Performance indicators used for the comparison of ANSPs
   * ANNEX 3 – Performance ratios
   * ANNEX 4 – Exchange rates, inflation rates and purchasing power parities (PPPS) data
@@ -203,7 +205,7 @@ plot_ACE
 #### ACE Handbook
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/eco/ace-handbook-thmb.png" alt="ACE 2020 Report" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/eco/ace-handbook-thmb.png" alt="ACE Handbook" style="border: 1px solid rgba(0,0,0,.125)">
 </div>
 <div class="col-sm-10">
 <div style="background-color: #F2F2F2; "  >
@@ -242,7 +244,7 @@ Access information on individual ANSPs institution arrangements, legal status, c
 
 <a href="/economics/ace/ansp-ceff/" target="_blank">**ANSPs individual summary reports**</a>
 </div>
-Access information on individual ANSPs cost-effectiveness performance (2016-2021), comparison with peers and historical information on capital investments projects.
+Access information on individual ANSPs cost-effectiveness performance (2017-2022), comparison with peers and historical information on capital investments projects.
 </div>
 </div> <!-- closes secondary row -->
 
