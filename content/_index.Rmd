@@ -265,51 +265,48 @@ For feedback or questions please contact us at:
 </div>
 
 
-<div class="col-sm-4" style="min-height: 445px;"><h4>What's new?</h4><br> 
+<div class="col-sm-4" style="min-height: 475px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
 
 ::: {#carousel-item .carousel-item .active}
 ::: {.card .border-0}
-[![Published: Brazil - Europe Comparison of Operational ANS Performance #42](/images/landing/bra-eur-2023-report.png)](https://ansperformance.eu/global/brazil/){target="_blank"}
+[![Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](/images/pi/prc_pi9.png)](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
 
-##### [Published: Brazil - Europe Comparison of Operational ANS Performance](https://ansperformance.eu/global/brazil/){target="_blank"}
+##### [Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
 
-<small>The third edition of the bi-regional Brazil-Europe comparison report of ANS Performance adds a focus on Predictability, Capacity and Efficiency.</small>
-:::
-:::
-
-
-
-<!-- ::: {#carousel-item .carousel-item} -->
-<!-- ::: {.card .border-0} -->
-<!-- [![Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](/images/landing/eurocontrol-spring-2024-7-year-forecast-banner.jpg)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"} -->
-
-<!-- ##### [Published: EUROCONTROL STATFOR 7-year Traffic Forecast (2024-2030)](https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030){target="_blank"} -->
-
-<!-- <small>The seven-year forecast edition Spring 2024 by EUROCONTROL STATFOR has been published. </small> -->
-<!-- ::: -->
-<!-- ::: -->
-
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data-apple.png)](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
-
-##### [Released: EUROCONTROL DATA App](https://apps.apple.com/tr/app/eurocontrol-data/id6467232405){target="_blank"}
-
-<small>Download our new DATA app on the <a href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store.</a></small>
+<small>The ninth PRC Performance Insight edition presents the PRC’s approach to measure and track gate-to-gate CO2 emissions in the EUROCONTROL area.</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Released: EUROCONTROL DATA App](/images/landing/eurocontrol-data-google.png)](https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata){target="_blank"}
+[![Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](/images/landing/ACE_2024.png)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
 
-##### [Released: EUROCONTROL DATA App](https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata){target="_blank"}
+##### [Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
 
-<small>Download our new DATA app on <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play.</a></small>
+<small>The independent Performance Review Commission (PRC) has published its 22nd ATM Cost-Effectiveness (ACE) Benchmarking Report.</small>
+:::
+:::
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: New Performance Review Report (PRR)](/images/landing/PRR_2023.png)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+
+##### [Published: New Performance Review Report (PRR)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+
+<small>The independent Performance Review Commission (PRC) has published its Performance Review Report (PRR) for 2023.</small>
+:::
+:::
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: Aviation Trends - Preparations for the Olympic Games](/images/landing/aviation-trends-2024.jpg)](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+
+##### [Published: Aviation Trends - Preparations for the Olympic Games](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+
+<small>Our latest EUROCONTROL European Aviation Trends briefing looks ahead to the Paris Olympics and Paralympics.</small>
 :::
 :::
 
@@ -319,7 +316,7 @@ For feedback or questions please contact us at:
 
 ##### [Performance Data Update](/data/){target="_blank"}
 
-<small>April 2024 data available for download now!</small>
+<small>May 2024 data available for download now!</small>
 :::
 :::
 
