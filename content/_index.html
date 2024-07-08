@@ -248,18 +248,90 @@ n/a
 <div class="row">
 <div class="col-sm-8">
 <h4>
-Aviation Intelligence Portal
+Network Status
 </h4>
-<p>This portal is provided by the <a href="/about/us/">Performance Review Unit (PRU)</a> which is part of EUROCONTROL’s Aviation Intelligence Unit (AIU).</p>
-<p>In support of the independent work of the <a href="/about/prc/">Performance Review Commission (PRC)</a> this portal aims to:</p>
-<ul>
-<li>ensure that all stakeholders in all <a href="/definition/eurocontrol-area/">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans/">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>
-<li>stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,</li>
-<li>further develop the <a href="/acronym/ans/">ANS</a> performance analysis framework and the understanding of key <a href="/acronym/ans/">ANS</a> performance issues.</li>
+<div style="all: unset;">
+<ul class="nav nav-tabs">
+<li class="active pr-3">
+<a data-toggle="tab" href="#flights">Flights</a>
+</li>
+<li class="pr-3">
+<a data-toggle="tab" href="#delay">ATFM Delay</a>
+</li>
+<li class="pr-3">
+<a data-toggle="tab" href="#punctuality">Punctuality</a>
+</li>
 </ul>
-<p>For feedback or questions please contact us at:
-<a href="mailto:PRU-Support@eurocontrol.int">Performance Review Unit</a></p>
+<div class="tab-content">
+<!-- flights tab content------------------------------------ -->
+<div id="flights" class="tab-pane fade in active show">
+<div class="row mt-3">
+<div class="col-sm-3">
+<p>Some figures</p>
 </div>
+<div class="col-sm-9">
+<p id="graphtitle" class="h6 mb-0">
+Evolution of daily flights in the EUROCONTROL area
+</p>
+<p style="font-size: 0.8rem">
+(7-day average)
+</p>
+<div id="graphcontainer" style=" height: 350px;">
+<iframe id="traffic-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" style="border:0; margin-top: 38px;">
+</iframe>
+</div>
+<!-- closes iframe container -->
+</div>
+<!-- closes col -->
+</div>
+<!-- closes row in col -->
+</div>
+<!-- closes tab pane -->
+<!-- delay tab content------------------------------------ -->
+<div id="delay" class="tab-pane fade">
+<div class="row mt-3">
+<div class="col-sm-3">
+<p>Some figures</p>
+</div>
+<div class="col-sm-9">
+<div style=" margin-top: 0px; height: 420px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" style="border:0;">
+</iframe>
+</div>
+<!-- closes iframe container -->
+</div>
+<!-- closes col -->
+</div>
+<!-- closes row in col -->
+</div>
+<!-- closes tab pane -->
+<!-- punctuality tab content------------------------------------ -->
+<div id="punctuality" class="tab-pane fade">
+<div class="row mt-3">
+<div class="col-sm-4">
+<div style=" height: 410px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;">
+</iframe>
+</div>
+</div>
+<div class="col-sm-8">
+<div style=" margin-top: 0px; height: 450px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" frameborder="0" style="border:0;">
+</iframe>
+</div>
+<!-- closes iframe container -->
+</div>
+<!-- closes col -->
+</div>
+<!-- closes row in col -->
+</div>
+<!-- closes tab pane -->
+</div>
+<!-- closes content -->
+</div>
+<!-- closes tabset -->
+</div>
+<!-- closes col -->
 <div class="col-sm-4" style="min-height: 475px;">
 <h4>
 What’s new?
@@ -390,6 +462,21 @@ Analysis of ANS cost-efficiency
 </div>
 </div>
 </div>
+</div>
+<p><br></p>
+<div class="container">
+<h4>
+Aviation Intelligence Portal
+</h4>
+<p>This portal is provided by the <a href="/about/us/">Performance Review Unit (PRU)</a> which is part of EUROCONTROL’s Aviation Intelligence Unit (AIU).</p>
+<p>In support of the independent work of the <a href="/about/prc/">Performance Review Commission (PRC)</a> this portal aims to:</p>
+<ul>
+<li>ensure that all stakeholders in all <a href="/definition/eurocontrol-area/">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans/">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>
+<li>stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,</li>
+<li>further develop the <a href="/acronym/ans/">ANS</a> performance analysis framework and the understanding of key <a href="/acronym/ans/">ANS</a> performance issues.</li>
+</ul>
+<p>For feedback or questions please contact us at:
+<a href="mailto:PRU-Support@eurocontrol.int">Performance Review Unit</a></p>
 </div>
 <br>
 <div class="container text-center">
