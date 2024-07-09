@@ -77,16 +77,29 @@ async function fetchLatestNetworkSituation() {
 async function updateNetworkSituationOnPage() {
     const latestData = await fetchLatestNetworkSituation();
     if (latestData) {
-        // Extract the year from the latest data's date
+        // Extract the year and month from the latest data's date
         const latestDate = new Date(latestData.date);
         const year = latestDate.getFullYear();
+        const month = latestDate.getMonth();
+        // Calculate month of the first day of the week
+        const firstDateWeek = new Date();
+        firstDateWeek.setDate(latestDate.getDate() - 6);
+        const monthFirstdateWeek = firstDateWeek.getMonth();
         // Correctly construct the date range string
-        const startDateString = `Latest network traffic situation: 01 Jan`; // Fixed start of the year
-        const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
-        const dateRangeString = `${endDateString}`;
+        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
+        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
+        const dateString = `${endDateString}`;
+        //calculate 1st day of rolling week and string
+        const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
+        const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
+        const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
         // Update webpage elements with the latest data, rounding numbers to integers
-        <!-- document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString; -->
+        document.getElementById("day_text_title").innerHTML = "" + dateString;
+        document.getElementById("day_text").innerHTML = "" + dateString;
+        document.getElementById("week_text").innerHTML = "" + dateweekRangeString;
+        document.getElementById("y2d_text").innerHTML = "" + datey2dRangeString;
         document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
+        document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
         document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
         document.getElementById("dif_y2d_2019").innerHTML =
@@ -104,6 +117,15 @@ async function updateNetworkSituationOnPage() {
         document.getElementById("dif_day_2019").innerHTML =
     (latestData.dif_day_2019 > 0 ? '+' : '') +
     Math.round(latestData.dif_day_2019 * 100) + '%';
+            document.getElementById("dif_week_prev_week").innerHTML =
+    (latestData.dif_week_prev_week > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_week * 100) + '%';
+        document.getElementById("dif_week_prev_year").innerHTML =
+    (latestData.dif_week_prev_year > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_year * 100) + '%'; 
+        document.getElementById("dif_week_2019").innerHTML =
+    (latestData.dif_week_2019 > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_2019 * 100) + '%';
     } else {
         // Handle case when no data could be fetched
         console.log("No data available to update the network situation.");
@@ -126,7 +148,7 @@ Aviation Intelligence Portal
 <div class="row">
 <div class="col-sm-8">
 <h4>
-<span>Network Status - </span> <span id="last_day_text"></span>
+<span>Network Status - </span> <span id="day_text_title"></span>
 </h4>
 <div style="all: unset;">
 <ul class="nav nav-tabs">
@@ -158,6 +180,9 @@ Aviation Intelligence Portal
 </ul>
 <div class="w3-container tab-content">
 <div id="flights-day" class="tab-pane fade in active show">
+<p id="day_text" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
 <p class="Scorecard_subt">
 Total flights
 </p>
@@ -184,7 +209,40 @@ n/a
 </p>
 </div>
 <!-- closes tab pane -->
+<div id="flights-week" class="tab-pane fade in">
+<p id="week_text" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
+<p class="Scorecard_subt">
+Average flights
+</p>
+<p id="week_traffic" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
+<p class="Scorecard_subt">
+Vs prev. week
+</p>
+<p id="dif_week_prev_week" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
+<p class="Scorecard_subt">
+Vs prev. year
+</p>
+<p id="dif_week_prev_year" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
+<p class="Scorecard_subt">
+Vs 2019
+</p>
+<p id="dif_week_2019" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
+</div>
+<!-- closes tab pane -->
 <div id="flights-y2d" class="tab-pane fade in">
+<p id="y2d_text" style="font-weight: bold; color: #0070c0;">
+n/a
+</p>
 <p class="Scorecard_subt">
 Total flights
 </p>
@@ -427,77 +485,4 @@ About the Aviation Intelligence Portal
 <p>{{% subscribe-button %}}</p>
 <p><a href="/about/privacy/">Read our privacy protection statement</a></p>
 </div>
-<!-- <script type="text/javascript"> -->
-<!--   <!-- code found @ https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser -->
-<p>–&gt;
-<!--   var isFirefox = typeof InstallTrigger !== 'undefined'; -->
-<!--   console.log("hello"); -->
-<!--   var data --></p>
-<!--   if (isFirefox === true) { -->
-<!--    window.addEventListener('message', function (e) { -->
-<!--    var $iframe = $('#traffic-plot'); -->
-<!--    data = JSON.parse(e.data); -->
-<!--    console.log("hello2"); -->
-<!--    UpdateTraffic(); -->
-<!--   }, false); -->
-<!--    console.log("hello3");     -->
-<!--   } else { -->
-<!--   window.onload = function() { -->
-<!--    window.addEventListener('message', function (e) { -->
-<!--    var $iframe = $('#traffic-plot'); -->
-<!--    data = JSON.parse(e.data); -->
-<!--    console.log("hello2"); -->
-<!--    UpdateTraffic(); -->
-<!--   }, false); -->
-<!--    console.log("hello3");     -->
-<!--   } -->
-<!-- } -->
-<!--  function UpdateTraffic() {  -->
-<!--      // Calculate datestrings -->
-<!--    var last_day = new Date(data.LAST_DATA_DAY); -->
-<!--    var last_day_text = last_day.toString(); -->
-<!--        last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11, 15); -->
-<!--  //calculate 1st day of rolling week and string -->
-<!--   var first_week_day = new Date(); -->
-<!--       first_week_day = first_week_day.setDate(last_day.getDate()-6); -->
-<!--       first_week_day = new Date(first_week_day); -->
-<!--       first_week_day = first_week_day.toString(); -->
-<!--   var last_week_text = first_week_day.substring(8, 11) + (last_day_text.substring(3, 7) == first_week_day.substring(4, 8) ? "" :  first_week_day.substring(4, 8)) + "- " + last_day_text; -->
-<!--   var y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 - " + last_day_text : "01 Jan - " + last_day_text; -->
-<!--  // Calculate traffic scorecard values -->
-<!--   var day_traffic = data.DAY_TFC; -->
-<!--   var dif_day_prev_week = Math.round(data.DAY_TFC_PREV_WEEK_PERC*100); -->
-<!--       dif_day_prev_week = (dif_day_prev_week >= 0) ? "+" + dif_day_prev_week : "" + dif_day_prev_week ; -->
-<!--   var dif_day_2019 = Math.round(data.DAY_TFC_DIFF_2019_PERC*100); -->
-<!--       dif_day_2019 = (dif_day_2019 >= 0) ? "+" + dif_day_2019 : "" + dif_day_2019; -->
-<!--   var dif_day_prev_year = Math.round(data.DAY_DIFF_PREV_YEAR_PERC*100); -->
-<!--       dif_day_prev_year = (dif_day_prev_year >= 0) ? "+" + dif_day_prev_year : "" + dif_day_prev_year ; -->
-<!--   var week_traffic = data.TOTAL_ROLLING_WEEK; -->
-<!--   var avg_week_traffic = Math.round(week_traffic/7); -->
-<!--   var dif_week_prev_week = Math.round(data.DIF_PREV_WEEK_PERC*100); -->
-<!--       dif_week_prev_week = (dif_week_prev_week >= 0) ? "+" + dif_week_prev_week : "" + dif_week_prev_week; -->
-<!--   var dif_week_2019 = Math.round(data.DIF_ROLLING_WEEK_2019_PERC*100); -->
-<!--       dif_week_2019 = (dif_week_2019 >= 0) ? "+" + dif_week_2019 : "" + dif_week_2019; -->
-<!--   var dif_week_prev_year = Math.round(data.DIF_WEEK_PREV_YEAR_PERC*100); -->
-<!--       dif_week_prev_year = (dif_week_prev_year >= 0) ? "+" + dif_week_prev_year : "" + dif_week_prev_year; -->
-<!--   var y2d_traffic = data.Y2D_TFC_YEAR; -->
-<!--   var avg_y2d_traffic = Math.round(data.Y2D_AVG_TFC_YEAR); -->
-<!--   var dif_y2d_2019 = Math.round(data.Y2D_DIFF_2019_PERC*100); -->
-<!--       dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019; -->
-<!--   var dif_y2d_prev_year = Math.round(data.Y2D_DIFF_PREV_YEAR_PERC*100); -->
-<!--       dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year; -->
-<!-- // Update scorecard values -->
-<!--   document.getElementById("last_day_text").innerHTML =  last_day_text;  -->
-<!--   document.getElementById("day_traffic").innerHTML = String(day_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,'); -->
-<!--   <!-- document.getElementById("dif_day_prev_week").innerHTML = dif_day_prev_week + '%'; -->
-<p>–&gt;
-<!--   <!-- document.getElementById("dif_day_2019").innerHTML = dif_day_2019 + '%'; --> –&gt;
-<!--   <!-- document.getElementById("dif_day_prev_year").innerHTML = dif_day_prev_year + '%'; --> –&gt;</p>
-<!--   document.getElementById("y2d_traffic").innerHTML = String(y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,'); -->
-<!--   <!-- document.getElementById("avg_y2d_traffic").innerHTML = String(avg_y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,'); -->
-<p>–&gt;
-<!--   <!-- document.getElementById("dif_y2d_2019").innerHTML = String(dif_y2d_2019) + '%' ; --> –&gt;
-<!--   <!-- document.getElementById("dif_y2d_prev_year").innerHTML = String(dif_y2d_prev_year) + '%'; --> –&gt;
-<!--   } --></p>
-<!-- </script> -->
 </div>

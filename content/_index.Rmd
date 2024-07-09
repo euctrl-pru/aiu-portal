@@ -77,16 +77,29 @@ async function fetchLatestNetworkSituation() {
 async function updateNetworkSituationOnPage() {
     const latestData = await fetchLatestNetworkSituation();
     if (latestData) {
-        // Extract the year from the latest data's date
+        // Extract the year and month from the latest data's date
         const latestDate = new Date(latestData.date);
         const year = latestDate.getFullYear();
+        const month = latestDate.getMonth();
+        // Calculate month of the first day of the week
+        const firstDateWeek = new Date();
+        firstDateWeek.setDate(latestDate.getDate() - 6);
+        const monthFirstdateWeek = firstDateWeek.getMonth();
         // Correctly construct the date range string
-        const startDateString = `Latest network traffic situation: 01 Jan`; // Fixed start of the year
-        const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
-        const dateRangeString = `${endDateString}`;
+        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
+        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
+        const dateString = `${endDateString}`;
+        const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
+        //calculate 1st day of rolling week and string
+        const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
+        const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
         // Update webpage elements with the latest data, rounding numbers to integers
-        <!-- document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString; -->
+        document.getElementById("day_text_title").innerHTML = "" + dateString;
+        document.getElementById("day_text").innerHTML = "" + dateString;
+        document.getElementById("week_text").innerHTML = "" + dateweekRangeString;
+        document.getElementById("y2d_text").innerHTML = "" + datey2dRangeString;
         document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
+        document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
         document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
         document.getElementById("dif_y2d_2019").innerHTML =
@@ -104,6 +117,15 @@ async function updateNetworkSituationOnPage() {
         document.getElementById("dif_day_2019").innerHTML =
     (latestData.dif_day_2019 > 0 ? '+' : '') +
     Math.round(latestData.dif_day_2019 * 100) + '%';
+            document.getElementById("dif_week_prev_week").innerHTML =
+    (latestData.dif_week_prev_week > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_week * 100) + '%';
+        document.getElementById("dif_week_prev_year").innerHTML =
+    (latestData.dif_week_prev_year > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_year * 100) + '%'; 
+        document.getElementById("dif_week_2019").innerHTML =
+    (latestData.dif_week_2019 > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_2019 * 100) + '%';
     } else {
         // Handle case when no data could be fetched
         console.log("No data available to update the network situation.");
@@ -128,7 +150,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <div class="container">
 <div class="row">
 
-<div class="col-sm-8"><h4><span>Network Status - </span> <span id="last_day_text"></span></h4>
+<div class="col-sm-8"><h4><span>Network Status - </span> <span id="day_text_title"></span></h4>
 
 <div style = "all: unset;">
 <ul class="nav nav-tabs">
@@ -152,6 +174,8 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <div class="w3-container tab-content">
 
 <div class="tab-pane fade in active show" id="flights-day">
+  <p id="day_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
   <p class="Scorecard_subt">Total flights</p>
   <p id="day_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
 
@@ -165,8 +189,25 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
   <p id="dif_day_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
 </div><!-- closes tab pane -->
 
+<div class="tab-pane fade in " id="flights-week">
+  <p id="week_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Average flights</p>
+  <p id="week_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. week</p>
+  <p id="dif_week_prev_week" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_week_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_week_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
 
 <div class="tab-pane fade in" id="flights-y2d">
+  <p id="y2d_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
   <p class="Scorecard_subt">Total flights</p>
   <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p> 
 
