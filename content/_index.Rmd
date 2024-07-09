@@ -77,27 +77,27 @@ async function fetchLatestNetworkSituation() {
 async function updateNetworkSituationOnPage() {
     const latestData = await fetchLatestNetworkSituation();
     if (latestData) {
-        // Extract the year and month from the latest data's date
+        <!-- // Extract the year and month from the latest data's date -->
         const latestDate = new Date(latestData.date);
         const year = latestDate.getFullYear();
         const month = latestDate.getMonth();
-        // Calculate month of the first day of the week
+        <!-- // Calculate month of the first day of the week -->
         const firstDateWeek = new Date();
         firstDateWeek.setDate(latestDate.getDate() - 6);
         const monthFirstdateWeek = firstDateWeek.getMonth();
-        // Correctly construct the date range string
+        <!-- // Correctly construct the date range string -->
         const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
         const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
         const dateString = `${endDateString}`;
         const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
-        //calculate 1st day of rolling week and string
+        <!-- //calculate 1st day of rolling week and string -->
         const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
         const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
-        // Update webpage elements with the latest data, rounding numbers to integers
-        document.getElementById("day_text_title").innerHTML = "" + dateString;
-        document.getElementById("day_text").innerHTML = "" + dateString;
-        document.getElementById("week_text").innerHTML = "" + dateweekRangeString;
-        document.getElementById("y2d_text").innerHTML = "" + datey2dRangeString;
+        <!-- // Update webpage elements with the latest data, rounding numbers to integers -->
+        document.getElementById("day_text_title").innerHTML = dateString;
+        document.getElementById("day_text").innerHTML = dateString;
+        document.getElementById("week_text").innerHTML = dateweekRangeString;
+        document.getElementById("y2d_text").innerHTML = datey2dRangeString;
         document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
         document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
@@ -136,12 +136,16 @@ async function updateNetworkSituationOnPage() {
     <!--     delay values -->
         document.getElementById("day_delay").innerHTML = Math.round(latestData.day_delay).toLocaleString();
         document.getElementById("avg_week_delay").innerHTML = Math.round(latestData.avg_week_delay).toLocaleString();
-        document.getElementById("y2d_delay_total").innerHTML = Math.round(latestData.y2d_delay_total).toLocaleString();
+        <!-- document.getElementById("y2d_delay_total").innerHTML = Math.round(latestData.y2d_delay_total).toLocaleString(); -->
         document.getElementById("y2d_delay_daily_average").innerHTML = Math.round(latestData.y2d_delay_daily_average).toLocaleString();
+    <!--     delay per flight values -->
+        document.getElementById("day_delay_flight").innerHTML = (latestData.day_traffic == 0 ? 0 : Math.round(latestData.day_delay/latestData.day_traffic*100)/100);
+        document.getElementById("week_delay_flight").innerHTML = (latestData.avg_week_traffic == 0 ? 0 : Math.round(latestData.avg_week_delay/latestData.avg_week_traffic*100)/100);
+        document.getElementById("y2d_delay_flight").innerHTML = (latestData.y2d_flights_total == 0 ? 0 : Math.round(latestData.y2d_delay_total/latestData.y2d_flights_total*100)/100);
     <!--     day delay dif -->
-        document.getElementById("dif_day_delay_prev_week_perc").innerHTML =
-    (latestData.dif_day_delay_prev_week_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_delay_prev_week_perc * 100) + '%';
+    <!--     document.getElementById("dif_day_delay_prev_week_perc").innerHTML = -->
+    <!-- (latestData.dif_day_delay_prev_week_perc > 0 ? '+' : '') + -->
+    <!-- Math.round(latestData.dif_day_delay_prev_week_perc * 100) + '%'; -->
         document.getElementById("dif_day_delay_prev_year_perc").innerHTML =
     (latestData.dif_day_delay_prev_year_perc > 0 ? '+' : '') +
     Math.round(latestData.dif_day_delay_prev_year_perc * 100) + '%';
@@ -149,9 +153,9 @@ async function updateNetworkSituationOnPage() {
     (latestData.dif_day_delay_2019_perc > 0 ? '+' : '') +
     Math.round(latestData.dif_day_delay_2019_perc * 100) + '%';
     <!--     week delay dif -->
-        document.getElementById("dif_week_delay_prev_week_perc").innerHTML =
-    (latestData.dif_week_delay_prev_week_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_delay_prev_week_perc * 100) + '%';
+    <!--     document.getElementById("dif_week_delay_prev_week_perc").innerHTML = -->
+    <!-- (latestData.dif_week_delay_prev_week_perc > 0 ? '+' : '') + -->
+    <!-- Math.round(latestData.dif_week_delay_prev_week_perc * 100) + '%'; -->
         document.getElementById("dif_week_delay_prev_year_perc").innerHTML =
     (latestData.dif_week_delay_prev_year_perc > 0 ? '+' : '') +
     Math.round(latestData.dif_week_delay_prev_year_perc * 100) + '%';
@@ -231,7 +235,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <div class="tab-pane fade in " id="flights-week">
   <p id="week_text" style="font-weight: bold; color: #0070c0;">n/a</p>
 
-  <p class="Scorecard_subt">Average flights</p>
+  <p class="Scorecard_subt">Avg. daily flights</p>
   <p id="week_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
 
   <p class="Scorecard_subt">Vs prev. week</p>
@@ -298,46 +302,46 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
   <p class="Scorecard_subt">Total delay</p>
   <p id="day_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
 
-  <p class="Scorecard_subt">Vs prev. week</p>
-  <p id="dif_day_delay_prev_week_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
   <p class="Scorecard_subt">Vs prev. year</p>
   <p id="dif_day_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
 
   <p class="Scorecard_subt">Vs 2019</p>
   <p id="dif_day_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Delay/flight</p>
+  <p id="day_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
 </div><!-- closes tab pane -->
 
 <div class="tab-pane fade in " id="delay-week">
   <p id="week_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
 
-  <p class="Scorecard_subt">Average delay</p>
+  <p class="Scorecard_subt">Avg. daily delay</p>
   <p id="avg_week_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs prev. week</p>
-  <p id="dif_week_delay_prev_week_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
 
   <p class="Scorecard_subt">Vs prev. year</p>
   <p id="dif_week_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
 
   <p class="Scorecard_subt">Vs 2019</p>
   <p id="dif_week_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. delay/flight</p>
+  <p id="week_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
 </div><!-- closes tab pane -->
 
 <div class="tab-pane fade in" id="delay-y2d">
   <p id="y2d_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
 
-  <p class="Scorecard_subt">Total delay</p>
-  <p id="y2d_delay_total" style="font-weight: bold; color: #0070c0;">n/a</p> 
-
   <p class="Scorecard_subt">Avg. daily delay</p>
-  <p id="y2d_delay_daily_average" style="font-weight: bold; color: #0070c0;">n/a</p>
+  <p id="y2d_delay_daily_average" style="font-weight: bold; color: #0070c0;">n/a</p> 
 
   <p class="Scorecard_subt">Vs prev. year</p>
   <p id="dif_y2d_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
 
   <p class="Scorecard_subt">Vs 2019</p>
   <p id="dif_y2d_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. delay/flight</p>
+  <p id="y2d_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
 </div><!-- closes tab pane -->
 
 </div><!-- closes tab content -->
