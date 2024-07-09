@@ -522,7 +522,7 @@ title: ANSPs Financial Dashboard
   var TransposedTableFreeCash;
 
   var SelectedEntity = "ENAV";
-  var SelectedYear = 2022;
+  var SelectedYear = 2023;
   var MinYear;
   var MaxYear;
   var DataFlag;
@@ -556,7 +556,7 @@ title: ANSPs Financial Dashboard
     Data = response.getDataTable();
     Data = new google.visualization.DataView(Data);
     Data.setRows(
-      Data.getFilteredRows([{ column: 0, minValue: 2018 }])
+      Data.getFilteredRows([{ column: 0, minValue: 2019 }])
     );
 
     //------------------------ANSP Picker--------------------------------------------
