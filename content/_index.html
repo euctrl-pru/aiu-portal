@@ -193,13 +193,13 @@ Aviation Intelligence Portal
 <h4>
 <span>Network Status - </span> <span id="day_text_title"></span>
 </h4>
-<div style="all: unset;">
+<div>
 <ul class="nav nav-tabs">
 <li class="active pr-3">
 <a data-toggle="tab" href="#flights">Flights</a>
 </li>
 <li class="pr-3">
-<a data-toggle="tab" href="#delay">ATFM Delay</a>
+<a data-toggle="tab" href="#delay" onclick="reloadIframeDelay()">ATFM Delay</a>
 </li>
 <li class="pr-3">
 <a data-toggle="tab" href="#punctuality">Punctuality</a>
@@ -334,7 +334,7 @@ Evolution of daily flights in the EUROCONTROL area
 </div>
 <!-- closes tab pane -->
 <!-- delay tab content------------------------------------ -->
-<div id="delay" class="tab-pane fade">
+<div id="delay" class="tab-pane fade in">
 <div class="row mt-3">
 <div class="col-sm-3">
 <ul class="nav mb-2">
@@ -455,11 +455,11 @@ n/a
 </div>
 <!-- closes tab pane -->
 <!-- punctuality tab content------------------------------------ -->
-<div id="punctuality" class="tab-pane fade">
+<div id="punctuality" class="tab-pane fade in">
 <div class="row mt-3">
 <div class="col-sm-4">
 <div style=" height: 410px;">
-<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;">
+<iframe id="delay-plot" class="resp-iframe" data-src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" src="about:blank" frameborder="0" style="border:0;">
 </iframe>
 </div>
 </div>
@@ -631,4 +631,11 @@ About the Aviation Intelligence Portal
 <p>{{% subscribe-button %}}</p>
 <p><a href="/about/privacy/">Read our privacy protection statement</a></p>
 </div>
+<script>
+
+function reloadIframeDelay() {
+    var iframe = $("#delay-plot");
+    iframe.attr("src", iframe.data("src")); 
+}
+</script>
 </div>
