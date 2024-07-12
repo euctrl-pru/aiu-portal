@@ -111,7 +111,7 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   echo "Exporting ERT_DLY fir ... done."
 
   echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
-  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
+  # Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
   echo "Exporting APT_DLY ... done"
   
   echo "Exporting HFE ..."
