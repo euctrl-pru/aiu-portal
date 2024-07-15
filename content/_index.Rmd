@@ -46,269 +46,423 @@ date: "2018-02-07T11:26:51+01:00"
   padding: 0px;
   text-align: right;
 }
+
 .w3-container {
-  border-radius: 10px; 
-}
+  border-radius: 5px; 
+  background-color: #d9e1f2;
+  padding: 0.5em;
 
-  </style>
-
-<!-- Daily traffic graphs and scorecards Scorecard_net-->
-<div class="w3-container" >
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 10px 10px 0 0; width: 100%;">
-<div class="col-12"; style="margin: 0px; "><p id="y2d_day_text" style="font-weight: bold; color: #0070c0;"</p> </div></div>
-</div>
-
-<div class="w3-container">
-<div class="row" style="padding: 0px; background-color: #d9e1f2; border-radius: 0 0 10px 10px; width: 100%;">
-
-<div class="col">
-  <p class="Scorecard_subt">Total flights</p>
-  <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p> 
-</div>
-
-<div class="col">
-  <p class="Scorecard_subt">Avg. daily flights</p>
-  <p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div>
-
-<div class="col-2" ; style="margin: 0px; ">
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div>
-
-<div class="col-2" ; style="margin: 0px;  ">
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div>
-
-<div class="col" ; style="margin: 0px;  ">
-</div>
-<div class="col" ; style="align=center">
-<!--<a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"><p>Click for direct access to the daily traffic dashboard </p></a></div>-->
-<div class="card bg-light border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"><img class="card-img-top" src="/images/landing/daily_db.png" alt=""></a></div></div>
-
-</div>
-</div>
+</style>
 
 <!-- script for traffic figures -->
 <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
 
-<!-- <script type="text/javascript"> -->
-<!-- async function fetchLatestNetworkSituation() { -->
-<!--     const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1'; -->
-<!--     try { -->
-<!--         const response = await fetch(apiUrl); -->
-<!--         if (!response.ok) { -->
-<!--             throw new Error(`API call failed: ${response.status}`); -->
-<!--         } -->
-<!--         const data = await response.json(); -->
-<!--         return data.items[0]; // Assuming the latest entry is what we need -->
-<!--     } catch (error) { -->
-<!--         console.error("Failed to fetch latest network situation:", error); -->
-<!--         // Implement any fallback logic or error handling here -->
-<!--         return null; -->
-<!--     } -->
-<!-- } -->
-
-<!-- async function updateNetworkSituationOnPage() { -->
-<!--     const latestData = await fetchLatestNetworkSituation(); -->
-<!--     if (latestData) { -->
-<!--         // Extract the year from the latest data's date -->
-<!--         const latestDate = new Date(latestData.date); -->
-<!--         const year = latestDate.getFullYear(); -->
-<!--         // Correctly construct the date range string -->
-<!--         const startDateString = `Latest network traffic situation: 01 Jan`; // Fixed start of the year -->
-<!--         const endDateString = `${('0' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`; -->
-<!--         const dateRangeString = `${startDateString} – ${endDateString}`; -->
-<!--         // Update webpage elements with the latest data, rounding numbers to integers -->
-<!--         document.getElementById("y2d_day_text").innerHTML = "" + dateRangeString; -->
-<!--         document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString(); -->
-<!--         document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString(); -->
-<!--         document.getElementById("dif_y2d_2019").innerHTML = -->
-<!--     (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') + -->
-<!--     Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%'; -->
-<!--         document.getElementById("dif_y2d_prev_year").innerHTML = -->
-<!--     (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') + -->
-<!--     Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%'; -->
-<!--     } else { -->
-<!--         // Handle case when no data could be fetched -->
-<!--         console.log("No data available to update the network situation."); -->
-<!--     } -->
-<!-- } -->
-<!-- </script> -->
-<!-- <script type="text/javascript"> -->
-<!--     document.addEventListener('DOMContentLoaded', function() { -->
-<!--         updateNetworkSituationOnPage(); -->
-<!--     }); -->
-<!-- </script> -->
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
 <script type="text/javascript">
-  var Data
-  var my_view_traffic
-  var last_day
-  var y2d_traffic
-  var y2d_prev_year_traffic
-  var y2d_2019_traffic 
-  var avg_y2d_traffic
-  var dif_y2d_2019
-  var dif_y2d_prev_year
+async function fetchLatestNetworkSituation() {
+    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`API call failed: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.items[0]; // Assuming the latest entry is what we need
+    } catch (error) {
+        console.error("Failed to fetch latest network situation:", error);
+        // Implement any fallback logic or error handling here
+        return null;
+    }
+}
 
-  google.load("visualization", "1.1", {
-    packages: ["corechart", "table", "controls", "bar"]
-  });
-  google.setOnLoadCallback(Initialisation);
-
-  function Initialisation() {
-<!-- 	var request = new XMLHttpRequest(); -->
-<!-- 	request.open("GET", "https://www.eurocontrol.int/Economics/Oscar/nw_traffic_data_main_page.json", false); -->
-<!-- 	request.send(null); -->
-<!-- 	var tempdata = JSON.parse(request.responseText); -->
-<!-- 	Datastring = google.visualization.arrayToDataTable(tempdata); -->
-
-<!-- 	Data = new google.visualization.DataTable(); -->
-
-<!--   for(j = 0; j < Datastring.getNumberOfColumns(); j++) { -->
-<!-- 				Data.addColumn(Datastring.getValue(0,j), Datastring.getColumnLabel(j)); -->
-<!-- //				 console.log(Datastring.getValue(0,j)); -->
-<!-- 	} -->
-
-<!-- 	Datastring.removeRow(0) -->
-<!-- 	Data.addRows(Datastring.getNumberOfRows()); -->
-
-<!-- 			// alert(Datastring.getNumberOfRows() + "/" + Data.getNumberOfRows() ); -->
-
-<!-- 	for(j = 0; j < Data.getNumberOfColumns(); j++) { -->
-
-<!-- 	if (Data.getColumnType(j) == 'number') { -->
-<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
-<!-- 	Data.setCell(i,j, Number (Datastring.getValue(i,j))); -->
-<!-- 	} -->
-<!-- 	} -->
-<!-- 	else if (Data.getColumnType(j) == 'date') { -->
-<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
-<!-- 	Data.setCell(i,j, new Date(Datastring.getValue(i,j))); -->
-<!-- 	} -->
-<!-- 	} -->
-<!-- 	else { -->
-<!-- 	for(i = 0; i < Data.getNumberOfRows(); i++) { -->
-<!-- 	Data.setCell(i,j,Datastring.getValue(i,j)); -->
-<!-- 	} -->
-<!-- 	} -->
-<!-- 	} -->
-
-  var query = new google.visualization.Query(
-      "https://docs.google.com/spreadsheets/d/14Lt3C3PCxxYCLXXYxRrFXd1s0tVZ3EQ8q9YfuYvx3Ww/edit?usp=sharing&sheet=NW_Flights_All"
-    );
-
-  query.send(drawDashboard);
-  }
-
-  function drawDashboard(response) {
-    Data = response.getDataTable();
-
-
-  UpdateTraffic();
-   }
-//---------------------------Update traffic---------------------------------------------
-  function UpdateTraffic() {
-  my_view_traffic = new google.visualization.DataView(Data);
-
-  last_day = my_view_traffic.getValue(0, 38); 
-  my_view_traffic.setRows(
-  Data.getFilteredRows([{ column: 7, value: last_day }])
-  );
-
-// Calculate datestrings
-  last_day_text = last_day.toDateString();
-  last_day_text = last_day_text.substring(8, 11) + last_day_text.substring(4, 8) + last_day_text.substring(11);
-  y2d_day_text = last_day_text.substring(3, 7) == "Jan " ? "01 – " + last_day_text : "01 Jan – " + last_day_text;
-
-// Calculate traffic scorecard values
-  y2d_traffic = my_view_traffic.getValue(0, 30);
-  y2d_prev_year_traffic = my_view_traffic.getValue(0, 31);
-  y2d_2019_traffic = my_view_traffic.getValue(0, 32);
-  
-  avg_y2d_traffic = Math.round(my_view_traffic.getValue(0, 33));
-  dif_y2d_2019 = Math.round(my_view_traffic.getValue(0, 37)*100);
-  dif_y2d_2019 = (dif_y2d_2019 >= 0) ? "+" + dif_y2d_2019 : "" + dif_y2d_2019;
-  dif_y2d_prev_year = Math.round(my_view_traffic.getValue(0, 36)*100);
-  dif_y2d_prev_year = (dif_y2d_prev_year >= 0) ? "+" + dif_y2d_prev_year : "" + dif_y2d_prev_year;
-
-// Update scorecard values
-  document.getElementById("y2d_day_text").innerHTML =  "Latest network traffic situation: " + y2d_day_text; 
-  document.getElementById("y2d_traffic").innerHTML = String(y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
-  document.getElementById("avg_y2d_traffic").innerHTML = String(avg_y2d_traffic).replace(/(.)(?=(\d{3})+$)/g, '$1,');
-  document.getElementById("dif_y2d_2019").innerHTML = String(dif_y2d_2019) + '%' ;
-  document.getElementById("dif_y2d_prev_year").innerHTML = String(dif_y2d_prev_year) + '%';
-  }
-  
+async function updateNetworkSituationOnPage() {
+    const latestData = await fetchLatestNetworkSituation();
+    if (latestData) {
+        <!-- // Extract the year and month from the latest data's date -->
+        const latestDate = new Date(latestData.date);
+        const year = latestDate.getFullYear();
+        const month = latestDate.getMonth();
+        <!-- // Calculate month of the first day of the week -->
+        const firstDateWeek = new Date();
+        firstDateWeek.setDate(latestDate.getDate() - 6);
+        const monthFirstdateWeek = firstDateWeek.getMonth();
+        <!-- // Correctly construct the date range string -->
+        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
+        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
+        const dateString = `${endDateString}`;
+        const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
+        <!-- //calculate 1st day of rolling week and string -->
+        const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
+        const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
+        <!-- // Update webpage elements with the latest data, rounding numbers to integers -->
+        document.getElementById("day_text_title").innerHTML = dateString;
+        document.getElementById("day_text").innerHTML = dateString;
+        document.getElementById("week_text").innerHTML = dateweekRangeString;
+        document.getElementById("y2d_text").innerHTML = datey2dRangeString;
+        document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
+        document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
+        document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
+        document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
+        document.getElementById("dif_y2d_2019").innerHTML =
+    (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') +
+    Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%';
+        document.getElementById("dif_y2d_prev_year").innerHTML =
+    (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') +
+    Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%';
+        document.getElementById("dif_day_prev_week").innerHTML =
+    (latestData.dif_day_prev_week > 0 ? '+' : '') +
+    Math.round(latestData.dif_day_prev_week * 100) + '%';
+        document.getElementById("dif_day_prev_year").innerHTML =
+    (latestData.dif_day_prev_year > 0 ? '+' : '') +
+    Math.round(latestData.dif_day_prev_year * 100) + '%'; 
+        document.getElementById("dif_day_2019").innerHTML =
+    (latestData.dif_day_2019 > 0 ? '+' : '') +
+    Math.round(latestData.dif_day_2019 * 100) + '%';
+            document.getElementById("dif_week_prev_week").innerHTML =
+    (latestData.dif_week_prev_week > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_week * 100) + '%';
+        document.getElementById("dif_week_prev_year").innerHTML =
+    (latestData.dif_week_prev_year > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_prev_year * 100) + '%'; 
+        document.getElementById("dif_week_2019").innerHTML =
+    (latestData.dif_week_2019 > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_2019 * 100) + '%';
+// Delay data
+        // 
+    <!--     delay dates -->
+        const day_delay_text = dateString;
+        document.getElementById("day_delay_text").innerHTML = day_delay_text;
+        document.getElementById("week_delay_text").innerHTML = dateweekRangeString;
+        document.getElementById("y2d_delay_text").innerHTML = datey2dRangeString;
+    <!--     delay values -->
+        document.getElementById("day_delay").innerHTML = Math.round(latestData.day_delay).toLocaleString();
+        document.getElementById("avg_week_delay").innerHTML = Math.round(latestData.avg_week_delay).toLocaleString();
+        <!-- document.getElementById("y2d_delay_total").innerHTML = Math.round(latestData.y2d_delay_total).toLocaleString(); -->
+        document.getElementById("y2d_delay_daily_average").innerHTML = Math.round(latestData.y2d_delay_daily_average).toLocaleString();
+    <!--     delay per flight values -->
+        document.getElementById("day_delay_flight").innerHTML = (latestData.day_traffic == 0 ? 0 : Math.round(latestData.day_delay/latestData.day_traffic*100)/100);
+        document.getElementById("week_delay_flight").innerHTML = (latestData.avg_week_traffic == 0 ? 0 : Math.round(latestData.avg_week_delay/latestData.avg_week_traffic*100)/100);
+        document.getElementById("y2d_delay_flight").innerHTML = (latestData.y2d_flights_total == 0 ? 0 : Math.round(latestData.y2d_delay_total/latestData.y2d_flights_total*100)/100);
+    <!--     day delay dif -->
+    <!--     document.getElementById("dif_day_delay_prev_week_perc").innerHTML = -->
+    <!-- (latestData.dif_day_delay_prev_week_perc > 0 ? '+' : '') + -->
+    <!-- Math.round(latestData.dif_day_delay_prev_week_perc * 100) + '%'; -->
+        document.getElementById("dif_day_delay_prev_year_perc").innerHTML =
+    (latestData.dif_day_delay_prev_year_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_day_delay_prev_year_perc * 100) + '%';
+        document.getElementById("dif_day_delay_2019_perc").innerHTML =
+    (latestData.dif_day_delay_2019_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_day_delay_2019_perc * 100) + '%';
+    <!--     week delay dif -->
+    <!--     document.getElementById("dif_week_delay_prev_week_perc").innerHTML = -->
+    <!-- (latestData.dif_week_delay_prev_week_perc > 0 ? '+' : '') + -->
+    <!-- Math.round(latestData.dif_week_delay_prev_week_perc * 100) + '%'; -->
+        document.getElementById("dif_week_delay_prev_year_perc").innerHTML =
+    (latestData.dif_week_delay_prev_year_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_delay_prev_year_perc * 100) + '%';
+        document.getElementById("dif_week_delay_2019_perc").innerHTML =
+    (latestData.dif_week_delay_2019_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_week_delay_2019_perc * 100) + '%';
+    <!--     y2d delay dif -->
+    document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML =
+    (latestData.dif_y2d_delay_prev_year_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_y2d_delay_prev_year_perc * 100) + '%';
+        document.getElementById("dif_y2d_delay_2019_perc").innerHTML =
+    (latestData.dif_y2d_delay_2019_perc > 0 ? '+' : '') +
+    Math.round(latestData.dif_y2d_delay_2019_perc * 100) + '%';
+    } else {
+        // Handle case when no data could be fetched
+        console.log("No data available to update the network situation.");
+    }
+}
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        updateNetworkSituationOnPage();
+    });
 </script>
 
+
+<div class="container">
+<h3>Aviation Intelligence Portal</h3>
+
+This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU). 
+
+</div>
 
 <br>
 <div class="container">
 <div class="row">
-<div class="col-sm-8"><h4>Aviation Intelligence Portal</h4>
 
-This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU). 
+<div class="col-sm-8"><h4><span>Network Status - </span> <span id="day_text_title"></span></h4>
 
-In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
+<div>
 
-* ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
-* stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
-* further develop the [ANS](/acronym/ans/) performance analysis framework and the understanding of key [ANS](/acronym/ans/) performance issues.
+<ul class="nav nav-tabs">
+  <li class="active pr-3"><a data-toggle="tab" href="#flights">Flights</a></li>
+  <li class="pr-3"><a data-toggle="tab" href="#delay" onclick="reloadIframeDelay()">ATFM Delay</a></li>
+  <li class="pr-3"><a data-toggle="tab" href="#punctuality">Punctuality</a></li>
+</ul>
 
-For feedback or questions please contact us at:
-[Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
+<div class="tab-content">
+<!-- flights tab content------------------------------------ -->
+<div id="flights" class="tab-pane fade in active show">
+
+<div class="row mt-3" >
+<div class="col-sm-3">
+
+<ul class="nav mb-2">
+  <li class="active pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-day">Day</a></li>
+  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-week">Week</a></li>
+  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-y2d">Y2D</a></li>
+</ul>
+
+<div class="w3-container tab-content">
+
+<div class="tab-pane fade in active show" id="flights-day">
+  <p id="day_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Total flights</p>
+  <p id="day_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. week</p>
+  <p id="dif_day_prev_week" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_day_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_day_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+<div class="tab-pane fade in " id="flights-week">
+  <p id="week_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. daily flights</p>
+  <p id="week_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. week</p>
+  <p id="dif_week_prev_week" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_week_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_week_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+<div class="tab-pane fade in" id="flights-y2d">
+  <p id="y2d_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Total flights</p>
+  <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p> 
+
+  <p class="Scorecard_subt">Avg. daily flights</p>
+  <p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+</div><!-- closes tab content -->
+
 </div>
 
+<div class="col-sm-9">
+
+<p id="graphtitle" class="h6 mb-0">Evolution of daily flights in the EUROCONTROL area</p>
+<p style="font-size: 0.8rem">(7-day average)</p>
+<div id="graphcontainer" style=" height: 350px;" >
+<iframe id="traffic-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" style="border:0; margin-top: 38px;" >
+</iframe>
+</div><!-- closes iframe container -->
+
+</div><!-- closes col -->
+</div><!-- closes row in col -->
+
+</div><!-- closes tab pane --> 
+
+<!-- delay tab content------------------------------------ -->
+<div id="delay" class="tab-pane fade in " >
+
+<div class="row mt-3" >
+<div class="col-sm-3">
+
+<ul class="nav mb-2">
+  <li class="active pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-day">Day</a></li>
+  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-week">Week</a></li>
+  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-y2d">Y2D</a></li>
+</ul>
+
+<div class="w3-container tab-content">
+
+<div class="tab-pane fade in active show" id="delay-day">
+  <p id="day_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Total delay</p>
+  <p id="day_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_day_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_day_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Delay/flight</p>
+  <p id="day_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+<div class="tab-pane fade in " id="delay-week">
+  <p id="week_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. daily delay</p>
+  <p id="avg_week_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_week_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_week_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. delay/flight</p>
+  <p id="week_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+<div class="tab-pane fade in" id="delay-y2d">
+  <p id="y2d_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. daily delay</p>
+  <p id="y2d_delay_daily_average" style="font-weight: bold; color: #0070c0;">n/a</p> 
+
+  <p class="Scorecard_subt">Vs prev. year</p>
+  <p id="dif_y2d_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Vs 2019</p>
+  <p id="dif_y2d_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
+
+  <p class="Scorecard_subt">Avg. delay/flight</p>
+  <p id="y2d_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div><!-- closes tab pane -->
+
+</div><!-- closes tab content -->
+
+
+</div>
+
+<div class="col-sm-9" >
+
+<div style=" margin-top: 0px; height: 420px;">
+<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" style="border:0;" >
+</iframe>
+</div><!-- closes iframe container -->
+
+</div><!-- closes col -->
+</div><!-- closes row in col -->
+
+</div><!-- closes tab pane --> 
+
+<!-- punctuality tab content------------------------------------ -->
+
+
+<div id="punctuality" class="tab-pane fade in">
+<div class="row mt-3">
+<div class="col-sm-4">
+<div style="height: 410px;">
+<iframe id="delay-plot-gauge" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</div>
+</div>
+<div class="col-sm-8">
+<div style="margin-top: 0px; height: 450px;">
+<iframe id="delay-plot-evo" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</div><!-- closes iframe container -->
+</div><!-- closes col -->
+</div><!-- closes row in col -->
+</div><!-- closes tab pane -->
+  
+</div><!-- closes content -->
+</div><!-- closes tabset -->
+
+</div><!-- closes col -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href"); // activated tab
+            var iframes = $(target).find('iframe');
+
+            iframes.each(function() {
+                var iframe = $(this);
+                var src = iframe.attr('src');
+                iframe.attr('src', '');
+                setTimeout(function () {
+                    iframe.attr('src', src);
+                }, 10); // Short delay to allow iframe reload
+            });
+        });
+    });
+</script>
 
 <div class="col-sm-4" style="min-height: 475px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-
 ::: {#carousel-item .carousel-item .active}
 ::: {.card .border-0}
-[![Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](/images/pi/prc_pi9.png)](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
+[![Published: An intro video to the Performance Review Commission](/images/landing/EUROCONTROL_PRC_VIDEO.PNG)](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
-##### [Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
+##### [Published: An intro video to the Performance Review Commission](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
-<small>The ninth PRC Performance Insight edition presents the PRC’s approach to measure and track gate-to-gate CO2 emissions in the EUROCONTROL area.</small>
+<small>Learn more about the Performance Review Commission in this new video!</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](/images/landing/ACE_2024.png)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
+[![Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](/images/landing/2024-06-21_PI10_institutional_framework.png)](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
-##### [Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
+##### [Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
-<small>The independent Performance Review Commission (PRC) has published its 22nd ATM Cost-Effectiveness (ACE) Benchmarking Report.</small>
+<small>The 10th PRC Performance Insight provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: New Performance Review Report (PRR)](/images/landing/PRR_2023.png)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+[![Published: PRC Observer #1 - Can we make aviation green?](/images/landing/PRC_Observer_1.png)](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
-##### [Published: New Performance Review Report (PRR)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+##### [Published: PRC Observer #1 - Can we make aviation green?](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
-<small>The independent Performance Review Commission (PRC) has published its Performance Review Report (PRR) for 2023.</small>
+<small>The PRC takes a brief look at the environmental performance of European aviation and the challenges ahead. How can we make aviation green?</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: Aviation Trends - Preparations for the Olympic Games](/images/landing/aviation-trends-2024.jpg)](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+[![Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](/images/landing/2024-7-15-standard_inputs.png)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
-##### [Published: Aviation Trends - Preparations for the Olympic Games](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+##### [Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
-<small>Our latest EUROCONTROL European Aviation Trends briefing looks ahead to the Paris Olympics and Paralympics.</small>
+<small>An update of Standard Inputs for Economic Analyses is now available. </small>
 :::
 :::
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: Data Snapshot #44 - The causes of flight delays ](/images/landing/2024-05-28_DS44_all_causes_delay.png)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
+
+##### [Published: Data Snapshot #44 - The causes of flight delays ](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
+
+<small>Our 44th EUROCONTROL Data Snapshot delves into the causes of flight delays. In 2023, nearly 3 flights in 10 arrived more than 15 minutes late. What is causing this?</small>
+:::
+:::
+
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
@@ -316,7 +470,7 @@ For feedback or questions please contact us at:
 
 ##### [Performance Data Update](/data/){target="_blank"}
 
-<small>May 2024 data available for download now!</small>
+<small>June 2024 data available for download now!</small>
 :::
 :::
 
@@ -369,6 +523,22 @@ For feedback or questions please contact us at:
 </div>
 
 <br>
+
+<div class="container">
+<h4>About the Aviation Intelligence Portal</h4>
+
+In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
+
+* ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
+* stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
+* further develop the [ANS](/acronym/ans/) performance analysis framework and the understanding of key [ANS](/acronym/ans/) performance issues.
+
+For feedback or questions please contact us at:
+[Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
+</div>
+
+
+<br>
 <div class="container text-center">
 {{% subscribe-button %}}
 
@@ -377,3 +547,12 @@ For feedback or questions please contact us at:
 
 [ectl_daily]: https://www.eurocontrol.int/Economics/DailyTrafficVariation "Daily traffic updates"
 [ectlweb]: https://www.eurocontrol.int/ "EUROCONTROL web page"
+
+
+<script>
+
+function reloadIframeDelay() {
+    var iframe = $("#delay-plot");
+    iframe.attr("src", iframe.data("src")); 
+}
+</script>

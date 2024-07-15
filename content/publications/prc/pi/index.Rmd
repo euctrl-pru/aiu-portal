@@ -8,6 +8,23 @@ tags:  PRC Performance Insights
 
 ## 2024
 
+<!-- PI#10 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Performance Insight #10 - ATM Cost-Effectiveness - A review of ANSPs regulatory, institutional and corporate governance arrangements][PI10]</h5>
+<small><strong><p style="color:#808080">Published: 20 Jun 2024</p></strong></small>
+    
+The objective of this PRC Performance Insight edition is to provide a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.<br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness"  target="_blank"><img src="/images/pi/prc_pi10.PNG" alt="PRC Performance Insight #10 - ATM Cost-Effectiveness - A review of ANSPs regulatory, institutional and corporate governance arrangements" style="width:100%"></a></div>
+</div>
+</div></div>
+
+
 <!-- PI#9 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -169,3 +186,4 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 [PI7]: https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres "PRC Performance Insight #7 - Reorganising ATS with Virtual Centres"
 [PI8]: https://www.eurocontrol.int/publication/prc-performance-insight-8-atm-performance-benefit-pools-improved-civil-military "PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination"
 [PI9]: https://www.eurocontrol.int/publication/prc-performance-insight-9-towards-reliable-gate-gate-co2-emissions-europe "PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach"
+[PI10]: https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness "PRC Performance Insight #10 - ATM Cost-Effectiveness - A review of ANSPs regulatory, institutional and corporate governance arrangements"
