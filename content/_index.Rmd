@@ -412,46 +412,57 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
-
 ::: {#carousel-item .carousel-item .active}
 ::: {.card .border-0}
-[![Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](/images/pi/prc_pi9.png)](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
+[![Published: An intro video to the Performance Review Commission](/images/landing/EUROCONTROL_PRC_VIDEO.PNG)](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
-##### [Published: PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach](https://www.eurocontrol.int/publication/prc-performance-insight-9-gate-gate-co2-emissions-europe){target="_blank"}
+##### [Published: An intro video to the Performance Review Commission](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
-<small>The ninth PRC Performance Insight edition presents the PRC’s approach to measure and track gate-to-gate CO2 emissions in the EUROCONTROL area.</small>
+<small>Learn more about the Performance Review Commission in this new video!</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](/images/landing/ACE_2024.png)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
+[![Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](/images/landing/2024-06-21_PI10_institutional_framework.png)](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
-##### [Published: ATM Cost-Effectiveness Benchmarking Report (2024 Edition)](https://www.eurocontrol.int/news/performance-review-commission-issues-its-latest-atm-cost-effectiveness-benchmarking-report){target="_blank"}
+##### [Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
-<small>The independent Performance Review Commission (PRC) has published its 22nd ATM Cost-Effectiveness (ACE) Benchmarking Report.</small>
+<small>The 10th PRC Performance Insight provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: New Performance Review Report (PRR)](/images/landing/PRR_2023.png)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+[![Published: PRC Observer #1 - Can we make aviation green?](/images/landing/PRC_Observer_1.png)](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
-##### [Published: New Performance Review Report (PRR)](https://www.eurocontrol.int/news/eurocontrols-pprc-publishes-2023-report-european-air-traffic){target="_blank"}
+##### [Published: PRC Observer #1 - Can we make aviation green?](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
-<small>The independent Performance Review Commission (PRC) has published its Performance Review Report (PRR) for 2023.</small>
+<small>The PRC takes a brief look at the environmental performance of European aviation and the challenges ahead. How can we make aviation green?</small>
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
-[![Published: Aviation Trends - Preparations for the Olympic Games](/images/landing/aviation-trends-2024.jpg)](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+[![Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](/images/landing/2024-7-15-standard_inputs.png)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
-##### [Published: Aviation Trends - Preparations for the Olympic Games](https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games){target="_blank"}
+##### [Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
-<small>Our latest EUROCONTROL European Aviation Trends briefing looks ahead to the Paris Olympics and Paralympics.</small>
+<small>An update of Standard Inputs for Economic Analyses is now available. </small>
 :::
 :::
+
+
+::: {#carousel-item .carousel-item}
+::: {.card .border-0}
+[![Published: Data Snapshot #44 - The causes of flight delays ](/images/landing/2024-05-28_DS44_all_causes_delay.png)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
+
+##### [Published: Data Snapshot #44 - The causes of flight delays ](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
+
+<small>Our 44th EUROCONTROL Data Snapshot delves into the causes of flight delays. In 2023, nearly 3 flights in 10 arrived more than 15 minutes late. What is causing this?</small>
+:::
+:::
+
 
 ::: {#carousel-item .carousel-item}
 ::: {.card .border-0}
@@ -459,7 +470,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 
 ##### [Performance Data Update](/data/){target="_blank"}
 
-<small>May 2024 data available for download now!</small>
+<small>June 2024 data available for download now!</small>
 :::
 :::
 
