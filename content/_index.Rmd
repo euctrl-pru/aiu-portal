@@ -364,6 +364,8 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 </div><!-- closes tab pane --> 
 
 <!-- punctuality tab content------------------------------------ -->
+
+
 <div id="punctuality" class="tab-pane fade in">
 <div class="row mt-3">
 <div class="col-sm-4">
@@ -385,6 +387,26 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 </div><!-- closes tabset -->
 
 </div><!-- closes col -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href"); // activated tab
+            var iframes = $(target).find('iframe');
+
+            iframes.each(function() {
+                var iframe = $(this);
+                var src = iframe.attr('src');
+                iframe.attr('src', '');
+                setTimeout(function () {
+                    iframe.attr('src', src);
+                }, 10); // Short delay to allow iframe reload
+            });
+        });
+    });
+</script>
 
 <div class="col-sm-4" style="min-height: 475px;"><h4>What's new?</h4><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
