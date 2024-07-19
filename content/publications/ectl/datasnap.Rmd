@@ -14,19 +14,35 @@ extrajs: [
 
 
 ## 2024
+<!-- #45 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Long term perspective of ANS performance - EUROCONTROL Data Snapshot #45][DS45]</h5>
+<small><strong><p style="color:#808080">Published: 9 July 2024</p></strong></small>
+The 45. EUROCONTROL Data Snapshot takes a long term view on ANS performance.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds45.png" alt="Long term perspective of ANS performance"></div>
+</div>
+</div></div>
+
 <!-- #44 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
 
 <div class="col-sm-8"> 
 <h5>[Why is your flight delayed? - EUROCONTROL Data Snapshot #44][DS44]</h5>
-<small><strong><p style="color:#808080">Published: 27 March 2024</p></strong></small>
+<small><strong><p style="color:#808080">Published: 28 May 2024</p></strong></small>
 The 44. EUROCONTROL Data Snapshot delves into the causes of flight delays.<br><br>
 <a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays target="_blank" role="button">Learn more...</a>
 </div>
 
 <div class="col-sm-4"><br>
-<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds44.jpg" alt="Centre of gravity of European aviation"></div>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds44.jpg" alt="Why is your flight delayed?"></div>
 </div>
 </div></div>
 
@@ -855,3 +871,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS42]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies "Growth of new generation of narrow bodies"
 [DS43]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation "Centre of gravity of European aviation"
 [DS44]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays "Why is your flight delayed?"
+[DS45]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance "Long term perspective of ANS performance"
