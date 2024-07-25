@@ -515,6 +515,8 @@ dif_co2_dep_y2d_2019 <- paste0(if_else(dif_co2_dep_y2d_2019>=0,'+', ''),format(d
 
 This page provides an overview of the [CO<sub>2</sub> emissions](/reference/dataset/emissions/) in the EUROCONTROL area and their evolution since 2019. It also presents their variation with respect to 2019 broken down at State level. The data is supplied by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"} and can be downloaded in our [download section](/data/).  
 
+It also provides links to the main activities of EUROCONTROL in the field of sustainability, in particular to the newly released platform [Flying Green](https://flying-green.eurocontrol.int/){target="_blank"}!
+
 #### Network (CRCO area)
 <div class="container mt-3" style="padding:0px">
 <div class="row align-items-start">
@@ -653,11 +655,18 @@ table_states_y2d
 
 <div class="container">
 <div class="row">
+
 <div class="card-deck">
+
+<div class="card"><a href="https://flying-green.eurocontrol.int/" target="_blank">
+  <img class="card-img-top" src="/images/eff/flying_green.png" alt="Flying Green">
+  <div class="card-body"><h5 class="card-title">Flying Green</h5><p class="card-text">Learn more about the new Flying Green Platform! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  </div>
+</div>
 
 <div class="card"><a href="https://www.eurocontrol.int/aviation-sustainability" target="_blank">
   <img class="card-img-top" src="/images/eff/ectl_asu.jpg" alt="Sustainability site">
-  <div class="card-body"><h5 class="card-title">Aviation sustainability</h5><p class="card-text">Learn more EUROCONTROL aviation sustainability activities and products <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  <div class="card-body"><h5 class="card-title">Aviation sustainability</h5><p class="card-text">Learn more about EUROCONTROL aviation sustainability activities and products <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 
