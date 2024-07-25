@@ -326,38 +326,38 @@ ignoreFiles = [
     parent = "dashboard"
     weight = 1
   [[menu.main]]
+    name = "Punctuality"
+    url = "/traffic/punctuality/"
+    identifier = "punctuality"
+    parent = "dashboard"
+    weight = 2
+  [[menu.main]]
     name = "En-route and airport delays"
     url = "/capacity/"
     identifier = "capacity"
     parent = "dashboard"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Efficiency and environment"
     url = "/efficiency/"
     identifier = "efficiency"
     parent = "dashboard"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Economics"
     url = "/economics/"
     identifier = "economics"
     parent = "dashboard"
-    weight = 4
-  [[menu.main]]
-    name = "Punctuality"
-    url = "/traffic/punctuality/"
-    identifier = "punctuality"
-    parent = "dashboard"
-    weight = 4.5
+    weight = 5
   [[menu.main]]
     name = "divider3"
     parent = "dashboard"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "Transformation"
     url = "/transformation/"
     parent = "dashboard"
-    weight = 6
+    weight = 7
 
   [[menu.main]]
     name = "Views"
