@@ -58,7 +58,7 @@ ignoreFiles = [
  [[menu.main]]
 #   pre = "<i class='far fa-star fa-spin fa-fw'></i>"
 #   pre = "<i class='fas fa-home'></i>"
-    name = "AIU Home"
+    name = "Home"
     identifier= "aiu"
     url = "/#/"
     weight = 5
@@ -314,7 +314,7 @@ ignoreFiles = [
     weight = 4
 
   [[menu.main]]
-    name = "Areas"
+    name = "Focus areas"
     identifier = "dashboard"
     pre = ""
     url = "/dashboard/"
@@ -326,13 +326,13 @@ ignoreFiles = [
     parent = "dashboard"
     weight = 1
   [[menu.main]]
-    name = "Capacity & delays"
+    name = "En-route and airport delays"
     url = "/capacity/"
     identifier = "capacity"
     parent = "dashboard"
     weight = 2
   [[menu.main]]
-    name = "Efficiency & environment"
+    name = "Efficiency and environment"
     url = "/efficiency/"
     identifier = "efficiency"
     parent = "dashboard"
@@ -343,6 +343,12 @@ ignoreFiles = [
     identifier = "economics"
     parent = "dashboard"
     weight = 4
+  [[menu.main]]
+    name = "Punctuality"
+    url = "/traffic/punctuality/"
+    identifier = "punctuality"
+    parent = "dashboard"
+    weight = 4.5
   [[menu.main]]
     name = "divider3"
     parent = "dashboard"
@@ -475,7 +481,7 @@ ignoreFiles = [
     weight = 40
 
 [[menu.capacity]]
-    name = "Capacity Overview"
+    name = "En-route and airport delays overview"
     url = "/capacity"
     identifier= "overview"
     weight = 10

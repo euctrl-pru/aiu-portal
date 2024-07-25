@@ -1,5 +1,5 @@
 ---
-title: "Aviation Intelligence Unit Portal"
+title: "Aviation Intelligence Portal | EUROCONTROL"
 date: "2018-02-07T11:26:51+01:00"
 ---
 
@@ -86,8 +86,8 @@ async function updateNetworkSituationOnPage() {
         firstDateWeek.setDate(latestDate.getDate() - 6);
         const monthFirstdateWeek = firstDateWeek.getMonth();
         <!-- // Correctly construct the date range string -->
-        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
-        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
+        const starty2dDateString = (month == 0 ? `1` :  `1 January`); // Fixed start of the year
+        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'long' })} ${year}`;
         const dateString = `${endDateString}`;
         const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
         <!-- //calculate 1st day of rolling week and string -->
@@ -181,18 +181,18 @@ async function updateNetworkSituationOnPage() {
     });
 </script>
 <div class="container">
-<h3>
+<h2>
 Aviation Intelligence Portal
-</h3>
+</h2>
 <p>This portal is provided by the <a href="/about/us/">Performance Review Unit (PRU)</a> which is part of EUROCONTROL’s Aviation Intelligence Unit (AIU).</p>
 </div>
 <br>
 <div class="container">
 <div class="row">
 <div class="col-sm-8">
-<h4>
-<span>Network Status - </span> <span id="day_text_title"></span>
-</h4>
+<h3>
+<span>Network status </span> on <span id="day_text_title"></span>
+</h3>
 <div>
 <ul class="nav nav-tabs">
 <li class="active pr-3">
@@ -501,9 +501,9 @@ n/a
     });
 </script>
 <div class="col-sm-4" style="min-height: 475px;">
-<h4>
+<h3>
 What’s new?
-</h4>
+</h3>
 <br>
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
@@ -566,14 +566,6 @@ What’s new?
 <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></p>
 </div>
 </div>
-<!-- 
-<div class="col-sm-2"><h4></h4><br>
-<div class="card bg-light text-center border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
-  <img class="card-img-top" src="/images/landing/ectl_int_db.png" alt="Daily traffic statistics"><br>
-  <div class="card-body"><h6 class="card-title">Performance Snapshot</h6></a><small><p class="card-text">Click to see the latest monthly snapshot!</p></small>
-  </div>
-</div>
-</div>-->
 </div>
 <section class="pt-5">
 <div class="container">
@@ -616,7 +608,7 @@ IFR flight and service unit evolution and forecast
 </div>
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<p><a class="text-white" href="#">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
+<p><a class="text-white" href="/traffic/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
@@ -657,7 +649,7 @@ En-route and airport ATFM delays
 </div>
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<p><a class="text-white" href="#">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
+<p><a class="text-white" href="/capacity/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
@@ -681,7 +673,7 @@ En-route and airport ATFM delays
 </figure>
 <!-- Content -->
 <h5 class="mb-3 font-weight-bold">
-Efficiency &amp; Environment
+Efficiency and environment
 </h5>
 <p>
 Flight efficiency affecting fuel burn and emissions
@@ -689,7 +681,7 @@ Flight efficiency affecting fuel burn and emissions
 </div>
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<p><a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+<p><a class="text-white" href="/efficiency/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
@@ -727,12 +719,12 @@ Analysis of ANS cost-efficiency
 </div>
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<p><a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+<p><a class="text-white" href="/economics/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
 <!-- Item -->
-<div class="col-md-6 col-lg-4 mb-3">
+<div class="col-md-6 col-lg-4 mb-4">
 <div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-punctuality.jpg); background-position: center left; background-size: cover;">
 <!-- overlay -->
 <div class="bg-overlay">
@@ -775,12 +767,12 @@ Analysis of ANS cost-efficiency
 Punctuality
 </h5>
 <p>
-IFR flight and service unit evolution and forecast
+Departure/arrival punctuality (OTP15) and operated schedules
 </p>
 </div>
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<p><a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+<p><a class="text-white" href="/traffic/punctuality/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
@@ -789,9 +781,9 @@ IFR flight and service unit evolution and forecast
 </section>
 <p><br></p>
 <div class="container">
-<h4>
+<h3>
 About the Aviation Intelligence Portal
-</h4>
+</h3>
 <p>In support of the independent work of the <a href="/about/prc/">Performance Review Commission (PRC)</a> this portal aims to:</p>
 <ul>
 <li>ensure that all stakeholders in all <a href="/definition/eurocontrol-area/">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans/">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>

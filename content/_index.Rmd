@@ -1,5 +1,5 @@
 ---
-title: "Aviation Intelligence Unit Portal"
+title: "Aviation Intelligence Portal | EUROCONTROL"
 date: "2018-02-07T11:26:51+01:00"
 ---
 
@@ -86,8 +86,8 @@ async function updateNetworkSituationOnPage() {
         firstDateWeek.setDate(latestDate.getDate() - 6);
         const monthFirstdateWeek = firstDateWeek.getMonth();
         <!-- // Correctly construct the date range string -->
-        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
-        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
+        const starty2dDateString = (month == 0 ? `1` :  `1 January`); // Fixed start of the year
+        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'long' })} ${year}`;
         const dateString = `${endDateString}`;
         const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
         <!-- //calculate 1st day of rolling week and string -->
@@ -183,7 +183,7 @@ async function updateNetworkSituationOnPage() {
 
 
 <div class="container">
-<h3>Aviation Intelligence Portal</h3>
+<h2>Aviation Intelligence Portal</h2>
 
 This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU). 
 
@@ -193,8 +193,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <div class="container">
 <div class="row">
 
-<div class="col-sm-8"><h4><span>Network Status - </span> <span id="day_text_title"></span></h4>
-
+<div class="col-sm-8"><h3><span>Network status </span> on <span id="day_text_title"></span></h3> 
 <div>
 
 <ul class="nav nav-tabs">
@@ -408,7 +407,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
     });
 </script>
 
-<div class="col-sm-4" style="min-height: 475px;"><h4>What's new?</h4><br> 
+<div class="col-sm-4" style="min-height: 475px;"><h3>What's new?</h3><br> 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
 
@@ -482,14 +481,6 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 </div>
 </div>
 
-<!-- 
-<div class="col-sm-2"><h4></h4><br>
-<div class="card bg-light text-center border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
-  <img class="card-img-top" src="/images/landing/ectl_int_db.png" alt="Daily traffic statistics"><br>
-  <div class="card-body"><h6 class="card-title">Performance Snapshot</h6></a><small><p class="card-text">Click to see the latest monthly snapshot!</p></small>
-  </div>
-</div>
-</div>-->
 
 </div>
 
@@ -530,7 +521,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<a class="text-white" href="#">More info<i class="ml-2 fas fa-arrow-right"></i></a>
+<a class="text-white" href="/traffic/">More info<i class="ml-2 fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -568,7 +559,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<a class="text-white" href="#">More info<i class="ml-2 fas fa-arrow-right"></i></a>
+<a class="text-white" href="/capacity/">More info<i class="ml-2 fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -591,13 +582,13 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 </figure>
 
 <!-- Content -->
-<h5 class="mb-3 font-weight-bold">Efficiency & Environment</h5>
+<h5 class="mb-3 font-weight-bold">Efficiency and environment</h5>
 <p>Flight efficiency affecting fuel burn and emissions</p>
 </div>
 
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
+<a class="text-white" href="/efficiency/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -632,13 +623,13 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
+<a class="text-white" href="/economics/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
 
 <!-- Item -->
-<div class="col-md-6 col-lg-4 mb-3">
+<div class="col-md-6 col-lg-4 mb-4">
 <div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-punctuality.jpg); background-position: center left; background-size: cover;">
 <!-- overlay -->
 <div class="bg-overlay"></div>	
@@ -677,12 +668,12 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 
 <!-- Content -->
 <h5 class="mb-3 font-weight-bold">Punctuality</h5>
-<p>IFR flight and service unit evolution and forecast</p>
+<p>Departure/arrival punctuality (OTP15) and operated schedules</p>
 </div>
 
 <!-- Card footer -->
 <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
-<a class="text-white" href="#">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
+<a class="text-white" href="/traffic/punctuality/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -693,7 +684,7 @@ This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which
 <br>
 
 <div class="container">
-<h4>About the Aviation Intelligence Portal</h4>
+<h3>About the Aviation Intelligence Portal</h3>
 
 In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
 
