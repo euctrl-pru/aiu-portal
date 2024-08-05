@@ -87,12 +87,17 @@ async function updateNetworkSituationOnPage() {
         const monthFirstdateWeek = firstDateWeek.getMonth();
         <!-- // Correctly construct the date range string -->
         const starty2dDateString = (month == 0 ? `1` :  `1 January`); // Fixed start of the year
-        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'long' })} ${year}`;
+        const endDateString = `${('' + latestDate.getDate()).padStart(2, '0')} ${latestDate.toLocaleString('default', { month: 'long' })} ${year}`;
         const dateString = `${endDateString}`;
         const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
-        <!-- //calculate 1st day of rolling week and string -->
-        const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
-        const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
+        
+        // Calculate the first day of the rolling week
+        const startWeekDate = new Date(latestDate);
+        startWeekDate.setDate(latestDate.getDate() - 6);
+        const startWeekDateString = `${('' + startWeekDate.getDate()).padStart(2, '0')} ${startWeekDate.toLocaleString('default', { month: 'long' })}`;
+        
+        // Generate the week range string
+        const dateweekRangeString = `${startWeekDateString} - ${endDateString}`;
         <!-- // Update webpage elements with the latest data, rounding numbers to integers -->
         document.getElementById("day_text_title").innerHTML = dateString;
         document.getElementById("day_text").innerHTML = dateString;
