@@ -1,5 +1,6 @@
 ---
-title: "About us"
+title: "Performance Review Unit"
+description: "Learn more about us, the Performance Review Unit, and our functions."
 ---
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 # run setup script

@@ -15,7 +15,7 @@ baseurl = "https://www.ansperformance.eu/"
 
 
 languageCode = "en-us"
-title = "Aviation Intelligence Unit Portal"
+title = "Aviation Intelligence Portal"
 theme = "pru-theme"
 
 # Deni's one
@@ -58,7 +58,7 @@ ignoreFiles = [
  [[menu.main]]
 #   pre = "<i class='far fa-star fa-spin fa-fw'></i>"
 #   pre = "<i class='fas fa-home'></i>"
-    name = "AIU Home"
+    name = "Home"
     identifier= "aiu"
     url = "/#/"
     weight = 5
@@ -301,7 +301,7 @@ ignoreFiles = [
     parent = "about"
     weight = 2
   [[menu.main]]
-    name = "Release notes"
+    name = "News and release notes"
     url = "/post/"
     identifier = "release"
     parent = "about"
@@ -314,7 +314,7 @@ ignoreFiles = [
     weight = 4
 
   [[menu.main]]
-    name = "Areas"
+    name = "Focus areas"
     identifier = "dashboard"
     pre = ""
     url = "/dashboard/"
@@ -326,32 +326,38 @@ ignoreFiles = [
     parent = "dashboard"
     weight = 1
   [[menu.main]]
-    name = "Capacity & delays"
-    url = "/capacity/"
-    identifier = "capacity"
+    name = "Punctuality"
+    url = "/traffic/punctuality/"
+    identifier = "punctuality"
     parent = "dashboard"
     weight = 2
   [[menu.main]]
-    name = "Efficiency & environment"
+    name = "En-route and airport delays"
+    url = "/capacity/"
+    identifier = "capacity"
+    parent = "dashboard"
+    weight = 3
+  [[menu.main]]
+    name = "Efficiency and environment"
     url = "/efficiency/"
     identifier = "efficiency"
     parent = "dashboard"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Economics"
     url = "/economics/"
     identifier = "economics"
     parent = "dashboard"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "divider3"
     parent = "dashboard"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "Transformation"
     url = "/transformation/"
     parent = "dashboard"
-    weight = 6
+    weight = 7
 
   [[menu.main]]
     name = "Views"
@@ -475,7 +481,7 @@ ignoreFiles = [
     weight = 40
 
 [[menu.capacity]]
-    name = "Capacity Overview"
+    name = "En-route and airport delays overview"
     url = "/capacity"
     identifier= "overview"
     weight = 10
@@ -594,9 +600,8 @@ ignoreFiles = [
   MathJaxCDN = "https://cdn.jsdelivr.net/npm/mathjax@2"
 
   [params.logo]
-    url = "images/EUROCONTROL-logo-standard-rgb.png"
-    height = 40
-    alt = "PRU"
+    url = "images/header/EUROCONTROL-logo-standard-rgb.svg"
+    alt = "EUROCONTROL Supporting European Aviation logo"
     target = "https://eurocontrol.int"
 
   [params.owner]
@@ -616,3 +621,4 @@ enableRobotsTXT = true
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
+
