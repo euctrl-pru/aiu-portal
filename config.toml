@@ -15,7 +15,7 @@ baseurl = "https://www.ansperformance.eu/"
 
 
 languageCode = "en-us"
-title = "Aviation Intelligence Unit Portal"
+title = "Aviation Intelligence Portal"
 theme = "pru-theme"
 
 # Deni's one
@@ -301,7 +301,7 @@ ignoreFiles = [
     parent = "about"
     weight = 2
   [[menu.main]]
-    name = "Release notes"
+    name = "News and release notes"
     url = "/post/"
     identifier = "release"
     parent = "about"
@@ -600,9 +600,8 @@ ignoreFiles = [
   MathJaxCDN = "https://cdn.jsdelivr.net/npm/mathjax@2"
 
   [params.logo]
-    url = "images/EUROCONTROL-logo-standard-rgb.png"
-    height = 40
-    alt = "PRU"
+    url = "images/header/EUROCONTROL-logo-standard-rgb.svg"
+    alt = "EUROCONTROL Supporting European Aviation logo"
     target = "https://eurocontrol.int"
 
   [params.owner]
@@ -622,3 +621,4 @@ enableRobotsTXT = true
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
+

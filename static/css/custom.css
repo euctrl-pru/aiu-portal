@@ -1,7 +1,6 @@
 body {
     font-family: "Exo", sans-serif;
 }
-
 .bg-overlay {
     display: block;
     position: absolute;
@@ -13,12 +12,106 @@ body {
     opacity: 0.5;
     background-color: #000000;
 }
-
+.bg-dark{
+    background-color: #0f1120 !important;
+}
 .z-index-2 {
     z-index: 2 !important;
 }
-
 .rounded {
     border-radius: 1rem !important;
 }
-
+.header-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.navbar-absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navbar {
+    display: block;
+    z-index: 99;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .7);
+}
+.navbar-nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-items: center;
+  }
+.navbar-nav-wrap .navbar-toggler {
+    margin-left: auto;
+  }
+.navbar-brand-logo {
+    width: 100%;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+.zi-2 {
+    z-index: 2 !important;
+}
+.content-space {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+.hero {
+    padding-top: 7rem !important;
+    padding-bottom: 5rem !important;
+}
+@media (min-width: 1200px) {
+    .bg-dark{
+        box-shadow: none;
+        background-color: transparent !important;
+    }
+}
+.card-body p {
+    margin-bottom: 0;
+}
+.card-footer {
+    border-top-width: 0;
+    background: none;
+}
+.card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.nav-segment {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: .25rem .25rem;
+    border-radius: .5rem;
+}
+.nav-fill .nav-item, .nav-fill>.nav-link {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+}
+.nav-segment .nav-link {
+    font-size: .8125rem;
+    padding: .5rem .8125rem;
+    border-radius: .5rem;
+}
+.nav-item {
+    color: #fff;
+}
+.nav-segment .nav-link.active {
+    background-color: #fff;
+    color: #fff;
+    box-shadow: 0 .1875rem .375rem 0 rgba(140, 152, 164, .25);
+}
+.nav-tabs {
+    padding-bottom: .125rem;
+}
+.custom-hero {
+    height: 30vh; /* Adjust this value to control the height */
+    background-size: cover;
+    background-position: 30%;
+}

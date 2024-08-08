@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Performance Review Commission
+description: Learn more about the Performance Review Commission background, tasks and deliverables.
 permalink: /about/prc/
 ---
 The Performance Review Commission (PRC) was established in 1998 by EUROCONTROL’s Permanent Commission.
