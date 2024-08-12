@@ -104,7 +104,6 @@ body {
 }
 .nav-segment .nav-link.active {
     background-color: #fff;
-    color: #fff;
     box-shadow: 0 .1875rem .375rem 0 rgba(140, 152, 164, .25);
 }
 .nav-tabs {
@@ -125,3 +124,4 @@ body {
         background-position: 30%;
     }
 }
+

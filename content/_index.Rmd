@@ -2,485 +2,447 @@
 title: "Aviation Intelligence Portal"
 description: "This portal is provided by the Performance Review Unit (PRU) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU)."
 date: "2018-02-07T11:26:51+01:00"
+fullpage: true
 ---
 
-<style type="text/css">
-  .img-responsive {
-      margin: 0 auto;
-      max-width: 75%
-  }
-  
-  .resp-container {
-      position: relative;
-      overflow: hidden;
-      padding-top: 50.0%;
-  }
-  
-  .resp-iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 110%;
-      border: 0;
-  }
-      
-  .Scorecard_subt {
-    margin: 0px; 
-    padding-bottom: 0px;  
-    text-align: left; 
-    color:#7f7f7f
-  }
-
-  .Scorecard_net {
-    margin: 0px; 
-    padding-bottom: 0px;
-    font-weight: bold;  
-    text-align: left;
-    color: #0070c0; 
-    
-  }
+<section class="content-space bg-light">
+<script type="text/javascript">async function fetchLatestNetworkSituation(){const a='https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';try{const b=await fetch(a);if(!b.ok)throw new Error(`API call failed: ${b.status}`);const c=await b.json();return c.items[0]}catch(a){return console.error("Failed to fetch latest network situation:",a),null}}async function updateNetworkSituationOnPage(){const a=await fetchLatestNetworkSituation();if(a){const b=new Date(a.date),j=b.getFullYear(),e=b.getMonth(),f=new Date;f.setDate(b.getDate()-6);const l=f.getMonth(),i=e==0?`1`:`1 Jan`,d=`${(''+b.getDate()).slice(-2)} ${b.toLocaleString('default',{month:'long'})} ${j}`,c=`${d}`,h=`${i} - ${d}`,k=e==l?`${(''+b.getDate()).slice(-2)-6}`:`${(''+b.getDate()).slice(-2)-6} ${b.toLocaleString('default',{month:'long'})}`,g=`${k} - ${d}`;document.getElementById("day_text_title").innerHTML=c,document.getElementById("day_text").innerHTML=c,document.getElementById("week_text").innerHTML=g,document.getElementById("y2d_text").innerHTML=h,document.getElementById("day_traffic").innerHTML=Math.round(a.day_traffic).toLocaleString(),document.getElementById("week_traffic").innerHTML=Math.round(a.avg_week_traffic).toLocaleString(),document.getElementById("y2d_traffic").innerHTML=Math.round(a.y2d_flights_total).toLocaleString(),document.getElementById("avg_y2d_traffic").innerHTML=Math.round(a.y2d_flights_daily_average).toLocaleString(),document.getElementById("dif_y2d_2019").innerHTML=(a.y2d_diff_2019_year_percentage>0?'+':'')+Math.round(a.y2d_diff_2019_year_percentage*100)+'%',document.getElementById("dif_y2d_prev_year").innerHTML=(a.y2d_diff_previous_year_percentage>0?'+':'')+Math.round(a.y2d_diff_previous_year_percentage*100)+'%',document.getElementById("dif_day_prev_week").innerHTML=(a.dif_day_prev_week>0?'+':'')+Math.round(a.dif_day_prev_week*100)+'%',document.getElementById("dif_day_prev_year").innerHTML=(a.dif_day_prev_year>0?'+':'')+Math.round(a.dif_day_prev_year*100)+'%',document.getElementById("dif_day_2019").innerHTML=(a.dif_day_2019>0?'+':'')+Math.round(a.dif_day_2019*100)+'%',document.getElementById("dif_week_prev_week").innerHTML=(a.dif_week_prev_week>0?'+':'')+Math.round(a.dif_week_prev_week*100)+'%',document.getElementById("dif_week_prev_year").innerHTML=(a.dif_week_prev_year>0?'+':'')+Math.round(a.dif_week_prev_year*100)+'%',document.getElementById("dif_week_2019").innerHTML=(a.dif_week_2019>0?'+':'')+Math.round(a.dif_week_2019*100)+'%';const m=c;document.getElementById("day_delay_text").innerHTML=m,document.getElementById("week_delay_text").innerHTML=g,document.getElementById("y2d_delay_text").innerHTML=h,document.getElementById("day_delay").innerHTML=Math.round(a.day_delay).toLocaleString(),document.getElementById("avg_week_delay").innerHTML=Math.round(a.avg_week_delay).toLocaleString(),document.getElementById("y2d_delay_daily_average").innerHTML=Math.round(a.y2d_delay_daily_average).toLocaleString(),document.getElementById("day_delay_flight").innerHTML=a.day_traffic==0?0:Math.round(a.day_delay/a.day_traffic*100)/100,document.getElementById("week_delay_flight").innerHTML=a.avg_week_traffic==0?0:Math.round(a.avg_week_delay/a.avg_week_traffic*100)/100,document.getElementById("y2d_delay_flight").innerHTML=a.y2d_flights_total==0?0:Math.round(a.y2d_delay_total/a.y2d_flights_total*100)/100,document.getElementById("dif_day_delay_prev_year_perc").innerHTML=(a.dif_day_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_day_delay_prev_year_perc*100)+'%',document.getElementById("dif_day_delay_2019_perc").innerHTML=(a.dif_day_delay_2019_perc>0?'+':'')+Math.round(a.dif_day_delay_2019_perc*100)+'%',document.getElementById("dif_week_delay_prev_year_perc").innerHTML=(a.dif_week_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_week_delay_prev_year_perc*100)+'%',document.getElementById("dif_week_delay_2019_perc").innerHTML=(a.dif_week_delay_2019_perc>0?'+':'')+Math.round(a.dif_week_delay_2019_perc*100)+'%',document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML=(a.dif_y2d_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_y2d_delay_prev_year_perc*100)+'%',document.getElementById("dif_y2d_delay_2019_perc").innerHTML=(a.dif_y2d_delay_2019_perc>0?'+':'')+Math.round(a.dif_y2d_delay_2019_perc*100)+'%'}else console.log("No data available to update the network situation.")}</script>
+<script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
 
 
-.col-4 {
-  margin: 0px;
-  padding: 0px;
-  text-align: right;
-}
 
-.w3-container {
-  border-radius: 5px; 
-  background-color: #d9e1f2;
-  padding: 0.5em;
-
-</style>
-
-<!-- script for traffic figures -->
-<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-
-<script type="text/javascript">
-async function fetchLatestNetworkSituation() {
-    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`API call failed: ${response.status}`);
-        }
-        const data = await response.json();
-        return data.items[0]; // Assuming the latest entry is what we need
-    } catch (error) {
-        console.error("Failed to fetch latest network situation:", error);
-        // Implement any fallback logic or error handling here
-        return null;
-    }
-}
-
-async function updateNetworkSituationOnPage() {
-    const latestData = await fetchLatestNetworkSituation();
-    if (latestData) {
-        <!-- // Extract the year and month from the latest data's date -->
-        const latestDate = new Date(latestData.date);
-        const year = latestDate.getFullYear();
-        const month = latestDate.getMonth();
-        <!-- // Calculate month of the first day of the week -->
-        const firstDateWeek = new Date();
-        firstDateWeek.setDate(latestDate.getDate() - 6);
-        const monthFirstdateWeek = firstDateWeek.getMonth();
-        <!-- // Correctly construct the date range string -->
-        const starty2dDateString = (month == 0 ? `1` :  `1 January`); // Fixed start of the year
-        const endDateString = `${('' + latestDate.getDate()).padStart(2, '0')} ${latestDate.toLocaleString('default', { month: 'long' })} ${year}`;
-        const dateString = `${endDateString}`;
-        const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
-        
-        // Calculate the first day of the rolling week
-        const startWeekDate = new Date(latestDate);
-        startWeekDate.setDate(latestDate.getDate() - 6);
-        const startWeekDateString = `${('' + startWeekDate.getDate()).padStart(2, '0')} ${startWeekDate.toLocaleString('default', { month: 'long' })}`;
-        
-        // Generate the week range string
-        const dateweekRangeString = `${startWeekDateString} - ${endDateString}`;
-        <!-- // Update webpage elements with the latest data, rounding numbers to integers -->
-        document.getElementById("day_text_title").innerHTML = dateString;
-        document.getElementById("day_text").innerHTML = dateString;
-        document.getElementById("week_text").innerHTML = dateweekRangeString;
-        document.getElementById("y2d_text").innerHTML = datey2dRangeString;
-        document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
-        document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
-        document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
-        document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
-        document.getElementById("dif_y2d_2019").innerHTML =
-    (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%';
-        document.getElementById("dif_y2d_prev_year").innerHTML =
-    (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%';
-        document.getElementById("dif_day_prev_week").innerHTML =
-    (latestData.dif_day_prev_week > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_prev_week * 100) + '%';
-        document.getElementById("dif_day_prev_year").innerHTML =
-    (latestData.dif_day_prev_year > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_prev_year * 100) + '%'; 
-        document.getElementById("dif_day_2019").innerHTML =
-    (latestData.dif_day_2019 > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_2019 * 100) + '%';
-            document.getElementById("dif_week_prev_week").innerHTML =
-    (latestData.dif_week_prev_week > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_prev_week * 100) + '%';
-        document.getElementById("dif_week_prev_year").innerHTML =
-    (latestData.dif_week_prev_year > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_prev_year * 100) + '%'; 
-        document.getElementById("dif_week_2019").innerHTML =
-    (latestData.dif_week_2019 > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_2019 * 100) + '%';
-// Delay data
-        // 
-    <!--     delay dates -->
-        const day_delay_text = dateString;
-        document.getElementById("day_delay_text").innerHTML = day_delay_text;
-        document.getElementById("week_delay_text").innerHTML = dateweekRangeString;
-        document.getElementById("y2d_delay_text").innerHTML = datey2dRangeString;
-    <!--     delay values -->
-        document.getElementById("day_delay").innerHTML = Math.round(latestData.day_delay).toLocaleString();
-        document.getElementById("avg_week_delay").innerHTML = Math.round(latestData.avg_week_delay).toLocaleString();
-        <!-- document.getElementById("y2d_delay_total").innerHTML = Math.round(latestData.y2d_delay_total).toLocaleString(); -->
-        document.getElementById("y2d_delay_daily_average").innerHTML = Math.round(latestData.y2d_delay_daily_average).toLocaleString();
-    <!--     delay per flight values -->
-        document.getElementById("day_delay_flight").innerHTML = (latestData.day_traffic == 0 ? 0 : Math.round(latestData.day_delay/latestData.day_traffic*100)/100);
-        document.getElementById("week_delay_flight").innerHTML = (latestData.avg_week_traffic == 0 ? 0 : Math.round(latestData.avg_week_delay/latestData.avg_week_traffic*100)/100);
-        document.getElementById("y2d_delay_flight").innerHTML = (latestData.y2d_flights_total == 0 ? 0 : Math.round(latestData.y2d_delay_total/latestData.y2d_flights_total*100)/100);
-    <!--     day delay dif -->
-    <!--     document.getElementById("dif_day_delay_prev_week_perc").innerHTML = -->
-    <!-- (latestData.dif_day_delay_prev_week_perc > 0 ? '+' : '') + -->
-    <!-- Math.round(latestData.dif_day_delay_prev_week_perc * 100) + '%'; -->
-        document.getElementById("dif_day_delay_prev_year_perc").innerHTML =
-    (latestData.dif_day_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_day_delay_2019_perc").innerHTML =
-    (latestData.dif_day_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_delay_2019_perc * 100) + '%';
-    <!--     week delay dif -->
-    <!--     document.getElementById("dif_week_delay_prev_week_perc").innerHTML = -->
-    <!-- (latestData.dif_week_delay_prev_week_perc > 0 ? '+' : '') + -->
-    <!-- Math.round(latestData.dif_week_delay_prev_week_perc * 100) + '%'; -->
-        document.getElementById("dif_week_delay_prev_year_perc").innerHTML =
-    (latestData.dif_week_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_week_delay_2019_perc").innerHTML =
-    (latestData.dif_week_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_delay_2019_perc * 100) + '%';
-    <!--     y2d delay dif -->
-    document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML =
-    (latestData.dif_y2d_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_y2d_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_y2d_delay_2019_perc").innerHTML =
-    (latestData.dif_y2d_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_y2d_delay_2019_perc * 100) + '%';
-    } else {
-        // Handle case when no data could be fetched
-        console.log("No data available to update the network situation.");
-    }
-}
-</script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        updateNetworkSituationOnPage();
-    });
-</script>
-
-<br>
 <div class="container">
 <div class="row">
+<div class="col-md-8">
 
-<div class="col-sm-8"><h3><span>Network status </span> on <span id="day_text_title"></span></h3> 
-<div>
+<h4><span>Network status on </span> <span id="day_text_title"></span></h4>
 
-<ul class="nav nav-tabs">
-  <li class="active pr-3"><a data-toggle="tab" href="#flights">Flights</a></li>
-  <li class="pr-3"><a data-toggle="tab" href="#delay" onclick="reloadIframeDelay()">ATFM Delay</a></li>
-  <li class="pr-3"><a data-toggle="tab" href="#punctuality">Punctuality</a></li>
+<div class="card border-0 rounded p-3 mb-4">
+
+<ul class="nav nav-segment nav-fill align-items-centers mb-4">
+<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#flights">Flights</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#delay" onclick=reloadIframeDelay()>ATFM Delay</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#punctuality">Punctuality</a></li>
 </ul>
 
 <div class="tab-content">
-<!-- flights tab content------------------------------------ -->
 <div id="flights" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-12">
 
-<div class="row mt-3" >
-<div class="col-sm-3">
 
-<ul class="nav mb-2">
-  <li class="active pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-day">Day</a></li>
-  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-week">Week</a></li>
-  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#flights-y2d">Y2D</a></li>
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+
+<p class="h6 mb-0">Evolution of daily flights in the EUROCONTROL area</p>
+<p class="text-muted mb-4">(7-day average)</p>
+
+</div>
+<!-- End Col -->
+
+<div class="col-sm-auto">
+
+<ul class="nav nav-segment nav-fill">
+<li class=""><a class="nav-link active" data-toggle="tab" href=#flights-day>Day</a></li>
+<li class=""><a class="nav-link" data-toggle="tab" href="#flights-week">Week</a></li>
+<li class=""><a class="nav-link" data-toggle="tab" href="#flights-y2d">Y2D</a></li>
 </ul>
+
+</div>
+<!-- End Col -->
+</div>
+
+
+
 
 <div class="w3-container tab-content">
 
-<div class="tab-pane fade in active show" id="flights-day">
-  <p id="day_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div id="flights-day" class="tab-pane fade in active show">
 
-  <p class="Scorecard_subt">Total flights</p>
-  <p id="day_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="row">
 
-  <p class="Scorecard_subt">Vs prev. week</p>
-  <p id="dif_day_prev_week" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="col-6 col-md">
+<div class="pr-3">
+<p id="day_text" class="font-weight-bold">n/a</p>
+</div>
+</div>
+<!-- End Col -->
 
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_day_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Total flights</p>
+<h4 id="day_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
 
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_day_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
+<div class="col-6 col-md mb-3">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. week</p>
+<h4 id="dif_day_prev_week" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
 
-<div class="tab-pane fade in " id="flights-week">
-  <p id="week_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>                                        
+<h4 id="dif_day_prev_year" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
 
-  <p class="Scorecard_subt">Avg. daily flights</p>
-  <p id="week_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_day_2019" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
 
-  <p class="Scorecard_subt">Vs prev. week</p>
-  <p id="dif_week_prev_week" style="font-weight: bold; color: #0070c0;">n/a</p>
+</div>                
 
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_week_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
 
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_week_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
+</div>
+<div id="flights-week" class="tab-pane fade in">
 
-<div class="tab-pane fade in" id="flights-y2d">
-  <p id="y2d_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div class="row">
 
-  <p class="Scorecard_subt">Total flights</p>
-  <p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p> 
-
-  <p class="Scorecard_subt">Avg. daily flights</p>
-  <p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
-
-</div><!-- closes tab content -->
+<div class="col-6 col-md">
+<p id="week_text" class="font-weight-bold">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. daily flights</p>
+<h4 id="week_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. week</p>
+<h4 id="dif_week_prev_week" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>
+<h4 id="dif_week_prev_year" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_week_2019" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
 
 </div>
 
-<div class="col-sm-9">
+</div>
 
-<p id="graphtitle" class="h6 mb-0">Evolution of daily flights in the EUROCONTROL area</p>
-<p style="font-size: 0.8rem">(7-day average)</p>
-<div id="graphcontainer" style=" height: 350px;" >
-<iframe id="traffic-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" style="border:0; margin-top: 38px;" >
-</iframe>
-</div><!-- closes iframe container -->
+<div id="flights-y2d" class="tab-pane fade in">
 
-</div><!-- closes col -->
-</div><!-- closes row in col -->
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_text" class="font-weight-bold">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Total flights</p>
+<h4 id="y2d_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. daily flights</p>
+<h4 id="avg_y2d_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>
+<h4 id="dif_y2d_prev_year" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_y2d_2019" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+</div>
 
-</div><!-- closes tab pane --> 
+</div>
 
-<!-- delay tab content------------------------------------ -->
-<div id="delay" class="tab-pane fade in " >
+</div>
 
-<div class="row mt-3" >
-<div class="col-sm-3">
+<div id="graphcontainer" class="col-12">
 
-<ul class="nav mb-2">
-  <li class="active pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-day">Day</a></li>
-  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-week">Week</a></li>
-  <li class="pr-3" style="font-size:0.95em;"><a data-toggle="tab" href="#delay-y2d">Y2D</a></li>
+<iframe id="traffic-plot" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div id="delay" class="tab-pane fade in">
+<div class="row">
+<div class="col-12">
+
+
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm"></div>
+<!-- End Col -->
+
+<div class="col-sm-auto">
+
+<ul class="nav nav-segment nav-fill">
+<li class=""><a class="nav-link active" data-toggle="tab" href=#delay-day>Day</a></li>
+<li class=""><a class="nav-link" data-toggle="tab" href="#delay-week">Week</a></li>
+<li class=""><a class="nav-link" data-toggle="tab" href="#delay-y2d">Y2D</a></li>
 </ul>
+
+</div>
+<!-- End Col -->
+</div>
+
+
+
 
 <div class="w3-container tab-content">
 
-<div class="tab-pane fade in active show" id="delay-day">
-  <p id="day_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
+<div id="delay-day" class="tab-pane fade in active show">
 
-  <p class="Scorecard_subt">Total delay</p>
-  <p id="day_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_day_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_day_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Delay/flight</p>
-  <p id="day_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
-
-<div class="tab-pane fade in " id="delay-week">
-  <p id="week_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Avg. daily delay</p>
-  <p id="avg_week_delay" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_week_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_week_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Avg. delay/flight</p>
-  <p id="week_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
-
-<div class="tab-pane fade in" id="delay-y2d">
-  <p id="y2d_delay_text" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Avg. daily delay</p>
-  <p id="y2d_delay_daily_average" style="font-weight: bold; color: #0070c0;">n/a</p> 
-
-  <p class="Scorecard_subt">Vs prev. year</p>
-  <p id="dif_y2d_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Vs 2019</p>
-  <p id="dif_y2d_delay_2019_perc" style="font-weight: bold; color: #0070c0;">n/a</p>
-
-  <p class="Scorecard_subt">Avg. delay/flight</p>
-  <p id="y2d_delay_flight" style="font-weight: bold; color: #0070c0;">n/a</p>
-</div><!-- closes tab pane -->
-
-</div><!-- closes tab content -->
-
+<div class="row">
+<div class="col-6 col-md">
+<p id="day_delay_text" class="font-weight-bold">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Total delay</p>
+<h4 id="day_delay" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>
+<h4 id="dif_day_delay_prev_year_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_day_delay_2019_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Delay/flight</p>
+<h4 id="day_delay_flight" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+</div>
 
 </div>
 
-<div class="col-sm-9" >
+<div id="delay-week" class="tab-pane fade in">
 
-<div style=" margin-top: 0px; height: 420px;">
-<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" style="border:0;" >
-</iframe>
-</div><!-- closes iframe container -->
+<div class="row">
+<div class="col-6 col-md">
+<p id="week_delay_text">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. daily delay</p>
+<h4 id="avg_week_delay" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>
+<h4 id="dif_week_delay_prev_year_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_week_delay_2019_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. delay/flight</p>
+<h4 id="week_delay_flight" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+</div>
 
-</div><!-- closes col -->
-</div><!-- closes row in col -->
+</div>
 
-</div><!-- closes tab pane --> 
+<div id="delay-y2d" class="tab-pane fade in">
 
-<!-- punctuality tab content------------------------------------ -->
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_delay_text">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. daily delay</p>
+<h4 id="y2d_delay_daily_average" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs prev. year</p>
+<h4 id="dif_y2d_delay_prev_year_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Vs 2019</p>
+<h4 id="dif_y2d_delay_2019_perc" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">Avg. delay/flight</p>
+<h4 id="y2d_delay_flight" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="col-12 pt-4">
+
+<iframe id="delay-plot" class="resp-iframe" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 
+
+</div>
+</div>
+</div>
 <div id="punctuality" class="tab-pane fade in">
 <div class="row mt-3">
 <div class="col-sm-4">
-<div style="height: 410px;">
-<iframe id="delay-plot-gauge" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
-</iframe>
+<div>
+<iframe id="delay-plot-gauge" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src=https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </div>
 </div>
 <div class="col-sm-8">
-<div style="margin-top: 0px; height: 450px;">
-<iframe id="delay-plot-evo" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
-</iframe>
-</div><!-- closes iframe container -->
-</div><!-- closes col -->
-</div><!-- closes row in col -->
-</div><!-- closes tab pane -->
-  
-</div><!-- closes content -->
-</div><!-- closes tabset -->
+<div>
+<iframe id="delay-plot-evo" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-</div><!-- closes col -->
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js></script>
+<script>$(document).ready(function () { $('a[data-toggle="tab"]').on('shown.bs.tab', function (a) { var b = $(a.target).attr("href"), c = $(b).find('iframe'); c.each(function () { var a = $(this), b = a.attr('src'); a.attr('src', ''), setTimeout(function () { a.attr('src', b) }, 10) }) }) })</script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            var target = $(e.target).attr("href"); // activated tab
-            var iframes = $(target).find('iframe');
 
-            iframes.each(function() {
-                var iframe = $(this);
-                var src = iframe.attr('src');
-                iframe.attr('src', '');
-                setTimeout(function () {
-                    iframe.attr('src', src);
-                }, 10); // Short delay to allow iframe reload
-            });
-        });
-    });
-</script>
 
-<div class="col-sm-4" style="min-height: 475px;"><h3>What's new?</h3><br> 
+<div class="col-md-4">
+<h4>What's new?</h4>
+
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<!-- Indicators -->
 <div class="carousel-inner">
-
 ::: {#carousel-item .carousel-item .active}
-::: {.card .border-0}
-[![Published: An intro video to the Performance Review Commission](/images/landing/EUROCONTROL_PRC_VIDEO.PNG)](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Published: An intro video to the Performance Review Commission](/images/landing/EUROCONTROL_PRC_VIDEO.PNG){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Published: An intro video to the Performance Review Commission](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
 
 <small>Learn more about the Performance Review Commission in this new video!</small>
+</div>
+
+::: {.card-footer .pt-0}
+[Read more](https://www.youtube.com/watch?v=zLS7bPgazlU){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+:::
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](/images/landing/2024-06-21_PI10_institutional_framework.png)](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](/images/landing/2024-06-21_PI10_institutional_framework.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
 
 <small>The 10th PRC Performance Insight provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.</small>
+</div>
+
+::: {.card-footer .pt-0}
+[Read more](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+:::
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Published: PRC Observer #1 - Can we make aviation green?](/images/landing/PRC_Observer_1.png)](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Published: PRC Observer #1 - Can we make aviation green?](/images/landing/PRC_Observer_1.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Published: PRC Observer #1 - Can we make aviation green?](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
 
 <small>The PRC takes a brief look at the environmental performance of European aviation and the challenges ahead. How can we make aviation green?</small>
+</div>
+
+::: {.card-footer .pt-0}
+[Read more](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+:::
 :::
 :::
 
 ::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](/images/landing/2024-7-15-standard_inputs.png)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](/images/landing/2024-7-15-standard_inputs.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
 
-<small>An update of Standard Inputs for Economic Analyses is now available. </small>
-:::
-:::
+<small>An update of Standard Inputs for Economic Analyses is now available.</small>
+</div>
 
+::: {.card-footer .pt-0}
+[Read more](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+:::
+:::
+:::
 
 ::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Published: Data Snapshot #44 - The causes of flight delays ](/images/landing/2024-05-28_DS44_all_causes_delay.png)](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Published: Data Snapshot #44 - The causes of flight delays ](/images/landing/2024-05-28_DS44_all_causes_delay.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Published: Data Snapshot #44 - The causes of flight delays ](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
 
 <small>Our 44th EUROCONTROL Data Snapshot delves into the causes of flight delays. In 2023, nearly 3 flights in 10 arrived more than 15 minutes late. What is causing this?</small>
-:::
-:::
+</div>
 
+::: {.card-footer .pt-0}
+[Read more](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+:::
+:::
+:::
 
 ::: {#carousel-item .carousel-item}
-::: {.card .border-0}
-[![Performance Data Update](/images/landing/data_icon.jpg)](/data/){target="_blank"}
+::: {.card .border-0 .rounded}
+[![Performance Data Update](/images/landing/data_icon.jpg){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](/data/){target="_blank"}
 
+<div style="padding: 1rem;">
 ##### [Performance Data Update](/data/){target="_blank"}
 
 <small>June 2024 data available for download now!</small>
+</div>
+
+::: {.card-footer .pt-0}
+[Read more](/data/){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
 :::
 :::
+:::
+
 
 
 </div>
-
+<p>
 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
 <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+</p>
+
+</div>
 </div>
 </div>
 
-
 </div>
+
+</section>
 
 <section class="pt-5">
 <div class="container">
@@ -685,26 +647,61 @@ async function updateNetworkSituationOnPage() {
 
 <br>
 
+<!-- =======================
+About START -->
+<section class="content-space bg-light">
 <div class="container">
-<h3>About the Aviation Intelligence Portal</h3>
 
-In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
+<div class="row">
+<div class="col-md-12">
 
-* ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
-* stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
-* further develop the [ANS](/acronym/ans/) performance analysis framework and the understanding of key [ANS](/acronym/ans/) performance issues.
+<div class="row justify-content-between">
 
-For feedback or questions please contact us at:
-[Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
+<div class="col-md-6 col-lg-7 mb-4 mb-md-0">
+
+<div class="card card-body bg-transparent h-100 px-0 border-0">
+<h2 class="mb-md-4">About the Aviation Intelligence Portal</h2>
+<p class="mb-4">In support of the independent work of the <a href="/about/prc">Performance Review Commission (PRC)</a> this portal aims to:</p>
+
+<ul class="mb-md-4">
+<li>ensure that all stakeholders in all <a href="/definition/eurocontrol-area">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>
+<li>stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,</li>
+<li>further develop the <a href="/acronym/ans">ANS</a> performance analysis framework and the understanding of key <a href="/acronym/ans">ANS</a> performance issues.</li>
+</ul>
+
+
+<p class="font-weight-bold">Feedback or questions? <a href="mailto:PRU-Support@eurocontrol.int">Please contact us<i class="ml-1 fa fa-envelope"></i></a></p>
+
+
 </div>
 
-
-<br>
-<div class="container text-center">
-{{% subscribe-button %}}
-
-[Read our privacy protection statement](/about/privacy/)
 </div>
+
+<div class="col-md-6 col-lg-4 ms-auto">
+<div class="card bg-primary rounded h-100 overflow-hidden p-4">
+<!-- Card body -->
+<div class="card-body p-0">
+<h4 class="text-white">Subscribe</h4>
+<p class="text-white">Get informed about our newsletters, publications, and data updates!</p>
+</div>
+
+<!-- Card footer -->
+<div class="card-footer d-grid text-center p-0 mt-8">
+<a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter" class="btn btn-block btn-light mb-3">Subscribe</a>
+<p class="mb-0 text-white small"><a href="/about/privacy/" class="text-white">Read our privacy protection statement</a></p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+<!-- =======================
+about END -->
 
 [ectl_daily]: https://www.eurocontrol.int/Economics/DailyTrafficVariation "Daily traffic updates"
 [ectlweb]: https://www.eurocontrol.int/ "EUROCONTROL web page"
