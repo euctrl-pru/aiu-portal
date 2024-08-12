@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Economics
+title: Economics Overview
+description: "An overview of the economics related analyses and dashboards provided by the Aviation Intelligence Unit." 
 excerpt: Cost efficiency data visualizations.
 keywords: performance, air transport, flights, europe, cost efficiency
 ---

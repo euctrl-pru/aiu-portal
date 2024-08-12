@@ -110,8 +110,18 @@ body {
 .nav-tabs {
     padding-bottom: .125rem;
 }
+/* Default style for large screens */
 .custom-hero {
-    height: 30vh; /* Adjust this value to control the height */
+    height: 35vh; /* Adjust this value to control the height */
     background-size: cover;
     background-position: 30%;
+}
+
+/* Style for small screens */
+@media (max-width: 1540px) {
+    .custom-hero {
+        height: 45vh; /* Adjust this value to control the height */
+        background-size: cover;
+        background-position: 30%;
+    }
 }

@@ -1,5 +1,6 @@
 ---
-title: "Copyright notice and Disclaimer"
+title: "Copyright notice and disclaimer"
+description: "About the legal use of content and materials published."
 ---
 
 This data is published by EUROCONTROL for information purposes. 

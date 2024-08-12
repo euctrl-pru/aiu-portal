@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Punctuality"
-description: "This page provides an overview of the traffic, ATFM delay, punctuality (OTP15) and percentage of operated schedules in the EUROCONTROL Area."
+description: 'An overview of the punctuality of flights in the EUROCONTROL area (network view).'
 ---
 
 ```{r, echo=FALSE, include=FALSE}

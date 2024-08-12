@@ -1,5 +1,6 @@
 ---
-title: Data
+title: "Data"
+description: "Explore EUROCONTROL data on topics such as emissions, operations, traffic and economics."
 aliases: ["/data/performancearea/"]
 ndwk_i: <i class="fa pru fa-flask"></i>
 fltr_i: <i class="fa pru fa-filter"></i>

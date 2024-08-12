@@ -1,5 +1,6 @@
 ---
-title: "Traffic Overview"
+title: "Traffic"
+description: 'An overview on the traffic trends of flights in the EUROCONTROL area (network view).'
 dwnld_i: <i class="fa pru fa-download"></i>
 ---
 

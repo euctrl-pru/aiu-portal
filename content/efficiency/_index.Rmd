@@ -1,5 +1,6 @@
 ---
 title: Efficiency and environment
+description: "An overview of horizontal, vertical, taxi-out and terminal holdings (ASMA) flight efficiency and environmental impact."
 ---
 
 <style type="text/css">
