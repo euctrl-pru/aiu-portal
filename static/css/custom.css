@@ -99,6 +99,7 @@ body {
     padding: .5rem .8125rem;
     border-radius: .5rem;
 }
+
 .nav-item {
     color: #fff;
 }
@@ -134,3 +135,6 @@ body {
     }
 }
 
+.card {
+  border-radius: 1rem;
+}
