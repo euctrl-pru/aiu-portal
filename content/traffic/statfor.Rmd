@@ -1,6 +1,6 @@
 ---
-title: EUROCONTROL Traffic Forecasts
-description: "EUROCONTROL works with stakeholders to produce forecasts of future network traffic."
+title: Traffic Forecasts
+description: "EUROCONTROL STATFOR works with stakeholders to produce forecasts of future network traffic."
 date: '2020-05-15'
 ---
 <script>

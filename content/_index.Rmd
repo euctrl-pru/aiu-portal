@@ -450,7 +450,7 @@ fullpage: true
 <div class="row">
 
 <div class="col-md-6 col-lg-4">
-<h2 class="mb-4">Focus areas</h2>
+<h2 class="mb-4">Performance areas</h2>
 </div>
 
 <!-- Item -->
@@ -565,7 +565,7 @@ fullpage: true
 </figure>
 
 <!-- Content -->
-<h5 class="mb-3 font-weight-bold">En-route and airport delays</h5>
+<h5 class="mb-3 font-weight-bold">En-route & airport delays</h5>
 <p>En-route and airport ATFM delays</p>
 </div>
 
@@ -594,7 +594,7 @@ fullpage: true
 </figure>
 
 <!-- Content -->
-<h5 class="mb-3 font-weight-bold">Efficiency and environment</h5>
+<h5 class="mb-3 font-weight-bold">Efficiency & environment</h5>
 <p>Flight efficiency affecting fuel burn and emissions</p>
 </div>
 

@@ -1,0 +1,56 @@
+/* Sidebar Navigation Styling */
+.sidenav {
+    background-color: #f8f9fa; /* Slightly darker grey background */
+    padding: 5px; /* Padding inside the box */
+    border-radius: 20px; /* Rounded corners for the whole sidebar */
+    font-family: Arial, sans-serif; /* Change the font-family as per your preference */
+    margin-bottom: 5px; /* Space below the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.sidenav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the ul takes full width of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items horizontally */
+}
+
+.sidenav-links a {
+    display: block;
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary blue, change as needed */
+    background-color: #f8f9fa;
+    padding: 5px 10px; /* Increased padding for a more substantial button size */
+    margin: 5px 5px; /* 10px margin on top and bottom */
+    border-radius: 5px; /* Rounded corners for each button */
+    border: 2px solid transparent; /* Transparent border makes sure the layout doesn't change on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-align: center; /* Center text within the button */
+    width: 100%; /* Buttons take up 80% of the container's width */
+    max-width: 600px; /* Maximum width for each button */
+}
+
+.sidenav-links a:hover, .sidenav-links a[aria-selected='true'] {
+    background-color: #007bff; /* Bootstrap primary blue, change as needed */
+    color: white; /* White text on hover/active */
+    border-color: #0056b3; /* Darker blue border for a slight 3D effect */
+    text-decoration: none; /* No underline on hover */
+}
+
+/* Highlighting the current page's button */
+.sidenav-links a.active {
+    background-color: #fff;
+    box-shadow: 0 .1875rem .375rem 0 rgba(140, 152, 164, .25);
+    color: #007bff;
+}
+
+.sidenav-links li::before {
+    content: none; /* This will remove the '|' or any content added before each li */
+}
+
+/* Responsive adjustments can be added here if necessary */
