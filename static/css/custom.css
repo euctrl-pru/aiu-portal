@@ -128,7 +128,7 @@ body {
 /* Style for small screens */
 @media (max-width: 600px) {
     .custom-hero {
-        height: 65vh; /* Adjust this value to control the height */
+        height: 50vh; /* Adjust this value to control the height */
         background-size: cover;
         background-position: 30%;
     }
