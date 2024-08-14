@@ -4,20 +4,12 @@ description: "This portal is provided by the Performance Review Unit (PRU) which
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
-<marquee width="100%" direction="left" loop="3" bgcolor="LightGrey">
-		<!-- <img src="Pictures/ec-color-print.jpg" width="25" height="25"> -->
-		<strong>July 2024: New!!!</strong> Download version 2 of our  EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day. 
-	</marquee>
-<section class="content-space bg-light">
+<marquee width="100%" direction="left" loop="3" bgcolor="LightGrey"><strong>July 2024: New!!!</strong> Download version 2 of our  EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day.</marquee><section class="content-space bg-light">
 <script type="text/javascript">async function fetchLatestNetworkSituation(){const a='https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';try{const b=await fetch(a);if(!b.ok)throw new Error(`API call failed: ${b.status}`);const c=await b.json();return c.items[0]}catch(a){return console.error("Failed to fetch latest network situation:",a),null}}async function updateNetworkSituationOnPage(){const a=await fetchLatestNetworkSituation();if(a){const b=new Date(a.date),j=b.getFullYear(),e=b.getMonth(),f=new Date;f.setDate(b.getDate()-6);const l=f.getMonth(),i=e==0?`1`:`1 Jan`,d=`${(''+b.getDate()).slice(-2)} ${b.toLocaleString('default',{month:'long'})} ${j}`,c=`${d}`,h=`${i} - ${d}`,k=e==l?`${(''+b.getDate()).slice(-2)-6}`:`${(''+b.getDate()).slice(-2)-6} ${b.toLocaleString('default',{month:'long'})}`,g=`${k} - ${d}`;document.getElementById("day_text_title").innerHTML=c,document.getElementById("day_text").innerHTML=c,document.getElementById("week_text").innerHTML=g,document.getElementById("y2d_text").innerHTML=h,document.getElementById("day_traffic").innerHTML=Math.round(a.day_traffic).toLocaleString(),document.getElementById("week_traffic").innerHTML=Math.round(a.avg_week_traffic).toLocaleString(),document.getElementById("y2d_traffic").innerHTML=Math.round(a.y2d_flights_total).toLocaleString(),document.getElementById("avg_y2d_traffic").innerHTML=Math.round(a.y2d_flights_daily_average).toLocaleString(),document.getElementById("dif_y2d_2019").innerHTML=(a.y2d_diff_2019_year_percentage>0?'+':'')+Math.round(a.y2d_diff_2019_year_percentage*100)+'%',document.getElementById("dif_y2d_prev_year").innerHTML=(a.y2d_diff_previous_year_percentage>0?'+':'')+Math.round(a.y2d_diff_previous_year_percentage*100)+'%',document.getElementById("dif_day_prev_week").innerHTML=(a.dif_day_prev_week>0?'+':'')+Math.round(a.dif_day_prev_week*100)+'%',document.getElementById("dif_day_prev_year").innerHTML=(a.dif_day_prev_year>0?'+':'')+Math.round(a.dif_day_prev_year*100)+'%',document.getElementById("dif_day_2019").innerHTML=(a.dif_day_2019>0?'+':'')+Math.round(a.dif_day_2019*100)+'%',document.getElementById("dif_week_prev_week").innerHTML=(a.dif_week_prev_week>0?'+':'')+Math.round(a.dif_week_prev_week*100)+'%',document.getElementById("dif_week_prev_year").innerHTML=(a.dif_week_prev_year>0?'+':'')+Math.round(a.dif_week_prev_year*100)+'%',document.getElementById("dif_week_2019").innerHTML=(a.dif_week_2019>0?'+':'')+Math.round(a.dif_week_2019*100)+'%';const m=c;document.getElementById("day_delay_text").innerHTML=m,document.getElementById("week_delay_text").innerHTML=g,document.getElementById("y2d_delay_text").innerHTML=h,document.getElementById("day_delay").innerHTML=Math.round(a.day_delay).toLocaleString(),document.getElementById("avg_week_delay").innerHTML=Math.round(a.avg_week_delay).toLocaleString(),document.getElementById("y2d_delay_daily_average").innerHTML=Math.round(a.y2d_delay_daily_average).toLocaleString(),document.getElementById("day_delay_flight").innerHTML=a.day_traffic==0?0:Math.round(a.day_delay/a.day_traffic*100)/100,document.getElementById("week_delay_flight").innerHTML=a.avg_week_traffic==0?0:Math.round(a.avg_week_delay/a.avg_week_traffic*100)/100,document.getElementById("y2d_delay_flight").innerHTML=a.y2d_flights_total==0?0:Math.round(a.y2d_delay_total/a.y2d_flights_total*100)/100,document.getElementById("dif_day_delay_prev_year_perc").innerHTML=(a.dif_day_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_day_delay_prev_year_perc*100)+'%',document.getElementById("dif_day_delay_2019_perc").innerHTML=(a.dif_day_delay_2019_perc>0?'+':'')+Math.round(a.dif_day_delay_2019_perc*100)+'%',document.getElementById("dif_week_delay_prev_year_perc").innerHTML=(a.dif_week_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_week_delay_prev_year_perc*100)+'%',document.getElementById("dif_week_delay_2019_perc").innerHTML=(a.dif_week_delay_2019_perc>0?'+':'')+Math.round(a.dif_week_delay_2019_perc*100)+'%',document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML=(a.dif_y2d_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_y2d_delay_prev_year_perc*100)+'%',document.getElementById("dif_y2d_delay_2019_perc").innerHTML=(a.dif_y2d_delay_2019_perc>0?'+':'')+Math.round(a.dif_y2d_delay_2019_perc*100)+'%'}else console.log("No data available to update the network situation.")}</script>
 <script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
-
-
-
 <div class="container">
 <div class="row">
 <div class="col-md-8">
-
 <h4><span>Network status on </span> <span id="day_text_title"></span></h4>
 
 <div class="card border-0 rounded p-3 mb-4">
@@ -328,123 +320,114 @@ fullpage: true
 <script>$(document).ready(function () { $('a[data-toggle="tab"]').on('shown.bs.tab', function (a) { var b = $(a.target).attr("href"), c = $(b).find('iframe'); c.each(function () { var a = $(this), b = a.attr('src'); a.attr('src', ''), setTimeout(function () { a.attr('src', b) }, 10) }) }) })</script>
 
 
-
 <div class="col-md-4">
 <h4>What's new?</h4>
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-<!-- Indicators -->
 <div class="carousel-inner">
-::: {#carousel-item .carousel-item .active}
-::: {.card .border-0 .rounded}
-[![Launched: PRC Data Challenge](/images/landing/prc_dc24.jpeg){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://ansperformance.eu/study/data-challenge/){target="_blank"}
-
+<div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://ansperformance.eu/study/data-challenge/" target="_blank">
+<img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Launched: PRC Data Challenge">
+</a>
 <div style="padding: 1rem;">
-##### [Launched: PRC Data Challenge](https://ansperformance.eu/study/data-challenge/){target="_blank"}
-
-<small>Compete in the PRC Data Challenge by developing a machine learning algorithm to estimate the Actual Take-Off Weight and <b>win your share of the 5000 EUR prize pot!</b>
-
-This competition is organized by the independent [Performance Review Commission (PRC)](/about/prc) in collaboration with the [OpenSky Network](https://opensky-network.org/). 
-</small>
+<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Launched: PRC Data Challenge</a></h5>
+<small><b>Compete in the PRC Data Challenge</b> by developing a machine learning algorithm to estimate the Actual Take-Off Weight <b>and win your share of the 5000 EUR prize pot!</b> <br><br>This competition is organized by the independent <a href="/about/prc">Performance Review Commission (PRC)</a> in collaboration with the <a href="https://opensky-network.org/">OpenSky Network</a>.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://ansperformance.eu/study/data-challenge/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
 </div>
 
-::: {.card-footer .pt-0}
-[Read more](https://ansperformance.eu/study/data-challenge/){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0 .rounded}
-[![Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](/images/landing/2024-06-21_PI10_institutional_framework.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
-
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
+<img src="/images/landing/2024-07-31_app_v2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL DATA app - Version 2.0">
+</a>
 <div style="padding: 1rem;">
-##### [Published: PRC Performance Insight #10 - ATM Cost-Effectiveness](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){target="_blank"}
-
-<small>The 10th PRC Performance Insight provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.</small>
+<h5><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">Released: EUROCONTROL DATA app - Version 2.0</a></h5>
+<small>A <b>new version of the EUROCONTROL DATA app</b> has been released. This second version now provides <b>detailed data on individual state level</b> and <b>improved delay cause analyses</b>.<br><br><b>Download here</b></small>
+<div>
+<a class="btn btn-primary" href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a>
+<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play Store</a>
+</div>
+</div>
+<div class="card-footer pt-0">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
 </div>
 
-::: {.card-footer .pt-0}
-[Read more](https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0 .rounded}
-[![Published: PRC Observer #1 - Can we make aviation green?](/images/landing/PRC_Observer_1.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
-
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">
+<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Aviation Intelligence Portal Update">
+</a>
 <div style="padding: 1rem;">
-##### [Published: PRC Observer #1 - Can we make aviation green?](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){target="_blank"}
-
-<small>The PRC takes a brief look at the environmental performance of European aviation and the challenges ahead. How can we make aviation green?</small>
+<h5><a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Aviation Intelligence Portal Update</a></h5>
+<small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="/2024/08/16/2024-08-16-rn/#/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
 </div>
 
-::: {.card-footer .pt-0}
-[Read more](https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0 .rounded}
-[![Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](/images/landing/2024-7-15-standard_inputs.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
-
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">
+<img src="/images/landing/2024-07-09_DS45_long_term_performance.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #45 Long term-perspective on ANS performance">
+</a>
 <div style="padding: 1rem;">
-##### [Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){target="_blank"}
-
-<small>An update of Standard Inputs for Economic Analyses is now available.</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">Published: Data Snapshot #45</a></h5>
+<small><b>Our 45th EUROCONTROL Data Snapshot takes a long-term view on ANS performance.</b> <br><br>A long-term analysis of Air Navigation Services (ANS) provision costs, flight hours controlled and en-route air traffic flow management (ATFM) delays shows some interesting trends and different cycles – even before the COVID-19 pandemic hit in 2020.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
 </div>
 
-::: {.card-footer .pt-0}
-[Read more](https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0 .rounded}
-[![Published: Data Snapshot #44 - The causes of flight delays ](/images/landing/2024-05-28_DS44_all_causes_delay.png){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
-
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">
+<img src="/images/landing/2024-07-25_DS46_average_flight.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #46 Further, higher, bigger...">
+</a>
 <div style="padding: 1rem;">
-##### [Published: Data Snapshot #44 - The causes of flight delays ](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){target="_blank"}
-
-<small>Our 44th EUROCONTROL Data Snapshot delves into the causes of flight delays. In 2023, nearly 3 flights in 10 arrived more than 15 minutes late. What is causing this?</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">Published: Data Snapshot #46</a></h5>
+<small><b>Our 46th EUROCONTROL Data Snapshot on the average flight in the EUROCONTROL area.</b> <br><br>What does an ‘average flight’ look like in the EUROCONTROL area? And, more importantly, if we look at how it has changed over the last five years, what does it tell us about overall aviation trends?</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
 </div>
 
-::: {.card-footer .pt-0}
-[Read more](https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-::: {#carousel-item .carousel-item}
-::: {.card .border-0 .rounded}
-[![Performance Data Update](/images/landing/data_icon.jpg){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](/data/){target="_blank"}
-
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="/data/" target="_blank">
+<img src="/images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
+</a>
 <div style="padding: 1rem;">
-##### [Performance Data Update](/data/){target="_blank"}
-
-<small>June 2024 data available for download now!</small>
+<h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
+<small>July 2024 data available for download now!</small>
 </div>
-
-::: {.card-footer .pt-0}
-[Read more](/data/){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
-:::
-:::
-:::
-
-
-
-</div>
-<p>
-<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
-<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-</p>
-
+<div class="card-footer pt-0">
+<a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
 
 </div>
 

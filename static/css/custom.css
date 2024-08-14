@@ -138,3 +138,26 @@ body {
 .card {
   border-radius: 1rem;
 }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid #333;
+}
+
+.marquee p {
+  padding-left: 50%;
+  color: black;
+  animation: marquee 7s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+<div class
