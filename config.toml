@@ -69,16 +69,22 @@ ignoreFiles = [
     weight = 15
   #----------------------
   [[menu.main]]
+    pre = "<i class='fas fa-th'></i>"
+    name = "&nbsp;Balanced scorecard"
+    url = "https://www.eurocontrol.int/Economics/BalancedScorecard.html"
+    identifier = "key-balanced-scorecard"
+    parent = "dashboard"
+    weight = 15
+  [[menu.main]]
     pre = "<i class='fas fa-plane-departure'></i>"
     name = "&nbsp;Traffic"
     url = "/traffic/"
     identifier = "key-traffic"
     parent = "dashboard"
-    weight = 15
+    weight = 16
     [[menu.main]]
   #   pre = "&nbsp;&nbsp;&nbsp;<i class='far fa-star fa-spin fa-fw'></i>"
       name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Daily traffic dashboard</span></i>"
-      post = " <i class='fas fa-xs fa-external-link-alt'></i>"
       url = "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"
       identifier = "key-traffic-daily-traffic"
       parent = "dashboard"
@@ -86,7 +92,6 @@ ignoreFiles = [
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Service units</span>"
-      post = " <i class='fas fa-xs fa-external-link-alt'></i>"
       url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
       identifier = "key-service-units"
       parent = "dashboard"
@@ -210,7 +215,6 @@ ignoreFiles = [
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Unit rates and costs</span>"
-      post = " <i class='fas fa-xs fa-external-link-alt'></i>"
       url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
       identifier = "key-economics-unit-rates"
       parent = "dashboard"
@@ -218,7 +222,6 @@ ignoreFiles = [
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Service units</span>"
-      post = " <i class='fas fa-xs fa-external-link-alt'></i>"
       url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
       identifier = "key-economics-service-units"
       parent = "dashboard"
