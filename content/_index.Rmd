@@ -347,7 +347,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">Released: EUROCONTROL DATA app - Version 2.0</a></h5>
-<small>A <b>new version of the EUROCONTROL DATA app</b> has been released. This second version now provides <b>detailed data on individual state level</b> and <b>improved delay cause analyses</b>.<br><br><b>Download here</b></small>
+<small>A <b>new version of the EUROCONTROL DATA app</b> has been released. This second version now provides <b>detailed data on individual state level</b> and <b>improved delay cause analyses</b>.<br><br></small>
 <div>
 <a class="btn btn-primary" href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a>
 <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play Store</a>
@@ -362,11 +362,10 @@ fullpage: true
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">
-<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Aviation Intelligence Portal Update">
+<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Update: Aviation Intelligence Portal">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Aviation Intelligence Portal Update</a></h5>
-<small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small>
+<h5><a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Update: Aviation Intelligence Portal Anniversary</a></h5><small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/2024/08/16/2024-08-16-rn/#/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>

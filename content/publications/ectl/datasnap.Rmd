@@ -887,9 +887,6 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS42]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-42-growth-new-generation-narrow-bodies "Growth of new generation of narrow bodies"
 [DS43]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-43-centre-gravity-european-aviation "Centre of gravity of European aviation"
 [DS44]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays "Why is your flight delayed?"
-<<<<<<< HEAD
 [DS45]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance "Long term perspective of ANS performance"
 [DS46]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area "Further, higher, bigger…"
-=======
-[DS45]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance "Long term perspective of ANS performance"
->>>>>>> origin/master
+
