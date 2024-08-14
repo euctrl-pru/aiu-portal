@@ -10,6 +10,7 @@ It provides objective information and independent advice to EUROCONTROL’s gove
 
 The PRC reports to the EUROCONTROL Permanent Commission through the Provisional Council and is supported by the [Performance Review Unit (PRU)](/about/us/) operating under the EUROCONTROL Agency with the appropriate level of independence.
 
+
 ## Members
 The PRC consists of up to seven members, who are appointed on the basis of independence, ability, competence, experience and professional reputation in the fields of air traffic management, safety or economic regulation.
 
@@ -43,14 +44,14 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
   </div></div> 
 
 <div class="card">
-  <a href="/about/prc_IP"><img class="card-img-top" src="/images/prc/prc_IP.jpg" alt="Ismail Hakki POLAT ">
+  <a href="/about/prc_IP"><img class="card-img-top" src="/images/prc/Person_Image_Placeholder.jpg" alt="Ismail Hakki POLAT ">
   <div class="card-body"><h5 class="card-title">Ismail Hakki POLAT</h5></a><p class="card-text" style="color:grey">Focus: Airports</p><br>
 </div></div>
 
 </div>
 </div>
 </div> 
-
+<br>
 <div class="container">
 <div class="row">
 <div class="card-deck">
@@ -78,6 +79,8 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 </div>
 </div>
 </div>
+
+<br>
 
 #### Undertaking of independence / Declaration of potential interest
 All PRC members have declared on their honour that they will act independently in the performance of their duties, and that they will refrain from any action incompatible with the performance of those duties. 

@@ -337,16 +337,19 @@ fullpage: true
 <div class="carousel-inner">
 ::: {#carousel-item .carousel-item .active}
 ::: {.card .border-0 .rounded}
-[![Published: An intro video to the Performance Review Commission](/images/landing/EUROCONTROL_PRC_VIDEO.PNG){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
+[![Launched: PRC Data Challenge](/images/landing/prc_dc24.jpeg){style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"}](https://ansperformance.eu/study/data-challenge/){target="_blank"}
 
 <div style="padding: 1rem;">
-##### [Published: An intro video to the Performance Review Commission](https://www.youtube.com/watch?v=zLS7bPgazlU){target="_blank"}
+##### [Launched: PRC Data Challenge](https://ansperformance.eu/study/data-challenge/){target="_blank"}
 
-<small>Learn more about the Performance Review Commission in this new video!</small>
+<small>Compete in the PRC Data Challenge by developing a machine learning algorithm to estimate the Actual Take-Off Weight and <b>win your share of the 5000 EUR prize pot!</b>
+
+This competition is organized by the independent [Performance Review Commission (PRC)](/about/prc) in collaboration with the [OpenSky Network](https://opensky-network.org/). 
+</small>
 </div>
 
 ::: {.card-footer .pt-0}
-[Read more](https://www.youtube.com/watch?v=zLS7bPgazlU){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
+[Read more](https://ansperformance.eu/study/data-challenge/){.card-link target="_blank"} <i class="ml-2 fas fa-arrow-right"></i>
 :::
 :::
 :::
