@@ -1,6 +1,4 @@
 {{ define "main" }}
-
-<h1>{{ .Title }}</h1>
   {{ range (where .Data.Pages "Section" "!=" "").GroupByDate "2006" }}
   <h2 class="archive-title">{{ .Key }}</h2>
     {{ range .Pages }}

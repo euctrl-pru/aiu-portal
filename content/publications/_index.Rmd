@@ -1,9 +1,10 @@
 ---
 title: Publications
+description: "An overview of all publications related to the EUROCONTROL Aviation Intelligence Unit and the independent Performance Review Commission."
 layout: frontpage
 ---
 
-An overview of all publications related to the Aviation Intelligence Unit and Performance Review Commission.
+<br>
 
 <script>
   function resizeIframe(obj) {

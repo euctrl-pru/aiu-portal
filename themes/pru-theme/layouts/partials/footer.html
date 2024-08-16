@@ -1,22 +1,27 @@
 {{ if ne .Site.Params.hideFooter true }}
-<footer id="footer" class="text-center text-muted">
-    <ul class="footer-links">
-      <li>&copy; {{ now.Format "2006" }}&nbsp;{{ .Site.Params.owner.shortname }} &nbsp; &mdash; &nbsp;
-      <a href="/about/disclaimer/">Disclaimer</a>
-      </li>
-          <li>
-            <a href="{{ .Site.Params.PrivacyURL }}" target="_blank">Privacy statement</a>
-          </li>
-      <li> 
-        <!-- text encoded (in _subscriber-href-encoded.txt) to avoid spammer robots via http://clickable-email.ezkode.com/ -->
-        <span><a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe to our Newsletter <i class="fas fa-envelope"></i></a>
-        or
-        <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank">RSS <i class="fas fa-rss"></i></a></span>
-      </li>
-      <li><a href="/about/help/"><i class="fas fa-question-circle"></i></a></li>
-      <li><a href="/about/howbuilt/"><i class="fas fa-cogs"></i></a>
-      </li>
-    </ul>
-</footer>
+<footer>
+    <div class="container pb-1 pb-lg-5 pt-5">
+  
+      <div class="row mb-5">
+        <div class="col-sm mb-3 mb-sm-0">
+            <ul class="list-inline list-separator mb-0">
+                <li class="list-inline-item">
+                    <p class="text-muted small">&copy; 2024 EUROCONTROL</p>
+                </li>
+                <li class="list-inline-item"><a class="text-muted" href="/about/disclaimer">Disclaimer</a></li>
+                <li class="list-inline-item"><a class="text-muted" href="https://www.eurocontrol.int/info/privacy-and-website-terms-use" target="_blank">Privacy statement</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-auto">
+            <ul class="list-inline list-separator mb-0">
+                <li class="list-inline-item"><p class="text-muted"><a class="text-muted small" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe to our Newsletter<i class="fas fa-envelope ml-1"></i></a> or <a class="text-muted small" href=/index.xml type=application/rss+xml target=_blank>RSS<i class="fas fa-rss ml-1"></i></a></p></li>
+                <li class="list-inline-item"><a class="text-muted" href="/about/help"><i class="fas fa-question-circle"></i></a></li>
+                <li class="list-inline-item"><a class="text-muted" href="/about/howbuilt"><i class="fas fa-cogs"></i></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 {{ end }}

@@ -1,5 +1,6 @@
 ---
 title: Horizontal en-route flight efficiency
+description: "An overview of the horizontal en-route flight efficiency for the entire EUROCONTROL area and per individual state."
 ---
 
 <style type="text/css">

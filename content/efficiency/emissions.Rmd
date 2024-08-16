@@ -1,5 +1,6 @@
 ---
 title: "CO₂ emissions"
+description: "An overview of CO₂ emissions in the EUROCONTROL area as provided by the EUROCONTROL Aviation Sustainability Unit."
 output: blogdown::html_page
 ---
 

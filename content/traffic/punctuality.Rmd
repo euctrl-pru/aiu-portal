@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Traffic Overview"
+title: "Punctuality"
+description: 'An overview of the punctuality of flights in the EUROCONTROL area (network view).'
 ---
 
 ```{r, echo=FALSE, include=FALSE}

@@ -1,8 +1,9 @@
 ---
 title: Airport Performance Analysis Tools
+description: "A collection of tools and dashboards which are useful for airport performance monitoring."
 date: '2020-05-15'
 ---
-A collection of tools and dashboards which might be of use for Airport monitoring. 
+
 <br>
 
 ::: {class="container"}
@@ -15,7 +16,7 @@ blogdown::shortcode(
   img = "aiu_apt_db.jpg",
   link = "db/",
   title = "AIU Airport Performance Dashboard",
-  text = "Consolidated monthly overview of operational performance at European airports across a wide spectrum of indicators. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
+  text = "Consolidated monthly overview of operational performance at European airports across a wide spectrum of indicators. <br><br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
   alt = "AIU airport performance dashboard",
   command = "Resize",
   options = "300x",
@@ -86,7 +87,7 @@ blogdown::shortcode(
   img="apt_asma.jpg",
   link="/efficiency/asma/",
   title="Additional ASMA time",
-  text="Find out more about the efficiency in the Arrival Sequencing and Metering Area (ASMA) around airports. <br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
+  text="Find out more about the efficiency in the Arrival Sequencing and Metering Area (ASMA) around airports. <br><br> <div class='badge-container'><span class='badge badge-info'>Efficiency</span></div>", 
   alt="ASMA additional time @ airports", 
   command="Resize", 
   options="300x", 
@@ -115,7 +116,7 @@ blogdown::shortcode(
   img="ectl_3.jpg",
   link="/capacity/atfm_apt/",
   title="ATFM Delays at Airports",
-  text="Analyse the airport ATFM arrival delays at airports. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  text="Analyse the airport ATFM arrival delays at airports. <br> <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
   alt="ATFM delays @ airports", 
   command="Resize", 
   options="300x", 
@@ -129,7 +130,7 @@ blogdown::shortcode(
   img="ectl_mirror.jpg",
   link="https://www.eurocontrol.int/tool/mirror",
   title="MIRROR - Operational Decision Support Tool <i class='fas fa-xs fa-external-link-alt'></i>",
-  text="Check out the innovative tool that helps stakeholders predict and mitigate delays. <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
+  text="Check out the innovative tool that helps stakeholders predict and mitigate delays. <br> <br> <div class='badge-container'><span class='badge badge-warning'>Capacity & Delays</span></div>", 
   alt="MIRROR - Operational Decision Support Tool", 
   command="Resize", 
   options="300x", 
@@ -153,7 +154,7 @@ blogdown::shortcode(
   img="ectl_aircraft1.jpg",
   link="acft_ground/",
   title="Active and Inactive Aircraft at Airports",
-  text="See how many aircraft are parked across European airports. <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  text="See how many aircraft are parked across European airports. <br> <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
   alt="Parked aircraft at European airports", 
   command="Resize", 
   options="300x", 
@@ -168,7 +169,7 @@ blogdown::shortcode(
   img="ectl_apt_corner1.jpg",
   link="https://ext.eurocontrol.int/airport_corner_public/",
   title="EUROCONTROL airport corner <i class='fas fa-xs fa-external-link-alt'></i>",
-  text="Get information on airport infrastructure and ongoing and planned activities. <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
+  text="Get information on airport infrastructure and ongoing and planned activities. <br> <br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>", 
   alt="EUROCONTROL airport corner", 
   command="Resize", 
   options="300x", 
