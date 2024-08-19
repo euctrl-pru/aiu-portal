@@ -71,7 +71,17 @@ body {
         box-shadow: none;
         background-color: transparent !important;
     }
+    .navbar {
+    /* Styles for hamburger menu activation */
+    display: none; /* Example style */
+    }
 }
+
+/* Existing media query for 1200px breakpoint */
+@media (max-width: 1200px) {
+  
+}
+
 .card-body p {
     margin-bottom: 0;
 }
