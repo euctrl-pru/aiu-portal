@@ -111,7 +111,6 @@ body {
     padding-bottom: .125rem;
 }
 
-/* Default style for large screens */
 .custom-hero {
     height: 35vh; /* Default height for large screens */
     background-size: cover;
@@ -129,7 +128,7 @@ body {
 /* Medium screens (1000px to 1440px) */
 @media (max-width: 1200px) {
     .custom-hero {
-        height: 55vh; /* Taller for medium screens */
+        height: 50vh; /* Taller for medium screens */
     }
 }
 
@@ -143,7 +142,7 @@ body {
 /* Extra small screens (480px to 768px) */
 @media (max-width: 768px) {
     .custom-hero {
-        height: 55vh; /* Taller for extra small screens */
+        height: 60vh; /* Taller for extra small screens */
     }
 }
 
@@ -154,6 +153,7 @@ body {
         background-position: center top; /* Adjust background position for better visibility */
     }
 }
+
 .card {
   border-radius: 1rem;
 }
