@@ -129,7 +129,7 @@ body {
 /* Medium screens (1000px to 1440px) */
 @media (max-width: 1200px) {
     .custom-hero {
-        height: 50vh; /* Taller for medium screens */
+        height: 55vh; /* Taller for medium screens */
     }
 }
 
@@ -143,7 +143,7 @@ body {
 /* Extra small screens (480px to 768px) */
 @media (max-width: 768px) {
     .custom-hero {
-        height: 60vh; /* Taller for extra small screens */
+        height: 55vh; /* Taller for extra small screens */
     }
 }
 
