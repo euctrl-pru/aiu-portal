@@ -110,31 +110,50 @@ body {
 .nav-tabs {
     padding-bottom: .125rem;
 }
+
 /* Default style for large screens */
 .custom-hero {
-    height: 35vh; /* Adjust this value to control the height */
+    height: 35vh; /* Default height for large screens */
     background-size: cover;
-    background-position: 30%;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
 }
 
-/* Style for small screens */
+/* Large screens (1440px and above) */
 @media (max-width: 1540px) {
     .custom-hero {
-        height: 45vh; /* Adjust this value to control the height */
-        background-size: cover;
-        background-position: 30%;
+        height: 45vh; /* Slightly taller for medium-large screens */
     }
 }
 
-/* Style for small screens */
+/* Medium screens (1000px to 1440px) */
+@media (max-width: 1200px) {
+    .custom-hero {
+        height: 50vh; /* Taller for medium screens */
+    }
+}
+
+/* Small screens (768px to 1000px) */
 @media (max-width: 1000px) {
     .custom-hero {
-        height: 55vh; /* Adjust this value to control the height */
-        background-size: cover;
-        background-position: 30%;
+        height: 55vh; /* Taller for small-medium screens */
     }
 }
 
+/* Extra small screens (480px to 768px) */
+@media (max-width: 768px) {
+    .custom-hero {
+        height: 60vh; /* Taller for extra small screens */
+    }
+}
+
+/* Very small screens (below 480px) */
+@media (max-width: 480px) {
+    .custom-hero {
+        height: 70vh; /* Tallest for very small screens */
+        background-position: center top; /* Adjust background position for better visibility */
+    }
+}
 .card {
   border-radius: 1rem;
 }
