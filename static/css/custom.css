@@ -66,7 +66,7 @@ body {
     padding-top: 7rem !important;
     padding-bottom: 5rem !important;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1335px) {
     .bg-dark{
         box-shadow: none;
         background-color: transparent !important;
