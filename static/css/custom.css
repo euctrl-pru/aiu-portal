@@ -112,7 +112,7 @@ body {
 }
 
 .custom-hero {
-    height: 35vh; /* Default height for large screens */
+    height: 38vh; /* Default height for large screens */
     background-size: cover;
     background-position: center; /* Center the background image */
     background-repeat: no-repeat;
@@ -121,14 +121,14 @@ body {
 /* Large screens (1440px and above) */
 @media (max-width: 1540px) {
     .custom-hero {
-        height: 45vh; /* Slightly taller for medium-large screens */
+        height: 48vh; /* Slightly taller for medium-large screens */
     }
 }
 
 /* Medium screens (1000px to 1440px) */
 @media (max-width: 1200px) {
     .custom-hero {
-        height: 50vh; /* Taller for medium screens */
+        height: 53vh; /* Taller for medium screens */
     }
 }
 
@@ -149,7 +149,7 @@ body {
 /* Very small screens (below 480px) */
 @media (max-width: 480px) {
     .custom-hero {
-        height: 70vh; /* Tallest for very small screens */
+        height: 60vh; /* Tallest for very small screens */
         background-position: center top; /* Adjust background position for better visibility */
     }
 }
