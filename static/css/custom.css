@@ -73,7 +73,7 @@ body {
     }
     .navbar {
     /* Styles for hamburger menu activation */
-    display: none; /* Example style */
+        display: none; /* Example style */
     }
 }
 
