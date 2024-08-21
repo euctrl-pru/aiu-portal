@@ -4,11 +4,19 @@
   {{ partial "head.html" . }}
   <body class="d-flex flex-column h-100">
     {{ partial "nav.html" . }}
-    <div class="container">
-      <main id="main">
+    {{ if .Params.fullpage }}
+      <div class="container" style="max-width: 100%; padding-left: 0; padding-right: 0;">
+        <main id="main" style="margin-top: 0;">
+          {{ block "main" . }}{{ end }}
+        </main>
+    {{ else }}
+      <div class="container">
+        <main id="main">
         {{ block "main" . }}{{ end }}
-      </main>
+        </main>
+    {{ end }}
     </div>
+
     {{ partial "footer.html" . }}
     {{ partial "script.html" . }}
     {{ partial "google-analytics-async.html" . }}

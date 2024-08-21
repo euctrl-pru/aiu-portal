@@ -2,87 +2,30 @@
 title: "EUROCONTROL Daily Traffic Dashboard"
 date: '2020-05-15'
 output: html_document
+fullpage: true
 ---
+<div class="iframe-container">
+<iframe src="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html" width="100%" height="1600px" style="border:none; overflow:hidden;" scrolling="auto"></iframe>
+</div>
 
-<ul class="nav nav-tabs mb-1">
-  <li class="nav-item dropdown">
-    <a class="nav-link active dropdown-toggle" aria-current="page" href="#" id="dailyTrafficDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Daily Traffic Variation
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="dailyTrafficDropdown">
-      <li><a class="dropdown-item" href="#">Option 1</a></li>
-      <li><a class="dropdown-item" href="#">Option 2</a></li>
-      <li><a class="dropdown-item" href="#">Option 3</a></li>
-    </ul>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="/traffic/delay/" id="dailyPunctualityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Daily Punctuality Variation
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="dailyPunctualityDropdown">
-      <li><a class="dropdown-item" href="#">Option 1</a></li>
-      <li><a class="dropdown-item" href="#">Option 2</a></li>
-      <li><a class="dropdown-item" href="#">Option 3</a></li>
-    </ul>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="/traffic/punctuality" id="dailyOperatedSchedulesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Daily Operated Schedules %
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="dailyOperatedSchedulesDropdown">
-      <li><a class="dropdown-item" href="#">Option 1</a></li>
-      <li><a class="dropdown-item" href="#">Option 2</a></li>
-      <li><a class="dropdown-item" href="#">Option 3</a></li>
-    </ul>
-  </li>
-</ul>
+<style>
+/* Ensure the iframe takes up the full height of the viewport */
+html, body {
+height: 100%;
+margin: 0;
+}
 
+.iframe-container {
+height: 100vh; /* 100% of the viewport height */
+width: 100%;
+position: relative;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EUROCONTROL Daily Traffic Variation</title>
-  <style>
-    html, body {
-        height: 100%; /* Full height of the viewport */
-        margin: 0;
-        padding: 0;
-        overflow: hidden; /* Remove scrollbars to handle overflow within the page elements */
-    }
-
-
-    iframe {
-        position: absolute;
-        top: 260px; /* Keep the original top position */
-        left: 0;
-        right: 0;
-        bottom: 20px;
-        width: 100%;
-        height: calc(100% - 135px); /* Adjust if necessary to fit your footer */
-        border: none;
-        overflow: hidden; /* Ensures no scroll bars appear */
-        clip-path: inset(95px 0 0 0); /* Hide the top 100px */
-        transform: translateY(-95px);
-    }
-
-  </style>
-</head>
-
-
-
-<body>
-
-  <iframe id="dashboard-iframe" src="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"      frameborder="0"></iframe>
-
-<script>
-  function updateIframe() {
-    var trafficVariation = document.getElementById('traffic-variation').value;
-    var punctualityVariation = document.getElementById('punctuality-variation').value;
-    var operatedSchedules = document.getElementById('operated-schedules').value;
-
-    // You can modify the logic here to update the iframe src based on your specific requirements
-    // For now, it updates with the selected option of the last dropdown (you can customize this)
-    document.getElementById('dashboard-iframe').src = trafficVariation;
-  }
-</script>
-</body>
+.iframe-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+</style>

@@ -1,70 +1,102 @@
-<div id="nav-border" class="container">
-  <nav id="nav" class="navbar justify-content-center navbar-expand-lg navbar-light bg-light">
-    {{ if .Site.Params.logo }}
-    <a class="navbar-brand" href="{{ .Site.Params.logo.target }}">
-      <img src="{{ .Site.Params.logo.url | relURL }}"
-           width="{{ .Site.Params.logo.width }}"
-           height="{{ .Site.Params.logo.height }}"
-           alt="{{ .Site.Params.logo.alt }}">
-    </a>
-    {{ end }}
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-
-      {{ $showActiveNav := .Site.Params.showActiveNav }}
-      {{ $currentPage := . }}
-
-      {{ range .Site.Menus.main }}
-      
-        {{ $active := "" }}
-        {{ if eq $showActiveNav true }}
-          {{ $isMenu := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-          {{ $isMenu = or $isMenu (eq $currentPage.Title .Name) }}
-          {{ $isMenu = or $isMenu (and (eq .Name "Blog") (eq $currentPage.Section "post")) }}
-          {{ $isMenu = or $isMenu (and (eq .Name "Tags") (eq $currentPage.Section "tags")) }}
-          {{ if $isMenu }} 
-            {{ $active = "active" }}
-          {{ end }}  
-        {{ end }}  
-
-        {{ if .HasChildren }}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ $active }}" href="{{ .URL }}" id="{{ .Identifier }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ .Pre }}<span>{{ .Name }}</span>
-            </a>{{.Post}}
-            <div class="dropdown-menu" aria-labelledby="{{ .Identifier }}">
-            {{ range .Children }}
-              {{ if ( hasPrefix .Name "divider" ) }}
-              <div class='dropdown-divider'></div>
-              {{ else }}
-              <a class="dropdown-item" href="{{ .URL }}">{{ .Pre }}<span>{{safeHTML .Name}}</span>{{.Post}}</a>
-              {{ end }}
-            {{ end }}
-            </div>
-          </li>
-        {{ else }}
-          <li class="nav-item">
-            <a class="nav-link {{ $active }}" href="{{ .URL }}">{{ .Pre }}<span>{{safeHTML .Name}}</span>{{.Post}}</a>
-          </li>
-        {{ end }}
+<!-- Header START -->
+<header id="header" class="navbar navbar-expand-xl navbar-end navbar-absolute-top navbar-dark bg-dark">
+  <div class="container-fluid">
+    <nav id="nav" class="navbar-nav-wrap">
+      {{ if .Site.Params.logo }}
+      <a class="navbar-brand" href="{{ .Site.Params.logo.target }}">
+        <img class="navbar-brand-logo" src="{{ .Site.Params.logo.url | relURL }}"
+             width="{{ .Site.Params.logo.width }}"
+             height="{{ .Site.Params.logo.height }}"
+             alt="{{ .Site.Params.logo.alt }}">
+      </a>
       {{ end }}
-    </ul>
-    <form class="form-inline my-2 my-lg-0"  method="get" action="https://duckduckgo.com/">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" id="srch-term">
-      <input type="hidden" name="sites" value="{{ .Site.Params.sitetosearch }}"/>
-      <input type="hidden" name="ka" value="h"/>
-      <input type="hidden" name="k7" value="#fafafa"/>
-      <input type="hidden" name="kj" value="#2e86c6"/>
-      <input type="hidden" name="ky" value="#fafafa"/>
-      <input type="hidden" name="kx" value="b"/>
-      <input type="hidden" name="kt" value="Helvetica"/>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          {{ $showActiveNav := .Site.Params.showActiveNav }}
+          {{ $currentPage := . }}
 
+          {{ range .Site.Menus.main }}
+            {{ $active := "" }}
+            {{ if eq $showActiveNav true }}
+              {{ $isMenu := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+              {{ $isMenu = or $isMenu (eq $currentPage.Title .Name) }}
+              {{ $isMenu = or $isMenu (and (eq .Name "Blog") (eq $currentPage.Section "post")) }}
+              {{ $isMenu = or $isMenu (and (eq .Name "Tags") (eq $currentPage.Section "tags")) }}
+              {{ if $isMenu }} 
+                {{ $active = "active" }}
+              {{ end }}  
+            {{ end }}  
+
+            {{ if .HasChildren }}
+              <li class="nav-item dropdown {{ $active }}">
+                <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="{{ .Identifier }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="{{ .Identifier }}">
+                  {{ range .Children }}
+                    {{ if ( hasPrefix .Name "divider" ) }}
+                      <div class='dropdown-divider'></div>
+                    {{ else }}
+                      <a class="dropdown-item {{ if .Weight }}font-weight-bold{{ end }}" href="{{ .URL }}">
+                        {{ .Pre }}<span>{{ safeHTML .Name }}</span>{{ .Post }}
+                      </a>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </li>
+            {{ else }}
+              <li class="nav-item {{ $active }}">
+                <a class="nav-link" href="{{ .URL }}">{{ .Pre }}<span>{{ safeHTML .Name }}</span>{{ .Post }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+
+        <form class="form-inline ml-xl-5" method="get" action="https://duckduckgo.com">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" id="srch-term">
+          <input type="hidden" name="sites" value="{{ .Site.Params.sitetosearch }}"/>
+          <input type="hidden" name="ka" value="h"/>
+          <input type="hidden" name="k7" value="#fafafa"/>
+          <input type="hidden" name="kj" value="#2e86c6"/>
+          <input type="hidden" name="ky" value="#fafafa"/>
+          <input type="hidden" name="kx" value="b"/>
+          <input type="hidden" name="kt" value="Helvetica"/>
+          <button class="btn btn-outline border-white my-2 my-sm-0" type="submit"><i class="fas fa-search text-white"></i></button>
+        </form>
+      </div>
+    </nav>
   </div>
-  </nav>
-</div>
+</header>
+<!-- Header END -->
+
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+    <!-- Hero -->
+    <div class="position-relative bg-dark overflow-hidden hero custom-hero" style="background-image: url(/images/header/background.jpg);">
+        
+        <!-- overlay -->
+        <div class="bg-overlay"></div>
+        <div class="container position-relative zi-2">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-7 mb-7 mb-lg-0">
+                    <!-- Heading -->
+                    <div class="mb-6">
+                        <h1 class="display-5 text-white">{{.Title}}</h1>
+                        <p class="lead text-white">{{.Description}}</p>
+                        <a class="btn btn-primary" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe</a>
+                        <a class="btn btn-secondary" href="/about/us/">About us</a>
+                    </div>
+                    <!-- End Title & Description -->
+                </div>
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End Hero -->
+</main>
+

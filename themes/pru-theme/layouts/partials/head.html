@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {{ hugo.Generator }}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   {{ $title := print .Title " | " .Site.Title }}
   {{ if .IsHome }}
@@ -12,6 +12,5 @@
   <title>{{ $title }}</title>
   {{ $summary := trim (.Summary | plainify | htmlUnescape) "\n\r" | default $title }}
   <meta name="description" content="{{ $summary }}">
-
   {{ partial "style.html" . }}
 </head>

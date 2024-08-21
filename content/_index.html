@@ -1,664 +1,792 @@
 ---
-title: "Aviation Intelligence Unit Portal"
+title: "Aviation Intelligence Portal"
+description: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
 date: "2018-02-07T11:26:51+01:00"
+fullpage: true
 ---
 
 
 
-<style type="text/css">
-  .img-responsive {
-      margin: 0 auto;
-      max-width: 75%
-  }
-  
-  .resp-container {
-      position: relative;
-      overflow: hidden;
-      padding-top: 50.0%;
-  }
-  
-  .resp-iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 110%;
-      border: 0;
-  }
-      
-  .Scorecard_subt {
-    margin: 0px; 
-    padding-bottom: 0px;  
-    text-align: left; 
-    color:#7f7f7f
-  }
-
-  .Scorecard_net {
-    margin: 0px; 
-    padding-bottom: 0px;
-    font-weight: bold;  
-    text-align: left;
-    color: #0070c0; 
-    
-  }
-
-
-.col-4 {
-  margin: 0px;
-  padding: 0px;
-  text-align: right;
-}
-
-.w3-container {
-  border-radius: 5px; 
-  background-color: #d9e1f2;
-  padding: 0.5em;
-
-</style>
-<!-- script for traffic figures -->
-<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-<script type="text/javascript">
-async function fetchLatestNetworkSituation() {
-    const apiUrl = 'https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`API call failed: ${response.status}`);
-        }
-        const data = await response.json();
-        return data.items[0]; // Assuming the latest entry is what we need
-    } catch (error) {
-        console.error("Failed to fetch latest network situation:", error);
-        // Implement any fallback logic or error handling here
-        return null;
-    }
-}
-
-async function updateNetworkSituationOnPage() {
-    const latestData = await fetchLatestNetworkSituation();
-    if (latestData) {
-        <!-- // Extract the year and month from the latest data's date -->
-        const latestDate = new Date(latestData.date);
-        const year = latestDate.getFullYear();
-        const month = latestDate.getMonth();
-        <!-- // Calculate month of the first day of the week -->
-        const firstDateWeek = new Date();
-        firstDateWeek.setDate(latestDate.getDate() - 6);
-        const monthFirstdateWeek = firstDateWeek.getMonth();
-        <!-- // Correctly construct the date range string -->
-        const starty2dDateString = (month == 0 ? `1` :  `1 Jan`); // Fixed start of the year
-        const endDateString = `${('' + latestDate.getDate()).slice(-2)} ${latestDate.toLocaleString('default', { month: 'short' })} ${year}`;
-        const dateString = `${endDateString}`;
-        const datey2dRangeString = `${starty2dDateString} - ${endDateString}`;
-        <!-- //calculate 1st day of rolling week and string -->
-        const startweekDateString = (month == monthFirstdateWeek ? `${('' + latestDate.getDate()).slice(-2) - 6}` :  `${('' + latestDate.getDate()).slice(-2) - 6} ${latestDate.toLocaleString('default', { month: 'short' })}`);
-        const dateweekRangeString = `${startweekDateString} - ${endDateString}`;
-        <!-- // Update webpage elements with the latest data, rounding numbers to integers -->
-        document.getElementById("day_text_title").innerHTML = dateString;
-        document.getElementById("day_text").innerHTML = dateString;
-        document.getElementById("week_text").innerHTML = dateweekRangeString;
-        document.getElementById("y2d_text").innerHTML = datey2dRangeString;
-        document.getElementById("day_traffic").innerHTML = Math.round(latestData.day_traffic).toLocaleString();
-        document.getElementById("week_traffic").innerHTML = Math.round(latestData.avg_week_traffic).toLocaleString();
-        document.getElementById("y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_total).toLocaleString();
-        document.getElementById("avg_y2d_traffic").innerHTML = Math.round(latestData.y2d_flights_daily_average).toLocaleString();
-        document.getElementById("dif_y2d_2019").innerHTML =
-    (latestData.y2d_diff_2019_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_2019_year_percentage * 100) + '%';
-        document.getElementById("dif_y2d_prev_year").innerHTML =
-    (latestData.y2d_diff_previous_year_percentage > 0 ? '+' : '') +
-    Math.round(latestData.y2d_diff_previous_year_percentage * 100) + '%';
-        document.getElementById("dif_day_prev_week").innerHTML =
-    (latestData.dif_day_prev_week > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_prev_week * 100) + '%';
-        document.getElementById("dif_day_prev_year").innerHTML =
-    (latestData.dif_day_prev_year > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_prev_year * 100) + '%'; 
-        document.getElementById("dif_day_2019").innerHTML =
-    (latestData.dif_day_2019 > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_2019 * 100) + '%';
-            document.getElementById("dif_week_prev_week").innerHTML =
-    (latestData.dif_week_prev_week > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_prev_week * 100) + '%';
-        document.getElementById("dif_week_prev_year").innerHTML =
-    (latestData.dif_week_prev_year > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_prev_year * 100) + '%'; 
-        document.getElementById("dif_week_2019").innerHTML =
-    (latestData.dif_week_2019 > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_2019 * 100) + '%';
-// Delay data
-        // 
-    <!--     delay dates -->
-        const day_delay_text = dateString;
-        document.getElementById("day_delay_text").innerHTML = day_delay_text;
-        document.getElementById("week_delay_text").innerHTML = dateweekRangeString;
-        document.getElementById("y2d_delay_text").innerHTML = datey2dRangeString;
-    <!--     delay values -->
-        document.getElementById("day_delay").innerHTML = Math.round(latestData.day_delay).toLocaleString();
-        document.getElementById("avg_week_delay").innerHTML = Math.round(latestData.avg_week_delay).toLocaleString();
-        <!-- document.getElementById("y2d_delay_total").innerHTML = Math.round(latestData.y2d_delay_total).toLocaleString(); -->
-        document.getElementById("y2d_delay_daily_average").innerHTML = Math.round(latestData.y2d_delay_daily_average).toLocaleString();
-    <!--     delay per flight values -->
-        document.getElementById("day_delay_flight").innerHTML = (latestData.day_traffic == 0 ? 0 : Math.round(latestData.day_delay/latestData.day_traffic*100)/100);
-        document.getElementById("week_delay_flight").innerHTML = (latestData.avg_week_traffic == 0 ? 0 : Math.round(latestData.avg_week_delay/latestData.avg_week_traffic*100)/100);
-        document.getElementById("y2d_delay_flight").innerHTML = (latestData.y2d_flights_total == 0 ? 0 : Math.round(latestData.y2d_delay_total/latestData.y2d_flights_total*100)/100);
-    <!--     day delay dif -->
-    <!--     document.getElementById("dif_day_delay_prev_week_perc").innerHTML = -->
-    <!-- (latestData.dif_day_delay_prev_week_perc > 0 ? '+' : '') + -->
-    <!-- Math.round(latestData.dif_day_delay_prev_week_perc * 100) + '%'; -->
-        document.getElementById("dif_day_delay_prev_year_perc").innerHTML =
-    (latestData.dif_day_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_day_delay_2019_perc").innerHTML =
-    (latestData.dif_day_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_day_delay_2019_perc * 100) + '%';
-    <!--     week delay dif -->
-    <!--     document.getElementById("dif_week_delay_prev_week_perc").innerHTML = -->
-    <!-- (latestData.dif_week_delay_prev_week_perc > 0 ? '+' : '') + -->
-    <!-- Math.round(latestData.dif_week_delay_prev_week_perc * 100) + '%'; -->
-        document.getElementById("dif_week_delay_prev_year_perc").innerHTML =
-    (latestData.dif_week_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_week_delay_2019_perc").innerHTML =
-    (latestData.dif_week_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_week_delay_2019_perc * 100) + '%';
-    <!--     y2d delay dif -->
-    document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML =
-    (latestData.dif_y2d_delay_prev_year_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_y2d_delay_prev_year_perc * 100) + '%';
-        document.getElementById("dif_y2d_delay_2019_perc").innerHTML =
-    (latestData.dif_y2d_delay_2019_perc > 0 ? '+' : '') +
-    Math.round(latestData.dif_y2d_delay_2019_perc * 100) + '%';
-    } else {
-        // Handle case when no data could be fetched
-        console.log("No data available to update the network situation.");
-    }
-}
-</script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        updateNetworkSituationOnPage();
-    });
-</script>
-<div class="container">
-<h3>
-Aviation Intelligence Portal
-</h3>
-<p>This portal is provided by the <a href="/about/us/">Performance Review Unit (PRU)</a> which is part of EUROCONTROL’s Aviation Intelligence Unit (AIU).</p>
-</div>
-<br>
+<marquee width="100%" direction="left" loop="3" bgcolor="LightGrey"><strong>July 2024: New!!!</strong> Download version 2 of our EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day.</marquee>
+<section class="content-space bg-light">
+<script type="text/javascript">async function fetchLatestNetworkSituation(){const a='https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';try{const b=await fetch(a);if(!b.ok)throw new Error(`API call failed: ${b.status}`);const c=await b.json();return c.items[0]}catch(a){return console.error("Failed to fetch latest network situation:",a),null}}async function updateNetworkSituationOnPage(){const a=await fetchLatestNetworkSituation();if(a){const b=new Date(a.date),j=b.getFullYear(),e=b.getMonth(),f=new Date;f.setDate(b.getDate()-6);const l=f.getMonth(),i=e==0?`1`:`1 Jan`,d=`${(''+b.getDate()).slice(-2)} ${b.toLocaleString('default',{month:'long'})} ${j}`,c=`${d}`,h=`${i} - ${d}`,k=e==l?`${(''+b.getDate()).slice(-2)-6}`:`${(''+b.getDate()).slice(-2)-6} ${b.toLocaleString('default',{month:'long'})}`,g=`${k} - ${d}`;document.getElementById("day_text_title").innerHTML=c,document.getElementById("day_text").innerHTML=c,document.getElementById("week_text").innerHTML=g,document.getElementById("y2d_text").innerHTML=h,document.getElementById("day_traffic").innerHTML=Math.round(a.day_traffic).toLocaleString(),document.getElementById("week_traffic").innerHTML=Math.round(a.avg_week_traffic).toLocaleString(),document.getElementById("y2d_traffic").innerHTML=Math.round(a.y2d_flights_total).toLocaleString(),document.getElementById("avg_y2d_traffic").innerHTML=Math.round(a.y2d_flights_daily_average).toLocaleString(),document.getElementById("dif_y2d_2019").innerHTML=(a.y2d_diff_2019_year_percentage>0?'+':'')+Math.round(a.y2d_diff_2019_year_percentage*100)+'%',document.getElementById("dif_y2d_prev_year").innerHTML=(a.y2d_diff_previous_year_percentage>0?'+':'')+Math.round(a.y2d_diff_previous_year_percentage*100)+'%',document.getElementById("dif_day_prev_week").innerHTML=(a.dif_day_prev_week>0?'+':'')+Math.round(a.dif_day_prev_week*100)+'%',document.getElementById("dif_day_prev_year").innerHTML=(a.dif_day_prev_year>0?'+':'')+Math.round(a.dif_day_prev_year*100)+'%',document.getElementById("dif_day_2019").innerHTML=(a.dif_day_2019>0?'+':'')+Math.round(a.dif_day_2019*100)+'%',document.getElementById("dif_week_prev_week").innerHTML=(a.dif_week_prev_week>0?'+':'')+Math.round(a.dif_week_prev_week*100)+'%',document.getElementById("dif_week_prev_year").innerHTML=(a.dif_week_prev_year>0?'+':'')+Math.round(a.dif_week_prev_year*100)+'%',document.getElementById("dif_week_2019").innerHTML=(a.dif_week_2019>0?'+':'')+Math.round(a.dif_week_2019*100)+'%';const m=c;document.getElementById("day_delay_text").innerHTML=m,document.getElementById("week_delay_text").innerHTML=g,document.getElementById("y2d_delay_text").innerHTML=h,document.getElementById("day_delay").innerHTML=Math.round(a.day_delay).toLocaleString(),document.getElementById("avg_week_delay").innerHTML=Math.round(a.avg_week_delay).toLocaleString(),document.getElementById("y2d_delay_daily_average").innerHTML=Math.round(a.y2d_delay_daily_average).toLocaleString(),document.getElementById("day_delay_flight").innerHTML=a.day_traffic==0?0:Math.round(a.day_delay/a.day_traffic*100)/100,document.getElementById("week_delay_flight").innerHTML=a.avg_week_traffic==0?0:Math.round(a.avg_week_delay/a.avg_week_traffic*100)/100,document.getElementById("y2d_delay_flight").innerHTML=a.y2d_flights_total==0?0:Math.round(a.y2d_delay_total/a.y2d_flights_total*100)/100,document.getElementById("dif_day_delay_prev_year_perc").innerHTML=(a.dif_day_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_day_delay_prev_year_perc*100)+'%',document.getElementById("dif_day_delay_2019_perc").innerHTML=(a.dif_day_delay_2019_perc>0?'+':'')+Math.round(a.dif_day_delay_2019_perc*100)+'%',document.getElementById("dif_week_delay_prev_year_perc").innerHTML=(a.dif_week_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_week_delay_prev_year_perc*100)+'%',document.getElementById("dif_week_delay_2019_perc").innerHTML=(a.dif_week_delay_2019_perc>0?'+':'')+Math.round(a.dif_week_delay_2019_perc*100)+'%',document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML=(a.dif_y2d_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_y2d_delay_prev_year_perc*100)+'%',document.getElementById("dif_y2d_delay_2019_perc").innerHTML=(a.dif_y2d_delay_2019_perc>0?'+':'')+Math.round(a.dif_y2d_delay_2019_perc*100)+'%'}else console.log("No data available to update the network situation.")}</script>
+<script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
 <div class="container">
 <div class="row">
-<div class="col-sm-8">
+<div class="col-md-8">
 <h4>
-<span>Network Status - </span> <span id="day_text_title"></span>
+<span>Network status on </span> <span id="day_text_title"></span>
 </h4>
-<div>
-<ul class="nav nav-tabs">
-<li class="active pr-3">
-<a data-toggle="tab" href="#flights">Flights</a>
+<div class="card border-0 rounded p-3 mb-4">
+<ul class="nav nav-segment nav-fill align-items-centers mb-4">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#flights">Flights</a>
 </li>
-<li class="pr-3">
-<a data-toggle="tab" href="#delay" onclick="reloadIframeDelay()">ATFM Delay</a>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#delay" onclick=reloadIframeDelay()>ATFM Delay</a>
 </li>
-<li class="pr-3">
-<a data-toggle="tab" href="#punctuality">Punctuality</a>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#punctuality">Punctuality</a>
 </li>
 </ul>
 <div class="tab-content">
-<!-- flights tab content------------------------------------ -->
 <div id="flights" class="tab-pane fade in active show">
-<div class="row mt-3">
-<div class="col-sm-3">
-<ul class="nav mb-2">
-<li class="active pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#flights-day">Day</a>
-</li>
-<li class="pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#flights-week">Week</a>
-</li>
-<li class="pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#flights-y2d">Y2D</a>
-</li>
-</ul>
-<div class="w3-container tab-content">
-<div id="flights-day" class="tab-pane fade in active show">
-<p id="day_text" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Total flights
-</p>
-<p id="day_traffic" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs prev. week
-</p>
-<p id="dif_day_prev_week" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs prev. year
-</p>
-<p id="dif_day_prev_year" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs 2019
-</p>
-<p id="dif_day_2019" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-</div>
-<!-- closes tab pane -->
-<div id="flights-week" class="tab-pane fade in">
-<p id="week_text" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Avg. daily flights
-</p>
-<p id="week_traffic" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs prev. week
-</p>
-<p id="dif_week_prev_week" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs prev. year
-</p>
-<p id="dif_week_prev_year" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs 2019
-</p>
-<p id="dif_week_2019" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-</div>
-<!-- closes tab pane -->
-<div id="flights-y2d" class="tab-pane fade in">
-<p id="y2d_text" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Total flights
-</p>
-<p id="y2d_traffic" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Avg. daily flights
-</p>
-<p id="avg_y2d_traffic" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs prev. year
-</p>
-<p id="dif_y2d_prev_year" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-<p class="Scorecard_subt">
-Vs 2019
-</p>
-<p id="dif_y2d_2019" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
-</div>
-<!-- closes tab pane -->
-</div>
-<!-- closes tab content -->
-</div>
-<div class="col-sm-9">
-<p id="graphtitle" class="h6 mb-0">
+<div class="row">
+<div class="col-12">
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+<p class="h6 mb-0">
 Evolution of daily flights in the EUROCONTROL area
 </p>
-<p style="font-size: 0.8rem">
+<p class="text-muted mb-4">
 (7-day average)
 </p>
-<div id="graphcontainer" style=" height: 350px;">
-<iframe id="traffic-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" style="border:0; margin-top: 38px;">
-</iframe>
 </div>
-<!-- closes iframe container -->
-</div>
-<!-- closes col -->
-</div>
-<!-- closes row in col -->
-</div>
-<!-- closes tab pane -->
-<!-- delay tab content------------------------------------ -->
-<div id="delay" class="tab-pane fade in">
-<div class="row mt-3">
-<div class="col-sm-3">
-<ul class="nav mb-2">
-<li class="active pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#delay-day">Day</a>
+<!-- End Col -->
+<div class="col-sm-auto">
+<ul class="nav nav-segment nav-fill">
+<li class>
+<a class="nav-link active" data-toggle="tab" href=#flights-day>Day</a>
 </li>
-<li class="pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#delay-week">Week</a>
+<li class>
+<a class="nav-link" data-toggle="tab" href="#flights-week">Week</a>
 </li>
-<li class="pr-3" style="font-size:0.95em;">
-<a data-toggle="tab" href="#delay-y2d">Y2D</a>
+<li class>
+<a class="nav-link" data-toggle="tab" href="#flights-y2d">Y2D</a>
 </li>
 </ul>
+</div>
+<!-- End Col -->
+</div>
 <div class="w3-container tab-content">
-<div id="delay-day" class="tab-pane fade in active show">
-<p id="day_delay_text" style="font-weight: bold; color: #0070c0;">
+<div id="flights-day" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-6 col-md">
+<div class="pr-3">
+<p id="day_text" class="font-weight-bold">
 n/a
 </p>
-<p class="Scorecard_subt">
-Total delay
+</div>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total flights
 </p>
-<p id="day_delay" style="font-weight: bold; color: #0070c0;">
+<h4 id="day_traffic" class="mb-0 h5">
 n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md mb-3">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. week
 </p>
-<p class="Scorecard_subt">
+<h4 id="dif_day_prev_week" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs prev. year
 </p>
-<p id="dif_day_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_day_prev_year" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs 2019
 </p>
-<p id="dif_day_delay_2019_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_day_2019" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
-Delay/flight
-</p>
-<p id="day_delay_flight" style="font-weight: bold; color: #0070c0;">
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="flights-week" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="week_text" class="font-weight-bold">
 n/a
 </p>
 </div>
-<!-- closes tab pane -->
-<div id="delay-week" class="tab-pane fade in">
-<p id="week_delay_text" style="font-weight: bold; color: #0070c0;">
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily flights
+</p>
+<h4 id="week_traffic" class="mb-0 h5">
 n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. week
 </p>
-<p class="Scorecard_subt">
-Avg. daily delay
-</p>
-<p id="avg_week_delay" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_week_prev_week" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs prev. year
 </p>
-<p id="dif_week_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_week_prev_year" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs 2019
 </p>
-<p id="dif_week_delay_2019_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_week_2019" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
-Avg. delay/flight
-</p>
-<p id="week_delay_flight" style="font-weight: bold; color: #0070c0;">
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="flights-y2d" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_text" class="font-weight-bold">
 n/a
 </p>
 </div>
-<!-- closes tab pane -->
-<div id="delay-y2d" class="tab-pane fade in">
-<p id="y2d_delay_text" style="font-weight: bold; color: #0070c0;">
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total flights
+</p>
+<h4 id="y2d_traffic" class="mb-0 h5">
 n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily flights
 </p>
-<p class="Scorecard_subt">
-Avg. daily delay
-</p>
-<p id="y2d_delay_daily_average" style="font-weight: bold; color: #0070c0;">
+<h4 id="avg_y2d_traffic" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs prev. year
 </p>
-<p id="dif_y2d_delay_prev_year_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_y2d_prev_year" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
 Vs 2019
 </p>
-<p id="dif_y2d_delay_2019_perc" style="font-weight: bold; color: #0070c0;">
+<h4 id="dif_y2d_2019" class="mb-0 h5">
 n/a
-</p>
-<p class="Scorecard_subt">
-Avg. delay/flight
-</p>
-<p id="y2d_delay_flight" style="font-weight: bold; color: #0070c0;">
-n/a
-</p>
+</h4>
 </div>
-<!-- closes tab pane -->
+<!-- End Col -->
 </div>
-<!-- closes tab content -->
 </div>
-<div class="col-sm-9">
-<div style=" margin-top: 0px; height: 420px;">
-<iframe id="delay-plot" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" style="border:0;">
+</div>
+<div id="graphcontainer" class="col-12">
+<iframe id="traffic-plot" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
 </div>
-<!-- closes iframe container -->
 </div>
-<!-- closes col -->
 </div>
-<!-- closes row in col -->
 </div>
-<!-- closes tab pane -->
-<!-- punctuality tab content------------------------------------ -->
+<div id="delay" class="tab-pane fade in">
+<div class="row">
+<div class="col-12">
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+
+</div>
+<!-- End Col -->
+<div class="col-sm-auto">
+<ul class="nav nav-segment nav-fill">
+<li class>
+<a class="nav-link active" data-toggle="tab" href=#delay-day>Day</a>
+</li>
+<li class>
+<a class="nav-link" data-toggle="tab" href="#delay-week">Week</a>
+</li>
+<li class>
+<a class="nav-link" data-toggle="tab" href="#delay-y2d">Y2D</a>
+</li>
+</ul>
+</div>
+<!-- End Col -->
+</div>
+<div class="w3-container tab-content">
+<div id="delay-day" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-6 col-md">
+<p id="day_delay_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total delay
+</p>
+<h4 id="day_delay" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_day_delay_prev_year_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_day_delay_2019_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Delay/flight
+</p>
+<h4 id="day_delay_flight" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="delay-week" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="week_delay_text">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily delay
+</p>
+<h4 id="avg_week_delay" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_week_delay_prev_year_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_week_delay_2019_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. delay/flight
+</p>
+<h4 id="week_delay_flight" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="delay-y2d" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_delay_text">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily delay
+</p>
+<h4 id="y2d_delay_daily_average" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_y2d_delay_prev_year_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_y2d_delay_2019_perc" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. delay/flight
+</p>
+<h4 id="y2d_delay_flight" class="mb-0 h5">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 pt-4">
+<iframe id="delay-plot" class="resp-iframe" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+</div>
+</div>
+</div>
 <div id="punctuality" class="tab-pane fade in">
 <div class="row mt-3">
 <div class="col-sm-4">
-<div style="height: 410px;">
-<iframe id="delay-plot-gauge" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
+<div>
+<iframe id="delay-plot-gauge" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
 </div>
 </div>
 <div class="col-sm-8">
-<div style="margin-top: 0px; height: 450px;">
-<iframe id="delay-plot-evo" class="resp-iframe" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" frameborder="0" style="border:0;" sandbox="allow-scripts allow-same-origin">
+<div>
+<iframe id="delay-plot-evo" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
 </div>
-<!-- closes iframe container -->
 </div>
-<!-- closes col -->
 </div>
-<!-- closes row in col -->
 </div>
-<!-- closes tab pane -->
 </div>
-<!-- closes content -->
 </div>
-<!-- closes tabset -->
 </div>
-<!-- closes col -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            var target = $(e.target).attr("href"); // activated tab
-            var iframes = $(target).find('iframe');
-
-            iframes.each(function() {
-                var iframe = $(this);
-                var src = iframe.attr('src');
-                iframe.attr('src', '');
-                setTimeout(function () {
-                    iframe.attr('src', src);
-                }, 10); // Short delay to allow iframe reload
-            });
-        });
-    });
-</script>
-<div class="col-sm-4" style="min-height: 475px;">
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js></script>
+<script>$(document).ready(function () { $('a[data-toggle="tab"]').on('shown.bs.tab', function (a) { var b = $(a.target).attr("href"), c = $(b).find('iframe'); c.each(function () { var a = $(this), b = a.attr('src'); a.attr('src', ''), setTimeout(function () { a.attr('src', b) }, 10) }) }) })</script>
+<div class="col-md-4">
 <h4>
 What’s new?
 </h4>
-<br>
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 <div class="carousel-inner">
-<div id="carousel-item" class="carousel-item active">
-<div class="card border-0">
-<p><a href="https://www.youtube.com/watch?v=zLS7bPgazlU" target="_blank"><img src="/images/landing/EUROCONTROL_PRC_VIDEO.PNG" alt="Published: An intro video to the Performance Review Commission" /></a></p>
-<div id="published-an-intro-video-to-the-performance-review-commission" class="section level5">
-<h5><a href="https://www.youtube.com/watch?v=zLS7bPgazlU" target="_blank">Published: An intro video to the Performance Review Commission</a></h5>
-<p><small>Learn more about the Performance Review Commission in this new video!</small></p>
+<div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://ansperformance.eu/study/data-challenge/" target="_blank">
+<img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Launched: PRC Data Challenge">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Launched: PRC Data Challenge</a>
+</h5>
+<p><small><b>Compete in the PRC Data Challenge</b> by developing a machine learning algorithm to estimate the Actual Take-Off Weight <b>and win your share of the 5000 EUR prize pot!</b> <br><br>This competition is organized by the independent <a href="/about/prc">Performance Review Commission (PRC)</a> in collaboration with the <a href="https://opensky-network.org/">OpenSky Network</a>.</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://ansperformance.eu/study/data-challenge/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
-<div id="carousel-item" class="carousel-item">
-<div class="card border-0">
-<p><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank"><img src="/images/landing/2024-06-21_PI10_institutional_framework.png" alt="Published: PRC Performance Insight #10 - ATM Cost-Effectiveness" /></a></p>
-<div id="published-prc-performance-insight-10---atm-cost-effectiveness" class="section level5">
-<h5><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">Published: PRC Performance Insight #10 - ATM Cost-Effectiveness</a></h5>
-<p><small>The 10th PRC Performance Insight provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place.</small></p>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
+<img src="/images/landing/2024-07-31_app_v2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL DATA app - Version 2.0">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">Released: EUROCONTROL DATA app - Version 2.0</a>
+</h5>
+<small>A <b>new version of the EUROCONTROL DATA app</b> has been released. This second version now provides <b>detailed data on individual state level</b> and <b>improved delay cause analyses</b>.<br><br></small>
+<div>
+<p><a class="btn btn-primary" href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a>
+<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play Store</a></p>
+</div>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
-<div id="carousel-item" class="carousel-item">
-<div class="card border-0">
-<p><a href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green" target="_blank"><img src="/images/landing/PRC_Observer_1.png" alt="Published: PRC Observer #1 - Can we make aviation green?" /></a></p>
-<div id="published-prc-observer-1---can-we-make-aviation-green" class="section level5">
-<h5><a href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green" target="_blank">Published: PRC Observer #1 - Can we make aviation green?</a></h5>
-<p><small>The PRC takes a brief look at the environmental performance of European aviation and the challenges ahead. How can we make aviation green?</small></p>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">
+<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Update: Aviation Intelligence Portal">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Update: Aviation Intelligence Portal Anniversary</a>
+</h5>
+<p><small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="/2024/08/16/2024-08-16-rn/#/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
-<div id="carousel-item" class="carousel-item">
-<div class="card border-0">
-<p><a href="https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses" target="_blank"><img src="/images/landing/2024-7-15-standard_inputs.png" alt="Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)" /></a></p>
-<div id="published-eurocontrol-standard-inputs-for-economic-analysis-edition-10.0" class="section level5">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-standard-inputs-economic-analyses" target="_blank">Published: EUROCONTROL Standard Inputs for Economic Analysis (Edition 10.0)</a></h5>
-<p><small>An update of Standard Inputs for Economic Analyses is now available. </small></p>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">
+<img src="/images/landing/2024-07-09_DS45_long_term_performance.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #45 Long term-perspective on ANS performance">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">Published: Data Snapshot #45</a>
+</h5>
+<p><small><b>Our 45th EUROCONTROL Data Snapshot takes a long-term view on ANS performance.</b> <br><br>A long-term analysis of Air Navigation Services (ANS) provision costs, flight hours controlled and en-route air traffic flow management (ATFM) delays shows some interesting trends and different cycles – even before the COVID-19 pandemic hit in 2020.</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
-<div id="carousel-item" class="carousel-item">
-<div class="card border-0">
-<p><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays" target="_blank"><img src="/images/landing/2024-05-28_DS44_all_causes_delay.png" alt="Published: Data Snapshot #44 - The causes of flight delays" /></a></p>
-<div id="published-data-snapshot-44---the-causes-of-flight-delays" class="section level5">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-44-causes-flight-delays" target="_blank">Published: Data Snapshot #44 - The causes of flight delays</a></h5>
-<p><small>Our 44th EUROCONTROL Data Snapshot delves into the causes of flight delays. In 2023, nearly 3 flights in 10 arrived more than 15 minutes late. What is causing this?</small></p>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">
+<img src="/images/landing/2024-07-25_DS46_average_flight.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #46 Further, higher, bigger...">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">Published: Data Snapshot #46</a>
+</h5>
+<p><small><b>Our 46th EUROCONTROL Data Snapshot on the average flight in the EUROCONTROL area.</b> <br><br>What does an ‘average flight’ look like in the EUROCONTROL area? And, more importantly, if we look at how it has changed over the last five years, what does it tell us about overall aviation trends?</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
-<div id="carousel-item" class="carousel-item">
-<div class="card border-0">
-<p><a href="/data/" target="_blank"><img src="/images/landing/data_icon.jpg" alt="Performance Data Update" /></a></p>
-<div id="performance-data-update" class="section level5">
-<h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<p><small>June 2024 data available for download now!</small></p>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="/data/" target="_blank">
+<img src="/images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
+</a>
+<div style="padding: 1rem;">
+<h5>
+<a href="/data/" target="_blank">Performance Data Update</a>
+</h5>
+<p><small>July 2024 data available for download now!</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
 </div>
 </div>
 </div>
 </div>
-<p><a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
-<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></p>
+<p><a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+<span class="sr-only">Next</span>
+</a></p>
 </div>
 </div>
-<!-- 
-<div class="col-sm-2"><h4></h4><br>
-<div class="card bg-light text-center border-0"><a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
-  <img class="card-img-top" src="/images/landing/ectl_int_db.png" alt="Daily traffic statistics"><br>
-  <div class="card-body"><h6 class="card-title">Performance Snapshot</h6></a><small><p class="card-text">Click to see the latest monthly snapshot!</p></small>
-  </div>
 </div>
-</div>-->
-</div>
-<div id="focus-areas" class="section level4">
-<h4>Focus areas</h4>
-<!-- cards with Key Performance Areas -->
+</section>
+<section class="pt-5">
 <div class="container">
+<!-- Title -->
 <div class="row">
-<div class="card-deck">
-<div class="card">
-<a href="/traffic">
-<img class="card-img-top" src="/images/landing/ectl_traff_th.jpg" alt="Traffic">
-<div class="card-body">
-<h6 class="card-title">
+<div class="col-md-6 col-lg-4">
+<h2 class="mb-4">
+Performance areas
+</h2>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-traffic.jpg); background-position: center center; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path d="M27.33,10.96l-1.48-1.86c-3-3.56-11.04-4.85-15.72-4.85H1.15c-.28,0-.5.22-.5.5s.22.5.5.5h8.99c4.31,0,12.19,1.22,14.94,4.49l.91,1.15-4.68.07c-.28,0-.5.23-.49.51,0,.27.23.49.5.49h0l5.59-.08c1.97.83,4.06,2.36,4.06,3.84,0,2.2-3.25,3.2-3.32,3.22-.05.02-5.11,1.92-14.33,1.92H1.21c-.28,0-.5.22-.5.5s.22.5.5.5h12.11c.2,0,.39,0,.59,0v2.12c-.82.22-1.43.96-1.43,1.85,0,.34.1.65.25.93H.53c-.28,0-.5.22-.5.5s.22.5.5.5h18.05c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2.5c.15-.28.25-.59.25-.93,0-.89-.61-1.63-1.43-1.85v-2.13c8.41-.2,12.91-1.89,13.07-1.96.16-.05,4-1.22,4-4.17,0-2.07-2.47-3.84-4.64-4.76ZM15.33,25.83c0,.51-.42.93-.93.93s-.93-.42-.93-.93.42-.93.93-.93.93.42.93.93Z" fill="currentColor"/>
+<path d="M15.1,17.33c1,0,1.81-.81,1.81-1.81v-4.79c0-1-.81-1.81-1.81-1.81h-1.77c-1,0-1.81.81-1.81,1.81v4.79c0,1,.81,1.81,1.81,1.81h1.77ZM12.53,15.52v-4.79c0-.44.36-.81.81-.81h1.77c.44,0,.81.36.81.81v4.79c0,.44-.36.81-.81.81h-1.77c-.44,0-.81-.36-.81-.81Z" fill="currentColor"/>
+<path d="M9.58,12.07v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"/>
+<path d="M6.52,12.57c.28,0,.5-.22.5-.5v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5Z" fill="currentColor"/>
+<path d="M4.45,12.07v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"/>
+<path d="M1.38,12.57c.28,0,.5-.22.5-.5v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5Z" fill="currentColor"/>
+<path d="M26.07,26.75h-4.76c-.28,0-.5.22-.5.5s.22.5.5.5h4.76c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M1.38,17.33h4.41c.28,0,.5-.22.5-.5s-.22-.5-.5-.5H1.38c-.28,0-.5.22-.5.5s.22.5.5.5Z" fill="currentColor"/>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
 Traffic
-</h6>
-</a><small>
-<p class="card-text">
-<a href="/acronym/ifr/">IFR</a> flight and <a href="/acronym/su/">service unit</a> evolution and forecast
+</h5>
+<p>
+IFR flight and service unit evolution and forecast
 </p>
-</small>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="/traffic/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
 </div>
 </div>
-<div class="card">
-<a href="/capacity">
-<img class="card-img-top" src="/images/landing/ectl_cap_th.jpg" alt="Capacity">
-<div class="card-body">
-<h6 class="card-title">
-Capacity &amp; Delays
-</h6>
-</a><small>
-<p class="card-text">
-En-route and airport <a href="/acronym/atfm/">ATFM</a> delays
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-punctuality.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path d="M10.08,4.28h3.06v1.54c0,.28.22.5.5.5s.5-.22.5-.5v-1.54h2.9c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2.9v-1.06c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.06h-3.06c-.28,0-.5.22-.5.5s.22.5.5.5Z" fill="currentColor"/>
+<path d="M24.41,10.39c0-.28-.22-.5-.5-.5H3.37c-.28,0-.5.22-.5.5s.22.5.5.5h20.54c.28,0,.5-.22.5-.5Z" fill="currentColor"/>
+<path d="M10.13,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M14.19,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M18.25,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M22.32,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M6.07,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M10.13,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M14.19,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M18.25,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M22.32,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M6.07,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M10.13,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M14.19,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M18.25,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M6.07,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M10.13,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M14.19,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M18.25,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M6.07,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M10.13,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M14.19,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M18.25,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M28.39,18.42h-1.19V6.07c0-1.54-1.25-2.79-2.79-2.79h-4.7v-1.06c0-.28-.22-.5-.5-.5s-.5.22-.5.5v3.6c0,.28.22.5.5.5s.5-.22.5-.5v-1.54h4.7c.98,0,1.79.8,1.79,1.79v12.35h-2.6c-1.95,0-3.54,1.59-3.54,3.53v4.79c0,.23.03.45.07.66H1.49c-.23,0-.42-.19-.42-.42V6.07c0-.98.8-1.79,1.79-1.79h4.7v1.54c0,.28.22.5.5.5s.5-.22.5-.5v-3.6c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.06H2.86C1.32,3.28.07,4.53.07,6.07v20.92c0,.78.64,1.42,1.42,1.42h19c.6,1.11,1.76,1.87,3.1,1.87h4.79c1.95,0,3.54-1.59,3.54-3.54v-4.79c0-1.95-1.59-3.53-3.54-3.53ZM30.93,26.75c0,1.4-1.14,2.54-2.54,2.54h-4.79c-1.4,0-2.54-1.14-2.54-2.54v-4.79c0-1.4,1.14-2.53,2.54-2.53h4.79c1.4,0,2.54,1.14,2.54,2.53v4.79Z" fill="currentColor"/>
+<path d="M28.35,21.87l-3.49,3.49-1.22-1.22c-.2-.2-.51-.2-.71,0s-.2.51,0,.71l1.57,1.57c.1.1.23.15.35.15s.26-.05.35-.15l3.84-3.84c.2-.2.2-.51,0-.71s-.51-.2-.71,0Z" fill="currentColor"/>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Punctuality
+</h5>
+<p>
+Departure/arrival punctuality (OTP15) and operated schedules
 </p>
-</small>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="/traffic/punctuality/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
-<div class="card">
-<a href="/efficiency">
-<img class="card-img-top" src="/images/landing/ectl_env_th.jpg" alt="Efficiency & Environment">
-<div class="card-body">
-<h6 class="card-title">
-Efficiency &amp; Environment
-</h6>
-</a><small>
-<p class="card-text">
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-delays.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4">
+<svg width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path d="M14.25,27.93c-.4.04-.81.06-1.23.06-6.61,0-11.99-5.38-11.99-11.99S6.42,4.01,13.03,4.01c4.96,0,9.34,2.98,11.16,7.59.1.26.39.38.65.28.26-.1.38-.39.28-.65-1.97-5-6.72-8.23-12.09-8.23C5.86,3.01.04,8.84.04,16s5.83,12.99,12.99,12.99c.44,0,.89-.02,1.33-.07.27-.03.48-.27.45-.55-.03-.27-.27-.47-.55-.45Z" fill="currentColor"/>
+<path d="M13.41,6.54v-1.24c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.24c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"/>
+<path d="M19.95,9.66l.87-.87c.2-.2.2-.51,0-.71s-.51-.2-.71,0l-.87.87c-.2.2-.2.51,0,.71.1.1.23.15.35.15s.26-.05.35-.15Z" fill="currentColor"/>
+<path d="M12.41,25.43v1.24c0,.28.22.5.5.5s.5-.22.5-.5v-1.24c0-.28-.22-.5-.5-.5s-.5.22-.5.5Z" fill="currentColor"/>
+<path d="M5,23.89c.1.1.23.15.35.15s.26-.05.35-.15l.87-.87c.2-.2.2-.51,0-.71s-.51-.2-.71,0l-.87.87c-.2.2-.2.51,0,.71Z" fill="currentColor"/>
+<path d="M2.23,15.49c-.28,0-.5.22-.5.5s.22.5.5.5h1.24c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-1.24Z" fill="currentColor"/>
+<path d="M5.88,9.66c.1.1.23.15.35.15s.26-.05.35-.15c.2-.2.2-.51,0-.71l-.87-.87c-.2-.2-.51-.2-.71,0s-.2.51,0,.71l.87.87Z" fill="currentColor"/>
+<path d="M11.12,15.48c.16,0,.32-.08.41-.22.15-.23.1-.54-.13-.69l-4.35-2.94c-.23-.15-.54-.1-.69.13-.15.23-.1.54.13.69l4.35,2.94c.09.06.18.09.28.09Z" fill="currentColor"/>
+<path d="M15.33,15.39l4.02-2.67c.23-.15.29-.46.14-.69-.15-.23-.46-.29-.69-.14l-4.02,2.67c-.23.15-.29.46-.14.69.1.15.25.22.42.22.09,0,.19-.03.28-.08Z" fill="currentColor"/>
+<path d="M14.73,16.51c0-.94-.76-1.7-1.7-1.7s-1.7.76-1.7,1.7.76,1.7,1.7,1.7,1.7-.76,1.7-1.7ZM13.03,17.21c-.39,0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.31.7-.7.7Z" fill="currentColor"/>
+<path d="M25.05,13.77c-.34-.58-.94-.93-1.61-.93s-1.27.35-1.61.93l-6.67,11.55c-.34.58-.33,1.27,0,1.86.33.58.94.93,1.61.93h13.33c.67,0,1.27-.35,1.61-.93s.34-1.27,0-1.85l-6.67-11.55ZM30.85,26.67c-.15.27-.43.43-.74.43h-13.33c-.31,0-.59-.16-.74-.43s-.15-.59,0-.86l6.67-11.55c.31-.54,1.17-.54,1.48,0l6.67,11.55c.15.27.15.59,0,.85Z" fill="currentColor"/>
+<path d="M23.44,16.6c-.28,0-.5.22-.5.5v4.92c0,.28.22.5.5.5s.5-.22.5-.5v-4.92c0-.28-.22-.5-.5-.5Z" fill="currentColor"/>
+<path d="M23.44,24.61c-.28,0-.5.23-.5.5s.22.5.5.5.5-.22.5-.5h0c0-.28-.22-.5-.5-.5Z" fill="currentColor"/>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+En-route &amp; airport delays
+</h5>
+<p>
+En-route and airport ATFM delays
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="/capacity/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-environment.jpg); background-position: center center; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path d="M27.15.4h-13.49c-.7,0-1.39.29-1.88.79l-7.37,7.45c-.5.51-.78,1.18-.78,1.9v18.74c0,1.48,1.19,2.68,2.66,2.68h20.86c1.46,0,2.66-1.2,2.66-2.68V3.09c0-1.48-1.19-2.68-2.66-2.68ZM28.81,29.28c0,.93-.74,1.68-1.66,1.68H6.29c-.91,0-1.66-.75-1.66-1.68V10.54c0-.45.17-.87.49-1.19L12.49,1.9c.31-.32.73-.49,1.17-.49h13.49c.91,0,1.66.75,1.66,1.68v26.19Z" fill="currentColor"/>
+<path d="M4.56,6.29c.1.1.23.15.36.15s.25-.05.35-.14c.2-.19.2-.51,0-.71l-1.09-1.1,2.41-2.44,1.08,1.1c.1.1.23.15.36.15s.25-.05.35-.14c.2-.19.2-.51,0-.71l-1.09-1.1.43-.44c.19-.2.19-.51,0-.71-.2-.19-.51-.19-.71,0l-.77.78s0,0,0,0,0,0,0,0l-3.11,3.15s0,0,0,0c0,0,0,0,0,0l-.78.79c-.19.2-.19.51,0,.71.1.1.22.14.35.14s.26-.05.36-.15l.42-.43,1.08,1.09Z" fill="currentColor"/>
+<path d="M25.41,3.31h-10.49c-.67,0-1.22.55-1.22,1.23v2.18c0,.68.55,1.23,1.22,1.23h7.74c.7,0,1.39-.29,1.88-.79l1.74-1.76c.35-.35.45-.88.26-1.34-.19-.46-.62-.75-1.12-.75ZM25.57,4.71l-1.74,1.76c-.31.32-.73.49-1.17.49h-7.74c-.12,0-.22-.1-.22-.23v-2.18c0-.13.1-.23.22-.23h10.49c.12,0,.18.09.2.14.02.04.05.15-.05.25Z" fill="currentColor"/>
+<path d="M25.4,10.55c-.25-.04-.48.09-.56.32-.4,1.1-2.28,1.42-4.47,1.79-4.45.76-10.51,1.8-9.59,10.72-1.13.82-2.02,1.79-2.45,3.2-.08.26.07.54.33.62.05.01.1.02.15.02.21,0,.41-.14.48-.35.62-2.04,2.44-3.02,4.74-4.27,1.84-.99,3.93-2.12,5.78-4.05.19-.2.18-.52-.02-.71-.2-.19-.52-.18-.71.02-1.74,1.82-3.75,2.9-5.53,3.86-.64.34-1.25.68-1.83,1.03-.55-7.49,4.4-8.35,8.81-9.1,1.68-.29,3.21-.54,4.21-1.19-.3,5.32-1.35,8.46-3.42,10.37-1.82,1.68-4.49,2.4-8.18,2.21-.31-.01-.51.2-.52.47-.01.28.2.51.47.52.39.02.77.03,1.14.03,3.39,0,5.94-.82,7.76-2.51,3.1-2.86,3.66-7.93,3.8-12.51,0-.25-.17-.46-.41-.51Z" fill="currentColor"/>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Efficiency &amp; environment
+</h5>
+<p>
 Flight efficiency affecting fuel burn and emissions
 </p>
-</small>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="/efficiency/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
-<div class="card">
-<a href="/economics">
-<img class="card-img-top" src="/images/landing/ectl_cef_th.jpg" alt="Economics">
-<div class="card-body">
-<h6 class="card-title">
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-economics.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path d="M17.81,11.49c.06.03.13.04.19.04.13,0,.26-.05.35-.15l7.34-7.34c.1-.1.15-.24.15-.39,0-.14-.08-.28-.19-.36-2.21-1.69-4.83-2.78-7.58-3.14-.14-.02-.29.03-.39.12s-.17.23-.17.38v10.38c0,.2.12.38.31.46ZM18.5,1.23c2.19.37,4.27,1.23,6.08,2.52l-6.08,6.08V1.23Z" fill="currentColor"/>
+<path d="M14.5,15.17V.79c0-.14-.06-.28-.17-.38-.11-.09-.25-.14-.39-.12C6.08,1.31.15,8.07.15,16c0,3.52,1.13,6.86,3.28,9.65.09.11.22.19.36.19.01,0,.02,0,.03,0,.13,0,.26-.05.35-.15l10.17-10.17c.09-.09.15-.22.15-.35ZM13.5,14.96L3.88,24.58c-1.79-2.52-2.73-5.47-2.73-8.58C1.15,8.76,6.42,2.57,13.5,1.37v13.6Z" fill="currentColor"/>
+<path d="M30.68,20.17h-2.67c-.06,0-.11.03-.17.03v-2.87c0-.64-.52-1.17-1.17-1.17h-2.67c-.64,0-1.17.52-1.17,1.17v3.54c-.06,0-.11-.03-.17-.03h-2.67c-.64,0-1.17.52-1.17,1.17v2.2c-.06,0-.11-.03-.17-.03h-2.67c-.64,0-1.17.52-1.17,1.17v5.34c0,.64.52,1.17,1.17,1.17h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.64,0,1.17-.52,1.17-1.17v-9.34c0-.64-.52-1.17-1.17-1.17ZM18.67,30.85h-2.67c-.09,0-.17-.08-.17-.17v-5.34c0-.09.08-.17.17-.17h2.67c.09,0,.17.08.17.17v5.34c0,.09-.08.17-.17.17ZM22.67,30.85h-2.67c-.09,0-.17-.08-.17-.17v-8.68c0-.09.08-.17.17-.17h2.67c.09,0,.17.08.17.17v8.68c0,.09-.08.17-.17.17ZM26.68,30.85h-2.67c-.09,0-.17-.08-.17-.17v-13.35c0-.09.08-.17.17-.17h2.67c.09,0,.17.07.17.17v13.35c0,.09-.08.17-.17.17ZM30.85,30.68c0,.09-.08.17-.17.17h-2.67c-.09,0-.17-.08-.17-.17v-9.34c0-.09.08-.17.17-.17h2.67c.09,0,.17.07.17.17v9.34Z" fill="currentColor"/>
+<path d="M12.77,30.48c-1.95-.43-3.75-1.23-5.35-2.37L28.12,7.42c1.79,2.52,2.73,5.47,2.73,8.58,0,.62-.04,1.28-.13,1.94-.04.27.16.52.43.56.27.04.53-.16.56-.43.09-.7.14-1.4.14-2.07,0-3.52-1.13-6.86-3.28-9.65-.09-.11-.22-.19-.36-.19-.14,0-.28.04-.39.15L6.3,27.82c-.1.1-.15.24-.15.39,0,.14.08.28.19.36,1.83,1.41,3.92,2.38,6.2,2.89.04,0,.07.01.11.01.23,0,.44-.16.49-.39.06-.27-.11-.54-.38-.6Z" fill="currentColor"/>
+<path d="M5.01,14.98c-.04-.05-.1-.08-.16-.11-.19-.07-.41-.03-.54.11-.05.05-.09.1-.11.16-.03.06-.04.13-.04.19,0,.07.01.13.04.19.02.07.06.12.11.17.09.09.22.14.35.14.06,0,.13,0,.19-.04.06-.02.12-.06.16-.1.05-.05.08-.1.11-.17.02-.06.04-.12.04-.19,0-.06-.02-.13-.04-.19-.03-.06-.06-.11-.11-.16Z" fill="currentColor"/>
+<path d="M6.97,15.69s.1.08.17.1c.06.03.12.04.19.04.13,0,.25-.05.35-.14.05-.05.08-.11.11-.17.02-.06.04-.12.04-.19,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.19.03.06.07.12.11.17Z" fill="currentColor"/>
+<path d="M9.64,15.69s.1.08.17.1c.06.03.12.04.19.04.13,0,.25-.05.35-.14.05-.05.08-.11.11-.17.03-.06.04-.12.04-.19,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.19.03.06.07.12.11.17Z" fill="currentColor"/>
+<path d="M6.97,13.02s.1.08.17.11c.06.02.12.03.19.03.13,0,.26-.05.35-.14.05-.05.08-.1.11-.17.02-.06.04-.12.04-.19,0-.06-.02-.13-.04-.19-.03-.06-.06-.11-.11-.16-.14-.14-.36-.18-.54-.11-.07.03-.12.06-.17.11-.04.05-.08.1-.11.16-.02.06-.04.13-.04.19,0,.07.02.13.04.19.03.07.07.12.11.17Z" fill="currentColor"/>
+<path d="M4.85,12.2c-.19-.07-.41-.03-.54.11-.1.09-.15.22-.15.35,0,.07.01.13.04.2.02.06.06.11.11.16.09.09.22.14.35.14.06,0,.13,0,.19-.03.06-.03.12-.07.16-.11.05-.05.08-.1.11-.16.02-.07.04-.13.04-.2,0-.13-.05-.26-.15-.35-.04-.05-.1-.08-.16-.11Z" fill="currentColor"/>
+<path d="M9.64,13.02s.1.08.17.11c.06.02.12.03.19.03.13,0,.26-.05.35-.14.05-.05.08-.1.11-.16.03-.07.04-.13.04-.2,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.2.03.06.07.11.11.16Z" fill="currentColor"/>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
 Economics
-</h6>
-</a><small>
-<p class="card-text">
+</h5>
+<p>
 Analysis of ANS cost-efficiency
 </p>
-</small>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="/economics/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
 </div>
 </div>
 </div>
 </div>
 </div>
+</section>
 <p><br></p>
+<!-- =======================
+About START -->
+<section class="content-space bg-light">
 <div class="container">
-<h4>
+<div class="row">
+<div class="col-md-12">
+<div class="row justify-content-between">
+<div class="col-md-6 col-lg-7 mb-4 mb-md-0">
+<div class="card card-body bg-transparent h-100 px-0 border-0">
+<h2 class="mb-md-4">
 About the Aviation Intelligence Portal
-</h4>
-<p>In support of the independent work of the <a href="/about/prc/">Performance Review Commission (PRC)</a> this portal aims to:</p>
-<ul>
-<li>ensure that all stakeholders in all <a href="/definition/eurocontrol-area/">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans/">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>
-<li>stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,</li>
-<li>further develop the <a href="/acronym/ans/">ANS</a> performance analysis framework and the understanding of key <a href="/acronym/ans/">ANS</a> performance issues.</li>
+</h2>
+<p class="mb-4">
+In support of the independent work of the <a href="/about/prc">Performance Review Commission (PRC)</a> this portal aims to:
+</p>
+<ul class="mb-md-4">
+<li>
+ensure that all stakeholders in all <a href="/definition/eurocontrol-area">EUROCONTROL States</a> have high quality information on <a href="/acronym/ans">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;
+</li>
+<li>
+stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
+</li>
+<li>
+further develop the <a href="/acronym/ans">ANS</a> performance analysis framework and the understanding of key <a href="/acronym/ans">ANS</a> performance issues.
+</li>
 </ul>
-<p>For feedback or questions please contact us at:
-<a href="mailto:PRU-Support@eurocontrol.int">Performance Review Unit</a></p>
+<p class="font-weight-bold">
+Feedback or questions? <a href="mailto:PRU-Support@eurocontrol.int">Please contact us<i class="ml-1 fa fa-envelope"></i></a>
+</p>
 </div>
-<br>
-<div class="container text-center">
-<p>{{% subscribe-button %}}</p>
-<p><a href="/about/privacy/">Read our privacy protection statement</a></p>
 </div>
+<div class="col-md-6 col-lg-4 ms-auto">
+<div class="card bg-primary rounded h-100 overflow-hidden p-4">
+<!-- Card body -->
+<div class="card-body p-0">
+<h4 class="text-white">
+Subscribe
+</h4>
+<p class="text-white">
+Get informed about our newsletters, publications, and data updates!
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer d-grid text-center p-0 mt-8">
+<a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter" class="btn btn-block btn-light mb-3">Subscribe</a>
+<p class="mb-0 text-white small">
+<a href="/about/privacy/" class="text-white">Read our privacy protection statement</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =======================
+about END -->
 <script>
 
 function reloadIframeDelay() {
@@ -666,4 +794,3 @@ function reloadIframeDelay() {
     iframe.attr("src", iframe.data("src")); 
 }
 </script>
-</div>

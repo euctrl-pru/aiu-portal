@@ -1,5 +1,6 @@
 ---
-title: Airport arrival air traffic flow management (ATFM) delays
+title: Airport ATFM delays
+description: "Analysis of Airport Air Traffic Flow Management (ATFM) delays by delay cause as attributed by the FMP in the EUROCONTROL area."
 date: '2020-04-16'
 ---
 <style type="text/css">

@@ -1,8 +1,9 @@
 ---
 title: Methodology
+description: "A reference to the methodologies for the computation of the performance indicators."
 ---
-
-In order to encourage collaboration, transparency and reproducibility of performance indicators, please find below methodological information related to the computation of the indicators used in our website:
+<br>
+This is shared in order to encourage collaboration, transparency and reproducibility of performance indicators. 
 
 <div class="container">
 <div class="row align-items-start">
