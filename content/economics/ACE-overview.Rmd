@@ -272,9 +272,9 @@ Access information on individual ANSPs cost-effectiveness performance (2017-2022
   </div>
 </div>
 
-<div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-  <img class="card-img-top" src="/images/eco/ace-hlsr2022.png" alt="First look at 2022 ACE data">
-  <div class="card-body"><h5 class="card-title">High-level Summary Report on Preliminary ACE 2022 Data</h5></a><p class="card-text"></p>
+<div class="card" ><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
+  <img class="card-img-top" src="/images/eco/pi10.png" alt="PI10 ANSPs regulatory, institutional and corporate governance">
+  <div class="card-body"><h5 class="card-title">PRC Performance Insight #10 - A review of ANSPs regulatory, institutional and corporate governance arrangements</h5></a><p class="card-text"></p>
   </div>
 </div>
 
