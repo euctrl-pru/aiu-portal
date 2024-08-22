@@ -1,5 +1,5 @@
 ---
-title: PRC Performance Insights
+title: PRC Performance Insights/ Observer
 type: "PRC Performance Insights"
 date: '2023-03-10'
 tags:  PRC Performance Insights
@@ -7,6 +7,23 @@ tags:  PRC Performance Insights
 ---
 
 ## 2024
+
+<!-- OBS#1 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Observer #1 - How can we make aviation green? ][OBS1]</h5>
+<small><strong><p style="color:#808080">Published: 12 July 2024</p></strong></small>
+    
+The Performance Review Commission (PRC) takes a brief look at the environmental performance of European aviation, the possible contribution of ATM in mitigating aviation’s impact on climate, and the challenges ahead in achieving the ambitious environmental goals. How can we make aviation green? <br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green"  target="_blank"><img src="/images/pi/prc_obs1.PNG" alt="PRC Observer #1 - How can we make aviation green?" style="width:100%"></a></div>
+</div>
+</div></div>
+
 
 <!-- PI#10 -->
 <div class="container alert alert-secondary">
@@ -187,3 +204,6 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 [PI8]: https://www.eurocontrol.int/publication/prc-performance-insight-8-atm-performance-benefit-pools-improved-civil-military "PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination"
 [PI9]: https://www.eurocontrol.int/publication/prc-performance-insight-9-towards-reliable-gate-gate-co2-emissions-europe "PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe - a holistic approach"
 [PI10]: https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness "PRC Performance Insight #10 - ATM Cost-Effectiveness - A review of ANSPs regulatory, institutional and corporate governance arrangements"
+
+
+[OBS1]: https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green "PRC Observer #1 - How can we make aviation green?"

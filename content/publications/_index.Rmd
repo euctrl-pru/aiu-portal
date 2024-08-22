@@ -35,20 +35,20 @@ layout: frontpage
 </div>
 
 <div class="card"><a href="/publications/prc/prr">
-  <img class="card-img-top" src="/images/prc/prr2022.png" alt="Performance Review Report">
+  <img class="card-img-top" src="/images/prc/prr2023.png" alt="Performance Review Report">
   <div class="card-body">   <h5 class="card-title">Annual Performance Review Report</h5></a><p class="card-text"></p>
   </div>
 </div>
 
 <div class="card"><a href="/publications/prc/ace">
-  <img class="card-img-top" src="/images/prc/ace2020.png" alt="ATM Cost Effectiveness Report">
+  <img class="card-img-top" src="/images/prc/ace2024ed.png" alt="ATM Cost Effectiveness Report">
   <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Reports</h5></a><p class="card-text"></p>
   </div>
 </div>
 
 <div class="card"><a href="/publications/prc/pi">
-  <img class="card-img-top" src="/images/prc/prc_pi_pub.png" alt="PRC Performance Insights">
-  <div class="card-body"><h5 class="card-title">PRC Performance Insights</h5></a><p class="card-text"></p>
+  <img class="card-img-top" src="/images/prc/prc_pi_pub.png" alt="PRC Performance Insights/ Observer">
+  <div class="card-body"><h5 class="card-title">PRC Performance Insights/ Observer</h5></a><p class="card-text"></p>
   </div>
 </div>
 
