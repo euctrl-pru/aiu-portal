@@ -363,6 +363,11 @@ ignoreFiles = [
     url = "/transformation/"
     parent = "links"
     weight = 6
+  [[menu.main]]
+    name = "PRC Open Performance Data Initiative"
+    url = "https://opdi.aero"
+    parent = "links"
+    weight = 7
   
     
  [[menu.main]]
