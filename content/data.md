@@ -1,6 +1,6 @@
 ---
 title: "Data"
-description: "Explore EUROCONTROL data on topics such as emissions, operations, traffic and economics."
+description: "Explore EUROCONTROL data on topics such as emissions, operations, traffic, economics and flight events."
 aliases: ["/data/performancearea/"]
 ndwk_i: <i class="fa pru fa-flask"></i>
 fltr_i: <i class="fa pru fa-filter"></i>
@@ -189,10 +189,26 @@ In fact they use different BADA versions and hence different aircraft characteri
 [anspfinurl]:  https://ansperformance.eu/economics/finance/guide/ "Financial Dashboard Guide"
 <br>
 
+## <img id="opdi" src="/images/prcq_opdi.png" width="50" height="50" alt="Open Performance Data Initiative"> Open Performance Data Initiative (OPDI)
+
+| Data Description                                                  | Period         | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}}                      | Info                          |
+|-------------------------------------------------------------------|----------------|-----------------|---------------|----------------------------------------|-------------------------------|
+| Flight list data<br><small>A flight list extracted from OpenSky Network ADS-B data</small>       | {{< getdata "dwnld" "opdi_beg" >}} - {{< getdata "dwnld" "opdi_end" >}} |                 |               | [{{< dwnld_i >}}][flightlistparquet]   | [{{< info_i >}}][flightlisturl]   |
+| Flight event data<br><small>Various flight events extracted from OpenSky Network ADS-B data</small>     | {{< getdata "dwnld" "opdi_beg" >}} - {{< getdata "dwnld" "opdi_end" >}} |                 |               | [{{< dwnld_i >}}][flighteventparquet]  | [{{< info_i >}}][flighteventurl]  |
+| Measurement data<br><small>Measurements of e.g., time & distance which are to be associated with the flight events</small>       | {{< getdata "dwnld" "opdi_beg" >}} - {{< getdata "dwnld" "opdi_end" >}} |                 |               | [{{< dwnld_i >}}][measurementparquet]  | [{{< info_i >}}][measurementurl]  |
+
+[flightlistparquet]: https://www.opdi.aero/flight-list-data
+[flighteventparquet]: https://www.opdi.aero/flight-event-data
+[measurementparquet]: https://www.opdi.aero/measurement-data
+
+[flightlisturl]: https://www.opdi.aero/data
+[flighteventurl]: https://www.opdi.aero/data
+[measurementurl]: https://www.opdi.aero/data
 
 
 {{< excel_i >}} = Excel file.<br>
 {{< csv_i >}} = CSV file.<br>
+{{< parquet_i >}} = Parquet file(s).<br>
 {{< dwnld_i >}} = dataset download.<br>
 {{< info_i >}}  = info on dataset.<br>
 {{< attn_i >}}  = not (yet?) available.<br>
