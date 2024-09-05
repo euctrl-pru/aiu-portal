@@ -1,0 +1,18 @@
+---
+title: "Aviation Intelligence Unit"
+description: "Learn more about the Aviation Intelligence Unit, and our functions."
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+Lorem ipsum odor amet, consectetuer adipiscing elit. Integer neque metus risus accumsan viverra odio taciti tortor mauris. Nullam nisl maecenas amet metus potenti luctus. Blandit ante eget bibendum convallis malesuada ut. Scelerisque taciti maecenas pulvinar bibendum eros. Pulvinar nam penatibus rhoncus, duis metus tellus.
+
+Taciti neque nisi porttitor nec, cursus aptent. Elementum sodales scelerisque ligula ad facilisis consequat. Neque augue vivamus natoque odio massa volutpat sollicitudin arcu. Nisl ridiculus consequat semper facilisi eget rhoncus. Neque nam semper eget vestibulum sagittis parturient massa. Arcu feugiat fringilla mi cras nascetur metus.
+
+Laoreet pharetra mollis per facilisi ad class. Non sit scelerisque phasellus in dignissim cras malesuada facilisi. Gravida ex molestie senectus conubia dolor convallis facilisis. Suspendisse nibh morbi, nisl non consequat phasellus. Enim phasellus ultrices phasellus sollicitudin aliquet sem. Dictum magnis accumsan nulla consectetur curabitur. Interdum commodo morbi gravida faucibus donec fusce. Varius scelerisque hendrerit natoque interdum tempor parturient vel. Enim varius vivamus dignissim sodales pulvinar.
+
+Non enim sem efficitur maximus vivamus. Aliquam duis proin nam lacinia dignissim ultrices class dapibus? Penatibus posuere adipiscing eu lacinia adipiscing porttitor volutpat ultrices vulputate. Felis laoreet venenatis neque commodo aliquet aliquet. Dui metus sit ac viverra nam feugiat cras. Dui tincidunt cubilia sem; mauris himenaeos cursus morbi nulla. Sagittis pretium efficitur commodo; porta netus curae.
+
+Enim cursus imperdiet eu duis torquent ac et sociosqu. Gravida malesuada primis orci tempus, class venenatis lacus. Pharetra magnis convallis scelerisque proin nascetur varius vulputate imperdiet. Potenti nascetur odio pretium; gravida massa aliquam. Quam elementum hac commodo vel rutrum. Lectus sed arcu leo natoque quis orci vestibulum ultrices. Aenean sed sit at sagittis suscipit volutpat semper quam. Conubia massa mauris non pellentesque eros faucibus curae. Pulvinar ridiculus dignissim inceptos, pharetra porta erat convallis.

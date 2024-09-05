@@ -384,7 +384,7 @@ ignoreFiles = [
   [[menu.main]]
     name = "About the AIU"
     url = "/about/aiu/"
-    identifier = "aiu"
+    identifier = "aiu-page"
     parent = "about"
     weight = 2
   [[menu.main]]
