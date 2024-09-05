@@ -87,7 +87,7 @@ All PRC members have declared on their honour that they will act independently i
 
 Complementary, the PRC have revealed any potential conflicts of interest that may arise in the context of their duty.
 
-<a href="/library/prc/2023_2025_PRC_UoI_DoI.pdf">Undertaking of independence / Declaration of potential interest</a> 
+<a href="/library/prc/2023_2025_PRC_UoI_DoI.pdf" download>Undertaking of independence / Declaration of potential interest</a>
 
 ## Background
 Following the Decisions of the EUROCONTROL Permanent Commission in 1997 an independent performance review system addressing all aspects of air traffic management was established as of 1998, and the Performance Review Commission (PRC) was created to provide independent advice on Air Navigation Services (ANS) performance in the EUROCONTROL Member States. 
