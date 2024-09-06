@@ -32,13 +32,13 @@ The AIU is organised as follows:
 
 * The Business Intelligence Unit is composed of 3 sections:
 
-  + [Statistics and Forecasts (STATFOR)](https://www.eurocontrol.int/forecasting): responsible for providing forecasts, data, operational analysis and other aviation intelligence to decision-makers. This helps them understand and manage risks, identify bottlenecks and anticipate the needs of airspace users.
+  + [Statistics and Forecasts (STATFOR)](https://www.eurocontrol.int/forecasting): responsible for providing forecasts and aviation intelligence to decision-makers to help them understand and manage risks, identify bottlenecks and anticipate the needs of airspace users.
 
   + Central Office for Delay Analysis (CODA): responsible for analysing all-causes delays, interacting with airports and aircraft operators, and providing punctuality and cancellation statistics .
 
-  + Cost Benefit Analysis Section: coordinating and developing business cases, both forward-looking and in review, for projects from research to industrialisation.
+  + Cost Benefit Analysis: responsible for coordinating and developing business cases, both forward-looking and in review, for projects from research to industrialisation.
 
-* The Data and Digital Product section (DDP), responsible for the development, publication & marketing of AIU digital products.
+* The Data and Digital Products section (DDP): responsible for the development, publication & marketing of AIU digital products.
 
 </div>
 
