@@ -142,6 +142,7 @@ description: "An overview of financial information and indicators for European A
      <!-- <p id="ANSP_Name" style= "font-size: 24px; font-weight: bold; border-bottom: solid 3px #161b21; 
      padding-top: 10px; margin-right: 5px">ENAV</p> -->
   
+    <div id="ansp-context">
     <div class="flex-container" style="margin-right: 5px; margin-top:10px">
       
       <div class="Mycolumn mb-2 " ; style="margin-left:15px;">
@@ -193,6 +194,18 @@ description: "An overview of financial information and indicators for European A
         <!-- <p style="margin: 0px; font-size: 14px;"> Share of total revenue</p> -->
         <!-- <p id="Scorecard_RevenueRatio" ; style="margin: 0px; font-size: 35px; font-weight: bolder;">5.5%</p> -->
       </div>
+    </div>
+    </div>
+    
+    <div id="paneuropean-context">
+    <div class="flex-container" style="margin-right: 5px; margin-top:10px">
+      
+        <div class="row" style="padding-left: 10px; ">
+          <div class="col-12 pl-3" >
+            <p id="paneuropean-notes" style="font-size: 16px; font-style: italic;"></p>
+          </div>
+        </div>
+    </div>
     </div>
     
 <!-- Income statement section -->
@@ -599,6 +612,10 @@ description: "An overview of financial information and indicators for European A
 
     function changeEntityPicker() {
       SelectedEntity = EntityPicker.getState().selectedValues[0];
+      
+      // Call the toggleContextDivs function to handle the div visibility
+      toggleContextDivs();
+      
       UpdateMyANSPServices();
       UpdateMyShareTotalRevenue();
       UpdateMyCurrencyParameters();
@@ -2389,6 +2406,7 @@ description: "An overview of financial information and indicators for European A
     document.getElementById("ANSP_logo").innerHTML = '<img src="ANSP_logos/' + SelectedEntity + '.png" style="height:40px; margin-bottom:5px">';
     document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
     document.getElementById("notes").innerHTML = MyViewANSPServices.getValue(0, 6);
+    document.getElementById("paneuropean-notes").innerHTML = MyViewANSPServices.getValue(0, 6);
     document.getElementById("org_arr_title").innerHTML = (SelectedEntity != "Pan-European System") ? "Organisational & Corporate Arrangements:" : "" ;
     document.getElementById("MyTitleShareRevenue_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
     // document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
@@ -2565,4 +2583,20 @@ description: "An overview of financial information and indicators for European A
 
   //   MyChartCash3.setSelection([{ row: MySelectedRow }]);
   // }
+  
+  window.onload = function () {
+    toggleContextDivs();
+  };
+  
+   // Function to toggle the visibility of the divs based on the selected entity
+  function toggleContextDivs() {
+    if (SelectedEntity === "Pan-European System") {
+      document.getElementById("paneuropean-context").style.display = "block";
+      document.getElementById("ansp-context").style.display = "none";
+    } else {
+      document.getElementById("paneuropean-context").style.display = "none";
+      document.getElementById("ansp-context").style.display = "block";
+    }
+  }
+  
 </script>
