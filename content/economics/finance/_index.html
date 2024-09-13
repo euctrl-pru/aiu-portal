@@ -125,7 +125,9 @@ description: "An overview of financial information and indicators for European A
 
    <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements.</p>
    <p>You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
-   
+   <div id="available-ansps" style = "display: none;">
+   <p>There default year selected below is <span id="year-context"></span> but there is already data for <span id="maxyear-context"></span> for the following ANSPs: <span id="ansp-list"></span>.</p>
+   </div>
 
     <div class="flex-container ml-1 mr-1" style=" padding-right: 15px; border-bottom: solid 3px #161b21; 
      padding-top: 10px;">
@@ -497,8 +499,11 @@ description: "An overview of financial information and indicators for European A
 
 <script type="text/javascript">
   var Data;
+  var MyViewContext
+  
   var EntityPicker;
   var YearPicker;
+  
   var MyViewANSPServices;
   var MyViewShareTotalRevenue;
   var MyTableShareTotalRevenue;
@@ -544,6 +549,10 @@ description: "An overview of financial information and indicators for European A
   var MyViewTableFreeCash;
   var TransposedTableFreeCash;
 
+  var FullMinYear
+  var FullMaxYear
+  var uniqueOrgNamesString
+  
   var SelectedEntity = "Pan-European System";
   var SelectedYear = 2022;
   var MinYear;
@@ -676,7 +685,9 @@ description: "An overview of financial information and indicators for European A
     UpdateMyTableCash();
     UpdateMyTableFreeCash();
     
-   }
+   };
+   
+   toggleAnspListDiv();
   
     //---------------------------MyChart/Table initialization ---------------------------------------------
     MyPieShareRevenue = new google.visualization.PieChart(document.getElementById("MyPieShareRevenue_div"));
@@ -717,8 +728,44 @@ description: "An overview of financial information and indicators for European A
     UpdateTitles();
   }
 
+
      //---------------------------Services table ---------------------------------------------
  function UpdateMyANSPServices() {
+    // I shouldn't add this here but i don't want to create a nother function
+    MyViewContext =  new google.visualization.DataView(Data);
+    MyViewContext.setColumns([0,1]);
+    
+    var mynumberOfRows = MyViewContext.getNumberOfRows(); // Get the total number of rows
+    var uniqueOrgNames = new Set(); // Use a Set to store unique ANSP names
+    FullMaxYear = 0;
+     
+    // here we find the max year
+    for (var i = 0; i < mynumberOfRows; i++) {
+      var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (year)
+
+    // find the maximum year in the data table
+      if (FullMaxYear === null || year > FullMaxYear) {
+        FullMaxYear = year; // Update the maxYear if the current year is larger
+      }
+    }
+    
+    // and here the list of ansps for the max year
+    for (var i = 0; i < mynumberOfRows; i++) {
+      var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (years)
+      var orgName = MyViewContext.getValue(i, 1); // Get the value in the 1st column (organization names)
+      
+      if (year === FullMaxYear) {
+        uniqueOrgNames.add(orgName); // Add organization name if the year equals maxYear
+      }
+    }
+    
+   // Convert the Set to an array, then to a string separated by commas (or any other separator)
+    var uniqueOrgNamesArray = Array.from(uniqueOrgNames).sort(); // Sort alphabetically
+    uniqueOrgNamesString = uniqueOrgNamesArray.join(", ");
+    
+   
+
+    // This below was the original function to get the ansp services
     MyViewANSPServices = new google.visualization.DataView(Data);
     MyViewANSPServices.setRows(
       Data.getFilteredRows([{ column: 0, value: SelectedYear }, { column: 1, value: SelectedEntity }])
@@ -2400,6 +2447,12 @@ description: "An overview of financial information and indicators for European A
     Internal_MET.className = CheckClass[3];
     Airports.className = CheckClass[4];
 
+  // Update text in intro 
+
+    document.getElementById("year-context").innerHTML = FullMaxYear-1;
+    document.getElementById("maxyear-context").innerHTML = FullMaxYear;
+    document.getElementById("ansp-list").innerHTML = uniqueOrgNamesString;
+
   // Update ANSP characteristics in the first section 
 
     document.getElementById("ANSP_Full_Name").innerHTML = ANSP_Full_Name.getValue(0, 0);
@@ -2596,6 +2649,15 @@ description: "An overview of financial information and indicators for European A
     } else {
       document.getElementById("paneuropean-context").style.display = "none";
       document.getElementById("ansp-context").style.display = "block";
+    }
+  }
+  
+     // Function to toggle the visibility of the div of the ansps availability
+  function toggleAnspListDiv() {
+    if (SelectedYear === FullMaxYear) {
+      document.getElementById("available-ansps").style.display = "none";
+    } else {
+      document.getElementById("available-ansps").style.display = "block";
     }
   }
   
