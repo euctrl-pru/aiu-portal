@@ -15,6 +15,9 @@ dest_dir_root <- "C:/Users/spi/OneDrive - EUROCONTROL/Download data files"
 #dest_dir_root <- "\\\\ihx-vdm05\\LIVE_var_www_performance$\\data\\download"
 dest_folder <- "csv"
 
+last_month_beg <- today(tzone = "UTC") |> floor_date("month") |> `%m+%`(months(-1))
+
+
 #---------- co2 emissions ----
 export_co2_emissions(wef = "2024-01-01") |>
   arrange(YEAR, MONTH, STATE_NAME) |>
@@ -137,7 +140,7 @@ export_horizontal_flight_efficiency(wef = "2024-01-01") |>
 
 
 #---------- taxi-out additional time ----
-export_taxi_out_additional_time(wef = "2018-01-01") |>
+export_taxi_out_additional_time(wef = "2018-01-01", til = last_month_beg) |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -150,7 +153,7 @@ export_taxi_out_additional_time(wef = "2018-01-01") |>
 
 
 #---------- taxi-in additional time ----
-export_taxi_in_additional_time(wef = "2018-01-01") |>
+export_taxi_in_additional_time(wef = "2018-01-01", til = last_month_beg) |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
@@ -163,7 +166,7 @@ export_taxi_in_additional_time(wef = "2018-01-01") |>
 
 
 #---------- asma additional time ----
-export_asma_additional_time(wef = "2018-01-01") |>
+export_asma_additional_time(wef = "2018-01-01", til = last_month_beg) |>
   arrange(YEAR, MONTH_NUM, STATE_NAME, APT_ICAO) |>
   group_by(YEAR) |> 
   group_walk(~ write_csv(
