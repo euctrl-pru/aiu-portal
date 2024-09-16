@@ -275,7 +275,7 @@ Access information on individual ANSPs cost-effectiveness performance (2017-2022
 </div>
 
 
-<div class="card" ><a href="https://www.eurocontrol.int/publication/high-level-summary-report-preliminary-ace-2023" target="_blank">
+<div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">
   <img class="card-img-top" src="/images/eco/first-look2023.png" alt="First look at 2023 ACE data">
   <div class="card-body"><h5 class="card-title">First look at ANSPs’ 2023 data</h5></a><p class="card-text"></p>
   </div>
