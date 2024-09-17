@@ -125,9 +125,7 @@ description: "An overview of financial information and indicators for European A
 
    <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements.</p>
    <p>You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
-   <div id="available-ansps" style = "display: none;">
-   <p>By default the dashboard is set to display data from the most recent year for which we have a complete set of data from all ANSPs (<span id="year-context"></span>). However, updated financial information for <span id="maxyear-context"></span> is available for the following ANSPs: <span id="ansp-list"></span>.</p>
-   </div>
+   
 
     <div class="flex-container ml-1 mr-1" style=" padding-right: 15px; border-bottom: solid 3px #161b21; 
      padding-top: 10px;">
@@ -144,14 +142,13 @@ description: "An overview of financial information and indicators for European A
      <!-- <p id="ANSP_Name" style= "font-size: 24px; font-weight: bold; border-bottom: solid 3px #161b21; 
      padding-top: 10px; margin-right: 5px">ENAV</p> -->
   
-    <div id="ansp-context">
     <div class="flex-container" style="margin-right: 5px; margin-top:10px">
       
       <div class="Mycolumn mb-2 " ; style="margin-left:15px;">
         <div class="row" style="padding-left: 10px; ">
           <div class="col-12 pl-0" >
             <p id="ANSP_Full_Name" style="font-size: 16px; font-style: italic;"></p>
-            <p id="org_arr_title" style="font-size: 14px; font-weight: bold; margin: 0px;"> </p>
+            <p style="font-size: 14px; font-weight: bold; margin: 0px;">Organisational & Corporate Arrangements:</p>
             <p id="Ownership" style="font-size: 14px; margin: 0px; font-weight: normal"></p>
             <p id="notes" style="font-size: 14px; padding-top: 15px; font-weight: normal; font-style: italic;"></p>
           </div>
@@ -196,18 +193,6 @@ description: "An overview of financial information and indicators for European A
         <!-- <p style="margin: 0px; font-size: 14px;"> Share of total revenue</p> -->
         <!-- <p id="Scorecard_RevenueRatio" ; style="margin: 0px; font-size: 35px; font-weight: bolder;">5.5%</p> -->
       </div>
-    </div>
-    </div>
-    
-    <div id="paneuropean-context">
-    <div class="flex-container" style="margin-right: 5px; margin-top:10px">
-      
-        <div class="row" style="padding-left: 10px; ">
-          <div class="col-12 pl-3" >
-            <p id="paneuropean-notes" style="font-size: 16px; font-style: italic;"></p>
-          </div>
-        </div>
-    </div>
     </div>
     
 <!-- Income statement section -->
@@ -302,20 +287,11 @@ description: "An overview of financial information and indicators for European A
       <div class="Mycolumn" style="display:flex">
         <div class="col-4"  ;
         style="padding-left: 5px; padding-right: 5px; border: solid 2px #002060; border-radius: 5px;">
-          <p id="Title_DebtToEquity" class="ScorecardTitle">Equity ratio 2019</p>
+          <p id="Title_DebtToEquity" class="ScorecardTitle">Debt to equity ratio 2019</p>
           <p id="Scorecard_DebtToEquity" class="Scorecard">-</p>
           <p id="Dif_DebtToEquity" style="margin: 0px; padding-bottom: 5px; font-size: 14px; text-align: center; color:#161b21">
           - in -</p>
         </div>
-        
-        <div class="col-4"  ;
-        style="margin: 0px; margin-left: 15px; padding-left: 15px; border: solid 2px #002060; border-radius: 5px;">
-          <p id="Title_EquityRatioAvg" class="ScorecardTitle">Equity ratio<br>Pan-European avg.</p>
-          <p id="Scorecard_EquityRatioAvg" class="Scorecard">-</p>
-          <p id="Dif_EquityRatioAvg" style="margin: 0px; padding-bottom: 5px; font-size: 14px; text-align: center; color:#161b21">
-          - in -</p>
-        </div>
-
       </div>
     
       <div class="Mycolumn" style="display:flex">
@@ -499,11 +475,8 @@ description: "An overview of financial information and indicators for European A
 
 <script type="text/javascript">
   var Data;
-  var MyViewContext
-  
   var EntityPicker;
   var YearPicker;
-  
   var MyViewANSPServices;
   var MyViewShareTotalRevenue;
   var MyTableShareTotalRevenue;
@@ -549,12 +522,8 @@ description: "An overview of financial information and indicators for European A
   var MyViewTableFreeCash;
   var TransposedTableFreeCash;
 
-  var FullMinYear
-  var FullMaxYear
-  var uniqueOrgNamesString
-  
-  var SelectedEntity = "Pan-European System";
-  var SelectedYear = 2022;
+  var SelectedEntity = "ENAV";
+  var SelectedYear = 2023;
   var MinYear;
   var MaxYear;
   var DataFlag;
@@ -563,7 +532,6 @@ description: "An overview of financial information and indicators for European A
 
   var NatCurrency;
   var XRate;
-  
   var CurrMultiplierString;
   var CurrMultiplier;
   var MyPattern;
@@ -579,7 +547,7 @@ description: "An overview of financial information and indicators for European A
 
   function Initialisation() {
     var query = new google.visualization.Query(
-      "https://docs.google.com/spreadsheets/d/1ZzggKApomo82nPkXmlQhvgv7AY1nE4RhpN83q3hbwzM/edit?usp=sharing&sheet=Copy_of_2020_Data_with_Pan_European"
+      "https://docs.google.com/spreadsheets/d/1ZzggKApomo82nPkXmlQhvgv7AY1nE4RhpN83q3hbwzM/edit?usp=sharing&sheet=2020_Data"
     );
 
     query.send(drawDashboard);
@@ -621,10 +589,6 @@ description: "An overview of financial information and indicators for European A
 
     function changeEntityPicker() {
       SelectedEntity = EntityPicker.getState().selectedValues[0];
-      
-      // Call the toggleContextDivs function to handle the div visibility
-      toggleContextDivs();
-      
       UpdateMyANSPServices();
       UpdateMyShareTotalRevenue();
       UpdateMyCurrencyParameters();
@@ -685,11 +649,9 @@ description: "An overview of financial information and indicators for European A
     UpdateMyTableCash();
     UpdateMyTableFreeCash();
     
-   };
-   
-   toggleAnspListDiv();
+   }
   
-    //---------------------------MyChart/Table initialization ---------------------------------------------
+    //---------------------------MyChart/TableX initialization ---------------------------------------------
     MyPieShareRevenue = new google.visualization.PieChart(document.getElementById("MyPieShareRevenue_div"));
 
     MyChartIncome1 = new google.visualization.ComboChart(document.getElementById("MyChartIncome1_div"));
@@ -728,44 +690,8 @@ description: "An overview of financial information and indicators for European A
     UpdateTitles();
   }
 
-
      //---------------------------Services table ---------------------------------------------
  function UpdateMyANSPServices() {
-    // I shouldn't add this here but i don't want to create a nother function
-    MyViewContext =  new google.visualization.DataView(Data);
-    MyViewContext.setColumns([0,1]);
-    
-    var mynumberOfRows = MyViewContext.getNumberOfRows(); // Get the total number of rows
-    var uniqueOrgNames = new Set(); // Use a Set to store unique ANSP names
-    FullMaxYear = 0;
-     
-    // here we find the max year
-    for (var i = 0; i < mynumberOfRows; i++) {
-      var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (year)
-
-    // find the maximum year in the data table
-      if (FullMaxYear === null || year > FullMaxYear) {
-        FullMaxYear = year; // Update the maxYear if the current year is larger
-      }
-    }
-    
-    // and here the list of ansps for the max year
-    for (var i = 0; i < mynumberOfRows; i++) {
-      var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (years)
-      var orgName = MyViewContext.getValue(i, 1); // Get the value in the 1st column (organization names)
-      
-      if (year === FullMaxYear) {
-        uniqueOrgNames.add(orgName); // Add organization name if the year equals maxYear
-      }
-    }
-    
-   // Convert the Set to an array, then to a string separated by commas (or any other separator)
-    var uniqueOrgNamesArray = Array.from(uniqueOrgNames).sort(); // Sort alphabetically
-    uniqueOrgNamesString = uniqueOrgNamesArray.join(", ");
-    
-   
-
-    // This below was the original function to get the ansp services
     MyViewANSPServices = new google.visualization.DataView(Data);
     MyViewANSPServices.setRows(
       Data.getFilteredRows([{ column: 0, value: SelectedYear }, { column: 1, value: SelectedEntity }])
@@ -1647,23 +1573,7 @@ description: "An overview of financial information and indicators for European A
     MyViewBalance2.setRows(
       Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
-    MyViewBalance2.setColumns([0, 21, 22, 
-                              {
-                              calc: "stringify", 
-                              sourceColumn: 22, 
-                              type: "string", 
-                              role: "annotation"
-                              }, 
-                              66,
-                              { 
-                              calc: "stringify", 
-                              sourceColumn: 66, 
-                              type: "string", 
-                              role: "annotation"
-                              },
-                              66
-                              
-                      ]);
+    MyViewBalance2.setColumns([0, 21, 22, { calc: "stringify", sourceColumn: 22, type: "string", role: "annotation"}]);
 
     var optionsMyChartBalance2 = {
       // title: SelectedEntity,
@@ -1672,42 +1582,19 @@ description: "An overview of financial information and indicators for European A
       height: 326,
       pointSize: 3,
       backgroundColor: "#e4e8ed",
-      
       series: {
         0: {
-          labelInLegend: 'Cash & cash equivalents',
           type: "bars",
           color: "#002060",
           targetAxisIndex: 0,
         },
         1: {
-          labelInLegend: 'Cash-on-hand days',
           type: "line",
           color: "#00895e",
           lineWidth: 3,
           pointSize: 8,
           targetAxisIndex: 1
         },
-        2: {
-          labelInLegend: '\u00A0\u00A0\u00A0\u00A0\u00A0', //to force the legend onto the next line
-          type: "line",
-          color: "#0072e3",
-          lineWidth: 0,
-          pointSize: 0,
-          targetAxisIndex: 1,
-          visibleInLegend: true
-        },
-        3: {
-          labelInLegend: 'Cash-on-hand Pan-European unweighted average',
-          type: "line",
-          color: "#0072e3",
-          lineWidth: 3,
-          pointSize: 5,
-          targetAxisIndex: 1,
-          lineDashStyle: [4, 4],
-          visibleInLegend: true
-        },
-
       },
       hAxis: {
         format: "####",
@@ -1732,11 +1619,9 @@ description: "An overview of financial information and indicators for European A
           minValue: 0,
         }
       },
-      
       legend: {
-        maxLines: 2,
-        position: "top",
-        alignment: "left",
+        position: "bottom",
+        alignment: "center",
         textStyle: { color: "#595959", fontSize: 12 }
       },
       animation: {
@@ -1745,8 +1630,7 @@ description: "An overview of financial information and indicators for European A
       },
       chartArea: {
         //   left: 40,
-        bottom: 30,
-        top: 70,
+        bottom: 50,
         width: "75%",
         height: "70%"
       }
@@ -1823,10 +1707,7 @@ description: "An overview of financial information and indicators for European A
       Data.getFilteredRows([{ column: 1, value: SelectedEntity }])
     );
     MyViewBalance3.setColumns([0, 14, 17,
-     20, { calc: "stringify", sourceColumn: 20, type: "string", role: "annotation" },
-     64, { calc: "stringify", sourceColumn: 64, type: "string", role: "annotation" },
-     62  // for the equity ratio average scorecard
-     ]);
+     20, { calc: "stringify", sourceColumn: 20, type: "string", role: "annotation" }]);
 
     var optionsMyChartBalance3 = {
       // title: SelectedEntity,
@@ -1835,13 +1716,11 @@ description: "An overview of financial information and indicators for European A
       backgroundColor: "#e4e8ed",
       series: {
         0: {
-          labelInLegend: 'Current assets',
           type: "bars",
           color: "#161b21",
           targetAxisIndex: 0
         },
         1: {
-          labelInLegend: 'Current liabilities',
           type: "bars",
           color: "#00b0df",
           targetAxisIndex: 0
@@ -1852,20 +1731,7 @@ description: "An overview of financial information and indicators for European A
           lineWidth: 3,
           pointSize: 8,
           targetAxisIndex: 1
-        },
-        3: {
-          labelInLegend: 'Current Ratio Pan-European unweighted average',
-          type: "line",
-          color: "#0072e3",
-          lineWidth: 3,
-          pointSize: 5,
-          targetAxisIndex: 1,
-          lineDashStyle: [4, 4],
-          visibleInLegend: true
-        },
-        4: {
-          visibleInLegend: false
-        },
+        }
       },
       hAxis: {
         format: "####",
@@ -1893,19 +1759,18 @@ description: "An overview of financial information and indicators for European A
         }
       },
       legend: {
-        maxLines: 2,
-        alignment: "left",
+        position: "bottom",
+        alignment: "center",
         textStyle: { color: "#595959", fontSize: 12 }
       },
       animation: {
         duration: 200,
         easing: "inAndOut"
       },
-      height: 385,
+      height: 345,
       chartArea: {
-        //   left: 40, 
-        bottom: 30,
-        top: 60,
+        //   left: 40,
+        //   top: 40,
         width: "75%",
         height: "70%"
       }
@@ -2447,20 +2312,12 @@ description: "An overview of financial information and indicators for European A
     Internal_MET.className = CheckClass[3];
     Airports.className = CheckClass[4];
 
-  // Update text in intro 
-
-    document.getElementById("year-context").innerHTML = FullMaxYear-1;
-    document.getElementById("maxyear-context").innerHTML = FullMaxYear;
-    document.getElementById("ansp-list").innerHTML = uniqueOrgNamesString;
-
   // Update ANSP characteristics in the first section 
 
     document.getElementById("ANSP_Full_Name").innerHTML = ANSP_Full_Name.getValue(0, 0);
     document.getElementById("ANSP_logo").innerHTML = '<img src="ANSP_logos/' + SelectedEntity + '.png" style="height:40px; margin-bottom:5px">';
     document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
     document.getElementById("notes").innerHTML = MyViewANSPServices.getValue(0, 6);
-    document.getElementById("paneuropean-notes").innerHTML = MyViewANSPServices.getValue(0, 6);
-    document.getElementById("org_arr_title").innerHTML = (SelectedEntity != "Pan-European System") ? "Organisational & Corporate Arrangements:" : "" ;
     document.getElementById("MyTitleShareRevenue_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
     // document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
 
@@ -2471,11 +2328,9 @@ description: "An overview of financial information and indicators for European A
     document.getElementById("Title_Revenue").innerHTML = "Revenue " + SelectedYear + "";
     document.getElementById("Title_OPEX").innerHTML = " " + SelectedYear;
     document.getElementById("Title_LiabilitiesEquity").innerHTML = 'Liabilites & Equity - ' + SelectedYear;
-    document.getElementById("Title_DebtToEquity").innerHTML = "Equity ratio<br>" + SelectedYear + "";
-    document.getElementById("Title_EquityRatioAvg").innerHTML = "Eq. ratio Pan-European unweighted avg. " + SelectedYear + "";
-    document.getElementById("Title_CurrentRatio").innerHTML = "Current ratio<br>" + SelectedYear + "";
-    
-    document.getElementById("Title_DaysOPEX").innerHTML = "Cash-on-hand days<br>" + SelectedYear + "";
+    document.getElementById("Title_DebtToEquity").innerHTML = "Equity ratio " + SelectedYear + "";
+    document.getElementById("Title_CurrentRatio").innerHTML = "Current ratio " + SelectedYear + "";
+    document.getElementById("Title_DaysOPEX").innerHTML = "Cash-on-hand days " + SelectedYear + "";
     document.getElementById("Title_NetCashFlow").innerHTML = "Net cash flow " + SelectedYear + "";
     document.getElementById("Title_NetInvestment").innerHTML = "Investing activities " + SelectedYear + "";
     document.getElementById("income_title").innerHTML = "Income Statement (" + SelectedEntity + ")";
@@ -2523,10 +2378,6 @@ description: "An overview of financial information and indicators for European A
     var Scorecard_DebtToEquity = Math.round(Scorecard_Equity / Scorecard_LiabEqui * 100) / 100;
     var Dif_DebtToEquity = (SelectedYear == MinYear) ? "-" : Math.round((TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 4, SelectedYear - MinYear))/ TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 1, SelectedYear - MinYear) * 100) / 100;
 
-    var Scorecard_EquityRatioAvg =  Math.round(MyViewBalance3.getValue(SelectedYear - MinYear, 7)*100)/100;
-    var Dif_EquityRatioAvg = (SelectedYear == MinYear) ? "-" :  Math.round(MyViewBalance3.getValue(SelectedYear - MinYear -1, 7)*100)/100;
-
-
     var Scorecard_DaysOPEX = Math.round(MyViewBalance2.getValue(SelectedYear - MinYear, 2));
     var Dif_DaysOPEX = (SelectedYear == MinYear) ? "-" : Math.round(MyViewBalance2.getValue(SelectedYear - MinYear -1, 2))
 
@@ -2571,10 +2422,6 @@ description: "An overview of financial information and indicators for European A
     document.getElementById("Dif_OPEX").innerHTML = (SelectedYear == MinYear) ? "" : Dif_OPEX + "% vs. " + (SelectedYear - 1);
     document.getElementById("Scorecard_DebtToEquity").innerHTML = String(Scorecard_DebtToEquity).replace(/(.)(?=(\d{3})+$)/g, '$1,');
     document.getElementById("Dif_DebtToEquity").innerHTML = (SelectedYear == MinYear) ? "" : String(Dif_DebtToEquity) + " in " + (SelectedYear-1);
-
-    document.getElementById("Scorecard_EquityRatioAvg").innerHTML = String(Scorecard_EquityRatioAvg).replace(/(.)(?=(\d{3})+$)/g, '$1,');
-    document.getElementById("Dif_EquityRatioAvg").innerHTML = (SelectedYear == MinYear) ? "" : String(Dif_EquityRatioAvg) + " in " + (SelectedYear-1);
-
     document.getElementById("Scorecard_CurrentRatio").innerHTML = String(Scorecard_CurrentRatio);
     document.getElementById("Dif_CurrentRatio").innerHTML = (SelectedYear == MinYear) ? "" : String(Dif_CurrentRatio) + " in " + (SelectedYear - 1);
     document.getElementById("Scorecard_DaysOPEX").innerHTML = String(Scorecard_DaysOPEX);
@@ -2636,29 +2483,4 @@ description: "An overview of financial information and indicators for European A
 
   //   MyChartCash3.setSelection([{ row: MySelectedRow }]);
   // }
-  
-  window.onload = function () {
-    toggleContextDivs();
-  };
-  
-   // Function to toggle the visibility of the divs based on the selected entity
-  function toggleContextDivs() {
-    if (SelectedEntity === "Pan-European System") {
-      document.getElementById("paneuropean-context").style.display = "block";
-      document.getElementById("ansp-context").style.display = "none";
-    } else {
-      document.getElementById("paneuropean-context").style.display = "none";
-      document.getElementById("ansp-context").style.display = "block";
-    }
-  }
-  
-     // Function to toggle the visibility of the div of the ansps availability
-  function toggleAnspListDiv() {
-    if (SelectedYear === FullMaxYear) {
-      document.getElementById("available-ansps").style.display = "none";
-    } else {
-      document.getElementById("available-ansps").style.display = "block";
-    }
-  }
-  
 </script>
