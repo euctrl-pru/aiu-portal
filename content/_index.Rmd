@@ -4,9 +4,19 @@ description: "The portal provides insights into various aviation performance are
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
+<style>
+	marquee {
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+</style>
 <marquee width="100%" direction="left" loop="3" bgcolor="LightGrey"><strong>July 2024: New!!!</strong> Download version 2 of our  EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day.</marquee><section class="content-space bg-light">
+
 <script type="text/javascript">async function fetchLatestNetworkSituation(){const a='https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1';try{const b=await fetch(a);if(!b.ok)throw new Error(`API call failed: ${b.status}`);const c=await b.json();return c.items[0]}catch(a){return console.error("Failed to fetch latest network situation:",a),null}}async function updateNetworkSituationOnPage(){const a=await fetchLatestNetworkSituation();if(a){const b=new Date(a.date),j=b.getFullYear(),e=b.getMonth(),f=new Date;f.setDate(b.getDate()-6);const l=f.getMonth(),i=e==0?`1`:`1 Jan`,d=`${(''+b.getDate()).slice(-2)} ${b.toLocaleString('default',{month:'long'})} ${j}`,c=`${d}`,h=`${i} - ${d}`,k=e==l?`${(''+b.getDate()).slice(-2)-6}`:`${(''+b.getDate()).slice(-2)-6} ${b.toLocaleString('default',{month:'long'})}`,g=`${k} - ${d}`;document.getElementById("day_text_title").innerHTML=c,document.getElementById("day_text").innerHTML=c,document.getElementById("week_text").innerHTML=g,document.getElementById("y2d_text").innerHTML=h,document.getElementById("day_traffic").innerHTML=Math.round(a.day_traffic).toLocaleString(),document.getElementById("week_traffic").innerHTML=Math.round(a.avg_week_traffic).toLocaleString(),document.getElementById("y2d_traffic").innerHTML=Math.round(a.y2d_flights_total).toLocaleString(),document.getElementById("avg_y2d_traffic").innerHTML=Math.round(a.y2d_flights_daily_average).toLocaleString(),document.getElementById("dif_y2d_2019").innerHTML=(a.y2d_diff_2019_year_percentage>0?'+':'')+Math.round(a.y2d_diff_2019_year_percentage*100)+'%',document.getElementById("dif_y2d_prev_year").innerHTML=(a.y2d_diff_previous_year_percentage>0?'+':'')+Math.round(a.y2d_diff_previous_year_percentage*100)+'%',document.getElementById("dif_day_prev_week").innerHTML=(a.dif_day_prev_week>0?'+':'')+Math.round(a.dif_day_prev_week*100)+'%',document.getElementById("dif_day_prev_year").innerHTML=(a.dif_day_prev_year>0?'+':'')+Math.round(a.dif_day_prev_year*100)+'%',document.getElementById("dif_day_2019").innerHTML=(a.dif_day_2019>0?'+':'')+Math.round(a.dif_day_2019*100)+'%',document.getElementById("dif_week_prev_week").innerHTML=(a.dif_week_prev_week>0?'+':'')+Math.round(a.dif_week_prev_week*100)+'%',document.getElementById("dif_week_prev_year").innerHTML=(a.dif_week_prev_year>0?'+':'')+Math.round(a.dif_week_prev_year*100)+'%',document.getElementById("dif_week_2019").innerHTML=(a.dif_week_2019>0?'+':'')+Math.round(a.dif_week_2019*100)+'%';const m=c;document.getElementById("day_delay_text").innerHTML=m,document.getElementById("week_delay_text").innerHTML=g,document.getElementById("y2d_delay_text").innerHTML=h,document.getElementById("day_delay").innerHTML=Math.round(a.day_delay).toLocaleString(),document.getElementById("avg_week_delay").innerHTML=Math.round(a.avg_week_delay).toLocaleString(),document.getElementById("y2d_delay_daily_average").innerHTML=Math.round(a.y2d_delay_daily_average).toLocaleString(),document.getElementById("day_delay_flight").innerHTML=a.day_traffic==0?0:Math.round(a.day_delay/a.day_traffic*100)/100,document.getElementById("week_delay_flight").innerHTML=a.avg_week_traffic==0?0:Math.round(a.avg_week_delay/a.avg_week_traffic*100)/100,document.getElementById("y2d_delay_flight").innerHTML=a.y2d_flights_total==0?0:Math.round(a.y2d_delay_total/a.y2d_flights_total*100)/100,document.getElementById("dif_day_delay_prev_year_perc").innerHTML=(a.dif_day_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_day_delay_prev_year_perc*100)+'%',document.getElementById("dif_day_delay_2019_perc").innerHTML=(a.dif_day_delay_2019_perc>0?'+':'')+Math.round(a.dif_day_delay_2019_perc*100)+'%',document.getElementById("dif_week_delay_prev_year_perc").innerHTML=(a.dif_week_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_week_delay_prev_year_perc*100)+'%',document.getElementById("dif_week_delay_2019_perc").innerHTML=(a.dif_week_delay_2019_perc>0?'+':'')+Math.round(a.dif_week_delay_2019_perc*100)+'%',document.getElementById("dif_y2d_delay_prev_year_perc").innerHTML=(a.dif_y2d_delay_prev_year_perc>0?'+':'')+Math.round(a.dif_y2d_delay_prev_year_perc*100)+'%',document.getElementById("dif_y2d_delay_2019_perc").innerHTML=(a.dif_y2d_delay_2019_perc>0?'+':'')+Math.round(a.dif_y2d_delay_2019_perc*100)+'%'}else console.log("No data available to update the network situation.")}</script>
 <script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
+
+
 <div class="container">
 <div class="row">
 <div class="col-md-8">
@@ -331,7 +341,7 @@ fullpage: true
 <img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Launched: PRC Data Challenge">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Launched: PRC Data Challenge</a></h5>
+<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Ongoing: PRC Data Challenge</a></h5>
 <small><b>Compete in the PRC Data Challenge</b> by developing a machine learning algorithm to estimate the Actual Take-Off Weight <b>and win your share of the 5000 EUR prize pot!</b> <br><br>This competition is organized by the independent <a href="/about/prc">Performance Review Commission (PRC)</a> in collaboration with the <a href="https://opensky-network.org/">OpenSky Network</a>.</small>
 </div>
 <div class="card-footer pt-0">
@@ -342,7 +352,63 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
+<a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">
+<img src="/images/eco/first-look2023-news.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="ATM Cost-Effectiveness (ACE): First look at ANSPs' 2023 data">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">Published: First look at ANSPs' 2023 ACE data</a></h5>
+<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> is publishing <b>first insights into the 2023 cost-effectiveness performance at pan-European ATM system level</b>.<br><br> This document, based on data which has not yet been validated, gives a preliminary view on trends and findings that will be developed in forthcoming ACE publications.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://opdi.aero" target="_blank">
+<img src="/images/landing/opdi_v2_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: PRC Open Performance Data Initiative (OPDI)">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://opdi.aero" target="_blank">Released: PRC Open Performance Data Initiative (OPDI)</a></h5>
+<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> launches the <b>second iteration of the Open Performance Data Initiative</b>. The initiative provides open aviation data supporting ATM science and research.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://opdi.aero" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://symposium.opensky-network.org/" target="_blank">
+<img src="/images/landing/osn_symposium2024.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Announced: OpenSky Network Symposium">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://symposium.opensky-network.org/" target="_blank">Announced: OpenSky Network Symposium</a></h5>
+<small>The <b>12th OpenSky Symposium</b> will take place on <b>7 and 8 November 2024 in Hamburg</b>, Germany. The symposium is a forum to discuss new ideas, the <a href="https://opensky-network.org/">OpenSky Network</a> itself, and research activities using OSN (crowd-sourced ADS-B) data. <br><br>The OpenSky Symposium is organized in collaboration with the independent <a href="/about/prc">Performance Review Commission (PRC)</a>.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://symposium.opensky-network.org/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
 <img src="/images/landing/2024-07-31_app_v2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL DATA app - Version 2.0">
 </a>
 <div style="padding: 1rem;">
@@ -359,49 +425,6 @@ fullpage: true
 </div>
 </div>
 
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">
-<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Update: Aviation Intelligence Portal">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Update: Aviation Intelligence Portal Anniversary</a></h5><small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="/2024/08/16/2024-08-16-rn/#/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">
-<img src="/images/landing/2024-07-09_DS45_long_term_performance.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #45 Long term-perspective on ANS performance">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" target="_blank">Published: Data Snapshot #45</a></h5>
-<small><b>Our 45th EUROCONTROL Data Snapshot takes a long-term view on ANS performance.</b> <br><br>A long-term analysis of Air Navigation Services (ANS) provision costs, flight hours controlled and en-route air traffic flow management (ATFM) delays shows some interesting trends and different cycles – even before the COVID-19 pandemic hit in 2020.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">
-<img src="/images/landing/2024-07-25_DS46_average_flight.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: Data Snapshot #46 Further, higher, bigger...">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" target="_blank">Published: Data Snapshot #46</a></h5>
-<small><b>Our 46th EUROCONTROL Data Snapshot on the average flight in the EUROCONTROL area.</b> <br><br>What does an ‘average flight’ look like in the EUROCONTROL area? And, more importantly, if we look at how it has changed over the last five years, what does it tell us about overall aviation trends?</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
@@ -410,7 +433,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>July 2024 data available for download now!</small>
+<small>August 2024 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>

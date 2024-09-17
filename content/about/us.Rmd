@@ -8,7 +8,7 @@ source(here::here("_common.R"))
 ```
 Since its creation in 1998, the Performance Review Unit (PRU) has been responsible for monitoring and reviewing the performance of the European Air Traffic Management (ATM) System across a number of key performance areas and supports the independent [Performance Review Commission (PRC)](/about/prc/) in carrying out its tasks and work programme with the appropriate level of independence. 
 
-The PRU is part of EUROCONTROL's Aviation Intelligence & Performance Review Unit which administratively reporting to the Directorate European Civil-Military Aviation (DECMA). 
+The PRU is part of EUROCONTROL’s Aviation Intelligence Unit (AIU) which is administratively reporting to the European Green Sky Directorate (EGSD).
 
 The unit provides independent collection and validation of ANS performance-related data, intelligence gathering, performance analysis, ad-hoc reports and studies to contribute to performance improvements of European ANS. In performing its tasks, the PRU maintains transparent working arrangements with service providers, airspace user organisations and the industry.
 

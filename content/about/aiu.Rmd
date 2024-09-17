@@ -1,0 +1,56 @@
+---
+title: "Aviation Intelligence Unit"
+description: "Learn more about the Aviation Intelligence Unit, and our functions."
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+
+The Aviation Intelligence Unit (AIU) is part of the European Green Sky Directorate of EUROCONTROL. It was created in 2021? with the main mission of leveraging EUROCONTROL data and analytical insights for the benefit of our stakeholders.
+
+
+The tasks of the Aviation Intelligence Unit are:
+
+* For our stakeholders:
+  * Provide insightful, authoritative and timely forecasts, data, operational analysis and other aviation intelligence to decision makers.
+  * Monitor and review the performance of the European ANS System in support of the Performance Review Commission (PRC).
+  * Support the EU, its institutions, agencies and bodies on performance and charging matters.
+
+<div> </div>
++ Within EUROOCONTROL:
+  + Provide advice to the Director General on all matters relating to EUROCONTROL’s data and analytical insights.
+  + Ensure Agency-wide data and information consistency, management, publication and marketing.
+  + Coordinate responses to requests for data and information.
+
+<div class = "row">
+
+<div class = "col-md-6">
+The AIU is organised as follows:
+
+* The Economic and Operational Performance Review services make up the [Performance Review Unit (PRU)](/about/us).
+
+* The Business Intelligence Unit is composed of 3 sections:
+
+  + [Statistics and Forecasts (STATFOR)](https://www.eurocontrol.int/forecasting): responsible for providing forecasts and aviation intelligence to decision-makers to help them understand and manage risks, identify bottlenecks and anticipate the needs of airspace users.
+
+  + Central Office for Delay Analysis (CODA): responsible for analysing all-causes delays, interacting with airports and aircraft operators, and providing punctuality and cancellation statistics .
+
+  + Cost Benefit Analysis: responsible for coordinating and developing business cases, both forward-looking and in review, for projects from research to industrialisation.
+
+* The Data and Digital Products section (DDP): responsible for the development, publication & marketing of AIU digital products.
+
+</div>
+
+<div class = "col-md-6">
+<br>
+
+<img src="/images/aiu-organigram.png" alt="AIU organigram">
+
+</div>
+</div>
+
+For feedback or questions please contact us at:
+[Aviation Intelligence Unit](mailto:aviation.intelligence@eurocontrol.int)
+(aviation.intelligence@eurocontrol.int).
+

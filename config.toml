@@ -363,6 +363,11 @@ ignoreFiles = [
     url = "/transformation/"
     parent = "links"
     weight = 6
+  [[menu.main]]
+    name = "PRC Open Performance Data Initiative"
+    url = "https://opdi.aero"
+    parent = "links"
+    weight = 7
   
     
  [[menu.main]]
@@ -377,23 +382,29 @@ ignoreFiles = [
     identifier = "prc"   
     weight = 1
   [[menu.main]]
+    name = "About the AIU"
+    url = "/about/aiu/"
+    identifier = "aiu-page"
+    parent = "about"
+    weight = 2
+  [[menu.main]]
     name = "About the PRU"
     url = "/about/us/"
     identifier = "pru"
     parent = "about"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Release notes"
     url = "/post/"
     identifier = "release"
     parent = "about"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Disclaimer"
     url = "/about/disclaimer/"
     identifier = "disclaimer"
     parent = "about"
-    weight = 4
+    weight = 5
     
 
 
