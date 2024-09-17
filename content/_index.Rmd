@@ -341,7 +341,7 @@ fullpage: true
 <img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Launched: PRC Data Challenge">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Launched: PRC Data Challenge</a></h5>
+<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Ongoing: PRC Data Challenge</a></h5>
 <small><b>Compete in the PRC Data Challenge</b> by developing a machine learning algorithm to estimate the Actual Take-Off Weight <b>and win your share of the 5000 EUR prize pot!</b> <br><br>This competition is organized by the independent <a href="/about/prc">Performance Review Commission (PRC)</a> in collaboration with the <a href="https://opensky-network.org/">OpenSky Network</a>.</small>
 </div>
 <div class="card-footer pt-0">
@@ -357,7 +357,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">Published: First look at ANSPs' 2023 ACE data</a></h5>
-<small>The PRU is publishing <b>first insights into the 2023 cost-effectiveness performance</b> at pan-European ATM system level. This data has not yet been validated and may differ from later ACE publications.</small>
+<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> is publishing <b>first insights into the 2023 cost-effectiveness performance at pan-European ATM system level</b>.<br><br> This document, based on data which has not yet been validated, gives a preliminary view on trends and findings that will be developed in forthcoming ACE publications.</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
@@ -365,9 +365,50 @@ fullpage: true
 </div>
 </div>
 
+
+
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
+<a href="https://opdi.aero" target="_blank">
+<img src="/images/landing/opdi_v2_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: PRC Open Performance Data Initiative (OPDI)">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://opdi.aero" target="_blank">Released: PRC Open Performance Data Initiative (OPDI)</a></h5>
+<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> launches the <b>second iteration of the Open Performance Data Initiative</b>. The initiative provides open aviation data supporting ATM science and research.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://opdi.aero" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://symposium.opensky-network.org/" target="_blank">
+<img src="/images/landing/osn_symposium2024.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Announced: OpenSky Network Symposium">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://symposium.opensky-network.org/" target="_blank">Announced: OpenSky Network Symposium</a></h5>
+<small>The <b>12th OpenSky Symposium</b> will take place on <b>7 and 8 November 2024 in Hamburg</b>, Germany. The symposium is a forum to discuss new ideas, the <a href="https://opensky-network.org/">OpenSky Network</a> itself, and research activities using OSN (crowd-sourced ADS-B) data. <br><br>The OpenSky Symposium is organized in collaboration with the independent <a href="/about/prc">Performance Review Commission (PRC)</a>.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://symposium.opensky-network.org/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
 <img src="/images/landing/2024-07-31_app_v2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL DATA app - Version 2.0">
 </a>
 <div style="padding: 1rem;">
@@ -384,19 +425,6 @@ fullpage: true
 </div>
 </div>
 
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">
-<img src="/images/landing/10yr-aniversary.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Update: Aviation Intelligence Portal">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="/2024/08/16/2024-08-16-rn/#/" target="_blank">Update: Aviation Intelligence Portal Anniversary</a></h5><small>The Aviation Intelligence Portal exists for <b>10 years</b>! <br><br>In order to commemorate this milestone, the portal has received <b>a new modern layout and an improved navigation menu</b>.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="/2024/08/16/2024-08-16-rn/#/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
@@ -405,7 +433,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>July 2024 data available for download now!</small>
+<small>August 2024 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
