@@ -132,10 +132,10 @@ alt_query <- "
     DAYS_IN_PERIOD
   CROSS JOIN LATERAL (
     SELECT
+      NVL(T.FLIGHT_DATE, D.FLIGHT_DATE) AS FLT_DATE,
       APT_ICAO,
       PRU_APT_NAME                      AS APT_NAME,
       CASE PRU_STATE_NAME WHEN 'Turkey' THEN 'Türkiye' ELSE PRU_STATE_NAME END STATE_NAME,
-      NVL(T.FLIGHT_DATE, D.FLIGHT_DATE) AS FLT_DATE,
       NVL(TTF_ARR, 0)                   AS FLT_ARR_1,
       NVL(TDM_ARP_ARR, 0)               AS DLY_APT_ARR_1,
       NVL(TDM_ARP_ARR_A, 0)             AS DLY_APT_ARR_A_1,
