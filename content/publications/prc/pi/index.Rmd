@@ -8,6 +8,23 @@ tags:  PRC Performance Insights
 
 ## 2024
 
+<!-- OBS#2 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? ][OBS2]</h5>
+<small><strong><p style="color:#808080">Published: 11 October 2024</p></strong></small>
+    
+The Performance Review Commission (PRC) takes a look at the poor capacity performance in Summer 2024 in Europe, contributing factors, and actions to be taken to mitigate high delays over the coming years. <br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-pbserver-2-summer-2024-capacity-performance" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-pbserver-2-summer-2024-capacity-performance"  target="_blank"><img src="/images/pi/prc_obs2.PNG" alt="PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? " style="width:100%"></a></div>
+</div>
+</div></div>
+
+
 <!-- OBS#1 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -207,3 +224,4 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 
 
 [OBS1]: https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green "PRC Observer #1 - How can we make aviation green?"
+[OBS2]: https://www.eurocontrol.int/publication/prc-pbserver-2-summer-2024-capacity-performance "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
