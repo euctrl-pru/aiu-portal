@@ -355,15 +355,15 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://symposium.opensky-network.org/" target="_blank">
-<img src="/images/landing/osn_symposium2024.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Announced: OpenSky Network Symposium">
+<a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" target="_blank">
+<img src="/images/landing/2024_10_statfor.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Out soon: New STATFOR 7-year forecast">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://symposium.opensky-network.org/" target="_blank">Announced: OpenSky Network Symposium</a></h5>
-<small>The <b>12th OpenSky Symposium</b> will take place on <b>7 and 8 November 2024 in Hamburg</b>, Germany. The symposium is a forum to discuss new ideas, the <a href="https://opensky-network.org/">OpenSky Network</a> itself, and research activities using OSN (crowd-sourced ADS-B) data. <br><br>The OpenSky Symposium is organized in collaboration with the independent <a href="/about/prc">Performance Review Commission (PRC)</a>.</small>
+<h5><a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" target="_blank"> Coming soon: New STATFOR 7-year forecast</a></h5>
+<small>Get ready - our new STATFOR 7-year forecast will be available on Tuesday 15. October 2024!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://symposium.opensky-network.org/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
