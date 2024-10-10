@@ -36,7 +36,7 @@ The AIU is organised as follows:
 
   + Central Office for Delay Analysis (CODA): responsible for analysing all-causes delays, interacting with airports and aircraft operators, and providing punctuality and cancellation statistics .
 
-  + Cost Benefit Analysis: responsible for coordinating and developing business cases, both forward-looking and in review, for projects from research to industrialisation.
+  + Business Cases: responsible for coordinating and developing cost benefit analyses for projects from research to industrialisation.
 
 * The Data and Digital Products section (DDP): responsible for the development, publication & marketing of AIU digital products.
 
