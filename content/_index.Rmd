@@ -4,20 +4,20 @@ description: "The portal provides insights into various aviation performance are
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
-<style>
-	marquee {
-		margin: 0;
-		padding: 0;
-		display: block;
-	}
-</style>
-<marquee width="100%" direction="left" loop="3" bgcolor="LightGrey"><strong>July 2024: New!!!</strong> Download version 2 of our  EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day.</marquee><section class="content-space bg-light">
+<!-- <style> -->
+<!-- 	marquee { -->
+<!-- 		margin: 0; -->
+<!-- 		padding: 0; -->
+<!-- 		display: block; -->
+<!-- 	} -->
+<!-- </style> -->
+<!-- <marquee width="100%" direction="left" loop="3" bgcolor="LightGrey"><strong>July 2024: New!!!</strong> Download version 2 of our  EUROCONTROL DATA app (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) which now provides a new State view for each of the 41 EUROCONTROL Member States. This application allows you to get in your pocket the very latest European aviation network data, up to date to the previous day.</marquee><section class="content-space bg-light"> -->
 
 <script type="text/javascript" src="javascript/network_situation.js" ></script>
 <script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
 
 
-<div class="container">
+<div class="container mt-4">
 <div class="row">
 <div class="col-md-8">
 <h4><span>Network status on </span> <span id="day_text_title"></span></h4>
@@ -350,39 +350,6 @@ fullpage: true
 </div>
 </div>
 
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">
-<img src="/images/eco/first-look2023-news.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="ATM Cost-Effectiveness (ACE): First look at ANSPs' 2023 data">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">Published: First look at ANSPs' 2023 ACE data</a></h5>
-<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> is publishing <b>first insights into the 2023 cost-effectiveness performance at pan-European ATM system level</b>.<br><br> This document, based on data which has not yet been validated, gives a preliminary view on trends and findings that will be developed in forthcoming ACE publications.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://opdi.aero" target="_blank">
-<img src="/images/landing/opdi_v2_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: PRC Open Performance Data Initiative (OPDI)">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://opdi.aero" target="_blank">Released: PRC Open Performance Data Initiative (OPDI)</a></h5>
-<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> launches the <b>second iteration of the Open Performance Data Initiative</b>. The initiative provides open aviation data supporting ATM science and research.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://opdi.aero" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
 
 
 
@@ -400,10 +367,6 @@ fullpage: true
 </div>
 </div>
 </div>
-
-
-
-
 
 
 <div class="carousel-item">
