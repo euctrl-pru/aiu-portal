@@ -355,15 +355,15 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" target="_blank">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030-autumn-update" target="_blank">
 <img src="/images/landing/2024_10_statfor.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Out soon: New STATFOR 7-year forecast">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" target="_blank"> Coming soon: Updated STATFOR 7-year forecast</a></h5>
-<small>Get ready - our <b>updated STATFOR 7-year forecast</b> will be <b>available on Tuesday 15. October 2024!</b> It will include the latest flight trends, route patterns and GDP forecasts.</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030-autumn-update" target="_blank"> Available now: Updated STATFOR 7-year forecast</a></h5>
+<small>Our <b>updated Seven-Year Forecast (Autumn 2024)</b> builds on the February 2024 publication and <b>incorporates the latest flight trends and route patterns</b> (including summer 2024). It also includes a partial update of forecast inputs, such as the GDP forecast.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/forecasting/medium-term-forecasts" class="card-link" target="_blank">Watch this space..</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030-autumn-update" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
