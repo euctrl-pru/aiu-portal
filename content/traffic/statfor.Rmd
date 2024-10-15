@@ -48,7 +48,7 @@ date: '2020-05-15'
 }
 </style>
 
-The figure below presents the EUROCONTROL 7-year forecast (2024-2030) for air traffic movements (IFR) in millions of flights (Autumn Edition 2024). The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2023 and different forecast scenarios (high, base, low) up to 2030. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
+The figure below presents the EUROCONTROL 7-year forecast (2024-2030) for air traffic movements (IFR) in millions of flights (Autumn Edition 2024). This Seven-Year Forecast builds upon the February 2024 publication and incorporates the latest flight trends and route patterns (including summer 2024). It also includes a partial update of forecast inputs, such as the GDP forecast. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2023 and different forecast scenarios (high, base, low) up to 2030. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Embedding statfor_forecasts_2023 -->
 <div class="plotly-container">
