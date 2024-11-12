@@ -123,10 +123,9 @@ description: "An overview of financial information and indicators for European A
 
   </style>
 
-   <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements.</p>
-   <p>You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
+   <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements. You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
    <div id="available-ansps" style = "display: none;">
-   <p>By default the dashboard is set to display data from the most recent year for which we have a complete set of data from all ANSPs (<span id="year-context"></span>). However, updated financial information for <span id="maxyear-context"></span> is available for the following ANSPs (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>.</p>
+   <p>The dashboard displays data for the last five years. However, when interpreting the data for <span id="year-context"></span>, it's important to note that the complete series is not yet available, as the current information is based on the published financial data from the following ANSPs (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>.</p>
    </div>
 
     <div class="flex-container ml-1 mr-1" style=" padding-right: 15px; border-bottom: solid 3px #161b21; 
@@ -556,7 +555,7 @@ description: "An overview of financial information and indicators for European A
   var no_uniqueOrgNames_all
   
   var SelectedEntity = "Pan-European System";
-  var SelectedYear = 2022;
+  var SelectedYear = 2023;
   var MinYear;
   var MaxYear;
   var DataFlag;
@@ -757,11 +756,11 @@ description: "An overview of financial information and indicators for European A
       var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (years)
       var orgName = MyViewContext.getValue(i, 1); // Get the value in the 1st column (organization names)
       
-      if (year === FullMaxYear) {
+      if (year === FullMaxYear && orgName != "Pan-European System") {
         uniqueOrgNames.add(orgName); // Add organization name if the year equals maxYear
       }
       
-      if (year === FullMaxYear-1) {
+      if (year === FullMaxYear-1 && orgName != "Pan-European System") {
         uniqueOrgNames_all.add(orgName); // Add organization name if the year equals maxYear-1
       }
     }
@@ -2457,8 +2456,8 @@ description: "An overview of financial information and indicators for European A
 
   // Update text in intro 
 
-    document.getElementById("year-context").innerHTML = FullMaxYear-1;
-    document.getElementById("maxyear-context").innerHTML = FullMaxYear;
+    document.getElementById("year-context").innerHTML = FullMaxYear;
+//    document.getElementById("maxyear-context").innerHTML = FullMaxYear;
     document.getElementById("ansp-list").innerHTML = uniqueOrgNamesString;
     document.getElementById("ansp-number").innerHTML = no_uniqueOrgNames;
     document.getElementById("ansp-number-all").innerHTML = no_uniqueOrgNames_all;
