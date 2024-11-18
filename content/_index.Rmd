@@ -339,22 +339,6 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024" target="_blank">
-<img src="/images/pi/prc_obs2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #2: European air traffic capacity performance - Summer 2024">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024" target="_blank">PRC Observer #2: European air traffic capacity performance - Summer 2024</a></h5>
-<small>The independent <a href="/about/prc">Performance Review Commission (PRC)</a> takes a look at the <b>poor performance in Summer 2024</b>, contributing factors, and actions to be taken to avoid high delays over the coming years.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030-autumn-update" target="_blank">
 <img src="/images/landing/2024_10_statfor.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Out soon: New STATFOR 7-year forecast">
 </a>
@@ -368,70 +352,69 @@ fullpage: true
 </div>
 </div>
 
-
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
-<img src="/images/landing/2024-07-31_app_v2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL DATA app - Version 2.0">
+<a href="https://ansperformance.eu/study/data-challenge/#and-the-winners-are" target="_blank">
+<img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge: Winners announced">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">Released: EUROCONTROL DATA app - Version 2.0</a></h5>
-<small>A <b>new version of the EUROCONTROL DATA app</b> has been released. This second version now provides <b>detailed data on individual state level</b> and <b>improved delay cause analyses</b>.<br><br></small>
-<div>
-<a class="btn btn-primary" href="https://apps.apple.com/tr/app/eurocontrol-data/id6467232405">Apple Store</a>
-<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata">Google Play Store</a>
-</div>
+<h5><a href="https://ansperformance.eu/study/data-challenge/#and-the-winners-are" target="_blank">PRC Data Challenge: Winners announced</a></h5>
+<small>The independent Performance Review Commission (PRC) has <b>announced the winners of the PRC Data Challenge</b> at the <a href="https://opensky-network.org/">OpenSky</a> Symposium in Hamburg. The <b>winning model</b> is capable of <b>estimating the actual take-off weight within 2% accuracy</b> on average! </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/study/data-challenge/#and-the-winners-are" class="card-link" target="_blank">See the winners</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
 
+
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/news/call-candidates-performance-review-commission-prc" target="_blank">
-<img src="/images/prc/PRC_call_candidates.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Call for candidates: Performance Review Commission">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-22-decarbonising-long-haul-flights-2050" target="_blank">
+<img src="/images/landing/2024-10-18_TP22-decarb-long-haul-2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Think Paper #22 - Decarbonising long-haul flights by 2050">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/news/call-candidates-performance-review-commission-prc" target="_blank">Call for candidates: Performance Review Commission</a></h5>
-<small>The Director General of <b>EUROCONTROL invites applications for membership</b> of the independent <a href="/about/prc">Performance Review Commission (PRC)</a> for its next term of office (Submission deadline 18 Nov. 2024).</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-22-decarbonising-long-haul-flights-2050" target="_blank">EUROCONTROL Think Paper #22 - Decarbonising long-haul flights by 2050</a></h5>
+<small>Is there a <b>pathway to decarbonise long-haul flights</b> through <b>sustainable aviation fuel use, fleet renewal and green energy upscaling?</b> The latest EUROCONTROL Think Paper (#22) delves into this massive challenge <b>using the FlyingGreen platform's tool FuellingDecarb.</b> </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/news/call-candidates-performance-review-commission-prc" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-think-paper-22-decarbonising-long-haul-flights-2050" class="card-link" target="_blank">Learn more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
 
+
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://ansperformance.eu/study/data-challenge/" target="_blank">
-<img src="/images/landing/prc_dc24.jpeg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Launched: PRC Data Challenge">
+<a href="https://www.eurocontrol.int/publication/summer-2024-performance" target="_blank">
+<img src="/images/landing/2024-11-04_AT4-summer2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="European Aviation Trends #5 - Summer 2024 performance">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Ongoing: PRC Data Challenge</a></h5>
-<small><b>Compete in the PRC Data Challenge</b> by developing a machine learning algorithm to estimate the Actual Take-Off Weight <b>and win your share of the 5000 EUR prize pot!</b> <br><br>This competition is organized by the independent <a href="/about/prc">Performance Review Commission (PRC)</a> in collaboration with the <a href="https://opensky-network.org/">OpenSky Network</a>.</small>
+<h5><a href="https://www.eurocontrol.int/publication/summer-2024-performance" target="_blank">European Aviation Trends #5 - Summer 2024 performance</a></h5>
+<small><b>Summer 2024 was a very complex and difficult summer with very poor performance.</b> The latest EUROCONTROL European Aviation Trends looks in detail at <b>where the problems where and what can be done to improve the performance next year and beyond.</b> </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/study/data-challenge/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/summer-2024-performance" class="card-link" target="_blank">Learn more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
 
+
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://symposium.opensky-network.org/" target="_blank">
-<img src="/images/landing/osn_symposium2024.PNG" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Announced: OpenSky Network Symposium">
+<a href="https://ansperformance.eu/economics/finance/" target="_blank">
+<img src="/images/landing/2024-11-04_AT4-summer2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Updated: ANSP financial Dashboard -  Pan-European aggregated view">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://symposium.opensky-network.org/" target="_blank">Announced: OpenSky Network Symposium</a></h5>
-<small>The <b>12th OpenSky Symposium</b> will take place on <b>7 and 8 November 2024 in Hamburg</b>, Germany. The symposium is a forum to discuss new ideas, the <a href="https://opensky-network.org/">OpenSky Network</a> itself, and research activities using OSN (crowd-sourced ADS-B) data. <br><br>The OpenSky Symposium is organized in collaboration with the independent <a href="/about/prc">Performance Review Commission (PRC)</a>.</small>
+<h5><a href="https://ansperformance.eu/economics/finance/" target="_blank"> Updated: ANSP financial Dashboard -  Pan-European aggregated view </a></h5>
+<small><b>The Financial Dashboard now includes a new pan-European aggregated view of financial data from the 36 participating ANSPs.</b> The displayed figures represent the collective financial information of these ANSPs based on their audited and public financial statements. </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://symposium.opensky-network.org/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/economics/finance/" class="card-link" target="_blank">Learn more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
@@ -440,7 +423,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small><b>September 2024</b> data available for download now!</small>
+<small><b>October 2024</b> data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
