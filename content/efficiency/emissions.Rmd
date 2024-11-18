@@ -43,18 +43,6 @@ library(htmltools)
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
-base_dir <- ""
-# base_dir <- here("static","download","xls")
-
-# co2_data_raw_old <-  read_xlsx(
-#   path  = fs::path_abs(
-#     str_glue("CO2_emissions_for_portal.xlsx"),
-#     start = base_dir),
-#   sheet = "All Data",
-#   range = cell_limits(c(1, 1), c(NA, NA))) %>%
-#   mutate(across(.cols = where(is.instant), ~ as.Date(.x)))%>%
-#   filter(is.na(YEAR)==FALSE)%>%
-#   as_tibble()
 
 export_query <- function(schema, query) {
   USR <- Sys.getenv(paste0(schema, "_USR"))
@@ -81,8 +69,30 @@ query <- str_glue("
    ")
 
 
+check_co2 <- try({
 co2_data_raw <- export_query("PRU_DEV", query = query) %>%
   mutate(across(.cols = where(is.instant), ~ as.Date(.x))) 
+})
+
+# Check if an error occurred
+if (inherits(check_co2, "try-error")) {
+  co2_data_raw <- read_xlsx(
+    path = fs::path_abs(
+      str_glue("CO2_backup.xlsx"),
+      start = '//sky.corp.eurocontrol.int/DFSRoot/Groups/HQ/dgof-pru/Project/DDP/AIU app/data_archive'
+    ),
+    sheet = "All Data vs Y(-1)",
+    range = cell_limits(c(3, 1), c(NA, NA))
+  ) %>%
+    as_tibble() %>%
+    mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>%
+    filter(YEAR>=2019, STATE_NAME != 'LIECHTENSTEIN') %>%
+    arrange(2, 3, 4)
+
+} else {
+co2_data_raw <- export_query("PRU_DEV", query = query) %>%
+  mutate(across(.cols = where(is.instant), ~ as.Date(.x))) 
+}
 
 co2_data_plot_nw <- co2_data_raw %>%
   select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH)%>%
