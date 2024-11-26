@@ -374,7 +374,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-47-atfm-slot-tolerance-windows" target="_blank"> EUROCONTROL Data Snapshot #47 on ATFM slot tolerance windows</a></h5>
-<small>Our <b>47th EUROCONTROL Data Snapshot on ATFM slot tolerance windows.</b> With traffic close to 2019 levels, the EUROCONTROL Network Manager’s ‘All Together Now 2024’ campaign highlights areas which help to optimise network efficiency and keep delays down. 
+<small>Our <b>47th EUROCONTROL Data Snapshot on ATFM slot tolerance windows</b> has been released. With traffic close to 2019 levels, the EUROCONTROL Network Manager’s ‘All Together Now 2024’ campaign highlights areas which help to optimise network efficiency and keep delays down. 
 
 The need to respect Air Traffic Flow Management (ATFM) slot tolerance windows is one piece of the puzzle <b>but why is it important and how are we doing so far?</b></small>
 </div>
