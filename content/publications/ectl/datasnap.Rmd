@@ -14,6 +14,23 @@ extrajs: [
 
 
 ## 2024
+<!-- #47 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[On ATFM slot tolerance windows - EUROCONTROL Data Snapshot #47][DS46]</h5>
+<small><strong><p style="color:#808080">Published: 26 November 2024</p></strong></small>
+The 47. EUROCONTROL Data Snapshot looks into the need to adhere to ATFM slot tolerance windows.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-47-atfm-slot-tolerance-windows="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds47.png" alt="On ATFM slot tolerance windows"></div>
+</div>
+</div></div>
+
+
 <!-- #46 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
