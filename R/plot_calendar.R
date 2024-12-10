@@ -350,6 +350,7 @@ calendarHeatmap(dates, values, title = "Microsoft Stock Price", subtitle = "Yaho
 
 ###############################
 # CTFM trajectories
+library(tidyverse)
 library(fs)
 
 src <- 'G:/HQ/dgof-pru/Data/Application/Complexity_version_C/Data/Traffic'
@@ -377,6 +378,9 @@ calendarHeatmap(dates, values, title = "CFTM daily file size", subtitle = "NM", 
 
 ##############################
 # FR24 files
+library(tidyverse)
+library(fs)
+
 src <- "G:/HQ/dgof-pru/Data/DataSource/FR24/global_utilisation"
 
 lll <- dir_info(
