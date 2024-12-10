@@ -7,13 +7,13 @@ description: "An overview of the horizontal en-route flight efficiency for the e
 <style type="text/css">
 .img-responsive {
     margin: 0 auto;
-    max-width: 75%
+    max-width: 100%
 }
 
 .resp-container {
     position: relative;
     overflow: hidden;
-    padding-top: 60.0%;
+    padding-top: 100.0%;
 }
 
 .resp-iframe {
