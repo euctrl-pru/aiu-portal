@@ -89,8 +89,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### Latest ACE benchmarking report (May 2024 edition)
-This report is based on the 2022 data submitted by ANSPs in July 2023, and thoroughly reviewed by the PRU. It analyses ANSPs’ performance in a context marked by the traffic recovery following the shock caused by the COVID-19 pandemic. 
+#### High-level summary report on preliminary ACE 2023 data (December 2024)
+This report is based on the 2023 data submitted by ANSPs in July 2024.  It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level. 
 
 <div class="row">
 <div class="col-md-6" >
@@ -137,17 +137,17 @@ plot_ACE
 <br>
 <div class="container" >
 
-*	Traffic (measured in composite flight-hours) rose by +58.3% in 2022 but remained -13.3% lower than in 2019. At ANSP level, a wide range of recovery rates is observed (from -51% to +14%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
+*	Traffic (measured in composite flight-hours) rose by +11% in 2023 but remained -4% lower than in 2019. At ANSP level, a wide range of different trends is observed (from -43% to +63%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
 
-*	ATFM delays in 2022 almost reached their 2019 level, which was a year marked by significant capacity issues for several ANSPs. As a result, the share of ATFM delays in the 2022 unit economic costs amounted to 20%.
+*	ATFM delays in 2023 rose substantially and reached a level comparable to that of 2019, which was a year marked by significant capacity issues for several ANSPs. As a result, the share of ATFM delays in the 2023 unit economic costs amounted to 24%.
 
-*	After two years of consecutive decreases, total ATM/CNS provision costs rose by +3.4% (+€295.8M) in 2022, reflecting cost increases for 26 out of 38 ANSPs.
+*	Total ATM/CNS provision costs rose by +3% (+€272M) in 2023, reflecting cost increases for 27 out of 38 ANSPs. The main cost categories driving this increase were staff costs (+5% or +€309M) and non-staff operating costs (+6% or +€99M).
 
-*	In 2022, the number of ATM/CNS staff was slightly lower than in 2021 (-0.9% or -470 FTEs), mainly because of support staff reductions. The number of ATCOs in OPS increased by +2.1% (+348 FTEs).
+*	Despite these increases, ANSPs cost-bases were still -€360M (-4%) lower than in 2019 owing to the significant cost-savings achieved by ANSPs at system level in 2020 and 2021.
 
-*	Although the level of debt fell by -10% in 2022, short and long-term borrowings still represent nearly 3 times the amount recorded in 2019.
+*	In 2023, the number of ATM/CNS staff was slightly higher than in 2022 (+1% or +537 FTEs), mainly because of increases in the number of ATCOs in OPS (+231 FTEs), OPS support staff (+122FTEs) and technical support staff for operational maintenance (+112 FTEs).
 
-A new analysis on the regulatory, institutional, and corporate governance aspects shows interesting findings when considering different regulation regimes and legal statuses. Although interactions are complex and no straightforward relationships emerged at individual ANSP level, these factors can create incentives or constraints, which may affect ANSP performance.
+*	Although the level of debt fell by -11% in 2023, short and long-term borrowings still represented 2.5 times the amount recorded in 2019.
 
 </div>
 
@@ -275,9 +275,9 @@ Access information on individual ANSPs cost-effectiveness performance (2017-2022
 </div>
 
 
-<div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2023-data" target="_blank">
-  <img class="card-img-top" src="/images/eco/first-look2023.png" alt="First look at 2023 ACE data">
-  <div class="card-body"><h5 class="card-title">First look at ANSPs’ 2023 data</h5></a><p class="card-text"></p>
+<div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
+  <img class="card-img-top" src="/images/eco/ace-hlsr2023.png" alt="High Level Summary Report 2023 Data">
+  <div class="card-body"><h5 class="card-title">High Level Summary Report on Preliminary ACE 2023 Data</h5></a><p class="card-text"></p>
   </div>
 </div>
 
