@@ -368,10 +368,10 @@ fullpage: true
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-<img src="/images/landing/2024-12-17_ace-hlsr.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #48 on the longest flights from Europe">
+<img src="/images/landing/2024-12-17_ace-hlsr.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Published: High-level Summary Report on Preliminary ACE 2023 Data">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank"> EUROCONTROL Data Snapshot #48 on the longest flights from Europe</a></h5>
+<h5><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank"> Published: High-level Summary Report on Preliminary ACE 2023 Data</a></h5>
 <small>The independent Performance Review Commission (PRC) <b>published the new High-Level Summary Report on preliminary ATM Cost-effectiveness.</b> This preliminary report is based on the 2023 data submitted by ANSPs in July 2024.</small>
 </div>
 <div class="card-footer pt-0">
