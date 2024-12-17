@@ -1,25 +1,26 @@
 ---
-title: Horizontal en-route flight efficiency
-description: "An overview of the horizontal en-route flight efficiency for the entire EUROCONTROL area and per individual state."
+title: "Horizontal en-route flight efficiency"
+description: "An overview of the horizontal en-route flight efficiency for the entire
+  EUROCONTROL area and per individual state."
 ---
 
 <style type="text/css">
 .img-responsive {
     margin: 0 auto;
-    max-width: 75%
+    max-width: 130%
 }
 
 .resp-container {
     position: relative;
     overflow: hidden;
-    padding-top: 60.0%;
+    padding-top: 120.0%; #including 4 last countries in the table
 }
 
 .resp-iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 150%;
     height: 150%;
     border: 0;
 }
@@ -44,5 +45,5 @@ Horizontal en-route inefficiencies impact in terms of fuel burn and emissions. T
 
 <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
 <div class="resp-container">
-<iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/deb16ec2-afe5-40f2-aba2-56bcab9b895a/page/L8ePB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiMTczODk5NTctYWJhOC00ZGM4LThlMzItYjcwNDZmM2Q1MGJkIiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
