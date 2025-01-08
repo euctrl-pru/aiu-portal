@@ -41,5 +41,5 @@ The underlying data of the results shown in the dashboard below are available fo
 </div></div></div></div>
 <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
 <div class="resp-container">
-<iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/4228b797-4a84-4f50-8ed1-a08abb1b80df/page/YiAPB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiOWNlMjRlOTctZDIxYi00ZGU3LTg0YWYtMDMxNDEy-OGExZjZmIiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
