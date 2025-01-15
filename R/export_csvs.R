@@ -21,14 +21,52 @@ last_month_beg <- today(tzone = "UTC") |> floor_date("month") |> `%m+%`(months(-
 #---------- co2 emissions ----
 export_co2_emissions(wef = "2024-01-01") |>
   arrange(YEAR, MONTH, STATE_NAME) |>
-  group_by(YEAR) |> 
+  group_by(YEAR) |>
   group_walk(~ write_csv(
-    .x, 
+    .x,
     fs::path(dest_dir_root,
              dest_folder,
              stringr::str_glue("co2_emmissions_by_state_{YYYY}.csv", YYYY = .y$YEAR)),
     na = ""),
     .keep = TRUE)
+
+# FIX; for when CO2 table not blocked
+if (FALSE){
+  read_xlsx(
+    path = fs::path_abs(
+      str_glue("CO2_backup.xlsx"),
+      start = '//sky.corp.eurocontrol.int/DFSRoot/Groups/HQ/dgof-pru/Project/DDP/AIU app/data_archive'
+      ),
+    sheet = "All Data vs Y(-1)",
+    range = cell_limits(c(3, 1),
+                        c(NA, NA))
+    ) %>%
+    as_tibble() %>%
+    mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>%
+    filter(YEAR>=2019, STATE_NAME != 'LIECHTENSTEIN') %>%
+    arrange(2, 3, 4) |> 
+    arrange(YEAR, MONTH, STATE_NAME) |>
+    group_by(YEAR) |>
+    filter(YEAR == 2024) |>
+    ungroup() |>
+    select(
+      YEAR,
+      MONTH,
+      STATE_NAME,
+      STATE_CODE,
+      CO2_QTY_TONNES,
+      TF) |> 
+    dplyr::mutate(
+      NOTE = stringr::str_detect(.data$STATE_NAME, "\\*"),
+      # remove '*' from State name, if present it is a NOTE
+      STATE_NAME = stringr::str_remove(.data$STATE_NAME, "\\*")) |> 
+    write_csv(
+      fs::path(dest_dir_root,
+               dest_folder,
+               stringr::str_glue("co2_emmissions_by_state_{YYYY}.csv", YYYY = 2024)),
+      na = "")
+  
+}
 
 #---------- vertical flight efficiency ----
 export_vertical_flight_efficiency(wef = "2024-01-01") |>

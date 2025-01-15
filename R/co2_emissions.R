@@ -12,6 +12,7 @@ library(eurocontrol)
 library(stringr)
 library(lubridate)
 library(readr)
+library(readxl)
 
 round_away_from_zero <- function(x) {
   sign(x) * ceiling(abs(x))
@@ -133,9 +134,32 @@ query <- str_glue("
    ")
 
 
-co2_data_raw <- export_query(schema = "PRU_DEV", query = query) %>%
-  mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>%
-  as_tibble()
+# co2_data_raw <- export_query(schema = "PRU_DEV", query = query) %>%
+#   mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>%
+#   as_tibble()
+
+check_co2 <- try({
+  co2_data_raw <- export_query("PRU_DEV", query = query) %>%
+    mutate(across(.cols = where(is.instant), ~ as.Date(.x))) 
+}) # Check if an error occurred
+if (inherits(check_co2, "try-error")) {
+  co2_data_raw <- read_xlsx(
+    path = fs::path_abs(
+      str_glue("CO2_backup.xlsx"),
+      start = '//sky.corp.eurocontrol.int/DFSRoot/Groups/HQ/dgof-pru/Project/DDP/AIU app/data_archive'
+    ),
+    sheet = "All Data vs Y(-1)",
+    range = cell_limits(c(3, 1),
+                        c(NA, NA))
+  ) %>%
+    as_tibble() %>%
+    mutate(across(.cols = where(is.instant), ~ as.Date(.x))) %>%
+    filter(YEAR>=2019, STATE_NAME != 'LIECHTENSTEIN') %>%
+    arrange(2, 3, 4)
+} else {
+    co2_data_raw <- export_query("PRU_DEV", query = query) %>%
+      mutate(across(.cols = where(is.instant), ~ as.Date(.x))) 
+}
 
 co2_data_mm <- co2_data_raw %>%
   select(FLIGHT_MONTH, CO2_QTY_TONNES, TF, YEAR, MONTH) %>%
