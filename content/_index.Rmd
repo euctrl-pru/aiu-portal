@@ -418,6 +418,24 @@ The need to respect Air Traffic Flow Management (ATFM) slot tolerance windows is
 
 
 
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">
+<img src="/images/landing/2024-12-xx_AT6-airline_schedules.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act</a></h5>
+<small><b>Scheduling is a key element of an airline’s commercial strategy and of the customer travel experience;</b> it requires complex decision-making and accurate forecasting despite many variables, with revenue and operational costs being the most critical factors.
+
+The latest European Aviation Trends paper looks in detail at <b>how scheduling practices have evolved</b> over recent years, providing an insight into how challenging and difficult a balancing act this is.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
 
 <div class="carousel-item">
 <div class="card border-0 rounded">

@@ -1,53 +1,104 @@
-ert_dly_aua_beg: Jan 2011
-ert_dly_aua_end: Nov 2024
-ert_dly_fir_beg: Jan 2013
-ert_dly_fir_end: Nov 2024
-hfe_beg: Feb 2014
-hfe_end: Nov 2024
-apt_dly_beg: Jan 2016
-apt_dly_end: Nov 2024
-cdo_beg: Jan 2015
-cdo_end: Nov 2024
-slt_adh_beg: Jan 2016
-slt_adh_end: Nov 2024
-ace_opt_beg: Jan 2019
-ace_opt_end: Nov 2024
-ace_year_end: 2023
-ansp_fin_beg: 2017
-ansp_fin_end: 2023 (partial)
+# CO2 Emissions by State
+## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
-co_opt_end: Oct 2024
+co_opt_end: Nov 2024 # UPDATE MONTH (M) - Delayed few days
 
-apt_flt_beg: Jan 2016
-apt_flt_end: Nov 2024
-asma_beg: Jan 2018
-asma_end: Nov 2024
-tx_out_beg: Jan 2018
-tx_out_end: Nov 2024
-tx_in_beg: Jan 2018
-tx_in_end: Nov 2024
-atc_pre_beg: Jan 2016
-atc_pre_end: Nov 2024
-all_pre_beg: Jan 2020
-all_pre_end: Nov 2024
+# Operations En-route
+## En-route IFR flights and ATFM delays (AUA) - No post ops adj.
+ert_dly_aua_beg: Jan 2011
+ert_dly_aua_end: Nov 2024 # UPDATE MONTHLY (M) 
 
-asma_o_beg: Jan 2014
-asma_o_end: Dec 2023
-tx_out_o_beg: Jan 2014
-tx_out_o_end: Dec 2023
-
+## En-route IFR flights and ATFM delays (AUA) - With post ops adj.
 ert_dly_aua_post_beg: Jan 2016
 ert_dly_aua_post_end: Dec 2023
+
+## En-route IFR flights and ATFM delays (FIR) - No post ops adj.
+ert_dly_fir_beg: Jan 2013
+ert_dly_fir_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## En-route IFR flights and ATFM delays (FIR) - With post ops adj.
 ert_dly_fir_post_beg: Jan 2016
 ert_dly_fir_post_end: Dec 2023
+
+## Horizontal en-route flight efficiency
+hfe_beg: Feb 2014
+hfe_end: Nov 2024 # UPDATE MONTHLY (M)
+
+# Operations at Airports
+## Airport traffic (Daily IFR arrs & deps by apt)
+apt_flt_beg: Jan 2016
+apt_flt_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## Airport arrival ATFM delays - No post ops adj.
+apt_dly_beg: Jan 2016
+apt_dly_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## Airport arrival ATFM delays - With post ops adj.
 apt_dly_post_beg: Jan 2016
 apt_dly_post_end: Dec 2023
-cplx_beg_bada_3_6: Jan 2014
-cplx_end_bada_3_6: Dec 2016
-cplx_beg_bada_3_13_1: Jan 2017
-cplx_end_bada_3_13_1: Dec 2019
+
+## ASMA additional time
+asma_beg: Jan 2018
+asma_end: Oct 2024 # UPDATE MONTHLY (M-1) - One month delay
+
+## VFE - Continuous climb and descent operations
+cdo_beg: Jan 2015
+cdo_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## Taxi-out additional time
+tx_out_beg: Jan 2018 
+tx_out_end: Oct 2024 # UPDATE MONTHLY (M-1) - One month delay
+
+## Taxi-in additional time
+tx_in_beg: Jan 2018 
+tx_in_end: Oct 2024 # UPDATE MONTHLY (M-1) - One month delay
+
+## Taxi-time planning values
 tx_std_beg: S 2014
 tx_std_end: S 2022
 
+# ATC pre-departure delays
+atc_pre_beg: Jan 2016
+atc_pre_end: Oct 2024 # UPDATE MONTHLY (M-1) - One month delay
+
+## Total pre-departure delays
+all_pre_beg: Jan 2020
+all_pre_end: Oct 2024 # UPDATE MONTHLY (M-1) - One month delay
+
+## ATFM slot adherence
+slt_adh_beg: Jan 2016
+slt_adh_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## ASMA additional time - Old methodology
+asma_o_beg: Jan 2014
+asma_o_end: Dec 2023
+
+## Taxi-out additional time - Old methodology
+tx_out_o_beg: Jan 2014
+tx_out_o_end: Dec 2023
+
+# Traffic
+## Complexity (based on BADA version 3.6)
+cplx_beg_bada_3_6: Jan 2014
+cplx_end_bada_3_6: Dec 2016
+
+## Complexity (based on BADA version 3.13.1)
+cplx_beg_bada_3_13_1: Jan 2017
+cplx_end_bada_3_13_1: Dec 2019
+
+# Economics
+## ACE operational data - Monthly
+ace_opt_beg: Jan 2019
+ace_opt_end: Nov 2024 # UPDATE MONTHLY (M)
+
+## ACE operational data - Yearly 
+ace_year_end: 2023
+
+## ANSPs financial data - Yearly 
+ansp_fin_beg: 2017
+ansp_fin_end: 2023 (partial)
+
+# Open Performance Data Initiative (OPDI) 
+## Flight list / Event / Measurement data
 opdi_beg: Jan 2022
-opdi_end: Jul 2024
+opdi_end: Nov 2024 # UPDATE MONTHLY (M) - Confirm with QG
