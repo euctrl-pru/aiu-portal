@@ -613,12 +613,52 @@ description: "An overview of financial information and indicators for European A
     Data.setRows(
       Data.getFilteredRows([{ column: 0, minValue: 2019 }])
     );
+    
+      // Sort ANSP column data with fixed first three values
+
+  // Get the "ANSP" column index
+  const columnLabel = "ANSP";
+  const columnIndex = Data.getColumnIndex(columnLabel);
+
+  if (columnIndex < 0) {
+    console.error(`Column "${columnLabel}" not found in the data.`);
+    return;
+  }
+
+  // Extract all unique values from the "ANSP" column
+  const allValues = [];
+  for (let i = 0; i < Data.getNumberOfRows(); i++) {
+    const value = Data.getValue(i, columnIndex);
+    if (!allValues.includes(value)) {
+      allValues.push(value);
+    }
+  }
+
+  // Define the fixed values
+    const fixedValues = ["Pan-European System", "ANSPs under Economic Regulation", "ANSPs under Full Cost Recovery"]; // Replace with actual fixed values
+
+
+  // Separate fixed values and the rest
+  const fixedSet = new Set(fixedValues);
+  const otherValues = allValues.filter(value => !fixedSet.has(value)).sort();
+
+  // Combine fixed values and alphabetically sorted other values
+  const reorderedValues = [...fixedValues, ...otherValues];
+
+  // Create a new DataTable for the EntityPicker
+  const EntityPickerData = new google.visualization.DataTable();
+  EntityPickerData.addColumn(Data.getColumnType(columnIndex), columnLabel);
+
+  // Populate the new DataTable with reordered values
+  reorderedValues.forEach(value => {
+    EntityPickerData.addRow([value]);
+  });
 
     //------------------------ANSP Picker--------------------------------------------
     EntityPicker = new google.visualization.ControlWrapper({
       controlType: "CategoryFilter",
       containerId: "EntityPicker_div",
-      dataTable: Data,
+      dataTable: EntityPickerData,
       state: { selectedValues: [SelectedEntity] },
       options: {
         filterColumnLabel: "ANSP",
@@ -629,7 +669,7 @@ description: "An overview of financial information and indicators for European A
           //						labelStacking: 'vertical',
           allowTyping: false,
           allowMultiple: false,
-          sortValues: true,
+          sortValues: false,
           allowNone: false
         }
       }
@@ -778,11 +818,11 @@ description: "An overview of financial information and indicators for European A
       var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (years)
       var orgName = MyViewContext.getValue(i, 1); // Get the value in the 1st column (organization names)
       
-      if (year === FullMaxYear && orgName != "Pan-European System" && orgName != "Cost Recovery ANSPs" && orgName != "Economic Regulation ANSPs") {
+      if (year === FullMaxYear && orgName != "Pan-European System" && orgName != "ANSPs under Full Cost Recovery" && orgName != "ANSPs under Economic Regulation") {
         uniqueOrgNames.add(orgName); // Add organization name if the year equals maxYear
       }
       
-      if (year === FullMaxYear-1 && orgName != "Pan-European System" && orgName != "Cost Recovery ANSPs" && orgName != "Economic Regulation ANSPs") {
+      if (year === FullMaxYear-1 && orgName != "Pan-European System" && orgName != "ANSPs under Full Cost Recovery" && orgName != "ANSPs under Economic Regulation") {
         uniqueOrgNames_all.add(orgName); // Add organization name if the year equals maxYear-1
       }
     }
@@ -2686,7 +2726,7 @@ description: "An overview of financial information and indicators for European A
       document.getElementById("paneuropean-context").style.display = "block";
       document.getElementById("ansp-context").style.display = "none";
       document.getElementById("regulatory-context").style.display = "none";
-    } else if (SelectedEntity === "Cost Recovery ANSPs" || SelectedEntity === "Economic Regulation ANSPs") {
+    } else if (SelectedEntity === "ANSPs under Full Cost Recovery" || SelectedEntity === "ANSPs under Economic Regulation") {
       document.getElementById("paneuropean-context").style.display = "none";
       document.getElementById("ansp-context").style.display = "none";
       document.getElementById("regulatory-context").style.display = "block";
