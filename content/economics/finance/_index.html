@@ -2603,7 +2603,7 @@ description: "An overview of financial information and indicators for European A
     var Dif_DebtToEquity = (SelectedYear == MinYear) ? "-" : Math.round((TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 4, SelectedYear - MinYear))/ TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 1, SelectedYear - MinYear) * 100) / 100;
 
     var Scorecard_EquityRatioAvg =  Math.round(MyViewBalance31.getValue(SelectedYear - MinYear, 0)*100)/100;
-    var Dif_EquityRatioAvg = (SelectedYear == MinYear) ? "-" :  Math.round(MyViewBalance3.getValue(SelectedYear - MinYear -1, 0)*100)/100;
+    var Dif_EquityRatioAvg = (SelectedYear == MinYear) ? "-" :  Math.round(MyViewBalance31.getValue(SelectedYear - MinYear -1, 0)*100)/100;
 
 
     var Scorecard_DaysOPEX = Math.round(MyViewBalance2.getValue(SelectedYear - MinYear, 2));
