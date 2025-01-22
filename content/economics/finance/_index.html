@@ -144,7 +144,7 @@ description: "An overview of financial information and indicators for European A
      padding-top: 10px; margin-right: 5px">ENAV</p> -->
   
     <div id="ansp-context">
-    <div class="flex-container" style="margin-right: 5px; margin-top:10px">
+    <div class="flex-container" style="margin-right: 5px; margin-top:10px; margin-top:0px">
       
       <div class="Mycolumn mb-2 " ; style="margin-left:15px;">
         <div class="row" style="padding-left: 10px; ">
@@ -187,7 +187,7 @@ description: "An overview of financial information and indicators for European A
         </tr>
        </table>
       </div>
-      <div class="mb-2 ml-2" style="width:180px" >
+      <div class="mb-2 ml-3" style="width:180px; " >
         <p  style="margin-bottom: 0px; margin-left: -15px; font-size: 14px; text-align: center;">
          <span id="MyTitleShareRevenue_div">Share of Pan-European System</span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Based on 2020-2022 avg.">*</a></span>
         </p>
@@ -198,6 +198,27 @@ description: "An overview of financial information and indicators for European A
     </div>
     </div>
     
+    <div id="regulatory-context">
+    <div class="flex-container" style="margin-right: 5px; margin-top:10px">
+      
+      <div class="Mycolumn mb-2 " ; style="margin-left:15px; width:1060px">
+        <div class="row" style="padding-left: 0px; ">
+          <div class="col-12 pl-3" >
+            <p id="regulatory-notes" style="font-size: 16px; font-style: italic;"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-2 ml-1" style="width:180px" >
+        <p  style="margin-bottom: 0px; margin-left: -15px; font-size: 14px; text-align: center;">
+         <span id="MyTitleShareRevenue_reg_div"></span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Based on 2020-2022 avg.">*</a></span>
+        </p>
+        <div id="MyPieShareRevenue_div_reg" style="margin-bottom: 0px; "></div>
+      </div>
+        
+    </div>
+    </div>
+
     <div id="paneuropean-context">
     <div class="flex-container" style="margin-right: 5px; margin-top:10px">
       
@@ -210,7 +231,7 @@ description: "An overview of financial information and indicators for European A
     </div>
     
 <!-- Income statement section -->
-    <h4 id="income_title" >Income Statement</h4>
+    <h4 id="income_title" style="margin-top:0px">Income Statement</h4>
     <!-- <i class="fa fa-clone" aria-hidden="true"></i> -->
 
     <!-- Scorecards -->
@@ -580,7 +601,7 @@ description: "An overview of financial information and indicators for European A
 
   function Initialisation() {
     var query = new google.visualization.Query(
-      "https://docs.google.com/spreadsheets/d/1ZzggKApomo82nPkXmlQhvgv7AY1nE4RhpN83q3hbwzM/edit?usp=sharing&sheet=Data_with_Pan_European"
+      "https://docs.google.com/spreadsheets/d/1ZzggKApomo82nPkXmlQhvgv7AY1nE4RhpN83q3hbwzM/edit?usp=sharing&sheet=Data_with regulated and cost recovery_ANSPs"
     );
 
     query.send(drawDashboard);
@@ -592,12 +613,52 @@ description: "An overview of financial information and indicators for European A
     Data.setRows(
       Data.getFilteredRows([{ column: 0, minValue: 2019 }])
     );
+    
+      // Sort ANSP column data with fixed first three values
+
+  // Get the "ANSP" column index
+  const columnLabel = "ANSP";
+  const columnIndex = Data.getColumnIndex(columnLabel);
+
+  if (columnIndex < 0) {
+    console.error(`Column "${columnLabel}" not found in the data.`);
+    return;
+  }
+
+  // Extract all unique values from the "ANSP" column
+  const allValues = [];
+  for (let i = 0; i < Data.getNumberOfRows(); i++) {
+    const value = Data.getValue(i, columnIndex);
+    if (!allValues.includes(value)) {
+      allValues.push(value);
+    }
+  }
+
+  // Define the fixed values
+    const fixedValues = ["Pan-European System", "ANSPs under Economic Regulation", "ANSPs under Full Cost Recovery"]; // Replace with actual fixed values
+
+
+  // Separate fixed values and the rest
+  const fixedSet = new Set(fixedValues);
+  const otherValues = allValues.filter(value => !fixedSet.has(value)).sort();
+
+  // Combine fixed values and alphabetically sorted other values
+  const reorderedValues = [...fixedValues, ...otherValues];
+
+  // Create a new DataTable for the EntityPicker
+  const EntityPickerData = new google.visualization.DataTable();
+  EntityPickerData.addColumn(Data.getColumnType(columnIndex), columnLabel);
+
+  // Populate the new DataTable with reordered values
+  reorderedValues.forEach(value => {
+    EntityPickerData.addRow([value]);
+  });
 
     //------------------------ANSP Picker--------------------------------------------
     EntityPicker = new google.visualization.ControlWrapper({
       controlType: "CategoryFilter",
       containerId: "EntityPicker_div",
-      dataTable: Data,
+      dataTable: EntityPickerData,
       state: { selectedValues: [SelectedEntity] },
       options: {
         filterColumnLabel: "ANSP",
@@ -608,7 +669,7 @@ description: "An overview of financial information and indicators for European A
           //						labelStacking: 'vertical',
           allowTyping: false,
           allowMultiple: false,
-          sortValues: true,
+          sortValues: false,
           allowNone: false
         }
       }
@@ -692,6 +753,7 @@ description: "An overview of financial information and indicators for European A
   
     //---------------------------MyChart/Table initialization ---------------------------------------------
     MyPieShareRevenue = new google.visualization.PieChart(document.getElementById("MyPieShareRevenue_div"));
+    MyPieShareRevenue_reg = new google.visualization.PieChart(document.getElementById("MyPieShareRevenue_div_reg"));
 
     MyChartIncome1 = new google.visualization.ComboChart(document.getElementById("MyChartIncome1_div"));
     MyChartIncome2 = new google.visualization.ComboChart(document.getElementById("MyChartIncome2_div"));
@@ -756,11 +818,11 @@ description: "An overview of financial information and indicators for European A
       var year = MyViewContext.getValue(i, 0); // Get the value in the 0th column (years)
       var orgName = MyViewContext.getValue(i, 1); // Get the value in the 1st column (organization names)
       
-      if (year === FullMaxYear && orgName != "Pan-European System") {
+      if (year === FullMaxYear && orgName != "Pan-European System" && orgName != "ANSPs under Full Cost Recovery" && orgName != "ANSPs under Economic Regulation") {
         uniqueOrgNames.add(orgName); // Add organization name if the year equals maxYear
       }
       
-      if (year === FullMaxYear-1 && orgName != "Pan-European System") {
+      if (year === FullMaxYear-1 && orgName != "Pan-European System" && orgName != "ANSPs under Full Cost Recovery" && orgName != "ANSPs under Economic Regulation") {
         uniqueOrgNames_all.add(orgName); // Add organization name if the year equals maxYear-1
       }
     }
@@ -852,15 +914,17 @@ description: "An overview of financial information and indicators for European A
        textStyle: { fontSize: 12, },
      },
      width: 180,
-     height: 83,
+     height: 150,
      chartArea: {
        left: 15,
        top: 12,
-      //  width: "100%",
-       height: "100%"
+      //  width: "90%",
+       height: "80%"
      }
    };
    MyPieShareRevenue.draw(MyTableShareTotalRevenue, optionsMyPieShareRevenue);
+   MyPieShareRevenue_reg.draw(MyTableShareTotalRevenue, optionsMyPieShareRevenue);
+
 }
 
   //---------------------------Currency Parameters & data availability & Number of Decimals ----------------------
@@ -2473,8 +2537,10 @@ description: "An overview of financial information and indicators for European A
     document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
     document.getElementById("notes").innerHTML = MyViewANSPServices.getValue(0, 6);
     document.getElementById("paneuropean-notes").innerHTML = MyViewANSPServices.getValue(0, 6);
+    document.getElementById("regulatory-notes").innerHTML = MyViewANSPServices.getValue(0, 6);
     document.getElementById("org_arr_title").innerHTML = (SelectedEntity != "Pan-European System") ? "Organisational & Corporate Arrangements:" : "" ;
     document.getElementById("MyTitleShareRevenue_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
+    document.getElementById("MyTitleShareRevenue_reg_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
     // document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
 
   // Update all titles - section titles, scorecard titles, etc.
@@ -2537,7 +2603,7 @@ description: "An overview of financial information and indicators for European A
     var Dif_DebtToEquity = (SelectedYear == MinYear) ? "-" : Math.round((TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 4, SelectedYear - MinYear))/ TransposedTableBalance.getValue(TransposedTableBalance.getNumberOfRows() - 1, SelectedYear - MinYear) * 100) / 100;
 
     var Scorecard_EquityRatioAvg =  Math.round(MyViewBalance31.getValue(SelectedYear - MinYear, 0)*100)/100;
-    var Dif_EquityRatioAvg = (SelectedYear == MinYear) ? "-" :  Math.round(MyViewBalance3.getValue(SelectedYear - MinYear -1, 0)*100)/100;
+    var Dif_EquityRatioAvg = (SelectedYear == MinYear) ? "-" :  Math.round(MyViewBalance31.getValue(SelectedYear - MinYear -1, 0)*100)/100;
 
 
     var Scorecard_DaysOPEX = Math.round(MyViewBalance2.getValue(SelectedYear - MinYear, 2));
@@ -2659,9 +2725,15 @@ description: "An overview of financial information and indicators for European A
     if (SelectedEntity === "Pan-European System") {
       document.getElementById("paneuropean-context").style.display = "block";
       document.getElementById("ansp-context").style.display = "none";
+      document.getElementById("regulatory-context").style.display = "none";
+    } else if (SelectedEntity === "ANSPs under Full Cost Recovery" || SelectedEntity === "ANSPs under Economic Regulation") {
+      document.getElementById("paneuropean-context").style.display = "none";
+      document.getElementById("ansp-context").style.display = "none";
+      document.getElementById("regulatory-context").style.display = "block";
     } else {
       document.getElementById("paneuropean-context").style.display = "none";
       document.getElementById("ansp-context").style.display = "block";
+      document.getElementById("regulatory-context").style.display = "none";
     }
   }
   
