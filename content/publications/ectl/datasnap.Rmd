@@ -1,16 +1,32 @@
 ---
-title: EUROCONTROL Data Snapshots
-type: "Data Snapshot"
-date: '2021-02-16'
-tags:  Data Snapshot
-extrajs: [
-  "/javascript/img_pre.js",
-  ]
+title: "EUROCONTROL Data Snapshots"
+type: Data Snapshot
+date: "2021-02-16"
+tags: Data Snapshot
+extrajs: /javascript/img_pre.js
 ---
 
 <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog"><div class="modal-content"><div class="modal-body">
 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><img src="" class="imagepreview"  style="width: 300%;"></div></div></div></div>
+
+## 2025
+
+<!-- #49 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Did you know… which were the busiest worldwide city pairs in 2024? - EUROCONTROL Data Snapshot #49][DS49]</h5>
+<small><strong><p style="color:#808080">Published: 14 February 2025</p></strong></small>
+The 49. EUROCONTROL Data Snapshot examines the busiest city pairs in 2024.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024 target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds49.png" alt="Busiest city pairs in 2024"></div>
+</div>
+</div></div>
 
 
 ## 2024
@@ -925,4 +941,6 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS45]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-45-long-term-perspective-ans-performance "Long term perspective of ANS performance"
 [DS46]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-46-average-flight-eurocontrol-area "Further, higher, bigger…"
 [DS47]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-47-atfm-slot-tolerance-windows "On ATFM slot tolerance windows"
+[DS48]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-48-longest-flights-europe "On longest flights from Europe"
+[DS49]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024 "On busiest city pairs in 2024"
 
