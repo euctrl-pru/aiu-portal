@@ -9,5 +9,7 @@ In 2016, EUROCONTROL signed a [Comprehensive Agreement][ca] with Israel and Moro
 
 <img src="/images/ectl_states_2025.jpg" class="img-fluid" alt="EUROCONTROL States">
 
+<i>Disclaimer: The designations employed and the presentation of the material on the map does not imply the expression of any opinion whatsoever on the part of EUROCONTROL concerning the legal status of any country, territory city or area or of is authorities, or concerning the delimitation of its frontiers or boundaries.</i>
+
 [ectl_ms]: https://www.eurocontrol.int/about-us#member-states "EUROCONTROL Member States"
 [ca]: https://www.eurocontrol.int/about-us#member-states "Comprehensive Agreement States"
