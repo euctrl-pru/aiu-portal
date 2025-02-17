@@ -269,13 +269,6 @@ ignoreFiles = [
     parent = "stakeholder"
     weight = 2
   [[menu.main]]
-    pre = "<i class='fas fa-layer-group'></i>"
-    name = "&nbsp;Functional airspace block"
-    url = "/dashboard/stakeholder/fab/"
-    identifier = "fab"
-    parent = "stakeholder"
-    weight = 3
-  [[menu.main]]
     pre = "<i class='fas fa-globe'></i>"
     name = "&nbsp;States"
     url = "/dashboard/stakeholder/state/"
