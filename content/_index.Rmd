@@ -359,17 +359,16 @@ Released: EUROCONTROL Aviation Long-Term Outlook to 2050</a></h5>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">
-<img src="/images/landing/2024-12-xx_AT6-airline_schedules.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">
+<img src="/images/landing/2025-02-14_DS49_worldwide_city_pairs.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act</a></h5>
-<small><b>Scheduling is a key element of an airline’s commercial strategy and of the customer travel experience;</b> it requires complex decision-making and accurate forecasting despite many variables, with revenue and operational costs being the most critical factors.
-
-The latest European Aviation Trends paper looks in detail at <b>how scheduling practices have evolved</b> over recent years, providing an insight into how challenging and difficult a balancing act this is.</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024</a></h5>
+<small>Did you know… that <b>Jeju - Seoul</b> in South Korea was the <b>busiest city pair in the world in 2024 with 226 daily flights</b>?
+The latest EUROCONTROL <b>Data Snapshot</b> examines <b>the busiest city pairs worldwide, based on daily connections.</b></small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
