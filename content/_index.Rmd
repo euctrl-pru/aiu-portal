@@ -337,19 +337,60 @@ fullpage: true
 
 
 
+
 <div class="carousel-item active">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2050" target="_blank">
-<img src="/images/landing/2024-12-19_Aviation_Long_term_Outlook.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="	
-Released: EUROCONTROL Aviation Long-Term Outlook to 2050">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">
+<img src="/images/landing/2025-02-14_DS49_worldwide_city_pairs.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2050" target="_blank"> 	
-Released: EUROCONTROL Aviation Long-Term Outlook to 2050</a></h5>
-<small>EUROCONTROL has just released its <b>long-term flight and CO2 forecasts</b>, looking at how aviation will develop in the next twenty-five years - as well as the <b>pathway to net-zero CO2 emissions by 2050</b>. This report is one of the inputs for the recently released <a href="https://www.eurocontrol.int/publication/european-aviation-environmental-report-2025" target="_blank">European Aviation Environmental Report 2025</a>. </small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024</a></h5>
+<small>Did you know… that <b>Jeju - Seoul</b> in South Korea was the <b>busiest city pair in the world in 2024 with 226 daily flights</b>?
+The latest EUROCONTROL <b>Data Snapshot</b> examines <b>the busiest city pairs worldwide, based on daily connections.</b></small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2050" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank">
+<img src="/images/landing/2024-01-23_EAO_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: European Aviation Overview 2024">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank">Released: European Aviation Overview 2024</a></h5>
+<small><b>EUROCONTROL's latest European Aviation Overview looks at the entire network over 2024</b> - a year marked by <b>a strong recovery</b> in traffic, particularly during the summer, and <b>high ATFM delays</b>, notably as a result of a lack of capacity and adverse weather.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" target="_blank">
+<img src="/images/landing/flying_green_backgrnd_1920x1080.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL updates flagship sustainability platform FlyingGreen">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" target="_blank">Released: EUROCONTROL updates flagship sustainability platform FlyingGreen</a></h5>
+<small><b>EUROCONTROL has just released new updates to its flagship sustainability platform, FlyingGreen.</b> FlyingGreen’s innovative suite of tools and resources is designed to assist aviation stakeholders in accelerating their transition toward sustainability.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -359,22 +400,18 @@ Released: EUROCONTROL Aviation Long-Term Outlook to 2050</a></h5>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">
-<img src="/images/landing/2024-12-xx_AT6-airline_schedules.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act">
+<a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" target="_blank">
+<img src="/images/landing/2025-02-04_survey.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Survey on Aviation Intelligence Products">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" target="_blank">EUROCONTROL Aviation Trends #6: Airlines schedules - A balancing act</a></h5>
-<small><b>Scheduling is a key element of an airline’s commercial strategy and of the customer travel experience;</b> it requires complex decision-making and accurate forecasting despite many variables, with revenue and operational costs being the most critical factors.
-
-The latest European Aviation Trends paper looks in detail at <b>how scheduling practices have evolved</b> over recent years, providing an insight into how challenging and difficult a balancing act this is.</small>
+<h5><a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" target="_blank">Survey on Aviation Intelligence Products</a></h5>
+<small>To help us continue improving and to better serve you, <b>we would greatly appreciate your participation in our short survey</b> on the Aviation Intelligence Products. The survey will take <b>5-10 minutes to complete, and your insights are invaluable to us.</b></small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/airlines-schedules-balancing-act" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" class="card-link" target="_blank">Start Survey</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
-
-
 
 
 
@@ -385,42 +422,17 @@ The latest European Aviation Trends paper looks in detail at <b>how scheduling p
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://www.ansperformance.eu" target="_blank">
-<img src="/images/landing/portal_updates.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Portal Updates: Taxi-out and ASMA Dashboards Updated and New Taxi-in Dashboard">
+<img src="/images/landing/portal_updates.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Portal Updates: Addition of Iceland">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.ansperformance.eu" target="_blank"> Portal Updates: Taxi-out and ASMA Dashboards Updated and New Taxi-in Dashboard</a></h5>
-<small>
-The <b>taxi-out dashboard</b> and the <b>arrival sequencing and metering area (ASMA) dashboardhave been improved for a better user experience</b> . In addition, <b>a new taxi-in dashboard is included in this release</b>.
-</small>
+<h5><a href="https://www.ansperformance.eu" target="_blank"> Portal Updates: Addition of Iceland</a></h5><small>Following Iceland becoming a EUROCONTROL member state on the first of January 2025: <b>Iceland, Isavia, Keflavik and Reykjavik are now included to the traffic, delay and punctuality rankings and the statistics displayed on the portal and daily traffic variation dashboard.</b></small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/efficiency/asma/" class="card-link" target="_blank">ASMA Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i><br>
-<a href="https://ansperformance.eu/efficiency/taxiout/" class="card-link" target="_blank">Taxi-out Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i><br>
-<a href="https://ansperformance.eu/efficiency/taxiin/" class="card-link" target="_blank">Taxi-in Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/" class="card-link" target="_blank">Portal</a> <i class="ml-2 fas fa-arrow-right"></i><br>
+<a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html" class="card-link" target="_blank">Daily Traffic Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i><br>
 </div>
 </div>
 </div>
-
-
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/press-release/iceland-becomes-42n-member-state-eurocontrol" target="_blank">
-<img src="/images/landing/ectl-iceland-1920x1080.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Iceland becomes 42nd Member State of EUROCONTROL">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/press-release/iceland-becomes-42n-member-state-eurocontrol" target="_blank">Iceland becomes 42nd Member State of EUROCONTROL</a></h5>
-<small><b>Iceland officially became EUROCONTROL’s 42nd Member State on 1 January 2025</b>, exactly a decade since the last Member State accession. </small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/press-release/iceland-becomes-42n-member-state-eurocontrol" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-
 
 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
 <span class="sr-only">Previous</span>
