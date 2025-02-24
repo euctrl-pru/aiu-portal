@@ -1,7 +1,7 @@
 # CO2 Emissions by State
 ## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
-co_opt_end: Dec 2024 # UPDATE MONTH (M) - Delayed few days
+co_opt_end: Jan 2025 # UPDATE MONTH (M) - Delayed few days
 
 # Operations En-route
 ## En-route IFR flights and ATFM delays (AUA) - No post ops adj.
