@@ -12,6 +12,12 @@ date: '2020-06-01'
 <div class="row">
 <div class="card-deck">
 
+<div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank">
+  <img class="card-img-top" src="/images/prc/prr2024.png" alt="PRR 2024">
+  <div class="card-body"><h5 class="card-title">Performance Review Report 2024</h5></a>
+  </div>
+</div>
+
 <div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2023" target="_blank">
   <img class="card-img-top" src="/images/prc/prr2023.png" alt="PRR 2023">
   <div class="card-body"><h5 class="card-title">Performance Review Report 2023</h5></a>
@@ -42,12 +48,6 @@ date: '2020-06-01'
   </div>
 </div>
 
-<div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2018" target="_blank">
-  <img class="card-img-top" src="/images/prc/prr2018.png" alt="PRR 2018">
-  <div class="card-body"><h5 class="card-title">Performance Review Report 2018</h5></a>
-  </div>
-</div>
-
 </div>
 </div>
 </div>
@@ -57,6 +57,12 @@ date: '2020-06-01'
 <div class="container">
 <div class="row">
 <div class="card-deck">
+
+<div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2018" target="_blank">
+  <img class="card-img-top" src="/images/prc/prr2018.png" alt="PRR 2018">
+  <div class="card-body"><h5 class="card-title">Performance Review Report 2018</h5></a>
+  </div>
+</div>
 
 <div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2017" target="_blank">
   <img class="card-img-top" src="/images/prc/prr2017.png" alt="PRR 2017">
@@ -88,18 +94,13 @@ date: '2020-06-01'
   </div>
 </div>
 
-<div class="card"><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2012" target="_blank">
-  <img class="card-img-top" src="/images/prc/prr2012.png" alt="PRR 2012">
-  <div class="card-body"><h5 class="card-title">Performance Review Report 2012</h5></a>
-  </div>
-</div>
-
 </div>
 </div>
 </div>
 
 
 ## Older reports
+* [Performance Review Report 2012][prr2012]
 * [Performance Review Report 2011][prr2011]
 * [Performance Review Report 2010][prr2010]
 * [Performance Review Report 2009][prr2009]
@@ -115,6 +116,7 @@ date: '2020-06-01'
 * [Performance Review Report 1999][prr1999]
 * [Performance Review Report 1998][prr1998]
 
+[prr2012]: https://www.eurocontrol.int/publication/performance-review-report-prr-2012 "Performance Review Report 2012"
 [prr2011]: https://www.eurocontrol.int/publication/performance-review-report-prr-2011 "Performance Review Report 2011"
 [prr2010]: https://www.eurocontrol.int/publication/performance-review-report-prr-2010 "Performance Review Report 2010"
 [prr2009]: https://www.eurocontrol.int/publication/performance-review-report-prr-2009 "Performance Review Report 2009"
