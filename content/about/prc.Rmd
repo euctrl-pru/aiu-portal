@@ -58,7 +58,8 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 
  <a href="/about/prc_MS"><div class="card">
   <img class="card-img-top" src="/images/prc/prc_MS.jpg" alt="Michael STEINFURTH">
-  <div class="card-body"><h5 class="card-title">Michael STEINFURTH</h5></a><p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
+  <div class="card-body"><h5 class="card-title">Michael STEINFURTH <br> † Jan. 2025</h5></a>
+  <p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
   </div></div> 
 
   <div class="card">
