@@ -1,6 +1,6 @@
 ---
-title: "Aviation Intelligence Portal"
-description: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
+title: "Traffic Visualisation"
+description: "This page contains a traffic visualisation for the monthly AIU portal newsletter."
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
