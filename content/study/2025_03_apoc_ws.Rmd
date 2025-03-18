@@ -70,10 +70,3 @@ All presentations from the event are now available for download on this page.</p
 </div>
 </div>
 </div>
-
-<div class="container">
-#### Notice
-*The PRC has made every effort to ensure that the information and analysis contained in this document are as accurate and 
-complete as possible. Despite these precautions, should you find any errors or inconsistencies we would be grateful if you 
-could please bring them to the Aviation Intelligence Unit's attention.*
-</div>
