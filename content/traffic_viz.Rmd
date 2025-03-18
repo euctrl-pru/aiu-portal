@@ -1,0 +1,98 @@
+---
+title: "Aviation Intelligence Portal"
+description: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
+date: "2018-02-07T11:26:51+01:00"
+fullpage: true
+---
+
+<section class="content-space bg-light">
+<script type="text/javascript" src="javascript/network_situation.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        updateNetworkSituationOnPage();
+    });
+</script>
+<div class="container mt-4">
+<div class="row">
+<div class="col-md-8">
+<h4><span>Network status on </span> <span id="day_text_title"></span></h4>
+<div class="card border-0 rounded p-3 mb-4">
+<ul class="nav nav-segment nav-fill align-items-centers mb-4">
+<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#flights">Flights</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="flights" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-12">
+
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+<p class="h5 mb-0 d-inline">Evolution of daily flights in the EUROCONTROL area</p>
+<p class="text-muted mb-0 d-inline">(7-day average)</p>
+</div>
+</div>
+
+<div class="w3-container tab-content">
+<div id="flights-y2d" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_text" class="font-weight-bold">n/a</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 text-muted">Total flights</p>
+<h4 id="y2d_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 text-muted">Avg. daily flights</p>
+<h4 id="avg_y2d_traffic" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 text-muted">Vs prev. year</p>
+<h4 id="dif_y2d_prev_year" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 text-muted">Vs 2019</p>
+<h4 id="dif_y2d_2019" class="mb-0 h5">n/a</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+</div>
+
+<div id="graphcontainer" class="col-12">
+<iframe id="traffic-plot" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (a) {
+        var b = $(a.target).attr("href"),
+            c = $(b).find('iframe');
+        c.each(function () {
+            var a = $(this),
+                b = a.attr('src');
+            a.attr('src', ''),
+            setTimeout(function () {
+                a.attr('src', b)
+            }, 10)
+        })
+    })
+})
+</script>
+
+
