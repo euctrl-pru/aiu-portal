@@ -68,7 +68,9 @@ In order to involve key stakeholders in this process, in February 2023 the PRC, 
 
 In November 2023, the PRC organised a second workshop entitled "<a href="https://cadmus.eui.eu/handle/1814/76498" target= "blank">ATM transformation flagships – continuing the journey</a>" with the aim to determine more precisely each flagship´s impact on performance, identify the factors preventing flagships from delivering their full result and identifying new possible flagships.
 
-The two policy briefs summarise the main takeaways from both workshops.
+The third TSS workshop, held in November 2024 and facilitated by <a href="https://www.universiteitleiden.nl/en/law/institute-of-public-law/institute-of-air-space-law/research/research-in-aerospace-law--policy" target= "blank">Leiden University’s International Institute of Air and Space Law</a>, followed up on the previous workshops held in 2023 with the aim of assessing the progress in implementing transformative ATM technologies and identifying the ongoing challenges in the European aviation sector.
+
+The policy briefs summarise the main takeaways from the three workshops.
 
 <div class="container">
 <div class="row">
@@ -84,9 +86,9 @@ The two policy briefs summarise the main takeaways from both workshops.
   <div class="card-body"><h5 class="card-title">PRC Transformation Support Strategy Workshop 2 </h5></a><p class="card-text" style="color:grey">November 2023</p><br>
   </div></div>
 
-<div class="card">
-  <img class="card-img-top" src="" alt="">
-  <div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p>
+ <div class="card">
+  <a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target= "blank"><img class="card-img-top" src="/images/prc/pb_fsr_ws3.png" alt="TSS Workshop 3">
+  <div class="card-body"><h5 class="card-title">PRC Transformation Support Strategy Workshop 3 </h5></a><p class="card-text" style="color:grey">November 2024</p><br>
   </div></div>
 
 <div class="card">

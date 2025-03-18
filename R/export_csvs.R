@@ -19,7 +19,7 @@ last_month_beg <- today(tzone = "UTC") |> floor_date("month") |> `%m+%`(months(-
 
 
 #---------- co2 emissions ----
-export_co2_emissions(wef = "2024-01-01") |>
+export_co2_emissions(wef = "2025-01-01") |>
   arrange(YEAR, MONTH, STATE_NAME) |>
   group_by(YEAR) |>
   group_walk(~ write_csv(
