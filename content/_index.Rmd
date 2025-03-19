@@ -404,7 +404,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target="_blank"> TSS 2024: Flagship for ATM Transformation - Continuing the Journey</a></h5>
-<small>The Leiden University's International Institute of Air and Space Law has published an assessment of the current state of European ATM Transformation during the third PRC Transformation Support Strategy (TSS) Workshop.</small>
+<small>The Leiden University's International Institute of Air and Space Law has published an assessment of the current state of European ATM Transformation based on the critical examination conducted during the third PRC Transformation Support Strategy (TSS) Workshop.</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
@@ -416,18 +416,20 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.ansperformance.eu" target="_blank">
-<img src="/images/landing/portal_updates.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Portal Updates: Iceland now reflected in our statistics">
+<a href="/data/" target="_blank">
+<img src="/images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.ansperformance.eu" target="_blank"> Portal Updates: Iceland now reflected in our statistics</a></h5><small>Following Iceland becoming a EUROCONTROL Member State on the first of January 2025: <b>Iceland, Isavia, Keflavik and Reykjavik are now included to the traffic, delay and punctuality rankings and the statistics displayed on the portal and daily traffic variation dashboard.</b></small>
+<h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
+<small>February 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/" class="card-link" target="_blank">Portal</a> <i class="ml-2 fas fa-arrow-right"></i><br>
-<a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html" class="card-link" target="_blank">Daily Traffic Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i><br>
+<a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+</div>
+
 
 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
 <span class="sr-only">Previous</span>
