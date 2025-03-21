@@ -89,7 +89,7 @@ cplx_end_bada_3_13_1: Dec 2019
 # Economics
 ## ACE operational data - Monthly
 ace_opt_beg: Jan 2019
-ace_opt_end: Jan 2025 # UPDATE MONTHLY (M)
+ace_opt_end: Feb 2025 # UPDATE MONTHLY (M)
 
 ## ACE operational data - Yearly 
 ace_year_end: 2023
