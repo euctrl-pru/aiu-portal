@@ -1,6 +1,7 @@
 ---
 title: "Aviation Intelligence Portal"
-description: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
+description: The portal provides insights into various aviation performance areas
+  and is developed by the EUROCONTROL Aviation Intelligence Unit.
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
@@ -337,60 +338,17 @@ fullpage: true
 
 
 
-
 <div class="carousel-item active">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">
-<img src="/images/landing/2025-02-14_DS49_worldwide_city_pairs.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024">
+<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank">
+<img src="/images/landing/PRR_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" target="_blank">EUROCONTROL Data Snapshot #49 on the busiest city pairs in 2024</a></h5>
-<small>Did you know… that <b>Jeju - Seoul</b> in South Korea was the <b>busiest city pair in the world in 2024 with 226 daily flights</b>?
-The latest EUROCONTROL <b>Data Snapshot</b> examines <b>the busiest city pairs worldwide, based on daily connections.</b></small>
+<h5><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank"> PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets</a></h5>
+<small>The independent Performance Review Commission (PRC) has just released their Performance Review Report (PRR) of ANS performance in Europe for 2024.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank">
-<img src="/images/landing/2024-01-23_EAO_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: European Aviation Overview 2024">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank">Released: European Aviation Overview 2024</a></h5>
-<small><b>The latest EUROCONTROL European Aviation Overview examines the network in 2024</b>, a year defined by <b>strong traffic recovery</b> - especially during summer - and <b>significant ATFM delays</b> due to capacity constraints and adverse weather. </small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" target="_blank">
-<img src="/images/landing/flying_green_backgrnd_1920x1080.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL updates flagship sustainability platform FlyingGreen">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" target="_blank">Released: EUROCONTROL updates flagship sustainability platform FlyingGreen</a></h5>
-<small><b>EUROCONTROL has just released new updates to its sustainability platform, FlyingGreen.</b> FlyingGreen’s innovative suite of tools and resources is designed to assist aviation stakeholders in accelerating their transition towards sustainability.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/news/eurocontrol-publishes-new-release-its-flagship-sustainability-platform-flyinggreen" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -400,20 +358,66 @@ The latest EUROCONTROL <b>Data Snapshot</b> examines <b>the busiest city pairs w
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" target="_blank">
-<img src="/images/landing/2025-02-04_survey.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Survey on Aviation Intelligence Products">
+<a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target="_blank">
+<img src="/images/landing/Leiden.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="TSS 2024: Flagship for ATM Transformation - Continuing the Journey">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" target="_blank">Survey on Aviation Intelligence Products</a></h5>
-<small>To help us continue improving and to better serve you, <b>we would greatly appreciate your participation in our short survey</b> on the Aviation Intelligence Products. The survey will take <b>5-10 minutes to complete, and your insights are invaluable to us.</b></small>
+<h5><a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target="_blank"> TSS 2024: Flagship for ATM Transformation - Continuing the Journey</a></h5>
+<small>In November 2024, the PRC hosted its 3rd Transformation Support Strategy (TSS) Workshop, bringing together key industry stakeholders to discuss the needs, progress, and challenges of European ATM transformation. Read the Leiden University’s International Institute of Air & Space Law Policy Brief to explore the main takeaways from the workshop.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=IDzzdnlZCESt94s8S-leUgtIrrOPg7NBpMm5903UHORUQVAwN0dVTkZCT1AwQ0w0TlcyTU04QTExRy4u" class="card-link" target="_blank">Start Survey</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
 
 
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" target="_blank">
+<img src="/images/landing/2025-03-xx_AT7-apac_traffic.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="European Aviation Trends #7 on the Evolution of traffic to Asia/Pacific">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" target="_blank">European Aviation Trends #7 on the Evolution of traffic to Asia/Pacific</a></h5>
+<small> EUROCONTROL’s 7th Aviation Trends paper looks in detail at the evolution of traffic between Europe and the Asia Pacific region (APAC) since 2019; in particular, it analyses the effects of the pandemic and of the invasion of Ukraine.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" target="_blank">
+<img src="/images/landing/2025-02-28_MT_forecast_update.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL Forecast 2025-2031">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" target="_blank">Released: EUROCONTROL Forecast 2025-2031</a></h5>
+<small>This seven-year forecast (Spring 2025) builds upon the Autumn 2024 publication and incorporates the latest flight trends, including a comprehensive update of the forecast inputs. </small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" target="_blank">
+<img src="/images/ds/ds50.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #50: Aircraft in the air in 2024">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" target="_blank">EUROCONTROL Data Snapshot #50: Aircraft in the air in 2024</a></h5>
+<small>Have you ever wondered how many aircraft are flying in the sky at the same time? Discover the highest and lowest number of flights recorded simultaneously in the EUROCONTROL area in our latest data snapshot!</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
 
 
 
@@ -421,18 +425,20 @@ The latest EUROCONTROL <b>Data Snapshot</b> examines <b>the busiest city pairs w
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.ansperformance.eu" target="_blank">
-<img src="/images/landing/portal_updates.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Portal Updates: Iceland now reflected in our statistics">
+<a href="/data/" target="_blank">
+<img src="/images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.ansperformance.eu" target="_blank"> Portal Updates: Iceland now reflected in our statistics</a></h5><small>Following Iceland becoming a EUROCONTROL Member State on the first of January 2025: <b>Iceland, Isavia, Keflavik and Reykjavik are now included to the traffic, delay and punctuality rankings and the statistics displayed on the portal and daily traffic variation dashboard.</b></small>
+<h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
+<small>February 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/" class="card-link" target="_blank">Portal</a> <i class="ml-2 fas fa-arrow-right"></i><br>
-<a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html" class="card-link" target="_blank">Daily Traffic Dashboard</a> <i class="ml-2 fas fa-arrow-right"></i><br>
+<a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+</div>
+
 
 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
 <span class="sr-only">Previous</span>

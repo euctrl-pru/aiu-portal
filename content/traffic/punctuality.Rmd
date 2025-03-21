@@ -92,7 +92,9 @@ library(lubridate)
 
   </style>
   
-This page provides an overview of the traffic, [ATFM delay](/definition/atfm-delay/), [punctuality (OTP15)](/definition/punctuality/) and percentage of [operated schedules](/definition/opschedules/) in the [EUROCONTROL Area](/definition/eurocontrol-area/). For a more detailed analysis consult our [Daily traffic variation dashboard](https://www.eurocontrol.int/Economics/DailyPunctuality-States.html){target="_blank"}. Information on en-route and terminal [service units](/acronym/su/) from the [Central Route Charges Office of EUROCONTROL (CRCO)](https://www.eurocontrol.int/crco){target="_blank"} is available from our [Service Units dashboard](https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html){target="_blank"}.
+This page provides an overview of the traffic, [ATFM delay](/definition/atfm-delay/), [punctuality (OTP15)](/definition/punctuality/) and percentage of [operated schedules](/definition/opschedules/) in the [EUROCONTROL Area](/definition/eurocontrol-area/). For a more detailed analysis consult our [Daily punctuality variation dashboard](https://www.eurocontrol.int/Economics/DailyPunctuality-States.html){target="_blank"}. 
+
+Note: The data source for all charts and figures shown below is the EUROCONTROL Network Manager.
 
 <ul class="nav nav-tabs mb-1">
   <li class="nav-item">
