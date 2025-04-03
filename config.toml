@@ -112,19 +112,26 @@ ignoreFiles = [
     parent = "dashboard"
     weight = 20
     [[menu.main]]
+  #   pre = "&nbsp;&nbsp;&nbsp;<i class='far fa-star fa-spin fa-fw'></i>"
+      name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Daily punctuality dashboard</span></i>"
+      url = "https://www.eurocontrol.int/Economics/DailyPunctuality-States.html"
+      identifier = "key-punctuality-daily-punctuality"
+      parent = "dashboard"
+      weight = 21
+    [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Network punctuality</span>"
       url = "/traffic/punctuality/#eurocontrol-area-network-view-1"
       identifier = "key-punctuality-network"
       parent = "dashboard"
-      weight = 21
+      weight = 22
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>State & airport punctuality</span>"
       url = "/traffic/punctuality/#state-view-1"
       identifier = "key-punctuality-state-airport"
       parent = "dashboard"
-      weight = 22
+      weight = 23
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-clock'></i>"
@@ -132,28 +139,28 @@ ignoreFiles = [
     url = "/capacity/"
     identifier = "key-capacity"
     parent = "dashboard"
-    weight = 23
+    weight = 24
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>En-route ATFM delays</span>"
       url = "/capacity/atfm_ert/"
       identifier = "key-enroute-atfm"
       parent = "dashboard"
-      weight = 24
+      weight = 25
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Airport ATFM delays</span>"
       url = "/capacity/atfm_apt/"
       identifier = "key-atfm-apt"
       parent = "dashboard"
-      weight = 25
+      weight = 26
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>All-causes delays</span>"
       url = "/capacity/tot_dly/"
       identifier = "key-tot-dly"
       parent = "dashboard"
-      weight = 26
+      weight = 27
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-leaf'></i>"
@@ -161,49 +168,49 @@ ignoreFiles = [
     url = "/efficiency/"
     identifier = "key-environment"
     parent = "dashboard"
-    weight = 27
+    weight = 28
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>CO<sub>2</sub> emissions</span>"
       url = "/efficiency/emissions/"
       identifier = "key-environment-emissions"
       parent = "dashboard"
-      weight = 28
+      weight = 29
      [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Horizontal flight efficiency</span>"
       url = "/efficiency/hfe/"
       identifier = "key-environment-hfe"
       parent = "dashboard"
-      weight = 29
+      weight = 30
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Vertical flight efficiency</span>"
       url = "/efficiency/vfe/"
       identifier = "key-environment-vfe"
       parent = "dashboard"
-      weight = 30
+      weight = 31
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Terminal holdings</span>"
       url = "/efficiency/asma/"
       identifier = "key-environment-holding"
       parent = "dashboard"
-      weight = 31
+      weight = 32
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Taxi-out</span>"
       url = "/efficiency/taxiout/"
       identifier = "key-environment-taxiout"
       parent = "dashboard"
-      weight = 32
+      weight = 33
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Taxi-in</span>"
       url = "/efficiency/taxiin/"
       identifier = "key-environment-taxiin"
       parent = "dashboard"
-      weight = 33
+      weight = 34
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-euro-sign'></i>"
@@ -211,42 +218,42 @@ ignoreFiles = [
     url = "/economics/"
     identifier = "key-economics"
     parent = "dashboard"
-    weight = 34
+    weight = 35
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>ATM cost-effectiveness (ACE)</span>"
       url = "/economics/ace-overview/"
       identifier = "key-economics-ace"
       parent = "dashboard"
-      weight = 35
+      weight = 36
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Unit rates and costs</span>"
       url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"
       identifier = "key-economics-unit-rates"
       parent = "dashboard"
-      weight = 36
+      weight = 37
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Service units</span>"
       url = "https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"
       identifier = "key-economics-service-units"
       parent = "dashboard"
-      weight = 37
+      weight = 38
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>ANSPs financial dashboard</span>"
       url = "/economics/finance/"
       identifier = "key-economics-financial"
       parent = "dashboard"
-      weight = 38
+      weight = 39
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Standard Inputs for CBA</span>"
       url = "/economics/cba/"
       identifier = "key-economics-cba"
       parent = "dashboard"
-      weight = 39
+      weight = 40
 
   [[menu.main]]
     name = "Stakeholder views"
