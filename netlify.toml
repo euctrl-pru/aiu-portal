@@ -158,7 +158,7 @@ command = "hugo --gc --minify"
   status = 200
   force = true
 [[redirects]]
-  from = "/references/methodology/ATFM_delay_calculation.html"
+  from = "/methodology/ATFM_delay_calculation.html"
   to = "/methodology/atfm-delay-calculation/"
   status = 200
   force = true
