@@ -141,19 +141,26 @@ ignoreFiles = [
     parent = "dashboard"
     weight = 24
     [[menu.main]]
+  #   pre = "&nbsp;&nbsp;&nbsp;<i class='far fa-star fa-spin fa-fw'></i>"
+      name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Daily ATFM delays dashboard</span></i>"
+      url = "https://www.eurocontrol.int/Economics/DailyDelay-States.html"
+      identifier = "key-atfm-daily"
+      parent = "dashboard"
+      weight = 25
+    [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>En-route ATFM delays</span>"
       url = "/capacity/atfm_ert/"
       identifier = "key-enroute-atfm"
       parent = "dashboard"
-      weight = 25
+      weight = 26
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Airport ATFM delays</span>"
       url = "/capacity/atfm_apt/"
       identifier = "key-atfm-apt"
       parent = "dashboard"
-      weight = 26
+      weight = 27
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>All-causes delays</span>"
