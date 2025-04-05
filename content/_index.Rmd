@@ -377,6 +377,26 @@ fullpage: true
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="/data/" target="_blank">
+<img src="/images/landing/202503_apoc_study.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="/data/" target="_blank">PRC Airport Operations Centres (APOC) Performance Study published!</a></h5>
+<small>
+The <strong>APOC concept</strong> is a flagship project of the <strong>Transformation Support Strategy (TSS)</strong> of the PRC. The study outlines the APOC concept, lists performance indicators, summarizes benefits and recommendations, and presents a European inventory of APOC implementations.
+</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/prc-apoc-study" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="/data/" target="_blank">
 <img src="/images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
 </a>
 <div style="padding: 1rem;">
