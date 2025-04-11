@@ -1,19 +1,26 @@
-
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
 {{ partial "footer_mathjax" . }}
+
 {{ if eq (getenv "HUGO_ENV") "production" }}
   {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 
-{{- range .Params.extrajs }}
-<script src="{{ . }}" type="text/javascript"></script>
+{{- $extrajs := .Params.extrajs -}}
+{{- if $extrajs -}}
+  {{- if reflect.IsSlice $extrajs -}}
+    {{- range $extrajs }}
+      <script src="{{ . | relURL }}" type="text/javascript"></script>
+    {{- end }}
+  {{- else -}}
+    <script src="{{ $extrajs | relURL }}" type="text/javascript"></script>
+  {{- end }}
 {{- end }}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js" integrity="sha512-zPB79j2C+3sFS9zcA3vg/z6bVKzJVEyu9pY5w89akQRys76zpAT2t6S3wZKla3QQ14O5l/Yt0RUQ/DHXx82Y5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- Add anchors before the closing body tag. -->
+
 <script>
   anchors.add();
 </script>
