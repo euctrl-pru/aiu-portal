@@ -379,7 +379,7 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="/data/" target="_blank">
+<a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" target="_blank">
 <img src="/images/landing/daily_delay.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Daily ATFM Dashboard">
 </a>
 <div style="padding: 1rem;">
@@ -417,11 +417,11 @@ The <strong>APOC concept</strong> is a flagship project of the <strong>Transform
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="/data/" target="_blank">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank">
 <img src="/images/landing/2025-04-14_DS51_q12025_traffic.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="/data/" target="_blank">Data Snapshot #51 on the Q1 2025 traffic growth</a></h5>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank">Data Snapshot #51 on the Q1 2025 traffic growth</a></h5>
 <small>
 Traffic continues to grow in 2025, but there is a clear and continuing divide between southern and central/northern Europe.
 </small>
