@@ -340,12 +340,33 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
+<img src="/images/landing/2025-04-10_app_v4.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL DATA app v4">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank"> Released: EUROCONTROL Data App v4</a></h5>
+Version 4 of the EUROCONTROL Data app is now released giving you access to data for the top 40 airports in Europe, and much more!
+</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">iOS app</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&hl=en&pli=1" class="card-link" target="_blank">Android app</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank">
 <img src="/images/landing/PRR_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets">
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank"> PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets</a></h5>
-<small>The independent Performance Review Commission (PRC) has just released their Performance Review Report (PRR) of ANS performance in Europe for 2024.</small>
+<small>Read the Performance Review Report 2024 of the independent Performance Review Commission (PRC) for a comprehensive analysis of European ATM performance in 2024.</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
@@ -358,67 +379,58 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target="_blank">
-<img src="/images/landing/Leiden.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="TSS 2024: Flagship for ATM Transformation - Continuing the Journey">
+<a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" target="_blank">
+<img src="/images/landing/daily_delay.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Daily ATFM Dashboard">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" target="_blank"> TSS 2024: Flagship for ATM Transformation - Continuing the Journey</a></h5>
-<small>In November 2024, the PRC hosted its 3rd Transformation Support Strategy (TSS) Workshop, bringing together key industry stakeholders to discuss the needs, progress, and challenges of European ATM transformation. Read the Leiden University’s International Institute of Air & Space Law Policy Brief to explore the main takeaways from the workshop.</small>
+<h5 style="margin-bottom: -0.5rem;"><a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" target="_blank">New Daily ATFM Delay Dashboard!</a></h5>
+<small>You can now follow-up the daily evolution of ATFM delay and its causes at Network, State, ACC and Airport level!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.universiteitleiden.nl/binaries/content/assets/rechtsgeleerdheid/instituut-voor-publiekrecht/lucht--en-ruimterecht/working-papers/ralp_2025_01.pdf" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+
+
 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" target="_blank">
-<img src="/images/landing/2025-03-xx_AT7-apac_traffic.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="European Aviation Trends #7 on the Evolution of traffic to Asia/Pacific">
+<a href="https://www.eurocontrol.int/publication/prc-apoc-study" target="_blank">
+<img src="/images/landing/202503_apoc_study.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" target="_blank">European Aviation Trends #7 on the Evolution of traffic to Asia/Pacific</a></h5>
-<small> EUROCONTROL’s 7th Aviation Trends paper looks in detail at the evolution of traffic between Europe and the Asia Pacific region (APAC) since 2019; in particular, it analyses the effects of the pandemic and of the invasion of Ukraine.</small>
+<h5><a href="https://www.eurocontrol.int/publication/prc-apoc-study" target="_blank">PRC Airport Operations Centres (APOC) Performance Study published!</a></h5>
+<small>
+The <strong>APOC concept</strong> is a flagship project of the <strong>Transformation Support Strategy (TSS)</strong> of the PRC. The study outlines the APOC concept, lists performance indicators, summarizes benefits and recommendations, and presents a European inventory of APOC implementations.
+</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/evolution-traffic-asiapacific" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/prc-apoc-study" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+
+
 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" target="_blank">
-<img src="/images/landing/2025-02-28_MT_forecast_update.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Released: EUROCONTROL Forecast 2025-2031">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank">
+<img src="/images/landing/2025-04-14_DS51_q12025_traffic.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" target="_blank">Released: EUROCONTROL Forecast 2025-2031</a></h5>
-<small>This seven-year forecast (Spring 2025) builds upon the Autumn 2024 publication and incorporates the latest flight trends, including a comprehensive update of the forecast inputs. </small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank">Data Snapshot #51 on the Q1 2025 traffic growth</a></h5>
+<small>
+Traffic continues to grow in 2025, but there is a clear and continuing divide between southern and central/northern Europe.
+</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" target="_blank">
-<img src="/images/ds/ds50.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Data Snapshot #50: Aircraft in the air in 2024">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" target="_blank">EUROCONTROL Data Snapshot #50: Aircraft in the air in 2024</a></h5>
-<small>Have you ever wondered how many aircraft are flying in the sky at the same time? Discover the highest and lowest number of flights recorded simultaneously in the EUROCONTROL area in our latest data snapshot!</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
 
 
 
@@ -430,7 +442,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>February 2025 data available for download now!</small>
+<small>March 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>

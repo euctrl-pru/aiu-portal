@@ -6,7 +6,7 @@
         <div class="col-sm mb-3 mb-sm-0">
             <ul class="list-inline list-separator mb-0">
                 <li class="list-inline-item">
-                    <p class="text-muted small">&copy; 2024 EUROCONTROL</p>
+                    <p class="text-muted small">&copy; <span id="currentYear"></span> EUROCONTROL</p>
                 </li>
                 <li class="list-inline-item"><a class="text-muted" href="/about/disclaimer">Disclaimer</a></li>
                 <li class="list-inline-item"><a class="text-muted" href="https://www.eurocontrol.int/info/privacy-and-website-terms-use" target="_blank">Privacy statement</a></li>
@@ -24,4 +24,16 @@
     </div>
   </footer>
 
+
+
+<script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Display the current year in the span with id "currentYear"
+        document.getElementById('currentYear').textContent = currentYear;
+    </script>
+    
 {{ end }}
+
+
+

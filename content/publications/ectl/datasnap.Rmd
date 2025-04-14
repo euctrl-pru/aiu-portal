@@ -13,10 +13,24 @@ extrajs: /javascript/img_pre.js
 
 ## 2025
 
-<!-- #50 -->
+<!-- #51 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
 
+<div class="col-sm-8"> 
+<h5>[Traffic evolution in Q1 2025: Traffic continues to grow, but growth is not uniform - EUROCONTROL Data Snapshot #51][DS51]</h5>
+<small><strong><p style="color:#808080">Published: 14 April 2025</p></strong></small>
+The 51. EUROCONTROL Data Snapshot delves into the traffic evolution in Q1 2025 in all ACCs in the EUROCONTROL area, highlighting the differences between southern and central/northern Europe.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51 target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds51.png" alt="Q1 2025 traffic evolution per ACC"></div>
+</div>
+</div></div>
+
+
+<!-- #50 -->
 <div class="col-sm-8"> 
 <h5>[Did you know… how many aircraft were in the air in 2024? - EUROCONTROL Data Snapshot #50][DS50]</h5>
 <small><strong><p style="color:#808080">Published: 20 March 2025</p></strong></small>
@@ -962,4 +976,5 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS48]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-48-longest-flights-europe "On longest flights from Europe"
 [DS49]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024 "On busiest city pairs in 2024"
 [DS50]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50 "Aircraft in the air in 2024"
+[DS51]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51 "Q1 2025 traffic evolution"
 
