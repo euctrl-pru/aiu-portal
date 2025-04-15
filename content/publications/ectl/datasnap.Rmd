@@ -31,6 +31,9 @@ The 51. EUROCONTROL Data Snapshot delves into the traffic evolution in Q1 2025 i
 
 
 <!-- #50 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
 <div class="col-sm-8"> 
 <h5>[Did you know… how many aircraft were in the air in 2024? - EUROCONTROL Data Snapshot #50][DS50]</h5>
 <small><strong><p style="color:#808080">Published: 20 March 2025</p></strong></small>
