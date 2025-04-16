@@ -348,7 +348,7 @@ fullpage: true
 Version 4 of the EUROCONTROL Data app is now released giving you access to data for the top 40 airports in Europe, and much more!
 </small>
 </div>
-<div class="card-footer pt-0">
+<div class="card-footer pt-0 text-center">
 <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">iOS app</a> <i class="ml-2 fas fa-arrow-right"></i>
 <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&hl=en&pli=1" class="card-link" target="_blank">Android app</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
