@@ -124,19 +124,19 @@ command = "hugo --gc --minify"
   force = true
 
 [[redirects]]
-  from = "/v10.0.1/*"
+  from = "/economics/cba/standard-inputs/v10.0.1/*"
   to = "https://permanent-release-v10-0-1--standard-inputs.netlify.app/:splat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/v10.0.2/*"
+  from = "/economics/cba/standard-inputs/v10.0.2/*"
   to = "https://permanent-release-v10-0-2--standard-inputs.netlify.app/:splat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/v10.0.3/*"
+  from = "/economics/cba/standard-inputs/v10.0.3/*"
   to = "https://permanent-release-v10-0-3--standard-inputs.netlify.app/:splat"
   status = 200
   force = true
