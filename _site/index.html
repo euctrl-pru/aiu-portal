@@ -231,11 +231,12 @@ window.Quarto = {
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>formatTime <span class="op">=</span> d3<span class="op">.</span><span class="fu">utcFormat</span>(<span class="st">"%d %B %Y"</span>)<span class="op">;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> <span class="fu">formatTime</span>(d3<span class="op">.</span><span class="fu">isoParse</span>(dd<span class="op">.</span><span class="at">date</span>))</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ld <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_day_text"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">"01 Jan - "</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(dd<span class="op">.</span><span class="at">y2d_flights_total</span>))<span class="op">;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>av <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#avg_y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(dd<span class="op">.</span><span class="at">y2d_flights_daily_average</span>)))<span class="op">;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>y9 <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_2019"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_2019_year_percentage</span>))<span class="op">;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>yp <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_prev_year"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_previous_year_percentage</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#latest_date"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">""</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ld <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_day_text"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">"01 Jan - "</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(dd<span class="op">.</span><span class="at">y2d_flights_total</span>))<span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>av <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#avg_y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(dd<span class="op">.</span><span class="at">y2d_flights_daily_average</span>)))<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>y9 <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_2019"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_2019_year_percentage</span>))<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>yp <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_prev_year"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_previous_year_percentage</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -306,12 +307,29 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</div>
-<div class="center-block page-columns page-full">
-<div id="network-dashboard" class="column-page">
-<div id="nw-container">
-  <h5 class="text-muted anchored">Latest network traffic situation: <span id="y2d_day_text" class="text-primary"></span></h5>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-11" data-nodetype="declaration">
 
+</div>
+</div>
+</div>
+</div>
+<div id="hero-banner" class="column-screen page-columns page-full">
+<div class="grid column-page">
+<div id="network-status" class="headline g-col-lg-8 g-col-8 g-col-md-8">
+<div class="h4">
+<p>Network status on <span id="latest_date">-</span></p>
+</div>
+<div class="center-block">
+<div id="network-dashboard" class="">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Flights</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">ATFM Delays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Punctuality</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Evolution of daily flights in the EUROCONTROL area<br>
+(7-day average)</p>
+<div id="nw-container">
   <div id="container-cell">
     <div id="total-flights-cell">
       <p class="text-muted">Total flights</p>
@@ -329,41 +347,25 @@ window.Quarto = {
       <p class="text-muted">vs. prev. year</p>
       <p id="dif_y2d_prev_year">n/a</p>
     </div>
-    
-    <div class="" style="margin: 0px;  width=8em;">
-    </div>
-    <div class="" ;="" style="align=center;">
-      <div class="card bg-light border-0">
-        <a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
-          <img class="card-img-top" src="./images/landing/daily_db.png" alt="" height="64px">
-        </a>
-      </div>
-    </div>
-
   </div>
 </div>
 </div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+
 </div>
-<div id="hero-banner" class="column-screen page-columns page-full">
-<div class="grid column-page">
-<div class="headline g-col-lg-6 g-col-12 g-col-md-12">
-<div class="h1">
-<p>Aviation Intelligence portal</p>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+
 </div>
-<p>This portal is provided by the <a href="./about/us/">Performance Review Unit (PRU)</a> which is part of EUROCONTROL’s Aviation Intelligence Unit (AIU).</p>
-<p>In support of the independent work of the <a href="./about/prc/">Performance Review Commission (PRC)</a> this portal aims to:</p>
-<ul>
-<li>ensure that all stakeholders in all <a href="./definition/eurocontrol-area/">EUROCONTROL States</a> have high quality information on <a href="./acronym/ans/">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;</li>
-<li>stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,</li>
-<li>further develop the <a href="./acronym/ans/">ANS</a> performance analysis framework and the understanding of key <a href="./acronym/ans/">ANS</a> performance issues.</li>
-</ul>
-<p>For feedback or questions please contact us at: <a href="mailto:PRU-Support@eurocontrol.int">Performance Review Unit</a></p>
 </div>
-<div id="whatsnew" class="headline g-col-lg-6 g-col-12 g-col-md-12">
-<div class="h3">
+</div>
+</div>
+</div>
+</div>
+<div id="whatsnew" class="headline g-col-lg-4 g-col-4 g-col-md-4">
+<div class="h4">
 <p>What’s New</p>
 </div>
-<div class="cell g-col-lg-6 g-col-12 g-col-md-12">
+<div class="cell g-col-lg-4 g-col-4 g-col-md-4">
 <div class="cell-output-display">
 <div id="gallery-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
 <div class="carousel-indicators">
@@ -404,7 +406,7 @@ window.Quarto = {
 </div>
 <div id="listing-gallery" class="column-page quarto-listing quarto-listing-container-custom">
 
-<h2 class="anchored">Focus areas</h2>
+<h2 class="anchored">Performance areas</h2>
 
 <p></p>
 
@@ -478,111 +480,13 @@ window.Quarto = {
 
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<style>
-
-#network-dashboard {
-  display: flex;
-}
-
-#y2d_day_text {
-  font-weight: bold;
-}
-
-#nw-container > h4, h5 {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-#container-cell {
-  display: flex;
-  flex-direction: row;
-}
-
-#container-cell > div {
-  margin: 7px;
-}
-
-#container-cell > div > p {
-  margin: 0px !important;
-}
-
-#container-cell > div > p:nth-child(2) {
-  font-weight:700;
-  color:#0070c0";
-}
-
-
-
-#hero-banner {
-  padding-top: 0px;
-  background-color: rgb(237,243,249);
-}
-
-#quarto-content main { 
-  margin-top: 0;
-  padding-top: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.headline {
-  font-size: 1.em;
-  font-weight: 300;
-  padding-bottom: 0.5em;
-}
-
-.headline p {
-  margin: 0;
-  padding-bottom: 0.2rem;
-}
-
-.headline a {
-  text-decoration: none;
-}
-
-.headline ul li {
-  margin-bottom: 0.3em;
-}
-
-.carousel.card {
-  padding-top: 2em;
-}
-
-#whatsnew {
-  padding-top: 3em;
-  text-align:center;
-}
-
-.carousel img {
-  width: 80%;
-  margin-bottom: 110px;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  margin-bottom: 110px;
-}
-
-.carousel-caption {
-  padding-top: 1em;
-}
-
-.card-header {
-  border-bottom: none !important;
-}
-
-.touch {
-  
-}
-</style>
 
 
 
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybF9hcGkgPSBcImh0dHBzOi8vYWl1LXBvcnRhbC5wb2NrZXRob3N0LmlvL2FwaS9jb2xsZWN0aW9ucy9uZXR3b3JrX3NpdHVhdGlvbi9yZWNvcmRzP3NvcnQ9LWRhdGUmcGVyUGFnZT0xJnNraXBUb3RhbD0xXCJcbm5ldHdvcmtfbGF0ZXN0ID0gYXdhaXQgZDMuanNvbih1cmxfYXBpKTtcbmRkID0gbmV0d29ya19sYXRlc3QuaXRlbXNbMF07XG5mb3JtYXRUaW1lID0gZDMudXRjRm9ybWF0KFwiJWQgJUIgJVlcIik7XG5sYXRlc3RfZGF0ZSA9IGZvcm1hdFRpbWUoZDMuaXNvUGFyc2UoZGQuZGF0ZSkpXG5cbmxkID0gZDMuc2VsZWN0KFwiI3kyZF9kYXlfdGV4dFwiKS50ZXh0KFwiMDEgSmFuIC0gXCIgKyBsYXRlc3RfZGF0ZSk7XG50ciA9IGQzLnNlbGVjdChcIiN5MmRfdHJhZmZpY1wiKS50ZXh0KGQzLmZvcm1hdChcIixcIikoZGQueTJkX2ZsaWdodHNfdG90YWwpKTtcbmF2ID0gZDMuc2VsZWN0KFwiI2F2Z195MmRfdHJhZmZpY1wiKS50ZXh0KGQzLmZvcm1hdChcIixcIikoTWF0aC5yb3VuZChkZC55MmRfZmxpZ2h0c19kYWlseV9hdmVyYWdlKSkpO1xueTkgPSBkMy5zZWxlY3QoXCIjZGlmX3kyZF8yMDE5XCIpLnRleHQoZDMuZm9ybWF0KFwiKy4wJVwiKShkZC55MmRfZGlmZl8yMDE5X3llYXJfcGVyY2VudGFnZSkpO1xueXAgPSBkMy5zZWxlY3QoXCIjZGlmX3kyZF9wcmV2X3llYXJcIikudGV4dChkMy5mb3JtYXQoXCIrLjAlXCIpKGRkLnkyZF9kaWZmX3ByZXZpb3VzX3llYXJfcGVyY2VudGFnZSkpO1xuXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybF9hcGkgPSBcImh0dHBzOi8vYWl1LXBvcnRhbC5wb2NrZXRob3N0LmlvL2FwaS9jb2xsZWN0aW9ucy9uZXR3b3JrX3NpdHVhdGlvbi9yZWNvcmRzP3NvcnQ9LWRhdGUmcGVyUGFnZT0xJnNraXBUb3RhbD0xXCJcbm5ldHdvcmtfbGF0ZXN0ID0gYXdhaXQgZDMuanNvbih1cmxfYXBpKTtcbmRkID0gbmV0d29ya19sYXRlc3QuaXRlbXNbMF07XG5mb3JtYXRUaW1lID0gZDMudXRjRm9ybWF0KFwiJWQgJUIgJVlcIik7XG5sYXRlc3RfZGF0ZSA9IGZvcm1hdFRpbWUoZDMuaXNvUGFyc2UoZGQuZGF0ZSkpXG5cbmRhdGUgPSBkMy5zZWxlY3QoXCIjbGF0ZXN0X2RhdGVcIikudGV4dChcIlwiICsgbGF0ZXN0X2RhdGUpO1xubGQgPSBkMy5zZWxlY3QoXCIjeTJkX2RheV90ZXh0XCIpLnRleHQoXCIwMSBKYW4gLSBcIiArIGxhdGVzdF9kYXRlKTtcbnRyID0gZDMuc2VsZWN0KFwiI3kyZF90cmFmZmljXCIpLnRleHQoZDMuZm9ybWF0KFwiLFwiKShkZC55MmRfZmxpZ2h0c190b3RhbCkpO1xuYXYgPSBkMy5zZWxlY3QoXCIjYXZnX3kyZF90cmFmZmljXCIpLnRleHQoZDMuZm9ybWF0KFwiLFwiKShNYXRoLnJvdW5kKGRkLnkyZF9mbGlnaHRzX2RhaWx5X2F2ZXJhZ2UpKSk7XG55OSA9IGQzLnNlbGVjdChcIiNkaWZfeTJkXzIwMTlcIikudGV4dChkMy5mb3JtYXQoXCIrLjAlXCIpKGRkLnkyZF9kaWZmXzIwMTlfeWVhcl9wZXJjZW50YWdlKSk7XG55cCA9IGQzLnNlbGVjdChcIiNkaWZfeTJkX3ByZXZfeWVhclwiKS50ZXh0KGQzLmZvcm1hdChcIisuMCVcIikoZGQueTJkX2RpZmZfcHJldmlvdXNfeWVhcl9wZXJjZW50YWdlKSk7XG5cbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

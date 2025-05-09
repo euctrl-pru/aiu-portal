@@ -22,6 +22,7 @@ dd = network_latest.items[0];
 formatTime = d3.utcFormat("%d %B %Y");
 latest_date = formatTime(d3.isoParse(dd.date))
 
+date = d3.select("#latest_date").text("" + latest_date);
 ld = d3.select("#y2d_day_text").text("01 Jan - " + latest_date);
 tr = d3.select("#y2d_traffic").text(d3.format(",")(dd.y2d_flights_total));
 av = d3.select("#avg_y2d_traffic").text(d3.format(",")(Math.round(dd.y2d_flights_daily_average)));
@@ -31,146 +32,43 @@ yp = d3.select("#dif_y2d_prev_year").text(d3.format("+.0%")(dd.y2d_diff_previous
 ```
 
 
-::: {.center-block}
-::: {#network-dashboard .column-page}
-{{< include "_network-dashboard.qmd" >}}
-:::
-:::
 
 ::: {#hero-banner .column-screen}
-::: {.grid .column-page}
-::: {.headline .g-col-lg-6 .g-col-12 .g-col-md-12}
-::: h1
-Aviation Intelligence portal
-:::
+:::: {.grid .column-page}
+::::: {#network-status .headline .g-col-lg-8 .g-col-8 .g-col-md-8}
 
-This portal is provided by the [Performance Review Unit (PRU)](/about/us/) which is part of EUROCONTROL's Aviation Intelligence Unit (AIU).
+:::::: h4
+Network status on <span id="latest_date" class="">-</span>
+::::::
 
-In support of the independent work of the [Performance Review Commission (PRC)](/about/prc/) this portal aims to:
 
--   ensure that all stakeholders in all [EUROCONTROL States](/definition/eurocontrol-area/) have high quality information on [ANS](/acronym/ans/) performance available in a transparent, accurate, complete and unbiased manner;
--   stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
--   further develop the [ANS](/acronym/ans/) performance analysis framework and the understanding of key [ANS](/acronym/ans/) performance issues.
+::::: {.center-block}
+:::::: {#network-dashboard .column-page}
+{{< include "_network-dashboard.qmd" >}}
+::::::
+:::::
 
-For feedback or questions please contact us at: [Performance Review Unit](mailto:PRU-Support@eurocontrol.int)
-:::
 
-::: {#whatsnew .headline .g-col-lg-6 .g-col-12 .g-col-md-12}
-::: h3
+::::
+
+
+::::: {#whatsnew .headline .g-col-lg-4 .g-col-4 .g-col-md-4}
+:::::: h4
 What's New
-:::
+::::::
 
 ```{r}
-#| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'
+#| classes: '.g-col-lg-4 .g-col-4 .g-col-md-4'
 #| warning: false
 source("carousel.R")
 carousel("gallery-carousel", 5000, 
          yaml.load_file("carousel.yml"))
 ```
-:::
-:::
+:::::
+
+::::
 :::
 
 ::: {#gallery .column-page}
 :::
 
-```{=html}
-<style>
-
-#network-dashboard {
-  display: flex;
-}
-
-#y2d_day_text {
-  font-weight: bold;
-}
-
-#nw-container > h4, h5 {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-#container-cell {
-  display: flex;
-  flex-direction: row;
-}
-
-#container-cell > div {
-  margin: 7px;
-}
-
-#container-cell > div > p {
-  margin: 0px !important;
-}
-
-#container-cell > div > p:nth-child(2) {
-  font-weight:700;
-  color:#0070c0";
-}
-
-
-
-#hero-banner {
-  padding-top: 0px;
-  background-color: rgb(237,243,249);
-}
-
-#quarto-content main { 
-  margin-top: 0;
-  padding-top: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.headline {
-  font-size: 1.em;
-  font-weight: 300;
-  padding-bottom: 0.5em;
-}
-
-.headline p {
-  margin: 0;
-  padding-bottom: 0.2rem;
-}
-
-.headline a {
-  text-decoration: none;
-}
-
-.headline ul li {
-  margin-bottom: 0.3em;
-}
-
-.carousel.card {
-  padding-top: 2em;
-}
-
-#whatsnew {
-  padding-top: 3em;
-  text-align:center;
-}
-
-.carousel img {
-  width: 80%;
-  margin-bottom: 110px;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  margin-bottom: 110px;
-}
-
-.carousel-caption {
-  padding-top: 1em;
-}
-
-.card-header {
-  border-bottom: none !important;
-}
-
-.touch {
-  
-}
-</style>
-```
