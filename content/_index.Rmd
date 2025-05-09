@@ -361,15 +361,15 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank">
-<img src="/images/landing/PRR_2024.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" target="_blank">
+<img src="/images/landing/2025-04-28_flash_summer25.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Flash Briefing on Summer 2025 preparations">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" target="_blank"> PRR 2024: Air traffic delays escalate as European capacity plans fail to meet targets</a></h5>
-<small>Read the Performance Review Report 2024 of the independent Performance Review Commission (PRC) for a comprehensive analysis of European ATM performance in 2024.</small>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" target="_blank">EUROCONTROL Flash Briefing on Summer 2025 preparations</a></h5>
+<small>Traffic across the European network is up by 5% so far this year compared to the same period in 2024, with overall ATFM delays also up 5% compared to 2024. These trends are expected to continue into the summer, where <b>we expect to see growth of 5% spread asymmetrically across the network</b>.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2024" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -379,15 +379,15 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" target="_blank">
-<img src="/images/landing/daily_delay.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Daily ATFM Dashboard">
+<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank">
+<img src="/images/landing/FLY_AI_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="FLY AI Forum">
 </a>
 <div style="padding: 1rem;">
-<h5 style="margin-bottom: -0.5rem;"><a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" target="_blank">New Daily ATFM Delay Dashboard!</a></h5>
-<small>You can now follow-up the daily evolution of ATFM delay and its causes at Network, State, ACC and Airport level!</small>
+<h5><a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank">FLY AI Forum</a></h5>
+<small>The third edition of the FLY AI Forum was held on 22-23 April 2025, gathering key stakeholders to explore the transformative impact of AI in the aviation sector. Watch the recordings from the event now!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/Economics/DailyDelay-States.html" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -442,7 +442,7 @@ Traffic continues to grow in 2025, but there is a clear and continuing divide be
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>March 2025 data available for download now!</small>
+<small>April 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
