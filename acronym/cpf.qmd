@@ -1,0 +1,15 @@
+---
+title: CPF - Correlated Position reports for a Flight
+slug: cpf
+---
+
+Airspace profile following as much as possible the actual flown trajectory derived from
+[ATC](atc.qmd) surveillance systems [Correlated Position Reports](cpr.qmd).
+
+
+## See also:
+
+* [Correlated Position Report](cpr.qmd).
+* [Current Tactical Flight Model](ctfm.qmd).
+* [Filed Tactical Flight Model](ftfm.qmd).
+* [Flight Models](../definition/flight-models.qmd).

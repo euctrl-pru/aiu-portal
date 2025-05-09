@@ -8,7 +8,8 @@ command = "hugo --gc --minify"
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-  command = "hugo --minify --gc --buildFuture -b $DEPLOY_PRIME_URL"
+  command = ""
+  publish = "_site"
   [context.deploy-preview.environment]
   HUGO_VERSION = "0.92.1"
   HUGO_ENV = "development"

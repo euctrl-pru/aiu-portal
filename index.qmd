@@ -1,0 +1,74 @@
+---
+pagetitle: "Aviation Intelligence Unit portal"
+format:
+  html:
+    toc: false
+search: false
+execute:
+  echo: false
+  freeze: false
+engine: knitr
+listing:
+  - id: gallery
+    template: gallery.ejs
+    contents: gallery.yml
+---
+
+```{ojs}
+//| echo: false
+url_api = "https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1"
+network_latest = await d3.json(url_api);
+dd = network_latest.items[0];
+formatTime = d3.utcFormat("%d %B %Y");
+latest_date = formatTime(d3.isoParse(dd.date))
+
+date = d3.select("#latest_date").text("" + latest_date);
+ld = d3.select("#y2d_day_text").text("01 Jan - " + latest_date);
+tr = d3.select("#y2d_traffic").text(d3.format(",")(dd.y2d_flights_total));
+av = d3.select("#avg_y2d_traffic").text(d3.format(",")(Math.round(dd.y2d_flights_daily_average)));
+y9 = d3.select("#dif_y2d_2019").text(d3.format("+.0%")(dd.y2d_diff_2019_year_percentage));
+yp = d3.select("#dif_y2d_prev_year").text(d3.format("+.0%")(dd.y2d_diff_previous_year_percentage));
+
+```
+
+
+
+::: {#hero-banner .column-screen}
+:::: {.grid .column-page}
+::::: {#network-status .headline .g-col-lg-8 .g-col-8 .g-col-md-8}
+
+:::::: h4
+Network status on <span id="latest_date" class="">-</span>
+::::::
+
+
+::::: {.center-block}
+:::::: {#network-dashboard .column-page}
+{{< include "_network-dashboard.qmd" >}}
+::::::
+:::::
+
+
+::::
+
+
+::::: {#whatsnew .headline .g-col-lg-4 .g-col-4 .g-col-md-4}
+:::::: h4
+What's New
+::::::
+
+```{r}
+#| classes: '.g-col-lg-4 .g-col-4 .g-col-md-4'
+#| warning: false
+source("carousel.R")
+carousel("gallery-carousel", 5000, 
+         yaml.load_file("carousel.yml"))
+```
+:::::
+
+::::
+:::
+
+::: {#gallery .column-page}
+:::
+

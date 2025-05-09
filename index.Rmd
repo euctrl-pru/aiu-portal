@@ -1,8 +1,0 @@
----
-site: blogdown:::blogdown_site
-title: "AIU Portal"
----
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-# run setup script
-source(here::here("_common.R"))
-```

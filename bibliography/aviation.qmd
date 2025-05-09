@@ -1,0 +1,10 @@
+---
+layout: default
+title: (Little) Bibliography for Aviation 
+bibliography: [aviation.bib]
+nocite: '@*'
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```

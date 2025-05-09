@@ -1,0 +1,14 @@
+---
+title: A-CDM - Airport Collaborative Decision-Making
+slug: a-cdm
+---
+
+A process in which decisions related to [ATFCM](atfcm.qmd)
+at airports are made based on interaction between operational stakeholders and
+other actors involved in ATFCM and which aims at reducing delays, improving the
+predictability of events and optimising the utilisation of resources.
+
+## See Also
+
+* {{< a_blank eurocontrol "A-CDM" "https://www.eurocontrol.int/concept/airport-collaborative-decision-making" >}}
+* {{< a_blank skybrary "A-CDM" "https://www.skybrary.aero/index.php/Airport_Collaborative_Decision_Making_(A-CDM)" >}}

@@ -1,0 +1,65 @@
+---
+title: "Performance Review Commission - PRC"
+listing: 
+  - id: prc-commissioners
+    type: grid
+    grid-columns: 3
+    image-height: 268px
+    fields: [image, title, subtitle, description]
+    sort: rank
+    contents: 
+      - "*.qmd"
+---
+The Performance Review Commission (PRC) was established in 1998 by EUROCONTROL’s Permanent Commission.
+
+It provides objective information and independent advice to EUROCONTROL’s governing bodies on European air traffic management (ATM) performance, based on extensive research, data analysis and consultation with stakeholders. Its purpose is "to ensure the effective management of the European air traffic management System through a strong, transparent and independent performance review," as stated in Article 1 of the PRC Terms of Reference and Rules of Procedure.
+
+The PRC reports to the EUROCONTROL Permanent Commission through the Provisional Council and is supported by the [Performance Review Unit (PRU)](/about/us/) operating under the EUROCONTROL Agency with the appropriate level of independence.
+
+
+## Members
+The PRC consists of up to seven members, who are appointed on the basis of independence, ability, competence, experience and professional reputation in the fields of air traffic management, safety or economic regulation.
+
+:::{#prc-commissioners}
+:::
+
+#### Undertaking of independence / Declaration of potential interest
+All PRC members have declared on their honour that they will act independently in the performance of their duties, and that they will refrain from any action incompatible with the performance of those duties. 
+
+Complementary, the PRC have revealed any potential conflicts of interest that may arise in the context of their duty.
+
+<a href="/library/prc/2023_2025_PRC_UoI_DoI.pdf" download>Undertaking of independence / Declaration of potential interest</a>
+
+## Background
+Following the Decisions of the EUROCONTROL Permanent Commission in 1997 an independent performance review system addressing all aspects of air traffic management was established as of 1998, and the Performance Review Commission (PRC) was created to provide independent advice on Air Navigation Services (ANS) performance in the EUROCONTROL Member States. 
+
+Hence, the first pan-European performance review system was created by EUROCONTROL for its Member States in 1998 as a light touch system consisting of independent performance monitoring and target setting at pan-European level. It helps States, ANSPs, airports and other interested parties to see their performance from a European perspective and to identify good practices and areas that need improvement.  
+
+## Tasks
+
+The purpose of the independent Performance Review Commission (PRC) is “to ensure the effective management of the European Air Navigation Services (ANS) system through a strong, transparent and independent performance review system”, per Article 1 of its [Terms of Reference][prcterms]. 
+
+EUROCONTROL and the European Union have a long-standing relationship and history of cooperation in ATM and in the implementation of the Single European Sky (SES) and other related policies. Of central importance is the contribution that the EUROCONTROL Performance Review System and the Performance Scheme of the Single European Sky (SES) jointly make towards improving the overall performance of air navigation services and network functions. The PRU provides support to the European Commission (EC) under a service contract, signed in 2017, which runs for four years. Activities include, inter alia, support to monitoring, target setting and assessment of performance plans. The PRU also supports the EC, its Agencies and Advisory Bodies under a longer-term co-operation agreement. 
+The PRC’s work avoids potential overlaps with that of the Performance Review Body (PRB) which assists the European Commission (EC) in the implementation of the SES Performance Scheme. The PRC/PRU tasks can be categorised as follows:
+
+*	Data collection and analysis: Collection and analysis of performance-related data and make independent recommendations to the EUROCONTROL 
+States;
+
+*	Reporting: Provision of impartial, independent and unbiased information to facilitate stakeholder dialogue. The PRC publishes an annual PRR and an annual ATM Cost-Effectiveness (ACE) Benchmarking report. In 2019, the PRC placed more focus on researching specific topics, in consultation with stakeholders, and in publishing the results as PRC Technical Notes. The PRC is constantly reviewing its work programme to ensure that it remains relevant and useful to stakeholders. It publishes “Performance Insight” short papers on topical themes 
+The Aviation Intelligence Portal (www.ansperformance.eu) provides a variety of interactive dashboards for more detailed analysis and offers monthly updates of performance information covering all EUROCONTROL Member States. 
+
+*	Research and development: Conducting of research to further improve the performance measurement framework and to test new indicators;
+
+*	International benchmarking: Provision of assistance to ICAO and other regions of the world in benchmarking different systems and promoting/developing harmonised standards for data collection and sharing, including the establishment of an open data platform for performance benchmarking. The PRU ensures a strong input to the global developments of the performance based approach benefitting from the European experience.
+
+## Deliverables
+
+The PRC publishes annual [Performance Review Reports (PRR)](/publications/prc/prr/) and ad-hoc reports on specific subjects. The PRC is supported in its work by EUROCONTROL’s [Performance Review Unit (PRU)](/about/us/).
+
+A list of the PRC publications can be found on the [EUROCONTROL web page][prcdeliverables].
+
+Through its recommendations, the PRC seeks to improve ATM performance by highlighting areas which require attention. In parallel, the PRC, with the support of the Performance Review Unit (PRU), analyses and benchmarks the cost-effectiveness and productivity of air navigation service providers (ANSPs) in its annual [ATM Cost-Effectiveness (ACE) Reports](/economics/ace/).
+
+
+[prcdeliverables]: https://www.eurocontrol.int/air-navigation-services-performance-review#deliverables "PRC Deliverables"
+[prcterms]: https://www.eurocontrol.int/publication/performance-review-commission-terms-reference-and-rules-procedure "PRC Terms of Reference and Rules of Procedure"

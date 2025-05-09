@@ -1,9 +1,0 @@
----
-title: Definitions
-description: "A reference for commonly used terms by the EUROCONTROL Aviation Intelligence Unit and the Performance Review Commission."
----
-
-
-* Data Dimensions used in the processing of data. <i class="fa fa-exclamation-triangle" style="color: #337ab7;"></i>
-
-<i class="fa fa-exclamation-triangle" style="color: #337ab7;"></i> = not (yet?) available.

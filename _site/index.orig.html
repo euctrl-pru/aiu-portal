@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Aviation Intelligence Unit portal – AIU Portal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a64067561e43967a5b46a8ae60e636f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-gallery .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-gallery'] = new List('listing-gallery', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://eurocontrol.int" class="navbar-brand navbar-brand-logo">
+    <img src="./images/EUROCONTROL-logo-standard-rgb.png" alt="EUROCONTROL website" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">AIU Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="./about/prc/index.html">
+ <span class="dropdown-text">About PRC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./about/pru/index.html">
+ <span class="dropdown-text">About PRU</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="19" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>url_api <span class="op">=</span> <span class="st">"https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&amp;perPage=1&amp;skipTotal=1"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>network_latest <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">json</span>(url_api)<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>dd <span class="op">=</span> network_latest<span class="op">.</span><span class="at">items</span>[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>formatTime <span class="op">=</span> d3<span class="op">.</span><span class="fu">utcFormat</span>(<span class="st">"%d %B %Y"</span>)<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> <span class="fu">formatTime</span>(d3<span class="op">.</span><span class="fu">isoParse</span>(dd<span class="op">.</span><span class="at">date</span>))</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ld <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_day_text"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">"01 Jan - "</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(dd<span class="op">.</span><span class="at">y2d_flights_total</span>))<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>av <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#avg_y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(dd<span class="op">.</span><span class="at">y2d_flights_daily_average</span>)))<span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>y9 <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_2019"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_2019_year_percentage</span>))<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>yp <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_prev_year"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_previous_year_percentage</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-10" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="center-block page-columns page-full">
+<div id="network-dashboard" class="column-page">
+<div id="nw-container">
+  <h5 class="text-muted anchored">Latest network traffic situation: <span id="y2d_day_text" class="text-primary"></span></h5>
+
+  <div id="container-cell">
+    <div id="total-flights-cell">
+      <p class="text-muted">Total flights</p>
+      <p id="y2d_traffic">n/a</p>
+    </div>
+    <div id="average-flights-cell">
+      <p class="text-muted">Avg. daily flights</p>
+      <p id="avg_y2d_traffic">n/a</p>
+    </div>
+    <div id="percentage-flights-vs-2019-cell">
+      <p class="text-muted">vs. 2019</p>
+      <p id="dif_y2d_2019">n/a</p>
+    </div>
+    <div id="percentage-flights-vs-prev-year-cell">
+      <p class="text-muted">vs. prev. year</p>
+      <p id="dif_y2d_prev_year">n/a</p>
+    </div>
+    
+    <div class="" style="margin: 0px;  width=8em;">
+    </div>
+    <div class="" ;="" style="align=center;">
+      <div class="card bg-light border-0">
+        <a href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html">
+          <img class="card-img-top" src="./images/landing/daily_db.png" alt="" height="64px">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<style>
+    marquee {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+</style>
+<section class="content-space bg-light">
+<div class="container mt-4">
+<div class="row">
+<div class="col-md-8">
+<h4 class="anchored">
+<span>Network status on </span> <span id="day_text_title"></span>
+</h4>
+<div class="card border-0 rounded p-3 mb-4">
+<ul class="nav nav-segment nav-fill align-items-centers mb-4">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#flights">Flights</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#delay" onclick="reloadIframeDelay()">ATFM Delay</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#punctuality">Punctuality</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="flights" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-12">
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+<p class="h6 mb-0">
+Evolution of daily flights in the EUROCONTROL area
+</p>
+<p class="text-muted mb-4">
+(7-day average)
+</p>
+</div>
+<!-- End Col -->
+<div class="col-sm-auto">
+<ul class="nav nav-segment nav-fill">
+<li class="">
+<a class="nav-link active" data-toggle="tab" href="#flights-day">Day</a>
+</li>
+<li class="">
+<a class="nav-link" data-toggle="tab" href="#flights-week">Week</a>
+</li>
+<li class="">
+<a class="nav-link" data-toggle="tab" href="#flights-y2d">Y2D</a>
+</li>
+</ul>
+</div>
+<!-- End Col -->
+</div>
+<div class="w3-container tab-content">
+<div id="flights-day" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-6 col-md">
+<div class="pr-3">
+<p id="day_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total flights
+</p>
+<h4 id="day_traffic" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md mb-3">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. week
+</p>
+<h4 id="dif_day_prev_week" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_day_prev_year" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_day_2019" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="flights-week" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="week_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily flights
+</p>
+<h4 id="week_traffic" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. week
+</p>
+<h4 id="dif_week_prev_week" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_week_prev_year" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_week_2019" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="flights-y2d" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total flights
+</p>
+<h4 id="y2d_traffic" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily flights
+</p>
+<h4 id="avg_y2d_traffic" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_y2d_prev_year" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_y2d_2019" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+</div>
+<div id="graphcontainer" class="col-12">
+<iframe id="traffic-plot" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" scrolling="no" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="delay" class="tab-pane fade in">
+<div class="row">
+<div class="col-12">
+<div class="row align-items-sm-center mb-4">
+<div class="col-sm">
+
+</div>
+<!-- End Col -->
+<div class="col-sm-auto">
+<ul class="nav nav-segment nav-fill">
+<li class="">
+<a class="nav-link active" data-toggle="tab" href="#delay-day">Day</a>
+</li>
+<li class="">
+<a class="nav-link" data-toggle="tab" href="#delay-week">Week</a>
+</li>
+<li class="">
+<a class="nav-link" data-toggle="tab" href="#delay-y2d">Y2D</a>
+</li>
+</ul>
+</div>
+<!-- End Col -->
+</div>
+<div class="w3-container tab-content">
+<div id="delay-day" class="tab-pane fade in active show">
+<div class="row">
+<div class="col-6 col-md">
+<p id="day_delay_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Total delay
+</p>
+<h4 id="day_delay" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_day_delay_prev_year_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_day_delay_2019_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Delay/flight
+</p>
+<h4 id="day_delay_flight" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="delay-week" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="week_delay_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily delay
+</p>
+<h4 id="avg_week_delay" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_week_delay_prev_year_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_week_delay_2019_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. delay/flight
+</p>
+<h4 id="week_delay_flight" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+<div id="delay-y2d" class="tab-pane fade in">
+<div class="row">
+<div class="col-6 col-md">
+<p id="y2d_delay_text" class="font-weight-bold">
+n/a
+</p>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. daily delay
+</p>
+<h4 id="y2d_delay_daily_average" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs prev. year
+</p>
+<h4 id="dif_y2d_delay_prev_year_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Vs 2019
+</p>
+<h4 id="dif_y2d_delay_2019_perc" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+<div class="col-6 col-md">
+<p class="Scorecard_subt mb-1 small text-muted">
+Avg. delay/flight
+</p>
+<h4 id="y2d_delay_flight" class="mb-0 h5 anchored">
+n/a
+</h4>
+</div>
+<!-- End Col -->
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 pt-4">
+<iframe id="delay-plot" class="resp-iframe" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-delay-traffic-lp.html" frameborder="0" scrolling="no" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</div>
+<div id="punctuality" class="tab-pane fade in">
+<div class="row mt-3">
+<div class="col-sm-4">
+<div>
+<iframe id="delay-plot-gauge" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-gauge.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen="">
+</iframe>
+</div>
+</div>
+<div class="col-sm-8">
+<div>
+<iframe id="delay-plot-evo" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>$(document).ready(function () { $('a[data-toggle="tab"]').on('shown.bs.tab', function (a) { var b = $(a.target).attr("href"), c = $(b).find('iframe'); c.each(function () { var a = $(this), b = a.attr('src'); a.attr('src', ''), setTimeout(function () { a.attr('src', b) }, 10) }) }) })</script>
+<div class="col-md-4">
+<h4 class="anchored">
+What’s new?
+</h4>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank"> <img src="./images/landing/2025-04-10_app_v4.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL DATA app v4"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank"> Released: EUROCONTROL Data App v4</a>
+</h5>
+<p>Version 4 of the EUROCONTROL Data app is now released giving you access to data for the top 40 airports in Europe, and much more! </p>
+</div>
+<div class="card-footer pt-0 text-center">
+<p><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" class="card-link" target="_blank">iOS app</a> <i class="ml-2 fas fa-arrow-right"></i> <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&amp;hl=en&amp;pli=1" class="card-link" target="_blank">Android app</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" target="_blank"> <img src="./images/landing/2025-04-28_flash_summer25.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Flash Briefing on Summer 2025 preparations"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" target="_blank">EUROCONTROL Flash Briefing on Summer 2025 preparations</a>
+</h5>
+<p><small>Traffic across the European network is up by 5% so far this year compared to the same period in 2024, with overall ATFM delays also up 5% compared to 2024. These trends are expected to continue into the summer, where <b>we expect to see growth of 5% spread asymmetrically across the network</b>.</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank"> <img src="./images/landing/FLY_AI_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="FLY AI Forum"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank">FLY AI Forum</a>
+</h5>
+<p><small>The third edition of the FLY AI Forum was held on 22-23 April 2025, gathering key stakeholders to explore the transformative impact of AI in the aviation sector. Watch the recordings from the event now!</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/prc-apoc-study" target="_blank"> <img src="./images/landing/202503_apoc_study.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="https://www.eurocontrol.int/publication/prc-apoc-study" target="_blank">PRC Airport Operations Centres (APOC) Performance Study published!</a>
+</h5>
+<p><small> The <strong>APOC concept</strong> is a flagship project of the <strong>Transformation Support Strategy (TSS)</strong> of the PRC. The study outlines the APOC concept, lists performance indicators, summarizes benefits and recommendations, and presents a European inventory of APOC implementations. </small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/publication/prc-apoc-study" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank"> <img src="./images/landing/2025-04-14_DS51_q12025_traffic.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="APOC Study"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" target="_blank">Data Snapshot #51 on the Q1 2025 traffic growth</a>
+</h5>
+<p><small> Traffic continues to grow in 2025, but there is a clear and continuing divide between southern and central/northern Europe. </small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="./data/" target="_blank"> <img src="./images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="./data/" target="_blank">Performance Data Update</a>
+</h5>
+<p><small>April 2025 data available for download now!</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="./data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+</div>
+<p><a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"> <span class="sr-only">Next</span> </a></p>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded">
+<a href="./data/" target="_blank"> <img src="./images/landing/data_icon.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Performance Data Update"> </a>
+<div style="padding: 1rem;">
+<h5 class="anchored">
+<a href="./data/" target="_blank">Performance Data Update</a>
+</h5>
+<p><small><b>November 2024</b> data available for download now!</small></p>
+</div>
+<div class="card-footer pt-0">
+<p><a href="./data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i></p>
+</div>
+</div>
+</div>
+</div>
+<p><a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"> <span class="sr-only">Next</span> </a></p>
+</div>
+</section><div class="quarto-listing quarto-listing-container-custom" id="listing-gallery">
+
+<h2 class="anchored">Focus areas</h2>
+
+<p></p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-3 g-col-md-3 mb-2 bg-light" data-index="0">
+    <a href="traffic/">
+      <img src="images/landing/ectl_traff_th.jpg" alt="" class="card-img-top">
+    </a>
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="traffic/" class="listing-title">Traffic</a>
+        <br>
+        <span class="text-muted listing-subtitle">: IFR flight and service unit evolution and forecast</span>
+      </small>
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-3 g-col-md-3 mb-2 bg-light" data-index="1">
+    <a href="capacity/">
+      <img src="images/landing/ectl_cap_th.jpg" alt="" class="card-img-top">
+    </a>
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="capacity/" class="listing-title">Capacity &amp; Delay</a>
+        <br>
+        <span class="text-muted listing-subtitle">: En-route and airport ATFM delays</span>
+      </small>
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-3 g-col-md-3 mb-2 bg-light" data-index="2">
+    <a href="efficiency/">
+      <img src="images/landing/ectl_env_th.jpg" alt="" class="card-img-top">
+    </a>
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="efficiency/" class="listing-title">Efficiency &amp; Environment</a>
+        <br>
+        <span class="text-muted listing-subtitle">: Flight efficiency affecting fuel burn and emissions</span>
+      </small>
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-3 g-col-md-3 mb-2 bg-light" data-index="3">
+    <a href="economics/">
+      <img src="images/landing/ectl_cef_th.jpg" alt="" class="card-img-top">
+    </a>
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="economics/" class="listing-title">Economics</a>
+        <br>
+        <span class="text-muted listing-subtitle">: Analysis of ANS cost-efficiency</span>
+      </small>
+    </div>
+    
+    
+    
+  </div>
+
+</div>
+
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main></div>
+
+
+<section class="pt-5">
+<div class="container">
+<!-- Title -->
+<div class="row">
+<div class="col-md-6 col-lg-4">
+<h2 class="mb-4">
+Performance areas
+</h2>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-traffic.jpg); background-position: center center; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4 figure">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+<path d="M27.33,10.96l-1.48-1.86c-3-3.56-11.04-4.85-15.72-4.85H1.15c-.28,0-.5.22-.5.5s.22.5.5.5h8.99c4.31,0,12.19,1.22,14.94,4.49l.91,1.15-4.68.07c-.28,0-.5.23-.49.51,0,.27.23.49.5.49h0l5.59-.08c1.97.83,4.06,2.36,4.06,3.84,0,2.2-3.25,3.2-3.32,3.22-.05.02-5.11,1.92-14.33,1.92H1.21c-.28,0-.5.22-.5.5s.22.5.5.5h12.11c.2,0,.39,0,.59,0v2.12c-.82.22-1.43.96-1.43,1.85,0,.34.1.65.25.93H.53c-.28,0-.5.22-.5.5s.22.5.5.5h18.05c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2.5c.15-.28.25-.59.25-.93,0-.89-.61-1.63-1.43-1.85v-2.13c8.41-.2,12.91-1.89,13.07-1.96.16-.05,4-1.22,4-4.17,0-2.07-2.47-3.84-4.64-4.76ZM15.33,25.83c0,.51-.42.93-.93.93s-.93-.42-.93-.93.42-.93.93-.93.93.42.93.93Z" fill="currentColor"></path> <path d="M15.1,17.33c1,0,1.81-.81,1.81-1.81v-4.79c0-1-.81-1.81-1.81-1.81h-1.77c-1,0-1.81.81-1.81,1.81v4.79c0,1,.81,1.81,1.81,1.81h1.77ZM12.53,15.52v-4.79c0-.44.36-.81.81-.81h1.77c.44,0,.81.36.81.81v4.79c0,.44-.36.81-.81.81h-1.77c-.44,0-.81-.36-.81-.81Z" fill="currentColor"></path> <path d="M9.58,12.07v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"></path> <path d="M6.52,12.57c.28,0,.5-.22.5-.5v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5Z" fill="currentColor"></path> <path d="M4.45,12.07v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"></path> <path d="M1.38,12.57c.28,0,.5-.22.5-.5v-1.19c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.19c0,.28.22.5.5.5Z" fill="currentColor"></path> <path d="M26.07,26.75h-4.76c-.28,0-.5.22-.5.5s.22.5.5.5h4.76c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M1.38,17.33h4.41c.28,0,.5-.22.5-.5s-.22-.5-.5-.5H1.38c-.28,0-.5.22-.5.5s.22.5.5.5Z" fill="currentColor"></path>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Traffic
+</h5>
+<p>
+IFR flight and service unit evolution and forecast
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="./traffic/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-punctuality.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4 figure">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+<path d="M10.08,4.28h3.06v1.54c0,.28.22.5.5.5s.5-.22.5-.5v-1.54h2.9c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2.9v-1.06c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.06h-3.06c-.28,0-.5.22-.5.5s.22.5.5.5Z" fill="currentColor"></path> <path d="M24.41,10.39c0-.28-.22-.5-.5-.5H3.37c-.28,0-.5.22-.5.5s.22.5.5.5h20.54c.28,0,.5-.22.5-.5Z" fill="currentColor"></path> <path d="M10.13,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M14.19,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M18.25,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M22.32,13.27h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M6.07,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M10.13,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M14.19,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M18.25,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M22.32,15.84h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M6.07,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M10.13,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M14.19,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M18.25,18.42h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M6.07,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M10.13,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M14.19,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M18.25,20.99h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M6.07,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M10.13,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M14.19,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M18.25,23.57h-1.11c-.28,0-.5.22-.5.5s.22.5.5.5h1.11c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M28.39,18.42h-1.19V6.07c0-1.54-1.25-2.79-2.79-2.79h-4.7v-1.06c0-.28-.22-.5-.5-.5s-.5.22-.5.5v3.6c0,.28.22.5.5.5s.5-.22.5-.5v-1.54h4.7c.98,0,1.79.8,1.79,1.79v12.35h-2.6c-1.95,0-3.54,1.59-3.54,3.53v4.79c0,.23.03.45.07.66H1.49c-.23,0-.42-.19-.42-.42V6.07c0-.98.8-1.79,1.79-1.79h4.7v1.54c0,.28.22.5.5.5s.5-.22.5-.5v-3.6c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.06H2.86C1.32,3.28.07,4.53.07,6.07v20.92c0,.78.64,1.42,1.42,1.42h19c.6,1.11,1.76,1.87,3.1,1.87h4.79c1.95,0,3.54-1.59,3.54-3.54v-4.79c0-1.95-1.59-3.53-3.54-3.53ZM30.93,26.75c0,1.4-1.14,2.54-2.54,2.54h-4.79c-1.4,0-2.54-1.14-2.54-2.54v-4.79c0-1.4,1.14-2.53,2.54-2.53h4.79c1.4,0,2.54,1.14,2.54,2.53v4.79Z" fill="currentColor"></path> <path d="M28.35,21.87l-3.49,3.49-1.22-1.22c-.2-.2-.51-.2-.71,0s-.2.51,0,.71l1.57,1.57c.1.1.23.15.35.15s.26-.05.35-.15l3.84-3.84c.2-.2.2-.51,0-.71s-.51-.2-.71,0Z" fill="currentColor"></path>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Punctuality
+</h5>
+<p>
+Departure/arrival punctuality (OTP15) and operated schedules
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="./traffic/punctuality/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-delays.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4 figure">
+<svg width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+<path d="M14.25,27.93c-.4.04-.81.06-1.23.06-6.61,0-11.99-5.38-11.99-11.99S6.42,4.01,13.03,4.01c4.96,0,9.34,2.98,11.16,7.59.1.26.39.38.65.28.26-.1.38-.39.28-.65-1.97-5-6.72-8.23-12.09-8.23C5.86,3.01.04,8.84.04,16s5.83,12.99,12.99,12.99c.44,0,.89-.02,1.33-.07.27-.03.48-.27.45-.55-.03-.27-.27-.47-.55-.45Z" fill="currentColor"></path> <path d="M13.41,6.54v-1.24c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.24c0,.28.22.5.5.5s.5-.22.5-.5Z" fill="currentColor"></path> <path d="M19.95,9.66l.87-.87c.2-.2.2-.51,0-.71s-.51-.2-.71,0l-.87.87c-.2.2-.2.51,0,.71.1.1.23.15.35.15s.26-.05.35-.15Z" fill="currentColor"></path> <path d="M12.41,25.43v1.24c0,.28.22.5.5.5s.5-.22.5-.5v-1.24c0-.28-.22-.5-.5-.5s-.5.22-.5.5Z" fill="currentColor"></path> <path d="M5,23.89c.1.1.23.15.35.15s.26-.05.35-.15l.87-.87c.2-.2.2-.51,0-.71s-.51-.2-.71,0l-.87.87c-.2.2-.2.51,0,.71Z" fill="currentColor"></path> <path d="M2.23,15.49c-.28,0-.5.22-.5.5s.22.5.5.5h1.24c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-1.24Z" fill="currentColor"></path> <path d="M5.88,9.66c.1.1.23.15.35.15s.26-.05.35-.15c.2-.2.2-.51,0-.71l-.87-.87c-.2-.2-.51-.2-.71,0s-.2.51,0,.71l.87.87Z" fill="currentColor"></path> <path d="M11.12,15.48c.16,0,.32-.08.41-.22.15-.23.1-.54-.13-.69l-4.35-2.94c-.23-.15-.54-.1-.69.13-.15.23-.1.54.13.69l4.35,2.94c.09.06.18.09.28.09Z" fill="currentColor"></path> <path d="M15.33,15.39l4.02-2.67c.23-.15.29-.46.14-.69-.15-.23-.46-.29-.69-.14l-4.02,2.67c-.23.15-.29.46-.14.69.1.15.25.22.42.22.09,0,.19-.03.28-.08Z" fill="currentColor"></path> <path d="M14.73,16.51c0-.94-.76-1.7-1.7-1.7s-1.7.76-1.7,1.7.76,1.7,1.7,1.7,1.7-.76,1.7-1.7ZM13.03,17.21c-.39,0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.31.7-.7.7Z" fill="currentColor"></path> <path d="M25.05,13.77c-.34-.58-.94-.93-1.61-.93s-1.27.35-1.61.93l-6.67,11.55c-.34.58-.33,1.27,0,1.86.33.58.94.93,1.61.93h13.33c.67,0,1.27-.35,1.61-.93s.34-1.27,0-1.85l-6.67-11.55ZM30.85,26.67c-.15.27-.43.43-.74.43h-13.33c-.31,0-.59-.16-.74-.43s-.15-.59,0-.86l6.67-11.55c.31-.54,1.17-.54,1.48,0l6.67,11.55c.15.27.15.59,0,.85Z" fill="currentColor"></path> <path d="M23.44,16.6c-.28,0-.5.22-.5.5v4.92c0,.28.22.5.5.5s.5-.22.5-.5v-4.92c0-.28-.22-.5-.5-.5Z" fill="currentColor"></path> <path d="M23.44,24.61c-.28,0-.5.23-.5.5s.22.5.5.5.5-.22.5-.5h0c0-.28-.22-.5-.5-.5Z" fill="currentColor"></path>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+En-route &amp; airport delays
+</h5>
+<p>
+En-route and airport ATFM delays
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="./capacity/">More info<i class="ml-2 fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-environment.jpg); background-position: center center; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4 figure">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+<path d="M27.15.4h-13.49c-.7,0-1.39.29-1.88.79l-7.37,7.45c-.5.51-.78,1.18-.78,1.9v18.74c0,1.48,1.19,2.68,2.66,2.68h20.86c1.46,0,2.66-1.2,2.66-2.68V3.09c0-1.48-1.19-2.68-2.66-2.68ZM28.81,29.28c0,.93-.74,1.68-1.66,1.68H6.29c-.91,0-1.66-.75-1.66-1.68V10.54c0-.45.17-.87.49-1.19L12.49,1.9c.31-.32.73-.49,1.17-.49h13.49c.91,0,1.66.75,1.66,1.68v26.19Z" fill="currentColor"></path> <path d="M4.56,6.29c.1.1.23.15.36.15s.25-.05.35-.14c.2-.19.2-.51,0-.71l-1.09-1.1,2.41-2.44,1.08,1.1c.1.1.23.15.36.15s.25-.05.35-.14c.2-.19.2-.51,0-.71l-1.09-1.1.43-.44c.19-.2.19-.51,0-.71-.2-.19-.51-.19-.71,0l-.77.78s0,0,0,0,0,0,0,0l-3.11,3.15s0,0,0,0c0,0,0,0,0,0l-.78.79c-.19.2-.19.51,0,.71.1.1.22.14.35.14s.26-.05.36-.15l.42-.43,1.08,1.09Z" fill="currentColor"></path> <path d="M25.41,3.31h-10.49c-.67,0-1.22.55-1.22,1.23v2.18c0,.68.55,1.23,1.22,1.23h7.74c.7,0,1.39-.29,1.88-.79l1.74-1.76c.35-.35.45-.88.26-1.34-.19-.46-.62-.75-1.12-.75ZM25.57,4.71l-1.74,1.76c-.31.32-.73.49-1.17.49h-7.74c-.12,0-.22-.1-.22-.23v-2.18c0-.13.1-.23.22-.23h10.49c.12,0,.18.09.2.14.02.04.05.15-.05.25Z" fill="currentColor"></path> <path d="M25.4,10.55c-.25-.04-.48.09-.56.32-.4,1.1-2.28,1.42-4.47,1.79-4.45.76-10.51,1.8-9.59,10.72-1.13.82-2.02,1.79-2.45,3.2-.08.26.07.54.33.62.05.01.1.02.15.02.21,0,.41-.14.48-.35.62-2.04,2.44-3.02,4.74-4.27,1.84-.99,3.93-2.12,5.78-4.05.19-.2.18-.52-.02-.71-.2-.19-.52-.18-.71.02-1.74,1.82-3.75,2.9-5.53,3.86-.64.34-1.25.68-1.83,1.03-.55-7.49,4.4-8.35,8.81-9.1,1.68-.29,3.21-.54,4.21-1.19-.3,5.32-1.35,8.46-3.42,10.37-1.82,1.68-4.49,2.4-8.18,2.21-.31-.01-.51.2-.52.47-.01.28.2.51.47.52.39.02.77.03,1.14.03,3.39,0,5.94-.82,7.76-2.51,3.1-2.86,3.66-7.93,3.8-12.51,0-.25-.17-.46-.41-.51Z" fill="currentColor"></path>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Efficiency &amp; environment
+</h5>
+<p>
+Flight efficiency affecting fuel burn and emissions
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="./efficiency/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="col-md-6 col-lg-4 mb-4">
+<div class="card bg-dark text-white h-100 p-4 border-0 rounded position-relative overflow-hidden" style="background-image:url(/images/landing/imgs/bg-economics.jpg); background-position: center left; background-size: cover;">
+<!-- overlay -->
+<div class="bg-overlay">
+
+</div>
+<!-- Card body -->
+<div class="card-body p-0 position-relative z-index-2">
+<!-- Icon -->
+<figure class="text-white mb-4 figure">
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+<path d="M17.81,11.49c.06.03.13.04.19.04.13,0,.26-.05.35-.15l7.34-7.34c.1-.1.15-.24.15-.39,0-.14-.08-.28-.19-.36-2.21-1.69-4.83-2.78-7.58-3.14-.14-.02-.29.03-.39.12s-.17.23-.17.38v10.38c0,.2.12.38.31.46ZM18.5,1.23c2.19.37,4.27,1.23,6.08,2.52l-6.08,6.08V1.23Z" fill="currentColor"></path> <path d="M14.5,15.17V.79c0-.14-.06-.28-.17-.38-.11-.09-.25-.14-.39-.12C6.08,1.31.15,8.07.15,16c0,3.52,1.13,6.86,3.28,9.65.09.11.22.19.36.19.01,0,.02,0,.03,0,.13,0,.26-.05.35-.15l10.17-10.17c.09-.09.15-.22.15-.35ZM13.5,14.96L3.88,24.58c-1.79-2.52-2.73-5.47-2.73-8.58C1.15,8.76,6.42,2.57,13.5,1.37v13.6Z" fill="currentColor"></path> <path d="M30.68,20.17h-2.67c-.06,0-.11.03-.17.03v-2.87c0-.64-.52-1.17-1.17-1.17h-2.67c-.64,0-1.17.52-1.17,1.17v3.54c-.06,0-.11-.03-.17-.03h-2.67c-.64,0-1.17.52-1.17,1.17v2.2c-.06,0-.11-.03-.17-.03h-2.67c-.64,0-1.17.52-1.17,1.17v5.34c0,.64.52,1.17,1.17,1.17h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.25,0,.48-.1.67-.24.19.14.41.24.67.24h2.67c.64,0,1.17-.52,1.17-1.17v-9.34c0-.64-.52-1.17-1.17-1.17ZM18.67,30.85h-2.67c-.09,0-.17-.08-.17-.17v-5.34c0-.09.08-.17.17-.17h2.67c.09,0,.17.08.17.17v5.34c0,.09-.08.17-.17.17ZM22.67,30.85h-2.67c-.09,0-.17-.08-.17-.17v-8.68c0-.09.08-.17.17-.17h2.67c.09,0,.17.08.17.17v8.68c0,.09-.08.17-.17.17ZM26.68,30.85h-2.67c-.09,0-.17-.08-.17-.17v-13.35c0-.09.08-.17.17-.17h2.67c.09,0,.17.07.17.17v13.35c0,.09-.08.17-.17.17ZM30.85,30.68c0,.09-.08.17-.17.17h-2.67c-.09,0-.17-.08-.17-.17v-9.34c0-.09.08-.17.17-.17h2.67c.09,0,.17.07.17.17v9.34Z" fill="currentColor"></path> <path d="M12.77,30.48c-1.95-.43-3.75-1.23-5.35-2.37L28.12,7.42c1.79,2.52,2.73,5.47,2.73,8.58,0,.62-.04,1.28-.13,1.94-.04.27.16.52.43.56.27.04.53-.16.56-.43.09-.7.14-1.4.14-2.07,0-3.52-1.13-6.86-3.28-9.65-.09-.11-.22-.19-.36-.19-.14,0-.28.04-.39.15L6.3,27.82c-.1.1-.15.24-.15.39,0,.14.08.28.19.36,1.83,1.41,3.92,2.38,6.2,2.89.04,0,.07.01.11.01.23,0,.44-.16.49-.39.06-.27-.11-.54-.38-.6Z" fill="currentColor"></path> <path d="M5.01,14.98c-.04-.05-.1-.08-.16-.11-.19-.07-.41-.03-.54.11-.05.05-.09.1-.11.16-.03.06-.04.13-.04.19,0,.07.01.13.04.19.02.07.06.12.11.17.09.09.22.14.35.14.06,0,.13,0,.19-.04.06-.02.12-.06.16-.1.05-.05.08-.1.11-.17.02-.06.04-.12.04-.19,0-.06-.02-.13-.04-.19-.03-.06-.06-.11-.11-.16Z" fill="currentColor"></path> <path d="M6.97,15.69s.1.08.17.1c.06.03.12.04.19.04.13,0,.25-.05.35-.14.05-.05.08-.11.11-.17.02-.06.04-.12.04-.19,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.19.03.06.07.12.11.17Z" fill="currentColor"></path> <path d="M9.64,15.69s.1.08.17.1c.06.03.12.04.19.04.13,0,.25-.05.35-.14.05-.05.08-.11.11-.17.03-.06.04-.12.04-.19,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.19.03.06.07.12.11.17Z" fill="currentColor"></path> <path d="M6.97,13.02s.1.08.17.11c.06.02.12.03.19.03.13,0,.26-.05.35-.14.05-.05.08-.1.11-.17.02-.06.04-.12.04-.19,0-.06-.02-.13-.04-.19-.03-.06-.06-.11-.11-.16-.14-.14-.36-.18-.54-.11-.07.03-.12.06-.17.11-.04.05-.08.1-.11.16-.02.06-.04.13-.04.19,0,.07.02.13.04.19.03.07.07.12.11.17Z" fill="currentColor"></path> <path d="M4.85,12.2c-.19-.07-.41-.03-.54.11-.1.09-.15.22-.15.35,0,.07.01.13.04.2.02.06.06.11.11.16.09.09.22.14.35.14.06,0,.13,0,.19-.03.06-.03.12-.07.16-.11.05-.05.08-.1.11-.16.02-.07.04-.13.04-.2,0-.13-.05-.26-.15-.35-.04-.05-.1-.08-.16-.11Z" fill="currentColor"></path> <path d="M9.64,13.02s.1.08.17.11c.06.02.12.03.19.03.13,0,.26-.05.35-.14.05-.05.08-.1.11-.16.03-.07.04-.13.04-.2,0-.13-.06-.26-.15-.35-.05-.05-.1-.08-.16-.11-.12-.05-.26-.05-.38,0-.07.03-.12.06-.17.11-.09.09-.15.22-.15.35,0,.07.02.13.04.2.03.06.07.11.11.16Z" fill="currentColor"></path>
+</svg>
+</figure>
+<!-- Content -->
+<h5 class="mb-3 font-weight-bold">
+Economics
+</h5>
+<p>
+Analysis of ANS cost-efficiency
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
+<p><a class="text-white" href="./economics/">More info<i class="ml-2 fa-solid fas fa-arrow-right"></i></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<p><br></p>
+<!-- =======================
+About START -->
+<section class="content-space bg-light">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="row justify-content-between">
+<div class="col-md-6 col-lg-7 mb-4 mb-md-0">
+<div class="card card-body bg-transparent h-100 px-0 border-0">
+<h2 class="mb-md-4">
+About the Aviation Intelligence Portal
+</h2>
+<p class="mb-4">
+In support of the independent work of the <a href="./about/prc/">Performance Review Commission (PRC)</a> this portal aims to:
+</p>
+<ul class="mb-md-4">
+<li>
+ensure that all stakeholders in all <a href="./definition/eurocontrol-area">EUROCONTROL States</a> have high quality information on <a href="./acronym/ans">ANS</a> performance available in a transparent, accurate, complete and unbiased manner;
+</li>
+<li>
+stimulate an informed dialogue between all stakeholders for the benefit of the entire aviation network; and,
+</li>
+<li>
+further develop the <a href="./acronym/ans">ANS</a> performance analysis framework and the understanding of key <a href="./acronym/ans">ANS</a> performance issues.
+</li>
+</ul>
+<p class="font-weight-bold">
+Feedback or questions? <a href="mailto:PRU-Support@eurocontrol.int">Please contact us<i class="ml-1 fa fa-envelope"></i></a>
+</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 ms-auto">
+<div class="card bg-primary rounded h-100 overflow-hidden p-4">
+<!-- Card body -->
+<div class="card-body p-0">
+<h4 class="text-white">
+Subscribe
+</h4>
+<p class="text-white">
+Get informed about our newsletters, publications, and data updates!
+</p>
+</div>
+<!-- Card footer -->
+<div class="card-footer d-grid text-center p-0 mt-8">
+<a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter" class="btn btn-block btn-light mb-3">Subscribe</a>
+<p class="mb-0 text-white small">
+<a href="./about/privacy/" class="text-white">Read our privacy protection statement</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =======================
+about END -->
+<script>
+
+function reloadIframeDelay() {
+    var iframe = $("#delay-plot");
+    iframe.attr("src", iframe.data("src")); 
+}
+</script>
+
+
+
+
+ <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybF9hcGkgPSBcImh0dHBzOi8vYWl1LXBvcnRhbC5wb2NrZXRob3N0LmlvL2FwaS9jb2xsZWN0aW9ucy9uZXR3b3JrX3NpdHVhdGlvbi9yZWNvcmRzP3NvcnQ9LWRhdGUmcGVyUGFnZT0xJnNraXBUb3RhbD0xXCJcbm5ldHdvcmtfbGF0ZXN0ID0gYXdhaXQgZDMuanNvbih1cmxfYXBpKTtcbmRkID0gbmV0d29ya19sYXRlc3QuaXRlbXNbMF07XG5mb3JtYXRUaW1lID0gZDMudXRjRm9ybWF0KFwiJWQgJUIgJVlcIik7XG5sYXRlc3RfZGF0ZSA9IGZvcm1hdFRpbWUoZDMuaXNvUGFyc2UoZGQuZGF0ZSkpXG5cbmxkID0gZDMuc2VsZWN0KFwiI3kyZF9kYXlfdGV4dFwiKS50ZXh0KFwiMDEgSmFuIC0gXCIgKyBsYXRlc3RfZGF0ZSk7XG50ciA9IGQzLnNlbGVjdChcIiN5MmRfdHJhZmZpY1wiKS50ZXh0KGQzLmZvcm1hdChcIixcIikoZGQueTJkX2ZsaWdodHNfdG90YWwpKTtcbmF2ID0gZDMuc2VsZWN0KFwiI2F2Z195MmRfdHJhZmZpY1wiKS50ZXh0KGQzLmZvcm1hdChcIixcIikoTWF0aC5yb3VuZChkZC55MmRfZmxpZ2h0c19kYWlseV9hdmVyYWdlKSkpO1xueTkgPSBkMy5zZWxlY3QoXCIjZGlmX3kyZF8yMDE5XCIpLnRleHQoZDMuZm9ybWF0KFwiKy4wJVwiKShkZC55MmRfZGlmZl8yMDE5X3llYXJfcGVyY2VudGFnZSkpO1xueXAgPSBkMy5zZWxlY3QoXCIjZGlmX3kyZF9wcmV2X3llYXJcIikudGV4dChkMy5mb3JtYXQoXCIrLjAlXCIpKGRkLnkyZF9kaWZmX3ByZXZpb3VzX3llYXJfcGVyY2VudGFnZSkpO1xuXG4ifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+ <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,15 @@
+---
+title: CASA - Computer-Assisted Slot Allocation
+slug: casa
+---
+
+
+Part of the [ETFMS](etfms.amd) which provides automatic message exchange in the form
+of Slot Allocation Messages and other [ATFCM](atfcm.qmd) messages.
+
+
+## See Also
+
+* [ETFMS](etfms.qmd).
+* [ATFCM](atfcm.qmd).
+* {{< a_blank ectrl "ATFCM Users Manual" "https://www.eurocontrol.int/publication/atfcm-users-manual" >}}

@@ -1,0 +1,9 @@
+---
+title: Acronyms
+listing: 
+  - id: acronyms
+    type: table
+    fields: [title]
+    contents: 
+      - "*.qmd"
+---

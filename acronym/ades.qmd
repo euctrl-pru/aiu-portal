@@ -1,0 +1,13 @@
+---
+title: ADES - Aerodrome of Destination
+slug: ades
+---
+
+ADES is the field name used to indicate the **A**erodrom of **DES**tination in
+flight planning or flight data tools such as [IFPS](ifps.qmd).
+
+## See Also
+
+* [ADEP](adep.qmd)
+* [IFPS](ifps.qmd)
+

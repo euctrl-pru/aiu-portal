@@ -1,0 +1,22 @@
+---
+title: BLI - Basic Load Index
+slug: bli
+---
+
+
+The Basic Load Index (BLI) and the [Peak Load Index (PLI)](pli.qmd) were defined as indicators that enable to compare [airport capacity utilisation](/methodology/airport-capacity-utilisation.qmd).
+
+Schinwald/Hornung (2014) describe a procedure to quantify the level of capacity utilisation comparing two characteristic throughput values.
+The BLI measures how much of the available capacity is used across the majority of the operating conditions.
+The [PLI)](pli.qmd) is a measure for the time the airport operates traffic peaks.
+
+
+
+
+An indicator which assesses how much of the available capacity at an airport is already used.
+
+## See Also
+
+* [Peak Load Index (PLI)](pli.qmd).
+* [Airport Capacity Utilisation](/methodology/airport-capacity-utilisation.qmd) page in the [Methodology](/methodology/) section.
+* Schinwald, and Hornung (2014) "_Methodical Approach to determine the capacity utilisation of airports: the development of the European Air Traffic System between 2008 and 2012_", Deutscher Luft- und Raumfahrtkongress 2014, DocumentID: 340138, {{< a_blank "PDF" "http://www.dglr.de/publikationen/2014/340138.pdf" >}}
