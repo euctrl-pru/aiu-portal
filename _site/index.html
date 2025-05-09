@@ -168,6 +168,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Aviation Intelligence Unit portal">
+<meta property="og:image" content="https://ansperformance.eu/images/landing/data_icon.jpg">
+<meta property="og:site_name" content="AIU Portal">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -203,6 +206,17 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="./about/pru/index.html">
  <span class="dropdown-text">About PRU</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reference</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-reference">    
+        <li>
+    <a class="dropdown-item" href="./acronym/index.html">
+ <span class="dropdown-text">Acronyms</span></a>
   </li>  
     </ul>
   </li>
@@ -568,7 +582,7 @@ window._ojs.runtime.interpretFromScriptTags();
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ansperformance\.eu");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -896,6 +910,43 @@ window._ojs.runtime.interpretFromScriptTags();
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 EUROCONTROL</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about/disclaimer.html">
+<p>Disclaimer</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.eurocontrol.int/info/privacy-and-website-terms-use">
+<p>Privacy statetment</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">
+      <i class="bi bi-envelope" role="img" aria-label="Newsletter subscription form">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://ansperformance.eu/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="AIU Portal RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
