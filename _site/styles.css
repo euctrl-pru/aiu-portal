@@ -96,3 +96,10 @@ html {
 .touch {
   
 }
+
+.quarto-title-banner {
+  position: relative !important;
+}
+.quarto-title-banner.page-columns.page-full > div > h1, p {
+  color: #FFF !important;
+}

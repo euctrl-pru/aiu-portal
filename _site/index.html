@@ -134,6 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   })
   </script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(images/header/background.jpg);
+background-size: cover;
+      }
+</style>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
@@ -168,7 +175,8 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Aviation Intelligence Unit portal">
+<meta property="og:title" content="Aviation Intelligence Unit portal – AIU Portal">
+<meta property="og:description" content="The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit.">
 <meta property="og:image" content="https://ansperformance.eu/images/landing/data_icon.jpg">
 <meta property="og:site_name" content="AIU Portal">
 </head>
@@ -176,7 +184,7 @@ window.Quarto = {
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -228,29 +236,47 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Aviation Intelligence Unit portal</h1>
+            <p class="subtitle lead">The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit.</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
 
 
 
 
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="19" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>url_api <span class="op">=</span> <span class="st">"https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&amp;perPage=1&amp;skipTotal=1"</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>network_latest <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">json</span>(url_api)<span class="op">;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>dd <span class="op">=</span> network_latest<span class="op">.</span><span class="at">items</span>[<span class="dv">0</span>]<span class="op">;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>formatTime <span class="op">=</span> d3<span class="op">.</span><span class="fu">utcFormat</span>(<span class="st">"%d %B %Y"</span>)<span class="op">;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> <span class="fu">formatTime</span>(d3<span class="op">.</span><span class="fu">isoParse</span>(dd<span class="op">.</span><span class="at">date</span>))</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#latest_date"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">""</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ld <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_day_text"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">"01 Jan - "</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(dd<span class="op">.</span><span class="at">y2d_flights_total</span>))<span class="op">;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>av <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#avg_y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(dd<span class="op">.</span><span class="at">y2d_flights_daily_average</span>)))<span class="op">;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>y9 <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_2019"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_2019_year_percentage</span>))<span class="op">;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>yp <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_prev_year"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_previous_year_percentage</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="22" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 21;"><span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>url_api <span class="op">=</span> <span class="st">"https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&amp;perPage=1&amp;skipTotal=1"</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>network_latest <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">json</span>(url_api)<span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>dd <span class="op">=</span> network_latest<span class="op">.</span><span class="at">items</span>[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>formatTime <span class="op">=</span> d3<span class="op">.</span><span class="fu">utcFormat</span>(<span class="st">"%d %B %Y"</span>)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> <span class="fu">formatTime</span>(d3<span class="op">.</span><span class="fu">isoParse</span>(dd<span class="op">.</span><span class="at">date</span>))</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#latest_date"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">""</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ld <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_day_text"</span>)<span class="op">.</span><span class="fu">text</span>(<span class="st">"01 Jan - "</span> <span class="op">+</span> latest_date)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(dd<span class="op">.</span><span class="at">y2d_flights_total</span>))<span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>av <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#avg_y2d_traffic"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">","</span>)(<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(dd<span class="op">.</span><span class="at">y2d_flights_daily_average</span>)))<span class="op">;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>y9 <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_2019"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_2019_year_percentage</span>))<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>yp <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#dif_y2d_prev_year"</span>)<span class="op">.</span><span class="fu">text</span>(d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"+.0%"</span>)(dd<span class="op">.</span><span class="at">y2d_diff_previous_year_percentage</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -434,7 +460,7 @@ window.Quarto = {
       <small class="card-text inline-block">
         <a href="traffic/" class="listing-title">Traffic</a>
         <br>
-        <span class="text-muted listing-subtitle">: IFR flight and service unit evolution and forecast</span>
+        <span class="text-muted listing-subtitle">IFR flight and service unit evolution and forecast</span>
       </small>
     </div>
     
@@ -450,7 +476,7 @@ window.Quarto = {
       <small class="card-text inline-block">
         <a href="capacity/" class="listing-title">Capacity &amp; Delay</a>
         <br>
-        <span class="text-muted listing-subtitle">: En-route and airport ATFM delays</span>
+        <span class="text-muted listing-subtitle">En-route and airport ATFM delays</span>
       </small>
     </div>
     
@@ -466,7 +492,7 @@ window.Quarto = {
       <small class="card-text inline-block">
         <a href="efficiency/" class="listing-title">Efficiency &amp; Environment</a>
         <br>
-        <span class="text-muted listing-subtitle">: Flight efficiency affecting fuel burn and emissions</span>
+        <span class="text-muted listing-subtitle">Flight efficiency affecting fuel burn and emissions</span>
       </small>
     </div>
     
@@ -482,7 +508,7 @@ window.Quarto = {
       <small class="card-text inline-block">
         <a href="economics/" class="listing-title">Economics</a>
         <br>
-        <span class="text-muted listing-subtitle">: Analysis of ANS cost-efficiency</span>
+        <span class="text-muted listing-subtitle">Analysis of ANS cost-efficiency</span>
       </small>
     </div>
     

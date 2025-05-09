@@ -1,5 +1,8 @@
 ---
-pagetitle: "Aviation Intelligence Unit portal"
+title: "Aviation Intelligence Unit portal"
+subtitle: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
+title-block-banner: images/header/background.jpg
+
 format:
   html:
     toc: false
