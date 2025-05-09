@@ -2,18 +2,18 @@
 - category: Performance areas
   tiles:
     - title: Traffic
-      subtitle: ": IFR flight and service unit evolution and forecast"
+      subtitle: "IFR flight and service unit evolution and forecast"
       href: traffic/
       thumbnail: images/landing/ectl_traff_th.jpg
     - title: "Capacity & Delay"
-      subtitle: ": En-route and airport ATFM delays"
+      subtitle: "En-route and airport ATFM delays"
       href: capacity/
       thumbnail: images/landing/ectl_cap_th.jpg
     - title: "Efficiency & Environment"
-      subtitle: ": Flight efficiency affecting fuel burn and emissions"
+      subtitle: "Flight efficiency affecting fuel burn and emissions"
       href: efficiency/
       thumbnail: images/landing/ectl_env_th.jpg
     - title: "Economics"
-      subtitle: ": Analysis of ANS cost-efficiency"
+      subtitle: "Analysis of ANS cost-efficiency"
       href: economics/
       thumbnail: images/landing/ectl_cef_th.jpg
