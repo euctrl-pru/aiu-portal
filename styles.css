@@ -1,6 +1,12 @@
 /* css styles */
 <style>
 
+/*
+.headroom {
+  background-image: url("/images/header/background.jpg");
+}
+*/
+
 #network-dashboard {
   display: flex;
 }
@@ -100,6 +106,14 @@ html {
 .quarto-title-banner {
   position: relative !important;
 }
-.quarto-title-banner.page-columns.page-full > div > h1, p {
+.quarto-title  .title {
   color: #FFF !important;
+  font-size: 2.5rem;
+}
+
+.quarto-title .subtitle {
+  color: #FFF !important;
+  font-size: 1.25rem;
+  font-weight: 400;
+
 }

@@ -19,18 +19,52 @@ listing:
 
 ```{ojs}
 //| echo: false
-url_api = "https://aiu-portal.pockethost.io/api/collections/network_situation/records?sort=-date&perPage=1&skipTotal=1"
+base_url = "https://aiu-portal.pockethost.io/api/collections/"
+url_api = base_url + "network_situation/records?sort=-date&perPage=1&skipTotal=1"
 network_latest = await d3.json(url_api);
 dd = network_latest.items[0];
 formatTime = d3.utcFormat("%d %B %Y");
-latest_date = formatTime(d3.isoParse(dd.date))
+latest_date = d3.isoParse(dd.date);
 
-date = d3.select("#latest_date").text("" + latest_date);
-ld = d3.select("#y2d_day_text").text("01 Jan - " + latest_date);
-tr = d3.select("#y2d_traffic").text(d3.format(",")(dd.y2d_flights_total));
-av = d3.select("#avg_y2d_traffic").text(d3.format(",")(Math.round(dd.y2d_flights_daily_average)));
-y9 = d3.select("#dif_y2d_2019").text(d3.format("+.0%")(dd.y2d_diff_2019_year_percentage));
-yp = d3.select("#dif_y2d_prev_year").text(d3.format("+.0%")(dd.y2d_diff_previous_year_percentage));
+latest_week_start = new Date();
+aa = latest_week_start.setDate(latest_week_start.getDate() - 6);
+
+latest_week_text = {
+  let aa = ""
+  if ("true") {
+    aa = latest_week_start.getDate() + " – " + formatTime(latest_date)
+  } else {
+    formatTime(latest_date) + " – " + formatTime(latest_date)
+  }
+  return aa
+};
+
+// overall
+all = {
+  d3.select("#latest_date").text(formatTime(latest_date))
+}
+
+// day
+day = {
+ d3.select("#day_text").text(formatTime(latest_date));
+ d3.select("#day_traffic").text(d3.format(",")(dd.day_traffic));
+ d3.select("#dif_day_prev_week").text(d3.format("+.0%")(dd.dif_day_prev_week));
+ d3.select("#dif_day_prev_year").text(d3.format("+.0%")(dd.dif_day_prev_year));
+ d3.select("#dif_day_2019").text(d3.format("+.0%")(dd.dif_day_2019));
+}
+
+// week
+week = {
+   d3.select("#week_text").text(latest_week_text);
+ d3.select("#week_traffic").text(d3.format(",")(Math.round(dd.avg_week_traffic)));
+ d3.select("#dif_week_prev_week").text(d3.format("+.0%")(dd.dif_week_prev_week));
+ d3.select("#dif_week_prev_year").text(d3.format("+.0%")(dd.dif_week_prev_year));
+ d3.select("#dif_week_2019").text(d3.format("+.0%")(dd.dif_week_2019));
+}
+
+
+
+
 
 ```
 
