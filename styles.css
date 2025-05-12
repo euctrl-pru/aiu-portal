@@ -1,0 +1,119 @@
+/* css styles */
+<style>
+
+/*
+.headroom {
+  background-image: url("/images/header/background.jpg");
+}
+*/
+
+#network-dashboard {
+  display: flex;
+}
+
+#y2d_day_text {
+  font-weight: bold;
+}
+
+#nw-container > h4, h5 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#container-cell {
+  display: flex;
+  flex-direction: row;
+}
+
+#container-cell > div {
+  margin: 7px;
+}
+
+#container-cell > div > p {
+  margin: 0px !important;
+}
+
+#container-cell > div > p:nth-child(2) {
+  font-weight:700;
+  color:#0070c0";
+}
+
+
+
+#hero-banner {
+  padding-top: 0px;
+  background-color: rgb(237,243,249);
+}
+
+#quarto-content main { 
+  margin-top: 0;
+  padding-top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.headline {
+  font-size: 1.em;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+}
+
+.headline p {
+  margin: 0;
+  padding-bottom: 0.2rem;
+}
+
+.headline a {
+  text-decoration: none;
+}
+
+.headline ul li {
+  margin-bottom: 0.3em;
+}
+
+.carousel.card {
+  padding-top: 2em;
+}
+
+#whatsnew {
+  padding-top: 3em;
+  text-align:center;
+}
+
+.carousel img {
+  width: 80%;
+  margin-bottom: 110px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  margin-bottom: 110px;
+}
+
+.carousel-caption {
+  padding-top: 1em;
+}
+
+.card-header {
+  border-bottom: none !important;
+}
+
+.touch {
+  
+}
+
+.quarto-title-banner {
+  position: relative !important;
+}
+.quarto-title  .title {
+  color: #FFF !important;
+  font-size: 2.5rem;
+}
+
+.quarto-title .subtitle {
+  color: #FFF !important;
+  font-size: 1.25rem;
+  font-weight: 400;
+
+}

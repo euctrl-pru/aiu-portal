@@ -1,0 +1,111 @@
+---
+title: "Aviation Intelligence Unit portal"
+subtitle: "The portal provides insights into various aviation performance areas and is developed by the EUROCONTROL Aviation Intelligence Unit."
+title-block-banner: images/header/background.jpg
+
+format:
+  html:
+    toc: false
+search: false
+execute:
+  echo: false
+  freeze: false
+engine: knitr
+listing:
+  - id: gallery
+    template: gallery.ejs
+    contents: gallery.yml
+---
+
+```{ojs}
+//| echo: false
+base_url = "https://aiu-portal.pockethost.io/api/collections/"
+url_api = base_url + "network_situation/records?sort=-date&perPage=1&skipTotal=1"
+network_latest = await d3.json(url_api);
+dd = network_latest.items[0];
+formatTime = d3.utcFormat("%d %B %Y");
+latest_date = d3.isoParse(dd.date);
+
+latest_week_start = new Date();
+aa = latest_week_start.setDate(latest_week_start.getDate() - 6);
+
+latest_week_text = {
+  let aa = ""
+  if ("true") {
+    aa = latest_week_start.getDate() + " – " + formatTime(latest_date)
+  } else {
+    formatTime(latest_date) + " – " + formatTime(latest_date)
+  }
+  return aa
+};
+
+// overall
+all = {
+  d3.select("#latest_date").text(formatTime(latest_date))
+}
+
+// day
+day = {
+ d3.select("#day_text").text(formatTime(latest_date));
+ d3.select("#day_traffic").text(d3.format(",")(dd.day_traffic));
+ d3.select("#dif_day_prev_week").text(d3.format("+.0%")(dd.dif_day_prev_week));
+ d3.select("#dif_day_prev_year").text(d3.format("+.0%")(dd.dif_day_prev_year));
+ d3.select("#dif_day_2019").text(d3.format("+.0%")(dd.dif_day_2019));
+}
+
+// week
+week = {
+   d3.select("#week_text").text(latest_week_text);
+ d3.select("#week_traffic").text(d3.format(",")(Math.round(dd.avg_week_traffic)));
+ d3.select("#dif_week_prev_week").text(d3.format("+.0%")(dd.dif_week_prev_week));
+ d3.select("#dif_week_prev_year").text(d3.format("+.0%")(dd.dif_week_prev_year));
+ d3.select("#dif_week_2019").text(d3.format("+.0%")(dd.dif_week_2019));
+}
+
+
+
+
+
+```
+
+
+
+::: {#hero-banner .column-screen}
+:::: {.grid .column-page}
+::::: {#network-status .headline .g-col-lg-8 .g-col-8 .g-col-md-8}
+
+:::::: h4
+Network status on <span id="latest_date" class="">-</span>
+::::::
+
+
+::::: {.center-block}
+:::::: {#network-dashboard .column-page}
+{{< include "_network-dashboard.qmd" >}}
+::::::
+:::::
+
+
+::::
+
+
+::::: {#whatsnew .headline .g-col-lg-4 .g-col-4 .g-col-md-4}
+:::::: h4
+What's New
+::::::
+
+```{r}
+#| classes: '.g-col-lg-4 .g-col-4 .g-col-md-4'
+#| warning: false
+source("carousel.R")
+carousel("gallery-carousel", 5000, 
+         yaml.load_file("carousel.yml"))
+```
+:::::
+
+::::
+:::
+
+::: {#gallery .column-page}
+:::
+
