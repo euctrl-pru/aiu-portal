@@ -256,7 +256,7 @@ ignoreFiles = [
       weight = 39
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
-      name = " <span style='font-weight: normal'>Standard Inputs for CBA</span>"
+      name = " <span style='font-weight: normal'>Standard Inputs for Economic Analyses</span>"
       url = "/economics/cba/"
       identifier = "key-economics-cba"
       parent = "dashboard"
