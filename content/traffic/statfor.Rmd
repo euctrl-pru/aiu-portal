@@ -50,8 +50,7 @@ date: '2020-05-15'
 
 The figure below presents the EUROCONTROL 7-year forecast (2025-2031) for air traffic movements (IFR) in millions of flights (Spring Edition 2025). This Seven-Year Forecast builds upon the Autumn 2024 publication and incorporates the latest flight trends, including a comprehensive update of the forecast inputs. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2024 and different forecast scenarios (high, base, low) up to 2031. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
-<!-- Embedding statfor_forecasts_2023 -->
-<div class="plotly-container">
+<!-- Loading packages and data -->
 ```{r, echo=FALSE,warning = FALSE,message=FALSE}
 
 # Load required libraries
@@ -64,8 +63,17 @@ library(here)
 library(stringr)
 
 # Read and process data
-data <- read_csv(here("content", "traffic", "eurocontrol-forecast-2025-2031-traffic-table-february2025-unrounded.csv"))
+#May take some time to run
+#Change data_source file when there is a new forecast
+data_source <- source(here::here("..","aiu-portal","content","traffic","statfor_forecast_data.R"))
 
+data <- data_source$value
+```
+
+
+<!-- Embedding statfor_forecasts_2025 -->
+<div class="plotly-container">
+```{r, echo=FALSE,warning = FALSE,message=FALSE}
 data <- data %>%
   mutate(mvts = as.numeric(gsub(",", "", mvts))) %>%
   transmute(
@@ -139,7 +147,7 @@ tz_values <- sort(unique(data$TZ))
 nm_area_index <- which(tz_values == "NM Area")
 tz_values <- c(tz_values[nm_area_index], tz_values[-nm_area_index])
 
-# Add 2022 data points for high and low scenarios based on base scenario
+# Add 2024 data points for high and low scenarios based on base scenario
 base_scenario_2022 <- data %>%
   filter(Yr == 2024, Rank == "Base")
 
