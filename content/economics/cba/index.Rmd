@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Standard Inputs for CBA
+title: Standard Inputs for Economic Analyses
 description: "A set of standard inputs for data commonly used in economic and financial ATM-related cost-benefit analyses (CBA) and appraisals."
 keywords: economics, cost-benfit, analysis, standard, inputs
 ---
