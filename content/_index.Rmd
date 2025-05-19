@@ -763,7 +763,7 @@ About START -->
 <p class="text-white">Get informed about our newsletters, publications, and data updates!</p>
 </div>
 <a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter" target="_blank">
-<img src="/images/landing/newsletter.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; width: 100%;" alt="Performance Data Update">
+<img src="/images/landing/newsletter.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; margin-top: 10px; width: 100%;" alt="Performance Data Update">
 </a>
 
 
