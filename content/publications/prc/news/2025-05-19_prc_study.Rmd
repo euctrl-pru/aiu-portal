@@ -1,0 +1,27 @@
+---
+title: "PRC - PRB Study on the Benefits of Free Route Airspace implementation in Europe"
+type: Joint report of the Performance Review Body (PRB) and the Performance Review Commission (PRC)
+date: "2025-05-19"
+bibliography: ../../../../static/bib/aviation.bib
+link-citations: true
+dwnld_i: "<i class=\"fa pru fa-download\"></i>"
+tags: PRC
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+ 
+<br>
+<div class="container">
+<div class="row align-items-start">
+
+<a href="https://www.eurocontrol.int/publication/benefits-of-free-route-airspace-implementation-in-europe" target="_blank" class="btn btn-info" role="button"> Benefits of Free Route Airspace implementation in Europe <br> {{% dwnld_i %}} Download </a>
+
+#### Notice
+*The PRC has made every effort to ensure that the information and analysis contained in this document are as accurate and 
+complete as possible. Despite these precautions, should you find any errors or inconsistencies we would be grateful if you 
+could please bring them to the [Aviation Intelligence Unit's attention](mailto:PRU-Support@eurocontrol.int).*
+
+</div>
+</div>
