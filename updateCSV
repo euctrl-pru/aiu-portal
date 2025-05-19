@@ -127,9 +127,4 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   echo "Exporting ANSP composition ... "
   Rscript R/export_ansp_composition.R ${TIL};
   echo "Exporting ANSP composition ... done"
-
-  #------------ export CO2 emissions data ---------------
-  echo "Exporting CO2 emissions ... "
-  Rscript R/co2_emissions.R;
-  echo "Exporting CO2 emissions ... done"
 )
