@@ -519,7 +519,7 @@ It also provides links to the main activities of EUROCONTROL in the field of sus
 <p style="font-weight:bold; color:#2E75B6; font-size:18px;  ">Month: `r last_month` </p>
 </div>
 <div class="col-4" >
-<p style=" font-size:15px; margin-top:15px">vs 2023</p>
+<p style=" font-size:15px; margin-top:15px">vs `r last_year -1`</p>
 </div>
 <div class="col-3" >
 <p style="font-size:15px; margin-top:15px">vs 2019</p>
