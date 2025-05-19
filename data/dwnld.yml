@@ -1,7 +1,7 @@
 # CO2 Emissions by State
 ## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
-co_opt_end: Mar 2025 # UPDATE MONTH (M) - Delayed few days
+co_opt_end: Apr 2025 # UPDATE MONTH (M) - Delayed few days
 
 # Operations En-route
 ## En-route IFR flights and ATFM delays (AUA) - No post ops adj.
@@ -101,4 +101,4 @@ ansp_fin_end: 2023 (partial)
 # Open Performance Data Initiative (OPDI) 
 ## Flight list / Event / Measurement data
 opdi_beg: Jan 2022
-opdi_end: Feb 2025 # UPDATE MONTHLY (M) - Confirm with QG
+opdi_end: Apr 2025 # UPDATE MONTHLY (M) - Confirm with QG
