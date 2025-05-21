@@ -21,7 +21,7 @@ The standard inputs have been compiled from EUROCONTROL data and intelligence, f
 
 They are average values and may not be appropriate in all circumstances. The document also gives details of the sources of information, and discusses the applicability and use of the values.
 
-#### What's new in this edition
+#### What's new in the June 2024 edition
 This edition of Standard Inputs is the first time that the document in published online in a web page format with the view to facilitate its continuous updates and dynamism.
 
 In the current version only a selection of values have been updated with latest data (i.e. Air traffic delay, Air traffic statistics and forecasts, Average number of passengers and Number of IFR flights), while the remaining ones can still be accessed in the previous editions. On top of this, two new values have been added: Proportion of Sustainable Aviation Fuel and Shadow cost of carbon.

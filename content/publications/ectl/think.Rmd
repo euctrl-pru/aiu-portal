@@ -5,6 +5,7 @@ tags:  Think Paper
 ---
 
 ## 2025
+* [EUROCONTROL Aviation Trends #8 (20 May 2025) - The long-term decline of domestic flights in Europe][AT8]
 * [EUROCONTROL Aviation Trends #7 (11 Mar 2025) - Evolution of traffic to Asia/Pacific][AT7]
 
 ## 2024
@@ -80,4 +81,4 @@ tags:  Think Paper
 [AT5]: https://www.eurocontrol.int/publication/summer-2024-performance "Summer 2024 performance"
 [AT6]: https://www.eurocontrol.int/publication/airlines-schedules-balancing-act "Airlines schedules – a balancing act"
 [AT7]: https://www.eurocontrol.int/publication/evolution-traffic-asiapacific "Evolution of traffic to Asia/Pacific"
-
+[AT8]: https://www.eurocontrol.int/publication/long-term-decline-domestic-flights-europe "The long-term decline of domestic flights in Europe"
