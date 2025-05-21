@@ -162,7 +162,7 @@ command = "hugo --gc --minify"
 [[redirects]]
   from = "/economics/cba/standard-inputs/chapters/*"
   to = "/economics/cba/standard-inputs/latest/chapters/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
