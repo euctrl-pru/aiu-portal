@@ -159,7 +159,7 @@ plot_ACE
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2024ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2025ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 
@@ -268,7 +268,7 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 <!-- </div> -->
 
 <div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-  <img class="card-img-top" src="/images/prc/ace2024ed.png" alt="ACE report May 2025 edition">
+  <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
   <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (May 2025 edition)</h5></a><p class="card-text"></p>
   </div>
 </div>
