@@ -171,7 +171,7 @@ plot_ACE
 <div style="background-color: #F2F2F2; "  >
 **Main report**
 <span class="float-right">
-<a href="/library/ace/eurocontrol-ace-benchmarking-report-2024-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
+<a href="/library/ace/eurocontrol-ace-benchmarking-report-2025-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
 <!-- <a href="library/eurocontrol-ace-2020-benchmarking-report.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a> -->
 </span>
 </div>
@@ -267,7 +267,7 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 <!--   </div> -->
 <!-- </div> -->
 
-<div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
+<div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
   <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (May 2025 edition)</h5></a><p class="card-text"></p>
   </div>
