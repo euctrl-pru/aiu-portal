@@ -171,7 +171,7 @@ plot_ACE
 <div style="background-color: #F2F2F2; "  >
 **Main report**
 <span class="float-right">
-<a href="/library/ace/eurocontrol-ace-benchmarking-report-2025-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
+<a href="https://www.eurocontrol.int/sites/default/files/2025-06/eurocontrol-ace-benchmarking-report-2025-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
 <!-- <a href="library/eurocontrol-ace-2020-benchmarking-report.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a> -->
 </span>
 </div>
