@@ -22,10 +22,16 @@
 ##-
 ##- Caveat: be sure to use gnu-getopt and not OSX builtin or Git Bash missing one ;-)
 
+#get username
+username=$(whoami)
+#folder path
+path="C://Users//$username//OneDrive - EUROCONTROL//Download data files//csv"
+#create folder, if it does not exist already
+mkdir -p "$path"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SCRIPT="$(basename "${BASH_SOURCE[0]}")"
 
+SCRIPT="$(basename "${BASH_SOURCE[0]}")"
 help=$(grep "^##-" "${SCRIPT_DIR}/${SCRIPT}" | cut -c 4-)
 version=$(grep "^#--"  "${SCRIPT_DIR}/${SCRIPT}" | cut -c 4-)
 
@@ -102,20 +108,20 @@ echo "[WEF, TIL) = [${year_beg}, ${TIL})"
   
   #------------ export old CSVs ---------------
   echo "Exporting ERT_DLY ansp ${ERT_DLY_WEF} ${TIL}..."
-  Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
+  Rscript R/export_ert_dly.R -t ansp ${ERT_DLY_WEF} ${TIL} -o "$path";
   echo "Exporting ERT_DLY ansp ... done."
 
   echo "Exporting ERT_DLY fir ${ERT_DLY_WEF} ${TIL}..."
   echo "**NOTE*: this takes quite a long time."
-  Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
+  Rscript R/export_ert_dly.R -t fir ${ERT_DLY_WEF} ${TIL} -o "$path"
   echo "Exporting ERT_DLY fir ... done."
 
   echo "Exporting APT_DLY ${APT_DLY_WEF} ${TIL}..."
-  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL} -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
+  Rscript R/export_apt_dly.R ${APT_DLY_WEF} ${TIL} -o "$path";
   echo "Exporting APT_DLY ... done"
 
   echo "Exporting HFE ..."
-  Rscript R/export_hfe.R -o 'C:\Users\spi\OneDrive - EUROCONTROL\Download data files\csv';
+  Rscript R/export_hfe.R -o "$path";
   echo "Exporting HFE ... done"
 
   #------------ export new CSVs ---------------
