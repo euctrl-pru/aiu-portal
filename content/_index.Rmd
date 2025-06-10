@@ -335,10 +335,24 @@ fullpage: true
 <div class="carousel-inner">
 
 
-
-
-
 <div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service" target="_blank">
+<img src="/images/prc/prc_o03.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #3 – En route Capacity in Europe – an insufficient level of service">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service" target="_blank">PRC Observer #3 – En route Capacity in Europe – an insufficient level of service</a></h5>
+<small>The independent Performance Review Commission (PRC) examines the shortcomings of the European en-route capacity planning process in meeting airspace users’ expectations, and highlights the need for greater transparency to restore service quality and European network capacity performance.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+
+<div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
 <img src="/images/landing/2025-04-10_app_v4.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL DATA app v4">
@@ -383,8 +397,6 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 
 
 
-
-
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/long-term-decline-domestic-flights-europe" target="_blank">
@@ -401,22 +413,6 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 </div>
 
 
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank">
-<img src="/images/landing/FLY_AI_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="FLY AI Forum">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" target="_blank">FLY AI Forum</a></h5>
-<small>The third edition of the FLY AI Forum was held on 22-23 April 2025, gathering key stakeholders to explore the transformative impact of AI in the aviation sector. Watch the recordings from the event now!</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/event/fly-ai-forum-2025" class="card-link" target="_blank">See more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
