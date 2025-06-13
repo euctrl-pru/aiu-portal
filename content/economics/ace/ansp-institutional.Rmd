@@ -47,7 +47,7 @@ class="float-right pr-1 pl-1" style="padding-top:2px; padding-bottom:2px; color:
 </div><!-- closes row -->
 
 <div>
-<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/Airnav Ireland.pdf" width="100%" height="850pt">
+<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/AirNav Ireland.pdf" width="100%" height="850pt">
 </iframe>
 </div>
 </div><!-- closes col -->
