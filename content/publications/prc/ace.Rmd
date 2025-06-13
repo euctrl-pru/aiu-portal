@@ -11,6 +11,13 @@ tags: ["publications"]
 <!-- <div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2020" target="_blank"> -->
 
 
+<div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
+  <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE Benchmarking Report (May 2024 Edition)">
+  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2025 Edition</h5></a>
+  </div>
+</div>
+
+
 <div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2024-edition" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2024ed.png" alt="ACE Benchmarking Report (May 2024 Edition)">
   <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2024 Edition</h5></a>
@@ -41,12 +48,6 @@ tags: ["publications"]
   </div>
 </div>
 
-<div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2017" target="_blank">
-  <img class="card-img-top" src="/images/prc/ace2017.png" alt="ACE 2017">
-  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2017</h5></a>
-  </div>
-</div>
-
 
 </div>
 </div>
@@ -57,6 +58,14 @@ tags: ["publications"]
 <div class="container">
 <div class="row">
 <div class="card-deck">
+
+<div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2017" target="_blank">
+  <img class="card-img-top" src="/images/prc/ace2017.png" alt="ACE 2017">
+  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2017</h5></a>
+  </div>
+</div>
+
+
 
 <div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2016" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2016.png" alt="ACE 2016">
@@ -89,19 +98,15 @@ tags: ["publications"]
   </div>
 </div>
 
-<div class="card"><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2011" target="_blank">
-  <img class="card-img-top" src="/images/prc/ace2011.png" alt="ACE 2011">
-  <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Report 2011</h5></a>
-  </div>
-</div>
-
 
 </div>
 </div>
 </div>
 
+<br>
 
 ## Older reports
+* [ATM Cost Effectiveness (ACE) Report 2011][ace2011]
 * [ATM Cost Effectiveness (ACE) Report 2010][ace2010]
 * [ATM Cost Effectiveness (ACE) Report 2009][ace2009]
 * [ATM Cost Effectiveness (ACE) Report 2008][ace2008]
@@ -112,6 +117,8 @@ tags: ["publications"]
 * [ATM Cost Effectiveness (ACE) Report 2003][ace2003]
 * [ATM Cost Effectiveness (ACE) Report 2002][ace2002]
 
+
+[ace2011]: https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2011 "ATM Cost Effectiveness (ACE) Report 2011"
 [ace2010]: https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2010 "ATM Cost Effectiveness (ACE) Report 2010"
 [ace2009]: https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2009 "ATM Cost Effectiveness (ACE) Report 2009"
 [ace2008]: https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2008 "ATM Cost Effectiveness (ACE) Report 2008"

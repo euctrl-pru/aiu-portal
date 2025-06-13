@@ -6,6 +6,24 @@ tags:  PRC Performance Insights
 
 ---
 
+## 2025
+
+<!-- OBS#2 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Observer #3 - En route Capacity in Europe – an insufficient level of service ][OBS3]</h5>
+<small><strong><p style="color:#808080">Published: 5 June 2024</p></strong></small>
+    
+The independent Performance Review Commission (PRC) examines the shortcomings of the European en-route capacity planning process in meeting airspace users’ expectations, and highlights the need for greater transparency to restore service quality and European network capacity performance. <br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service"  target="_blank"><img src="/images/pi/prc_obs3.png" alt="PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? " style="width:100%"></a></div>
+</div>
+</div></div>
+
 ## 2024
 
 <!-- OBS#2 -->
@@ -20,7 +38,7 @@ The Performance Review Commission (PRC) takes a look at the poor capacity perfor
 <a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024" target="_blank" role="button">Learn more</a>
 </div>
 <div class="col-sm-3">
-<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024"  target="_blank"><img src="/images/pi/prc_obs2.PNG" alt="PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? " style="width:100%"></a></div>
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024"  target="_blank"><img src="/images/pi/prc_obs2.png" alt="PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? " style="width:100%"></a></div>
 </div>
 </div></div>
 
@@ -37,7 +55,7 @@ The Performance Review Commission (PRC) takes a brief look at the environmental 
 <a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green" target="_blank" role="button">Learn more</a>
 </div>
 <div class="col-sm-3">
-<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green"  target="_blank"><img src="/images/pi/prc_obs1.PNG" alt="PRC Observer #1 - How can we make aviation green?" style="width:100%"></a></div>
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green"  target="_blank"><img src="/images/pi/prc_obs1.png" alt="PRC Observer #1 - How can we make aviation green?" style="width:100%"></a></div>
 </div>
 </div></div>
 
@@ -225,3 +243,4 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 
 [OBS1]: https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green "PRC Observer #1 - How can we make aviation green?"
 [OBS2]: https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024 "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
+[OBS3]: https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service "PRC Observer #3 - En route Capacity in Europe – an insufficient level of service"

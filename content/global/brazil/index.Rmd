@@ -14,6 +14,20 @@ It also comprised the identification and validation of comparable data sources a
 <div class="card-deck">
 
 ```{r echo=FALSE}
+
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="x-cover-bra-eur-2024.png",
+  link="bra-eur-2024/",
+  title="16 June 2025",
+  text="The fourth edition of the Brazil Europe Air Navigation Performance Comparison Report covers the period from 2019 to 2024. It introduces key updates, including an assessment of point merge implementation and a deeper ACC-level analysis, with a focus on Curitiba and Lisbon.", 
+  alt="Comparison of Operational Air Navigation System Performance in Brazil and Europe 2019-2024", 
+  command="Resize", 
+  options="300x", 
+  style="width: 18rem;", 
+  class="mb-2"
+  )
+
 blogdown::shortcode(
   "bootstrap-card-alt",
   img="x-cover-bra-eur-2023.png",
@@ -55,6 +69,7 @@ blogdown::shortcode(
 
 ```
 
+</div>
 </div>
 </div>
 </div>
