@@ -351,7 +351,10 @@ fullpage: true
 </div>
 
 
+<<<<<<< 202506-release
 
+=======
+>>>>>>> master
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
@@ -413,7 +416,10 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 </div>
 
 
+<<<<<<< 202506-release
 
+=======
+>>>>>>> master
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations" target="_blank">

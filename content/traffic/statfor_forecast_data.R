@@ -1,5 +1,6 @@
 library(tidyverse)
 ## To install the "statfor" package, follow the steps here: https://dev.azure.com/ECTL-AZURE/Aviation%20Intelligence%20Unit/_git/statfor
+## If you cannot access the page in Azure, then contact the STATFOR team and/or Sebastien Thonnard
 ## Note: Enrico has another stafor package in GitHub (do no confuse it with the stafor package in Azure)
 library(statfor)
 library(tsibble)
