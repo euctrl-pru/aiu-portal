@@ -40,14 +40,14 @@ This page also includes information relating to the scope of services provided b
 </div>
 
 <div class="col-4">
-<a id="mydownload" href="https://www.eurocontrol.int/ACE/ANSP-Factsheets/Albcontrol.pdf" role="button" target="_blank"
+<a id="mydownload" href="https://www.eurocontrol.int/ACE/ANSP-Factsheets/Airnav Ireland.pdf" role="button" target="_blank"
 class="float-right pr-1 pl-1" style="padding-top:2px; padding-bottom:2px; color:black; border-radius:2px; border:1px solid #aaaaaa; background: linear-gradient(to bottom, #fcfcfc, #dddddd)" type="button" download>Download .pdf
 </a>
 </div>
 </div><!-- closes row -->
 
 <div>
-<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/Albcontrol.pdf" width="100%" height="850pt">
+<iframe id="MyEmbed_div" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.eurocontrol.int/ACE/ANSP-Factsheets/Airnav Ireland.pdf" width="100%" height="850pt">
 </iframe>
 </div>
 </div><!-- closes col -->
