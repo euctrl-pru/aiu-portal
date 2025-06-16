@@ -1,0 +1,50 @@
+---
+title: Movements (STATFOR definition)
+slug: movements
+---
+
+The definitions below were extracted from the EUROCONTROL Glossary for Flight Statistics & Forecasts (Edition number: v1.0 (05/01/2005))
+
+
+### 1.2 MOVEMENTS, FLOWS, FLIGHTS, TRAFFIC
+
+#### 1.2.1 Movement
+The association of a flight stage with an airspace volume or two-dimensional area. Each such association is bounded in time by 2 flight stage events: begin/entry and end/exit. In relation to an airspace volume, movement can be interrupted. In relation to two-dimensional area, movement cannot be interrupted.
+Movements are divided to Internals, Arrivals, Departures and Overflights.
+
+#### 1.2.2 Arrival
+Arrival is a movement, which starts with the entry into the airspace volume or two-dimensional area. It ends with arrival at an aerodrome belonging to the airspace volume or two-dimensional area considered.
+
+#### 1.2.3 Departure
+Departure is a movement, which starts on aerodrome belonging to the airspace volume or two-dimensional area considered. It ends with exit from the airspace volume or two-dimensional area considered.
+
+#### 1.2.4 Internal
+Internal is a movement, which starts with departure aerodrome and ends with arrival aerodrome both belonging to the airspace volume or two-dimensional area considered.
+
+#### 1.2.5 Overflight
+Overflight is a movement, which starts with entry and ends with exit of the airspace volume considered.
+
+#### Examples of movements:
+Let's assume France’s airspace is the airspace volume considered. Every movement, which passes over France, falls into one and only one of the four categories: departures, arrivals, overflights, and internals. 
+
+*  If the movement started and ended in France then it is called **internal**. 
+*  If a movement started in France but it ended abroad then it is a **departure**. 
+*  If a flight stage started in a foreign country and the movement entered to the French airspace volume and ended in a French airport then it is called an **arrival**. 
+*  Finally a movement which passes over France but never lands there is called an **overflight**.
+
+As the airspace volume considered changes, the same flight stage would be counted differently in terms of movements. Let's think about a flight stage from Germany to France. 
+
+* From the perspective of the NM Area this flight stage will be counted as an **internal** movement. 
+* From the perspective of German airspace volume, this flight stage will be counted as **departure** movement, and 
+* from the perspective of French airspace volume it will be counted as an **arrival** movement.
+
+A flight stage can be an internal movement for airspace volume but also an overflight for another airspace volume. Guernsey to London is an internal UK movement which overflies France.
+
+An airspace volume with no airports (e.g. Maastricht UAC airspace) can have only overflights.
+
+An airport cannot have overflights.
+
+## See Also
+
+* `r blogdown::shortcode("a_blank_ectrl", "EUROCONTROL - Forecasting", "https://www.eurocontrol.int/forecasting")`
+
