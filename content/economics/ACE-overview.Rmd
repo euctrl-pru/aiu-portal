@@ -75,7 +75,7 @@ support_costs_per_cph_change_perc <- paste0(if_else(support_costs_per_cph_change
 <div class="col-sm-9">
 The ACE benchmarking project analyses the cost-effectiveness and productivity of 38 European Air Navigation Service Providers (ANSPs) in Europe. It examines both individual ANSPs and the Pan-European ATM/CNS system as a whole.
 
-In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2022) has been developed. It enables the aviation community to build customised views on ANSPs economic performance. 
+In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2023) has been developed. It enables the aviation community to build customised views on ANSPs economic performance.
 </div><!-- closes col  -->
 
 <div class="col-sm-3">
@@ -89,8 +89,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### High-level summary report on preliminary ACE 2023 data (December 2024)
-This report is based on the 2023 data submitted by ANSPs in July 2024.  It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level. 
+#### Latest ACE benchmarking report (May 2025 edition)
+This report analyses ANSPs’ cost-effectiveness performance in a context marked by the traffic recovery following the shock caused by the COVID-19 pandemic. Compared to the previous years, it provides a more detailed analysis of economic cost-effectiveness, which deteriorated in 2023 for several ANSPs. 
 
 <div class="row">
 <div class="col-md-6" >
@@ -137,17 +137,17 @@ plot_ACE
 <br>
 <div class="container" >
 
-*	Traffic (measured in composite flight-hours) rose by +11% in 2023 but remained -4% lower than in 2019. At ANSP level, a wide range of different trends is observed (from -43% to +63%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
+*	Traffic (measured in composite flight-hours) rose by +11.1% in 2023 but remained -3.7% lower than in 2019. At ANSP level, a wide range of different trends is observed (from -43% to +63%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
 
-*	ATFM delays in 2023 rose substantially and reached a level comparable to that of 2019, which was a year marked by significant capacity issues for several ANSPs. As a result, the share of ATFM delays in the 2023 unit economic costs amounted to 24%.
+*	ATFM delays in 2023 reached historical high levels, equivalent to those observed in 2018 and 2019 when several ANSPs experienced significant capacity issues. As a result, excluding the years affected by the COVID crisis, unit economic costs in 2023 (€607 per composite flight-hour) were the highest recorded in the last decade.
 
-*	Total ATM/CNS provision costs rose by +3% (+€272M) in 2023, reflecting cost increases for 27 out of 38 ANSPs. The main cost categories driving this increase were staff costs (+5% or +€309M) and non-staff operating costs (+6% or +€99M).
+*	Total ATM/CNS provision costs rose by +2.9% (+€270.1M) in 2023, reflecting cost increases for 27 out of 38 ANSPs. The main cost categories driving this increase were staff costs (+5.1% or +€312.1M) and non-staff operating costs (+6.3% or +€98.5M).
 
-*	Despite these increases, ANSPs' cost-bases were still -€360M (-4%) lower than in 2019 owing to the significant cost-savings achieved by ANSPs at system level in 2020 and 2021.
+*	Despite these increases, ANSPs’ cost-bases were still -€361.0M (-3.6%) lower than in 2019 owing to the significant cost-savings achieved by ANSPs at system level in 2020 and 2021.
 
-*	In 2023, the number of ATM/CNS staff was slightly higher than in 2022 (+1% or +537 FTEs), mainly because of increases in the number of ATCOs in OPS (+231 FTEs), OPS support staff (+122FTEs) and technical support staff for operational maintenance (+112 FTEs).
+*	In 2023, the number of ATM/CNS staff was slightly higher than in 2022 (+1.1% or +550 FTEs), mainly because of increases in the number of ATCOs in OPS (+168 FTEs), OPS support staff (+120FTEs) and technical support staff for operational maintenance (+99 FTEs).
 
-*	Although the level of debt fell by -11% in 2023, short and long-term borrowings still represented 2.5 times the amount recorded in 2019.
+*	Although the level of debt fell by -10.9% in 2023, short and long-term borrowings still represented 2.5 times the amount recorded in 2019.
 
 </div>
 
@@ -155,11 +155,11 @@ plot_ACE
 <br>
 <div class="row align-items-start">
 <div class="col-md-6">
-#### Latest ACE Report (May 2024 edition)
+#### ACE Report - Table of contents
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2024ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2025ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 
@@ -171,7 +171,7 @@ plot_ACE
 <div style="background-color: #F2F2F2; "  >
 **Main report**
 <span class="float-right">
-<a href="/library/ace/eurocontrol-ace-benchmarking-report-2024-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
+<a href="https://www.eurocontrol.int/sites/default/files/2025-06/eurocontrol-ace-benchmarking-report-2025-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
 <!-- <a href="library/eurocontrol-ace-2020-benchmarking-report.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a> -->
 </span>
 </div>
@@ -181,15 +181,15 @@ plot_ACE
 <details open>
 <summary>**Main Chapters:**</summary>
   2. Overview of the Pan-European ANS system
-  3. Cost-effectiveness analysis
-  4. Forward-looking cost-effectiveness (2023-2027)
-  5. Financial indicators calculated from ANSPs financial statements
-  6. Regulatory, institutional and corporate governance arrangements
+  3. Financial cost-effectiveness performance
+  4. Economic cost-effectiveness analysis
+  5. Forward-looking cost-effectiveness (2024-2028)
+  6. Financial indicators calculated from ANSPs' financial statements
 </details>
 
 <details>
 <summary>**Annexes**</summary>
-  * ANNEX 1 – Status of ANSPs 2022 Annual Reports
+  * ANNEX 1 – Status of ANSPs 2023 Annual Reports
   * ANNEX 2 – Performance indicators used for the comparison of ANSPs
   * ANNEX 3 – Performance ratios
   * ANNEX 4 – Exchange rates, inflation rates and purchasing power parities (PPPS) data
@@ -245,7 +245,7 @@ Access information on individual ANSPs institution arrangements, legal status, c
 
 <a href="/economics/ace/ansp-ceff/" target="_blank">**ANSPs individual summary reports**</a>
 </div>
-Access information on individual ANSPs cost-effectiveness performance (2017-2022), comparison with peers and historical information on capital investments projects.
+Access information on individual ANSPs cost-effectiveness performance (2018-2023), comparison with peers and historical information on capital investments projects.
 </div>
 </div> <!-- closes secondary row -->
 
@@ -267,17 +267,17 @@ Access information on individual ANSPs cost-effectiveness performance (2017-2022
 <!--   </div> -->
 <!-- </div> -->
 
-<div class=" card">
-<a href="/publications/prc/ace/" target="_blank">
-  <img class="card-img-top" src="/images/eco/ace_oldcovers.png" alt="Previous ACE reports">
-  <div class="card-body"><h5 class="card-title">Previous ACE reports</h5></a><p class="card-text"></p>
+<div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
+  <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
+  <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (May 2025 edition)</h5></a><p class="card-text"></p>
   </div>
 </div>
 
 
-<div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-  <img class="card-img-top" src="/images/eco/ace-hlsr2023.png" alt="High Level Summary Report 2023 Data">
-  <div class="card-body"><h5 class="card-title">High Level Summary Report on Preliminary ACE 2023 Data</h5></a><p class="card-text"></p>
+<div class=" card">
+<a href="/publications/prc/ace/" target="_blank">
+  <img class="card-img-top" src="/images/eco/ace_oldcovers.png" alt="Previous ACE reports">
+  <div class="card-body"><h5 class="card-title">Previous ACE reports</h5></a><p class="card-text"></p>
   </div>
 </div>
 
