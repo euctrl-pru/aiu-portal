@@ -112,6 +112,12 @@ command = "hugo --gc --minify"
   force = true
 
 [[redirects]]
+  from = "/global/brazil/bra-eur-2024/*"
+  to = "https://euctrl-pru.github.io/international-BRA-EUR-2025/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/economics/ace/ace-hlsr/*"
   to = "https://ace-hlsr.netlify.app/:splat"
   status = 200
