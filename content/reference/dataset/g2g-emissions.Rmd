@@ -1,0 +1,23 @@
+---
+title: Gate-to-Gate Emissions by State/Network
+bibliography: ["../../../static/bib/aviation.bib"]
+link-citations: true
+slug: emissions
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+<br>
+
+## Data source
+
+
+## Data description
+
+## Column naming and types
+
+
+[env]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
+[set]: https://www.eurocontrol.int/tool/small-emitters-tool "small emitters tool"
+[crco]: https://www.eurocontrol.int/crco "EUROCONTROL Route Charges Office"

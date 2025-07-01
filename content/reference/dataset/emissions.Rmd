@@ -1,5 +1,5 @@
 ---
-title: CO₂ emissions by State
+title: CO₂ emissions by State - SET
 bibliography: ["../../../static/bib/aviation.bib"]
 link-citations: true
 slug: emissions
