@@ -14,7 +14,7 @@ This portal is designed and built using the following principles:
 * build a static website
 * use open source tools whenever possible
 
-## Open source/Free tools and services we use
+## Open source tools and other services we use
 
 * [git ![git](/images/git-logo.png){width="22" height="22"}][git]:
 	a distributed version control system.
@@ -44,9 +44,12 @@ This portal is designed and built using the following principles:
 	an interactive Web service that creates graphical charts from user-supplied information.
 * [Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/):
 	offers hosting and serverless backend services for static websites.
-
-
-
+* [Observable ![Observable](/images/observable-logo.webp){width="22" height="22"}](https://observablehq.com/):
+	offers hosting of D3 visualizations.
+* [Quarto ![Quarto](/images/quarto-logo.svg){width="22" height="22"}](https://quarto.org/):
+	offers an open-source scientific and technical publishing system.
+* [PowerBI ![PowerBI](/images/powerbi-logo.svg){width="22" height="22"}](https://app.powerbi.com/):
+	offers a service for dashboards and visualizations.
 
 ## Scaffolding
 
@@ -69,13 +72,13 @@ In order to group all our repositories we created a
 [GitHub Organizations ![GitHub Organizations](/images/Octocat.png){width="22" height="22"}][ghorg]
 called `euctrl-pru`. It is a sort of company/team account.
 
-We have one repository for the *source* pages, [portal](https://github.com/euctrl-pru/portal),
+We have one repository for the *source* pages, [aiu-portal](https://github.com/euctrl-pru/aiu-portal),
 where you can find and follow all we publish.
 
 
 ### Web hosting
 
-Once we submit a change to the (master branch of the) `portal` repository,
+Once we submit a change to the (master branch of the) `aiu-portal` repository,
 [Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/)
 triggers a build of the website and publishes it.
 
@@ -87,7 +90,7 @@ We use the continuos integration service of
 to automatically
 
 * build every commit in our release branch (any branch name starting with
-  `2016<2 digit month number>-release`). These build can include tests to be
+  `2024<2 digit month number>-release`). These build can include tests to be
   executed in order to garantee a certain level of quality...
 
 * build every `master` branch commit **and if successful** deploy the generated site.
