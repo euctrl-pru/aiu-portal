@@ -85,7 +85,7 @@ triggers a build of the website and publishes it.
 
 ### Continuous Integration and Deployment
 
-We use the continuos integration service of
+We use the continuous integration service of
 [Netlify ![Netlify](/images/netlify-logo.png){width="22" height="22"}](https://netlify.com/)
 to automatically
 
