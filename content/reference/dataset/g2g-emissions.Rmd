@@ -64,7 +64,7 @@ Use the **Gate-to-Gate Emissions** dataset when you need:
 - Emissions data that includes not only **CO₂**, but also **NOₓ** and **SOₓ**, distributed across **flight phases** (e.g., taxi-out, cruise, landing, etc.).
 - Emissions **geographically attributed to the airspace or State where they occurred**, using the **Area Focus methodology**.
 - Disaggregation by **flight type (DAIO)** and **market segment**, supporting detailed environmental performance analysis.
-- Data coverage from **2019 to 2024**, based on available historical emissions as published on the **Flying Green Platform**.
+- Data coverage from **2019 onwards**, based on available historical emissions as published on the **Flying Green Platform**.
 
 > *Note: This dataset is not yet updated monthly — the update process is being developed and will be available in the future.*
 

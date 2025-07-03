@@ -57,7 +57,7 @@ Certain States' emissions have been aggregated specially:
 Use the **Small Emitters Tool (SET)** CO₂ emissions dataset when you need:
 
 - A **State-focused view** of total CO₂ emissions based on **departing IFR flights**, regardless of where the emissions occur during the flight.
-- A **longer historical time series**, with data available from **January 2010 up to April 2025**.
+- A **longer historical time series**, with data available from **January 2010 up to last month**.
 - **Regular and timely updates** — this dataset is updated **monthly**, making it useful for operational reporting, trend analysis, and monitoring.
 - A dataset aligned with **EUROCONTROL billing and traffic records**.
 - A methodology that estimates total flight emissions using aircraft type and full trajectory length (origin to destination).
