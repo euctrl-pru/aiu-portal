@@ -52,8 +52,17 @@ Certain States' emissions have been aggregated specially:
   - SPAIN does NOT included emissions for Canary Islands which are under 'CANARY ISLANDS'.
   - FRANCE emissions do NOT include those for French overseas territories.
 
+## When to use this data
 
+Use the **Small Emitters Tool (SET)** CO₂ emissions dataset when you need:
 
+- A **State-focused view** of total CO₂ emissions based on **departing IFR flights**, regardless of where the emissions occur during the flight.
+- A **longer historical time series**, with data available from **January 2010 up to April 2025**.
+- **Regular and timely updates** — this dataset is updated **monthly**, making it useful for operational reporting, trend analysis, and monitoring.
+- A dataset aligned with **EUROCONTROL billing and traffic records**.
+- A methodology that estimates total flight emissions using aircraft type and full trajectory length (origin to destination).
+
+> *Note: This dataset only includes CO₂ emissions and does not distinguish by flight phase or geographic airspace.*
 
 
 [env]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"

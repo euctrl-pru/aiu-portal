@@ -2,7 +2,7 @@
 title: Gate-to-Gate Emissions by State/Network
 bibliography: ["../../../static/bib/aviation.bib"]
 link-citations: true
-slug: emissions
+slug: g2g-emissions
 ---
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 # run setup script
@@ -11,13 +11,65 @@ source(here::here("_common.R"))
 <br>
 
 ## Data source
-
+The data is supplied by the [EUROCONTROL Performance Review Unit][pru] and the [EUROCONTROL Aviation Sustainability Unit][env].
 
 ## Data description
+The CO<sub>2</sub>/NOX<sub>X</sub>/SO<sub>X</sub> emissions were calculated with the [EUROCONTROL Performance Review Unit][pru] and the [EUROCONTROL Aviation Sustainability Unit][env] Gate-to-Gate methodology which employs the [Advanced Emission Model (AEM)][aem] which is developed in the EUROCONTROL Innovation Hub by the [EUROCONTROL Aviation Sustainability Unit][aem]. The values provided in this data set are the historical emissions as displayed on the [EUROCONTROL Flying Green Platform][FG_NZ]. 
+  
+As explained on the [Flying Green Platform][FG_INFO], emission values are calculated with EUROCONTROL tool, Advance Emission Model, and based on the best available actual trajectory data available to EUROCONTROL. The Flying Green platform allows the user to select the methodology ('Area Focus' or 'Trajectory (UNFCCC) methodology'), the area of interest , and the traffic of interest (Flight type - DAIO) and returns the fuel burn and emission values based on the user's selection.
+
+The past emissions are being presented using two different methodologies (these can be selected as filter options on the Flying Green platform):
+ 
+ * <b>Trajectory (UNFCCC) methodology </b> with a State focus where the full trajectory of flight is considered; or
+ * <b>Area focus</b> where the fuel burn and emissions are calculated only within the selected area and depending on the traffic selected (traffic type filer differentiating between departures, arrival and intra flights).
+
+The data in these data sets provided here represent the <b>Area focus</b> methodology. In upcoming releases the available data will be expanded.  The gate-to-gate emissions provided here are calculated taking into account the individual trajectories (from gate-to-gate) of each flight and are modeled for all flight phases:
+
+  * taxi-out
+  * take-off
+  * cruise
+  * landing
+  * taxi-in 
+
+Subsequently these emissions are aggregated by the following variables: 
+  
+  * Area (Network or State)
+  * Flight Type (DAIO)
+  * Market Segment
+  * Flight Phase
+
+For more information on the methodologies see the description under ['READ MORE' for NetZero on Flying Green][FG_INFO].
 
 ## Column naming and types
 
+| Column Name     | Description                                                                 | Example Values                                                                                 |
+|-----------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| LEVEL           | Indicates the geographic aggregation level of the data.                    | `NETWORK`, `STATE`                                                                             |
+| AREA            | Defines the area within the selected `LEVEL`.                              | If `LEVEL = NETWORK`: `ECAC`, `EEA`, `EU27`, `EU27 + EFTA`, `EUROCONTROL`, `RP3`<br>If `LEVEL = STATE`: ISO2 codes such as `BE`, `DE`, `PT - LISBON FIR`, `PT - SANTA MARIA FIR` |
+| FOCUS_TYPE      | Indicates the methodology used to assign flights to areas.                 | `AREA FOCUS`                                                                                   |
+| YEAR            | Year in which the emissions occurred.                                      | `2019`, `2020`, `2021`, `2022`, `2023`, `2024`                                                 |
+| MONTH           | Month in which the emissions occurred.                                     | `1` = January through `12` = December                                                          |
+| MARKET_SEGMENT  | Type of airline or operational market segment.                             | `business`, `cargo`, `lowcost`, `mainline`, `other`, `regional`                               |
+| FLIGHT_TYPE     | Indicates the spatial flight type relative to the area.                    | `A` = Arrival<br>`D` = Departure<br>`I` = Internal<br>`O` = Overflight                         |
+| FLIGHT_PHASE    | Segment of the flight in which emissions are calculated.                   | `cruise`, `descent`, `landing`, `take-off`, `taxi-in`, `taxi-out`                             |
+| NB_FLIGHTS      | Number of flights matching all above criteria.                             | e.g., `3428`, `444`                                                                            |
+| CO2_TONS        | Estimated CO₂ emissions (in metric tons) for these flights.                | e.g., `23112.0`, `2695.7`                                                                      |
+| NOX_KG          | Estimated nitrogen oxides (NOₓ) emissions in kilograms.                    | e.g., `69539.62`, `8766.93`                                                                    |
+| SOX_KG          | Estimated sulfur oxides (SOₓ) emissions in kilograms.                      | e.g., `6150.15`, `717.68`                                                                      |
+## When to use this data
 
+Use the **Gate-to-Gate Emissions** dataset when you need:
+
+- **Detailed approach and granular estimates** of emissions based on actual flight trajectories and modeled with the **Advanced Emission Model (AEM)**.
+- Emissions data that includes not only **CO₂**, but also **NOₓ** and **SOₓ**, distributed across **flight phases** (e.g., taxi-out, cruise, landing, etc.).
+- Emissions **geographically attributed to the airspace or State where they occurred**, using the **Area Focus methodology**.
+- Disaggregation by **flight type (DAIO)** and **market segment**, supporting detailed environmental performance analysis.
+- Data coverage from **2019 to 2024**, based on available historical emissions as published on the **Flying Green Platform**.
+
+> *Note: This dataset is not yet updated monthly — the update process is being developed and will be available in the future.*
+
+[pru]: http://127.0.0.1:4099/about/us/ "EUROCONTROL Performance Review Unit"
+[aem]: https://www.eurocontrol.int/model/advanced-emission-model "Advanced Emission Model (AEM)"
 [env]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
-[set]: https://www.eurocontrol.int/tool/small-emitters-tool "small emitters tool"
-[crco]: https://www.eurocontrol.int/crco "EUROCONTROL Route Charges Office"
+[FG_NZ]: https://flying-green.eurocontrol.int/#/net-zero "Flying Green NetZero"
+[FG_INFO]: https://www.eurocontrol.int/platform/flyinggreen "READ MORE for NetZero on Flying Green"
