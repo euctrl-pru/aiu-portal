@@ -1,6 +1,6 @@
 ---
-title: "CO₂ emissions"
-description: "An overview of CO₂ emissions in the EUROCONTROL area as provided by the EUROCONTROL Aviation Sustainability Unit."
+title: "CO₂ Emissions"
+description: "An overview of CO₂ emissions as provided through both the Small Emitter Tool (SET) and the Gate-to-Gate (G2G) methodologies."
 output: blogdown::html_page
 ---
 
@@ -502,9 +502,33 @@ dif_co2_dep_y2d_2019 <- paste0(if_else(dif_co2_dep_y2d_2019>=0,'+', ''),format(d
 
 ```
 
-This page provides an overview of the [CO<sub>2</sub> emissions](/reference/dataset/emissions/) in the EUROCONTROL area and their evolution since 2019. It also presents their variation with respect to 2019 broken down at State level. The data is supplied by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"} and can be downloaded in our [download section](/data/).  
+<!-- Introductory text -->
+<p></p>
 
-It also provides links to the main activities of EUROCONTROL in the field of sustainability, in particular to the newly released platform [Flying Green](https://flying-green.eurocontrol.int/){target="_blank"}!
+<p><strong>Select Methodology:</strong> 
+
+Choose between two emissions calculation methodologies below. The Small Emitters Tool (SET) uses a statistical model, while the Gate-to-Gate (G2G) approach is based on actual flight trajectories using the Advanced Emissions Model.</p>
+
+<!-- Nav tabs -->
+<ul class="nav nav-pills mb-3" role="tablist">
+<li class="nav-item m-1">
+<a class="nav-link active" data-toggle="pill" href="#set">Small Emitters Tool (SET) Emissions</a>
+</li>
+<li class="nav-item m-1">
+<a class="nav-link" data-toggle="pill" href="#gtg">Gate-to-Gate (G2G) Emissions</a>
+</li>
+</ul>
+
+<!-- Tab content -->
+<div class="tab-content">
+
+<!-- SET Methodology Tab -->
+<div id="set" class="tab-pane fade show active">
+
+### Small Emitters Tool (SET) Emissions
+This dashboard provides an overview of [CO<sub>2</sub> emissions](/reference/dataset/emissions/) across the EUROCONTROL area, tracking their evolution since 2019. It includes comparisons with 2019 levels, both at network and individual State level.
+
+The data is calculated using the [Small Emitters Tool (SET)](https://www.eurocontrol.int/tool/small-emitters-tool) and provided by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}. You can access the data in our [download section](/data/). For details on the methodology, data sources, and intended use, please refer to the [SET Methodology Info](/reference/dataset/emissions/).
 
 #### Network (CRCO area)
 <div class="container mt-3" style="padding:0px">
@@ -524,121 +548,152 @@ It also provides links to the main activities of EUROCONTROL in the field of sus
 <div class="col-3" >
 <p style="font-size:15px; margin-top:15px">vs 2019</p>
 </div>
-</div><!-- closes row -->
+</div>
 
-<div class="row align-items-start" style="">
-<div class="col-5" >
+<div class="row align-items-start">
+<div class="col-5">
 <p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_month_r` Mt</p>
 </div>
-<div class="col-4" >
+<div class="col-4">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_month_prev_year`</p>
 </div>
-<div class="col-3" >
+<div class="col-3">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_month_2019`</p>
 </div>
-</div><!-- closes row -->
-
-<div class="row align-items-start" style="">
-<div class="col-5" >
-<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_month_r` <span style="font-size:20px;">t/dep</span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Tonnes of CO2 emissions per departure">*</a></span>
-</p>
 </div>
-<div class="col-4" >
+
+<div class="row align-items-start">
+<div class="col-5">
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_month_r` <span style="font-size:20px;">t/dep</span><a href="#" data-toggle="tooltip" title="Tonnes of CO2 emissions per departure">*</a></p>
+</div>
+<div class="col-4">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_month_prev_year`</p>
 </div>
-<div class="col-3" >
+<div class="col-3">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_month_2019`</p>
 </div>
-</div><!-- closes row -->
-
-
-<div class="row align-items-start" style="">
-<div class="col-12" >
-<p style="font-weight:bold; color:#2E75B6; font-size:18px; margin-top:10px">`r y2d` </p>
 </div>
-</div><!-- closes row -->
 
-<div class="row align-items-start" style="">
-<div class="col-5" >
+<div class="row align-items-start">
+<div class="col-12">
+<p style="font-weight:bold; color:#2E75B6; font-size:18px; margin-top:10px">`r y2d`</p>
+</div>
+</div>
+
+<div class="row align-items-start">
+<div class="col-5">
 <p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_y2d_r` Mt</p>
 </div>
-<div class="col-4" >
+<div class="col-4">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_y2d_prev_year`</p>
 </div>
-<div class="col-3" >
+<div class="col-3">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_y2d_2019`</p>
 </div>
-</div><!-- closes row -->
-
-<div class="row align-items-start" style="">
-<div class="col-5" >
-<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_y2d_r` <span style="font-size:20px;">t/dep</span><a href="#" data-toggle="tooltip" data-placement="right" title="Tonnes of CO2 emissions per departure">*</a></span>
-</p>
 </div>
-<div class="col-4" >
+
+<div class="row align-items-start">
+<div class="col-5">
+<p style="font-weight:bold; font-size:22px; margin-bottom:0px">`r co2_dep_y2d_r` <span style="font-size:20px;">t/dep</span><a href="#" data-toggle="tooltip" title="Tonnes of CO2 emissions per departure">*</a></p>
+</div>
+<div class="col-4">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_y2d_prev_year`</p>
 </div>
-<div class="col-3" >
+<div class="col-3">
 <p style="font-weight:bold; font-size:18px; margin-top:5px">`r dif_co2_dep_y2d_2019`</p>
 </div>
-</div><!-- closes row -->
+</div>
 </div></div>
 </div><!-- closes col -->
 
 <div class="col-md-8">
-
 <div id="indexes">
 ```{r echo=FALSE, out.width='100%'}
 co2_nw_plot3
 ```
 </div>
-</div><!-- closes col -->
+</div>
 
-</div><!-- closes row -->
-</div><!-- closes container -->
+</div><!-- row -->
+</div><!-- container -->
 
 #### States
 
 <ul class="nav nav-pills">
-  <li class="active m-1"><a id="defaultTab" data-toggle="pill" href="#month">`r last_month`</a></li>
-  <li class="m-1"><a data-toggle="pill" href="#y2d">Year to date</a></li>
+<li class="active m-1"><a id="defaultTab" data-toggle="pill" href="#month">`r last_month`</a></li>
+<li class="m-1"><a data-toggle="pill" href="#y2d">Year to date</a></li>
 </ul>
 
 <div class="tab-content">
 <div id="month" class="container tab-pane fade in active">
-
-<div class="container" style="padding:0px">
-<div class="row align-items-start ">
-
+<div class="row align-items-start">
 <div class="col-lg-3 pl-0 mt-1">
 ```{r echo=FALSE, out.width='100%'}
 table_states_month
 ```
-</div><!-- closes col -->
-<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-10fff34e">
-</div><!-- closes col -->
-
-</div><!-- closes row -->
-</div><!-- closes container -->
-</div><!-- closes id#month -->
+</div>
+<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-10fff34e"></div>
+</div>
+</div>
 
 <div class="tab-pane fade" id="y2d">
-<div class="container" style="padding:0px">
-<div class="row align-items-start ml-1">
-
+<div class="row align-items-start">
 <div class="col-lg-3 pl-0 mt-1">
 ```{r echo=FALSE, out.width='100%'}
 table_states_y2d
 ```
-</div><!-- closes col -->
-<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-65af85bf">
-</div><!-- closes col -->
+</div>
+<div class="col-lg-9 pl-0 mt-1" id="observablehq-co2map-65af85bf"></div>
+</div>
+</div>
+</div>
 
-</div><!-- closes row -->
-</div><!-- closes container -->
-</div><!-- closes id#y2d -->
-</div><!-- closes tabcontent -->
-<br>
+<!-- ===== YOUR EXISTING CONTENT ENDS HERE ===== -->
+</div>
+
+<!-- Gate-to-gate Methodology Tab -->
+<div id="gtg" class="tab-pane fade">
+
+### Gate-to-Gate (G2G) Emissions
+
+This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, and SO<sub>X</sub> emissions based on the **Gate-to-Gate methodology**, developed jointly by the [EUROCONTROL Performance Review Unit](https://www.eurocontrol.int/pru) and the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}.
+
+Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/tool/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flyinggreen.eurocontrol.int/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
+
+<small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
+
+<style type="text/css">
+
+.resp-container {
+    position: relative;
+    width: 100%;
+    padding-top: 63.0%; /* 16:9 ratio; use 75% for 4:3 */
+    overflow: hidden;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 150%;
+    border: 0;
+}
+</style>
+</style>
+
+
+<div class="resp-container">
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&pageName=" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="resp-container">
+<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&pageName=bd3b3877791821bcf5d1" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+
+
+To view the dashbboards in full-screen mode, [click here](https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9).
 
 ### More on aviation sustainability 
 
@@ -676,11 +731,30 @@ table_states_y2d
 </div>
 
 <script type="text/javascript">
-window.onload = function() {
-  var element = document.getElementById("defaultTab");
-  element.click();
-}
+document.addEventListener("DOMContentLoaded", function () {
+  // If there's a hash in the URL
+  const hash = window.location.hash;
+
+  if (hash) {
+    // Activate the tab that matches the hash
+    const tabLink = document.querySelector(`a[href="${hash}"]`);
+    if (tabLink) {
+      // Remove 'active' class from any currently active tab and pane
+      document.querySelectorAll('.nav-link.active, .tab-pane.show.active').forEach(el => {
+        el.classList.remove('active', 'show');
+      });
+
+      // Add 'active' class to the new tab and pane
+      tabLink.classList.add('active');
+      const targetPane = document.querySelector(hash);
+      if (targetPane) {
+        targetPane.classList.add('active', 'show');
+      }
+    }
+  }
+});
 </script>
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 
