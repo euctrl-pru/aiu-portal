@@ -689,11 +689,12 @@ Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.
 <div class="resp-container">
 <iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&pageName=bd3b3877791821bcf5d1" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
-</div>
-</div>
-
 
 To view the dashbboards in full-screen mode, [click here](https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9).
+
+</div>
+</div>
+
 
 ### More on aviation sustainability 
 
@@ -730,33 +731,14 @@ To view the dashbboards in full-screen mode, [click here](https://app.powerbi.co
 </div>
 </div>
 
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function () {
-  // If there's a hash in the URL
-  const hash = window.location.hash;
-
-  if (hash) {
-    // Activate the tab that matches the hash
-    const tabLink = document.querySelector(`a[href="${hash}"]`);
-    if (tabLink) {
-      // Remove 'active' class from any currently active tab and pane
-      document.querySelectorAll('.nav-link.active, .tab-pane.show.active').forEach(el => {
-        el.classList.remove('active', 'show');
-      });
-
-      // Add 'active' class to the new tab and pane
-      tabLink.classList.add('active');
-      const targetPane = document.querySelector(hash);
-      if (targetPane) {
-        targetPane.classList.add('active', 'show');
-      }
-    }
-  }
-});
-</script>
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+<script type="text/javascript">
+window.onload = function() {
+  var element = document.getElementById("defaultTab");
+  element.click();
+}
+</script>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
