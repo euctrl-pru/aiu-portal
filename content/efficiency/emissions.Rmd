@@ -528,7 +528,7 @@ Choose between two emissions calculation methodologies below. The Small Emitters
 ### Small Emitters Tool (SET) Emissions
 This dashboard provides an overview of [CO<sub>2</sub> emissions](/reference/dataset/emissions/) across the EUROCONTROL area, tracking their evolution since 2019. It includes comparisons with 2019 levels, both at network and individual State level.
 
-The data is calculated using the [Small Emitters Tool (SET)](https://www.eurocontrol.int/tool/small-emitters-tool) and provided by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}. You can access the data in our [download section](/data/). For details on the methodology, data sources, and intended use, please refer to the [SET Methodology Info](/reference/dataset/emissions/).
+The data is calculated using the [Small Emitters Tool (SET)](https://www.eurocontrol.int/tool/small-emitters-tool) and provided by the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}. You can access the data in our [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [SET Methodology Info](/reference/dataset/emissions/).
 
 #### Network (CRCO area)
 <div class="container mt-3" style="padding:0px">
@@ -658,7 +658,7 @@ table_states_y2d
 
 This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, and SO<sub>X</sub> emissions based on the **Gate-to-Gate methodology**, developed jointly by the [EUROCONTROL Performance Review Unit](https://www.eurocontrol.int/pru) and the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}.
 
-Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/tool/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flyinggreen.eurocontrol.int/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
+Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/tool/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flyinggreen.eurocontrol.int/) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
 
 <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
 
