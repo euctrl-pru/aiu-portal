@@ -98,6 +98,11 @@ if (check_flights < 1000) {
     filter (FLIGHT_MONTH < max(FLIGHT_MONTH))
 }
 
+# yearly year to date emissions
+co2_yearly <- co2_data_raw |>
+  arrange(YEAR, MONTH, STATE_NAME) |>
+  group_by(YEAR)
+
 
 # month on month emissions
 co2_data_mom_state <- co2_data_raw %>%
@@ -113,6 +118,12 @@ co2_data_mom_state |>
   write_csv(str_glue("{dest_dir}/mom_co2.csv"))
 co2_data_y2d_state |> 
   write_csv(str_glue("{dest_dir}/y2d_co2.csv"))
+co2_yearly |>
+  group_walk(~ write_csv(
+    .x,
+    str_glue("{dest_dir}/co2_emmissions_by_state_{YYYY}.csv", YYYY = .y$YEAR),
+    na = ""),
+    .keep = TRUE)
 
 
 co2_data_plot_nw_ld <- co2_data_plot_nw %>% 
