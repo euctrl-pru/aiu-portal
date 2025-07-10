@@ -98,6 +98,11 @@ if (check_flights < 1000) {
     filter (FLIGHT_MONTH < max(FLIGHT_MONTH))
 }
 
+# yearly year to date emissions
+co2_yearly <- co2_data_raw |>
+  arrange(YEAR, MONTH, STATE_NAME) |>
+  group_by(YEAR)
+
 
 # month on month emissions
 co2_data_mom_state <- co2_data_raw %>%
@@ -113,6 +118,12 @@ co2_data_mom_state |>
   write_csv(str_glue("{dest_dir}/mom_co2.csv"))
 co2_data_y2d_state |> 
   write_csv(str_glue("{dest_dir}/y2d_co2.csv"))
+co2_yearly |>
+  group_walk(~ write_csv(
+    .x,
+    str_glue("{dest_dir}/co2_emmissions_by_state_{YYYY}.csv", YYYY = .y$YEAR),
+    na = ""),
+    .keep = TRUE)
 
 
 co2_data_plot_nw_ld <- co2_data_plot_nw %>% 
@@ -660,7 +671,7 @@ This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, 
 
 Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/tool/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flyinggreen.eurocontrol.int/) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
 
-<small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
+<!-- <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small> -->
 
 <style type="text/css">
 
