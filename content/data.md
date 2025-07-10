@@ -32,8 +32,7 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 
 | Data description | Period | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}} | Info | |
 |------------------|--------|-----------------|-----------------|----------------------|------|--|
-| Monthly Gate-to-Gate emissions by Network (Area focus)<br><small>Historical emissions (CO<sub>2</sub>/NO<sub>X</sub>/SO<sub>X</sub>) as per the [gate-to-gate emissions methodology][PRU_G2G]</small> | {{< getdata "dwnld" "g2g_co_opt_beg" >}} - {{< getdata "dwnld" "g2g_co_opt_end" >}} | [{{< dwnld_i >}}][g2gCOxlsx] | [{{< dwnld_i >}}][g2gCOcsv] | [{{< dwnld_i >}}][g2gCOparquet] | [{{< info_i >}}][g2gCOmeta] | |
-| Monthly Gate-to-Gate emissions by State (Area focus)<br><small>Historical emissions (CO<sub>2</sub>/NO<sub>X</sub>/SO<sub>X</sub>) as per the [gate-to-gate emissions methodology][PRU_G2G]</small> | {{< getdata "dwnld" "g2g_co_opt_beg" >}} - {{< getdata "dwnld" "g2g_co_opt_end" >}} | [{{< dwnld_i >}}][g2gCOxlsx] | [{{< dwnld_i >}}][g2gCOcsv] | [{{< dwnld_i >}}][g2gCOparquet] | [{{< info_i >}}][g2gCOmeta] | |
+| Monthly Gate-to-Gate emissions by Network/State (Area focus)<br><small>Historical emissions (CO<sub>2</sub>/NO<sub>X</sub>/SO<sub>X</sub>) as per the [gate-to-gate emissions methodology][PRU_G2G]</small> | {{< getdata "dwnld" "g2g_co_opt_beg" >}} - {{< getdata "dwnld" "g2g_co_opt_end" >}} | [{{< dwnld_i >}}][g2gCOxlsx] | [{{< dwnld_i >}}][g2gCOcsv] | [{{< dwnld_i >}}][g2gCOparquet] | [{{< info_i >}}][g2gCOmeta] | |
 <small><small>Developed in collaboration with the [EUROCONTROL Aviation Sustainability Unit (ASU)][ENV] and the [EUROCONTROL Flying Green Initiative][FG]. These data sets correspond to the [Flying Green NetZero][FG_NZ] dashboard.</small></small>
 
 #### CO<sub>2</sub> Emissions <small><small>– [Small Emitters Tool](https://www.eurocontrol.int/tool/small-emitters-tool)</small></small>

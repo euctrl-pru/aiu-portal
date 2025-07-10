@@ -686,11 +686,8 @@ Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.
 <div class="resp-container">
 <iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&pageName=" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
-<div class="resp-container">
-<iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9&pageName=bd3b3877791821bcf5d1" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
 
-To view the dashbboards in full-screen mode, [click here](https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9).
+To view the dashbboard in full-screen mode, [click here](https://app.powerbi.com/view?r=eyJrIjoiN2RlNmU5NTMtMGE0OS00ZjA3LTk3MDAtN2YwNTMwMzkxMjg1IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9).
 
 </div>
 </div>
