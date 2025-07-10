@@ -521,6 +521,29 @@ dif_co2_dep_y2d_2019 <- paste0(if_else(dif_co2_dep_y2d_2019>=0,'+', ''),format(d
 Choose between two emissions calculation methodologies below. The Small Emitters Tool (SET) uses a statistical model, while the Gate-to-Gate (G2G) approach is based on actual flight trajectories using the Advanced Emissions Model.</p>
 
 <!-- Nav tabs -->
+<style>
+.nav-pills .nav-link {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: #f8f9fa;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+</style>
+
+
 <ul class="nav nav-pills mb-3" role="tablist">
 <li class="nav-item m-1">
 <a class="nav-link active" data-toggle="pill" href="#set">Small Emitters Tool (SET) Emissions</a>
