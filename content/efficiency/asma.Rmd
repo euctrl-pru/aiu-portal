@@ -40,7 +40,7 @@ The underlying data of the results shown in the dashboard below are available fo
 <div class="card border-0">
   <img class="card-img-top" src="/images/eff/ectl_asma.jpg" alt="Arrival Sequencing and Metering Area">
 </div></div></div></div>
-<small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small>
+
 <div class="resp-container">
 <iframe class="resp-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiMDZkMzY2NDItNmEwNC00Mzk3LWJkZDgtZTFmNDY1N2M0Yjk2IiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>

@@ -1,4 +1,9 @@
-# CO2 Emissions by State
+# G2G CO2/NOX/SOX Emissions by Network / State 
+## Montly CO2 emissions by State
+g2g_co_opt_beg: Jan 2019
+g2g_co_opt_end: Dec 2024 # UPDATE On demand - see with FG and Sam PEETERS / Quinten GOENS
+
+# CO2 Emissions by State (Small Emitters Tool - ASU)
 ## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
 co_opt_end: Apr 2025 # UPDATE MONTH (M) - Delayed few days

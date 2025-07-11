@@ -121,6 +121,7 @@ description: "An overview of financial information and indicators for European A
    margin: 0px"
 }
 
+
   </style>
 
    <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements. You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
@@ -1090,6 +1091,7 @@ description: "An overview of financial information and indicators for European A
         // gridlines: "{ count: MyViewIncome1.getNumberOfRows() }"
         ticks: ticks,
         gridlines: { count: 0, color: '#e4e8ed'}
+
       },
       vAxes: {
         0: {
@@ -1185,7 +1187,9 @@ description: "An overview of financial information and indicators for European A
         textPosition: "out",
         textStyle: { color: "#595959", fontSize: 12 },
         // gridlines: "{ count: MyViewIncome2.getNumberOfRows() }",
-        gridlines: { count: 0 }
+        ticks: ticks,
+        gridlines: { count: 0, color: '#e4e8ed'}
+
       },
       vAxes: {
         0: {
@@ -1305,49 +1309,6 @@ description: "An overview of financial information and indicators for European A
     // tempTable.setProperty(0, 2, "className", "MyTableHeader");
     MyTableIncome.draw(TransposedTable, options);
   }
-
-   //------------------------FButtons year--------------------------------------------
-  // function FButtonYear() {
-  //   SelectedYear = PassYear;
-  //   switch (PassYear) {
-  //     case 2019:
-  //       Button2019.className = 'btn btn-dark btn-sm font-weight-bold';
-  //       Button2018.className = 'btn btn-secondary btn-sm';
-  //       Button2017.className = 'btn btn-secondary btn-sm';
-  //       // Button2016.className = 'btn btn-secondary btn-sm';
-  //       // Button2015.className = 'btn btn-secondary btn-sm';
-  //       MyBarColor = '#6d9eeb';
-  //     break;
-  //     case 2018:
-  //       Button2019.className = 'btn btn-secondary btn-sm';
-  //       Button2018.className = 'btn btn-dark btn-sm font-weight-bold';
-  //       Button2017.className = 'btn btn-secondary btn-sm';
-  //       // Button2016.className = 'btn btn-secondary btn-sm';
-  //       // Button2015.className = 'btn btn-secondary btn-sm';
-  //       MyBarColor = '#3c78d8'; //colour when 5 years #6d87eb
-  //     break;
-  //     case 2017:
-  //       Button2019.className = 'btn btn-secondary btn-sm';
-  //       Button2018.className = 'btn btn-secondary btn-sm';
-  //       Button2017.className = 'btn btn-dark btn-sm font-weight-bold';
-  //       // Button2016.className = 'btn btn-secondary btn-sm';
-  //       // Button2015.className = 'btn btn-secondary btn-sm';
-  //       MyBarColor = '#1c4587'; //colour when 5 years #3c78d8
-  //     break;
-  //   }
-  //   // SelectedYear = parseInt(document.getElementById('Button2019').value);
-  //   // UpdateMyChartIncome3();
-  //   UpdateMyTableIncome();
-  //   UpdateMyChartBalance4();
-  //   UpdateMyTableBalance();
-  //   UpdateMyChartCash3();
-  //   UpdateMyPieChartBalance();
-  //   UpdateMyTableCash();
-  //   UpdateMyTableFreeCash();
-  //   UpdateTitles();
-  //   YearPicker.setState({ selectedValues: [SelectedYear] });
-  //   YearPicker.draw();
-  // }
 
   //------------------------FButtons Metric--------------------------------------------
   function FButtonMetric1() {
@@ -1636,7 +1597,10 @@ description: "An overview of financial information and indicators for European A
           title: " ",
           format: "####",
           textPosition: "out",
-          textStyle: { color: "#595959", fontSize: 12 }
+          textStyle: { color: "#595959", fontSize: 12 },
+          ticks: ticks,
+          gridlines: { count: 0, color: '#e4e8ed'}
+
         },
       1: {
           format: "-",
@@ -1650,7 +1614,8 @@ description: "An overview of financial information and indicators for European A
           textStyle: { color: "#595959", fontSize: 12 },
           title: "Assets & Liabilities (" + NatCurrency + " " + CurrMultiplierString + ")",
           titleTextStyle: { italic: false, bold: true, color: "#595959", fontSize: 12 },
-          gridlines: { color: "#b4b4b4" },
+          gridlines: { color: "#b4b4b4" }
+
         },
         1: {
           format: "-",
@@ -1784,7 +1749,8 @@ description: "An overview of financial information and indicators for European A
         format: "####",
         textPosition: "out",
         textStyle: { color: "#595959", fontSize: 12 },
-        gridlines: { count: 0 }
+        ticks: ticks,
+        gridlines: { count: 0, color: '#e4e8ed'}
       },
       vAxes: {
         0: {
@@ -1949,7 +1915,8 @@ description: "An overview of financial information and indicators for European A
         // slantedText: true,
         // slantedTextAngle: 90,
         // gridlines: "{ count: MyViewIncome1.getNumberOfRows() }"
-        gridlines: { count: 0 }
+        ticks: ticks,
+        gridlines: { count: 0, color: '#e4e8ed'}
       },
       vAxes: {
         0: {
