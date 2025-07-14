@@ -1,10 +1,11 @@
 ---
 title: "Data"
-description: "Explore EUROCONTROL data on topics such as emissions, operations, traffic, economics and flight events."
-aliases: ["/data/performancearea/"]
-ndwk_i: <i class="fa pru fa-flask"></i>
-fltr_i: <i class="fa pru fa-filter"></i>
-attn_i: <i class="fa pru fa-exclamation-triangle"></i>
+description: Explore EUROCONTROL data on topics such as emissions, operations, traffic,
+  economics and flight events.
+aliases: /data/performancearea/
+ndwk_i: "<i class=\"fa pru fa-flask\"></i>"
+fltr_i: "<i class=\"fa pru fa-filter\"></i>"
+attn_i: "<i class=\"fa pru fa-exclamation-triangle\"></i>"
 ---
 
 [icaoganp]: http://ansperformance.eu/references/acronym/ganp.html "ICAO GANP"
@@ -43,9 +44,9 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 <small><small>Supplied by the [EUROCONTROL Aviation Sustainability Unit (ASU)][ENV].</small></small>
 
 <!-- Reference Links -->
-[g2gCOxlsx]: https://www.eurocontrol.int/performance/data/download/xls/CO2_emissions_by_state.xlsx "Gate-to-gate emissions (Excel)"
-[g2gCOcsv]:  /csv/#co2-csv "Gate-to-gate emissions (CSV)"
-[g2gCOparquet]:  /csv/#co2-parquet "Gate-to-gate emissions (Parquet)"
+[g2gCOxlsx]: https://www.eurocontrol.int/performance/data/download/xls/g2g_emissions.xlsx "Gate-to-gate emissions (Excel)"
+[g2gCOcsv]:  https://www.eurocontrol.int/performance/data/download/csv/g2g_emissions.csv "Gate-to-gate emissions (CSV)"
+[g2gCOparquet]:  https://www.eurocontrol.int/performance/data/download/parquet/g2g_emissions.parquet "Gate-to-gate emissions (Parquet)"
 [g2gCOmeta]: /reference/dataset/g2g-emissions/ "Gate-to-gate emissions (Meta)"
 [COxlsx]: https://www.eurocontrol.int/performance/data/download/xls/CO2_emissions_by_state.xlsx "CO<sub>2</sub> (Excel)"
 [COcsv]:  /csv/#co2-csv "CO<sub>2</sub> (CSV)"
