@@ -5,6 +5,7 @@ tags:  Think Paper
 ---
 
 ## 2025
+* [EUROCONTROL Aviation Trends #9 (10 July 2025) - Impact of the French ATC strike of 3 & 4 July 2025 on European Aviation][AT9]
 * [EUROCONTROL Aviation Trends #8 (20 May 2025) - The long-term decline of domestic flights in Europe][AT8]
 * [EUROCONTROL Aviation Trends #7 (11 Mar 2025) - Evolution of traffic to Asia/Pacific][AT7]
 
@@ -82,3 +83,4 @@ tags:  Think Paper
 [AT6]: https://www.eurocontrol.int/publication/airlines-schedules-balancing-act "Airlines schedules – a balancing act"
 [AT7]: https://www.eurocontrol.int/publication/evolution-traffic-asiapacific "Evolution of traffic to Asia/Pacific"
 [AT8]: https://www.eurocontrol.int/publication/long-term-decline-domestic-flights-europe "The long-term decline of domestic flights in Europe"
+[AT9]: https://www.eurocontrol.int/publication/impact-french-atc-strike-3-4-july-2025-european-aviation "Impact of the French ATC strike of 3 & 4 July 2025 on European Aviation"

@@ -1,10 +1,11 @@
 ---
 title: "Data"
-description: "Explore EUROCONTROL data on topics such as emissions, operations, traffic, economics and flight events."
-aliases: ["/data/performancearea/"]
-ndwk_i: <i class="fa pru fa-flask"></i>
-fltr_i: <i class="fa pru fa-filter"></i>
-attn_i: <i class="fa pru fa-exclamation-triangle"></i>
+description: Explore EUROCONTROL data on topics such as emissions, operations, traffic,
+  economics and flight events.
+aliases: /data/performancearea/
+ndwk_i: "<i class=\"fa pru fa-flask\"></i>"
+fltr_i: "<i class=\"fa pru fa-filter\"></i>"
+attn_i: "<i class=\"fa pru fa-exclamation-triangle\"></i>"
 ---
 
 [icaoganp]: http://ansperformance.eu/references/acronym/ganp.html "ICAO GANP"
@@ -26,16 +27,34 @@ attn_i: <i class="fa pru fa-exclamation-triangle"></i>
 
 <br>
 
-## <img src="/images/eff/ectl_env2.jpg" width="60" height="60" alt="CO2 Emissions by State"> CO2 Emissions by State
+## <img src="/images/eff/ectl_env2.jpg" width="60" height="60" alt="Emissions Icon"> Emissions
 
-| Data description                                                                                                  | Period                                                                       | {{< excel_i >}}            | {{< csv_i >}}              |  Info                    |                                    |
-|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------|----------------------------|--------------------------|------------------------------------|
-| Monthly CO2 emissions by State<br><small>supplied by the [EUROCONTROL Aviation Sustainability Unit][ENV]</small>  | {{< getdata "dwnld" "co_opt_beg" >}} - {{< getdata "dwnld" "co_opt_end" >}}  | [{{< dwnld_i >}}][COxlsx]  |  [{{< dwnld_i >}}][COcsv]  | [{{< info_i >}}][COmeta] |                                    |
+#### Gate-to-Gate Emissions <small><small>– [Historical Flying Green NetZero Data](https://flying-green.eurocontrol.int/#/)</small></small>
 
-[COxlsx]: https://www.eurocontrol.int/performance/data/download/xls/CO2_emissions_by_state.xlsx "CO2 (Excel)"
-[COcsv]:  /csv/#co2-csv "CO2 (CSV)"
-[COmeta]: /reference/dataset/emissions/ "CO2 (Meta)"
+| Data description | Period | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}} | Info | |
+|------------------|--------|-----------------|-----------------|----------------------|------|--|
+| Monthly Gate-to-Gate emissions by Network/State (Area focus)<br><small>Historical emissions (CO<sub>2</sub>/NO<sub>X</sub>/SO<sub>X</sub>) as per the [gate-to-gate emissions methodology][PRU_G2G]</small> | {{< getdata "dwnld" "g2g_co_opt_beg" >}} - {{< getdata "dwnld" "g2g_co_opt_end" >}} | [{{< dwnld_i >}}][g2gCOxlsx] | [{{< dwnld_i >}}][g2gCOcsv] | [{{< dwnld_i >}}][g2gCOparquet] | [{{< info_i >}}][g2gCOmeta] | |
+<small><small>Developed in collaboration with the [EUROCONTROL Aviation Sustainability Unit (ASU)][ENV] and the [EUROCONTROL Flying Green Initiative][FG]. These data sets correspond to the [Flying Green NetZero][FG_NZ] dashboard.</small></small>
+
+#### CO<sub>2</sub> Emissions <small><small>– [Small Emitters Tool](https://www.eurocontrol.int/tool/small-emitters-tool)</small></small>
+
+| Data description | Period | {{< excel_i >}} | {{< csv_i >}} | Info | |
+|------------------|--------|-----------------|----------------|------|--|
+| Monthly CO<sub>2</sub> emissions by State (Departing trajectory focus) <br><small>Historical CO<sub>2</sub> emissions as calculated by the [ASU methodology using the Small Emitters Tool (SET)][COmeta]</small> | {{< getdata "dwnld" "co_opt_beg" >}} - {{< getdata "dwnld" "co_opt_end" >}} | [{{< dwnld_i >}}][COxlsx] | [{{< dwnld_i >}}][COcsv] | [{{< info_i >}}][COmeta] | |
+<small><small>Supplied by the [EUROCONTROL Aviation Sustainability Unit (ASU)][ENV].</small></small>
+
+<!-- Reference Links -->
+[g2gCOxlsx]: https://www.eurocontrol.int/performance/data/download/xls/g2g_emissions.xlsx "Gate-to-gate emissions (Excel)"
+[g2gCOcsv]:  https://www.eurocontrol.int/performance/data/download/csv/g2g_emissions.csv "Gate-to-gate emissions (CSV)"
+[g2gCOparquet]:  https://www.eurocontrol.int/performance/data/download/parquet/g2g_emissions.parquet "Gate-to-gate emissions (Parquet)"
+[g2gCOmeta]: /reference/dataset/g2g-emissions/ "Gate-to-gate emissions (Meta)"
+[COxlsx]: https://www.eurocontrol.int/performance/data/download/xls/CO2_emissions_by_state.xlsx "CO<sub>2</sub> (Excel)"
+[COcsv]:  /csv/#co2-csv "CO<sub>2</sub> (CSV)"
+[COmeta]: /reference/dataset/emissions/ "CO<sub>2</sub> (Meta)"
 [ENV]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
+[FG]: https://flying-green.eurocontrol.int/#/ "EUROCONTROL Flying Green Initiative"
+[FG_NZ]: https://flying-green.eurocontrol.int/#/net-zero "Flying Green NetZero"
+[PRU_G2G]: /reference/dataset/g2g-emissions/ "PRU gate-to-gate emissions methodology"
 
 ## <img src="/images/prcq-operations-enroute.png" width="50" height="50" alt="Operations En-route"> Operations En-route
 

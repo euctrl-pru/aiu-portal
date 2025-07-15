@@ -11,8 +11,8 @@ title: How this site is built
 <li>build a static website</li>
 <li>use open source tools whenever possible</li>
 </ul>
-<div id="open-sourcefree-tools-and-services-we-use" class="section level2">
-<h2>Open source/Free tools and services we use</h2>
+<div id="open-source-tools-and-other-services-we-use" class="section level2">
+<h2>Open source tools and other services we use</h2>
 <ul>
 <li><a href="https://git-scm.com/" title="git">git <img src="/images/git-logo.png" width="22" height="22" alt="git" /></a>:
 a distributed version control system.</li>
@@ -44,6 +44,12 @@ a system for declaratively creating graphics, based on <a href="http://amzn.to/2
 an interactive Web service that creates graphical charts from user-supplied information.</li>
 <li><a href="https://netlify.com/">Netlify <img src="/images/netlify-logo.png" width="22" height="22" alt="Netlify" /></a>:
 offers hosting and serverless backend services for static websites.</li>
+<li><a href="https://observablehq.com/">Observable <img src="/images/observable-logo.webp" width="22" height="22" alt="Observable" /></a>:
+offers hosting of D3 visualizations.</li>
+<li><a href="https://quarto.org/">Quarto <img src="/images/quarto-logo.svg" width="22" height="22" alt="Quarto" /></a>:
+offers an open-source scientific and technical publishing system.</li>
+<li><a href="https://app.powerbi.com/">PowerBI <img src="/images/powerbi-logo.svg" width="22" height="22" alt="PowerBI" /></a>:
+offers a service for dashboards and visualizations.</li>
 </ul>
 </div>
 <div id="scaffolding" class="section level2">
@@ -62,23 +68,23 @@ And we selected GitHub as the central server for our git repositories.</p>
 <p>In order to group all our repositories we created a
 <a href="https://github.com/blog/674-introducing-organizations" title="GitHub Organizations blog post">GitHub Organizations <img src="/images/Octocat.png" width="22" height="22" alt="GitHub Organizations" /></a>
 called <code>euctrl-pru</code>. It is a sort of company/team account.</p>
-<p>We have one repository for the <em>source</em> pages, <a href="https://github.com/euctrl-pru/portal">portal</a>,
+<p>We have one repository for the <em>source</em> pages, <a href="https://github.com/euctrl-pru/aiu-portal">aiu-portal</a>,
 where you can find and follow all we publish.</p>
 </div>
 <div id="web-hosting" class="section level3">
 <h3>Web hosting</h3>
-<p>Once we submit a change to the (master branch of the) <code>portal</code> repository,
+<p>Once we submit a change to the (master branch of the) <code>aiu-portal</code> repository,
 <a href="https://netlify.com/">Netlify <img src="/images/netlify-logo.png" width="22" height="22" alt="Netlify" /></a>
 triggers a build of the website and publishes it.</p>
 </div>
 <div id="continuous-integration-and-deployment" class="section level3">
 <h3>Continuous Integration and Deployment</h3>
-<p>We use the continuos integration service of
+<p>We use the continuous integration service of
 <a href="https://netlify.com/">Netlify <img src="/images/netlify-logo.png" width="22" height="22" alt="Netlify" /></a>
 to automatically</p>
 <ul>
 <li><p>build every commit in our release branch (any branch name starting with
-<code>2016&lt;2 digit month number&gt;-release</code>). These build can include tests to be
+<code>2024&lt;2 digit month number&gt;-release</code>). These build can include tests to be
 executed in order to garantee a certain level of quality…</p></li>
 <li><p>build every <code>master</code> branch commit <strong>and if successful</strong> deploy the generated site.
 This is a way to publish our releases and make them available on the Internet.
