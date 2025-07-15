@@ -690,9 +690,9 @@ table_states_y2d
 
 ### Gate-to-Gate (G2G) Emissions
 
-This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, and SO<sub>X</sub> emissions based on the **Gate-to-Gate methodology**, developed jointly by the [EUROCONTROL Performance Review Unit](https://www.eurocontrol.int/pru) and the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}.
+This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, and SO<sub>X</sub> emissions based on the **Gate-to-Gate methodology**, developed jointly by the [EUROCONTROL Performance Review Unit](https://ansperformance.eu/about/us/) and the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}.
 
-Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/tool/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flyinggreen.eurocontrol.int/) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
+Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/model/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flying-green.eurocontrol.int/#/net-zero) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
 
 <!-- <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small> -->
 
