@@ -6,10 +6,9 @@ type: bibliography
 Overview of Data Challenge
 
 
-::: {class="col-sm-6"}
-:::: {class="container"}
-::::: {class="row"}
-:::::: {class="card-deck"}
+::: {class="container"}
+:::: {class="row"}
+::::: {class="card-deck"}
 
 ```{r echo=FALSE}
 blogdown::shortcode(
@@ -39,7 +38,6 @@ blogdown::shortcode(
   )
 ```
 
-::::::
 :::::
 ::::
 :::
