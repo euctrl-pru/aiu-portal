@@ -32,7 +32,7 @@ blogdown::shortcode(
 blogdown::shortcode(
   "bootstrap-card-alt",
   img="prc_dc25.jpeg",
-  link="dc2024/",
+  link="dc2025/",
   title="PRC Data Challenge 2025<br>(Under Work)",
   text="surprise, surprise", 
   alt="PRC Data Challenge 2025", 
