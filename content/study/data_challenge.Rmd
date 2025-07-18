@@ -1,0 +1,44 @@
+---
+title: "PRC Data Challenge"
+type: bibliography
+---
+
+
+
+::: {class="col-sm-6"}
+:::: {class="container"}
+::::: {class="row"}
+:::::: {class="card-deck"}
+
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="prc_dc24.jpeg",
+  link="dc2024/",
+  title="PRC Data Challenge 2024",
+  text="PRC Data Challenge 2024 edition", 
+  alt="PRC Data Challenge 2024", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
+```{r echo=FALSE, eval=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
+  img="prc_dc24.jpeg",
+  link="dc2025/",
+  title="PRC Data Challenge 2025",
+  text="PRC Data Challenge 2025 edition.", 
+  alt="PRC Data Challenge 2025", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
+::::::
+:::::
+::::
+:::

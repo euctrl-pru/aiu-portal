@@ -196,12 +196,13 @@ command = "hugo --gc --minify"
   force = true
 
 [[redirects]]
-  from = "/study/data-challenge/*"
-  to = "https://prc-data-challenge.netlify.app/:splat"
+  from = "/study/data-challenge/dc25/*"
+  to = "https://prc-data-challenge-2025.netlify.app/:splat"
   status = 200
   force = true
+
 [[redirects]]
-  from = "/study/data-challenge-2024/*"
+  from = "/study/data-challenge/dc24/*"
   to = "https://prc-data-challenge.netlify.app/:splat"
   status = 200
   force = true
