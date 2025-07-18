@@ -3,7 +3,11 @@ title: "PRC Data Challenge"
 type: bibliography
 ---
 
-Overview of Data Challenge...let's see
+The [Performance Review Commission (PRC)](/about/prc) Data Challenge aims at engaging with
+data scientists to create teams and compete to solve interesting data problem
+for the Aviation community.
+The focus is on **open data** and **open solutions** in order to achieve wide
+distribution and reproducibility.
 
 
 ::: {class="container"}
@@ -16,7 +20,7 @@ blogdown::shortcode(
   img="prc_dc24.jpeg",
   link="dc2024/",
   title="PRC Data Challenge 2024",
-  text="PRC Data Challenge 2024 edition", 
+  text="Predicting take-off weight.", 
   alt="PRC Data Challenge 2024", 
   command="Resize", 
   options="300x", 
@@ -24,19 +28,20 @@ blogdown::shortcode(
   )
 ```
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img="prc_dc24.jpeg",
-  link="dc2025/",
-  title="PRC Data Challenge 2025",
-  text="PRC Data Challenge 2025 edition.", 
+  img="prc_dc25.jpeg",
+  link="dc2024/",
+  title="PRC Data Challenge 2025<br>(Under Work)",
+  text="surprise, surprise", 
   alt="PRC Data Challenge 2025", 
   command="Resize", 
   options="300x", 
   class="mb-2"
   )
 ```
+
 
 :::::
 ::::

@@ -206,6 +206,7 @@ command = "hugo --gc --minify"
   to = "https://prc-data-challenge.netlify.app/:splat"
   status = 200
   force = true
+
 [[redirects]]
   from = "/methodology/ATFM_delay_calculation.html"
   to = "/methodology/atfm-delay-calculation/"
