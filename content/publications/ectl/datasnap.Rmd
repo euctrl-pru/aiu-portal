@@ -12,6 +12,21 @@ extrajs: /javascript/img_pre.js
 
 
 ## 2025
+<!-- #53 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Charting the growth in market share of a new generation of narrow and wide-bodies - EUROCONTROL Data Snapshot #53][DS53]</h5>
+<small><strong><p style="color:#808080">Published: 23 July 2025</p></strong></small>
+The 53. EUROCONTROL Data Snapshot focuses on the market share growth of a new generation of narrow- and wide-body aircraft.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds53.png" alt="growth in market share of a new generation of narrow- and wide-body aircraft"></div>
+</div>
+</div></div>
 
 <!-- #52 -->
 <div class="container alert alert-secondary">
@@ -25,7 +40,24 @@ The 52. EUROCONTROL Data Snapshot examines how overflights vary across the netwo
 </div>
 
 <div class="col-sm-4"><br>
-<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds52.png" alt="Q1 2025 traffic evolution per ACC"></div>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds52.png" alt="understanding overflight patterns in FIRs"></div>
+</div>
+</div></div>
+
+
+<!-- #51 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Traffic evolution in Q1 2025: Traffic continues to grow, but growth is not uniform - EUROCONTROL Data Snapshot #51][DS51]</h5>
+<small><strong><p style="color:#808080">Published: 14 April 2025</p></strong></small>
+The 51. EUROCONTROL Data Snapshot delves into the traffic evolution in Q1 2025 in all ACCs in the EUROCONTROL area, highlighting the differences between southern and central/northern Europe.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51 target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds51.png" alt="Q1 2025 traffic evolution per ACC"></div>
 </div>
 </div></div>
 
@@ -980,5 +1012,5 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS49]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-49-busiest-city-pairs-2024 "On busiest city pairs in 2024"
 [DS50]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-50 "Aircraft in the air in 2024"
 [DS51]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-51 "Q1 2025 traffic evolution"
-[DS52]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information "understanding overflight patterns in FIRs "
-
+[DS52]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information "understanding overflight patterns in FIRs"
+[DS53]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and "growth in market share of a new generation of narrow- and wide-body aircraft"

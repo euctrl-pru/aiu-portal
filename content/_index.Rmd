@@ -335,7 +335,23 @@ fullpage: true
 <div class="carousel-inner">
 
 
+
 <div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and" target="_blank">
+<img src="/images/landing/2025-07-23_DS53_newgen.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="growth in market share of a new generation of narrow and wide-bodies">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and" target="_blank">Data Snapshot #53 on charting the growth in market share of a new generation of narrow- and wide-body aircraft</a></h5>
+<small>This Data Snapshot analyses the growing use of new-generation Airbus and Boeing narrow-body and wide-body aircraft across the European aviation network. In 2024, <b>Airbus neo</b> and <b>Boeing 737 MAX</b> families expanded their <b>narrow-body</b> market share, while <b>Airbus A350</b> and <b>Boeing 787 Dreamliner</b> continued to strengthen their presence in the <b>wide-body</b> segment.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+<div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/impact-french-atc-strike-3-4-july-2025-european-aviation?utm_source=sfmc&utm_medium=email&utm_campaign=EUROCONTROL+European+Aviation+Trends+-+%239&utm_term=Read+AT&utm_id=81586649&sfmc_id=482410419" target="_blank">
 <img src="/images/landing/2025-07-10_AT9_French_strike.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="The impact of the French ATC strike of 3 & 4 July 2025 on European Aviation">
