@@ -196,15 +196,17 @@ command = "hugo --gc --minify"
   force = true
 
 [[redirects]]
-  from = "/study/data-challenge/*"
-  to = "https://prc-data-challenge.netlify.app/:splat"
+  from = "/study/data-challenge/dc2025/*"
+  to = "https://prc-data-challenge-2025.netlify.app/:splat"
   status = 200
   force = true
+
 [[redirects]]
-  from = "/study/data-challenge-2024/*"
+  from = "/study/data-challenge/dc2024/*"
   to = "https://prc-data-challenge.netlify.app/:splat"
   status = 200
   force = true
+
 [[redirects]]
   from = "/methodology/ATFM_delay_calculation.html"
   to = "/methodology/atfm-delay-calculation/"

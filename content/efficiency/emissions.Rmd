@@ -692,7 +692,7 @@ table_states_y2d
 
 This dashboard provides historical estimates of CO<sub>2</sub>, NO<sub>X</sub>, and SO<sub>X</sub> emissions based on the **Gate-to-Gate methodology**, developed jointly by the [EUROCONTROL Performance Review Unit](https://ansperformance.eu/about/us/) and the [EUROCONTROL Aviation Sustainability Unit](https://www.eurocontrol.int/aviation-sustainability){target="_blank"}.
 
-Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/model/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL Flying Green platform](https://flying-green.eurocontrol.int/#/net-zero) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
+Emissions are calculated using the [Advanced Emissions Model (AEM)](https://www.eurocontrol.int/model/advanced-emission-model), and are based on the best available trajectory data. The data reflects results from the **Area Focus methodology**, as presented on the [EUROCONTROL FlyingGreen platform](https://flying-green.eurocontrol.int/#/net-zero) and are available for access on the [data section](/data/). For details on the methodology, data sources, and intended use, please refer to the [G2G Methodology Info](/reference/dataset/g2g-emissions/).
 
 <!-- <small>Please note that the analysis may take a few moments to load. The dashboard is best viewed in Chrome or Firefox.</small> -->
 
@@ -735,8 +735,8 @@ To view the dashbboard in full-screen mode, [click here](https://app.powerbi.com
 <div class="card-deck">
 
 <div class="card"><a href="https://flying-green.eurocontrol.int/" target="_blank">
-  <img class="card-img-top" src="/images/eff/flying_green.png" alt="Flying Green">
-  <div class="card-body"><h5 class="card-title">Flying Green</h5><p class="card-text">Learn more about the new Flying Green Platform! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
+  <img class="card-img-top" src="/images/eff/flying_green.png" alt="FlyingGreen">  
+  <div class="card-body"><h5 class="card-title">FlyingGreen</h5><p class="card-text">Learn more about the new FlyingGreen Platform! <i class='fas fa-xs fa-external-link-alt'></i></p></a>
   </div>
 </div>
 
