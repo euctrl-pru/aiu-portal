@@ -126,7 +126,7 @@ description: "An overview of financial information and indicators for European A
 
    <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements. You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
    <div id="available-ansps" style = "display: none;">
-   <p>The dashboard displays data for the last five years. However, when interpreting the data for <span id="year-context"></span>, it's important to note that the complete series is not yet available, as the current information is based on the published financial data from the following ANSPs (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>.</p>
+   <p>The dashboard displays data for the last six years. However, when interpreting the data for <span id="year-context"></span>, it's important to note that the complete series is not yet available, as the current information is based on the published financial data from the following ANSPs (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>.</p>
    </div>
 
     <div class="flex-container ml-1 mr-1" style=" padding-right: 15px; border-bottom: solid 3px #161b21; 
@@ -190,7 +190,7 @@ description: "An overview of financial information and indicators for European A
       </div>
       <div class="mb-2 ml-3" style="width:180px; " >
         <p  style="margin-bottom: 0px; margin-left: -15px; font-size: 14px; text-align: center;">
-         <span id="MyTitleShareRevenue_div">Share of Pan-European System</span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Based on 2020-2022 avg.">*</a></span>
+         <span id="MyTitleShareRevenue_div">Share of Pan-European System</span><span><a id="tooltip_share" href="#" data-toggle="tooltip" data-placement="right" title="Based on 2021-2023 avg.">*</a></span>
         </p>
         <div id="MyPieShareRevenue_div" style="margin-bottom: 0px;"></div>
         <!-- <p style="margin: 0px; font-size: 14px;"> Share of total revenue</p> -->
@@ -212,7 +212,7 @@ description: "An overview of financial information and indicators for European A
       
       <div class="mb-2 ml-1" style="width:180px" >
         <p  style="margin-bottom: 0px; margin-left: -15px; font-size: 14px; text-align: center;">
-         <span id="MyTitleShareRevenue_reg_div"></span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Based on 2020-2022 avg.">*</a></span>
+         <span id="MyTitleShareRevenue_reg_div"></span><span><a href="#" data-toggle="tooltip" data-placement="right" title="Based on 2021-2023 avg.">*</a></span>
         </p>
         <div id="MyPieShareRevenue_div_reg" style="margin-bottom: 0px; "></div>
       </div>
@@ -2509,6 +2509,9 @@ description: "An overview of financial information and indicators for European A
     document.getElementById("MyTitleShareRevenue_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
     document.getElementById("MyTitleShareRevenue_reg_div").innerHTML = "Revenue Share of Pan-European System (" + (MyTableShareTotalRevenue.getValue(0, 1) < 0.001 ? Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 10000) / 100 : Math.round(MyTableShareTotalRevenue.getValue(0, 1) * 1000) / 10) + "%)";
     // document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
+
+    
+    document.getElementById("tooltip_share").title = SelectedEntity == "MATS" ? "Based on 2020-2022 avg." : "Based on 2021-2023 avg.";
 
   // Update all titles - section titles, scorecard titles, etc.
 
