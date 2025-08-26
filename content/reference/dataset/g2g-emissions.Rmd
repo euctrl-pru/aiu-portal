@@ -23,13 +23,40 @@ The past emissions are being presented using two different methodologies (these 
  * <b>Trajectory (UNFCCC) methodology </b> with a State focus where the full trajectory of flight is considered; or
  * <b>Area focus</b> where the fuel burn and emissions are calculated only within the selected area and depending on the traffic selected (traffic type filer differentiating between departures, arrival and intra flights).
 
-The data in these data sets provided here represent the <b>Area focus</b> methodology. In upcoming releases the available data will be expanded.  The gate-to-gate emissions provided here are calculated taking into account the individual trajectories (from gate-to-gate) of each flight and are modeled for all flight phases:
+The data in these data sets provided here represent the <b>Area focus</b> methodology. In upcoming releases the available data will be expanded.  The gate-to-gate emissions provided here are calculated taking into account the individual trajectories (from gate-to-gate) of each flight and are modeled for all Flying Green flight phases:
 
-  * taxi-out
-  * take-off
-  * cruise
-  * landing
-  * taxi-in 
+  * taxi-out: The aircraft moves from the gate to the runway, preparing for take-off.
+  * climb: The aircraft accelerates on the runway, lifts off and performs its ascent. 
+  * cruise: The aircraft maintains a steady altitude and speed for the majority of the flight.
+  * descent: The aircraft descends, aligns with the runway, touches down, and slows to taxi speed. 
+  * taxi-in:  The aircraft moves from the runway to the gate or parking area after landing. 
+
+In technical terms these Flying Green Flight Phases described above are subdivided in the following so called PRU Sub Phases which are used for the calculations of emissions within the trajectory.  
+
+|Flying Green Flight Phase | PRU Sub Phase | Start                        | End                              |
+|--------------------------|---------------|------------------------------|----------------------------------|
+| Taxi-out                 | Taxi-out      | AOBT                         | ATOT - 42 sec (*)                |
+| Climb                    | Take-off      | ATOT - 42 sec (*)            | ATOT                             |
+| Climb                    | Climb-Out     | ATOT                         | First crossing of 3000 ft AGL    |
+| Climb                    | Climb         | First crossing of 3000 ft AGL| Top of Climb                     |
+| Cruise                   | Cruise        | Top of Climb                 | Top of Descent                   |
+| Descent                  | Descent       | Top of Descent               | Last crossing of 3000 ft AGL     |
+| Descent                  | Approach      | Last crossing of 3000 ft AGL | ALDT                             |
+| Descent                  | Landing       | ALDT                         | ALDT + 40 sec (*)                |
+| Taxi-in                  | Taxi-in       | ALDT + 40 sec (*)            | AIBT                             |
+
+Note(s): 
+
+(*): The take-off roll duration is defined to be standard 42 seconds and landing roll duration 40 seconds by the Reference Landing and Take-off (LTO) cycle. See [https://data.europa.eu/doi/10.2822/385503](https://data.europa.eu/doi/10.2822/385503).  
+
+
+Abbreviation(s): 
+
+  * AOBT: Actual Off-Block Time
+  * ATOT: Actual Take-Off Time
+  * AGL: Above Ground Level
+  * ALDT: Actual Landing Time
+  * AIBT: Actual In-Block Time
 
 Subsequently these emissions are aggregated by the following variables: 
   
@@ -51,7 +78,7 @@ For more information on the methodologies see the description under ['READ MORE'
 | MONTH           | Month in which the emissions occurred.                                     | `1` = January through `12` = December                                                          |
 | MARKET_SEGMENT  | Type of airline or operational market segment.                             | `business`, `cargo`, `lowcost`, `mainline`, `other`, `regional`                               |
 | FLIGHT_TYPE     | Indicates the spatial flight type relative to the area.                    | `A` = Arrival<br>`D` = Departure<br>`I` = Internal<br>`O` = Overflight                         |
-| FLIGHT_PHASE    | Segment of the flight in which emissions are calculated.                   | `cruise`, `descent`, `landing`, `take-off`, `taxi-in`, `taxi-out`                             |
+| FLIGHT_PHASE    | Segment of the flight in which emissions are calculated.                   | `cruise`, `descent`, `climb`, `taxi-in`, `taxi-out`                             |
 | NB_FLIGHTS      | Number of flights matching all above criteria.                             | e.g., `3428`, `444`                                                                            |
 | CO2_TONS        | Estimated CO₂ emissions (in metric tons) for these flights.                | e.g., `23112.0`, `2695.7`                                                                      |
 | NOX_KG          | Estimated nitrogen oxides (NOₓ) emissions in kilograms.                    | e.g., `69539.62`, `8766.93`                                                                    |
@@ -73,3 +100,4 @@ Use the **Gate-to-Gate Emissions** dataset when you need:
 [env]: https://www.eurocontrol.int/aviation-sustainability "EUROCONTROL Aviation Sustainability Unit"
 [FG_NZ]: https://flying-green.eurocontrol.int/#/net-zero "FlyingGreen NetZero"
 [FG_INFO]: https://www.eurocontrol.int/platform/flyinggreen "READ MORE for NetZero on FlyingGreen"
+[AOBT]: https://ansperformance.eu/acronym/aobt/ "Actual Off-Block Time"

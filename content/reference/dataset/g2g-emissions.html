@@ -21,13 +21,96 @@ slug: "g2g-emissions"
 <li><b>Trajectory (UNFCCC) methodology </b> with a State focus where the full trajectory of flight is considered; or</li>
 <li><b>Area focus</b> where the fuel burn and emissions are calculated only within the selected area and depending on the traffic selected (traffic type filer differentiating between departures, arrival and intra flights).</li>
 </ul>
-<p>The data in these data sets provided here represent the <b>Area focus</b> methodology. In upcoming releases the available data will be expanded. The gate-to-gate emissions provided here are calculated taking into account the individual trajectories (from gate-to-gate) of each flight and are modeled for all flight phases:</p>
+<p>The data in these data sets provided here represent the <b>Area focus</b> methodology. In upcoming releases the available data will be expanded. The gate-to-gate emissions provided here are calculated taking into account the individual trajectories (from gate-to-gate) of each flight and are modeled for all Flying Green flight phases:</p>
 <ul>
-<li>taxi-out</li>
-<li>take-off</li>
-<li>cruise</li>
-<li>landing</li>
-<li>taxi-in</li>
+<li>taxi-out: The aircraft moves from the gate to the runway, preparing for take-off.</li>
+<li>climb: The aircraft accelerates on the runway, lifts off and performs its ascent.</li>
+<li>cruise: The aircraft maintains a steady altitude and speed for the majority of the flight.</li>
+<li>descent: The aircraft descends, aligns with the runway, touches down, and slows to taxi speed.</li>
+<li>taxi-in: The aircraft moves from the runway to the gate or parking area after landing. </li>
+</ul>
+<p>In technical terms these Flying Green Flight Phases described above are subdivided in the following so called PRU Sub Phases which are used for the calculations of emissions within the trajectory.</p>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="14%" />
+<col width="28%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flying Green Flight Phase</th>
+<th>PRU Sub Phase</th>
+<th>Start</th>
+<th>End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Taxi-out</td>
+<td>Taxi-out</td>
+<td>AOBT</td>
+<td>ATOT - 42 sec (*)</td>
+</tr>
+<tr class="even">
+<td>Climb</td>
+<td>Take-off</td>
+<td>ATOT - 42 sec (*)</td>
+<td>ATOT</td>
+</tr>
+<tr class="odd">
+<td>Climb</td>
+<td>Climb-Out</td>
+<td>ATOT</td>
+<td>First crossing of 3000 ft AGL</td>
+</tr>
+<tr class="even">
+<td>Climb</td>
+<td>Climb</td>
+<td>First crossing of 3000 ft AGL</td>
+<td>Top of Climb</td>
+</tr>
+<tr class="odd">
+<td>Cruise</td>
+<td>Cruise</td>
+<td>Top of Climb</td>
+<td>Top of Descent</td>
+</tr>
+<tr class="even">
+<td>Descent</td>
+<td>Descent</td>
+<td>Top of Descent</td>
+<td>Last crossing of 3000 ft AGL</td>
+</tr>
+<tr class="odd">
+<td>Descent</td>
+<td>Approach</td>
+<td>Last crossing of 3000 ft AGL</td>
+<td>ALDT</td>
+</tr>
+<tr class="even">
+<td>Descent</td>
+<td>Landing</td>
+<td>ALDT</td>
+<td>ALDT + 40 sec (*)</td>
+</tr>
+<tr class="odd">
+<td>Taxi-in</td>
+<td>Taxi-in</td>
+<td>ALDT + 40 sec (*)</td>
+<td>AIBT</td>
+</tr>
+</tbody>
+</table>
+<p>Note(s):</p>
+<p>(*): The take-off roll duration is defined to be standard 42 seconds and landing roll duration 40 seconds by the Reference Landing and Take-off (LTO) cycle. See <a href="https://data.europa.eu/doi/10.2822/385503">https://data.europa.eu/doi/10.2822/385503</a>.</p>
+<p>Abbreviation(s):</p>
+<ul>
+<li>AOBT: Actual Off-Block Time</li>
+<li>ATOT: Actual Take-Off Time</li>
+<li>AGL: Above Ground Level</li>
+<li>ALDT: Actual Landing Time</li>
+<li>AIBT: Actual In-Block Time</li>
 </ul>
 <p>Subsequently these emissions are aggregated by the following variables:</p>
 <ul>
@@ -92,7 +175,7 @@ slug: "g2g-emissions"
 <tr class="even">
 <td>FLIGHT_PHASE</td>
 <td>Segment of the flight in which emissions are calculated.</td>
-<td><code>cruise</code>, <code>descent</code>, <code>landing</code>, <code>take-off</code>, <code>taxi-in</code>, <code>taxi-out</code></td>
+<td><code>cruise</code>, <code>descent</code>, <code>climb</code>, <code>taxi-in</code>, <code>taxi-out</code></td>
 </tr>
 <tr class="odd">
 <td>NB_FLIGHTS</td>
