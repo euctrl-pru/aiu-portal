@@ -1,6 +1,7 @@
 ---
-title: "PRC Data Challenge"
+title: "PRC Data Challenges"
 type: bibliography
+date: "2025-09-01"
 ---
 
 The [Performance Review Commission (PRC)](/about/prc) Data Challenge aims at engaging with
