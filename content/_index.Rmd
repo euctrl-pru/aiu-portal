@@ -337,15 +337,15 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-54-average-flight-eurocontrol-area-and-new-aviation-trends" target="_blank">
-<img src="/images/landing/2025-07-31_DS54_average_flight.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="the average flight in the EUROCONTROL area">
+<a href="https://www.eurocontrol.int/publication/special-flashbriefing" target="_blank">
+<img src="/images/landing/2025-09-05_Special_Flash_Briefing.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="summer flash briefing 2025">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-54-average-flight-eurocontrol-area-and-new-aviation-trends" target="_blank">Data Snapshot #54 on the average flight in the EUROCONTROL area and new aviation trends</a></h5>
-<small>Last year’s data snapshot #46 provided insights into the average flight in the EUROCONTROL area. With the addition of 2024 data, what new aviation trends can we uncover?</small>
+<h5><a href="https://www.eurocontrol.int/publication/special-flashbriefing" target="_blank">Overview of the performance of the European aviation network in Summer 2025 (June-August)</a></h5>
+<small>The European aviation network demonstrated improved performance over the period June-August 2025 compared to the previous summer, with year-on-year traffic growth of 3%, and a reduction in en-route delays of 34%. </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-54-average-flight-eurocontrol-area-and-new-aviation-trends" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/special-flashbriefing" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
