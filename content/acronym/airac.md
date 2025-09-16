@@ -21,4 +21,4 @@ SIDs and STARs amendments, runway and taxiway information changes.
 
 ## See Also
 
-* {{< a_blank_icao "AIRAC" "https://www.icao.int/airnavigation/information-management/Pages/AIRAC.aspx" >}}
+* {{< a_blank_icao "AIRAC" "https://www2023.icao.int/airnavigation/information-management/Pages/AIRAC.aspx" >}}

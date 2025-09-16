@@ -1,6 +1,7 @@
 ---
-title: "PRC Data Challenge"
+title: "PRC Data Challenges"
 type: bibliography
+date: "2025-09-01"
 ---
 
 The [Performance Review Commission (PRC)](/about/prc) Data Challenge aims at engaging with
@@ -17,6 +18,22 @@ distribution and reproducibility.
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
+  img="prc_dc25.jpeg",
+  link="dc2025/",
+  title="PRC Data Challenge 2025<br>(coming soon)",
+  text="surprise, surprise", 
+  alt="PRC Data Challenge 2025", 
+  command="Resize", 
+  options="300x", 
+  class="mb-2"
+  )
+```
+
+
+
+```{r echo=FALSE}
+blogdown::shortcode(
+  "bootstrap-card-alt",
   img="prc_dc24.jpeg",
   link="dc2024/",
   title="PRC Data Challenge 2024",
@@ -28,19 +45,6 @@ blogdown::shortcode(
   )
 ```
 
-```{r echo=FALSE}
-blogdown::shortcode(
-  "bootstrap-card-alt",
-  img="prc_dc25.jpeg",
-  link="dc2025/",
-  title="PRC Data Challenge 2025<br>(coming soon)",
-  text="surprise, surprise", 
-  alt="PRC Data Challenge 2025", 
-  command="Resize", 
-  options="300x", 
-  class="mb-2"
-  )
-```
 
 
 :::::

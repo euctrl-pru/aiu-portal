@@ -574,6 +574,8 @@ ignoreFiles = [
   sitetosearch = "ansperformance.eu OR site:www.eurocontrol.int/prudata/dashboard/ OR site:www.eurocontrol.int/ACE/ OR site:www.eurocontrol.int/ServiceUnits/Dashboard/ OR site:www.eurocontrol.int/Economics/"
   privacyURL = "https://www.eurocontrol.int/info/privacy-and-website-terms-use"
   MathJaxCDN = "https://cdn.jsdelivr.net/npm/mathjax@2"
+  ace_website = "https://ansperformance.eu/economics/ace-overview/"
+  ansp_factsheet_website = "https://ansperformance.eu/economics/ace/ansp-institutional/"
 
   [params.logo]
     url = "images/header/EUROCONTROL-logo-standard-rgb.svg"
