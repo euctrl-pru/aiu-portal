@@ -35,7 +35,7 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 
 <div class="card">
  <a href="/about/prc_PI"><img class="card-img-top" src="/images/prc/prc_PI_2025.jpg" alt="Dr Piotr IKANOWICZ">
-  <div class="card-body"><h5 class="card-title">Dr Piotr IKANOWICZ</h5></a><p class="card-text">PRC Vice Chairman</p><p class="card-text" style="color:grey">Focus: Airlines</p>
+  <div class="card-body"><h5 class="card-title">Dr Piotr IKANOWICZ</h5></a><p class="card-text">PRC Chairman</p><p class="card-text" style="color:grey">Focus: Airlines</p>
   </div></div>
 
 <div class="card">
@@ -64,12 +64,12 @@ The PRC consists of up to seven members, who are appointed on the basis of indep
 
   <div class="card">
   <a href="/about/prc_KM"><img class="card-img-top" src="/images/prc/prc_KM_2025.jpg" alt="Dr. Klaus MEIER ">
-  <div class="card-body"><h5 class="card-title">Dr Klaus MEIER </h5></a><p class="card-text" style="color:grey">Focus: ATC/OPS</p><br>
+  <div class="card-body"><h5 class="card-title">Dr Klaus MEIER </h5></a><p class="card-text">PRC Vice Chairman</p><p class="card-text" style="color:grey">Focus: ATC/OPS</p><br>
   </div></div>
 
 <div class="card">
   <a href="/about/prc_CL"><img class="card-img-top" src="/images/prc/prc_CL_2025.jpg" alt="Claudio LUCCIOLI ">
-  <div class="card-body"><h5 class="card-title">Claudio LUCCIOLI </h5></a><p class="card-text">PRC Chairman</p><p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
+  <div class="card-body"><h5 class="card-title">Claudio LUCCIOLI </h5></a><p class="card-text" style="color:grey">Focus: Safety / Civil-Military Coordination</p>
   </div></div>
 
 <div class="card">
