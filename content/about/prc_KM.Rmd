@@ -1,0 +1,14 @@
+---
+layout: default
+title: Dr. Klaus MEIER
+permalink: /about/prc/prc_KM
+---
+
+<br>
+**Dr. Klaus Meier** joined the PRC in 2025 as the focal point for ATC/OPS.
+
+Klaus is currently the CEO Delegate for Single European Sky at Skyguide. From 2014 until 2025 he was the CTO of Skyguide. Klaus was the main driver behind Skyguide’s Virtual Center program where, besides providing a safe and reliable air-traffic-management system, he was transforming Skyguide’s classic monolithic ATC systems into a flexible, open and modern ATM system based on the New Service Delivery Model. 
+ 
+He started his professional career as an engineer and owner of a technology company developing innovative microwave measurement systems for the nascent mobile telecommunication industry. During the deregulation of the European airline industry he was with Swissair Group driving business development based on new technologies. After Swissair he was part of Schindler’s ambitious globalization and harmonization program as the CIO for North and South America.
+ 
+Klaus is an electrical engineer by training, holds a Ph.D. from the Swiss Federal Institute of Technology and has an Executive Degree from MIT Sloan.
