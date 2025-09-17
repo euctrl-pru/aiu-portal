@@ -353,7 +353,7 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://ansperformance.eu/about/prc/prc_2025_group_picture" target="_blank">
+<a href="https://ansperformance.eu/about/prc" target="_blank">
 <img src="images/prc/prc_2025_group_picture.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Meet the new Performance Review Commission">
 </a>
 <div style="padding: 1rem;">
@@ -363,37 +363,6 @@ The new PRC contains experts in many fields of aviation, including, safety, envi
 </div>
 <div class="card-footer pt-0">
 <a href="https://ansperformance.eu/about/prc/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-monthly-briefing-july-2025" target="_blank">
-<img src="/images/landing/2025-08-07_July_Flash_Briefing.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Monthly Briefing - July 2025">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-monthly-briefing-july-2025" target="_blank">EUROCONTROL Monthly Briefing - July 2025</a></h5>
-<small>The European aviation network demonstrated improved performance in July 2025 with a growth in traffic of 3% compared to 2024, but en-route delay down by 31%. However, delays remained above target levels, causing ongoing disruption for passengers and airlines.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-monthly-briefing-july-2025" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information" target="_blank">
-<img src="/images/landing/2025-07-11_DS52_overflights.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS 52">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information" target="_blank">Data Snapshot #52 on understanding overflight patterns in FIRs</a></h5>
-<small>In 2024, the share of overflights in the EUROCONTROL area’s FIRs ranged from 13% in the Canary Islands to 96% in Bosnia and Herzegovina. This Data Snapshot examines the underlying factors contributing to this disparity.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -427,23 +396,6 @@ Version 4 of the EUROCONTROL Data app is now released giving you access to data 
 </div>
 </div>
 -->
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://ansperformance.eu/efficiency/emissions/" target="_blank">
-<img src="/images/landing/2025-07-14_g2g_emissions.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Gate-to-gate emissions now available">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/efficiency/emissions/" target="_blank">Gate-to-gate emissions now available!</a></h5>
-<small>Discover detailed, gate-to-gate CO₂, NOₓ, and SOₓ emissions data — developed in collaboration with the EUROCONTROL FlyingGreen Initiative — calculated using actual flight trajectories and the Advanced Emission Model (AEM). Filter by State, flight type, market segment, or flight phase to support in-depth environmental performance analysis from 2019 onwards</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://ansperformance.eu/efficiency/emissions/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
 
 
 

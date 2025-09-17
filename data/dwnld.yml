@@ -6,12 +6,12 @@ g2g_co_opt_end: Dec 2024 # UPDATE On demand - see with FG and Sam PEETERS / Quin
 # CO2 Emissions by State (Small Emitters Tool - ASU)
 ## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
-co_opt_end: Apr 2025 # UPDATE MONTH (M) - Delayed few days
+co_opt_end: Jul 2025 # UPDATE MONTH (M) - Delayed few days
 
 # Operations En-route
 ## En-route IFR flights and ATFM delays (AUA) - No post ops adj.
 ert_dly_aua_beg: Jan 2011
-ert_dly_aua_end: August 2025 # UPDATE MONTHLY (M) 
+ert_dly_aua_end: Aug 2025 # UPDATE MONTHLY (M) 
 
 ## En-route IFR flights and ATFM delays (AUA) - With post ops adj.
 ert_dly_aua_post_beg: Jan 2016
@@ -19,7 +19,7 @@ ert_dly_aua_post_end: Dec 2024
 
 ## En-route IFR flights and ATFM delays (FIR) - No post ops adj.
 ert_dly_fir_beg: Jan 2013
-ert_dly_fir_end: August 2025 # UPDATE MONTHLY (M)
+ert_dly_fir_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## En-route IFR flights and ATFM delays (FIR) - With post ops adj.
 ert_dly_fir_post_beg: Jan 2016
@@ -27,16 +27,16 @@ ert_dly_fir_post_end: Dec 2024
 
 ## Horizontal en-route flight efficiency
 hfe_beg: Jan 2014
-hfe_end: August 2025 # UPDATE MONTHLY (M)
+hfe_end: Aug 2025 # UPDATE MONTHLY (M)
 
 # Operations at Airports
 ## Airport traffic (Daily IFR arrs & deps by apt)
 apt_flt_beg: Jan 2016
-apt_flt_end: August 2025 # UPDATE MONTHLY (M)
+apt_flt_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - No post ops adj.
 apt_dly_beg: Jan 2019
-apt_dly_end: August 2025 # UPDATE MONTHLY (M)
+apt_dly_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - With post ops adj.
 apt_dly_post_beg: Jan 2016
@@ -44,19 +44,19 @@ apt_dly_post_end: Dec 2024
 
 ## ASMA additional time
 asma_beg: Jan 2018
-asma_end: July 2025 # UPDATE MONTHLY (M-1) - One month delay
+asma_end: Jul 2025 # UPDATE MONTHLY (M-1) - One month delay
 
 ## VFE - Continuous climb and descent operations
 cdo_beg: Jan 2015
-cdo_end: August 2025 # UPDATE MONTHLY (M)
+cdo_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## Taxi-out additional time
 tx_out_beg: Jan 2018 
-tx_out_end: July 2025 # UPDATE MONTHLY (M-1) - One month delay
+tx_out_end: Jul 2025 # UPDATE MONTHLY (M-1) - One month delay
 
 ## Taxi-in additional time
 tx_in_beg: Jan 2018 
-tx_in_end: July 2025 # UPDATE MONTHLY (M-1) - One month delay
+tx_in_end: Jul 2025 # UPDATE MONTHLY (M-1) - One month delay
 
 ## Taxi-time planning values
 tx_std_beg: S 2014
@@ -64,15 +64,15 @@ tx_std_end: S 2022
 
 # ATC pre-departure delays
 atc_pre_beg: Jan 2016
-atc_pre_end: July 2025 # UPDATE MONTHLY (M-1) - One month delay
+atc_pre_end: Jul 2025 # UPDATE MONTHLY (M-1) - One month delay
 
 ## Total pre-departure delays
 all_pre_beg: Jan 2020
-all_pre_end: July 2025 # UPDATE MONTHLY (M-1) - One month delay
+all_pre_end: Jul 2025 # UPDATE MONTHLY (M-1) - One month delay
 
 ## ATFM slot adherence
 slt_adh_beg: Jan 2019
-slt_adh_end: August 2025 # UPDATE MONTHLY (M)
+slt_adh_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## ASMA additional time - Old methodology
 asma_o_beg: Jan 2014
@@ -94,7 +94,7 @@ cplx_end_bada_3_13_1: Dec 2019
 # Economics
 ## ACE operational data - Monthly
 ace_opt_beg: Jan 2019
-ace_opt_end: July 2025 # UPDATE MONTHLY (M)
+ace_opt_end: Aug 2025 # UPDATE MONTHLY (M)
 
 ## ACE operational data - Yearly 
 ace_year_end: 2023
@@ -106,4 +106,4 @@ ansp_fin_end: 2023 (partial)
 # Open Performance Data Initiative (OPDI) 
 ## Flight list / Event / Measurement data
 opdi_beg: Jan 2022
-opdi_end: June 2025 # UPDATE MONTHLY (M) - Confirm with QG
+opdi_end: Jun 2025 # UPDATE MONTHLY (M) - Confirm with QG
