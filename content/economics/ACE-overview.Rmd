@@ -267,6 +267,13 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 <!--   </div> -->
 <!-- </div> -->
 
+
+<div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2024-data" target="_blank">
+  <img class="card-img-top" src="/images/eco/first-look2024.png" alt="ACE - First look at ANSPs’ 2024 data">
+  <div class="card-body"><h5 class="card-title">ACE - First look at ANSPs’ 2024 data</h5></a><p class="card-text"></p>
+  </div>
+</div>
+
 <div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
   <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (May 2025 edition)</h5></a><p class="card-text"></p>
@@ -282,11 +289,11 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 </div>
 
 
-<div class="card" ><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank">
-  <img class="card-img-top" src="/images/eco/pi10.png" alt="PI10 ANSPs regulatory, institutional and corporate governance">
-  <div class="card-body"><h5 class="card-title">PRC Performance Insight #10 - A review of ANSPs regulatory, institutional and corporate governance arrangements</h5></a><p class="card-text"></p>
-  </div>
-</div>
+<!-- <div class="card" ><a href="https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness" target="_blank"> -->
+<!--   <img class="card-img-top" src="/images/eco/pi10.png" alt="PI10 ANSPs regulatory, institutional and corporate governance"> -->
+<!--   <div class="card-body"><h5 class="card-title">PRC Performance Insight #10 - A review of ANSPs regulatory, institutional and corporate governance arrangements</h5></a><p class="card-text"></p> -->
+<!--   </div> -->
+<!-- </div> -->
 
 <div class="card"><a href="https://www.eurocontrol.int/publication/eurocontrol-specification-economic-information-disclosure" target="_blank">
   <img class="card-img-top" src="/images/prc/ace_seid_3.0.jpg" alt="Specification for economic information disclosure">
