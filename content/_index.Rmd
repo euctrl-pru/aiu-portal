@@ -337,15 +337,17 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/special-flashbriefing" target="_blank">
-<img src="/images/landing/2025-09-05_Special_Flash_Briefing.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="summer flash briefing 2025">
+<a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" target="_blank">
+<img src="/images/landing/2025-10-06_AT10_summer_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="AT10 Overview of 
+Summer 2025 performance">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/special-flashbriefing" target="_blank">Overview of the performance of the European aviation network in Summer 2025 (June-August)</a></h5>
-<small>The European aviation network demonstrated improved performance over the period June-August 2025 compared to the previous summer, with year-on-year traffic growth of 3%, and a reduction in en-route delays of 34%. </small>
+<h5><a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" target="_blank">Overview of European air traffic during 
+Summer 2025 (1 June-15 September)</a></h5>
+<small>The European aviation network demonstrated improved performance over the period 1 June-15 September 2025 compared to the previous summer, with year-on-year traffic growth of 3%, and a reduction in en-route delays of 31%. </small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/special-flashbriefing" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
