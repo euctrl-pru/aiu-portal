@@ -8,19 +8,35 @@ tags:  PRC Performance Insights
 
 ## 2025
 
-<!-- OBS#2 -->
+<!-- OBS#4 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Observer #4 - En route Capacity in Europe – how good was your summer? ][OBS4]</h5>
+<small><strong><p style="color:#808080">Published: 9 October 2025</p></strong></small>
+    
+The independent Performance Review Commission (PRC) takes a look at the Network performance in July and August 2025 and tracks how some of the most penalising area control centres of 2024 performed in summer 2025. <br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025"  target="_blank"><img src="/images/pi/prc_obs4.png" alt="En route Capacity in Europe – how good was your summer?" style="width:100%"></a></div>
+</div>
+</div></div>
+
+<!-- OBS#3 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
 <div class="col-sm-9">
 <h5>[PRC Observer #3 - En route Capacity in Europe – an insufficient level of service ][OBS3]</h5>
-<small><strong><p style="color:#808080">Published: 5 June 2024</p></strong></small>
+<small><strong><p style="color:#808080">Published: 5 June 2025</p></strong></small>
     
 The independent Performance Review Commission (PRC) examines the shortcomings of the European en-route capacity planning process in meeting airspace users’ expectations, and highlights the need for greater transparency to restore service quality and European network capacity performance. <br>
     
 <a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service" target="_blank" role="button">Learn more</a>
 </div>
 <div class="col-sm-3">
-<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service"  target="_blank"><img src="/images/pi/prc_obs3.png" alt="PRC Observer #2 - How was European air traffic capacity performance in Summer 2024? " style="width:100%"></a></div>
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service"  target="_blank"><img src="/images/pi/prc_obs3.png" alt="En route Capacity in Europe – an insufficient level of service" style="width:100%"></a></div>
 </div>
 </div></div>
 
@@ -244,3 +260,4 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 [OBS1]: https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green "PRC Observer #1 - How can we make aviation green?"
 [OBS2]: https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024 "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
 [OBS3]: https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service "PRC Observer #3 - En route Capacity in Europe – an insufficient level of service"
+[OBS4]: https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025 "PRC Observer #4 - En route Capacity in Europe – how good was your summer?"
