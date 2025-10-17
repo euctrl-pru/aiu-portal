@@ -48,7 +48,7 @@ date: '2020-05-15'
 }
 </style>
 
-The figure below presents the EUROCONTROL 7-year forecast (2025-2031) for air traffic movements (IFR) in millions of flights (Spring Edition 2025). This Seven-Year Forecast builds upon the Autumn 2024 publication and incorporates the latest flight trends, including a comprehensive update of the forecast inputs. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2024 and different forecast scenarios (high, base, low) up to 2031. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
+The figure below presents the EUROCONTROL 7-year forecast (2025-2031) for air traffic movements (IFR) in millions of flights. This Seven-Year Forecast (Autumn 2025) builds on the February 2025 publication and integrates the most recent flight trends and route patterns, including data from Summer 2025. It also includes a partial update of forecast inputs, such as the GDP forecast and low-cost market shares. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2024 and different forecast scenarios (high, base, low) up to 2031. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Loading packages and data -->
 ```{r, echo=FALSE,warning = FALSE,message=FALSE}
@@ -300,7 +300,7 @@ plot
 
 <br>
 
-For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2025-2031 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031).
+For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2025-2031 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031).
 
 Note: The traffic zone 'Spain' is the aggregated zone composed of 'Spain-Canaries' and 'Spain-Continental'.
 
