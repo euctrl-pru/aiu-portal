@@ -14,6 +14,22 @@ extrajs: /javascript/img_pre.js
 
 
 ## 2025
+<!-- #55 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[Highest-ever daily movements across the European aviation network, by country - EUROCONTROL Data Snapshot #55][DS55]</h5>
+<small><strong><p style="color:#808080">Published: 28 October 2025</p></strong></small>
+The 55. EUROCONTROL Data Snapshot analyses the highest-ever daily movements across the European aviation network, by country.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-55-highest-ever-daily-movements-across-european-aviation target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds55.png" alt="the average flight in the EUROCONTROL area"></div>
+</div>
+</div></div>
+
 <!-- #54 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -1034,3 +1050,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS52]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-52-understanding-overflight-patterns-firs-flight-information "understanding overflight patterns in FIRs"
 [DS53]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-53-charting-growth-market-share-new-generation-narrow-and "growth in market share of a new generation of narrow- and wide-body aircraft"
 [DS54]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-54-average-flight-eurocontrol-area-and-new-aviation-trends "the average flight in the EUROCONTROL area"
+[DS55]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-55-highest-ever-daily-movements-across-european-aviation "highest-ever daily movements across the European aviation network, by country"
