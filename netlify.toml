@@ -212,3 +212,9 @@ command = "hugo --gc --minify"
   to = "/methodology/atfm-delay-calculation/"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/methodology/cd_vertical_flight_efficiency_pi.html"
+  to = "/methodology/cd-vertical-flight-efficiency-pi.html"
+  status = 200
+  force = true
