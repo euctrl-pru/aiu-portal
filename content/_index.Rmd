@@ -336,6 +336,22 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" target="_blank">
+<img src="/images/landing/2025-11-17_DS56_weekday_flight_patterns.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" target="_blank">Data Snapshot #56 on shifting weekday flight patterns</a></h5>
+<small>An analysis of the average number of flights by day of the week reveals that Europe’s air traffic patterns have undergone a notable structural shift over the past two decades: the gap between average daily flights on weekdays and on weekends has narrowed notably over time.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-55-highest-ever-daily-movements-across-european-aviation" target="_blank">
 <img src="/images/landing/2025-10-24_DS55_max_daily_flights.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
 </a>
@@ -357,7 +373,7 @@ fullpage: true
 <img src="/images/landing/2025-10-17_MT_forecast_update.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031" target="_blank">October 2025 STATFOR Forecast just published!</a></h5>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031" target="_blank">October 2025 STATFOR Forecast published!</a></h5>
 <small>This Seven-Year Forecast (Autumn 2025) builds on the February 2025 publication and integrates the most recent flight trends and route patterns, including data from Summer 2025. It also includes a partial update of forecast inputs, such as the GDP forecast and low-cost market shares.</small>
 </div>
 <div class="card-footer pt-0">
@@ -367,20 +383,6 @@ fullpage: true
 </div>
 
 
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025" target="_blank">
-<img src="/images/landing/2025-10-09_prc-obs-4.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025" target="_blank">PRC Observer #4 – En route Capacity in Europe – how good was your summer?</a></h5>
-<small>The independent Performance Review Commission (PRC) takes a look at the Network performance in July and August 2025 and tracks how some of the most penalising area control centres of 2024 performed in summer 2025. </small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
@@ -389,7 +391,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://ansperformance.eu/study/data-challenge/dc2025/" target="_blank">PRC Data Challenge 2025</a></h5>
-<small>The PRC Data Challenge is back for 2025 after last year’s hugely successful edition! This year, the challenge invites you to build Machine Learning models to predict fuel burn at different stages of flight, using open aviation data. Compete until Nov 30, 2025 and win awards worth 5,000 EUR!</small>
+<small>The PRC Data Challenge 2025 is still running but the deadline is fast approaching! This year's challenge invites you to build Machine Learning models to predict fuel burn at different stages of flight, using open aviation data. Compete until Nov 30, 2025 and win awards worth 5,000 EUR!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://ansperformance.eu/study/data-challenge/dc2025/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
@@ -397,51 +399,21 @@ fullpage: true
 </div>
 </div>
 
+
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" target="_blank">
-<img src="/images/landing/2025-10-06_AT10_summer_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="AT10 Overview of 
-Summer 2025 performance">
+<a href="https://ansperformance.eu/efficiency/vfe/" target="_blank">
+<img src="/images/landing/cco_vertical_flight_efficiency.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge 2025">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" target="_blank">Overview of European air traffic during 
-Summer 2025 (1 June-15 September)</a></h5>
-<small>The European aviation network demonstrated improved performance over the period 1 June-15 September 2025 compared to the previous summer, with year-on-year traffic growth of 3%, and a reduction in en-route delays of 31%. </small>
+<h5><a href="https://ansperformance.eu/efficiency/vfe/" target="_blank">Continuous climb operations (CCO) view added to the Vertical flight efficiency dashboard</a></h5>
+<small>A continuous climb operations (CCO) view has just been added to the Vertical flight efficiency dashboard.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/efficiency/vfe/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
-<img src="/images/landing/2025-10_app_v5.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL DATA app v5">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank"> Released: EUROCONTROL Data App v5</a></h5>
-The fifth version of the EUROCONTROL Data app has just been released, giving you access to ANSP data and much more!
-</small>
-</div>
-
-<div class="card-footer pt-0 text-center">
-<div style="display: flex; justify-content: center;">
-
-<a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
-              <img src="/images/footer/app-store-apple-image.svg" width="80%" height="96%" alt="Apple app"style="display: inline-block;">
-              </a>
-
-<a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&hl=en&pli=1" class="app-store_storeLink__qmfBy" target="_blank">
-              <img src="/images/footer/app-store-google-image.svg"  width="80%" height="100%" alt="Google app" style="display: inline-block;">
-            </a> 
-</div>
-</div>
-</div>
-</div>
--->
-
 
 
 
@@ -453,7 +425,7 @@ The fifth version of the EUROCONTROL Data app has just been released, giving you
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>September 2025 data available for download now!</small>
+<small>October 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
