@@ -336,6 +336,22 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" target="_blank">
+<img src="/images/landing/2025-11-17_DS56_weekday_flight_patterns.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" target="_blank">Data Snapshot #56 on shifting weekday flight patterns</a></h5>
+<small>An analysis of the average number of flights by day of the week reveals that Europe’s air traffic patterns have undergone a notable structural shift over the past two decades: the gap between average daily flights on weekdays and on weekends has narrowed notably over time.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-55-highest-ever-daily-movements-across-european-aviation" target="_blank">
 <img src="/images/landing/2025-10-24_DS55_max_daily_flights.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
 </a>
@@ -357,7 +373,7 @@ fullpage: true
 <img src="/images/landing/2025-10-17_MT_forecast_update.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Observer #4">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031" target="_blank">October 2025 STATFOR Forecast just published!</a></h5>
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031" target="_blank">October 2025 STATFOR Forecast published!</a></h5>
 <small>This Seven-Year Forecast (Autumn 2025) builds on the February 2025 publication and integrates the most recent flight trends and route patterns, including data from Summer 2025. It also includes a partial update of forecast inputs, such as the GDP forecast and low-cost market shares.</small>
 </div>
 <div class="card-footer pt-0">
@@ -387,10 +403,10 @@ fullpage: true
 <div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://ansperformance.eu/efficiency/vfe/" target="_blank">
-<img src="/images/landing/2025-10-17_MT_forecast_update.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge 2025">
+<img src="/images/landing/cco_vertical_flight_efficiency.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge 2025">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031" target="_blank">Continuous climb operations (CCO) view added to the Vertical flight efficiency dashboard</a></h5>
+<h5><a href="https://ansperformance.eu/efficiency/vfe/" target="_blank">Continuous climb operations (CCO) view added to the Vertical flight efficiency dashboard</a></h5>
 <small>A continuous climb operations (CCO) view has just been added to the Vertical flight efficiency dashboard.</small>
 </div>
 <div class="card-footer pt-0">
@@ -409,7 +425,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>September 2025 data available for download now!</small>
+<small>October 2025 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
