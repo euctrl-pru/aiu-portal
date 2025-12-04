@@ -210,7 +210,7 @@ In fact they use different BADA versions and hence different aircraft characteri
 
 ## <img id="opdi" src="/images/prcq_opdi.png" width="50" height="50" alt="Open Data"> Open Data
 
-#### [Open Performance Data Initiative](https://opdi.aero)
+#### Open Performance Data Initiative
 
 | Data Description                                                  | Period         | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}}                      | Info                          |
 |-------------------------------------------------------------------|----------------|-----------------|---------------|----------------------------------------|-------------------------------|
@@ -226,16 +226,16 @@ In fact they use different BADA versions and hence different aircraft characteri
 [flighteventurl]: https://www.opdi.aero/data
 [measurementurl]: https://www.opdi.aero/data
 
-#### [Aviation Data Repository for Research (ADRR)](https://www.eurocontrol.int/dashboard/aviation-data-research)
+#### Aviation Data Repository for Research (ADRR)
 
 | Data description | Period / Coverage | Info |
 |------------------|------------------|------|
-| **Detailed flight information** | 2015–2023 (ongoing) <br> +4 months of flight data added yearly | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| **Planned and actual 4D flight trajectories** 25M flights as of October 2025 | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| **Airspace structure** | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| **Route network information** | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| **Sample dataset** | Published April 2025 | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| **Repository guide / documentation** | Updated April 2025 | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
+| Detailed flight information | 2015–Now (ongoing)| [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Planned and actual 4D flight trajectories | +25M flights | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Airspace structure | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Route network information | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Sample dataset | Published April 2025 | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Repository guide / documentation | / | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
 
 {{< excel_i >}} = Excel file.<br>
 {{< csv_i >}} = CSV file.<br>
