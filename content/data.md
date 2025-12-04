@@ -228,7 +228,7 @@ In fact they use different BADA versions and hence different aircraft characteri
 
 #### Aviation Data Repository for Research (ADRR)
 
-| Data description | Period / Coverage | Info |
+| Data description | Period | Info |
 |------------------|------------------|------|
 | Detailed flight information | 2015–Now (ongoing)| [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
 | Planned and actual 4D flight trajectories | +25M flights | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
