@@ -235,7 +235,7 @@ In fact they use different BADA versions and hence different aircraft characteri
 | Airspace structure | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
 | Route network information | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
 | Sample dataset | Published April 2025 | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| Repository guide / documentation | / | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
+| Repository guide / documentation | NA | NA | NA | / | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
 
 {{< excel_i >}} = Excel file.<br>
 {{< csv_i >}} = CSV file.<br>
