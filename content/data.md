@@ -228,13 +228,13 @@ In fact they use different BADA versions and hence different aircraft characteri
 
 #### Aviation Data Repository for Research (ADRR)
 
-| Data description | Period | Info |
-|------------------|------------------|------|
-| Detailed flight information | 2015–Now (ongoing)| [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| Planned and actual 4D flight trajectories | +25M flights | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| Airspace structure | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| Route network information | Matched to each data period | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
-| Sample dataset | Published April 2025 | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Data Description                                                  | Period         | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}}                      | Info                          |
+|-------------------------------------------------------------------|----------------|-----------------|---------------|----------------------------------------|-------------------------------|
+| Detailed flight information | 2015–Now (ongoing)| NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Planned and actual 4D flight trajectories | +25M flights | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Airspace structure | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Route network information | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Sample dataset | Published April 2025 | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
 | Repository guide / documentation | / | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
 
 {{< excel_i >}} = Excel file.<br>
