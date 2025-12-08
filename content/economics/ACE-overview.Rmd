@@ -89,8 +89,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### Latest ACE benchmarking report (May 2025 edition)
-This report analyses ANSPs’ cost-effectiveness performance in a context marked by the traffic recovery following the shock caused by the COVID-19 pandemic. Compared to the previous years, it provides a more detailed analysis of economic cost-effectiveness, which deteriorated in 2023 for several ANSPs. 
+#### High-level summary report on preliminary ACE 2024 data (December 2025)
+This report is based on the 2024 data submitted by ANSPs in July 2025. It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
 
 <div class="row">
 <div class="col-md-6" >
@@ -137,17 +137,17 @@ plot_ACE
 <br>
 <div class="container" >
 
-*	Traffic (measured in composite flight-hours) rose by +11.1% in 2023 but remained -3.7% lower than in 2019. At ANSP level, a wide range of different trends is observed (from -43% to +63%). The war in Ukraine resulted in airspace closures and bans on air carriers which impacted traffic flows in Europe.
+*	ATM/CNS provision costs per composite flight-hour decreased by -1.4% in 2024, remaining slightly below their pre-crisis level. This improvement reflects the fact that traffic rose faster (+5.5%) than ATM/CNS provision costs (+4.0%), with both metrics exceeding 2019 levels for the first time since the COVID-19 crisis.
 
-*	ATFM delays in 2023 reached historical high levels, equivalent to those observed in 2018 and 2019 when several ANSPs experienced significant capacity issues. As a result, excluding the years affected by the COVID crisis, unit economic costs in 2023 (€607 per composite flight-hour) were the highest recorded in the last decade.
+*	The increase in ATM/CNS provision costs (+€405M) was mainly driven by higher staff costs (+€271M), non-staff operating costs (+€90M) and depreciation costs (+€88M), while the cost of capital declined (-€74M). This reflects a general trend, as costs rose for 33 out 38 ANSPs in 2024.
 
-*	Total ATM/CNS provision costs rose by +2.9% (+€270.1M) in 2023, reflecting cost increases for 27 out of 38 ANSPs. The main cost categories driving this increase were staff costs (+5.1% or +€312.1M) and non-staff operating costs (+6.3% or +€98.5M).
+*	ATM/CNS staff numbers grew by +2.8% (+1 478 FTEs) compared to 2023, surpassing the 2019 level by +2.0%. Both ATCOs in OPS and support staff were +2.0% higher than in 2019.
 
-*	Despite these increases, ANSPs’ cost-bases were still -€361.0M (-3.6%) lower than in 2019 owing to the significant cost-savings achieved by ANSPs at system level in 2020 and 2021.
+*	ANSP balance sheets in 2024 comprised some €10.3 billion in capital and reserves and €5.5 billion in borrowings, while capital expenditure reached €1.5 billion. Capital and reserves increased by +8% (+€0.8 billion), while the level of indebtedness continued to decline, falling by -10% (-€0.6 billion).
 
-*	In 2023, the number of ATM/CNS staff was slightly higher than in 2022 (+1.1% or +550 FTEs), mainly because of increases in the number of ATCOs in OPS (+168 FTEs), OPS support staff (+120FTEs) and technical support staff for operational maintenance (+99 FTEs).
+*	However, improvements in terms of ATM/CNS provision cost-effectiveness were offset by a deterioration in service quality, measured by gate-to-gate ATFM delays.
 
-*	Although the level of debt fell by -10.9% in 2023, short and long-term borrowings still represented 2.5 times the amount recorded in 2019.
+*	Indeed, gate-to-gate ATFM delays in 2024 reached 29.6 million minutes, resulting in an estimated cost of €3.9 billion on airspace users, the highest level ever recorded. This figure represents more than one-third of ATM/CNS provision costs and surpasses total ATCO in OPS employment costs at the Pan-European system level (€3.5 billion).
 
 </div>
 
