@@ -34,10 +34,6 @@ The economics dashboards page provides an overview of the economic aspects of pa
 First insight on the level of 2024 cost-effectiveness performance both for the Pan-European system and for individual ANSPs before the official release of the next ACE benchmarking report.</p></small></div></div></div>
 
 
-<!-- <div class="carousel-item active"><div class="card bg-light border-0"><a href="/economics/ace-overview/"><img class="card-img-top" src="/images/eco/ace2025_sm_thmb.png" alt=""><div class="card-body"><h5 class="card-title">ACE Report Edition 2025 released! </h5></a><small><p class="card-text"> -->
-<!-- Have a look at the main economic trends of cost-effectiveness performance both for the pan-European ATM system and individual ANSPs.</p></small></div></div></div> -->
-
-
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/economics/finance/"><img class="card-img-top" src="/images/eco/fin_db_2022_thmb.png" alt=""><div class="card-body"><h5 class="card-title">ANSPs Financial Dashboard</h5></a><small><p class="card-text">
 The 2023 financial data for ANSPs are now available in our financial dashboard.</p></small></div></div></div>
 
@@ -45,6 +41,9 @@ The 2023 financial data for ANSPs are now available in our financial dashboard.<
 <div class="carousel-item"><div class="card bg-light border-0"><a href="/economics/cba/"><img class="card-img-top" src="/images/eco/stand-inputs_thmb.png" alt=""><div class="card-body"><h5 class="card-title">Inputs for Economic Analysis - Edition 10 released!</h5></a><small><p class="card-text">
 Check out EUROCONTROL's latest Standard Inputs for Economic Analyses!</p></small></div></div></div>
 
+
+<div class="carousel-item"><div class="card bg-light border-0"><a href="/economics/ace-overview/"><img class="card-img-top" src="/images/eco/ace2025_sm_thmb.png" alt=""><div class="card-body"><h5 class="card-title">ACE Report Edition 2025 released! </h5></a><small><p class="card-text">
+Have a look at the main economic trends of cost-effectiveness performance both for the pan-European ATM system and individual ANSPs.</p></small></div></div></div>
 
 
 </div>

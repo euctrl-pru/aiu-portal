@@ -275,11 +275,11 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 </div>
 
 
-<div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2024-data" target="_blank">
-  <img class="card-img-top" src="/images/eco/first-look2024.png" alt="ACE - First look at ANSPs’ 2024 data">
-  <div class="card-body"><h5 class="card-title">ACE - First look at ANSPs’ 2024 data</h5></a><p class="card-text"></p>
-  </div>
-</div>
+<!-- <div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2024-data" target="_blank"> -->
+<!--   <img class="card-img-top" src="/images/eco/first-look2024.png" alt="ACE - First look at ANSPs’ 2024 data"> -->
+<!--   <div class="card-body"><h5 class="card-title">ACE - First look at ANSPs’ 2024 data</h5></a><p class="card-text"></p> -->
+<!--   </div> -->
+<!-- </div> -->
 
 <div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
   <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
