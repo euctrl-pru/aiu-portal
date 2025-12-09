@@ -89,8 +89,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### High-level summary report on preliminary ACE 2024 data (December 2025)
-This report is based on the 2024 data submitted by ANSPs in July 2025. It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
+#### [High-level summary report on preliminary ACE 2024 data (December 2025)](https://ansperformance.eu/economics/ace/ace-hlsr/)
+This [report](https://ansperformance.eu/economics/ace/ace-hlsr/) is based on the 2024 data submitted by ANSPs in July 2025. It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
 
 <div class="row">
 <div class="col-md-6" >
@@ -155,7 +155,7 @@ plot_ACE
 <br>
 <div class="row align-items-start">
 <div class="col-md-6">
-#### ACE Report - Table of contents
+#### ACE Report - Table of contents 
 
 <div class="row align-items-start">
 <div class="col-sm-2">
