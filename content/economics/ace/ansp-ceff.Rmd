@@ -23,12 +23,12 @@ output: html_document
 
 <div class="container">
 
-<b>Draft ANSPs individual cost-effectiveness performance reports for review by the ACE Working Group</b><br>
+<b>Draft ANSPs individual cost-effectiveness performance reports for review by the ACE Working Group</b> (preliminary results, to be updated in May 2026)<br>
 <span style="color: red;"><b>Do not share this page outside of the ACE Working Group</b></span>
 
-This web page presents ANSPs individual reports (2-pager), which are updated each year after the publication of the final ACE report. The current version reflects the draft 2023 data submitted by ANSPs in July 2024. 
+This web page presents ANSPs individual reports (2-pager), which are updated each year after the publication of the final ACE report. The current version reflects the draft 2024 data submitted by ANSPs in July 2025.
 
-The reports show developments in economic cost-effectiveness, financial cost-effectiveness (and its main components) over a five-year period. They also presents how ANSPs perform within their respective comparator groups, the trends in capital expenditures, and the main projects driving these investments.
+The reports show developments in economic cost-effectiveness, financial cost-effectiveness (and its main components) over a five-year period. They also present how ANSPs perform within their respective comparator groups, the trends in capital expenditures, and the main projects driving these investments.
 
 <br>
 <br>
