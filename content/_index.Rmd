@@ -368,15 +368,16 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://ansperformance.eu/study/data-challenge/dc2025/" target="_blank">
+<a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" target="_blank">
 <img src="/images/landing/2025-10-06_prc_data_challenge_compete_date.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge 2025 Winners!">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/study/data-challenge/dc2025/" target="_blank">PRC Data Challenge 2025 Winners!</a></h5>
-<small>The PRC Data Challenge 2025 is still running but the deadline is fast approaching! This year's challenge invites you to build Machine Learning models to predict fuel burn at different stages of flight, using open aviation data. Compete until Nov 30, 2025 and win awards worth 5,000 EUR!</small>
+<h5><a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" target="_blank">PRC Data Challenge 2025 Winners!</a></h5>
+<small>Congratulations to the <b>resourceful-quiver</b> team, winners of the 2025 PRC Challenge! The <b>runners-up</b>, <b>jubilant-vase</b> and <b>outspoken-tornado</b>, also delivered great performances. With 53 teams submitting projects and 19 finalists, we would like to congratulate everyone who took part. Stay tuned for the 2026 Challenge!!
+</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/study/data-challenge/dc2025/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
