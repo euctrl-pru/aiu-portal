@@ -208,7 +208,9 @@ In fact they use different BADA versions and hence different aircraft characteri
 [anspfinurl]:  https://ansperformance.eu/economics/finance/guide/ "Financial Dashboard Guide"
 <br>
 
-## <img id="opdi" src="/images/prcq_opdi.png" width="50" height="50" alt="Open Performance Data Initiative"> Open Performance Data Initiative (OPDI)
+## <img id="opdi" src="/images/prcq_opdi.png" width="50" height="50" alt="Open Data"> Open Data
+
+#### Open Performance Data Initiative
 
 | Data Description                                                  | Period         | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}}                      | Info                          |
 |-------------------------------------------------------------------|----------------|-----------------|---------------|----------------------------------------|-------------------------------|
@@ -224,6 +226,16 @@ In fact they use different BADA versions and hence different aircraft characteri
 [flighteventurl]: https://www.opdi.aero/data
 [measurementurl]: https://www.opdi.aero/data
 
+#### Aviation Data Repository for Research (ADRR)
+
+| Data Description                                                  | Period         | {{< excel_i >}} | {{< csv_i >}} | {{< parquet_i >}}                      | Info                          |
+|-------------------------------------------------------------------|----------------|-----------------|---------------|----------------------------------------|-------------------------------|
+| Detailed flight information | 2015–Now (ongoing)| NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Planned and actual 4D flight trajectories | +25M flights | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Airspace structure | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Route network information | Matched to each data period | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Sample dataset | Published April 2025 | NA | NA | NA | [ADRR Docs](https://www.eurocontrol.int/dashboard/aviation-data-research) |
+| Repository guide / documentation | NA | NA | NA | / | [ADRR guide](https://www.eurocontrol.int/archive_download/all/node/12418) |
 
 {{< excel_i >}} = Excel file.<br>
 {{< csv_i >}} = CSV file.<br>

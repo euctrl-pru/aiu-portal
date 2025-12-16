@@ -82,6 +82,7 @@ plot_ACE <- ace_graph_data %>%
     yaxis = list(
       title = paste("\U20AC","per composite flight-hour"),
       titlefont   = list(size = 13),
+      range = list(0, 1200),
       fixedrange = TRUE,
       # tickformat=",.0%", ticks = 'outside',
       zeroline = T, showline = F, showgrid = T
@@ -91,7 +92,8 @@ plot_ACE <- ace_graph_data %>%
       side = "right",
       title = paste ("Index of costs and traffic", "<br>","(", min(ace_graph_data$year_data), " = 100)",sep = ""),
       titlefont = list(size = 13),
-      range = list(40, 10+round(max(ace_graph_data$index_costs, ace_graph_data$index_cph)/10)*10),
+      range = list(40, 160),
+      # range = list(40, 10+round(max(ace_graph_data$index_costs, ace_graph_data$index_cph)/10)*10),
       automargin = T,
       showgrid = F
     ),
