@@ -340,8 +340,8 @@ fullpage: true
 <img src="/images/landing/2025-12-16_ace-hlsr.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="ACE HLSR 2025">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">High-level Summary report on Preliminary ACE 2024 Data</a></h5>
-<small>First insight on the level of 2024 cost-effectiveness performance both for the Pan-European system and for individual ANSPs before the official release of the next ACE benchmarking report.</small>
+<h5><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">High-level summary report on preliminary ACE 2024 data</a></h5>
+<small>EUROCONTROL's Performance Review Unit (PRU) releases a new high-level summary report on preliminary ACE 2024 data, commissioned by the independent Performance Review Commission.</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://ansperformance.eu/economics/ace/ace-hlsr/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
@@ -373,7 +373,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" target="_blank">PRC Data Challenge 2025 Winners!</a></h5>
-<small>Congratulations to the <b>resourceful-quiver</b> team, winners of the 2025 PRC Challenge! The <b>runners-up</b>, <b>jubilant-vase</b> and <b>outspoken-tornado</b>, also delivered great performances. With 53 teams submitting projects and 19 finalists, we would like to congratulate everyone who took part. Stay tuned for the 2026 Challenge!!
+<small>Congratulations to the resourceful-quiver team, winners of the 2025 PRC Challenge! The <b>runners-up</b>, <b>jubilant-vase</b> and <b>outspoken-tornado</b>, also delivered great performances. With 53 teams submitting projects and 19 finalists, we would like to congratulate everyone who took part. Stay tuned for the 2026 Challenge!!
 </small>
 </div>
 <div class="card-footer pt-0">
