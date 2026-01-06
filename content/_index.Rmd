@@ -336,6 +336,22 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" target="_blank">
+<img src="/images/landing/2026-01-05_DS57_summary2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS57">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" target="_blank">Data Snapshot #57: 2025 European aviation in numbers</a></h5>
+<small>EUROCONTROL's latest Data Snapshot takes a first view of core 2025 European aviation network data, a year of solid traffic growth in the European aviation network.</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
 <a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
 <img src="/images/landing/2025-12-16_ace-hlsr.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="ACE HLSR 2025">
 </a>
