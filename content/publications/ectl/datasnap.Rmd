@@ -11,6 +11,22 @@ extrajs: /javascript/img_pre.js
 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><img src="" class="imagepreview"  style="width: 300%;"></div></div></div></div>
 
 
+## 2026
+<!-- #57 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[2025 European aviation in numbers - EUROCONTROL Data Snapshot #57][DS57]</h5>
+<small><strong><p style="color:#808080">Published: 6 January 2026</p></strong></small>
+The 57. EUROCONTROL Data Snapshot summarises the main figures of European aviation in 2025.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds57.png" alt="2025 summary"></div>
+</div>
+</div></div>
 
 
 ## 2025
@@ -1068,3 +1084,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS54]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-54-average-flight-eurocontrol-area-and-new-aviation-trends "the average flight in the EUROCONTROL area"
 [DS55]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-55-highest-ever-daily-movements-across-european-aviation "highest-ever daily movements across the European aviation network, by country"
 [DS56]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns "shifting weekday flight patterns"
+[DS57]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers "2025 European aviation summary"
