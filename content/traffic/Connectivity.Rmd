@@ -1,10 +1,30 @@
 ---
 title: "Connectivity"
 output: html_document
-description: "An overview of ANS-related inefficiencies on the departure flow as measured
-  in terms of additional taxi out times per airport."
+description: "An overview of the direct connectivity between airports in the EUROCONTROL area."
 fullpage: true
 ---
+
+<div class="ml-2">
+
+This page provides an interactive dashboard showing direct **connectivity** between airports in the EUROCONTROL area. Connectivity in aviation and, more generally in the field of transport, can be measured in different ways using many different indicators, each with a specific purpose, advantages and disadvantages.
+
+This dashboard is a first attempt at illustrating the question "where can you fly from a specific European airport, and with which operator(s)". For this purpose, we have chosen the simplest indicator - **direct scheduled airport pairs**. The dashboard tracks this and other complementary indicators over time and offers the following features:
+
+- A 'Summary' view at European level showing the top 10 airports with the largest number of direct scheduled connections, and the top 5 airports with the highest increase/decrease in number of connection compared to the previous year.
+- An 'Airport view' with two components:
+  + An 'Overview' showing the main indicators for the period selected (year, month, week), including a breakdown per region and market segment, the top 10 connected airports and aircraft operator groups[^1] with the highest daily frequency. It also shows the weekly evolution of the number of direct scheduled connections since January 2024.
+  + An interactive 'Map' that lets users visualise the different routes from the selected airport, and when a route is clicked,  view the aircraft operator groups serving the route along with their respective frequencies.
+
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;Disclaimer: Note that the dashboard tracks **past connectivity**, i.e. flights that have taken place in the selected period. It does not consider the currently planned airline schedules, so any conclusions drawn from it, should be within this context.
+
+The dashboard can be considered a 'beta' version aimed at gathering feedback and suggestions from users, so feel free to contact the [Aviation Intelligence Unit](mailto:aviation-intelligence@eurocontrol.int). 
+
+<small>Please note that the dashboard may take a few moments to load.</small>
+
+[^1]: As defined in the Level1 groupings described @ https://www.eurocontrol.int/directory/airline-groups-lookup.
+
+</div>
 
 <div class="iframe-container">
 <iframe src="https://oscaralfaro73.shinyapps.io/ConnectivityApp/" width="100%" height="1600px" style="border:none; overflow:hidden;" scrolling="auto"></iframe>
@@ -31,3 +51,4 @@ width: 100%;
 height: 100%;
 }
 </style>
+
