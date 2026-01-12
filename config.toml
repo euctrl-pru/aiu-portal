@@ -103,6 +103,13 @@ ignoreFiles = [
       identifier = "key-traffic-forecast"
       parent = "dashboard"
       weight = 19
+    [[menu.main]]
+      #pre = "&nbsp;&nbsp;&nbsp;"
+      name = "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight: normal'>Connectivity</span></i>"
+      url = "/traffic/Connectivity"
+      identifier = "key-connectivity"
+      parent = "dashboard"
+      weight = 20
   #----------------------
   [[menu.main]]
     pre = "<i class='fas fa-calendar'></i>"
