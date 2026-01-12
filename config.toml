@@ -451,6 +451,11 @@ ignoreFiles = [
     url = "/traffic/statfor"
     identifier= "statfor"
     weight = 40
+[[menu.traffic]]
+    name = "Connectivity"
+    url = "/traffic/Connectivity"
+    identifier= "Connectivity"
+    weight = 50
 
 [[menu.capacity]]
     name = "En-route & airport delay overview"
