@@ -385,8 +385,8 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href=https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">
-<img src="/images/landing/2026-01-20_aviation-engage.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="The 2025 aviation year in numbers and what to expect for 2026">
+<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">
+<img src="/images/landing/2026-01-20_aviation-engage.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="The 2025 aviation year in numbers and what to expect for 2026">
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">The 2025 aviation year in numbers and what to expect for 2026</a></h5>
@@ -394,7 +394,7 @@ fullpage: true
 <br>Registration is now open for this free webinar, which will take place on 22 January 2026 from 11:00 to 12:00 CET.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026l" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
