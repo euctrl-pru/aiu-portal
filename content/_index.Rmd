@@ -352,15 +352,15 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-<img src="/images/landing/2025-12-16_ace-hlsr.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="ACE HLSR 2025">
+<a href="https://ansperformance.eu/traffic/connectivity/" target="_blank">
+<img src="/images/landing/2026-01-16_connectivity.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Direct connectivity dashboard">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">High-level summary report on preliminary ACE 2024 data</a></h5>
-<small>EUROCONTROL's Performance Review Unit (PRU) releases a new high-level summary report on preliminary ACE 2024 data, commissioned by the independent Performance Review Commission.</small>
+<h5><a href="https://ansperformance.eu/traffic/connectivity/" target="_blank">Direct connectivity dashboard</a></h5>
+<small>This new dashboard shows where you can fly to from a specific European airport and which operators serve those routes. It focuses on direct scheduled airport pairs as a simple and clear indicator of connectivity, and tracks this and other complementary indicators over time.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://ansperformance.eu/economics/ace/ace-hlsr/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://ansperformance.eu/traffic/connectivity/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
@@ -368,66 +368,37 @@ fullpage: true
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/news/easa-and-eurocontrol-publish-joint-report-assessment-gate-gate-co2-emissions" target="_blank">
-<img src="/images/landing/2025-12-11_EASA_EUROCONTROL_g2g_co2.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Gate-to-gate CO2 emissions">
+<a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" target="_blank">
+<img src="/images/landing/2026-01-15_call_for_improvements.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Call for new features!">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/news/easa-and-eurocontrol-publish-joint-report-assessment-gate-gate-co2-emissions" target="_blank">Gate-to-gate CO2 emissions</a></h5>
-<small>The European Union Aviation Safety Agency (EASA) and EUROCONTROL have worked together to validate a methodology of calculating gate-to-gate CO2 emissions, based on actual fuel burn, providing a basis for monitoring progress in reducing emissions to make aviation more sustainable.</small>
+<h5><a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" target="_blank">Data App: Call for new features!</a></h5>
+<small>Phase II of the EUROCONTROL Data App development will start. If you have suggestions of features that you would like us to implement, now is the time to ask!</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/news/easa-and-eurocontrol-publish-joint-report-assessment-gate-gate-co2-emissions" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
+
 
 
 <div class="carousel-item">
 <div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/performance/briefing/202511_Long_Term_Forecast_2050.html" target="_blank">
-<img src="/images/landing/2050_workshop.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="EUROCONTROL Aviation Long-Term Outlook to 2050 workshop">
+<a href=https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">
+<img src="/images/landing/2026-01-20_aviation-engage.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="The 2025 aviation year in numbers and what to expect for 2026">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/performance/briefing/202511_Long_Term_Forecast_2050.html" target="_blank">EUROCONTROL Aviation Long-Term Outlook to 2050 workshop</a></h5>
-<small>Every three years, the EUROCONTROL Aviation Long-Term Outlook to 2050 is updated. It covers both flights and emissions. The journey always begins with one key step: revisiting and refining the scenarios that underpin the forecast.</small>
+<h5><a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">The 2025 aviation year in numbers and what to expect for 2026</a></h5>
+<small>EUROCONTROL is launching its new Aviation Engage webinar. A panel of senior stakeholders will review the major developments of 2025 using EUROCONTROL data, analyse what data trends suggest 2026 could hold for aviation actors, and explore further insights provided by EUROCONTROL’s wide range of data products.
+<br>Registration is now open for this free webinar, which will take place on 22 January 2026 from 11:00 to 12:00 CET.</small>
 </div>
 <div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/performance/briefing/202511_Long_Term_Forecast_2050.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026l" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
 
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href=https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" target="_blank">
-<img src="/images/landing/PRC-Data-challenge_winners.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRC Data Challenge 2025 Winners">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" target="_blank">PRC Data Challenge 2025 <br>Winners!</a></h5>
-<small>Congratulations to the <b>resourceful-quiver</b> team, winners of the 2025 PRC Challenge! The <b>runners-up</b>, <b>jubilant-vase</b> and <b>outspoken-tornado</b>, also delivered great performances. With 53 teams submitting projects and 19 finalists, we would like to congratulate everyone who took part. Stay tuned for the 2026 Challenge!!</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://ansperformance.eu/study/data-challenge/dc2025/outcome.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/performance/briefing/202512_season_greetings.html" target="_blank">
-<img src="/images/landing/seasons_greetings_2026.jpg" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Happy Holidays from EUROCONTROL">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/performance/briefing/202512_season_greetings.html" target="_blank">Warm Wishes for the Holiday Season!</a></h5>
-<small>As the year comes to an end, we would like to express our warmest seasonal greetings to the European aviation community. May the holidays bring you well-earned rest, time with your loved ones, and renewed inspiration for the year ahead.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/performance/briefing/202512_season_greetings.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 
 
