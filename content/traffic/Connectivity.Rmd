@@ -9,7 +9,7 @@ fullpage: true
 
 This page provides an interactive dashboard showing direct **connectivity** between airports in the EUROCONTROL area. Connectivity in aviation and, more generally in the field of transport, can be measured in different ways using many different indicators, each with a specific purpose, advantages and disadvantages.
 
-This dashboard is a first attempt at illustrating the question "where can you fly from a specific European airport, and with which operator(s)". For this purpose, we have chosen the simplest indicator - **direct scheduled airport pairs**. The dashboard tracks this and other complementary indicators over time and offers the following features:
+This dashboard illustrates the question "where can you fly from a specific European airport, and with which operator(s)". For this purpose, we have chosen the simplest indicator - **direct scheduled airport pairs**. The dashboard tracks this and other complementary indicators over time and offers the following features:
 
 - A 'Summary' view at European level showing the top 10 airports with the largest number of direct scheduled connections, and the top 5 airports with the highest increase/decrease in number of connection compared to the previous year.
 - An 'Airport view' with two components:
@@ -18,7 +18,7 @@ This dashboard is a first attempt at illustrating the question "where can you fl
 
 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;Disclaimer: Note that the dashboard tracks **past connectivity**, i.e. flights that have taken place in the selected period. It does not consider the currently planned airline schedules, so any conclusions drawn from it, should be within this context.
 
-The dashboard can be considered a 'beta' version aimed at gathering feedback and suggestions from users, so feel free to contact the [Aviation Intelligence Unit](mailto:aviation-intelligence@eurocontrol.int). 
+Feel free to contact the [Aviation Intelligence Unit](mailto:aviation-intelligence@eurocontrol.int) to suggest improvements. 
 
 <small>Please note that the dashboard may take a few moments to load.</small>
 
