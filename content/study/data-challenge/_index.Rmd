@@ -20,7 +20,7 @@ blogdown::shortcode(
   "bootstrap-card-alt",
   img="prc_dc25.jpeg",
   link="dc2025/",
-  title="PRC Data Challenge 2025<br>(now running!!!)",
+  title="PRC Data Challenge 2025",
   text="predicting fuel burnt per segment of flight.", 
   alt="PRC Data Challenge 2025", 
   command="Resize", 
