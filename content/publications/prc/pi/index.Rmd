@@ -5,6 +5,23 @@ date: '2023-03-10'
 tags:  PRC Performance Insights
 
 ---
+## 2025
+
+<!-- OBS#4 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+<div class="col-sm-9">
+<h5>[PRC Observer #5 - Open Data: The Foundation of Credibility ][OBS5]</h5>
+<small><strong><p style="color:#808080">Published: 16 February 2026</p></strong></small>
+    
+The independent Performance Review Commission (PRC) explains how transparent and widely accepted performance measurement helps build trust and supports stakeholder engagement to improve the performance of the European air transport network. <br>
+    
+<a class="btn btn-primary btn-sm" href="https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility" target="_blank" role="button">Learn more</a>
+</div>
+<div class="col-sm-3">
+<div class="card border-0"><a href="https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility"  target="_blank"><img src="/images/pi/prc_obs5.png" alt="Open Data: The Foundation of Credibility" style="width:100%"></a></div>
+</div>
+</div></div>
 
 ## 2025
 
@@ -261,3 +278,4 @@ Read the new PRC Performance Insight on future challenges to safety. In view of 
 [OBS2]: https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024 "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
 [OBS3]: https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service "PRC Observer #3 - En route Capacity in Europe – an insufficient level of service"
 [OBS4]: https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025 "PRC Observer #4 - En route Capacity in Europe – how good was your summer?"
+[OBS5]: https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility "PRC Observer #5 - Open Data: The Foundation of Credibility"

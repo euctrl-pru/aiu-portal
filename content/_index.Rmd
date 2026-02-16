@@ -336,6 +336,22 @@ fullpage: true
 
 <div class="carousel-item active">
 <div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility" target="_blank">
+<img src="/images/landing/2026-02-16_PRC_OBS5.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS57">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility" target="_blank">PRC Observer #5 – Open Data: The Foundation of Credibility</a></h5>
+<small>The independent Performance Review Commission (PRC) explains how transparent and widely accepted performance measurement helps build trust and supports stakeholder engagement to improve the performance of the European air transport network..</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+<div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview" target="_blank">
 <img src="/images/landing/2026-01-23_EAO_2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS57">
 </a>
@@ -350,20 +366,6 @@ fullpage: true
 </div>
 
 
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" target="_blank">
-<img src="/images/landing/2026-01-05_DS57_summary2025.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS57">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" target="_blank">Data Snapshot #57: 2025 European aviation in numbers</a></h5>
-<small>EUROCONTROL's latest Data Snapshot takes a first view of core 2025 European aviation network data, a year of solid traffic growth in the European aviation network.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
 
 
 <div class="carousel-item">
@@ -373,49 +375,13 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="https://ansperformance.eu/traffic/connectivity/" target="_blank">Direct connectivity dashboard</a></h5>
-<small>This new dashboard shows where you can fly to from a specific European airport and which operators serve those routes. It focuses on direct scheduled airport pairs as a simple and clear indicator of connectivity, and tracks this and other complementary indicators over time.</small>
+<small>This new dashboard shows where you can fly to from a specific European airport and which operators serve those routes. It focuses on direct scheduled airport pairs as a simple and clear indicator of connectivity, and tracks this and other complementary indicators over time. Check out the latest data for January 2026!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="https://ansperformance.eu/traffic/connectivity/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
 </div>
 </div>
 </div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" target="_blank">
-<img src="/images/landing/2026-01-15_call_for_improvements.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Call for new features!">
-</a>
-<div style="padding: 1rem;">
-<h5><a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" target="_blank">Data App: Call for new features!</a></h5>
-<small>Phase II of the EUROCONTROL Data App development will start. If you have suggestions of features that you would like us to implement, now is the time to ask!</small>
-</div>
-<div class="card-footer pt-0">
-<a href=" https://www.eurocontrol.int/performance/briefing/20260115_new_features.html" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">
-<img src="/images/landing/2026-01-20_aviation-engage.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="The 2025 aviation year in numbers and what to expect for 2026">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" target="_blank">The 2025 aviation year in numbers and what to expect for 2026</a></h5>
-<small>EUROCONTROL is launching its new Aviation Engage webinar. A panel of senior stakeholders will review the major developments of 2025 using EUROCONTROL data, analyse what data trends suggest 2026 could hold for aviation actors, and explore further insights provided by EUROCONTROL’s wide range of data products.
-<br>Registration is now open for this free webinar, which will take place on 22 January 2026 from 11:00 to 12:00 CET.</small>
-</div>
-<div class="card-footer pt-0">
-<a href="https://www.eurocontrol.int/event/2025-aviation-year-numbers-and-what-expect-2026" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-</div>
-</div>
-</div>
-
-
 
 
 
@@ -426,7 +392,7 @@ fullpage: true
 </a>
 <div style="padding: 1rem;">
 <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-<small>December 2025 data available for download now!</small>
+<small>January 2026 data available for download now!</small>
 </div>
 <div class="card-footer pt-0">
 <a href="/data/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
