@@ -194,6 +194,33 @@ a5 <- list(
   showarrow = FALSE
 )
 
+a6 <- list(
+  x = '2024-02-15',
+  y = 1,
+  text = paste("2024"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a7 <- list(
+  x = '2025-02-15',
+  y = 1,
+  text = paste("2025"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
+a8 <- list(
+  x = '2026-02-15',
+  y = 1,
+  text = paste("2026"),
+  xref = "x",
+  yref = "paper",
+  showarrow = FALSE
+)
+
 # Network plot option 3
 
 # build plot nw co2
@@ -224,9 +251,12 @@ co2_nw_plot3 <- co2_data_plot_nw_ld %>%
     line = list(color = '#2990ea', width = 1) 
     ) %>%
   layout(
-    shapes = list(vline(as.Date('2023-01-01')) ,vline(as.Date('2022-01-01')),
+    shapes = list(
+      vline(as.Date('2026-01-01')),
+      vline(as.Date('2024-01-01')) ,vline(as.Date('2025-01-01')),
+      vline(as.Date('2023-01-01')) ,vline(as.Date('2022-01-01')),
                   vline(as.Date('2021-01-01')),vline(as.Date('2020-01-01'))),
-    annotations = list(a1, a2, a3, a4, a5),
+    annotations = list(a1, a2, a3, a4, a5, a6, a7, a8),
      autosize = T,
     font = list(family = "Helvetica"),
     xaxis = list(
