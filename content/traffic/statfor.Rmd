@@ -48,7 +48,7 @@ date: '2020-05-15'
 }
 </style>
 
-The figure below presents the EUROCONTROL 7-year forecast (2025-2031) for air traffic movements (IFR) in millions of flights. This Seven-Year Forecast (Autumn 2025) builds on the February 2025 publication and integrates the most recent flight trends and route patterns, including data from Summer 2025. It also includes a partial update of forecast inputs, such as the GDP forecast and low-cost market shares. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2024 and different forecast scenarios (high, base, low) up to 2031. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
+The figure below presents the EUROCONTROL 7-year forecast (2026-2032) for air traffic movements (IFR) in millions of flights. This Seven-Year Forecast (Spring 2026) builds on the October 2025 forecast and incorporates the latest observed flight trends and route patterns up to early 2026, together with a comprehensive update of all forecast inputs, including as much as possible recent geopolitical developments in the Middle East/Gulf region. The information is available by [traffic zone (TZ)](https://ansperformance.eu/definition/traffic-zone/) and includes actual traffic up to 2025 and different forecast scenarios (high, base, low) up to 2032. Simply select the TZ you are interested in from the drop-down menu to see the detailed information for each year.
 
 <!-- Loading packages and data -->
 ```{r, echo=FALSE,warning = FALSE,message=FALSE}
@@ -93,7 +93,7 @@ filtered_data <- data %>%
   select(Rank, TZ, Yr, mvts)
 
 # Set maximum year for actual data
-actual_max_year <- 2024
+actual_max_year <- 2025
 
 # Filter actual data
 filtered_data_actual <- filtered_data %>%
@@ -153,7 +153,7 @@ tz_values <- c(tz_values[nm_area_index], tz_values[-nm_area_index])
 
 # Add 2024 data points for high and low scenarios based on base scenario
 base_scenario_2022 <- data %>%
-  filter(Yr == 2024, Rank == "Base")
+  filter(Yr == 2025, Rank == "Base")
 
 high_scenario_2022 <- base_scenario_2022 %>%
   mutate(Rank = "High")
@@ -247,7 +247,7 @@ updatemenus = list(list(
              rep(FALSE, length(tz_values) * 5), seq((i - 1) * 5 + 1, i * 5, by = 1), TRUE
            )),
            list(title = list(
-             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2025-2031 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
+             text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[i], " 2026-2032 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
            ))
          ),
          label = tz_values[i])
@@ -258,7 +258,7 @@ updatemenus = list(list(
 plot <-
   plot %>% layout(
     title = list(
-      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2025-2031 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
+      text = paste0("<b>EUROCONTROL 7-year forecast for ", tz_values[1], " 2026-2032 </b> <br><span style='font-size:0.8em;color:grey'>Actual and future IFR movements</span>")
     ),
     xaxis = list(
       title = "",
@@ -300,7 +300,7 @@ plot
 
 <br>
 
-For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2025-2031 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031).
+For more information about the forecasts and the associated data, see the [EUROCONTROL Forecast Update 2026-2032 publication](https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2026-2032).
 
 Note: The traffic zone 'Spain' is the aggregated zone composed of 'Spain-Canaries' and 'Spain-Continental'.
 

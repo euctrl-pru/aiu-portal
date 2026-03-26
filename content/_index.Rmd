@@ -334,7 +334,24 @@ fullpage: true
 
 <div class="carousel-inner">
 
+
 <div class="carousel-item active">
+<div class="card border-0 rounded">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2026-2032" target="_blank">
+<img src="/images/landing/2026-03-26_MT_forecast.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Statfor forecast">
+</a>
+<div style="padding: 1rem;">
+<h5><a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2026-2032" target="_blank">STATFOR Forecast 2026-2032 (Spring 2026 update) - Now available!</a></h5>
+<small>The unfolding crisis in the Middle East is affecting European aviation. The STATFOR team has been busy injecting most recent input information to try and reflect potential future impacts on flights and service units. The updated Forecast is now available!</small>
+</div>
+<div class="card-footer pt-0">
+<a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2026-2032" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+</div>
+</div>
+</div>
+
+
+<div class="carousel-item">
 <div class="card border-0 rounded">
 <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-58-top-40-european-airports-historic-peak-days" target="_blank">
 <img src="/images/landing/2026-03-03_DS58.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="DS57">
@@ -347,23 +364,6 @@ fullpage: true
 </div>
 </div>
 </div>
-
-
-<div class="carousel-item">
-<div class="card border-0 rounded">
-<a href="" target="_blank">
-<img src="/images/landing/2026_03_statfor.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="Statfor forecast">
-</a>
-<div style="padding: 1rem;">
-<h5><a href="" target="_blank">STATFOR Forecast 2026-2032 (Spring 2026 update) - Coming soon!</a></h5>
-<small>The unfolding crisis in the Middle East is affecting European aviation. The STATFOR team is busy injecting most recent input information to try and reflect potential future impacts on flights and service units. Publication of the Spring 2026 Forecast is planned for next week (Week 13/2026).</small>
-</div>
-<div class="card-footer pt-0">
-<!-- <a href="" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i> -->
-</div>
-</div>
-</div>
-
 
 
 <div class="carousel-item">
