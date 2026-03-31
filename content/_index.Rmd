@@ -341,7 +341,7 @@ fullpage: true
 <img src="/images/landing/2026-03-31_AT11_middle_east.png" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="AT11">
 </a>
 <div style="padding: 1rem;">
-<h5><a href="https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation" target="_blank">Aviation Trends #10 - Impact of the current Middle East crisis on European aviation</a></h5>
+<h5><a href="https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation" target="_blank">Aviation Trends #11 - Impact of the current Middle East crisis on European aviation</a></h5>
 <small>EUROCONTROL’s 11th Aviation Trends paper looks at how traffic flows, airspace closures and reroutings are impacting travel across the network.</small>
 </div>
 <div class="card-footer pt-0">
