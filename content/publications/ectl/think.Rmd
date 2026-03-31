@@ -4,6 +4,10 @@ date: '2021-03-01'
 tags:  Think Paper
 ---
 
+## 2026
+* [EUROCONTROL Aviation Trends #11 (31 March 2026) - Impact of the current Middle East crisis on European aviation][AT11]
+
+
 ## 2025
 * [EUROCONTROL Aviation Trends #10 (6 October 2025) - Overview of European air traffic during Summer 2025][AT10]
 * [EUROCONTROL Aviation Trends #9 (10 July 2025) - Impact of the French ATC strike of 3 & 4 July 2025 on European Aviation][AT9]
@@ -86,3 +90,4 @@ tags:  Think Paper
 [AT8]: https://www.eurocontrol.int/publication/long-term-decline-domestic-flights-europe "The long-term decline of domestic flights in Europe"
 [AT9]: https://www.eurocontrol.int/publication/impact-french-atc-strike-3-4-july-2025-european-aviation "Impact of the French ATC strike of 3 & 4 July 2025 on European Aviation"
 [AT10]: https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025 "Overview of European air traffic during Summer 2025"
+[AT11]: https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation "Impact of the current Middle East crisis on European aviation"
