@@ -13,13 +13,36 @@ fullpage: true
 	}
 </style>
 <!-- <marquee width="100%" direction="left" loop="3" bgcolor="LightGrey" scrollamount="9"><strong>November 2024: </strong> Download the new version (v3.0.0) of our  EUROCONTROL DATA app  (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) to see the new aircraft operator view, get historical data access, view network situation reports and more. This application allows you to get the very latest European aviation network data and news in your pocket, up to date to the previous day.</marquee> -->
+
+
 <section class="content-space bg-light">
 <script type="text/javascript" src="javascript/network_situation.js" ></script>
 <script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
 <div class="container mt-4">
 <div class="row">
 <div class="col-md-8">
+
+<div class="row">
+<div class="col-md-9">
 <h4><span>Network status on </span> <span id="day_text_title"></span></h4>
+</div>
+<div class="col-md-3">
+<ul class="nav nav-segment nav-fill align-items-centers">
+<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#live">Live</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#yesterday">Yesterday</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="tab-content">
+<div id="live" class="tab-pane fade in active show">
+<p>Placeholder for live figures</p>
+<iframe id="test_map" style="border: 0; width: 100%; height: 500px;" src="https://www.eurocontrol.int/performance/live_delay_map_v8.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+
+
+<div id="yesterday" class="tab-pane fade in">
 <div class="card border-0 rounded p-3 mb-4">
 <ul class="nav nav-segment nav-fill align-items-centers mb-4">
 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#flights">Flights</a></li>
@@ -174,6 +197,7 @@ fullpage: true
 </div>
 </div>
 </div>
+
 <div id="delay" class="tab-pane fade in">
 <div class="row">
 <div class="col-12">
@@ -314,6 +338,8 @@ fullpage: true
 <div class="col-sm-8">
 <div>
 <iframe id="delay-plot-evo" class="resp-iframe" style="border: 0; width: 100%; height: 400px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-pun-nw-evo.html" sandbox="allow-scripts allow-same-origin" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+</div>
 </div>
 </div>
 </div>
