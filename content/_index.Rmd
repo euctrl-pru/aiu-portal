@@ -38,7 +38,7 @@ fullpage: true
 <div class="tab-content">
 <div id="live" class="tab-pane fade in active show">
 <p>Placeholder for live figures</p>
-<iframe id="test_map" style="border: 0; width: 100%; height: 500px;" src="https://www.eurocontrol.int/performance/live_delay_map_v8.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe id="test_map" style="border: 0; width: 100%; height: 500px;" src="https://www.eurocontrol.int/Economics/Oscar/live_delay_map_v8.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </div>
 
 
