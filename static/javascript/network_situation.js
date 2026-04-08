@@ -25,7 +25,7 @@ async function updateNetworkSituationOnPage() {
       h = `${i} - ${d}`,
       k = e == l ? `${(''+f.getDate()).slice(-2)}` : `${(''+f.getDate()).slice(-2)} ${f.toLocaleString("en-US",{month:"short"})}`,
       g = `${k} - ${d}`;
-    document.getElementById("day_text_title").innerHTML = c,
+    // document.getElementById("day_text_title").innerHTML = c,
     document.getElementById("day_text").innerHTML = c,
     document.getElementById("week_text").innerHTML = g,
     document.getElementById("y2d_text").innerHTML = h,
