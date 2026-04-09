@@ -1,3 +1,67 @@
 User-agent: *
 Disallow:
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+# Block AI/ML scrapers from /data/ only
+User-agent: GPTBot
+Disallow: /data/
+
+User-agent: ChatGPT-User
+Disallow: /data/
+
+User-agent: Google-Extended
+Disallow: /data/
+
+User-agent: CCBot
+Disallow: /data/
+
+User-agent: anthropic-ai
+Disallow: /data/
+
+User-agent: Claude-Web
+Disallow: /data/
+
+User-agent: Omgilibot
+Disallow: /data/
+
+User-agent: Omgili
+Disallow: /data/
+
+User-agent: FacebookBot
+Disallow: /data/
+
+User-agent: Diffbot
+Disallow: /data/
+
+User-agent: Bytespider
+Disallow: /data/
+
+User-agent: ImagesiftBot
+Disallow: /data/
+
+User-agent: cohere-ai
+Disallow: /data/
+
+User-agent: PerplexityBot
+Disallow: /data/
+
+User-agent: YouBot
+Disallow: /data/
+
+User-agent: Applebot-Extended
+Disallow: /data/
+
+User-agent: amazonbot
+Disallow: /data/
+
+User-agent: ClaudeBot
+Disallow: /data/
+
+User-agent: Scrapy
+Disallow: /data/
+
+User-agent: meta-externalagent
+Disallow: /data/
+
+User-agent: meta-externalfetcher
+Disallow: /data/
