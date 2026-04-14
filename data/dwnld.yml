@@ -40,7 +40,7 @@ apt_dly_end: Mar 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - With post ops adj.
 apt_dly_post_beg: Jan 2016
-apt_dly_post_end: Feb 2026
+apt_dly_post_end: Dec 2024
 
 ## ASMA additional time
 asma_beg: Jan 2018
