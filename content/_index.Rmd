@@ -5,6 +5,9 @@ description: The portal provides insights into various aviation performance area
 date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
+
+```{=html}
+
 <style>
 	marquee {
 		margin: 0;
@@ -12,217 +15,273 @@ fullpage: true
 		display: block;
 	}
 </style>
-<!-- <marquee width="100%" direction="left" loop="3" bgcolor="LightGrey" scrollamount="9"><strong>November 2024: </strong> Download the new version (v3.0.0) of our  EUROCONTROL DATA app  (on <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">Apple App Store</a> &amp; <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">Google Play Store</a>) to see the new aircraft operator view, get historical data access, view network situation reports and more. This application allows you to get the very latest European aviation network data and news in your pocket, up to date to the previous day.</marquee> -->
-
+<!--
+<marquee
+  width="100%" 
+  direction="left"
+  loop="3"
+  bgcolor="LightGrey"
+  scrollamount="9">
+    <strong>November 2024: </strong> Download the new version (v3.0.0) of our
+    EUROCONTROL DATA app  (on 
+    <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405">
+      Apple App Store
+    </a>
+    &amp;
+    <a href="https://play.google.com/store/search?q=eurocontrol%20data&amp;c=apps&amp;hl=en&amp;gl=US">
+      Google Play Store
+    </a>)
+    to see the new aircraft operator view, get historical data access,
+    view network situation reports and more.
+    This application allows you to get the very latest European aviation network
+    data and news in your pocket, up to date to the previous day.
+</marquee>
+-->
 
 <section class="content-space bg-light">
-<script type="text/javascript" src="javascript/network_situation.js" ></script>
-<script type="text/javascript">document.addEventListener('DOMContentLoaded',function(){updateNetworkSituationOnPage()})</script>
-<div class="container mt-4">
-<div class="row">
-<div class="col-md-8">
+  <script type="text/javascript" src="javascript/network_situation.js" >
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function() {
+      updateNetworkSituationOnPage()
+    })
+  </script>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
 
-<div class="row">
-<div class="col-md-9 pb-3">
-<!-- <h4><span>Network status on </span> <span id="day_text_title"></span></h4> -->
-<h4><span>Network status</h4>
-</div>
-<div class="col-md-3">
-<ul class="nav nav-segment nav-fill align-items-centers">
-<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#live">Live</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#yesterday">Yesterday</a></li>
-</ul>
-</div>
-</div>
-
-
-<div class="tab-content">
-<div id="live" class="tab-pane fade in active show">
-<div class="card border-0 rounded p-3 mb-0 pb-0">
-<iframe id="test_map" class="rounded" style="border: 0; width: 100%; height: 550px;" src="https://www.eurocontrol.int/Economics/Oscar/live_main_statistics_webpage_v11.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
-<div class="mt-2">
-<p><small><i>The designations and presentation employed on the map do not imply the expression of any opinion whatsoever on the part of EUROCONTROL concerning the legal status of any country, territory, city or of its authorities, or concerning the delimitation of its frontiers or boundaries.</i></small></p>
-</div>
-</div>
-</div>
-
-
-<div id="yesterday" class="tab-pane fade in">
-<div class="card border-0 rounded p-3 mb-4">
-<ul class="nav nav-segment nav-fill align-items-centers mb-4">
-<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#flights">Flights</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#delay" onclick=reloadIframeDelay()>ATFM Delay</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#punctuality">Punctuality</a></li>
-</ul>
-
-<div class="tab-content">
-<div id="flights" class="tab-pane fade in active show">
-<div class="row">
-<div class="col-12">
+      <div class="row">
+        <div class="col-md-9 pb-3">
+        <!--
+          <h4><span>Network status on </span> <span id="day_text_title"></span></h4>
+        -->
+          <h4><span>Network status</h4>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-segment nav-fill align-items-centers">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#live">Live</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#yesterday">Yesterday</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
 
-<div class="row align-items-sm-center mb-4">
-<div class="col-sm">
+    <div class="tab-content">
+      <div id="live" class="tab-pane fade in active show">
+        <div class="card border-0 rounded p-3 mb-0 pb-0">
+          <iframe id="test_map"
+                  class="rounded"
+                  style="border: 0; width: 100%; height: 550px;"        
+                  src="https://www.eurocontrol.int/Economics/Oscar/live_main_statistics_webpage_v11.html"   
+                  frameborder="0"
+                  scrolling="no"
+                  allowfullscreen>
+          </iframe>
+          <div class="mt-2">
+            <p><small><i>The designations and presentation employed on the map do not imply
+              the expression of any opinion whatsoever on the part of EUROCONTROL concerning
+              the legal status of any country, territory, city or of its authorities, or
+              concerning the delimitation of its frontiers or boundaries.</i></small>
+            </p>
+          </div>
+        </div>
+      </div>
 
-<p class="h6 mb-0">Evolution of daily flights in the EUROCONTROL area</p>
-<p class="text-muted mb-4">(7-day average)</p>
+      <div id="yesterday" class="tab-pane fade in">
+        <div class="card border-0 rounded p-3 mb-4">
+          <ul class="nav nav-segment nav-fill align-items-centers mb-4">
+            <li class="nav-item">
+              <a class="nav-link active"
+                data-toggle="tab"
+                href="#flights">Flights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                data-toggle="tab"
+                href="#delay"
+                onclick=reloadIframeDelay()>ATFM Delay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                data-toggle="tab"
+                href="#punctuality">Punctuality</a>
+            </li>
+          </ul>
 
-</div>
-<!-- End Col -->
+          <div class="tab-content">
+            <div id="flights" class="tab-pane fade in active show">
+              <div class="row">
+                <div class="col-12">
 
-<div class="col-sm-auto">
+                  <div class="row align-items-sm-center mb-4">
+                    <div class="col-sm">
+                      <p class="h6 mb-0">Evolution of daily flights in the EUROCONTROL area</p>
+                      <p class="text-muted mb-4">(7-day average)</p>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-sm-auto">
+                      <ul class="nav nav-segment nav-fill">
+                        <li class="">
+                          <a class="nav-link active"
+                            data-toggle="tab"
+                            href=#flights-day>Day</a>
+                        </li>
+                        <li class="">
+                          <a class="nav-link"
+                            data-toggle="tab"
+                            href="#flights-week">Week</a>
+                        </li>
+                        <li class="">
+                          <a class="nav-link"
+                            data-toggle="tab"
+                            href="#flights-y2d">Y2D</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- End Col -->
+                  </div>
 
-<ul class="nav nav-segment nav-fill">
-<li class=""><a class="nav-link active" data-toggle="tab" href=#flights-day>Day</a></li>
-<li class=""><a class="nav-link" data-toggle="tab" href="#flights-week">Week</a></li>
-<li class=""><a class="nav-link" data-toggle="tab" href="#flights-y2d">Y2D</a></li>
-</ul>
+                  <div class="w3-container tab-content">
+                    <div id="flights-day" class="tab-pane fade in active show">
+                      <div class="row">
+                      
+                        <div class="col-6 col-md">
+                          <div class="pr-3">
+                            <p id="day_text" class="font-weight-bold">n/a</p>
+                          </div>
+                        </div>
+                        <!-- End Col -->
 
-</div>
-<!-- End Col -->
-</div>
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Total flights</p>
+                          <h4 id="day_traffic" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
 
+                        <div class="col-6 col-md mb-3">
+                          <p class="mb-1 small text-muted">Vs prev. week</p>
+                          <h4 id="dif_day_prev_week" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
 
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs prev. year</p>
+                          <h4 id="dif_day_prev_year" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
 
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs 2019</p>
+                          <h4 id="dif_day_2019" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                      </div>                
+                    </div>
+                    <div id="flights-week" class="tab-pane fade in">
+                      <div class="row">
+                        <div class="col-6 col-md">
+                          <p id="week_text" class="font-weight-bold">n/a</p>
+                        </div>
+                        <!-- End Col -->
+                        
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Avg. daily flights</p>
+                          <h4 id="week_traffic" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                        
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs prev. week</p>
+                          <h4 id="dif_week_prev_week" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
 
-<div class="w3-container tab-content">
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs prev. year</p>
+                          <h4 id="dif_week_prev_year" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                        
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs 2019</p>
+                          <h4 id="dif_week_2019" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                      </div>
+                    </div>
 
-<div id="flights-day" class="tab-pane fade in active show">
-
-<div class="row">
-
-<div class="col-6 col-md">
-<div class="pr-3">
-<p id="day_text" class="font-weight-bold">n/a</p>
-</div>
-</div>
-<!-- End Col -->
-
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Total flights</p>
-<h4 id="day_traffic" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-
-<div class="col-6 col-md mb-3">
-<p class="mb-1 small text-muted">Vs prev. week</p>
-<h4 id="dif_day_prev_week" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs prev. year</p>                                        
-<h4 id="dif_day_prev_year" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs 2019</p>
-<h4 id="dif_day_2019" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-
-</div>                
-
-
-</div>
-<div id="flights-week" class="tab-pane fade in">
-
-<div class="row">
-
-<div class="col-6 col-md">
-<p id="week_text" class="font-weight-bold">n/a</p>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Avg. daily flights</p>
-<h4 id="week_traffic" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs prev. week</p>
-<h4 id="dif_week_prev_week" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs prev. year</p>
-<h4 id="dif_week_prev_year" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs 2019</p>
-<h4 id="dif_week_2019" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-
-</div>
-
-</div>
-
-<div id="flights-y2d" class="tab-pane fade in">
-
-<div class="row">
-<div class="col-6 col-md">
-<p id="y2d_text" class="font-weight-bold">n/a</p>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Total flights</p>
-<h4 id="y2d_traffic" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Avg. daily flights</p>
-<h4 id="avg_y2d_traffic" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs prev. year</p>
-<h4 id="dif_y2d_prev_year" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-<div class="col-6 col-md">
-<p class="mb-1 small text-muted">Vs 2019</p>
-<h4 id="dif_y2d_2019" class="mb-0 h5">n/a</h4>
-</div>
-<!-- End Col -->
-</div>
-
-</div>
-
-</div>
-
-<div id="graphcontainer" class="col-12">
-
-<iframe id="traffic-plot" style="border: 0; width: 100%; height: 380px;" src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-</div>
-
-
-</div>
-</div>
-</div>
-
-<div id="delay" class="tab-pane fade in">
-<div class="row">
-<div class="col-12">
-
-
-<div class="row align-items-sm-center mb-4">
-<div class="col-sm"></div>
-<!-- End Col -->
-
-<div class="col-sm-auto">
-
-<ul class="nav nav-segment nav-fill">
-<li class=""><a class="nav-link active" data-toggle="tab" href=#delay-day>Day</a></li>
-<li class=""><a class="nav-link" data-toggle="tab" href="#delay-week">Week</a></li>
-<li class=""><a class="nav-link" data-toggle="tab" href="#delay-y2d">Y2D</a></li>
-</ul>
-
-</div>
-<!-- End Col -->
-</div>
+                    <div id="flights-y2d" class="tab-pane fade in">
+                      <div class="row">
+                        <div class="col-6 col-md">
+                          <p id="y2d_text" class="font-weight-bold">n/a</p>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Total flights</p>
+                          <h4 id="y2d_traffic" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Avg. daily flights</p>
+                          <h4 id="avg_y2d_traffic" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs prev. year</p>
+                          <h4 id="dif_y2d_prev_year" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-6 col-md">
+                          <p class="mb-1 small text-muted">Vs 2019</p>
+                          <h4 id="dif_y2d_2019" class="mb-0 h5">n/a</h4>
+                        </div>
+                        <!-- End Col -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="graphcontainer" class="col-12">
+                    <iframe id="traffic-plot"
+                      style="border: 0; width: 100%; height: 380px;" 
+                      src="https://www.eurocontrol.int/Economics/Oscar/plot-traffic-lp_new.html"
+                      frameborder="0"
+                      scrolling="no"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="delay" class="tab-pane fade in">
+              <div class="row">
+                <div class="col-12">
+                  <div class="row align-items-sm-center mb-4">
+                    <div class="col-sm"></div>
+                    <!-- End Col -->
+                    <div class="col-sm-auto">
+                      <ul class="nav nav-segment nav-fill">
+                        <li class="">
+                          <a class="nav-link active"
+                            data-toggle="tab"
+                            href=#delay-day>Day</a>
+                        </li>
+                        <li class="">
+                          <a class="nav-link"
+                            data-toggle="tab"
+                            href="#delay-week">Week</a>
+                        </li>
+                        <li class="">
+                          <a class="nav-link"
+                            data-toggle="tab"
+                            href="#delay-y2d">Y2D</a>
+                        </li>
+                      </ul>
+                    </div>
+                  <!-- End Col -->
+                </div>
 
 
 
@@ -398,6 +457,7 @@ fullpage: true
 </div>
 </div>
 </div>
+```
 
 
 <div class="carousel-item">
