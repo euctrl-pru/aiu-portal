@@ -447,6 +447,15 @@ The sample is treated to consider only ground times with the following character
   text-indent: 25px;
 }
 
+#one .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#one div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+
 #one .gt_table {
   width: auto !important;
 }
@@ -454,17 +463,17 @@ The sample is treated to consider only ground times with the following character
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="Seats">Seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="category"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="seat_capacity">Seats</th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="WTC">
-        <span class="gt_column_spanner">WTC</span>
+        <div class="gt_column_spanner">WTC</div>
       </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Cutoff time&lt;span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;">Cutoff time<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="cutoff_time">Cutoff time<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
     </tr>
     <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="M">M</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="H">H</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="J">J</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="wtc_m">M</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="wtc_h">H</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="wtc_j">J</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -493,10 +502,9 @@ The sample is treated to consider only ground times with the following character
 <td headers="wtc_j" class="gt_row gt_left">x</td>
 <td headers="cutoff_time" class="gt_row gt_left">180 minutes</td></tr>
   </tbody>
-  
-  <tfoot class="gt_footnotes">
-    <tr>
-      <td class="gt_footnote" colspan="6"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Turnaround cutoff time based on scheduled Ground Time.</td>
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td class="gt_footnote" colspan="6"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Turnaround cutoff time based on scheduled Ground Time.</td>
     </tr>
   </tfoot>
 </table>
