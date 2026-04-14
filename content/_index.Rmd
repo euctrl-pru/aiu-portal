@@ -840,8 +840,7 @@ fullpage: true
 
 <br>
 
-<!-- =======================
-About START -->
+<!-- ======================= About START -->
 <section class="content-space bg-light">
   <div class="container">
 
@@ -909,12 +908,7 @@ About START -->
 
   </div>
 </section>
-<!-- =======================
-about END -->
-
-[ectl_daily]: https://www.eurocontrol.int/Economics/DailyTrafficVariation "Daily traffic updates"
-[ectlweb]: https://www.eurocontrol.int/ "EUROCONTROL web page"
-
+<!-- ======================= about END -->
 
 <script>
 
