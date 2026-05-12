@@ -12,6 +12,22 @@ extrajs: /javascript/img_pre.js
 
 
 ## 2026
+<!-- #59 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[First wave flights show improved year-on-year all-causes departure delays - EUROCONTROL Data Snapshot #59][DS59]</h5>
+<small><strong><p style="color:#808080">Published: 12 May 2026</p></strong></small>
+The 59. EUROCONTROL Data Snapshot shows that reducing delays in first wave flights improves overall network performance, with all-cause departure delays in first wave flights decreasing by 0.9 minutes per flight in 2025 compared to 2024.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-59-better-first-wave-performance target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds59.png" alt="First wave"></div>
+</div>
+</div></div>
+
 <!-- #58 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -1102,3 +1118,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS56]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-56-shifting-weekday-flight-patterns "shifting weekday flight patterns"
 [DS57]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers "2025 European aviation summary"
 [DS58]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-58-top-40-european-airports-historic-peak-days "Top 40 European airports’ historic peak days"
+[DS59]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-59-better-first-wave-performance "First wave flights show improved year-on-year all-causes departure delays"
