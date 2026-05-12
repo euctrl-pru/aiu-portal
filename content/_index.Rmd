@@ -414,21 +414,19 @@ fullpage: true
             <div class="carousel-item active">
               <div class="card border-0 rounded">
 
-                <a href="https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation"
+                <a href="https://ansperformance.eu/dashboard/stakeholder/ansp/ansp_db/"
                   target="_blank">
-                  <img src="/images/landing/2026-03-31_AT11_middle_east.png"
+                  <img src="/images/landing/2026-05-12_ansp_db.png"
                     style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="AT11">
                 </a>
                 <div style="padding: 1rem;">
                   <h5><a
-                      href="https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation"
-                      target="_blank">Aviation Trends #11 - Impact of the current Middle East
-                      crisis on European aviation</a></h5>
-                  <small>EUROCONTROL’s 11th Aviation Trends paper looks at how traffic flows, airspace
-                    closures and reroutings are impacting travel across the network.</small>
+                      href="https://ansperformance.eu/dashboard/stakeholder/ansp/ansp_db/"
+                      target="_blank">ANSP Performance Dashboard</a></h5>
+                  <small>The Air Navigation Service Provider (ANSP) dashboard has been redesigned with clearer visuals, date filters and daily updates - be sure to explore the latest delay and traffic metrics.</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation"
+                  <a href="https://ansperformance.eu/dashboard/stakeholder/ansp/ansp_db/"
                     class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
@@ -439,21 +437,19 @@ fullpage: true
             <div class="carousel-item">
               <div class="card border-0 rounded">
 
-                <a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2025" target="_blank">
-                  <img src="/images/landing/2026-03-26_prr2025.png"
+                <a href="https://ansperformance.eu/" target="_blank">
+                  <img src="/images/landing/2026-05-12_live_network_status.png"
                     style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;" alt="PRR 2025">
                 </a>
                 <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2025"
-                      target="_blank">Just published: Performance Review Report (PRR) 2025</a>
+                  <h5><a href="https://ansperformance.eu/"
+                      target="_blank">Live status of the network</a>
                   </h5>
-                  <small>The independent Performance Review Commission (PRC) has just released its
-                    Performance Review Report 2025, evaluating European Air Traffic Management (ATM)
-                    performance across a wide spectrum of key performance areas, including safety,
-                    capacity, environment, and cost-efficiency</small>
+                  <small>The familiar live network view from our Data App is now front and center on our landing page. It provides real-time updates on ATFM delays across the network, giving you instant visibility into current conditions.
+</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/performance-review-report-prr-2025" class="card-link"
+                  <a href="https://ansperformance.eu/"
                     target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
@@ -514,7 +510,7 @@ fullpage: true
                 </a>
                 <div style="padding: 1rem;">
                   <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-                  <small>February 2026 data available for download now!</small>
+                  <small>April 2026 data available for download now!</small>
                 </div>
                 <div class="card-footer pt-0">
                   <a href="/data/" class="card-link" target="_blank">Read more</a> <i
