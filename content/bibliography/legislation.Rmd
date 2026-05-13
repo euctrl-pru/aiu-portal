@@ -1,11 +1,87 @@
 ---
-title: "European Legislation for ANS Performance"
+title: "European Legislation for Aviation"
 layout: default
-nocite: '@*'
-bibliography: ../../static/bib/legislation.bib
-csl: eea.csl
 ---
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-# run setup script
-source(here::here("_common.R"))
-```
+
+## EU legislation in force in the fields of ATM/ANS, aerodromes and drones (SESLEX)
+
+The following link provides with an overview of SESLEX:  
+<https://learningzone.eurocontrol.int/doc/seslex.htm>
+
+It includes the following parts:
+
+* **Part 1a**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on ATM/ANS (except conformity assessment of ATM/ANS equipment & ATCOs)
+* **Part 1b**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on ATCOs & ATCO Training Organisations
+* **Part 1c**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on Unmanned Aircraft Systems (UAS) & other fields (without DS/CS/AMC/GM), except ATM/ANS & Aerodromes
+* **Part 1d**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on Aerodromes
+* **Part 1e**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on conformity assessment of ATM/ANS equipment & Artificial Intelligence
+* **Part 1f**: Basic Regulation 2018/1139, its implementing/delegated acts and associated DS/CS/AMC/GM – Focus on cross-domains & fields other than ATM/ANS, Aerodromes & Drones (without DS/CS/AMC/GM)
+* **Part 2a**: Regulation 2024/2803 and its IAs & community specifications (except performance & charging schemes)
+* **Part 2b**: Regulation 2024/2803 and its IAs/AMCs/GM (focus on economic legislation: performance & charging schemes, procurement & rules on competition)
+* **Part 3a**: Other Relevant EU Legislation (security-related – Focus on civil aviation security)
+* **Part 3b**: Other Relevant EU Legislation (security-related – Other than civil aviation security)
+* **Part 4**: Other Relevant EU Legislation (airport-specific)
+* **Part 5**: Other Relevant EU Legislation (miscellaneous)
+* **Part 6**: Other Relevant EU Legislation (environment-specific)
+
+
+## EU regulatory developments in the fields of ATM/ANS, aerodromes and drones (FUTURELEX)
+
+
+The following link provides with an overview of FUTURELEX:  
+<https://learningzone.eurocontrol.int/doc/futurelex.htm>
+It includes 2 parts:
+
+* **Part 1**
+  - **Part 1a** (or page 1) lists the relevant EASA ToRs/NPAs/CRDs/Opinions (focus on ATM/ANS & cross-domain developments)
+  - **Part 1b** (or page 2) lists the relevant EASA ToRs/NPAs/CRDs/Opinions (focus on Aerodromes, Drones & cross-domain developments)
+* **Part 2** (or page 3) focuses on Ongoing Consultations & Future of the Single European Sky
+
+## Dates of applicability of pieces of legislation in the fields of ATM/ANS, aerodromes and drones not yet (fully) applicable (SESCAL)
+
+The following link provides with an overview of SECAL:  
+<https://learningzone.eurocontrol.int/doc/sescal.htm>
+
+It includes all pieces of legislation (regulations, decisions, directives, DS/CS/AMC/GM, etc.) listed in the overview of EU legislation in force in the fields of ATM/ANS, Aerodromes and Drones not yet (fully) applicable, marked with a timer in the latter overview.
+Once they become applicable, they will be removed from this overview.
+
+## Regulation 2017/373 
+
+The following link provides an overview of Regulation 2017/373 and its AMC/GM, focusing on the management, assessment and oversight of changes:  
+<https://learningzone.eurocontrol.int/doc/LEX/2017-373-AMC-GM-changes.htm>
+
+The following link provides an overview of annexes/sections/chapters/requirements of Regulation 2017/373 **without** AMC/GM  
+<https://learningzone.eurocontrol.int/doc/LEX/2017-373-full.htm>
+
+The following link provides an overview of Regulation 2017/373 and its AMC/GM:  
+<https://learningzone.eurocontrol.int/doc/LEX/2017-373-amc-gm-full.htm>
+
+
+## Regulation 2015/340
+
+The following link provides an overview of annexes/sections/requirements of Regulation 2015/340, without AMC/GM:  
+<https://learningzone.eurocontrol.int/doc/LEX/2015-340-full.htm>
+
+## Regulation 2023/1768
+The following link provides an overview of Regulation 2023/1768 on the certification, declaration and Statement of Compliance of ATM/ANS equipment:  
+<https://learningzone.eurocontrol.int/doc/lex/2023-1768-full.htm>
+
+## Regulation 2023/1769
+
+The following link provides an overview of Regulation 2023/1769 on the approval of DPOs:  
+<https://learningzone.eurocontrol.int/doc/lex/2023-1769-full.htm>
+
+
+## Regulation 2023/1770
+The following link provides an overview of Regulation 2023/1770 on airspace usage requirements:  
+<https://learningzone.eurocontrol.int/doc/lex/2023-1770-full.htm>
+
+## Regulation 2018/1139
+
+The following link provides an overview of the Basic Regulation 2018/1139:  
+<https://learningzone.eurocontrol.int/doc/LEX/2018-1139-overview.htm>
+
+## Regulation 2024/2803
+
+The following link provides an overview of Regulation 2024/2803 on the implementation of the Single European Sky (SES2+ recast):  
+<https://learningzone.eurocontrol.int/doc/lex/2024-2803-full.htm>
