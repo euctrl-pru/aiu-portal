@@ -15,7 +15,7 @@ ert_dly_aua_end: Mar 2026 # UPDATE MONTHLY (M)
 
 ## En-route IFR flights and ATFM delays (AUA) - With post ops adj.
 ert_dly_aua_post_beg: Jan 2016
-ert_dly_aua_post_end: Dec 2024
+ert_dly_aua_post_end: Dec 2025
 
 ## En-route IFR flights and ATFM delays (FIR) - No post ops adj.
 ert_dly_fir_beg: Jan 2013
@@ -23,7 +23,7 @@ ert_dly_fir_end: Mar 2026 # UPDATE MONTHLY (M)
 
 ## En-route IFR flights and ATFM delays (FIR) - With post ops adj.
 ert_dly_fir_post_beg: Jan 2016
-ert_dly_fir_post_end: Dec 2024
+ert_dly_fir_post_end: Dec 2025
 
 ## Horizontal en-route flight efficiency
 hfe_beg: Jan 2014
@@ -40,7 +40,7 @@ apt_dly_end: Mar 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - With post ops adj.
 apt_dly_post_beg: Jan 2016
-apt_dly_post_end: Dec 2024
+apt_dly_post_end: Dec 2025
 
 ## ASMA additional time
 asma_beg: Jan 2018
