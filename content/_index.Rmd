@@ -73,7 +73,7 @@ fullpage: true
           <div id="live" class="tab-pane fade in active show">
             <div class="card border-0 rounded p-3 mb-0 pb-0">
               <iframe id="test_map" class="rounded" style="border: 0; width: 100%; height: 550px;"
-                src="https://www.eurocontrol.int/Economics/Oscar/live_main_statistics_webpage_v12.html" frameborder="0"
+                src="https://www.eurocontrol.int/Economics/Oscar/portal_landing_page_live.html" frameborder="0"
                 scrolling="no" allowfullscreen>
               </iframe>
               <div class="mt-2">
