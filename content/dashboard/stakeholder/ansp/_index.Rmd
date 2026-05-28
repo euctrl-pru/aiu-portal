@@ -15,10 +15,10 @@ date: '2020-05-15'
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img = "ansp_db.png",
+  img = "2026-05-12_ansp_db.png",
   link = "/dashboard/stakeholder/ansp/ansp_db",
   title = "ANSP Operational Performance Dashboard",
-  text = "Monthly overview of operational ANSP performance across a wide spectrum of indicators.<br><br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
+  text = "Daily overview of operational ANSP performance across a wide spectrum of indicators.<br><br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
   alt = "ANSP performance dashboard",
   command = "Resize",
   options = "300x",
