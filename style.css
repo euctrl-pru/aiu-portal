@@ -40,7 +40,8 @@ body {
     z-index: 99;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255);
+    font-weight: 600
 }
 .navbar-nav-wrap {
     display: flex;
@@ -173,10 +174,6 @@ body {
     padding: .5rem .8125rem;
     border-radius: .5rem;
 }
-
-.nav-item {
-    color: #fff;
-}
 .nav-segment .nav-link.active {
     background-color: #fff;
     box-shadow: 0 .1875rem .375rem 0 rgba(140, 152, 164, .25);
@@ -184,9 +181,10 @@ body {
 .nav-tabs {
     padding-bottom: .125rem;
 }
+
 /* Default style for large screens */
 .custom-hero {
-  height: min-content; /* Adjust this value to control the height */
+  height: min-content;
   background-size: cover;
   background-position: right;
 }
@@ -194,7 +192,7 @@ body {
 /* Style for small screens */
 @media (max-width: 1540px) {
     .custom-hero {
-        height: min-content; /* Adjust this value to control the height */
+        height: min-content;
         background-size: cover;
         background-position: right;
     }
@@ -203,7 +201,7 @@ body {
 /* Style for small screens */
 @media (max-width: 1000px) {
     .custom-hero {
-        height: min-content; /* Adjust this value to control the height */
+        height: min-content;
         background-size: cover;
         background-position: right;
     }
