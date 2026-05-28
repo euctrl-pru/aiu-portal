@@ -15,5 +15,4 @@ options(
   blogdown.serve_site.startup = FALSE,
   blogdown.publishDir = '../aiu-portal-generated',
   blogdown.hugo.version = "0.92.1",
-  blogdown.hugo.dir = "C:/Users/qgoens/dev/0.92.1/0.92.1"
 )
