@@ -14,5 +14,5 @@ options(
   blogdown.knit.on_save = TRUE,
   blogdown.serve_site.startup = FALSE,
   blogdown.publishDir = '../aiu-portal-generated',
-  blogdown.hugo.version = "0.92.1",
+  blogdown.hugo.version = "0.92.1"
 )
