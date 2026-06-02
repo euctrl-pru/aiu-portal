@@ -118,12 +118,6 @@ command = "hugo --gc --minify"
   force = true
 
 [[redirects]]
-  from = "/global/brazil/bra-eur-2025.pdf"
-  to = "https://euctrl-pru.github.io/international-BRA-EUR-2025/Operational-Comparison-of-ANS-Performance.pdf"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/global/brazil/bra-eur-2025/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR-2026/:splat"
   status = 200
