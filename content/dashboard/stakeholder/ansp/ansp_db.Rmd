@@ -5,21 +5,25 @@ title: Air Navigation Service Provider (ANSP) View
     
     .resp-container {
         position: relative;
+        width: 110%;
         overflow: hidden;
-        padding-top: 160.0%;
+        padding-top: 155.0%;
+        
+
+        
     }
     
     .resp-iframe {
         position: absolute;
         top: 0;
         left: 0;
-        width: 90%;
+        width: 100%;
         height: 105%;
         border: 0;
     }
 </style>
  
-<div>The analysis may take a few moments to load and is best viewed in Chrome.</div>
+
  
-<div class="resp-container"><iframe class="resp-iframe" src="https://datastudio.google.com/embed/reporting/b6749081-d98f-4c8c-9828-7691f4b0a119/page/hjss" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="resp-container"><iframe class="resp-iframe"  src="https://app.powerbi.com/view?r=eyJrIjoiNDg4ZjdiMzctMDY2ZC00OTVmLTg5ZDItOGMwN2VhMjFiNTlmIiwidCI6Ijc2ZjMzYzIwLTU5NzktNDQwOC1hZGY3LThiM2M0YmU5NWU1MiIsImMiOjl9" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
