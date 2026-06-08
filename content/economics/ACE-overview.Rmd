@@ -75,7 +75,7 @@ support_costs_per_cph_change_perc <- paste0(if_else(support_costs_per_cph_change
 <div class="col-sm-9">
 The ACE benchmarking project analyses the cost-effectiveness and productivity of 38 European Air Navigation Service Providers (ANSPs) in Europe. It examines both individual ANSPs and the Pan-European ATM/CNS system as a whole.
 
-In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2023) has been developed. It enables the aviation community to build customised views on ANSPs economic performance.
+In addition to the publication of interim and final annual reports, an interactive dashboard containing the whole ACE data (2002-2024) has been developed. It enables the aviation community to build customised views on ANSPs economic performance.
 </div><!-- closes col  -->
 
 <div class="col-sm-3">
@@ -89,8 +89,8 @@ In addition to the publication of interim and final annual reports, an interacti
 </div><!-- closes container  -->
 
 <div class="container">
-#### [High-level summary report on preliminary ACE 2024 data (December 2025)](https://ansperformance.eu/economics/ace/ace-hlsr/)
-This [report](https://ansperformance.eu/economics/ace/ace-hlsr/) is based on the 2024 data submitted by ANSPs in July 2025. It should be noted that the data presented in this document are still preliminary and not yet fully validated. The final ACE benchmarking report will provide more detailed information on observed changes for selected performance indicators both at pan-European system level and at ANSP level.
+#### [ACE Benchmarking Report 2026 Edition](https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2026-edition)
+This report is based on the 2024 data submitted by ANSPs in July 2025. It demonstrates the recovery of the Pan-European ATM system from the shock caused by the COVID-19 pandemic across several key metrics. Therefore, in addition to analysis of 2024 European ATM cost-effectiveness, it also includes a retrospective analysis of the impact of the COVID-19 pandemic on European ATM, including the measures implemented in response and lessons learned.
 
 <div class="row">
 <div class="col-md-6" >
@@ -137,17 +137,25 @@ plot_ACE
 <br>
 <div class="container" >
 
-*	ATM/CNS provision costs per composite flight-hour decreased by -1.4% in 2024, remaining slightly below their pre-crisis level. This improvement reflects the fact that traffic rose faster (+5.5%) than ATM/CNS provision costs (+4.0%), with both metrics exceeding 2019 levels for the first time since the COVID-19 crisis.
+*	The ATM/CNS provision cost‑effectiveness indicator reached €469 per composite flight‑hour in 2024, the lowest level since 2002 in real terms.
 
-*	The increase in ATM/CNS provision costs (+€405M) was mainly driven by higher staff costs (+€271M), non-staff operating costs (+€90M) and depreciation costs (+€88M), while the cost of capital declined (-€74M). This reflects a general trend, as costs rose for 33 out 38 ANSPs in 2024.
+*	2024 was marked by post‑COVID recovery, with traffic, revenues, costs and staffing levels all surpassing 2019 values at the Pan‑European system level.
 
-*	ATM/CNS staff numbers grew by +2.8% (+1 478 FTEs) compared to 2023, surpassing the 2019 level by +2.0%. Both ATCOs in OPS and support staff were +2.0% higher than in 2019.
+*	Following the temporary adjustments to staffing and the slowing of some investment programmes during the COVID‑19 crisis, 2024 showed clear signs of renewed capacity building.
 
-*	ANSP balance sheets in 2024 comprised some €10.3 billion in capital and reserves and €5.5 billion in borrowings, while capital expenditure reached €1.5 billion. Capital and reserves increased by +8% (+€0.8 billion), while the level of indebtedness continued to decline, falling by -10% (-€0.6 billion).
+*	ANSPs increased recruitment and training of ATCOs, and capital expenditures rebounded sharply. These developments indicate that several ANSPs have been actively expanding their operational capability in a context of robust traffic recovery at the Pan-European system level. This is essential given the record 29.6 million minutes of ATFM delays recorded in 2024, generating an estimated €3.9 billion in costs for airspace users.
 
-*	However, improvements in terms of ATM/CNS provision cost-effectiveness were offset by a deterioration in service quality, measured by gate-to-gate ATFM delays.
+*	As highlighted repeatedly in PRC reports, insufficient ATC capacity results in disproportionately higher costs for airspace users and passengers, often exceeding the cost of deploying additional ATCO resources. Moreover, given the long lead times for ATCO recruitment and training, even with corrective actions underway, significant ATC capacity constraints and staffing‑related delays may continue to affect network performance for several years.
 
-*	Indeed, gate-to-gate ATFM delays in 2024 reached 29.6 million minutes, resulting in an estimated cost of €3.9 billion on airspace users, the highest level ever recorded. This figure represents more than one-third of ATM/CNS provision costs and surpasses total ATCO in OPS employment costs at the Pan-European system level (€3.5 billion).
+*	Regarding the lessons learned from the COVID-19 pandemic:
+
+    * The crisis exposed the challenges for ANSPs and other ANS stakeholders in making decisions amid high uncertainty on traffic recovery.
+  
+    * Bridging the revenue gap was a primary concern, with ANSPs relying heavily on cash reserves and access to loan financing. 
+  
+    * Measures containing cost and capex were also implemented, some of which, while necessary at the time, later proved to constrain recovery and capacity redeployment.
+  
+    * In contrast, greater flexibility in workforce management and operations, as well as a good level of interaction amongst local and European stakeholders, were essential in adapting to the crisis. 
 
 </div>
 
@@ -159,7 +167,7 @@ plot_ACE
 
 <div class="row align-items-start">
 <div class="col-sm-2">
-  <img src="/images/prc/ace2025ed.png" alt="ACE 2024 Edition" style="border: 1px solid rgba(0,0,0,.125)">
+  <img src="/images/prc/ace2026ed.png" alt="ACE 2026 Edition" style="border: 1px solid rgba(0,0,0,.125)">
 
 </div>
 
@@ -171,7 +179,7 @@ plot_ACE
 <div style="background-color: #F2F2F2; "  >
 **Main report**
 <span class="float-right">
-<a href="https://www.eurocontrol.int/sites/default/files/2025-06/eurocontrol-ace-benchmarking-report-2025-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
+<a href="https://www.eurocontrol.int/sites/default/files/2026-06/eurocontrol-ace-benchmarking-report-2026-edition.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a>
 <!-- <a href="library/eurocontrol-ace-2020-benchmarking-report.pdf" data-toggle="tooltip" title="Download pdf version" download><i class="fas fa-download"></i></a> -->
 </span>
 </div>
@@ -181,15 +189,15 @@ plot_ACE
 <details open>
 <summary>**Main Chapters:**</summary>
   2. Overview of the Pan-European ANS system
-  3. Financial cost-effectiveness performance
-  4. Economic cost-effectiveness analysis
-  5. Forward-looking cost-effectiveness (2024-2028)
+  3. Cost-effectiveness analysis
+  4. Forward-looking cost-effectiveness (2025-2029)
+  5. Retrospective on the ANS industry's response to the COVID-19 crisis
   6. Financial indicators calculated from ANSPs' financial statements
 </details>
 
 <details>
 <summary>**Annexes**</summary>
-  * ANNEX 1 – Status of ANSPs 2023 Annual Reports
+  * ANNEX 1 – Status of ANSPs 2024 Annual Reports
   * ANNEX 2 – Performance indicators used for the comparison of ANSPs
   * ANNEX 3 – Performance ratios
   * ANNEX 4 – Exchange rates, inflation rates and purchasing power parities (PPPS) data
@@ -245,7 +253,7 @@ Access information on individual ANSPs institution arrangements, legal status, c
 
 <a href="/economics/ace/ansp-ceff/" target="_blank">**ANSPs individual summary reports**</a>
 </div>
-Access information on individual ANSPs cost-effectiveness performance (2018-2023), comparison with peers and historical information on capital investments projects.
+Access information on individual ANSPs cost-effectiveness performance (2019-2024), comparison with peers and historical information on capital investments projects.
 </div>
 </div> <!-- closes secondary row -->
 
@@ -268,11 +276,11 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 <!-- </div> -->
 
 
-<div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank">
-  <img class="card-img-top" src="/images/eco/ace-hlsr2024.png" alt="High-level Summary report on Preliminary ACE 2024 Data">
-  <div class="card-body"><h5 class="card-title">High-level Summary report on Preliminary ACE 2024 Data</h5></a><p class="card-text"></p>
-  </div>
-</div>
+<!-- <div class="card" ><a href="https://ansperformance.eu/economics/ace/ace-hlsr/" target="_blank"> -->
+<!--   <img class="card-img-top" src="/images/eco/ace-hlsr2024.png" alt="High-level Summary report on Preliminary ACE 2024 Data"> -->
+<!--   <div class="card-body"><h5 class="card-title">High-level Summary report on Preliminary ACE 2024 Data</h5></a><p class="card-text"></p> -->
+<!--   </div> -->
+<!-- </div> -->
 
 
 <!-- <div class="card" ><a href="https://www.eurocontrol.int/publication/atm-cost-effectiveness-ace-first-look-ansps-2024-data" target="_blank"> -->
@@ -281,9 +289,9 @@ Access information on individual ANSPs cost-effectiveness performance (2018-2023
 <!--   </div> -->
 <!-- </div> -->
 
-<div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition" target="_blank">
-  <img class="card-img-top" src="/images/prc/ace2025ed.png" alt="ACE report May 2025 edition">
-  <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (May 2025 edition)</h5></a><p class="card-text"></p>
+<div class="card" ><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2026-edition" target="_blank">
+  <img class="card-img-top" src="/images/prc/ace2026ed.png" alt="ACE report May 2026 edition">
+  <div class="card-body"><h5 class="card-title">Latest ACE benchmarking report (2026 edition)</h5></a><p class="card-text"></p>
   </div>
 </div>
 
