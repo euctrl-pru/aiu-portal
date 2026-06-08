@@ -355,7 +355,8 @@
     right: 0;
 }
 .navbar {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     z-index: 99;
 }
 .navbar-dark .navbar-nav .nav-link {
@@ -383,14 +384,90 @@
     padding-bottom: 4rem !important;
 }
 .hero {
-    padding-top: 7rem !important;
+    padding-top: 8rem !important;
     padding-bottom: 5rem !important;
 }
-@media (min-width: 1200px) {
-    .bg-dark{
-        box-shadow: none;
-        background-color: transparent !important;
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .navbar-expand-xl {
+        flex-wrap: wrap !important;
     }
+    .navbar-expand-xl .navbar-collapse {
+        display: none !important;
+        flex-basis: 100%;
+    }
+    .navbar-expand-xl .navbar-collapse.show,
+    .navbar-expand-xl .navbar-collapse.collapsing {
+        display: block !important;
+    }
+    .navbar-expand-xl .navbar-toggler {
+        display: block !important;
+    }
+    .navbar-expand-xl .navbar-nav {
+        flex-direction: column;
+    }
+}
+.navbar.bg-dark {
+    box-shadow: none;
+    background-color: transparent !important;
+}
+@media (max-width: 1399.98px) {
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        width: 280px;
+        max-width: calc(100vw - 2rem);
+        background-color: #0f1120;
+        padding: 1rem 1.25rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+        z-index: 100;
+    }
+    .navbar-collapse.show .nav-link {
+        padding: 0.4rem 0.75rem;
+        border-radius: 0.25rem;
+    }
+    .navbar-collapse.show .nav-link:hover,
+    .navbar-collapse.show .nav-link:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .navbar-collapse.show .dropdown-menu {
+        position: static !important;
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 1rem;
+    }
+    .navbar-collapse.show .dropdown-menu .dropdown-item {
+        color: rgba(255, 255, 255, 0.7) !important;
+        background-color: transparent !important;
+        padding: 0.3rem 0.75rem;
+        border-radius: 0.25rem;
+        white-space: normal;
+    }
+    .navbar-collapse.show .dropdown-menu .dropdown-item:hover,
+    .navbar-collapse.show .dropdown-menu .dropdown-item:focus {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #fff !important;
+    }
+    .navbar-collapse.show .form-inline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-top: 0.75rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar-collapse.show .form-inline .form-control {
+        flex: 1;
+        min-width: 0;
+    }
+}
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .card-body p {
     margin-bottom: 0;
