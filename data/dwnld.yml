@@ -97,7 +97,7 @@ ace_opt_beg: Jan 2019
 ace_opt_end: Apr 2026 # UPDATE MONTHLY (M)
 
 ## ACE operational data - Yearly 
-ace_year_end: 2023
+ace_year_end: 2025
 
 ## ANSPs financial data - Yearly 
 ansp_fin_beg: 2017
