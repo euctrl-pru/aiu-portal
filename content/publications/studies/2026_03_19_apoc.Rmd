@@ -1,0 +1,40 @@
+---
+title: "PRC Airport Operations Centres (APOC) Factsheets"
+type: "Performance Study"
+date: '2026-03-19'
+excerpt: "Performance Study"
+bibliography: [../../../static/bib/aviation.bib]
+link-citations: true
+dwnld_i: <i class="fa pru fa-download"></i>
+tags: Performance Study, Airport Operations
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+ 
+<br>
+<div class="container">
+<div class="row align-items-start">
+
+
+The Transformation Support Strategy (TSS) of the independent Performance Review Commission (PRC) helps to analyse how emerging technologies enhance the European ATM system performance. As part of this, the Airport Operation Centre (APOC) concept was selected as a flagship project.
+
+Airport Operations Centres (APOCs) serve as collaborative platforms for key airport stakeholders, enhancing decision-making, coordination, and operational efficiency through shared information, improved situational awareness, and a unified, coordinated approach.
+
+APOCs have been designated as a flagship initiative for future improvements in ATM system performance by the Performance Review Commission (PRC) as part of its transformation support strategy.
+
+The 2026 publication provides an overview of APOCs at 32 airports in the EUROCONTROL area. It builds on the 2025 inventory by adding five new airports. In addition, the 2026 update highlights operational improvements and technology upgrades implemented at airports included in the previous edition.
+
+Download the full report below to find out more.
+
+<br><br><a href="https://www.eurocontrol.int/sites/default/files/2026-05/eurocontrol-prc-apoc-factsheets-ed-2026.pdf" data-toggle="tooltip" title="Download pdf version" target="_blank" class="btn btn-info" role="button"> PRC Airport Operations Centres (APOC) Factsheets <br> {{% dwnld_i %}} Download </a>
+
+#### Notice
+*The PRC has made every effort to ensure that the information and analysis contained in this document are as accurate and 
+complete as possible. Despite these precautions, should you find any errors or inconsistencies we would be grateful if you 
+could please bring them to the [Aviation Intelligence Unit's attention](mailto:PRU-Support@eurocontrol.int).*
+
+
+</div>
+</div>
