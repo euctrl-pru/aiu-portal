@@ -18,6 +18,8 @@ This dashboard illustrates the question "where can you fly from a specific Europ
 
 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;Disclaimer: Note that the dashboard tracks **past connectivity**, i.e. flights that have taken place in the selected period. It does not consider the currently planned airline schedules, so any conclusions drawn from it, should be within this context.
 
+For additional insights, see also our <a href="https://ext.eurocontrol.int/connectivity_web/from" target="_blank" rel="noopener noreferrer">door-to-door connectivity dashboard</a>, which explores air travel choices at the regional level across Europe.
+
 Feel free to contact the [Aviation Intelligence Unit](mailto:aviation-intelligence@eurocontrol.int) to suggest improvements. 
 
 <small>Please note that the dashboard may take a few moments to load.</small>
