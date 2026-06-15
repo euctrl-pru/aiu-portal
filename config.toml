@@ -114,7 +114,7 @@ ignoreFiles = [
   [[menu.main]]
     pre = "<i class='fas fa-calendar'></i>"
     name = "&nbsp;Punctuality"
-    url = "/traffic/punctuality/"
+    url = "/punctuality/punctuality/"
     identifier = "key-punctuality"
     parent = "dashboard"
     weight = 20
@@ -128,14 +128,14 @@ ignoreFiles = [
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Network punctuality</span>"
-      url = "/traffic/punctuality/#eurocontrol-area-network-view-1"
+      url = "/punctuality/punctuality/#eurocontrol-area-network-view-1"
       identifier = "key-punctuality-network"
       parent = "dashboard"
       weight = 22
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>State & airport punctuality</span>"
-      url = "/traffic/punctuality/#state-view-1"
+      url = "/punctuality/punctuality/#state-view-1"
       identifier = "key-punctuality-state-airport"
       parent = "dashboard"
       weight = 23

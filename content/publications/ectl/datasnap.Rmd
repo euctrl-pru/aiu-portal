@@ -12,6 +12,22 @@ extrajs: /javascript/img_pre.js
 
 
 ## 2026
+<!-- #60 -->
+<div class="container alert alert-secondary">
+<div class="row align-items-start">
+
+<div class="col-sm-8"> 
+<h5>[What 2025 data reveal about the average flight in Europe - EUROCONTROL Data Snapshot #60][DS60]</h5>
+<small><strong><p style="color:#808080">Published: 12 June 2026</p></strong></small>
+The 60. EUROCONTROL Data Snapshot examines the average flight in the EUROCONTROL area, incorporating 2025 data.<br><br>
+<a class="btn btn-primary btn-sm" href=https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-60-what-2025-data-reveal-about-average-flight-europe target="_blank" role="button">Learn more...</a>
+</div>
+
+<div class="col-sm-4"><br>
+<div class="card border-0"><a href="#" class="pop"><img class="card-img-top" src="/images/ds/ds60.png" alt="Average flight"></div>
+</div>
+</div></div>
+
 <!-- #59 -->
 <div class="container alert alert-secondary">
 <div class="row align-items-start">
@@ -1119,3 +1135,4 @@ In normal times the published airline schedules are a pretty good indicator of h
 [DS57]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-57-2025-european-aviation-numbers "2025 European aviation summary"
 [DS58]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-58-top-40-european-airports-historic-peak-days "Top 40 European airports’ historic peak days"
 [DS59]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-59-better-first-wave-performance "First wave flights show improved year-on-year all-causes departure delays"
+[DS60]:  https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-60-what-2025-data-reveal-about-average-flight-europe "the average flight in the EUROCONTROL area"
