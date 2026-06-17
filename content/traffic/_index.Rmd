@@ -132,7 +132,7 @@ This page provides an overview of the traffic, [ATFM delay](/definition/atfm-del
     <a class="nav-link" href="/traffic/delay/">ATFM Delays</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/traffic/punctuality">Punctuality</a>
+    <a class="nav-link" href="/punctuality/punctuality">Punctuality</a>
   </li> 
 </ul>
 
