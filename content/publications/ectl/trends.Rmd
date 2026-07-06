@@ -1,0 +1,6 @@
+---
+title: EUROCONTROL Aviation Trends
+description: "Timely analysis of notable events, patterns, and developments in European aviation."
+layout: pub-detail-list
+data_key: pub_trends
+---

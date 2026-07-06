@@ -1,0 +1,166 @@
+years:
+  - year: 2024
+    items:
+      - title: "Think Paper #22 - Decarbonising long-haul flights by 2050"
+        date: "17 October 2024"
+        description: "This Think Paper examines the pathways and challenges involved in decarbonising long-haul aviation by 2050."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-22-decarbonising-long-haul-flights-2050"
+        image: "/images/tp/tp22.png"
+        external: true
+
+  - year: 2023
+    items:
+      - title: "Think Paper #21 - Long-haul flight decarbonisation: When can cutting-edge energies & technologies make a difference?"
+        date: "22 August 2023"
+        description: "This Think Paper explores the timeline for advanced energy sources and technologies to contribute meaningfully to long-haul flight decarbonisation."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-21-long-haul-flight-decarbonisation-when-can-cutting-edge"
+        image: "/images/tp/tp21.jpg"
+        external: true
+
+      - title: "Think Paper #20 - Dual-use CNS: The Civil-Military Interoperability Multiplier"
+        date: "25 May 2023"
+        description: "This Think Paper examines how dual-use Communication, Navigation, and Surveillance (CNS) infrastructure can enhance civil-military interoperability."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-20-dual-use-cns-civil-military-interoperability-multiplier"
+        image: "/images/tp/tp20.png"
+        external: true
+
+  - year: 2022
+    items:
+      - title: "Think Paper #19 - ATC Mobility and Capacity Shortfalls"
+        date: "19 December 2022"
+        description: "This Think Paper examines the relationship between ATC staff mobility and the capacity shortfalls experienced in European airspace."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-19-atc-mobility-and-capacity-shortfalls"
+        image: "/images/tp/tp19.png"
+        external: true
+
+      - title: "Think Paper #18 - One size fits all: A common unit rate for Europe?"
+        date: "6 September 2022"
+        description: "This Think Paper explores whether a single, harmonised unit rate across Europe could improve efficiency and fairness in ANS charging."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-18-one-size-fits-all-common-unit-rate-europe"
+        image: "/images/tp/tp18.jpg"
+        external: true
+
+      - title: "Think Paper #17 - Why aviation urgently needs to improve its use of radio spectrum"
+        date: "30 June 2022"
+        description: "This Think Paper highlights the growing pressures on aviation's use of radio spectrum and the urgent need for modernisation."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-17-why-aviation-urgently-needs-improve-its-use-radio-spectrum"
+        image: "/images/tp/tp17.jpg"
+        external: true
+
+      - title: "Think Paper #16 - Reducing aviation emissions by 55% by 2030"
+        date: "12 May 2022"
+        description: "This Think Paper assesses the feasibility and challenges of achieving a 55% reduction in aviation emissions by 2030."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-16-reducing-aviation-emissions-55-by-2030"
+        image: "/images/tp/tp16.jpg"
+        external: true
+
+      - title: "Think Paper #15 - Charting the European Aviation recovery: 2021 COVID-19 impacts and 2022 outlook"
+        date: "1 January 2022"
+        description: "This Think Paper reviews the impact of COVID-19 on European aviation in 2021 and provides an outlook for 2022."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-15-2021-covid-19-impact-and-2022-outlook"
+        image: "/images/tp/tp15.jpg"
+        external: true
+
+  - year: 2021
+    items:
+      - title: "Think Paper #14 - The future of air navigation services"
+        date: "21 October 2021"
+        description: "This Think Paper explores possible future models for air navigation service provision in Europe."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-14-future-air-navigation-services"
+        image: "/images/tp/tp14.jpg"
+        external: true
+
+      - title: "Think Paper #13 - Greening European ATM's ground infrastructure"
+        date: "29 September 2021"
+        description: "This Think Paper examines the environmental footprint of ATM ground infrastructure and opportunities for greening."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-13-greening-european-atms-ground-infrastructure"
+        image: "/images/tp/tp13.jpg"
+        external: true
+
+      - title: "Think Paper #12 - Aviation under attack from a wave of cybercrime"
+        date: "5 July 2021"
+        description: "This Think Paper examines the rising threat of cybercrime in the aviation sector and what can be done to counter it."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-12-aviation-under-attack-wave-cybercrime"
+        image: "/images/tp/tp12.jpg"
+        external: true
+
+      - title: "Think Paper #11 - Plane and train: Getting the balance right"
+        date: "3 June 2021"
+        description: "This Think Paper explores the interplay between aviation and rail as transport modes and how to achieve the right balance."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-11-plane-and-train-getting-balance-right"
+        image: "/images/tp/tp11.jpg"
+        external: true
+
+      - title: "Think Paper #10 - Flying the 'perfect green flight': How can we make every journey as environmentally friendly as possible?"
+        date: "20 April 2021"
+        description: "This Think Paper examines what a perfect green flight would look like and what changes are needed to make every journey as environmentally friendly as possible."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-10-flying-perfect-green-flight"
+        image: "/images/tp/tp10.jpg"
+        external: true
+
+      - title: "Think Paper #9 - Radio Frequency Interference to satellite navigation: An active threat for aviation?"
+        date: "1 March 2021"
+        description: "This Think Paper examines the growing threat of radio frequency interference to GNSS-based satellite navigation used by aviation."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-think-paper-9-radio-frequency-interference-satellite-navigation-active"
+        image: "/images/tp/tp09.jpg"
+        external: true
+
+      - title: "Think Paper #8 - Impact of COVID-19 on European Aviation in 2020 and Outlook 2021"
+        date: "1 January 2021"
+        description: "This Think Paper reviews the devastating impact of COVID-19 on European aviation in 2020 and looks ahead to 2021."
+        url: "https://www.eurocontrol.int/publication/what-covid19-did-european-aviation-2020-outlook-2021"
+        image: "/images/tp/tp08.jpg"
+        external: true
+
+  - year: 2020
+    items:
+      - title: "Think Paper #7 - Does taxing aviation really reduce emissions?"
+        date: "19 October 2020"
+        description: "This Think Paper examines the effectiveness of aviation taxation as a tool for reducing CO₂ emissions."
+        url: "https://www.eurocontrol.int/publication/does-taxing-aviation-reduce-emissions"
+        image: "/images/tp/tp07.jpg"
+        external: true
+
+      - title: "Think Paper #6 - Arriving on time: the passenger priority"
+        date: "29 January 2020"
+        description: "This Think Paper explores the importance of on-time performance from the passenger perspective."
+        url: "https://www.eurocontrol.int/publication/arriving-time-passenger-priority"
+        image: "/images/tp/tp06.png"
+        external: true
+
+  - year: 2019
+    items:
+      - title: "Think Paper #5 - Effects on the network of extra standby aircraft and Boeing 737 MAX grounding"
+        date: "25 October 2019"
+        description: "This Think Paper examines the network-wide effects of airlines adding standby aircraft and the grounding of the Boeing 737 MAX fleet."
+        url: "https://www.eurocontrol.int/publication/effects-network-extra-standby-aircraft-and-boeing-737-max-grounding"
+        image: "/images/tp/tp05.jpg"
+        external: true
+
+      - title: "Think Paper #4 - The aviation network: Decarbonisation issues"
+        date: "10 September 2019"
+        description: "This Think Paper explores the challenges of decarbonising the aviation network."
+        url: "https://www.eurocontrol.int/publication/aviation-network-decarbonisation-issues"
+        image: "/images/tp/tp04.jpg"
+        external: true
+
+      - title: "Think Paper #3 - Cybersecurity in aviation"
+        date: "28 August 2019"
+        description: "This Think Paper examines the cybersecurity landscape in aviation and the challenges ahead."
+        url: "https://www.eurocontrol.int/publication/cybersecurity-aviation"
+        image: "/images/tp/tp03.jpg"
+        external: true
+
+      - title: "Think Paper #2 - Air traffic flow management (ATFM) regulations: a power for good"
+        date: "18 July 2019"
+        description: "This Think Paper examines how ATFM regulations are used to manage demand and capacity, and their positive impact on network performance."
+        url: "https://www.eurocontrol.int/publication/air-traffic-flow-management-atfm-regulations-power-good"
+        image: "/images/tp/tp02.jpg"
+        external: true
+
+      - title: "Think Paper #1 - Fuel tankering in European skies: economic benefits and environmental impact"
+        date: "21 June 2019"
+        description: "This Think Paper examines the practice of fuel tankering and its economic benefits versus environmental costs."
+        url: "https://www.eurocontrol.int/publication/fuel-tankering-european-skies-economic-benefits-and-environmental-impact"
+        image: "/images/tp/tp01.jpg"
+        external: true

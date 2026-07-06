@@ -1,0 +1,85 @@
+years:
+  - year: 2026
+    items:
+      - title: "Aviation Trends #11 - Impact of the current Middle East crisis on European aviation"
+        date: "31 March 2026"
+        description: "This Aviation Trends edition analyses the impact of the current Middle East crisis on European aviation operations and traffic patterns."
+        url: "https://www.eurocontrol.int/publication/impact-current-middle-east-crisis-european-aviation"
+        image: "/images/at/at11.png"
+        external: true
+
+  - year: 2025
+    items:
+      - title: "Aviation Trends #10 - Overview of European air traffic during Summer 2025"
+        date: "6 October 2025"
+        description: "This edition provides a comprehensive overview of European air traffic performance during the Summer 2025 season."
+        url: "https://www.eurocontrol.int/publication/overview-european-air-traffic-during-summer-2025"
+        image: "/images/at/at10.jpg"
+        external: true
+
+      - title: "Aviation Trends #9 - Impact of the French ATC strike of 3 & 4 July 2025 on European Aviation"
+        date: "10 July 2025"
+        description: "This edition analyses the impact of the French ATC strike on 3 and 4 July 2025 on European aviation operations."
+        url: "https://www.eurocontrol.int/publication/impact-french-atc-strike-3-4-july-2025-european-aviation"
+        image: "/images/at/at9.jpg"
+        external: true
+
+      - title: "Aviation Trends #8 - The long-term decline of domestic flights in Europe"
+        date: "20 May 2025"
+        description: "This edition examines the long-term decline of domestic flights across European countries and the factors driving this trend."
+        url: "https://www.eurocontrol.int/publication/long-term-decline-domestic-flights-europe"
+        image: "/images/at/at8.jpg"
+        external: true
+
+      - title: "Aviation Trends #7 - Evolution of traffic to Asia/Pacific"
+        date: "11 March 2025"
+        description: "This edition tracks the evolution of European air traffic flows to and from the Asia/Pacific region."
+        url: "https://www.eurocontrol.int/publication/evolution-traffic-asiapacific"
+        image: "/images/at/at7.jpg"
+        external: true
+
+  - year: 2024
+    items:
+      - title: "Aviation Trends #6 - Airlines schedules – a balancing act"
+        date: "18 December 2024"
+        description: "This edition examines how airlines balance their schedules between operational efficiency, passenger demand, and network constraints."
+        url: "https://www.eurocontrol.int/publication/airlines-schedules-balancing-act"
+        image: "/images/at/at6.jpg"
+        external: true
+
+      - title: "Aviation Trends #5 - Summer 2024 performance"
+        date: "4 November 2024"
+        description: "This edition analyses the performance of European aviation during the Summer 2024 season."
+        url: "https://www.eurocontrol.int/publication/summer-2024-performance"
+        image: "/images/at/at5.png"
+        external: true
+
+      - title: "Aviation Trends #4 - Paris 2024: Preparations for the Olympic Games"
+        date: "6 June 2024"
+        description: "This edition looks at how European aviation is preparing for the influx of traffic related to the Paris 2024 Olympic Games."
+        url: "https://www.eurocontrol.int/publication/paris-2024-preparations-olympic-games"
+        image: "/images/at/at4.jpg"
+        external: true
+
+  - year: 2023
+    items:
+      - title: "Aviation Trends #3 - Summer 2023: High weather impacts on the network"
+        date: "21 December 2023"
+        description: "This edition analyses the significant weather impacts on the European aviation network during Summer 2023."
+        url: "https://www.eurocontrol.int/publication/summer-2023-high-weather-impacts-network"
+        image: "/images/at/at3.jpg"
+        external: true
+
+      - title: "Aviation Trends #2 - Air Defender 2023: Military mission effectiveness with minimal network impacts"
+        date: "30 June 2023"
+        description: "This edition examines how the Air Defender 2023 military exercise achieved its objectives while minimising impacts on the civilian aviation network."
+        url: "https://www.eurocontrol.int/publication/air-defender-2023-military-mission-effectiveness-minimal-network-impacts"
+        image: "/images/at/at2.jpg"
+        external: true
+
+      - title: "Aviation Trends #1 - Impact of strikes on European Aviation"
+        date: "18 April 2023"
+        description: "This inaugural Aviation Trends edition analyses the impact of industrial strikes on European aviation operations."
+        url: "https://www.eurocontrol.int/publication/impact-strikes-european-aviation"
+        image: "/images/at/at1.jpg"
+        external: true
