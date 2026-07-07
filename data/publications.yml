@@ -3,7 +3,7 @@ sections:
     title: "Aviation Intelligence"
     icon: "fas fa-lightbulb"
     cards:
-      - title: "Think Papers"
+      - title: "Think Papers & Analysis Papers"
         url: "/publications/ectl/think/"
         image: "/images/ectl_tp.jpg"
         description: "Forward-looking analysis on key aviation topics."
