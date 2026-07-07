@@ -1,0 +1,144 @@
+years:
+  - year: 2026
+    items:
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 26"
+        date: "1 July 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-26"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w26.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 25"
+        date: "24 June 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-25"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w25.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 24"
+        date: "17 June 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-24"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w24.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 23"
+        date: "10 June 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-23"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w23.jpg"
+
+  - year: 2025
+    items:
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 36"
+        date: "10 September 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-36"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w36.jpg"
+
+      - title: "Special #FlashBriefing 2025"
+        date: "5 September 2025"
+        description: "Special flash briefing on network performance."
+        url: "https://www.eurocontrol.int/publication/special-flashbriefing-2025"
+        external: true
+        image: "/images/flash/pubs/flash_2025_special.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 35"
+        date: "3 September 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-35"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w35.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 34"
+        date: "27 August 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-34"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w34.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 33"
+        date: "20 August 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-33"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w33.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 32"
+        date: "13 August 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-32"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w32.jpg"
+
+      - title: "EUROCONTROL Monthly Briefing - July 2025"
+        date: "7 August 2025"
+        description: "Special flash briefing on network performance."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-monthly-briefing-july-2025"
+        external: true
+        image: "/images/flash/pubs/flash_2025_monthly_jul.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 31"
+        date: "6 August 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-31"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w31.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 30"
+        date: "30 July 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-30"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w30.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 29"
+        date: "23 July 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-29"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w29.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 28"
+        date: "16 July 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-28"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w28.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 27"
+        date: "9 July 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-27"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w27.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 26"
+        date: "2 July 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-26"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w26.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 25"
+        date: "25 June 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-25"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w25.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2025 - Week 24"
+        date: "18 June 2025"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2025-week-24"
+        external: true
+        image: "/images/flash/pubs/flash_2025_w24.jpg"
+
+      - title: "EUROCONTROL Flash Briefing on Summer 2025 preparations"
+        date: "28 April 2025"
+        description: "Special flash briefing on network performance."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-summer-2025-preparations"
+        external: true
+        image: "/images/flash/pubs/flash_2025_summer_prep.jpg"

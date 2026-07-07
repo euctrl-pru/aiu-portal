@@ -26,6 +26,13 @@ years:
 
   - year: 2022
     items:
+      - title: "Analysis Paper #1 - 2022: The year European aviation bounced back, despite war & Omicron/COVID"
+        date: "31 December 2022"
+        description: "This Analysis Paper reviews how European aviation recovered strongly in 2022 despite the challenges posed by the war in Ukraine and the lingering effects of the Omicron variant."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-analysis-paper-2022-year-european-aviation-bounced-back"
+        image: "/images/at/ap1.jpg"
+        external: true
+
       - title: "Think Paper #19 - ATC Mobility and Capacity Shortfalls"
         date: "19 December 2022"
         description: "This Think Paper examines the relationship between ATC staff mobility and the capacity shortfalls experienced in European airspace."

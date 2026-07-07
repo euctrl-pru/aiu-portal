@@ -1,25 +1,41 @@
 {{ define "main" }}
 <style type="text/css">
-.pub-section {
-  margin-bottom: 3rem;
-}
-.pub-section-header {
+.pub-tabs {
   display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid #003366;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0;
 }
-.pub-section-header i {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-right: 0.75rem;
-}
-.pub-section-header h2 {
-  font-size: 1.5rem;
+.pub-tab {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: #6c757d;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.pub-tab:hover {
   color: #003366;
-  margin: 0;
+}
+.pub-tab.active {
+  color: #003366;
+  border-bottom-color: #003366;
+}
+.pub-tab i {
+  margin-right: 0.4rem;
+}
+.pub-tab-content {
+  display: none;
+}
+.pub-tab-content.active {
+  display: block;
 }
 .pub-card-grid {
   display: grid;
@@ -83,12 +99,17 @@
 
 <main>
 <div class="container" style="margin-top: 2rem;">
-{{ range .Site.Data.publications.sections }}
-<div class="pub-section">
-<div class="pub-section-header">
-  <i class="{{ .icon }}"></i>
-  <h2>{{ .title }}</h2>
+
+<div class="pub-tabs" role="tablist">
+{{ range $i, $section := .Site.Data.publications.sections }}
+<button class="pub-tab{{ if eq $i 0 }} active{{ end }}" data-tab="{{ .key }}" role="tab">
+  <i class="{{ .icon }}"></i>{{ .title }}
+</button>
+{{ end }}
 </div>
+
+{{ range $i, $section := .Site.Data.publications.sections }}
+<div class="pub-tab-content{{ if eq $i 0 }} active{{ end }}" data-tab="{{ .key }}">
 <div class="pub-card-grid">
 {{ range .cards }}
 <div class="pub-card card">
@@ -105,6 +126,19 @@
 </div>
 </div>
 {{ end }}
+
 </div>
 </main>
+
+<script>
+document.querySelectorAll('.pub-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var key = this.getAttribute('data-tab');
+    document.querySelectorAll('.pub-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.pub-tab-content').forEach(function(c) { c.classList.remove('active'); });
+    this.classList.add('active');
+    document.querySelector('.pub-tab-content[data-tab="' + key + '"]').classList.add('active');
+  });
+});
+</script>
 {{ end }}

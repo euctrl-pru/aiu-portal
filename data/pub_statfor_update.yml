@@ -1,0 +1,53 @@
+years:
+  - year: 2025
+    items:
+      - title: "EUROCONTROL Forecast Update 2025-2031"
+        date: "17 October 2025"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2025-2031"
+        external: true
+        image: "/images/statfor/pubs/update_2025.jpg"
+  - year: 2024
+    items:
+      - title: "EUROCONTROL Forecast Update 2024-2030"
+        date: "15 October 2024"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030-autumn-update"
+        external: true
+        image: "/images/statfor/pubs/update_2024.jpg"
+  - year: 2023
+    items:
+      - title: "EUROCONTROL Forecast Update 2023-2029"
+        date: "31 March 2023"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029"
+        external: true
+        image: "/images/statfor/pubs/update_2023.jpg"
+  - year: 2022
+    items:
+      - title: "EUROCONTROL Forecast Update 2022-2028"
+        date: "17 October 2022"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2022-2028"
+        external: true
+        image: "/images/statfor/pubs/update_2022_oct.jpg"
+      - title: "EUROCONTROL Forecast Update 2022-2024"
+        date: "3 June 2022"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2022-2024"
+        external: true
+        image: "/images/statfor/pubs/update_2022_jun.jpg"
+  - year: 2021
+    items:
+      - title: "EUROCONTROL Forecast Update 2021-2027"
+        date: "15 October 2021"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2021-2027"
+        external: true
+        image: "/images/statfor/pubs/update_2021_oct.jpg"
+      - title: "EUROCONTROL Forecast Update 2021-2024"
+        date: "21 May 2021"
+        description: "Updated forecast of European air traffic."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2021-2024"
+        external: true
+        image: "/images/statfor/pubs/update_2021_may.jpg"

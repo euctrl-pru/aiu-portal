@@ -1,5 +1,5 @@
 ---
-title: EUROCONTROL Think Papers
+title: EUROCONTROL Think Papers & Analysis Papers
 description: "Forward-looking analysis on key challenges and opportunities facing European aviation."
 layout: pub-detail-list
 data_key: pub_think
