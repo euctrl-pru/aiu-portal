@@ -41,7 +41,7 @@ layout: frontpage
 </div>
 
 <div class="card"><a href="/publications/prc/ace">
-  <img class="card-img-top" src="/images/prc/ace2024ed.png" alt="ATM Cost Effectiveness Report">
+  <img class="card-img-top" src="/images/prc/ace2026ed.png" alt="ATM Cost Effectiveness Report">
   <div class="card-body"><h5 class="card-title">ATM Cost Effectiveness (ACE) Reports</h5></a><p class="card-text"></p>
   </div>
 </div>

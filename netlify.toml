@@ -224,3 +224,16 @@ command = "hugo --gc --minify"
   to = "/methodology/cd-vertical-flight-efficiency-pi.html"
   status = 200
   force = true
+  
+[[redirects]]
+  from = "/traffic/punctuality/"
+  to = "/punctuality/"
+  status = 200
+  force = true
+  
+  
+[[redirects]]
+  from = "/punctuality/punctuality/"
+  to = "/punctuality/"
+  status = 200
+  force = true

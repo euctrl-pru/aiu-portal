@@ -114,7 +114,7 @@ ignoreFiles = [
   [[menu.main]]
     pre = "<i class='fas fa-calendar'></i>"
     name = "&nbsp;Punctuality"
-    url = "/punctuality/punctuality/"
+    url = "/punctuality/"
     identifier = "key-punctuality"
     parent = "dashboard"
     weight = 20
@@ -128,14 +128,14 @@ ignoreFiles = [
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>Network punctuality</span>"
-      url = "/punctuality/punctuality/#eurocontrol-area-network-view-1"
+      url = "/punctuality/#eurocontrol-area-network-view-1"
       identifier = "key-punctuality-network"
       parent = "dashboard"
       weight = 22
     [[menu.main]]
       pre = "&nbsp;&nbsp;&nbsp;"
       name = " <span style='font-weight: normal'>State & airport punctuality</span>"
-      url = "/punctuality/punctuality/#state-view-1"
+      url = "/punctuality/#state-view-1"
       identifier = "key-punctuality-state-airport"
       parent = "dashboard"
       weight = 23
@@ -389,7 +389,14 @@ ignoreFiles = [
     url = "https://opdi.aero"
     parent = "links"
     weight = 7
-  
+  [[menu.main]]
+    name = "Aviation Data Repository (ADRR)"
+    post = " <i class='fas fa-xs fa-external-link-alt'></i>"
+    url = "https://www.eurocontrol.int/dashboard/aviation-data-research"
+    identifier = "adrr-link"
+    parent = "links"
+    weight = 4
+
     
  [[menu.main]]
     name = "About"
