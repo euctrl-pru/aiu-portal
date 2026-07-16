@@ -6,20 +6,20 @@ g2g_co_opt_end: Dec 2024 # UPDATE On demand - see with FG and Sam PEETERS / Quin
 # CO2 Emissions by State (Small Emitters Tool - ASU)
 ## Montly CO2 emissions by State
 co_opt_beg: Jan 2010
-co_opt_end: June 2026 # UPDATE MONTH (M) - Delayed few days
+co_opt_end: May 2026 # UPDATE MONTH (M) - Delayed few days
 
 # Operations En-route
 ## En-route IFR flights and ATFM delays (AUA) - No post ops adj.
 ert_dly_aua_beg: Jan 2011
-ert_dly_aua_end: June 2026 # UPDATE MONTHLY (M) 
+ert_dly_aua_end: Jun 2026 # UPDATE MONTHLY (M) 
 
 ## En-route IFR flights and ATFM delays (AUA) - With post ops adj.
 ert_dly_aua_post_beg: Jan 2016
-ert_dly_aua_post_end: Dec 2025
+ert_dly_aua_post_end: Jun 2025
 
 ## En-route IFR flights and ATFM delays (FIR) - No post ops adj.
 ert_dly_fir_beg: Jan 2013
-ert_dly_fir_end: June 2026 # UPDATE MONTHLY (M)
+ert_dly_fir_end: Jun 2026 # UPDATE MONTHLY (M)
 
 ## En-route IFR flights and ATFM delays (FIR) - With post ops adj.
 ert_dly_fir_post_beg: Jan 2016
@@ -27,16 +27,16 @@ ert_dly_fir_post_end: Dec 2025
 
 ## Horizontal en-route flight efficiency
 hfe_beg: Jan 2014
-hfe_end: June 2026 # UPDATE MONTHLY (M)
+hfe_end: Jun 2026 # UPDATE MONTHLY (M)
 
 # Operations at Airports
 ## Airport traffic (Daily IFR arrs & deps by apt)
 apt_flt_beg: Jan 2016
-apt_flt_end: June 2026 # UPDATE MONTHLY (M)
+apt_flt_end: Jun 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - No post ops adj.
 apt_dly_beg: Jan 2019
-apt_dly_end: June 2026 # UPDATE MONTHLY (M)
+apt_dly_end: Jun 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - With post ops adj.
 apt_dly_post_beg: Jan 2016
@@ -48,7 +48,7 @@ asma_end: May 2026 # UPDATE MONTHLY (M-1) - One month delay
 
 ## VFE - Continuous climb and descent operations
 cdo_beg: Jan 2015
-cdo_end: June 2026 # UPDATE MONTHLY (M)
+cdo_end: Jun 2026 # UPDATE MONTHLY (M)
 
 ## Taxi-out additional time
 tx_out_beg: Jan 2018 
