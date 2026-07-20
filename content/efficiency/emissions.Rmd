@@ -818,3 +818,32 @@ new Runtime().module(define, name => {
 });
 </script>
 
+
+<style>
+footer,
+.footer,
+.site-footer {
+    color: #fff !important;
+    background: #212529 !important;
+}
+
+footer a,
+.footer a,
+.site-footer a {
+    color: #fff !important;
+    background: #212529 !important;
+}
+
+footer a.social {
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+
+footer a.social:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+</style>
