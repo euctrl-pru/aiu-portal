@@ -126,7 +126,7 @@ description: "An overview of financial information and indicators for European A
 
    <p>This dashboard presents financial information and indicators for European ANSPs, and contains interactive features that allow for comparisons over time. All information presented is publicly available and has been collected from ANSPs’ most recent financial statements. You can find more details about the content and purpose of this dashboard as well as the definition of the indicators used in our <a href="./guide/">Reader's Guide.</a> The underlying data is available for download in the  <a href="/data/#eco">data section</a>.</p>
    <div id="available-ansps" style = "display: none;">
-   <p>The dashboard displays data for the last six years. However, when interpreting the data for <span id="year-context"></span>, it's important to note that the complete series is not yet available, as the current information is based on the published financial data from the following ANSPs (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>.</p>
+   <p>The dashboard displays complete annual data for the six-year period from <span id="minyear-context"></span> to <span id="year-context"></span>, based on the published financial data from the following ANSPs  (<span id="ansp-number"></span>/<span id="ansp-number-all"></span>): <span id="ansp-list"></span>. Work is currently underway to collect and complete the final validation of the 2025 financial data.</p>
    </div>
 
     <div class="flex-container ml-1 mr-1" style=" padding-right: 15px; border-bottom: solid 3px #161b21; 
@@ -577,7 +577,7 @@ description: "An overview of financial information and indicators for European A
   var no_uniqueOrgNames_all
   
   var SelectedEntity = "Pan-European System";
-  var SelectedYear = 2023;
+  var SelectedYear = 2024;
   var MinYear;
   var MaxYear;
   var DataFlag;
@@ -2492,7 +2492,7 @@ description: "An overview of financial information and indicators for European A
   // Update text in intro 
 
     document.getElementById("year-context").innerHTML = FullMaxYear;
-//    document.getElementById("maxyear-context").innerHTML = FullMaxYear;
+    document.getElementById("minyear-context").innerHTML = FullMaxYear - 5;
     document.getElementById("ansp-list").innerHTML = uniqueOrgNamesString;
     document.getElementById("ansp-number").innerHTML = no_uniqueOrgNames;
     document.getElementById("ansp-number-all").innerHTML = no_uniqueOrgNames_all;
@@ -2511,7 +2511,7 @@ description: "An overview of financial information and indicators for European A
     // document.getElementById("Ownership").innerHTML = MyViewANSPServices.getValue(0, 5);
 
     
-    document.getElementById("tooltip_share").title = SelectedEntity == "MATS" ? "Based on 2020-2022 avg." : "Based on 2021-2023 avg.";
+    document.getElementById("tooltip_share").title = SelectedEntity == "MATS" ? "Based on 2022-2024 avg." : "Based on 2022-2024 avg.";
 
   // Update all titles - section titles, scorecard titles, etc.
 

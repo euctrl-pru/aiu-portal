@@ -1,103 +1,293 @@
+<!-- =======================
+Footer START -->
 <footer style="background-color: black;">
-  <head>
-    <style>
-      footer {
-        background-color: black; 
-        color: white; 
-        margin: 0; 
-        padding: 0; 
-      }
-      footer a {
-        color: white; !important;
-      }
-      
-      .text-white {
-       color: white;
-        
-      }
 
-      .container {
-        padding-bottom: 0; /* Remove padding at the bottom */
-      }
-      .pop-out {
-        transition: transform .5s;
-      }
-      .modal-content {
-        margin: auto;
-        display: block;
-        width: 25%;
-        max-width: 700px;
-      }
-      .pop-out:hover {
-        -ms-transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        transform: scale(1.1, 1.1);  /* pop-out when you click on image*/
-      }
-    </style>
-  </head>
+  <style>
+    footer {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    
+footer a:visited {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#block-socialfooter .nav-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+#block-socialfooter .nav-link svg {
+  width: 40px;
+  height: 40px;
+}
+
+#block-socialfooter .nav-link:hover {
+  background: white;
+  text-decoration: none;
+}
+
+#block-socialfooter .nav-link:hover svg.fa-linkedin {
+  color: #0077b5;
+}
+
+#block-socialfooter .nav-link:hover svg.fa-instagram {
+  color: #E4405F;
+}
+
+#block-socialfooter .nav-item:not(:last-child) {
+margin-right: 30px;
+}
+
+
+a img {
+  border: none;
+  ;
+}
+
+a:hover img {
   
+ border: none;
+ display: inline-block;
+}
+  
+.app-button,
+.app-button:hover,
+.app-button:focus,
+.app-button:active {
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.app-button img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.qr-code {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+@media (min-width: 1100px) {
+  .app-section {
+    margin-left: 80px;
+  }
+}
+
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  margin-top: 130px; /* adjust until aligned */
+}
+
+@media (max-width: 1000px) {
+
+  .row.mb-3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .app-section {
+    margin-left: 0 !important;
+  }
+
+  .footer-right {
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .qr-code,
+  .app-button img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+    .text-white {
+      color: white;
+    }
+
+    .container {
+      padding-bottom: 0;
+    }
+
+    .pop-out {
+      transition: transform .5s;
+    }
+
+    .pop-out:hover {
+      transform: scale(1.1);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 25%;
+      max-width: 700px;
+    }
+
+    /* Social icons styling */
+    .social-icons i {
+      font-size: 18px;
+      margin-left: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover .fa-linkedin {
+      color: #0077b5;
+    }
+
+    .social-icons a:hover .fa-instagram {
+      color: #E4405F;
+    }
+  </style>
+
   <div class="container pb-1 pb-lg-2 pt-2">
     <div class="row mb-3">
-      <div class="col-sm mb-2 mb-sm-0">
-        <div>
-          <ul class="list-inline list-separator mb-0">
-       
-            <li class="list-inline-item" style="vertical-align: -130px;">
-              <p class="text-white small" style="vertical-align: -130px;">&copy; <span id="currentYear"></span> EUROCONTROL</p>
-            </li>
-            <li class="list-inline-item" style="vertical-align: -130px;"><a class="text-white" href="/about/disclaimer">Disclaimer</a></li>
-            <li class="list-inline-item" style="vertical-align: -130px;"><a class="text-white" href="https://www.eurocontrol.int/info/privacy-and-website-terms-use" target="_blank">Privacy statement</a></li>
-          </ul>
-        </div>
-      </div>
+
+      <div class="col-sm">
+      <nav role="navigation" aria-labelledby="block-socialfooter-menu" id="block-socialfooter" class="block-menu--social-footer block block-menu navigation menu--social-footer">
+            
+  
+<p class="text-white small mb-1" id="block-socialfooter-menu">
+  Follow us on:
+</p>
+
+  
+
+        
+              <ul class="nav">
+                <li aria-label="LinkedIn" class="nav-item">
+                <a href="https://www.linkedin.com/company/eurocontrol-aviation-intelligence/" class="nav-link"><svg class="svg-inline--fa fa-linkedin fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><!-- <i class="fa fab fa-linkedin fa-fw" aria-hidden="true"></i> --></a>
+              </li>
+                <li aria-label="Instagram" class="nav-item">
+                <a href="https://www.instagram.com/aviation_intelligence/" class="nav-link"><svg class="svg-inline--fa fa-instagram fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fa fab fa-instagram fa-fw" aria-hidden="true"></i> --></a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+      <!-- Left -->
       
+<div class="mt-3" style="margin-top: 10px;">
+  
+<li class="list-inline-item" style="vertical-align: -38px;">
+  
+<p class="text-white small mb-0" style="white-space: nowrap;">
+  &copy; 2026 EUROCONTROL
+  &nbsp;·&nbsp;
+  <a class="text-white" href="https://ansperformance.eu/about/disclaimer/">
+    Disclaimer
+  </a>
+  &nbsp;·&nbsp;
+  <a class="text-white"
+     href="https://www.eurocontrol.int/info/privacy-and-website-terms-use"
+     target="_blank">
+    Privacy statement
+  </a>
+</p>
+
+</li>
+
+</div>
+
+</div>
+
+      <!-- Middle -->
       <div class="col-sm mb-2 mb-sm-0">
-        <ul class="list-inline list-separator mb-0" style="border-top-left-radius: 0rem; margin-top: 10px; border-top-right-radius: 0rem; margin-left: 70px;">
-          <p class="text-white small" style="color: white;">Why not download the App?</p>
+        <ul class="list-inline list-separator mb-0 app-section">
+          <p class="text-white small" >Why not download the App?</p>
           <div>
-            
-            <img src="/images/footer/google_app_qr.png" style="margin-top:-10px; margin-right: 15px;" width="28%" alt="Google app qr">
-            
-            <img src="/images/footer/apple_app_qr.png" style="margin-top:-10px; margin-right: 15px;" width="28%" alt="Apple app qr">
+            <img src="/images/footer/google_app_qr.png" class="qr-code" style="margin-top:-10px; margin-right: 15px;"  alt="Google QR">
+            <img src="/images/footer/apple_app_qr.png" class="qr-code" style="margin-top:-10px; margin-right: 15px;" alt="Apple QR">
           </div>
-          <p class="text-white small">
-           
-            <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&hl=en&pli=1" class="app-store_storeLink__qmfBy" target="_blank">
-              <img src="/images/footer/app-store-google-image.svg" style="border-top-left-radius: 0rem; margin-top: 5px; border-top-right-radius: 0rem; float: left; margin-right: 18px;" class="pop-out" width="28%" alt="Google app">
+
+          <p class="text-white small" style="margin-top: -10px;">
+            <a class="app-button"
+               href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata" target="_blank">
+              <img src="/images/footer/app-store-google-image.svg" class="pop-out" style=" margin-right:18px;">
             </a>
-          
-            <a href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
-              <img src="/images/footer/app-store-apple-image.svg" style="border-top-left-radius: 0rem; margin-right: 5px; margin-top: 5px; border-top-right-radius: 0rem;" class="pop-out" width="28%" alt="Apple app">
+            <a class="app-button"
+               href="https://apps.apple.com/us/app/eurocontrol-data/id6467232405" target="_blank">
+              <img src="/images/footer/app-store-apple-image.svg" class="pop-out"  >
             </a>
           </p>
         </ul>
       </div>
-      
-      <div class="col-sm-auto">
-        <ul class="list-inline list-separator mb-0" >
-          
-          <li class="list-inline-item" style="vertical-align: -130px;">
-            <p class="text-white" >
-              <a class="text-white small" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe to our Newsletter<i class="fas fa-envelope ml-1"></i></a> or 
-              <a class="text-white small" href="/index.xml" type="application/rss+xml" target="_blank">RSS<i class="fas fa-rss ml-1"></i></a>
+
+
+      <!-- Right -->
+<div class="col-sm-auto">
+  <div class="footer-right">
+
+    <p class="text-white mb-0">
+       <a class="text-white small" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">
+                Subscribe to our Newsletter<i class="fas fa-envelope ml-1"></i>
+              </a> or
+              <a class="text-white small" href="https://ansperformance.eu/index.xml" target="_blank">
+                RSS <i class="fas fa-rss ml-1"></i>
+              </a>
             </p>
-          </li>
-          <li class="list-inline-item" style="vertical-align: -130px;"><a class="text-white" href="/about/help"><i class="fas fa-question-circle"></i></a></li>
-          <li class="list-inline-item" style="vertical-align: -130px;"><a class="text-white" href="/about/howbuilt"><i class="fas fa-cogs"></i></a></li>
-        </ul>
-      </div>
+
+    <a class="text-white"
+       href="https://ansperformance.eu/about/help/">
+      <i class="fa fa-question-circle"></i>
+    </a>
+
+    <a class="text-white"
+       href="https://ansperformance.eu/about/howbuilt/">
+      <i class="fas fa-cogs"></i>
+    </a>
+
+  </div>
+</div>
+
     </div>
   </div>
 </footer>
 
 <script>
-  // Get the current year
   const currentYear = new Date().getFullYear();
-  // Display the current year in the span with id "currentYear"
   document.getElementById('currentYear').textContent = currentYear;
 </script>
-
-
 
 
 
