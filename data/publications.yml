@@ -19,7 +19,7 @@ sections:
         description: "Quick visual summaries of the latest aviation data."
 
       - title: "European Aviation Overview"
-        url: "https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview"
+        url: "https://www.eurocontrol.int/publications/series/eurocontrol-european-aviation-overview"
         image: "/images/ectl_eao.png"
         description: "Comprehensive overview of European aviation activity."
         external: true
