@@ -1,0 +1,6 @@
+---
+title: PRC Observer
+description: "Concise and timely commentaries by the Performance Review Commission on current performance issues."
+layout: pub-detail-list
+data_key: pub_observer
+---

@@ -1,0 +1,6 @@
+---
+title: EUROCONTROL Aviation Long-Term Outlook
+description: "Strategic forecast projecting long-range European aviation demand, traffic growth, and industry trends."
+layout: pub-detail-list
+data_key: pub_statfor_outlook
+---

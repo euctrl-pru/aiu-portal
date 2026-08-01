@@ -1,0 +1,6 @@
+---
+title: EUROCONTROL Forecast Update
+description: "Autumn update integrating the most recent flight trends and route patterns."
+layout: pub-detail-list
+data_key: pub_statfor_update
+---

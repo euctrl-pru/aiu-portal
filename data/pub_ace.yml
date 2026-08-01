@@ -1,0 +1,96 @@
+years:
+  - year: 2026
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2026 Edition"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2026-edition"
+        image: "/images/prc/ace2026ed.png"
+        external: true
+  - year: 2025
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2025 Edition"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2025-edition"
+        image: "/images/prc/ace2025ed.png"
+        external: true
+  - year: 2024
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2024 Edition"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2024-edition"
+        image: "/images/prc/ace2024ed.png"
+        external: true
+  - year: 2023
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2023 Edition"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2023-edition"
+        image: "/images/prc/ace2021.png"
+        external: true
+  - year: 2020
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2020"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2020"
+        image: "/images/prc/ace2020.png"
+        external: true
+  - year: 2019
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2019"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2019"
+        image: "/images/prc/ace2019.png"
+        external: true
+  - year: 2018
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2018"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2018"
+        image: "/images/prc/ace2018.png"
+        external: true
+  - year: 2017
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2017"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2017"
+        image: "/images/prc/ace2017.png"
+        external: true
+  - year: 2016
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2016"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2016"
+        image: "/images/prc/ace2016.png"
+        external: true
+  - year: 2015
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2015"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2015"
+        image: "/images/prc/ace2015.png"
+        external: true
+  - year: 2014
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2014"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2014"
+        image: "/images/prc/ace2014.png"
+        external: true
+  - year: 2013
+    items:
+      - title: "ATM Cost Effectiveness (ACE) Report 2013"
+        url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2013"
+        image: "/images/prc/ace2013.png"
+        external: true
+older:
+  - title: "ATM Cost Effectiveness (ACE) Report 2012"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2012"
+  - title: "ATM Cost Effectiveness (ACE) Report 2011"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2011"
+  - title: "ATM Cost Effectiveness (ACE) Report 2010"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2010"
+  - title: "ATM Cost Effectiveness (ACE) Report 2009"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2009"
+  - title: "ATM Cost Effectiveness (ACE) Report 2008"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2008"
+  - title: "ATM Cost Effectiveness (ACE) Report 2007"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2007"
+  - title: "ATM Cost Effectiveness (ACE) Report 2006"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2006"
+  - title: "ATM Cost Effectiveness (ACE) Report 2005"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2005"
+  - title: "ATM Cost Effectiveness (ACE) Report 2004"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2004"
+  - title: "ATM Cost Effectiveness (ACE) Report 2003"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2003"
+  - title: "ATM Cost Effectiveness (ACE) Report 2002"
+    url: "https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-ace-benchmarking-report-2002"

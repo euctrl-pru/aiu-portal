@@ -1,0 +1,462 @@
+years:
+  - year: 2024
+    items:
+      - title: "All-Causes Delays to Air Transport in Europe - Annual 2024"
+        date: "25 July 2025"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-annual-2024"
+        external: true
+        image: "/images/coda/pubs/digest_2024.jpg"
+
+  - year: 2023
+    items:
+      - title: "All-Causes Delays to Air Transport in Europe - Annual 2023"
+        date: "16 December 2024"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-annual-2023"
+        external: true
+        image: "/images/coda/pubs/digest_2023.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 3 2023"
+        date: "16 December 2024"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-3-2023"
+        external: true
+        image: "/images/coda/pubs/digest_q3_2023.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 2 2023"
+        date: "13 November 2023"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-2-2023"
+        external: true
+        image: "/images/coda/pubs/digest_q2_2023.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 1 2023"
+        date: "7 July 2023"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-1-2023"
+        external: true
+        image: "/images/coda/pubs/digest_q1_2023.jpg"
+
+  - year: 2022
+    items:
+      - title: "All-Causes Delays to Air Transport in Europe - Annual 2022"
+        date: "21 March 2023"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-annual-2022"
+        external: true
+        image: "/images/coda/pubs/digest_2022.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 3 2022"
+        date: "8 December 2022"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-3-2022"
+        external: true
+        image: "/images/coda/pubs/digest_q3_2022.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 2 2022"
+        date: "12 October 2022"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-2-2022"
+        external: true
+        image: "/images/coda/pubs/digest_q2_2022.jpg"
+
+      - title: "All-Causes Delays to Air Transport in Europe - Quarter 1 2022"
+        date: "1 July 2022"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delays-air-transport-europe-quarter-1-2022"
+        external: true
+        image: "/images/coda/pubs/digest_q1_2022.jpg"
+
+  - year: 2021
+    items:
+      - title: "All-causes delay and cancellations to Air Transport in Europe for 2021"
+        date: "7 April 2022"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-2021"
+        external: true
+        image: "/images/coda/pubs/digest_2021.jpg"
+
+      - title: "All-causes delay to Air Transport Europe for Q3 2021"
+        date: "14 December 2021"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-q3-2021"
+        external: true
+
+      - title: "All-causes delay to Air Transport Europe for Q2 2021"
+        date: "7 October 2021"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-q2-2021"
+        external: true
+
+      - title: "All-causes delay to Air Transport Europe for Q1 2021"
+        date: "6 July 2021"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-q1-2021"
+        external: true
+
+  - year: 2020
+    items:
+      - title: "All-causes delay and cancellations to Air Transport in Europe for 2020"
+        date: "18 March 2021"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-2020"
+        external: true
+        image: "/images/coda/pubs/digest_2020.jpg"
+
+      - title: "All-causes delay to Air Transport Europe for Q3 2020"
+        date: "16 December 2020"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-q3-2020"
+        external: true
+
+      - title: "All-causes delay to Air Transport Europe for Q2 2020"
+        date: "2 October 2020"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q2-2020"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q1 2020"
+        date: "29 June 2020"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q1-2020"
+        external: true
+
+  - year: 2019
+    items:
+      - title: "All-causes delay and cancellations to Air Transport in Europe for 2019"
+        date: "3 April 2020"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-2019"
+        external: true
+        image: "/images/coda/pubs/digest_2019.jpg"
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q3 2019"
+        date: "17 December 2019"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q3-2019"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q2 2019"
+        date: "20 September 2019"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q2-2019-0"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q1 2019"
+        date: "18 June 2019"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q1-2019"
+        external: true
+
+  - year: 2018
+    items:
+      - title: "All-causes delay and cancellations to Air Transport in Europe for 2018"
+        date: "8 March 2019"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-2018"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport in Europe for Q3 2018"
+        date: "5 February 2019"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q3-2018"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q2 2018"
+        date: "6 November 2018"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q2-2018"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport Europe for Q1 2018"
+        date: "31 July 2018"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q1-2018"
+        external: true
+
+  - year: 2017
+    items:
+      - title: "Delays to Air Transport in Europe for 2017"
+        date: "30 May 2018"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-2017"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q2 2017"
+        date: "16 October 2017"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q2-2017"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q1 2017"
+        date: "1 June 2017"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q1-2017"
+        external: true
+
+  - year: 2016
+    items:
+      - title: "All-causes delay and cancellations to Air Transport in Europe for Q4 2016"
+        date: "7 April 2017"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q4-2016"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport in Europe for Q3 2016"
+        date: "15 December 2016"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q3-2016"
+        external: true
+
+      - title: "All-causes delay and cancellations to Air Transport in Europe for Q2 2016"
+        date: "14 November 2016"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-and-cancellations-air-transport-europe-q2-2016"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for June 2016"
+        date: "30 May 2016"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-june-2016"
+        external: true
+
+  - year: 2015
+    items:
+      - title: "Delays to Air Transport in Europe for Q4 2015"
+        date: "1 March 2016"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q4-2015"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q3 2015"
+        date: "16 December 2015"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q3-2015"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q1 2015"
+        date: "10 December 2015"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q1-2015"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q2 2015"
+        date: "18 August 2015"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q2-2015"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for June 2015"
+        date: "7 May 2015"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-june-2015"
+        external: true
+
+  - year: 2014
+    items:
+      - title: "Delays to Air Transport in Europe for Q4 2014"
+        date: "18 February 2015"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q4-2014"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q3 2014"
+        date: "9 December 2014"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q3-2014"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q2 2014"
+        date: "4 September 2014"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q2-2014"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q1 2014"
+        date: "28 May 2014"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q1-2014"
+        external: true
+
+  - year: 2013
+    items:
+      - title: "Delays to Air Transport in Europe for 2013"
+        date: "4 March 2014"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-2013"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q4 2013"
+        date: "14 February 2014"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q4-2013"
+        external: true
+
+      - title: "All-causes delay to Air Transport in Europe report for 2013"
+        date: "30 December 2013"
+        description: "Annual report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-report-2013"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q3 2013"
+        date: "26 November 2013"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q3-2013"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q2 2013"
+        date: "22 August 2013"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q2-2013"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Q1 2013"
+        date: "4 June 2013"
+        description: "Quarterly report on all-causes delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-q1-2013"
+        external: true
+
+  - year: 2012
+    items:
+      - title: "Delays to Air Transport in Europe for 2012"
+        date: "1 March 2013"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-2012"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Summer 2012"
+        date: "30 November 2012"
+        description: "Seasonal report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-summer-2012"
+        external: true
+
+  - year: 2011
+    items:
+      - title: "Delays to Air Transport in Europe - 2011"
+        date: "14 March 2012"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-2011"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for 2011"
+        date: "14 March 2012"
+        description: "Annual report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-2011-0"
+        external: true
+
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2011"
+        date: "30 December 2011"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2011"
+        external: true
+
+      - title: "Delays to Air Transport in Europe for Summer 2011"
+        date: "29 November 2011"
+        description: "Seasonal report on delays to air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-summer-2011"
+        external: true
+
+  - year: 2010
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2010"
+        date: "30 December 2010"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2010"
+        external: true
+
+  - year: 2009
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2009"
+        date: "30 December 2009"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2009"
+        external: true
+
+  - year: 2008
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2008"
+        date: "30 December 2008"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2008"
+        external: true
+
+  - year: 2007
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2007"
+        date: "30 December 2007"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2007"
+        external: true
+
+  - year: 2006
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2006"
+        date: "30 December 2006"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2006"
+        external: true
+
+  - year: 2005
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2005"
+        date: "30 December 2005"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2005"
+        external: true
+
+  - year: 2004
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2004"
+        date: "30 December 2004"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2004"
+        external: true
+
+  - year: 2003
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2003"
+        date: "30 December 2003"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2003"
+        external: true
+
+  - year: 2002
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2002"
+        date: "30 December 2002"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2002"
+        external: true
+
+  - year: 2001
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2001"
+        date: "30 December 2001"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2001"
+        external: true
+
+  - year: 2000
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 2000"
+        date: "30 December 2000"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-2000"
+        external: true
+
+  - year: 1999
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 1999"
+        date: "30 December 1999"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-1999"
+        external: true
+
+  - year: 1998
+    items:
+      - title: "Delays to Air Transport in Europe - Archive of reports from 1998"
+        date: "30 December 1998"
+        description: "Archive of delay reports for air transport in Europe."
+        url: "https://www.eurocontrol.int/publication/delays-air-transport-europe-archive-reports-1998"
+        external: true

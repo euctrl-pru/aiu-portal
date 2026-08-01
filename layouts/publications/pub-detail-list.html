@@ -1,0 +1,50 @@
+{{ define "main" }}
+<main>
+{{ partial "pub-styles.html" . }}
+
+{{ $dataKey := .Params.data_key }}
+{{ $data := index .Site.Data $dataKey }}
+
+{{ if $data.modal }}
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog"><div class="modal-content"><div class="modal-body">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+<img src="" class="imagepreview" style="width: 100%;">
+</div></div></div></div>
+{{ end }}
+
+<div class="container" style="margin-top: 1rem;">
+{{ range $data.years }}
+<h2 class="pub-year-header">{{ .year }}</h2>
+{{ range .items }}
+{{ $itemTitle := .title }}
+<div class="pub-list-item">
+<div class="pub-list-content">
+<h5 class="pub-list-title"><a href="{{ .url }}" {{ if .external }}target="_blank"{{ end }}>{{ .title }}</a></h5>
+<span class="pub-list-date">Published: {{ .date }}</span>
+<p class="pub-list-desc">{{ .description | safeHTML }}</p>
+<a class="btn btn-primary btn-sm" href="{{ .url }}" {{ if .external }}target="_blank"{{ end }} role="button">Learn more</a>
+</div>
+{{ with .image }}
+<div class="pub-list-image">
+<a href="#" class="pop"><img src="{{ . }}" alt="{{ $itemTitle }}"></a>
+</div>
+{{ end }}
+</div>
+{{ end }}
+{{ end }}
+</div>
+
+{{ if $data.modal }}
+<script>
+$(function() {
+  $('.pop').on('click', function(e) {
+    e.preventDefault();
+    $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+    $('#imagemodal').modal('show');
+  });
+});
+</script>
+{{ end }}
+</main>
+{{ end }}
