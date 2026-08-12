@@ -69,7 +69,7 @@ sections:
     cards:
       - title: "7-Year Forecast"
         url: "/publications/statfor/forecast7/"
-        image: "/images/statfor/forecast7.jpg"
+        image: "/images/statfor/forecast7_main.png"
         description: "A 7-year forecast on observed flight trends and route patterns."
 
       - title: "Forecast Update"
