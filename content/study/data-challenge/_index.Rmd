@@ -18,7 +18,7 @@ distribution and reproducibility.
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img = "prc_dc25.jpeg",
+  img = "prc_dc26.jpeg",
   link = "dc2026/",
   title = "PRC Data Challenge 2026",
   text = "On predicting taxi-out time of flights.",
