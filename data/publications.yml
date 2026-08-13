@@ -35,32 +35,32 @@ sections:
     cards:
       - title: "PRC News Corner"
         url: "/publications/prc/news/"
-        image: "/images/prc/prc_news.png"
+        image: "/images/prc/prc_news_main.png"
         description: "Latest news and updates from the Performance Review Commission."
 
       - title: "Performance Review Reports (PRR)"
         url: "/publications/prc/prr"
-        image: "/images/prc/prr2025.png"
+        image: "/images/prc/prr_main.png"
         description: "Annual review of European ANS performance."
 
       - title: "ATM Cost Effectiveness (ACE) Reports"
         url: "/publications/prc/ace"
-        image: "/images/prc/ace2026ed.png"
+        image: "/images/prc/ACE_main.png"
         description: "Benchmarking of ATM cost-effectiveness across Europe."
 
       - title: "PRC Performance Insights"
         url: "/publications/prc/pi"
-        image: "/images/prc/prc_pi_pub.png"
+        image: "/images/prc/prc_insights_main.png"
         description: "Thematic deep-dives into specific performance topics."
 
       - title: "PRC Observer"
         url: "/publications/prc/observer/"
-        image: "/images/pi/prc_obs5.png"
+        image: "/images/prc/prc_observer_main.png"
         description: "Concise commentaries on current performance issues."
 
       - title: "Technical Notes and Studies"
         url: "/publications/studies/"
-        image: "/images/prc/technote.png"
+        image: "/images/prc/technical_main.png"
         description: "In-depth technical analyses and research studies."
 
   - key: "statfor"
@@ -74,17 +74,17 @@ sections:
 
       - title: "Forecast Update"
         url: "/publications/statfor/forecast-update/"
-        image: "/images/statfor/forecast-update.jpg"
+        image: "/images/statfor/forecast_update_main.png"
         description: "Autumn update integrating the most recent flight trends and route patterns."
 
       - title: "Two-Year Service Units Forecast"
         url: "/publications/statfor/forecast2/"
-        image: "/images/statfor/forecast7.jpg"
+        image: "/images/statfor/forecast_service_units_main.png"
         description: "Two-year total en route service units forecast."
 
       - title: "Aviation Long-Term Outlook"
         url: "/publications/statfor/outlook/"
-        image: "/images/statfor/outlook.jpg"
+        image: "/images/statfor/forecast_outlook_main.png"
         description: "Strategic forecast projecting long-range European aviation demand and trends."
 
   - key: "coda"
@@ -112,10 +112,10 @@ sections:
     cards:
       - title: "Global Benchmarking"
         url: "/global/"
-        image: "/images/prc/global.png"
+        image: "/images/prc/global_main.png"
         description: "Comparing ATM performance with peers worldwide."
 
       - title: "Standard Inputs for Economic Analyses"
         url: "/economics/cba/standard-inputs/latest/"
-        image: "/images/prc/global.png"
+        image: "/images/prc/standard_inputs_main.png"
         description: "Latest available inputs for cost-benefit and economic assessments."
