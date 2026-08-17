@@ -5,28 +5,28 @@ sections:
     cards:
       - title: "Think Papers & Analysis Papers"
         url: "/publications/ectl/think/"
-        image: "/images/ectl_tp.jpg"
+        image: "/images/think_paper_main.png"
         description: "Forward-looking analysis on key aviation topics."
 
       - title: "Aviation Trends"
         url: "/publications/ectl/trends/"
-        image: "/images/ectl_tp.jpg"
+        image: "/images/aviation_trends_main.png"
         description: "Timely analysis of notable aviation events and patterns."
 
       - title: "Data Snapshots"
         url: "/publications/ectl/datasnap/"
-        image: "/images/ectl_ds.png"
+        image: "/images/data_snapshot_main.png"
         description: "Quick visual summaries of the latest aviation data."
 
       - title: "European Aviation Overview"
         url: "https://www.eurocontrol.int/publications/series/eurocontrol-european-aviation-overview"
-        image: "/images/ectl_eao.png"
+        image: "/images/EAO_main.png"
         description: "Comprehensive overview of European aviation activity."
         external: true
 
       - title: "Summer Flash Briefings"
         url: "/publications/ectl/flash/"
-        image: "/images/flash/flash.jpg"
+        image: "/images/flash_briefing_main.png"
         description: "Weekly updates on network performance during the busy summer season."
 
   - key: "prc"
@@ -93,17 +93,17 @@ sections:
     cards:
       - title: "FLAD Monthly Delay Briefing"
         url: "/publications/coda/flad/"
-        image: "/images/coda/digest.jpg"
+        image: "/images/coda/FLAD_main.png"
         description: "Monthly brief on all-causes delay to air transport in Europe."
 
       - title: "Annual CODA Digest"
         url: "/publications/coda/digest/"
-        image: "/images/coda/digest.jpg"
+        image: "/images/coda/CODA_main.png"
         description: "Annual report on all-causes delays and cancellations in Europe."
 
       - title: "Taxi Time Values"
         url: "/publications/coda/taxi-times/"
-        image: "/images/coda/digest.jpg"
+        image: "/images/coda/taxi_main.png"
         description: "Seasonal taxi time statistics at European airports."
 
   - key: "other"
