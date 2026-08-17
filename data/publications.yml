@@ -48,15 +48,10 @@ sections:
         image: "/images/prc/ACE_main.png"
         description: "Benchmarking of ATM cost-effectiveness across Europe."
 
-      - title: "PRC Performance Insights"
+      - title: "PRC Performance Insights & Observer"
         url: "/publications/prc/pi"
         image: "/images/prc/prc_insights_main.png"
-        description: "Thematic deep-dives into specific performance topics."
-
-      - title: "PRC Observer"
-        url: "/publications/prc/observer/"
-        image: "/images/prc/prc_observer_main.png"
-        description: "Concise commentaries on current performance issues."
+        description: "Thematic deep-dives and concise commentaries on performance topics."
 
       - title: "Technical Notes and Studies"
         url: "/publications/studies/"
@@ -64,7 +59,7 @@ sections:
         description: "In-depth technical analyses and research studies."
 
   - key: "statfor"
-    title: "STATFOR"
+    title: "Traffic Forecasting"
     icon: "fas fa-chart-bar"
     cards:
       - title: "7-Year Forecast"
@@ -88,7 +83,7 @@ sections:
         description: "Strategic forecast projecting long-range European aviation demand and trends."
 
   - key: "coda"
-    title: "CODA"
+    title: "Delay Analysis"
     icon: "fas fa-clock"
     cards:
       - title: "FLAD Monthly Delay Briefing"
