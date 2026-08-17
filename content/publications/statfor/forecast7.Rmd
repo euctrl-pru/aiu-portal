@@ -1,0 +1,6 @@
+---
+title: EUROCONTROL 7-Year Forecast
+description: "Provides a 7-year forecast on observed flight trends and route patterns."
+layout: pub-detail-list
+data_key: pub_statfor_forecast7
+---

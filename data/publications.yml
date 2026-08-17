@@ -1,0 +1,115 @@
+sections:
+  - key: "ai"
+    title: "Aviation Intelligence"
+    icon: "fas fa-lightbulb"
+    cards:
+      - title: "Think Papers & Analysis Papers"
+        url: "/publications/ectl/think/"
+        image: "/images/think_paper_main.png"
+        description: "Forward-looking analysis on key aviation topics."
+
+      - title: "Aviation Trends"
+        url: "/publications/ectl/trends/"
+        image: "/images/aviation_trends_main.png"
+        description: "Timely analysis of notable aviation events and patterns."
+
+      - title: "Data Snapshots"
+        url: "/publications/ectl/datasnap/"
+        image: "/images/data_snapshot_main.png"
+        description: "Quick visual summaries of the latest aviation data."
+
+      - title: "European Aviation Overview"
+        url: "/publications/ectl/eao/"
+        image: "/images/EAO_main.png"
+        description: "Comprehensive overview of European aviation activity."
+
+      - title: "Summer Flash Briefings"
+        url: "/publications/ectl/flash/"
+        image: "/images/flash_briefing_main.png"
+        description: "Weekly updates on network performance during the busy summer season."
+
+  - key: "prc"
+    title: "Performance Review Commission (PRC)"
+    icon: "fas fa-chart-line"
+    cards:
+      - title: "PRC News Corner"
+        url: "/publications/prc/news/"
+        image: "/images/prc/prc_news_main.png"
+        description: "Latest news and updates from the Performance Review Commission."
+
+      - title: "Performance Review Reports (PRR)"
+        url: "/publications/prc/prr"
+        image: "/images/prc/prr_main.png"
+        description: "Annual review of European ANS performance."
+
+      - title: "ATM Cost Effectiveness (ACE) Reports"
+        url: "/publications/prc/ace"
+        image: "/images/prc/ACE_main.png"
+        description: "Benchmarking of ATM cost-effectiveness across Europe."
+
+      - title: "PRC Performance Insights & Observer"
+        url: "/publications/prc/pi"
+        image: "/images/prc/prc_insights_main.png"
+        description: "Thematic deep-dives and concise commentaries on performance topics."
+
+      - title: "Technical Notes and Studies"
+        url: "/publications/studies/"
+        image: "/images/prc/technical_main.png"
+        description: "In-depth technical analyses and research studies."
+
+  - key: "statfor"
+    title: "Traffic Forecasting"
+    icon: "fas fa-chart-bar"
+    cards:
+      - title: "7-Year Forecast"
+        url: "/publications/statfor/forecast7/"
+        image: "/images/statfor/forecast7_main.png"
+        description: "A 7-year forecast on observed flight trends and route patterns."
+
+      - title: "Forecast Update"
+        url: "/publications/statfor/forecast-update/"
+        image: "/images/statfor/forecast_update_main.png"
+        description: "Autumn update integrating the most recent flight trends and route patterns."
+
+      - title: "Two-Year Service Units Forecast"
+        url: "/publications/statfor/forecast2/"
+        image: "/images/statfor/forecast_service_units_main.png"
+        description: "Two-year total en route service units forecast."
+
+      - title: "Aviation Long-Term Outlook"
+        url: "/publications/statfor/outlook/"
+        image: "/images/statfor/forecast_outlook_main.png"
+        description: "Strategic forecast projecting long-range European aviation demand and trends."
+
+  - key: "coda"
+    title: "Delay Analysis"
+    icon: "fas fa-clock"
+    cards:
+      - title: "FLAD Monthly Delay Briefing"
+        url: "/publications/coda/flad/"
+        image: "/images/coda/FLAD_main.png"
+        description: "Monthly brief on all-causes delay to air transport in Europe."
+
+      - title: "Annual CODA Digest"
+        url: "/publications/coda/digest/"
+        image: "/images/coda/CODA_main.png"
+        description: "Annual report on all-causes delays and cancellations in Europe."
+
+      - title: "Taxi Time Values"
+        url: "/publications/coda/taxi-times/"
+        image: "/images/coda/taxi_main.png"
+        description: "Seasonal taxi time statistics at European airports."
+
+  - key: "other"
+    title: "Other"
+    icon: "fas fa-globe-europe"
+    cards:
+      - title: "Global Benchmarking"
+        url: "/global/"
+        image: "/images/prc/global_main.png"
+        description: "Comparing ATM performance with peers worldwide."
+
+      - title: "Standard Inputs for Economic Analyses"
+        url: "/economics/cba/standard-inputs/latest/"
+        image: "/images/prc/standard_inputs_main.png"
+        description: "Latest available inputs for cost-benefit and economic assessments."

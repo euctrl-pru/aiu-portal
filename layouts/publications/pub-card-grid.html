@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main>
+{{ partial "pub-styles.html" . }}
+
+{{ $dataKey := .Params.data_key }}
+{{ $data := index .Site.Data $dataKey }}
+
+<div class="container" style="margin-top: 1rem;">
+<div class="pub-grid">
+{{ range $data.years }}
+{{ range .items }}
+<div class="pub-grid-card card">
+<a href="{{ .url }}" {{ if .external }}target="_blank"{{ end }}>
+<img src="{{ .image }}" alt="{{ .title }}">
+<div class="card-body">
+<h5 class="card-title">{{ .title }}</h5>
+</div>
+</a>
+</div>
+{{ end }}
+{{ end }}
+</div>
+
+{{ with $data.older }}
+<div class="pub-older-list">
+<h4>Older Reports</h4>
+<ul>
+{{ range . }}
+<li><a href="{{ .url }}" target="_blank">{{ .title }}</a></li>
+{{ end }}
+</ul>
+</div>
+{{ end }}
+</div>
+</main>
+{{ end }}

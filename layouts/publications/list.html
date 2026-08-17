@@ -1,24 +1,25 @@
 {{ define "main" }}
 <main>
-    <article>
-        {{.Content}} 
+{{ partial "pub-styles.html" . }}
 
-        {{ range .Pages.GroupByDate "2006" "desc" }}
-        <h3>{{ .Key }}</h3>
-        <ul>
-            {{ range .Pages.ByDate.Reverse }}
-            <li>
-            <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
-            <div style=color:grey;> <strong>{{ .Params.Type}}</strong></div>
-            <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-            <br>
-            </li>
-            {{ end }}
-        </ul>
-        {{ end }}
+<div class="container" style="margin-top: 1rem;">
+{{.Content}}
 
-
-    </article>
-
+{{ range .Pages.GroupByDate "2006" "desc" }}
+<h2 class="pub-year-header">{{ .Key }}</h2>
+{{ range .Pages.ByDate.Reverse }}
+<div class="pub-list-item">
+<div class="pub-list-content">
+<h5 class="pub-list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+<span class="pub-list-date">{{ .Date.Format "2 January 2006" }}{{ with .Params.Type }} · {{ . }}{{ end }}</span>
+{{ with .Summary }}
+<p class="pub-list-desc">{{ . | plainify | truncate 200 }}</p>
+{{ end }}
+<a class="btn btn-primary btn-sm" href="{{ .Permalink }}" role="button">Read more</a>
+</div>
+</div>
+{{ end }}
+{{ end }}
+</div>
 </main>
 {{ end }}

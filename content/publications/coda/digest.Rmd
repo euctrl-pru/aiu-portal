@@ -1,0 +1,6 @@
+---
+title: All-Causes Delays to Air Transport in Europe - Annual CODA Digest
+description: "Annual report on all-causes delays and cancellations to air transport in Europe."
+layout: pub-detail-list
+data_key: pub_coda_digest
+---

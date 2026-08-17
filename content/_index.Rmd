@@ -6,14 +6,14 @@ date: "2018-02-07T11:26:51+01:00"
 fullpage: true
 ---
 
-
+```{=html}
 <style>
   marquee {
     margin: 0;
     padding: 0;
     display: block;
   }
-</style> 
+</style>
 <!--
 <marquee
   width="100%" 
@@ -36,7 +36,6 @@ fullpage: true
     data and news in your pocket, up to date to the previous day.
 </marquee>
 -->
-
 
 <section class="content-space bg-light">
   <script type="text/javascript" src="javascript/network_situation.js">
@@ -409,17 +408,32 @@ fullpage: true
         <h4>What's new?</h4>
 
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-
-          <div class="carousel-inner">
-
-            <div class="carousel-item active">
+ <div class="carousel-inner">
+          
+          <div class="carousel-item active">
               <div class="card border-0 rounded">
-                <img src="/images/landing/social-media-202607.png"
+              <a href="https://ansperformance.eu/publications/" target="_blank">
+                <img src="/images/landing/publications_aiu_2026.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="EUROCONTROL Aviation Intelligence on Social Media">
+                  alt="Updated: Publications page">
                 <div style="padding: 1rem;">
-                  <h5>New: EUROCONTROL Aviation Intelligence is now on social media</h5>
-                  <small>Aviation insights, straight to your feed! EUROCONTROL Aviation Intelligence has just launched dedicated LinkedIn and Instagram channels. Follow us and be among the first to get our data highlights, charts and network updates.</small>
+                  <h5><a href="https://ansperformance.eu/publications/" target="_blank">Updated: Publications page</a></h5>
+                  <small>Our Publications page has been redesigned with dedicated sections for Aviation Intelligence, PRC, Traffic Forecasting, Delay Analysis, and more. The new structure makes it easier to discover and navigate the unit's publications.</small>
+                </div>
+                <div class="card-footer pt-0">
+                  <a href="https://ansperformance.eu/publications/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card border-0 rounded">
+                <img src="/images/landing/Email banner for portal release.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="Traffic records and Network Performance">
+                <div style="padding: 1rem;">
+                  <h5>Traffic records and Network Performance</h5>
+                  <small>EUROCONTROL's Aviation Intelligence is posting  about the latest weekly traffic records and the monthly network performance on our LinkedIn and Instagram channels. Follow us and be among the first to recieve this information.</small>
                 </div>
                 <div class="card-footer pt-0">
                   <a href="https://www.linkedin.com/company/eurocontrol-aviation-intelligence/" class="btn btn-sm btn-primary mr-2" target="_blank"><i class="fab fa-linkedin mr-1"></i>LinkedIn</a>
@@ -430,21 +444,23 @@ fullpage: true
 
             <div class="carousel-item">
               <div class="card border-0 rounded">
-                <img src="/images/landing/covid-ans-202607.png"
+              <a href="https://ansperformance.eu/study/data-challenge/" target="_blank">
+                <img src="/images/landing/2026_08_13_Data Challenge.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Retrospective on the ANS industry’s response to the COVID-19 crisis">
+                  alt="Coming soon: PRC Data Challenge">
                 <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-retrospective-ans-industry-response-covid-19-crisis" target="_blank">Published: Retrospective on the ANS industry’s response to the COVID-19 crisis</a></h5>
-                  <small>The COVID-19 pandemic led to unprecedented disruption in global aviation, forcing the ANS industry to adapt quickly to low levels of traffic and revenue. The independent Performance Review Commission has now published a report providing a retrospective on the ANS industry’s response to the crisis, including the measures implemented in response and lessons learned.</small>
+                  <h5><a href="https://ansperformance.eu/study/data-challenge/" target="_blank">Coming soon: PRC Data Challenge</a></h5>
+                  <small>Following the success of the previous Data Challenges, the Challenge is back this year! Check out our Linkedin and Instagram pages for more details from 1 September.</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/air-traffic-management-cost-effectiveness-retrospective-ans-industry-response-covid-19-crisis" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                  <a href="https://ansperformance.eu/study/data-challenge/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
               <div class="card border-0 rounded">
+              <a href="https://www.eurocontrol.int/publications/series/eurocontrol-flash-briefings" target="_blank">
                 <img src="/images/landing/summer-flash-briefing-202607.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
                   alt="EUROCONTROL Weekly Summer Flash Briefings">
@@ -457,6 +473,28 @@ fullpage: true
                 </div>
               </div>
             </div>
+            
+            
+            
+            
+             <div class="carousel-item">
+              <div class="card border-0 rounded">
+               <a href="https://ansperformance.eu/traffic/connectivity/" target="_blank">
+                <img src="/images/landing/2026_08_13_connectivity.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="Updated: Connectivity dashboard">
+                <div style="padding: 1rem;">
+                  <h5><a href="https://ansperformance.eu/traffic/connectivity/" target="_blank">Updated: Connectivity dashboard</a></h5>
+                  <small>The Connectivity Dashboard has been updated with a new filter on the route map, allowing users to view new and established routes for each airport at the yearly level. A table has also been added to the overview page, enabling users to identify new and lost routes for each airport on a yearly basis.</small>
+                </div>
+                <div class="card-footer pt-0">
+                  <a href="https://ansperformance.eu/traffic/connectivity/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+            
+            
+            
 
             <div class="carousel-item">
               <div class="card border-0 rounded">
@@ -467,7 +505,7 @@ fullpage: true
                 </a>
                 <div style="padding: 1rem;">
                   <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-                  <small>June 2026 data available for download now!</small>
+                  <small>July 2026 data available for download now!</small>
                 </div>
                 <div class="card-footer pt-0">
                   <a href="/data/" class="card-link" target="_blank">Read more</a> <i
@@ -477,6 +515,7 @@ fullpage: true
             </div>
 
           </div>
+
 
 
           <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -619,7 +658,7 @@ fullpage: true
             <!-- Content -->
             <h5 class="mb-3 font-weight-bold">Punctuality</h5>
             <p>Departure/arrival punctuality (OTP15) and operated schedules</p>
-          </div> 
+          </div>
 
           <!-- Card footer -->
           <div class="card-footer bg-transparent border-0 p-0 pt-2 position-relative z-index-2">
@@ -828,30 +867,24 @@ fullpage: true
           </div>
 
           <div class="col-md-6 col-lg-4 ms-auto">
-            <div class="card rounded overflow-hidden p-4 mb-3" style="background: #00205B;">
+            <div class="card bg-primary rounded h-100 overflow-hidden p-4">
+              <!-- Card body -->
               <div class="card-body p-0">
-                <h4 class="text-white"><i class="fas fa-chart-bar mr-2"></i>Access our Data</h4>
+                <h4 class="text-white">Subscribe</h4>
+                <p class="text-white">Get informed about our newsletters, publications, and data
+                  updates!</p>
               </div>
-              <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
-<a href="/data/" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 0.5rem; text-decoration: none; color: #fff; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
-<i class="fas fa-database" style="font-size: 1.2rem;"></i>
-<div><strong style="font-size: 0.85rem;">Performance Data</strong><br><small style="opacity: 0.8;">Download open datasets</small></div>
-</a>
-<a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 0.5rem; text-decoration: none; color: #fff; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
-<i class="fas fa-flask" style="font-size: 1.2rem;"></i>
-<div><strong style="font-size: 0.85rem;">ADRR</strong> <i class="fas fa-xs fa-external-link-alt"></i><br><small style="opacity: 0.8;">Aviation Data Repository for Research</small></div>
-</a>
-              </div>
-            </div>
+              <a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter" target="_blank">
+                <img src="/images/landing/newsletter.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; margin-top: 10px; width: 100%;"
+                  alt="Performance Data Update">
+              </a>
 
-            <div class="card bg-primary rounded overflow-hidden p-4">
-              <div class="card-body p-0">
-                <h4 class="text-white"><i class="fas fa-envelope mr-2"></i>Subscribe</h4>
-                <p class="text-white small">Get informed about our newsletters, publications, and data updates!</p>
-              </div>
-              <div class="card-footer d-grid text-center p-0 mt-2">
+
+              <!-- Card footer -->
+              <div class="card-footer d-grid text-center p-0 mt-8">
                 <a href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter"
-                  class="btn btn-block btn-light mb-2" target="_blank">Subscribe</a>
+                  class="btn btn-block btn-light mb-3">Subscribe</a>
                 <p class="mb-0 text-white small"><a href="/about/privacy/" class="text-white">Read our
                     privacy protection statement</a></p>
               </div>

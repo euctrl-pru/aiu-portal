@@ -1,0 +1,120 @@
+modal: true
+years:
+  - year: 2026
+    items:
+      - title: "PRC Observer #5 - Open Data: The Foundation of Credibility"
+        date: "16 February 2026"
+        description: "The independent Performance Review Commission (PRC) explains how transparent and widely accepted performance measurement helps build trust and supports stakeholder engagement to improve the performance of the European air transport network."
+        url: "https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility"
+        image: "/images/pi/prc_obs5.png"
+        external: true
+
+  - year: 2025
+    items:
+      - title: "PRC Observer #4 - En route Capacity in Europe – how good was your summer?"
+        date: "9 October 2025"
+        description: "The independent Performance Review Commission (PRC) takes a look at the Network performance in July and August 2025 and tracks how some of the most penalising area control centres of 2024 performed in summer 2025."
+        url: "https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025"
+        image: "/images/pi/prc_obs4.png"
+        external: true
+
+      - title: "PRC Observer #3 - En route Capacity in Europe – an insufficient level of service"
+        date: "5 June 2025"
+        description: "The independent Performance Review Commission (PRC) examines the shortcomings of the European en-route capacity planning process in meeting airspace users' expectations, and highlights the need for greater transparency to restore service quality and European network capacity performance."
+        url: "https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service"
+        image: "/images/pi/prc_obs3.png"
+        external: true
+
+  - year: 2024
+    items:
+      - title: "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
+        date: "11 October 2024"
+        description: "The Performance Review Commission (PRC) takes a look at the poor capacity performance in Summer 2024 in Europe, contributing factors, and actions to be taken to mitigate high delays over the coming years."
+        url: "https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024"
+        image: "/images/pi/prc_obs2.png"
+        external: true
+
+      - title: "PRC Observer #1 - How can we make aviation green?"
+        date: "12 July 2024"
+        description: "The Performance Review Commission (PRC) takes a brief look at the environmental performance of European aviation, the possible contribution of ATM in mitigating aviation's impact on climate, and the challenges ahead in achieving the ambitious environmental goals."
+        url: "https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green"
+        image: "/images/pi/prc_obs1.png"
+        external: true
+
+      - title: "PRC Performance Insight #10 - ATM Cost-Effectiveness: A review of ANSPs regulatory, institutional and corporate governance arrangements"
+        date: "20 June 2024"
+        description: "This edition provides a review of the regulatory and institutional context in which Air Navigation Providers (ANSPs) operate and looks at the different corporate governance arrangements currently in place."
+        url: "https://www.eurocontrol.int/publication/prc-performance-insight-10-atm-cost-effectiveness"
+        image: "/images/pi/prc_pi10.PNG"
+        external: true
+
+      - title: "PRC Performance Insight #9 - Gate-to-gate CO₂ emissions in Europe: a holistic approach"
+        date: "13 June 2024"
+        description: "This edition presents the PRC's approach to measure and track gate-to-gate CO2 emissions in the EUROCONTROL area."
+        url: "https://www.eurocontrol.int/publication/prc-performance-insight-9-towards-reliable-gate-gate-co2-emissions-europe"
+        image: "/images/pi/prc_pi9.png"
+        external: true
+
+      - title: "PRC Performance Insight #8 - ATM performance benefit pools for improved civil-military cooperation and coordination"
+        date: "14 February 2024"
+        description: "This edition identifies ATM performance benefit pools for improved civil-military cooperation and coordination in Europe."
+        url: "https://www.eurocontrol.int/publication/prc-performance-insight-8-atm-performance-benefit-pools-improved-civil-military"
+        image: "/images/pi/prc_pi8.png"
+        external: true
+
+  - year: 2023
+    items:
+      - title: "PRC Performance Insight #7 - Reorganising ATS with Virtual Centres"
+        date: "17 January 2023"
+        description: "This edition looks at how ATM capacity and scalability will be impacted by the technical transformation process and new operational concepts, taking the example of virtualisation in general and virtual centres in particular."
+        url: "https://www.eurocontrol.int/publication/performance-insight-7-reorganising-ats-virtual-centres"
+        image: "/images/pi/prc_pi7.png"
+        external: true
+
+  - year: 2022
+    items:
+      - title: "Performance Insight #6 - 20 years of performance-oriented approach for ATM in Europe"
+        date: "1 December 2022"
+        description: "This edition looks at the major developments and trends in terms of ATM performance over the past 20 years before the start of the COVID crisis in 2020."
+        url: "https://www.eurocontrol.int/publication/performance-insight-6-20-years-performance-oriented-approach-atm-europe"
+        image: "/images/pi/prc_pi6.png"
+        external: true
+
+      - title: "Performance Insight #5 - Open performance data: An enabler to further performance enhancements?"
+        date: "14 October 2022"
+        description: "Pursuing an open data-based approach will allow all interested parties to tap into a harmonised data environment to build their assessments, validate results published by other parties, and reproduce findings."
+        url: "https://www.eurocontrol.int/publication/performance-insight-5-open-performance-data"
+        image: "/images/pi/prc_pi5.png"
+        external: true
+
+      - title: "Performance Insight #4 - Impact of COVID-19 on en-route unit rates and charges billed to airspace users"
+        date: "13 May 2022"
+        description: "The pan-European ATM system is primarily financed through the collection of en-route charges. This edition looks at how the continuous flow of revenue via the Route Charges System was impacted by COVID-19."
+        url: "https://www.eurocontrol.int/publication/performance-insight-4-impact-covid-19-en-route-unit-rates-and-charges-billed-airspace"
+        image: "/images/pi/prc_pi4.png"
+        external: true
+
+  - year: 2021
+    items:
+      - title: "Performance Insight #3 - The role of Air Navigation Services (ANS) in a decarbonising world"
+        date: "18 October 2021"
+        description: "This edition gives an overview of aviation's environmental performance in general and the role of Air Navigation Services (ANS) in particular, in order to identify and formulate relevant questions for further debate."
+        url: "/publications/prc/news/2021_10_18_pi_ops_decarb"
+        image: "/images/pi/prc_pi3.png"
+        external: false
+
+      - title: "Performance Insight #2 - The economic impact of COVID-19 on the ANS system"
+        date: "23 March 2021"
+        description: "COVID-19 continues to have a huge impact on the aviation industry. The independent Performance Review Commission (PRC) has prepared a preliminary analysis looking at the impact of this unprecedented crisis on the ANS system and the implications for the future."
+        url: "https://www.eurocontrol.int/publication/new-prc-performance-insight-economic-impact-covid-19-ans-system"
+        image: "/images/pi/prc_pi2.png"
+        external: true
+
+  - year: 2020
+    items:
+      - title: "Performance Insight #1 - Future Challenges to Safety"
+        date: "15 October 2020"
+        description: "In view of the numerous technological and institutional changes in the future, the PRC initiated a discussion to collect views on future challenges to safety and how to identify and measure potential risks in a changing ATM environment."
+        url: "/publications/prc/news/2020_10_15_pi_safety"
+        image: "/images/pi/prc_pi1.png"
+        external: false
