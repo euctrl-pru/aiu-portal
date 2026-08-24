@@ -1,6 +1,12 @@
 years:
   - year: 2026
     items:
+      - title: "EUROCONTROL European Aviation Overview 2026 - Week 33"
+        date: "20 August 2026"
+        description: "Biweekly overview of European aviation activity."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview-2026-week-33"
+        external: true
+        image: "/images/EAO_2026.png"
       - title: "EUROCONTROL European Aviation Overview 2026 - Week 31"
         date: "6 August 2026"
         description: "Biweekly overview of European aviation activity."
