@@ -25,49 +25,91 @@ keywords: performance, air transport, europe, cost efficiency, benchmarking
 library(dplyr)
 library(readxl)
 # ACE_landing_page <- read.csv(
-#   file  = here::here ("content","economics","ace_landing_page_data.csv")) 
-# 
+#   file  = here::here ("content","economics","ace_landing_page_data.csv"))
+#
 # if(ncol(ACE_landing_page)==1){
 #   ACE_landing_page <- read.csv2(
-#     file  = here::here ("content","economics","ace_landing_page_data.csv")) 
+#     file  = here::here ("content","economics","ace_landing_page_data.csv"))
 # }
 
 ACE_landing_page <- read_xlsx(
-  path  = here::here ("content","economics","ace_landing_page_data.xlsx"),
+  path = here::here("content", "economics", "ace_landing_page_data.xlsx"),
   sheet = "ACE_landing_page_data",
   range = cell_limits(c(1, 1), c(NA, NA))
-  )%>%
-  as_tibble%>%
-  mutate_all(as.numeric)%>%
-  rename(year_data=1)
+) %>%
+  as_tibble %>%
+  mutate_all(as.numeric) %>%
+  rename(year_data = 1)
 
 year_report <- max(ACE_landing_page$year_data)
 
-costs_per_cph <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(costs_per_cph) %>% unlist %>% unname %>% round
-costs_per_cph_change_perc <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(costs_per_cph_change_perc) %>% unlist %>% unname 
-costs_per_cph_change_perc <- paste0(if_else(costs_per_cph_change_perc >0, "+", ""), round(costs_per_cph_change_perc*100,1),"%")
+costs_per_cph <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(costs_per_cph) %>%
+  unlist %>%
+  unname %>%
+  round
+costs_per_cph_change_perc <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(costs_per_cph_change_perc) %>%
+  unlist %>%
+  unname
+costs_per_cph_change_perc <- paste0(
+  if_else(costs_per_cph_change_perc > 0, "+", ""),
+  round(costs_per_cph_change_perc * 100, 1),
+  "%"
+)
 
-ATCO_prod <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(ATCO_prod) %>% unlist %>% unname %>% round(.,2)
-ATCO_prod_change_perc <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(ATCO_prod_change_perc) %>% unlist %>% unname
-ATCO_prod_change_perc <- paste0(if_else(ATCO_prod_change_perc >0, "+", ""), round(ATCO_prod_change_perc*100,1),"%")
+ATCO_prod <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(ATCO_prod) %>%
+  unlist %>%
+  unname %>%
+  round(., 2)
+ATCO_prod_change_perc <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(ATCO_prod_change_perc) %>%
+  unlist %>%
+  unname
+ATCO_prod_change_perc <- paste0(
+  if_else(ATCO_prod_change_perc > 0, "+", ""),
+  round(ATCO_prod_change_perc * 100, 1),
+  "%"
+)
 
-ATCO_costs_per_h <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(ATCO_costs_per_h) %>% unlist %>% unname %>% round
-ATCO_costs_per_h_change_perc <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(ATCO_costs_per_h_change_perc) %>% unlist %>% unname
-ATCO_costs_per_h_change_perc <- paste0(if_else(ATCO_costs_per_h_change_perc >0, "+", ""), round(ATCO_costs_per_h_change_perc*100,1),"%")
+ATCO_costs_per_h <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(ATCO_costs_per_h) %>%
+  unlist %>%
+  unname %>%
+  round
+ATCO_costs_per_h_change_perc <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(ATCO_costs_per_h_change_perc) %>%
+  unlist %>%
+  unname
+ATCO_costs_per_h_change_perc <- paste0(
+  if_else(ATCO_costs_per_h_change_perc > 0, "+", ""),
+  round(ATCO_costs_per_h_change_perc * 100, 1),
+  "%"
+)
 
-support_costs_per_cph <- ACE_landing_page %>% filter(year_data == year_report) %>%
-  select(support_costs_per_cph) %>% unlist %>% unname %>% round
+support_costs_per_cph <- ACE_landing_page %>%
+  filter(year_data == year_report) %>%
+  select(support_costs_per_cph) %>%
+  unlist %>%
+  unname %>%
+  round
 support_costs_per_cph_change_perc <- ACE_landing_page %>%
-  filter(year_data == year_report) %>% select(support_costs_per_cph_change_perc) %>%
-  unlist %>% unname 
-support_costs_per_cph_change_perc <- paste0(if_else(support_costs_per_cph_change_perc >0, "+", ""), round(support_costs_per_cph_change_perc*100,1),"%")
-
+  filter(year_data == year_report) %>%
+  select(support_costs_per_cph_change_perc) %>%
+  unlist %>%
+  unname
+support_costs_per_cph_change_perc <- paste0(
+  if_else(support_costs_per_cph_change_perc > 0, "+", ""),
+  round(support_costs_per_cph_change_perc * 100, 1),
+  "%"
+)
 ```
 
 <div class="container">
@@ -127,7 +169,11 @@ ATCO-hour productivity
 
 <div class="col-md-6" >
 ```{r,  echo = FALSE, eval = TRUE, message=FALSE, warning=FALSE, out.width='100%'}
-source(here::here ("R","plot_ace_lp.R"), local = knitr::knit_global(), print.eval = TRUE)
+source(
+  here::here("R", "plot_ace_lp.R"),
+  local = knitr::knit_global(),
+  print.eval = TRUE
+)
 plot_ACE
 ```
 </div><!-- closes col-md-6  -->
@@ -221,7 +267,7 @@ plot_ACE
 <!-- <a href="/library/ACE-handbook.pdf" download><i class="fas fa-download" data-toggle="tooltip" title="Download pdf"></i></a> -->
 <a href="/economics/ace/ace-handbook/" data-toggle="tooltip" title="Access electronic version" target="_blank">**ACE Handbook**</a>
 <span class="float-right">
-<a href="/library/ace/ace-handbook-june-2023-edition.pdf" data-toggle="tooltip" title="Download pdf version" target="_blank" download><i class="fas fa-download"></i></a>
+<a href="https://ansperformance.eu/economics/ace/ace-handbook/ACE-Handbook.pdf" data-toggle="tooltip" title="Download pdf version" target="_blank" download><i class="fas fa-download"></i></a>
 </span>
 </div>
 Learn about the scope of the ACE analysis, the processes involved in the production of the report, the factors affecting performance and  the indicators used in the ACE analysis.

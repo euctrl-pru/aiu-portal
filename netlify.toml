@@ -237,9 +237,14 @@ command = "hugo --gc --minify"
   status = 200
   force = true
   
-  
 [[redirects]]
   from = "/punctuality/punctuality/"
   to = "/punctuality/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/library/ace/ace-handbook-june-2023-edition.pdf"
+  to = "https://ansperformance.eu/economics/ace/ace-handbook/ACE-Handbook.pdf"
   status = 200
   force = true
