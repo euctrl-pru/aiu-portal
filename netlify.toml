@@ -96,79 +96,79 @@ command = "hugo --gc --minify"
 [[redirects]]
   from = "/global/brazil/bra-eur-2019/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/global/brazil/bra-eur/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR-2022/:splat"
-  status = 200
+  status = 301
   force = true
   
 [[redirects]]
   from = "/global/brazil/bra-eur-2023/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR-2023/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/global/brazil/bra-eur-2024/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR-2025/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/global/brazil/bra-eur-2025/*"
   to = "https://euctrl-pru.github.io/international-BRA-EUR-2026/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/ace/ace-hlsr/*"
   to = "https://ace-hlsr.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/ace/ace-handbook/*"
   to = "https://ace-handbook.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/cba/standard-inputs/latest/*"
   to = "https://standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/cba/standard-inputs/v9.0.1/*"
   to = "https://permanent-release-v9-0-1--standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/cba/standard-inputs/v9.0.2/*"
   to = "https://permanent-release-v9-0-2--standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
   
 [[redirects]]
   from = "/economics/cba/standard-inputs/v9.0.3/*"
   to = "https://permanent-release-v9-0-3--standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/cba/standard-inputs/v10.0.0/*"
   to = "https://permanent-release-v10-0-0--standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/economics/cba/standard-inputs/v10.0.1/*"
   to = "https://permanent-release-v10-0-1--standard-inputs.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
@@ -186,65 +186,65 @@ command = "hugo --gc --minify"
 [[redirects]]
   from = "/dashboard/stakeholder/airport/db/*"
   to = "https://aiu-airport-dashboard.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/covid/acft_ground/"
   to = "/dashboard/stakeholder/airport/acft_ground/"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/data/download/*"
   to = "https://www.eurocontrol.int/performance/data/download/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/study/data-challenge/dc2026/*"
   to = "https://prc-data-challenge-2026.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/study/data-challenge/dc2025/*"
   to = "https://prc-data-challenge-2025.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/study/data-challenge/dc2024/*"
   to = "https://prc-data-challenge.netlify.app/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/methodology/ATFM_delay_calculation.html"
   to = "/methodology/atfm-delay-calculation/"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/methodology/cd_vertical_flight_efficiency_pi.html"
   to = "/methodology/cd-vertical-flight-efficiency-pi.html"
-  status = 200
+  status = 301
   force = true
   
 [[redirects]]
   from = "/traffic/punctuality/"
   to = "/punctuality/"
-  status = 200
+  status = 301
   force = true
   
 [[redirects]]
   from = "/punctuality/punctuality/"
   to = "/punctuality/"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/library/ace/ace-handbook-june-2023-edition.pdf"
   to = "https://ansperformance.eu/economics/ace/ace-handbook/ACE-Handbook.pdf"
-  status = 200
+  status = 301
   force = true
