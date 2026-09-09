@@ -20,7 +20,7 @@
 
     function readCookie(name) {
       var parts = ('; ' + document.cookie).split('; ' + name + '=');
-      return parts.length === 2 ? parts.pop().split(';').shift() : null;
+      return parts.length >= 2 ? parts.pop().split(';').shift() : null;
     }
 
     function writeCookie(name, value, maxAge) {
@@ -66,6 +66,7 @@
         window._paq.push(['forgetCookieConsentGiven']);
         expireGaCookies();
         api.hide();
+        if (typeof window.gtag === 'function') { location.reload(); }
       }
     };
 
@@ -73,7 +74,8 @@
 
     if (banner) {
       banner.addEventListener('click', function (e) {
-        var action = e.target.getAttribute('data-aiu-consent');
+        var el = e.target.closest ? e.target.closest('[data-aiu-consent]') : null;
+        var action = el ? el.getAttribute('data-aiu-consent') : null;
         if (action === 'grant') { api.grant(); }
         if (action === 'deny') { api.deny(); }
       });

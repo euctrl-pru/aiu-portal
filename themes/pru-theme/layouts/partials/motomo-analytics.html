@@ -4,7 +4,7 @@
 
     (function () {
       var parts = ('; ' + document.cookie).split('; aiu_cookie_consent=');
-      var consent = parts.length === 2 ? parts.pop().split(';').shift() : null;
+      var consent = parts.length >= 2 ? parts.pop().split(';').shift() : null;
 
       /* Cookies only after consent; requests still sent (cookieless) otherwise. */
       _paq.push(['requireCookieConsent']);
