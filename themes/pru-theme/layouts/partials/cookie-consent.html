@@ -1,0 +1,83 @@
+<div id="sliding-popup" class="sliding-popup-bottom" role="dialog"
+     aria-live="polite" aria-label="Cookie consent" hidden>
+  <div class="eu-cookie-compliance-content">
+    <div id="popup-text" class="eu-cookie-compliance-message">
+      <p>This website uses cookies to ensure you get the best experience on our website.
+        <a href="https://www.eurocontrol.int/info/privacy-and-website-terms-use"
+           target="_blank" rel="noopener">More info</a>
+      </p>
+    </div>
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons">
+      <button type="button" class="agree-button" data-aiu-consent="grant">OK, I agree</button>
+      <button type="button" class="decline-button" data-aiu-consent="deny">No, thanks</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var NAME = 'aiu_cookie_consent';
+    var YEAR = 31536000;
+
+    function readCookie(name) {
+      var parts = ('; ' + document.cookie).split('; ' + name + '=');
+      return parts.length === 2 ? parts.pop().split(';').shift() : null;
+    }
+
+    function writeCookie(name, value, maxAge) {
+      var secure = location.protocol === 'https:' ? '; Secure' : '';
+      document.cookie = name + '=' + value + '; path=/; max-age=' + maxAge +
+                        '; SameSite=Lax' + secure;
+    }
+
+    function expireGaCookies() {
+      var host = location.hostname;
+      var domains = ['', '; domain=' + host, '; domain=.' + host];
+      document.cookie.split('; ').forEach(function (pair) {
+        var key = pair.split('=')[0];
+        if (key.indexOf('_ga') === 0 || key.indexOf('_gid') === 0) {
+          domains.forEach(function (d) {
+            document.cookie = key + '=; path=/; max-age=0' + d;
+          });
+        }
+      });
+    }
+
+    var banner = document.getElementById('sliding-popup');
+
+    var api = {
+      get: function () {
+        var v = readCookie(NAME);
+        return (v === 'granted' || v === 'denied') ? v : null;
+      },
+      set: function (value) { writeCookie(NAME, value, YEAR); },
+      show: function () { if (banner) { banner.hidden = false; } },
+      hide: function () { if (banner) { banner.hidden = true; } },
+      grant: function () {
+        api.set('granted');
+        window._paq = window._paq || [];
+        window._paq.push(['setCookieConsentGiven']);
+        window._paq.push(['rememberCookieConsentGiven', 8760]);
+        if (typeof window.aiuLoadGA === 'function') { window.aiuLoadGA(); }
+        api.hide();
+      },
+      deny: function () {
+        api.set('denied');
+        window._paq = window._paq || [];
+        window._paq.push(['forgetCookieConsentGiven']);
+        expireGaCookies();
+        api.hide();
+      }
+    };
+
+    window.aiuConsent = api;
+
+    if (banner) {
+      banner.addEventListener('click', function (e) {
+        var action = e.target.getAttribute('data-aiu-consent');
+        if (action === 'grant') { api.grant(); }
+        if (action === 'deny') { api.deny(); }
+      });
+      if (api.get() === null) { api.show(); }
+    }
+  })();
+</script>
