@@ -1,0 +1,6 @@
+---
+title: Study
+description: "Studies or special activities."
+---
+
+Ciao
