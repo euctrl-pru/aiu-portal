@@ -4,5 +4,5 @@ description: "Studies or special activities."
 type: bibliography
 ---
 
-* [PRC Data Challenges](data-challenges/)
+* [PRC Data Challenges](data-challenge/)
 * [PRC workshop - PRC-ACI EUROPE APOC Exchange 2025](2025_03_apoc_ws/)
