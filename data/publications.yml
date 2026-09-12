@@ -27,6 +27,12 @@ sections:
         url: "/publications/ectl/flash/"
         image: "/images/flash_briefing_main.png"
         description: "Weekly updates on network performance during the busy summer season."
+        
+      - title: "Standard Inputs for Economic Analyses"
+        url: "/economics/cba/standard-inputs/latest/"
+        image: "/images/prc/standard_inputs_main.png"
+        description: "Latest available inputs for cost-benefit and economic assessments."
+
 
   - key: "prc"
     title: "Performance Review Commission (PRC)"
@@ -100,16 +106,16 @@ sections:
         image: "/images/coda/taxi_main.png"
         description: "Seasonal taxi time statistics at European airports."
 
-  - key: "other"
-    title: "Other"
+  - key: "global"
+    title: "Global Benchmarking"
     icon: "fas fa-globe-europe"
     cards:
-      - title: "Global Benchmarking"
-        url: "/global/"
-        image: "/images/prc/global_main.png"
-        description: "Comparing ATM performance with peers worldwide."
-
-      - title: "Standard Inputs for Economic Analyses"
-        url: "/economics/cba/standard-inputs/latest/"
-        image: "/images/prc/standard_inputs_main.png"
-        description: "Latest available inputs for cost-benefit and economic assessments."
+      - title: "Brazil"
+        url: "/global/brazil"
+        image: "/global/flag_of_brazil.png"
+        description: "Our collaboration with Brazil."
+        
+      - title: "uss"
+        url: "/global/usa"
+        image: "/global/flag_of_usa.png"
+        description: "Our collaboration with the USA."
