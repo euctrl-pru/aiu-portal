@@ -115,7 +115,7 @@ sections:
         image: "/global/flag_of_brazil.png"
         description: "Our collaboration with Brazil."
         
-      - title: "uss"
+      - title: "USA"
         url: "/global/usa"
         image: "/global/flag_of_usa.png"
         description: "Our collaboration with the USA."
