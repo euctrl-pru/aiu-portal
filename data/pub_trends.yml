@@ -1,6 +1,13 @@
 years:
   - year: 2026
     items:
+      - title: "Aviation Trends #12 - How Capacity and Weather-Based Operations (CWBO) are building network resilience to capacity bottlenecks, adverse weather and instability"
+        date: "14 September 2026"
+        description: "This Aviation Trends paper examines how CWBO combines meteorological forecasts, real-time updates and expected traffic demand to identify emerging capacity shortfalls, including those caused by convective weather affecting en-route operations."
+        url: "https://www.eurocontrol.int/publication/how-capacity-and-weather-based-operations-cwbo-are-building-network-resilience-capacity"
+        image: "/images/at/at12.png"
+        external: true
+
       - title: "Aviation Trends #11 - Impact of the current Middle East crisis on European aviation"
         date: "31 March 2026"
         description: "This Aviation Trends edition analyses the impact of the current Middle East crisis on European aviation operations and traffic patterns."
