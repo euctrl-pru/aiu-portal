@@ -30,7 +30,7 @@ sections:
         
       - title: "Standard Inputs for Economic Analyses"
         url: "/economics/cba/standard-inputs/latest/"
-        image: "/images/prc/standard_inputs_main.png"
+        image: "/images/standard_input_main.png"
         description: "Latest available inputs for cost-benefit and economic assessments."
 
 
