@@ -1,6 +1,34 @@
 years:
   - year: 2026
     items:
+      - title: "EUROCONTROL Special Summer 2026 Flash Briefing"
+        date: "11 September 2026" 
+        description: "Special update on network performance covering the summer season (Jun-Aug)."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-special-summer-2026-flash-briefing"
+        external: true
+        image: "/images/landing/2026-09-11_Special_Flash_Briefing.png"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 35"
+        date: "2 September 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-35"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w26.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 34"
+        date: "26 August 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-34"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w26.jpg"
+
+      - title: "EUROCONTROL Flash Briefing 2026 - Week 33"
+        date: "19 August 2026"
+        description: "Weekly update on network performance during the summer season."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-flash-briefing-2026-week-33"
+        external: true
+        image: "/images/flash/pubs/flash_2026_w26.jpg"
+
       - title: "EUROCONTROL Flash Briefing 2026 - Week 32"
         date: "12 August 2026"
         description: "Weekly update on network performance during the summer season."
