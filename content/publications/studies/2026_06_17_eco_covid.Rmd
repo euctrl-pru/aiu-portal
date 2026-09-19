@@ -1,0 +1,37 @@
+---
+title: "Retrospective on the ANS industry’s response to the COVID-19 crisis"
+type: "Performance Study"
+date: '2026-06-17'
+excerpt: "Performance Study"
+bibliography: [../../../static/bib/aviation.bib]
+link-citations: true
+dwnld_i: <i class="fa pru fa-download"></i>
+tags: Performance Study, Economics, COVID
+---
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# run setup script
+source(here::here("_common.R"))
+```
+ 
+<br>
+<div class="container">
+<div class="row align-items-start">
+
+The COVID-19 pandemic led to unprecedented disruption in global aviation, forcing the ANS industry to adapt quickly to low levels of traffic and revenue. As the report demonstrates, it exposed the challenges for ANSPs and other ANS stakeholders in making decisions amid high uncertainty on traffic recovery. 
+
+This is a standalone report based on the analysis developed in the latest ATM Cost-Effectiveness (ACE) Benchmarking Report (2026 edition).
+
+It analyses the impact of the COVID-19 pandemic on the Pan-European ANS industry, including how the ANS industry responded and lessons learned, which may help guide responses to future crises.
+
+Download the report below to find out more.
+
+<br><br><a href="https://www.eurocontrol.int/news/performance-review-commission-issues-retrospective-ans-industrys-response-covid-19-crisis" data-toggle="tooltip" title="Download pdf version" target="_blank" class="btn btn-info" role="button"> Retrospective on the ANS industry’s response to the COVID-19 crisis <br> {{% dwnld_i %}} Download </a>
+
+#### Notice
+*The PRC has made every effort to ensure that the information and analysis contained in this document are as accurate and 
+complete as possible. Despite these precautions, should you find any errors or inconsistencies we would be grateful if you 
+could please bring them to the [Aviation Intelligence Unit's attention](mailto:PRU-Support@eurocontrol.int).*
+
+
+</div>
+</div>
