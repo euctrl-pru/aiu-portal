@@ -532,4 +532,68 @@
 .card {
   border-radius: 1rem;
 }
+#sliding-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-top: 1px solid #efefef;
+  padding: 16px;
+}
+#sliding-popup .eu-cookie-compliance-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+#popup-text {
+  font-size: 16px;
+  color: #464646;
+}
+#popup-text p {
+  margin: 0;
+}
+#popup-text a {
+  color: #2990ea;
+  text-decoration: none;
+}
+#popup-text a:hover {
+  text-decoration: underline;
+}
+#popup-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+#popup-buttons button {
+  border-radius: 800px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20.4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#popup-buttons .agree-button {
+  background-color: #2990ea;
+  color: #ffffff;
+  border: 1px solid #2990ea;
+}
+#popup-buttons .decline-button {
+  background-color: transparent;
+  color: #2990ea;
+  border: 1px solid #2990ea;
+}
+@media (max-width: 768px) {
+  #sliding-popup .eu-cookie-compliance-content {
+    display: block;
+  }
+  #popup-buttons {
+    margin-top: 12px;
+  }
+}
 </style>

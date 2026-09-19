@@ -3,8 +3,6 @@ title: Publications
 description: "An overview of all publications related to the EUROCONTROL Aviation Intelligence Unit and the independent Performance Review Commission."
 layout: frontpage
 ---
-<<<<<<< HEAD
-=======
 
 <br>
 
@@ -105,4 +103,3 @@ layout: frontpage
 </div>
 
 </html>
->>>>>>> origin
