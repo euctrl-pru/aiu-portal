@@ -35,7 +35,7 @@ apt_flt_beg: Jan 2016
 apt_flt_end: Aug 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - No post ops adj.
-apt_dly_beg: Jan 2019
+apt_dly_beg: Jan 2020
 apt_dly_end: Aug 2026 # UPDATE MONTHLY (M)
 
 ## Airport arrival ATFM delays - With post ops adj.
@@ -71,7 +71,7 @@ all_pre_beg: Jan 2020
 all_pre_end: Jun 2026 # UPDATE MONTHLY (M-1) - One month delay
 
 ## ATFM slot adherence
-slt_adh_beg: Jan 2019
+slt_adh_beg: Jan 2020
 slt_adh_end: Aug 2026 # UPDATE MONTHLY (M)
 
 ## ASMA additional time - Old methodology
