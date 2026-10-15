@@ -1,4 +1,5 @@
 ---
+#publications page content is located in the aiu-portal/data folder
 title: Publications
 description: "An overview of all publications related to the EUROCONTROL Aviation Intelligence Unit and the independent Performance Review Commission."
 layout: frontpage

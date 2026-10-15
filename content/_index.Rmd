@@ -413,16 +413,16 @@ fullpage: true
  
             <div class="carousel-item active">
               <div class="card border-0 rounded">
-              <a href="https://www.eurocontrol.int/publication/how-capacity-and-weather-based-operations-cwbo-are-building-network-resilience-capacity" target="_blank">
-                <img src="/images/landing/2026-09-14_AT12_cwbo.png"
+              <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" target="_blank">
+                <img src="/images/landing/2026-10-05_DS61.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Special Summer 2026 Flash Briefing">
+                  alt="Data Snapshot #61 on seasonality">
                 <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/publication/how-capacity-and-weather-based-operations-cwbo-are-building-network-resilience-capacity" target="_blank">Published: Aviation Trends #12 - Capacity and Weather-Based Operations</a></h5>
-                  <small>This Aviation Trends paper examines how CWBO combines meteorological forecasts, real-time updates and expected traffic demand to identify emerging capacity shortfalls, including those caused by convective weather affecting en-route operations.</small>
+                  <h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" target="_blank">Published: Data Snapshot #61 on seasonal traffic patterns across Europe</a></h5>
+                  <small>Data snapshot #61 provides insights on the European countries which experience the biggest summer traffic surge. Across most of Europe, traffic follows a clear summer-oriented pattern, but the intensity of the seasonal swing differs substantially.</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/how-capacity-and-weather-based-operations-cwbo-are-building-network-resilience-capacity" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                  <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>
@@ -430,19 +430,56 @@ fullpage: true
           
             <div class="carousel-item">
               <div class="card border-0 rounded">
-              <a href="https://www.eurocontrol.int/publication/eurocontrol-special-summer-2026-flash-briefing" target="_blank">
-                <img src="/images/landing/2026-09-11_Special_Flash_Briefing.png"
+              <a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" target="_blank">
+                <img src="/images/landing/2026-09-30_ACE-first-look2025.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Special Summer 2026 Flash Briefing">
+                  alt="First look at ACE 2025 data">
                 <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/publication/eurocontrol-special-summer-2026-flash-briefing" target="_blank">Published: Special Summer 2026 Flash Briefing</a></h5>
-                  <small>Our Special Summer 2026 Flash Briefing, covering the period 1 June-31 August 2026, summarises how the summer went for European aviation. In total, an extremely busy summer for all operational actors saw 66 all-time daily traffic records set, including the busiest network day ever.</small>
+                  <h5><a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" target="_blank">Published: ATM Cost-Effectiveness (ACE) First look at ACE 2025 data</a></h5>
+                  <small>The EUROCONTROL Performance Review Unit has produced a new report providing a first look at ANSP 2025 cost effectiveness data. This data has not yet been validated and thus may differ from later ACE publications.</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/eurocontrol-special-summer-2026-flash-briefing" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                  <a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>
+
+
+
+            <div class="carousel-item">
+              <div class="card border-0 rounded">
+              <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank">
+                <img src="/images/landing/2026-10-15_addr.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="Aviation Data Repository for Research">
+                <div style="padding: 1rem;">
+                  <h5><a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank">Aviation Data Repository for Research</a></h5>
+                  <small>EUROCONTROL expands the Aviation Data Repository for Research (ADRR) by increasing the annual data coverage from 4 months to 12 months and reducing the data release delay from 24 to 12 months. By January 2027, more than 100 million flight records spanning 2015 to 2025 will be accessible.</small>
+                </div>
+                <div class="card-footer pt-0">
+                  <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+            
+            
+
+            <div class="carousel-item">
+              <div class="card border-0 rounded">
+             <!--  <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank"> --> 
+                <img src="/images/landing/2026-10-15_7-year_forecast.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="EUROCONTROL 7-year forecast update will be released">
+                <div style="padding: 1rem;">
+                 <!-- <h5><a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank">Aviation Data Repository for Research</a></h5>-->
+                  <small>The upcoming EUROCONTROL 7-year flight and service units forecast update 2026-2032 will be released next week. Stay tuned for further updates!</small>
+                </div>
+                <div class="card-footer pt-0">
+                 <!-- <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i> --> 
+                </div>
+              </div>
+            </div>            
+
             
 
             <div class="carousel-item">
@@ -461,24 +498,8 @@ fullpage: true
                 </div>
               </div>
             </div>
+            
 
-
-
-            <div class="carousel-item">
-              <div class="card border-0 rounded">
-              <a href="https://ansperformance.eu/study/data-challenge/" target="_blank">
-                <img src="/images/landing/2026_08_13_Data Challenge.png"
-                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="The PRC Data Challenge 2026 is LIVE!">
-                <div style="padding: 1rem;">
-                  <h5><a href="https://ansperformance.eu/study/data-challenge/dc2026/" target="_blank">The PRC Data Challenge 2026 is LIVE!</a></h5>
-                  <small>Think you can predict taxi-out times? This year, we’re challenging you to build a model that predicts the taxi-out time of flights from 11 major European airports. It’s your chance to tackle a real-world aviation problem using operational data and compete for a share of the €5,000 prize pot.</small>
-                </div>
-                <div class="card-footer pt-0">
-                  <a href="https://ansperformance.eu/study/data-challenge/dc2026/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
 
             <div class="carousel-item">
               <div class="card border-0 rounded">
@@ -526,7 +547,7 @@ fullpage: true
                 </a>
                 <div style="padding: 1rem;">
                   <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-                  <small>July 2026 data available for download now!</small>
+                  <small>September 2026 data available for download now!</small>
                 </div>
                 <div class="card-footer pt-0">
                   <a href="/data/" class="card-link" target="_blank">Read more</a> <i
