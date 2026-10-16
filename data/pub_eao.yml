@@ -1,6 +1,11 @@
 years:
   - year: 2026
     items:
+      - title: "EUROCONTROL European Aviation Overview 2026 - Week 41"
+        date: "15 October 2026"
+        description: "Biweekly overview of European aviation activity."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-european-aviation-overview-2026-week-41"
+        external: true
       - title: "EUROCONTROL European Aviation Overview 2026 - Week 39"
         date: "2 October 2026"
         description: "Biweekly overview of European aviation activity."
