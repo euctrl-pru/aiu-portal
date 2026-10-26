@@ -56,17 +56,23 @@ SERIES: list[Series] = [
 ]
 
 
+def normalize_title(title: str) -> str:
+    """En/em dashes become "-", whitespace runs collapse to one space, ends are stripped."""
+    return re.sub(r"\s+", " ", re.sub("[\u2013\u2014]", "-", title)).strip()
+
+
 def render_title(series: Series, entry: ListingEntry, existing_titles: list[str]) -> str | None:
     """Return the data-file title for a listing entry, or None if it is not part of the series."""
-    m = re.fullmatch(series.include, entry.title, re.IGNORECASE)
+    site_title = normalize_title(entry.title)
+    m = re.fullmatch(series.include, site_title, re.IGNORECASE)
     if not m:
         return None
     # Captured groups are free text from the site; capitalise their first letter.
     groups = [g[:1].upper() + g[1:] for g in m.groups("")]
     numbers = [int(n.group(1)) for t in existing_titles if (n := re.search(r"#(\d+)", t))]
     return series.title.format(
-        entry.title, *groups,
-        site=entry.title.removeprefix("EUROCONTROL "),
+        site_title, *groups,
+        site=site_title.removeprefix("EUROCONTROL "),
         n=max(numbers, default=0) + 1,
     )
 

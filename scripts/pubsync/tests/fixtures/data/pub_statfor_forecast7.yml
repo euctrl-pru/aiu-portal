@@ -1,0 +1,159 @@
+years:
+  - year: 2026
+    items:
+      - title: "EUROCONTROL Forecast 2026-2032"
+        date: "26 March 2026"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-2026-2032"
+        external: true
+        image: "/images/statfor/pubs/forecast7_2026.jpg"
+  - year: 2025
+    items:
+      - title: "EUROCONTROL Forecast 2025-2031"
+        date: "28 February 2025"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-2025-2031-spring-2025"
+        external: true
+        image: "/images/statfor/pubs/forecast7_2025.jpg"
+  - year: 2024
+    items:
+      - title: "EUROCONTROL Forecast 2024-2030"
+        date: "26 February 2024"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2030"
+        external: true
+        image: "/images/statfor/pubs/forecast7_2024.jpg"
+  - year: 2023
+    items:
+      - title: "EUROCONTROL Forecast 2023-2029"
+        date: "18 October 2023"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2023-2029-autumn-2023"
+        external: true
+        image: "/images/statfor/pubs/forecast7_2023_autumn.jpg"
+  - year: 2020
+    items:
+      - title: "EUROCONTROL Five-Year Forecast 2020-2024"
+        date: "4 November 2020"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-five-year-forecast-2020-2024"
+        external: true
+        image: "/images/statfor/pubs/forecast7_2020.jpg"
+  - year: 2019
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - Autumn 2019"
+        date: "15 October 2019"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-autumn-2019"
+        external: true
+      - title: "Seven-year Forecast of Flight Movements and Service Units - February 2019"
+        date: "21 February 2019"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2019"
+        external: true
+  - year: 2018
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - September 2018"
+        date: "23 October 2018"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2018"
+        external: true
+      - title: "Seven-year Forecast of Flight Movements and Service Units - February 2018"
+        date: "28 February 2018"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2018"
+        external: true
+  - year: 2017
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - September 2017"
+        date: "16 October 2017"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2017"
+        external: true
+      - title: "Seven-year Forecast for Flight Movements and Service Units - February 2017"
+        date: "28 February 2017"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2017"
+        external: true
+  - year: 2016
+    items:
+      - title: "Seven-year Forecast Flight Movements and Service Units - September 2016"
+        date: "1 September 2016"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2016"
+        external: true
+      - title: "Seven-year Flight Forecast of Flight Movements and Service Units - February 2016"
+        date: "11 March 2016"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-flight-forecast-flight-movements-and-service-units-february-2016"
+        external: true
+  - year: 2015
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - September 2015"
+        date: "1 October 2015"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2015"
+        external: true
+      - title: "Seven-year Forecast of Flight Movements and Service Units - February 2015"
+        date: "11 March 2015"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2015-0"
+        external: true
+      - title: "Seven-year Forecast of Flight Movements and Service Units - February 2015"
+        date: "11 March 2015"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2015"
+        external: true
+  - year: 2014
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - September 2014"
+        date: "26 September 2014"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2014"
+        external: true
+      - title: "Seven-year Forecast Flight Movements and Service Units - February 2014"
+        date: "3 February 2014"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2014"
+        external: true
+  - year: 2013
+    items:
+      - title: "Seven-year Forecast of Flight Movements and Service Units - September 2013"
+        date: "30 September 2013"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-september-2013"
+        external: true
+      - title: "Intermediate Seven-year Forecast of Flight Movements and Service Units - May 2013"
+        date: "31 May 2013"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/intermediate-seven-year-forecast-flight-movements-and-service-units-may-2013"
+        external: true
+      - title: "Seven-year Forecast Flight Movements and Service Units - February 2013"
+        date: "28 February 2013"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-and-service-units-february-2013"
+        external: true
+  - year: 2012
+    items:
+      - title: "Seven-year Forecast of Flight Movements - September 2012"
+        date: "1 September 2012"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-september-2012"
+        external: true
+      - title: "Seven-year Forecast of Service Units - May 2012"
+        date: "1 May 2012"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-service-units-may-2012"
+        external: true
+      - title: "Seven-year Forecast of Service Units - February 2012"
+        date: "1 May 2012"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-service-units-february-2012"
+        external: true
+  - year: 2011
+    items:
+      - title: "Seven-year Forecast of Flight Movements - December 2011"
+        date: "1 December 2011"
+        description: "7-year forecast on observed flight trends and route patterns."
+        url: "https://www.eurocontrol.int/publication/seven-year-forecast-flight-movements-december-2011"
+        external: true

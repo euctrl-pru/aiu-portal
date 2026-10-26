@@ -1,0 +1,50 @@
+years:
+  - year: 2024
+    items:
+      - title: "EUROCONTROL Aviation Long-Term Outlook"
+        date: "19 December 2024"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-forecast-2024-2050"
+        external: true
+        image: "/images/statfor/pubs/outlook_2024.jpg"
+  - year: 2022
+    items:
+      - title: "EUROCONTROL Aviation Outlook 2050"
+        date: "13 April 2022"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/eurocontrol-aviation-outlook-2050"
+        external: true
+        image: "/images/statfor/pubs/outlook_2022.jpg"
+  - year: 2018
+    items:
+      - title: "Long-term Forecast of Annual Numbers of IFR Flights up to 2040"
+        date: "25 September 2018"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/long-term-forecast-annual-numbers-ifr-flights-2040"
+        external: true
+  - year: 2013
+    items:
+      - title: "Long-term Forecast of Annual Numbers of IFR Flights up to 2035"
+        date: "1 June 2013"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/long-term-forecast-annual-numbers-ifr-flights-2035"
+        external: true
+      - title: "Long-term Forecast of Annual Numbers of IFR Flights up to 2050"
+        date: "1 June 2013"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/long-term-forecast-annual-numbers-ifr-flights-2050"
+        external: true
+  - year: 2010
+    items:
+      - title: "Long-term Forecast of Flight Movements up to 2030"
+        date: "17 December 2010"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/long-term-forecast-flight-movements-2030"
+        external: true
+  - year: 2008
+    items:
+      - title: "Long-term Forecast of Annual Numbers of IFR Flights up to 2030"
+        date: "19 November 2008"
+        description: "Long-term outlook on European air traffic trends."
+        url: "https://www.eurocontrol.int/publication/long-term-forecast-annual-numbers-ifr-flights-2030"
+        external: true

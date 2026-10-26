@@ -79,7 +79,7 @@ def test_normalize_leaves_other_hosts():
 
 def test_listing_url():
     assert ec.listing_url("product:805") == "https://www.eurocontrol.int/library/search?f%5B0%5D=product%3A805"
-    assert ec.listing_url("keywords:PRC Observer") == "https://www.eurocontrol.int/library/search?keywords=PRC+Observer"
+    assert ec.listing_url("keywords:PRC Observer") == "https://www.eurocontrol.int/library/search?keywords=PRC+Observer&items_per_page=50"
 
 
 def test_format_date():

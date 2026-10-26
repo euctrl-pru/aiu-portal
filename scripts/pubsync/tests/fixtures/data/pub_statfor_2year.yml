@@ -1,0 +1,166 @@
+years:
+  - year: 2017
+    items:
+      - title: "Intermediate Two-year Forecast of Service Units - May 2017"
+        date: "30 August 2017"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/intermediate-two-year-forecast-service-units-may-2017"
+        external: true
+  - year: 2016
+    items:
+      - title: "Intermediate Two-year Forecast of Service Units - May 2016"
+        date: "30 May 2016"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/intermediate-two-year-forecast-service-units-may-2016"
+        external: true
+  - year: 2014
+    items:
+      - title: "Two-year Intermediate Service Units Forecast - May 2014"
+        date: "23 May 2014"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/two-year-intermediate-service-units-forecast-may-2014"
+        external: true
+  - year: 2012
+    items:
+      - title: "Two-year Forecast of Flight Movements - December 2012"
+        date: "22 December 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/two-year-forecast-flight-movements-december-2012"
+        external: true
+      - title: "Medium-term Forecast of Service Units - September 2012"
+        date: "1 September 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-service-units-september-2012"
+        external: true
+      - title: "Two-year Forecast of Flight Movements - May 2012"
+        date: "31 May 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/two-year-forecast-flight-movements-may-2012"
+        external: true
+      - title: "Short- and Medium-term Forecast of Service Units - May 2012"
+        date: "1 May 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-forecast-service-units-may-2012"
+        external: true
+      - title: "Medium-term Forecast of Flights Movements - February 2012"
+        date: "28 February 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flights-movements-february-2012"
+        external: true
+      - title: "Short- and Medium-term Service Units Forecast - February 2012"
+        date: "1 February 2012"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-february-2012"
+        external: true
+  - year: 2011
+    items:
+      - title: "Medium-term Forecast of Flight Movements - October 2011"
+        date: "14 October 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-october-2011"
+        external: true
+      - title: "Short- and Medium-term Forecast of Service Units - May 2011"
+        date: "1 May 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-forecast-service-units-may-2011"
+        external: true
+      - title: "Short- and Medium-term Service Units Forecast - May 2011"
+        date: "1 May 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-may-2011"
+        external: true
+      - title: "Medium-term Forecast of Flight Movements - February 2011"
+        date: "23 February 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2011-0"
+        external: true
+      - title: "Medium-term Forecast of Flight Movements - February 2011"
+        date: "1 February 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2011"
+        external: true
+      - title: "Short- and Medium-term Forecast of Service Units - February 2011"
+        date: "1 February 2011"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-forecast-service-units-february-2011"
+        external: true
+  - year: 2010
+    items:
+      - title: "Medium-term Forecast of Service Units - September 2010"
+        date: "15 September 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-service-units-september-2010"
+        external: true
+      - title: "Medium-term Forecast for Flight Movements - September 2010"
+        date: "1 September 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-september-2010"
+        external: true
+      - title: "Short- and Medium-Term Service Units Forecast - September 2010"
+        date: "1 September 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-september-2010"
+        external: true
+      - title: "Short- and Medium-term Service Units Forecast - May 2010"
+        date: "1 May 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-may-2010"
+        external: true
+      - title: "Short- and Medium-term Forecast of Service Units - February 2010"
+        date: "24 February 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-forecast-service-units-february-2010"
+        external: true
+      - title: "Medium-term Forecast of Flight Movements - February 2010"
+        date: "23 February 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2010"
+        external: true
+      - title: "Medium-term Forecast of Flight Movements - February 2010"
+        date: "23 February 2010"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2010-0"
+        external: true
+  - year: 2009
+    items:
+      - title: "Short- and Medium-term Forecast of Service Units - December 2009"
+        date: "21 December 2009"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-forecast-service-units-december-2009"
+        external: true
+      - title: "Medium-term Forecast of Flight Movements - February 2009"
+        date: "29 September 2009"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2009"
+        external: true
+      - title: "Short- and Medium-Term Service Units Forecast - September 2009"
+        date: "1 September 2009"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-september-2009"
+        external: true
+      - title: "Short- and Medium-term Service Units Forecast - May 2009"
+        date: "29 May 2009"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/short-and-medium-term-service-units-forecast-may-2009"
+        external: true
+  - year: 2008
+    items:
+      - title: "Medium-term Forecast of Flight Movements - February 2008"
+        date: "29 February 2008"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2008"
+        external: true
+  - year: 2007
+    items:
+      - title: "Medium-term Forecast of Flight Movements - February 2007"
+        date: "6 March 2007"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2007"
+        external: true
+  - year: 2006
+    items:
+      - title: "Medium-term Forecast of Flight Movements - February 2006"
+        date: "27 February 2006"
+        description: "Short/medium-term forecast of flight movements and service units."
+        url: "https://www.eurocontrol.int/publication/medium-term-forecast-flight-movements-february-2006"
+        external: true

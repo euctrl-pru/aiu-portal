@@ -111,7 +111,9 @@ def listing_url(source: str) -> str:
     if kind == "product":
         return f"{BASE}/library/search?f%5B0%5D=product%3A{value}"
     if kind == "keywords":
-        return f"{BASE}/library/search?keywords={quote_plus(value)}"
+        # Keyword searches are always relevance-sorted (the site rewrites any sort_by back
+        # to search_api_relevance), so fetch the largest page it offers instead.
+        return f"{BASE}/library/search?keywords={quote_plus(value)}&items_per_page=50"
     raise ValueError(f"unknown source: {source!r}")
 
 

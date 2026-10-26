@@ -5,9 +5,9 @@ import pytest
 
 from scripts.pubsync import store
 from scripts.pubsync.eurocontrol import ListingEntry
-from scripts.pubsync.series import SERIES, group_year, render_title
+from scripts.pubsync.series import SERIES, group_year, normalize_title, render_title
 
-DATA = Path(__file__).resolve().parents[3] / "data"
+DATA = Path(__file__).parent / "fixtures" / "data"  # frozen copy of data/pub_*.yml
 
 CASES = [
     ("pub_eao", "EUROCONTROL European Aviation Overview 2026 - Week 43", "EUROCONTROL European Aviation Overview 2026 - Week 43", 2026),
@@ -24,6 +24,11 @@ CASES = [
     ("pub_coda_digest", "All-Causes Delays to Air Transport in Europe - Quarter 3 2023", "All-Causes Delays to Air Transport in Europe - Quarter 3 2023", 2023),
     ("pub_flash", "EUROCONTROL Flash Briefing 2026 - Week 35", "EUROCONTROL Flash Briefing 2026 - Week 35", 2026),
     ("pub_flash", "EUROCONTROL Special Summer 2026 Flash Briefing", "EUROCONTROL Special Summer 2026 Flash Briefing", 2026),
+    # Live Observer titles use an en dash; stored titles get an ASCII hyphen and single spaces.
+    ("pub_observer", "PRC Observer #5 \u2013 Data: The Foundation of Credibility", "PRC Observer #5 - Data: The Foundation of Credibility", 2026),
+    ("pub_pi", "PRC Observer #5 \u2013 Data: The Foundation of Credibility", "PRC Observer #5 - Data: The Foundation of Credibility", 2026),
+    ("pub_eao", " EUROCONTROL European Aviation Overview 2026  -\u00a0Week 44 ", "EUROCONTROL European Aviation Overview 2026 - Week 44", 2026),
+    ("pub_think", "EUROCONTROL Think Paper #24 \u2014 Bar  baz", "Think Paper #24 - Bar baz", 2026),
 ]
 
 
@@ -61,3 +66,12 @@ def test_digest_descriptions_differ_for_annual_and_quarterly():
 def test_unrelated_titles_in_shared_facets_are_rejected(key, site_title):
     s = next(s for s in SERIES if s.key == key)
     assert render_title(s, ListingEntry("u", site_title), []) is None
+
+
+@pytest.mark.parametrize("raw,expected", [
+    ("PRC Observer #5 \u2013 Data: The Foundation of Credibility", "PRC Observer #5 - Data: The Foundation of Credibility"),
+    ("A\u2014B", "A-B"),
+    ("  a \t b\n c  ", "a b c"),
+])
+def test_normalize_title(raw, expected):
+    assert normalize_title(raw) == expected
