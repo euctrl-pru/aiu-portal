@@ -5,6 +5,8 @@ from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap, CommentedSeq
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString
 
+from .eurocontrol import normalize_url
+
 
 def _yaml() -> YAML:
     y = YAML()
@@ -24,13 +26,9 @@ def dump(data, path: Path) -> None:
         _yaml().dump(data, f)
 
 
-def _normalize(url: str) -> str:
-    return url  # Task 2 replaces this with eurocontrol.normalize_url
-
-
 def known_urls(data) -> set[str]:
     return {
-        _normalize(str(item["url"]))
+        normalize_url(str(item["url"]))
         for group in data["years"]
         for item in group["items"]
         if item.get("url")
