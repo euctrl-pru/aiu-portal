@@ -68,7 +68,10 @@ jobs:
             fi
             git commit -m "$msg"
             # The repository is public, so the pull needs no credentials; only the push does.
-            git pull --rebase origin master
+            # Anything else the run left modified (build output, eol normalisation) is not ours to commit:
+            # log it, keep it out of the commit, and let the rebase stash it.
+            git status --porcelain
+            git pull --rebase --autostash origin master
             git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master
           else
             echo "No changes to commit"
