@@ -65,4 +65,4 @@ def test_inserted_item_is_double_quoted(tmp_path):
 def test_known_urls_covers_all_groups():
     urls = store.known_urls(store.load(FLAD))
     assert "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-june-2026" in urls
-    assert len(urls) == 21
+    assert len(urls) >= 21  # the bot appends new entries over time
