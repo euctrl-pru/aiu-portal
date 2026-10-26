@@ -87,6 +87,12 @@ AUTHORS text
 *.jpeg binary
 *.gif binary
 *.ico binary
+# Upper-case variants: attribute patterns are case-sensitive on Linux (CI, Netlify)
+*.PNG binary
+*.JPG binary
+*.JPEG binary
+*.GIF binary
+*.ICO binary
 
 # audio/video
 *.mov binary
