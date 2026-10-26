@@ -38,7 +38,7 @@ In order to regenerate `csv.Rmd` you need access to the `performance/download`
 
 # Automatic publication updates
 
-A GitHub Action (`.github/workflows/update-publications.yml`) runs daily at 06:00 UTC (and on demand via "Run workflow", optionally as a dry run). It runs `scripts/pubsync`, which checks the EUROCONTROL website for new publications and adds them to `data/pub_*.yml` (images go to `static/images/auto/<key>/`). The site is built with Hugo as a gate; if the build succeeds the changes are committed and pushed to `master` by `pubsync-bot`, which triggers the Netlify deploy. If one series fails, the others are still published and the run is marked failed.
+A GitHub Action (`.github/workflows/update-publications.yml`) runs daily at 06:00 UTC (and on demand via "Run workflow", optionally as a dry run). It runs `scripts/pubsync`, which checks the EUROCONTROL website for new publications and adds them to `data/pub_*.yml` (images go to `static/images/auto/<key>/`). The site is built with Hugo as a gate; if the build succeeds the changes are committed and pushed to `master` by `pubsync-bot`, which triggers the Netlify deploy. If one series fails, the others are still published and the run is marked failed. A series whose data file has been hand-edited into a layout the YAML writer would change is skipped and reported rather than rewritten; restore the usual layout to resume it.
 
 Automated series: `pub_eao`, `pub_coda_flad`, `pub_coda_digest`, `pub_coda_taxi`, `pub_datasnap`, `pub_flash`, `pub_think`, `pub_trends`, `pub_ace`, `pub_prr`, `pub_pi`, `pub_observer`.
 
