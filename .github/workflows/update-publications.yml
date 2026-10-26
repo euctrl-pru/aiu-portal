@@ -59,7 +59,9 @@ jobs:
           if [ -n "$(git status --porcelain data static/images/auto)" ]; then
             git config user.name "pubsync-bot"
             git config user.email "pubsync-bot@users.noreply.github.com"
-            git add data static/images/auto
+            git add -A -- data
+            # static/images/auto only exists once a series has downloaded an image
+            if [ -d static/images/auto ]; then git add -A -- static/images/auto; fi
             msg="Update publications"
             if [ -f scripts/pubsync/.last-run-keys ]; then
               msg="Update publications: $(cat scripts/pubsync/.last-run-keys)"
