@@ -1,16 +1,6 @@
 years:
   - year: 2026
     items:
-      - title: "All-causes delay to air transport in Europe for September 2026"
-        date: "26 October 2026"
-        description: "Monthly brief on all-causes delay to air transport in Europe."
-        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-september-2026"
-        external: true
-      - title: "All-causes delay to air transport in Europe for August 2026"
-        date: "22 September 2026"
-        description: "Monthly brief on all-causes delay to air transport in Europe."
-        url: "https://www.eurocontrol.int/publication/all-causes-delay-air-transport-europe-august-2026"
-        external: true
       - title: "All-causes delay to air transport in Europe for July 2026"
         date: "21 August 2026"
         description: "Monthly brief on all-causes delay to air transport in Europe."
