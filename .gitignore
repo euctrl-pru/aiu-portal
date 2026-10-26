@@ -133,3 +133,6 @@ $RECYCLE.BIN/
 # pubsync tooling
 .venv-pubsync/
 __pycache__/
+
+# pubsync: changed series keys of the last run (used for the commit message)
+scripts/pubsync/.last-run-keys

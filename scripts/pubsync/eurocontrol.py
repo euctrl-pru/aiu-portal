@@ -48,7 +48,8 @@ def normalize_url(url: str) -> str:
     return f"{BASE}{parts.path.rstrip('/')}"
 
 
-def fetch(url: str) -> str:
+def _get(url: str) -> requests.Response:
+    """GET with the shared User-Agent, rate limit and retry policy."""
     global _last_request
     for attempt in range(1, ATTEMPTS + 1):
         wait = MIN_INTERVAL - (time.monotonic() - _last_request)
@@ -58,12 +59,20 @@ def fetch(url: str) -> str:
         try:
             resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
             resp.raise_for_status()
-            return resp.text
+            return resp
         except requests.RequestException:
             if attempt == ATTEMPTS:
                 raise
             time.sleep(BACKOFF)
     raise AssertionError("unreachable")
+
+
+def fetch(url: str) -> str:
+    return _get(url).text
+
+
+def fetch_bytes(url: str) -> bytes:
+    return _get(url).content
 
 
 def listing_url(source: str) -> str:
