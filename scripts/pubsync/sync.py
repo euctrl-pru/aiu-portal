@@ -157,8 +157,8 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
                         try:
                             slug = _slug(new.item["url"])
                             stem = (auto_root / key / slug).resolve()
-                            if not stem.is_relative_to(auto_root):
-                                raise ValueError(f"image path escapes static/images/auto: {stem}")
+                            if stem.parent != auto_root / key:
+                                raise ValueError(f"image path escapes static/images/auto/{key}: {stem}")
                             # Downloaded now (the extension comes from the Content-Type) but
                             # written below, after the YAML is saved.
                             blob, ext = fetch_image(new.image_url)

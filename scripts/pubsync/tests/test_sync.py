@@ -280,15 +280,16 @@ def test_unsafe_slug_skips_image(tmp_repo, slug):
     assert "is not a safe file name" in r.notes[0]
 
 
-def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch):
+@pytest.mark.parametrize("evil", ["../../evil", "..", "../pub_eao/x"])
+def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch, evil):
     monkeypatch.setattr(sync, "SLUG_RE", __import__("re").compile(r".+"))  # bypass the slug filter
-    monkeypatch.setattr(sync, "_slug", lambda url: "../../evil")
+    monkeypatch.setattr(sync, "_slug", lambda url: evil)
     called = []
     r = _flash_repo_run(tmp_repo, "/publication/flash-99",
                         fetch_image=lambda u: called.append(u) or (b"x", ".jpg"))
     assert len(r.added) == 1 and "image" not in r.added[0].item
     assert not called and not list(tmp_repo.rglob("*.jpg"))
-    assert "image path escapes static/images/auto" in r.notes[0]
+    assert "image path escapes static/images/auto/pub_flash" in r.notes[0]
 
 
 def test_file_that_does_not_roundtrip_is_left_alone(tmp_repo):
