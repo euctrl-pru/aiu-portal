@@ -5,7 +5,7 @@ import pytest
 
 from scripts.pubsync import store
 
-DATA = Path(__file__).resolve().parents[3] / "data"
+DATA = Path(__file__).parent / "fixtures" / "data"  # frozen copy of data/pub_*.yml
 FLAD = DATA / "pub_coda_flad.yml"
 
 
@@ -13,7 +13,14 @@ FLAD = DATA / "pub_coda_flad.yml"
 def test_roundtrip_is_byte_identical(path, tmp_path):
     out = tmp_path / path.name
     store.dump(store.load(path), out)
-    assert out.read_text() == path.read_text()
+    assert out.read_bytes() == path.read_bytes()
+    assert store.roundtrips(path)
+
+
+def test_roundtrips_detects_layout_it_would_rewrite(tmp_path):
+    p = tmp_path / "pub_coda_flad.yml"
+    p.write_text(FLAD.read_text().replace("title: ", "title:   ", 1))
+    assert not store.roundtrips(p)
 
 
 def _flad_copy(tmp_path):

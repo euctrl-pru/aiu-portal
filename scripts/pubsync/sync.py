@@ -111,6 +111,10 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
             path = repo_root / "data" / f"{key}.yml"
             data = store.load(path)
             result = find_new(rows, data, fetch, max_new)
+            # Writing re-serialises the whole file; refuse if that would change existing lines.
+            if result.added and not store.roundtrips(path):
+                raise ValueError(f"{path.name} does not round-trip byte-identically through the "
+                                 "YAML store (hand-edited layout?); left unchanged")
             if result.added and not dry_run:
                 images: dict[Path, bytes] = {}
                 for new in result.added:

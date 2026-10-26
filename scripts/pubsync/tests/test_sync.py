@@ -6,7 +6,6 @@ import pytest
 
 from scripts.pubsync import eurocontrol, store, sync
 
-REPO = Path(__file__).resolve().parents[3]
 FIX = Path(__file__).parent / "fixtures"
 ONLY = {"pub_coda_flad", "pub_eao"}
 FLAD_NEW = [
@@ -50,7 +49,8 @@ def fake_bytes(url):
 
 @pytest.fixture
 def tmp_repo(tmp_path):
-    shutil.copytree(REPO / "data", tmp_path / "data")
+    # A frozen copy of data/pub_*.yml, so hand edits to the live files cannot break the tests.
+    shutil.copytree(FIX / "data", tmp_path / "data")
     (tmp_path / "static").mkdir()
     return tmp_path
 
@@ -189,8 +189,8 @@ def test_each_listing_fetched_once(tmp_repo):
     assert calls.count(listing) == 1
 
 
-def test_unmatched_statfor_reported():
-    unmatched = sync.report_unmatched(make_fetch(), REPO)
+def test_unmatched_statfor_reported(tmp_repo):
+    unmatched = sync.report_unmatched(make_fetch(), tmp_repo)
     assert "https://www.eurocontrol.int/publication/eurocontrol-forecast-update-2026-2032" in {
         e.url for e in unmatched}
 
@@ -283,3 +283,15 @@ def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch):
                         fetch_bytes=lambda u: called.append(u) or b"x")
     assert len(r.added) == 1 and "image" not in r.added[0].item
     assert not called and not list(tmp_repo.rglob("*.jpg"))
+
+
+def test_file_that_does_not_roundtrip_is_left_alone(tmp_repo):
+    _drop_flad_items(tmp_repo, FLAD_NEW)
+    path = tmp_repo / "data/pub_coda_flad.yml"
+    path.write_text(path.read_text().replace("title: ", "title:   ", 1))
+    before = path.read_bytes()
+    results = {r.key: r for r in run(tmp_repo)}
+    assert results["pub_coda_flad"].added == []
+    assert "round-trip" in results["pub_coda_flad"].error
+    assert path.read_bytes() == before
+    assert results["pub_eao"].error is None  # other series unaffected

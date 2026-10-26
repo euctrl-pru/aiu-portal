@@ -1,4 +1,5 @@
 """Round-trip YAML store for data/pub_*.yml files (preserves comments and layout)."""
+import io
 from pathlib import Path
 
 from ruamel.yaml import YAML
@@ -24,6 +25,17 @@ def load(path: Path) -> CommentedMap:
 def dump(data, path: Path) -> None:
     with open(path, "w", encoding="utf-8") as f:
         _yaml().dump(data, f)
+
+
+def dumps(data) -> str:
+    buf = io.StringIO()
+    _yaml().dump(data, buf)
+    return buf.getvalue()
+
+
+def roundtrips(path: Path) -> bool:
+    """True if loading and dumping the file reproduces it byte for byte."""
+    return dumps(load(path)).encode("utf-8") == path.read_bytes()
 
 
 def known_urls(data) -> set[str]:
