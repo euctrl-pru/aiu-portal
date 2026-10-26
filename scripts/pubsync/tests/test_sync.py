@@ -295,3 +295,29 @@ def test_file_that_does_not_roundtrip_is_left_alone(tmp_repo):
     assert "round-trip" in results["pub_coda_flad"].error
     assert path.read_bytes() == before
     assert results["pub_eao"].error is None  # other series unaffected
+
+
+def _listing(*titles):
+    return "<html>" + "".join(f'<a href="/publication/p{i}">{t}</a>' for i, t in enumerate(titles)) + "</html>"
+
+
+def test_source_with_no_matching_entries_is_an_error(tmp_repo):
+    fetch = make_fetch({eurocontrol.listing_url("product:1245"): _listing("Flash news, reworded")})
+    r = run(tmp_repo, fetch=fetch, only={"pub_flash"})[0]
+    assert r.added == []
+    assert r.error == ("no listing entries matched for product:1245 — site wording may have changed")
+
+
+def test_known_entries_count_as_matches(tmp_repo):
+    # All fixture EAO entries are already in the data file: nothing new, but no drift either.
+    r = run(tmp_repo, only={"pub_eao"})[0]
+    assert r.added == [] and r.error is None
+
+
+def test_shared_source_counts_matches_of_other_series(tmp_repo):
+    # Only digest titles on the shared product:805 page: FLAD itself matches nothing, but the
+    # source still matches a series row, so it is not drift.
+    listing = _listing("All-causes delays to air transport in Europe - Annual 2025")
+    fetch = make_fetch({eurocontrol.listing_url("product:805"): listing})
+    r = run(tmp_repo, fetch=fetch, only={"pub_coda_flad"})[0]
+    assert r.error is None

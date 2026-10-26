@@ -97,6 +97,24 @@ def _memoized(fetch: Callable[[str], str]) -> Callable[[str], str]:
     return cached
 
 
+def _drifted_sources(sources, fetch: Callable[[str], str]) -> set[str]:
+    """Sources whose listing parses but where no entry matches any series row using it.
+
+    Known entries count as matches, and so do rows of other data files sharing the
+    source, so this only fires when the site's wording no longer fits the patterns.
+    """
+    drifted = set()
+    for source in sources:
+        try:
+            entries = eurocontrol.parse_listing(fetch(eurocontrol.listing_url(source)))
+        except Exception:
+            continue  # reported by find_new for the series using this source
+        rows = [s for s in SERIES if s.source == source]
+        if not any(render_title(row, e, []) is not None for e in entries for row in rows):
+            drifted.add(source)
+    return drifted
+
+
 def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new: int = 5,
         only: set[str] | None = None, fetch_bytes=eurocontrol.fetch_bytes) -> list[SeriesResult]:
     fetch = _memoized(fetch)  # each listing is fetched at most once per run
@@ -104,6 +122,8 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
     for s in SERIES:
         if only is None or s.key in only:
             groups.setdefault(s.key, []).append(s)
+
+    drifted = _drifted_sources(dict.fromkeys(s.source for rows in groups.values() for s in rows), fetch)
 
     results: list[SeriesResult] = []
     for key, rows in groups.items():
@@ -135,6 +155,10 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
                     dest.write_bytes(blob)
         except Exception as e:
             result = SeriesResult(key, [], f"{type(e).__name__}: {e}")
+        drift = [f"no listing entries matched for {src} — site wording may have changed"
+                 for src in dict.fromkeys(r.source for r in rows) if src in drifted]
+        if drift:
+            result.error = "; ".join(filter(None, [result.error, *drift]))
         results.append(result)
     return results
 
