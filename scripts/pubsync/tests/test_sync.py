@@ -43,8 +43,8 @@ def make_fetch(overrides=None, calls=None):
     return fetch
 
 
-def fake_bytes(url):
-    return b"jpg"
+def fake_image(url):
+    return b"jpg", ".jpg"
 
 
 @pytest.fixture
@@ -79,7 +79,7 @@ def _flad_titles(repo):
 def run(repo, **kw):
     kw.setdefault("fetch", make_fetch())
     kw.setdefault("only", ONLY)
-    kw.setdefault("fetch_bytes", fake_bytes)
+    kw.setdefault("fetch_image", fake_image)
     return sync.run(repo, **kw)
 
 
@@ -94,6 +94,7 @@ def test_flad_backfills_missing_months_in_order(tmp_repo):
     added = next(i for g in flad["years"] for i in g["items"] if i["title"] == FLAD_NEW[0])
     assert "image" not in added
     assert list(added) == ["title", "date", "description", "url", "external"]
+    assert not any(r.notes for r in run(tmp_repo))  # images are off for FLAD: nothing to note
 
 
 def test_second_run_adds_nothing(tmp_repo):
@@ -151,8 +152,9 @@ def test_image_download_failure_adds_item_without_image(tmp_repo):
     def boom(url):
         raise OSError("down")
 
-    r = next(r for r in run(tmp_repo, fetch_bytes=boom) if r.key == "pub_eao")
+    r = next(r for r in run(tmp_repo, fetch_image=boom) if r.key == "pub_eao")
     assert len(r.added) == 1 and "image" not in r.added[0].item
+    assert r.notes == [f"{r.added[0].item['title']}: no image (OSError: down)"]
     added = next(i for i in _eao_items(tmp_repo) if i["url"] == r.added[0].item["url"])
     assert "image" not in added
 
@@ -170,6 +172,7 @@ def test_missing_og_tags_still_adds(tmp_repo):
     item = r.added[0].item
     assert item["description"] == "Biweekly overview of European aviation activity."
     assert "image" not in item
+    assert r.notes == [f"{item['title']}: no image (page has no og:image)"]
 
 
 def test_dry_run_writes_nothing(tmp_repo):
@@ -184,7 +187,7 @@ def test_dry_run_writes_nothing(tmp_repo):
 def test_each_listing_fetched_once(tmp_repo):
     calls = []
     sync.run(tmp_repo, fetch=make_fetch(calls=calls), only={"pub_coda_flad", "pub_coda_digest"},
-             fetch_bytes=fake_bytes)
+             fetch_image=fake_image)
     listing = eurocontrol.listing_url("product:805")
     assert calls.count(listing) == 1
 
@@ -234,7 +237,7 @@ def test_images_not_written_when_series_fails_after_download(tmp_repo, monkeypat
     assert not list((tmp_repo / "static").rglob("*.jpg"))
 
 
-def _flash_repo_run(tmp_repo, href, page_edit=None, fetch_bytes=fake_bytes):
+def _flash_repo_run(tmp_repo, href, page_edit=None, fetch_image=fake_image):
     listing = f'<html><a href="{href}">EUROCONTROL Flash Briefing 2026 - Week 99</a></html>'
     base = make_fetch({eurocontrol.listing_url("product:1245"): listing})
 
@@ -242,7 +245,7 @@ def _flash_repo_run(tmp_repo, href, page_edit=None, fetch_bytes=fake_bytes):
         html = base(url)
         return page_edit(html) if page_edit and "/publication/" in url else html
 
-    return run(tmp_repo, fetch=fetch, only={"pub_flash"}, fetch_bytes=fetch_bytes)[0]
+    return run(tmp_repo, fetch=fetch, only={"pub_flash"}, fetch_image=fetch_image)[0]
 
 
 def test_scraped_description_is_html_escaped(tmp_repo):
@@ -261,18 +264,20 @@ def test_off_site_image_url_is_skipped(tmp_repo):
     called = []
     edit = lambda h: h.replace("https://www.eurocontrol.int/sites", "https://evil.example/sites")  # noqa: E731
     r = _flash_repo_run(tmp_repo, "/publication/flash-99", edit,
-                        fetch_bytes=lambda u: called.append(u) or b"x")
+                        fetch_image=lambda u: called.append(u) or (b"x", ".jpg"))
     assert len(r.added) == 1 and "image" not in r.added[0].item and not called
+    assert "no image (not on www.eurocontrol.int: https://evil.example/" in r.notes[0]
 
 
 @pytest.mark.parametrize("slug", ["..", "Foo%2F..", "UPPER", ".hidden", "a" * 200])
 def test_unsafe_slug_skips_image(tmp_repo, slug):
     called = []
     r = _flash_repo_run(tmp_repo, f"/publication/{slug}",
-                        fetch_bytes=lambda u: called.append(u) or b"x")
+                        fetch_image=lambda u: called.append(u) or (b"x", ".jpg"))
     assert r.error is None and len(r.added) == 1
     assert "image" not in r.added[0].item and not called
     assert not list((tmp_repo / "static").rglob("*.jpg"))
+    assert "is not a safe file name" in r.notes[0]
 
 
 def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch):
@@ -280,9 +285,10 @@ def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch):
     monkeypatch.setattr(sync, "_slug", lambda url: "../../evil")
     called = []
     r = _flash_repo_run(tmp_repo, "/publication/flash-99",
-                        fetch_bytes=lambda u: called.append(u) or b"x")
+                        fetch_image=lambda u: called.append(u) or (b"x", ".jpg"))
     assert len(r.added) == 1 and "image" not in r.added[0].item
     assert not called and not list(tmp_repo.rglob("*.jpg"))
+    assert "image path escapes static/images/auto" in r.notes[0]
 
 
 def test_file_that_does_not_roundtrip_is_left_alone(tmp_repo):
@@ -321,3 +327,18 @@ def test_shared_source_counts_matches_of_other_series(tmp_repo):
     fetch = make_fetch({eurocontrol.listing_url("product:805"): listing})
     r = run(tmp_repo, fetch=fetch, only={"pub_coda_flad"})[0]
     assert r.error is None
+
+
+@pytest.mark.parametrize("ext", [".jpg", ".png", ".webp", ".gif"])
+def test_image_extension_follows_content_type(tmp_repo, ext):
+    r = _flash_repo_run(tmp_repo, "/publication/flash-99", fetch_image=lambda u: (b"img", ext))
+    new = r.added[0]
+    assert new.item["image"] == f"/images/auto/pub_flash/flash-99{ext}"
+    assert new.image_path == f"static/images/auto/pub_flash/flash-99{ext}"
+    assert list(new.item) == ["title", "date", "description", "url", "image", "external"]
+    assert (tmp_repo / new.image_path).read_bytes() == b"img"
+    assert [p.name for p in (tmp_repo / "static").rglob("*.*")] == [f"flash-99{ext}"]
+    stored = next(i for g in store.load(tmp_repo / "data/pub_flash.yml")["years"] for i in g["items"]
+                  if i["url"] == new.item["url"])
+    assert stored["image"] == new.item["image"]
+    assert r.notes == []

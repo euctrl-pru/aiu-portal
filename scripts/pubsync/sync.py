@@ -19,8 +19,8 @@ class NewItem:
     series_key: str
     year: int
     item: dict
-    image_url: str | None
-    image_path: str | None  # repo-relative path the image is saved to
+    image_url: str | None  # set if the page has a usable og:image
+    image_path: str | None = None  # repo-relative path the image is saved to, once downloaded
 
 
 @dataclass
@@ -28,6 +28,7 @@ class SeriesResult:
     key: str
     added: list[NewItem] = field(default_factory=list)
     error: str | None = None
+    notes: list[str] = field(default_factory=list)  # e.g. why an item has no image
 
 
 def _slug(url: str) -> str:
@@ -62,6 +63,7 @@ def find_new(series: Series | Sequence[Series], data, fetch: Callable[[str], str
         return SeriesResult(key, [], f"{len(found)} new items exceeds max_new={max_new}; skipped")
 
     added: list[NewItem] = []
+    notes: list[str] = []
     for row, _, entry in reversed(found):  # oldest first (listing is newest first)
         # Recompute so numbered titles (#n) count items added earlier in this run.
         title = render_title(row, entry, titles)
@@ -73,17 +75,29 @@ def find_new(series: Series | Sequence[Series], data, fetch: Callable[[str], str
         if description:
             item["description"] = description
         item["url"] = entry.url
-        slug = _slug(entry.url)
-        image_url = (pub.image_url if row.images and SLUG_RE.fullmatch(slug)
-                     and pub.image_url and eurocontrol.is_site_url(pub.image_url) else None)
-        image_path = None
-        if image_url:
-            image_path = f"static/images/auto/{key}/{slug}.jpg"
-            item["image"] = f"/images/auto/{key}/{slug}.jpg"
-        item["external"] = True
+        item["external"] = True  # the image, once downloaded, goes before this (see _with_image)
+        image_url = None
+        if row.images:
+            slug = _slug(entry.url)
+            if not pub.image_url:
+                notes.append(f"{title}: no image (page has no og:image)")
+            elif not eurocontrol.is_site_url(pub.image_url):
+                notes.append(f"{title}: no image (not on www.eurocontrol.int: {pub.image_url})")
+            elif not SLUG_RE.fullmatch(slug):
+                notes.append(f"{title}: no image (URL slug {slug!r} is not a safe file name)")
+            else:
+                image_url = pub.image_url
         titles.append(title)
-        added.append(NewItem(key, group_year(row, title, pub.published), item, image_url, image_path))
-    return SeriesResult(key, added)
+        added.append(NewItem(key, group_year(row, title, pub.published), item, image_url))
+    return SeriesResult(key, added, notes=notes)
+
+
+def _with_image(item: dict, image: str) -> dict:
+    """The item with `image` inserted before `external`, keeping the field order."""
+    out = {k: v for k, v in item.items() if k != "external"}
+    out["image"] = image
+    out["external"] = item["external"]
+    return out
 
 
 def _memoized(fetch: Callable[[str], str]) -> Callable[[str], str]:
@@ -116,7 +130,7 @@ def _drifted_sources(sources, fetch: Callable[[str], str]) -> set[str]:
 
 
 def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new: int = 5,
-        only: set[str] | None = None, fetch_bytes=eurocontrol.fetch_bytes) -> list[SeriesResult]:
+        only: set[str] | None = None, fetch_image=eurocontrol.fetch_image) -> list[SeriesResult]:
     fetch = _memoized(fetch)  # each listing is fetched at most once per run
     groups: dict[str, list[Series]] = {}
     for s in SERIES:
@@ -137,16 +151,23 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
                                  "YAML store (hand-edited layout?); left unchanged")
             if result.added and not dry_run:
                 images: dict[Path, bytes] = {}
+                auto_root = (repo_root / "static/images/auto").resolve()
                 for new in result.added:
                     if new.image_url:
                         try:
-                            dest = (repo_root / new.image_path).resolve()
-                            if not dest.is_relative_to((repo_root / "static/images/auto").resolve()):
-                                raise ValueError(f"image path escapes static/images/auto: {dest}")
-                            images[dest] = fetch_bytes(new.image_url)
-                        except Exception:
-                            new.item.pop("image", None)
-                            new.image_path = None
+                            slug = _slug(new.item["url"])
+                            stem = (auto_root / key / slug).resolve()
+                            if not stem.is_relative_to(auto_root):
+                                raise ValueError(f"image path escapes static/images/auto: {stem}")
+                            # Downloaded now (the extension comes from the Content-Type) but
+                            # written below, after the YAML is saved.
+                            blob, ext = fetch_image(new.image_url)
+                            images[stem.with_name(stem.name + ext)] = blob
+                            new.image_path = f"static/images/auto/{key}/{slug}{ext}"
+                            new.item = _with_image(new.item, f"/images/auto/{key}/{slug}{ext}")
+                        except Exception as e:
+                            result.notes.append(
+                                f"{new.item['title']}: no image ({type(e).__name__}: {e})")
                     store.insert_item(data, new.year, new.item)
                 store.dump(data, path)
                 # Only after the YAML is saved, so a failed series leaves no orphan images.

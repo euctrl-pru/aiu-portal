@@ -18,6 +18,9 @@ def _summary(results, unmatched, unmatched_error) -> str:
     errors = [r for r in results if r.error]
     if errors:
         lines += ["", "### Errors", ""] + [f"- `{r.key}`: {r.error}" for r in errors]
+    notes = [(r.key, note) for r in results for note in r.notes]
+    if notes:
+        lines += ["", "### Notes", ""] + [f"- `{key}`: {note}" for key, note in notes]
     if unmatched or unmatched_error:
         lines += ["", "### Unmatched STATFOR entries", ""]
         lines += [f"- [{e.title}]({e.url})" for e in unmatched]
@@ -44,6 +47,8 @@ def main(argv=None) -> int:
     for r in results:
         for n in r.added:
             print(f"{prefix} {r.key}: {n.item['title']} ({n.item['date']})")
+        for note in r.notes:
+            print(f"NOTE {r.key}: {note}")
         if r.error:
             print(f"ERROR {r.key}: {r.error}", file=sys.stderr)
     for e in unmatched:

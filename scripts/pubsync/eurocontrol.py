@@ -78,11 +78,14 @@ def is_site_url(url: str) -> bool:
     return parts.scheme == "https" and parts.hostname == "www.eurocontrol.int"
 
 
-def fetch_bytes(url: str) -> bytes:
-    """Download an image from eurocontrol.int only.
+IMAGE_EXTENSIONS = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp", "image/gif": ".gif"}
+
+
+def fetch_image(url: str) -> tuple[bytes, str]:
+    """Download an image from eurocontrol.int only; return its bytes and file extension.
 
     Redirects are followed manually and must stay on the site; the body must be
-    served as image/* and be at most MAX_IMAGE_BYTES.
+    served as one of IMAGE_EXTENSIONS' types and be at most MAX_IMAGE_BYTES.
     """
     for _ in range(MAX_REDIRECTS + 1):
         if not is_site_url(url):
@@ -92,15 +95,16 @@ def fetch_bytes(url: str) -> bytes:
             if resp.is_redirect:
                 url = urljoin(url, resp.headers.get("Location", ""))
                 continue
-            content_type = resp.headers.get("Content-Type", "")
-            if not content_type.lower().startswith("image/"):
-                raise ValueError(f"expected an image from {url}, got {content_type!r}")
+            content_type = resp.headers.get("Content-Type", "").split(";")[0].strip().lower()
+            ext = IMAGE_EXTENSIONS.get(content_type)
+            if ext is None:
+                raise ValueError(f"unsupported image type {content_type!r} from {url}")
             body = bytearray()
             for chunk in resp.iter_content(65536):
                 body += chunk
                 if len(body) > MAX_IMAGE_BYTES:
                     raise ValueError(f"image at {url} exceeds {MAX_IMAGE_BYTES} bytes")
-            return bytes(body)
+            return bytes(body), ext
         finally:
             resp.close()
     raise ValueError("too many redirects")

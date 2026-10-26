@@ -121,16 +121,25 @@ def _patch_get(monkeypatch, *responses):
 IMG = "https://www.eurocontrol.int/sites/x.jpg"
 
 
-def test_fetch_bytes_accepts_images(monkeypatch):
+def test_fetch_image_accepts_images(monkeypatch):
     seen = _patch_get(monkeypatch, FakeResponse())
-    assert ec.fetch_bytes(IMG) == b"data"
+    assert ec.fetch_image(IMG) == (b"data", ".jpg")
     assert seen[0][1]["allow_redirects"] is False
 
 
-def test_fetch_bytes_rejects_non_images(monkeypatch):
-    _patch_get(monkeypatch, FakeResponse("text/html; charset=utf-8"))
+@pytest.mark.parametrize("content_type,ext", [
+    ("image/jpeg", ".jpg"), ("image/png", ".png"), ("image/webp", ".webp"), ("image/gif", ".gif"),
+    ("IMAGE/PNG; charset=binary", ".png")])
+def test_fetch_image_extension_from_content_type(monkeypatch, content_type, ext):
+    _patch_get(monkeypatch, FakeResponse(content_type))
+    assert ec.fetch_image(IMG) == (b"data", ext)
+
+
+@pytest.mark.parametrize("content_type", ["text/html; charset=utf-8", "image/svg+xml", "image/tiff", ""])
+def test_fetch_image_rejects_other_types(monkeypatch, content_type):
+    _patch_get(monkeypatch, FakeResponse(content_type))
     with pytest.raises(ValueError):
-        ec.fetch_bytes(IMG)
+        ec.fetch_image(IMG)
 
 
 @pytest.mark.parametrize("url", [
@@ -138,27 +147,27 @@ def test_fetch_bytes_rejects_non_images(monkeypatch):
     "http://www.eurocontrol.int/x.jpg",
     "https://www.eurocontrol.int.evil.example/x.jpg",
 ])
-def test_fetch_bytes_rejects_off_site_urls(monkeypatch, url):
+def test_fetch_image_rejects_off_site_urls(monkeypatch, url):
     seen = _patch_get(monkeypatch)
     with pytest.raises(ValueError):
-        ec.fetch_bytes(url)
+        ec.fetch_image(url)
     assert seen == []
 
 
-def test_fetch_bytes_rejects_redirect_off_site(monkeypatch):
+def test_fetch_image_rejects_redirect_off_site(monkeypatch):
     seen = _patch_get(monkeypatch, FakeResponse(location="https://evil.example/x.jpg"))
     with pytest.raises(ValueError):
-        ec.fetch_bytes(IMG)
+        ec.fetch_image(IMG)
     assert len(seen) == 1
 
 
-def test_fetch_bytes_follows_on_site_redirect(monkeypatch):
+def test_fetch_image_follows_on_site_redirect(monkeypatch):
     _patch_get(monkeypatch, FakeResponse(location="/other.jpg"), FakeResponse())
-    assert ec.fetch_bytes(IMG) == b"data"
+    assert ec.fetch_image(IMG) == (b"data", ".jpg")
 
 
-def test_fetch_bytes_rejects_oversize_body(monkeypatch):
+def test_fetch_image_rejects_oversize_body(monkeypatch):
     monkeypatch.setattr(ec, "MAX_IMAGE_BYTES", 100)
     _patch_get(monkeypatch, FakeResponse(body=b"x" * 101))
     with pytest.raises(ValueError):
-        ec.fetch_bytes(IMG)
+        ec.fetch_image(IMG)
