@@ -11,7 +11,7 @@
 {{ range .items }}
 <div class="pub-grid-card card">
 <a href="{{ .url }}" {{ if .external }}target="_blank"{{ end }}>
-<img src="{{ .image }}" alt="{{ .title }}">
+{{ if .image }}<img src="{{ .image }}" alt="{{ .title }}">{{ end }}
 <div class="card-body">
 <h5 class="card-title">{{ .title }}</h5>
 </div>
