@@ -2,6 +2,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+import requests
 
 from scripts.pubsync import eurocontrol as ec
 
@@ -84,3 +85,24 @@ def test_listing_url():
 
 def test_format_date():
     assert ec.format_date(date(2026, 10, 2)) == "2 October 2026"
+
+
+def _resp(content_type):
+    r = requests.Response()
+    r.status_code = 200
+    r._content = b"data"
+    r.headers["Content-Type"] = content_type
+    return r
+
+
+def test_fetch_bytes_accepts_images(monkeypatch):
+    monkeypatch.setattr(ec.requests, "get", lambda *a, **k: _resp("image/jpeg"))
+    monkeypatch.setattr(ec, "MIN_INTERVAL", 0)
+    assert ec.fetch_bytes("https://www.eurocontrol.int/x.jpg") == b"data"
+
+
+def test_fetch_bytes_rejects_non_images(monkeypatch):
+    monkeypatch.setattr(ec.requests, "get", lambda *a, **k: _resp("text/html; charset=utf-8"))
+    monkeypatch.setattr(ec, "MIN_INTERVAL", 0)
+    with pytest.raises(ValueError):
+        ec.fetch_bytes("https://www.eurocontrol.int/x.jpg")

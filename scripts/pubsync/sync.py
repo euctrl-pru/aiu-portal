@@ -105,18 +105,20 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
             data = store.load(path)
             result = find_new(rows, data, fetch, max_new)
             if result.added and not dry_run:
+                images: dict[Path, bytes] = {}
                 for new in result.added:
                     if new.image_url:
                         try:
-                            dest = repo_root / new.image_path
-                            blob = fetch_bytes(new.image_url)
-                            dest.parent.mkdir(parents=True, exist_ok=True)
-                            dest.write_bytes(blob)
+                            images[repo_root / new.image_path] = fetch_bytes(new.image_url)
                         except Exception:
                             new.item.pop("image", None)
                             new.image_path = None
                     store.insert_item(data, new.year, new.item)
                 store.dump(data, path)
+                # Only after the YAML is saved, so a failed series leaves no orphan images.
+                for dest, blob in images.items():
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(blob)
         except Exception as e:
             result = SeriesResult(key, [], f"{type(e).__name__}: {e}")
         results.append(result)

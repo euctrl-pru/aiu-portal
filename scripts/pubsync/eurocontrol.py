@@ -72,7 +72,12 @@ def fetch(url: str) -> str:
 
 
 def fetch_bytes(url: str) -> bytes:
-    return _get(url).content
+    """Download an image; anything not served as image/* is rejected."""
+    resp = _get(url)
+    content_type = resp.headers.get("Content-Type", "")
+    if not content_type.lower().startswith("image/"):
+        raise ValueError(f"expected an image from {url}, got {content_type!r}")
+    return resp.content
 
 
 def listing_url(source: str) -> str:

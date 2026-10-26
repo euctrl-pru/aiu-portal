@@ -56,12 +56,24 @@ def tmp_repo(tmp_path):
 
 
 def _drop_flad_items(repo, titles):
+    """Textually delete the 5-line item blocks with these titles (file stays hand-written)."""
     path = repo / "data/pub_coda_flad.yml"
-    data = store.load(path)
-    items = data["years"][0]["items"]
-    for i in [i for i, it in enumerate(items) if it["title"] in titles][::-1]:
-        del items[i]
-    store.dump(data, path)
+    lines = path.read_text().splitlines(keepends=True)
+    out, skipping = [], False
+    for line in lines:
+        if line.startswith("      - title: "):
+            skipping = any(f'"{t}"' in line for t in titles)
+        elif not line.startswith("        "):
+            skipping = False
+        if not skipping:
+            out.append(line)
+    assert len(out) == len(lines) - 5 * len(titles)
+    path.write_text("".join(out))
+
+
+def _flad_titles(repo):
+    data = store.load(repo / "data/pub_coda_flad.yml")
+    return [i["title"] for g in data["years"] for i in g["items"]]
 
 
 def run(repo, **kw):
@@ -74,12 +86,14 @@ def run(repo, **kw):
 def test_flad_backfills_missing_months_in_order(tmp_repo):
     _drop_flad_items(tmp_repo, FLAD_NEW)
     run(tmp_repo)
+    titles = _flad_titles(tmp_repo)
+    june = "All-causes delay to air transport in Europe for June 2026"
+    pos = [titles.index(t) for t in FLAD_NEW + [june]]
+    assert pos == sorted(pos) and len(set(pos)) == 4
     flad = store.load(tmp_repo / "data/pub_coda_flad.yml")
-    items = flad["years"][0]["items"]
-    assert [i["title"] for i in items[:4]] == FLAD_NEW + [
-        "All-causes delay to air transport in Europe for June 2026"]
-    assert "image" not in items[0]
-    assert list(items[0]) == ["title", "date", "description", "url", "external"]
+    added = next(i for g in flad["years"] for i in g["items"] if i["title"] == FLAD_NEW[0])
+    assert "image" not in added
+    assert list(added) == ["title", "date", "description", "url", "external"]
 
 
 def test_second_run_adds_nothing(tmp_repo):
@@ -106,19 +120,27 @@ def test_listing_failure_isolated(tmp_repo):
 
 
 def _eao_missing_one(repo):
+    """Remove the item for the newest EAO in the fixture listing (by URL, wherever it sits)."""
     path = repo / "data/pub_eao.yml"
+    newest = eurocontrol.parse_listing(_fx("listing_product_1249.html"))[0].url
     data = store.load(path)
-    del data["years"][0]["items"][0]
+    for g in data["years"]:
+        g["items"][:] = [i for i in g["items"] if eurocontrol.normalize_url(str(i["url"])) != newest]
     store.dump(data, path)
-    return data
+    return newest
+
+
+def _eao_items(repo):
+    return [i for g in store.load(repo / "data/pub_eao.yml")["years"] for i in g["items"]]
 
 
 def test_eao_adds_item_with_image(tmp_repo):
-    _eao_missing_one(tmp_repo)
+    newest = _eao_missing_one(tmp_repo)
     results = run(tmp_repo)
     r = next(r for r in results if r.key == "pub_eao")
     assert len(r.added) == 1
     item = r.added[0].item
+    assert item["url"] == newest
     assert item["image"].startswith("/images/auto/pub_eao/")
     assert (tmp_repo / "static" / item["image"].lstrip("/")).read_bytes() == b"jpg"
 
@@ -131,8 +153,8 @@ def test_image_download_failure_adds_item_without_image(tmp_repo):
 
     r = next(r for r in run(tmp_repo, fetch_bytes=boom) if r.key == "pub_eao")
     assert len(r.added) == 1 and "image" not in r.added[0].item
-    items = store.load(tmp_repo / "data/pub_eao.yml")["years"][0]["items"]
-    assert "image" not in items[0]
+    added = next(i for i in _eao_items(tmp_repo) if i["url"] == r.added[0].item["url"])
+    assert "image" not in added
 
 
 def test_missing_og_tags_still_adds(tmp_repo):
@@ -198,3 +220,15 @@ def test_flash_insert_only_adds_lines(tmp_repo):
     after = path.read_text()
     _assert_only_additions(before, after)
     assert "Flash Briefing 2026 - Week 99" in after
+
+
+def test_images_not_written_when_series_fails_after_download(tmp_repo, monkeypatch):
+    _eao_missing_one(tmp_repo)
+
+    def failing_dump(data, path):
+        raise OSError("disk full")
+
+    monkeypatch.setattr(store, "dump", failing_dump)
+    r = next(r for r in run(tmp_repo) if r.key == "pub_eao")
+    assert r.error and not r.added
+    assert not list((tmp_repo / "static").rglob("*.jpg"))
