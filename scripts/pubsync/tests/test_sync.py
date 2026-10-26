@@ -232,3 +232,54 @@ def test_images_not_written_when_series_fails_after_download(tmp_repo, monkeypat
     r = next(r for r in run(tmp_repo) if r.key == "pub_eao")
     assert r.error and not r.added
     assert not list((tmp_repo / "static").rglob("*.jpg"))
+
+
+def _flash_repo_run(tmp_repo, href, page_edit=None, fetch_bytes=fake_bytes):
+    listing = f'<html><a href="{href}">EUROCONTROL Flash Briefing 2026 - Week 99</a></html>'
+    base = make_fetch({eurocontrol.listing_url("product:1245"): listing})
+
+    def fetch(url):
+        html = base(url)
+        return page_edit(html) if page_edit and "/publication/" in url else html
+
+    return run(tmp_repo, fetch=fetch, only={"pub_flash"}, fetch_bytes=fetch_bytes)[0]
+
+
+def test_scraped_description_is_html_escaped(tmp_repo):
+    def edit(html):
+        import re
+        return re.sub(r'(<meta property="og:description" content=")[^"]*"',
+                      r'\1&lt;script&gt;alert(1)&lt;/script&gt; R&amp;D"', html)
+
+    r = _flash_repo_run(tmp_repo, "/publication/flash-99", edit)
+    assert r.added[0].item["description"] == "&lt;script&gt;alert(1)&lt;/script&gt; R&amp;D"
+    stored = (tmp_repo / "data/pub_flash.yml").read_text()
+    assert "&lt;script&gt;alert(1)&lt;/script&gt; R&amp;D" in stored
+
+
+def test_off_site_image_url_is_skipped(tmp_repo):
+    called = []
+    edit = lambda h: h.replace("https://www.eurocontrol.int/sites", "https://evil.example/sites")  # noqa: E731
+    r = _flash_repo_run(tmp_repo, "/publication/flash-99", edit,
+                        fetch_bytes=lambda u: called.append(u) or b"x")
+    assert len(r.added) == 1 and "image" not in r.added[0].item and not called
+
+
+@pytest.mark.parametrize("slug", ["..", "Foo%2F..", "UPPER", ".hidden", "a" * 200])
+def test_unsafe_slug_skips_image(tmp_repo, slug):
+    called = []
+    r = _flash_repo_run(tmp_repo, f"/publication/{slug}",
+                        fetch_bytes=lambda u: called.append(u) or b"x")
+    assert r.error is None and len(r.added) == 1
+    assert "image" not in r.added[0].item and not called
+    assert not list((tmp_repo / "static").rglob("*.jpg"))
+
+
+def test_destination_outside_static_auto_is_refused(tmp_repo, monkeypatch):
+    monkeypatch.setattr(sync, "SLUG_RE", __import__("re").compile(r".+"))  # bypass the slug filter
+    monkeypatch.setattr(sync, "_slug", lambda url: "../../evil")
+    called = []
+    r = _flash_repo_run(tmp_repo, "/publication/flash-99",
+                        fetch_bytes=lambda u: called.append(u) or b"x")
+    assert len(r.added) == 1 and "image" not in r.added[0].item
+    assert not called and not list(tmp_repo.rglob("*.jpg"))

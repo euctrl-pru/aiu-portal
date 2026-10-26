@@ -2,7 +2,6 @@ from datetime import date
 from pathlib import Path
 
 import pytest
-import requests
 
 from scripts.pubsync import eurocontrol as ec
 
@@ -87,22 +86,79 @@ def test_format_date():
     assert ec.format_date(date(2026, 10, 2)) == "2 October 2026"
 
 
-def _resp(content_type):
-    r = requests.Response()
-    r.status_code = 200
-    r._content = b"data"
-    r.headers["Content-Type"] = content_type
-    return r
+class FakeResponse:
+    def __init__(self, content_type="image/jpeg", body=b"data", location=None):
+        self.headers = {"Content-Type": content_type}
+        if location:
+            self.headers["Location"] = location
+        self.is_redirect = location is not None
+        self._body = body
+
+    def raise_for_status(self):
+        pass
+
+    def iter_content(self, size):
+        for i in range(0, len(self._body), size):
+            yield self._body[i:i + size]
+
+    def close(self):
+        pass
+
+
+def _patch_get(monkeypatch, *responses):
+    seen = []
+    queue = list(responses)
+
+    def get(url, **kwargs):
+        seen.append((url, kwargs))
+        return queue.pop(0)
+
+    monkeypatch.setattr(ec.requests, "get", get)
+    monkeypatch.setattr(ec, "MIN_INTERVAL", 0)
+    return seen
+
+
+IMG = "https://www.eurocontrol.int/sites/x.jpg"
 
 
 def test_fetch_bytes_accepts_images(monkeypatch):
-    monkeypatch.setattr(ec.requests, "get", lambda *a, **k: _resp("image/jpeg"))
-    monkeypatch.setattr(ec, "MIN_INTERVAL", 0)
-    assert ec.fetch_bytes("https://www.eurocontrol.int/x.jpg") == b"data"
+    seen = _patch_get(monkeypatch, FakeResponse())
+    assert ec.fetch_bytes(IMG) == b"data"
+    assert seen[0][1]["allow_redirects"] is False
 
 
 def test_fetch_bytes_rejects_non_images(monkeypatch):
-    monkeypatch.setattr(ec.requests, "get", lambda *a, **k: _resp("text/html; charset=utf-8"))
-    monkeypatch.setattr(ec, "MIN_INTERVAL", 0)
+    _patch_get(monkeypatch, FakeResponse("text/html; charset=utf-8"))
     with pytest.raises(ValueError):
-        ec.fetch_bytes("https://www.eurocontrol.int/x.jpg")
+        ec.fetch_bytes(IMG)
+
+
+@pytest.mark.parametrize("url", [
+    "https://evil.example/x.jpg",
+    "http://www.eurocontrol.int/x.jpg",
+    "https://www.eurocontrol.int.evil.example/x.jpg",
+])
+def test_fetch_bytes_rejects_off_site_urls(monkeypatch, url):
+    seen = _patch_get(monkeypatch)
+    with pytest.raises(ValueError):
+        ec.fetch_bytes(url)
+    assert seen == []
+
+
+def test_fetch_bytes_rejects_redirect_off_site(monkeypatch):
+    seen = _patch_get(monkeypatch, FakeResponse(location="https://evil.example/x.jpg"))
+    with pytest.raises(ValueError):
+        ec.fetch_bytes(IMG)
+    assert len(seen) == 1
+
+
+def test_fetch_bytes_follows_on_site_redirect(monkeypatch):
+    _patch_get(monkeypatch, FakeResponse(location="/other.jpg"), FakeResponse())
+    assert ec.fetch_bytes(IMG) == b"data"
+
+
+def test_fetch_bytes_rejects_oversize_body(monkeypatch):
+    monkeypatch.setattr(ec, "MAX_IMAGE_BYTES", 100)
+    _patch_get(monkeypatch, FakeResponse(body=b"x" * 101))
+    with pytest.raises(ValueError):
+        ec.fetch_bytes(IMG)

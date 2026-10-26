@@ -1,4 +1,6 @@
 """Sync engine: find publications missing from data/pub_*.yml and add them."""
+import html
+import re
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -9,6 +11,7 @@ from .series import SERIES, Series, group_year, render_title
 REPO_ROOT = Path(__file__).resolve().parents[2]
 STATFOR_FILES = ["pub_statfor_2year", "pub_statfor_forecast7", "pub_statfor_outlook", "pub_statfor_update"]
 STATFOR_SOURCE = "product:801"
+SLUG_RE = re.compile(r"[a-z0-9][a-z0-9-]{0,150}")
 
 
 @dataclass
@@ -64,15 +67,19 @@ def find_new(series: Series | Sequence[Series], data, fetch: Callable[[str], str
         title = render_title(row, entry, titles)
         pub = eurocontrol.parse_publication(fetch(entry.url), entry.url)
         item: dict = {"title": title, "date": eurocontrol.format_date(pub.published)}
-        description = row.description or pub.description
+        # Scraped text is rendered unescaped (safeHTML) by the layout, so escape it here.
+        description = row.description or (
+            html.escape(pub.description, quote=False) if pub.description else None)
         if description:
             item["description"] = description
         item["url"] = entry.url
-        image_url = pub.image_url if row.images else None
+        slug = _slug(entry.url)
+        image_url = (pub.image_url if row.images and SLUG_RE.fullmatch(slug)
+                     and pub.image_url and eurocontrol.is_site_url(pub.image_url) else None)
         image_path = None
         if image_url:
-            image_path = f"static/images/auto/{key}/{_slug(entry.url)}.jpg"
-            item["image"] = f"/images/auto/{key}/{_slug(entry.url)}.jpg"
+            image_path = f"static/images/auto/{key}/{slug}.jpg"
+            item["image"] = f"/images/auto/{key}/{slug}.jpg"
         item["external"] = True
         titles.append(title)
         added.append(NewItem(key, group_year(row, title, pub.published), item, image_url, image_path))
@@ -109,7 +116,10 @@ def run(repo_root: Path, fetch=eurocontrol.fetch, dry_run: bool = False, max_new
                 for new in result.added:
                     if new.image_url:
                         try:
-                            images[repo_root / new.image_path] = fetch_bytes(new.image_url)
+                            dest = (repo_root / new.image_path).resolve()
+                            if not dest.is_relative_to((repo_root / "static/images/auto").resolve()):
+                                raise ValueError(f"image path escapes static/images/auto: {dest}")
+                            images[dest] = fetch_bytes(new.image_url)
                         except Exception:
                             new.item.pop("image", None)
                             new.image_path = None

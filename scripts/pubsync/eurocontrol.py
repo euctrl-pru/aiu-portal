@@ -2,7 +2,7 @@
 import datetime
 import time
 from dataclasses import dataclass
-from urllib.parse import quote_plus, urlsplit
+from urllib.parse import quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import requests
@@ -14,6 +14,8 @@ TIMEOUT = 30
 ATTEMPTS = 3
 BACKOFF = 5
 MIN_INTERVAL = 1.0
+MAX_IMAGE_BYTES = 10 * 1024 * 1024
+MAX_REDIRECTS = 3
 BRUSSELS = ZoneInfo("Europe/Brussels")
 
 _last_request = 0.0
@@ -48,7 +50,7 @@ def normalize_url(url: str) -> str:
     return f"{BASE}{parts.path.rstrip('/')}"
 
 
-def _get(url: str) -> requests.Response:
+def _get(url: str, **kwargs) -> requests.Response:
     """GET with the shared User-Agent, rate limit and retry policy."""
     global _last_request
     for attempt in range(1, ATTEMPTS + 1):
@@ -57,7 +59,7 @@ def _get(url: str) -> requests.Response:
             time.sleep(wait)
         _last_request = time.monotonic()
         try:
-            resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
+            resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT, **kwargs)
             resp.raise_for_status()
             return resp
         except requests.RequestException:
@@ -71,13 +73,37 @@ def fetch(url: str) -> str:
     return _get(url).text
 
 
+def is_site_url(url: str) -> bool:
+    parts = urlsplit(url)
+    return parts.scheme == "https" and parts.hostname == "www.eurocontrol.int"
+
+
 def fetch_bytes(url: str) -> bytes:
-    """Download an image; anything not served as image/* is rejected."""
-    resp = _get(url)
-    content_type = resp.headers.get("Content-Type", "")
-    if not content_type.lower().startswith("image/"):
-        raise ValueError(f"expected an image from {url}, got {content_type!r}")
-    return resp.content
+    """Download an image from eurocontrol.int only.
+
+    Redirects are followed manually and must stay on the site; the body must be
+    served as image/* and be at most MAX_IMAGE_BYTES.
+    """
+    for _ in range(MAX_REDIRECTS + 1):
+        if not is_site_url(url):
+            raise ValueError(f"refusing to download from {url}")
+        resp = _get(url, allow_redirects=False, stream=True)
+        try:
+            if resp.is_redirect:
+                url = urljoin(url, resp.headers.get("Location", ""))
+                continue
+            content_type = resp.headers.get("Content-Type", "")
+            if not content_type.lower().startswith("image/"):
+                raise ValueError(f"expected an image from {url}, got {content_type!r}")
+            body = bytearray()
+            for chunk in resp.iter_content(65536):
+                body += chunk
+                if len(body) > MAX_IMAGE_BYTES:
+                    raise ValueError(f"image at {url} exceeds {MAX_IMAGE_BYTES} bytes")
+            return bytes(body)
+        finally:
+            resp.close()
+    raise ValueError("too many redirects")
 
 
 def listing_url(source: str) -> str:
