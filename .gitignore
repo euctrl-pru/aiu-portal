@@ -129,3 +129,7 @@ $RECYCLE.BIN/
 
 /.quarto/
 .positai
+
+# pubsync tooling
+.venv-pubsync/
+__pycache__/

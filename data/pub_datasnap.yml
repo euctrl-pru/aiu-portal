@@ -7,7 +7,7 @@ years:
         description: "The 61. EUROCONTROL Data Snapshot provides insights on the seasonal traffic patterns across Europe in 2025."
         url: "https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe"
         image: "/images/ds/ds61.png"
-        external: true    
+        external: true
       - title: "Data Snapshot #60 - What 2025 data reveal about the average flight in Europe"
         date: "12 June 2026"
         description: "The 60. EUROCONTROL Data Snapshot examines the average flight in the EUROCONTROL area, incorporating 2025 data."
