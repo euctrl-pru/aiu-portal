@@ -412,8 +412,13 @@ distance. The indicator is expressed as a ratio of the length of trajectories
 and achieved distances:
 
 $$
+\textrm{HFE}_j = \frac{\sum L_{fjp} - \sum H_{fjp}}{\sum H_{fjp}} \% = \bigg( \frac{\sum L_{fjp}}{\sum H_{fjp}} - 1 \bigg) \%
+$$
+
+$$
 \text{HFE}_j = \frac{\sum L_{fjp} - \sum H_{fjp}}{\sum H{fjp}} \% = \left( \frac{\sum L_{fjp}}{\sum H_{fjp}} - 1 \right) \%
 $$
+
 
 In words, the en route horizontal flight efficiency indicator for an area j is
 taken by summing the values over all flights f and all en route portions p in
