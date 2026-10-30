@@ -4,9 +4,9 @@ years:
     items:
       - title: "Data Snapshot #62 - The impact of the EU's digital Entry-Exit System (EES)"
         date: "30 October 2026"
-        description: "This data snapshot analyses the impact of the EU's digital Entry-Exit System (EES) for registering non-EU visitors on short stays into the Schengen area, which entered its mandatory phase on 10 April 2026 although practical implementation remains uneven across Schengen area airports. Specifically, w ..."
+        description: "This data snapshot analyses the impact of the EU's digital Entry-Exit System (EES) for registering non-EU visitors on short stays into the Schengen area."
         url: "https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-62-impact-eus-digital-entry-exit-system-ees"
-        image: "/images/auto/pub_datasnap/eurocontrol-data-snapshot-62-impact-eus-digital-entry-exit-system-ees.png"
+        image: "/images/ds/ds62.png"
         external: true
       - title: "Data Snapshot #61 - Which European countries experience the biggest summer traffic surge?"
         date: "2 October 2026"
