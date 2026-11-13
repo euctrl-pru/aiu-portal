@@ -2,7 +2,7 @@ years:
   - year: 2026
     items:
       - title: "EUROCONTROL Special Summer 2026 Flash Briefing"
-        date: "11 September 2026" 
+        date: "11 September 2026"
         description: "Special update on network performance covering the summer season (Jun-Aug)."
         url: "https://www.eurocontrol.int/publication/eurocontrol-special-summer-2026-flash-briefing"
         external: true

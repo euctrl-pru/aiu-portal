@@ -52,9 +52,10 @@ body {
     margin-left: auto;
   }
 .navbar-brand-logo {
+    display: block;
     width: 100%;
-    min-width: 10rem;
-    max-width: 10rem;
+    min-width: 8.5rem;
+    max-width: 8.5rem;
 }
 .zi-2 {
     z-index: 2 !important;
@@ -64,8 +65,8 @@ body {
     padding-bottom: 4rem !important;
 }
 .hero {
-    padding-top: 8rem !important;
-    padding-bottom: 5rem !important;
+    padding-top: 5.25rem !important;
+    padding-bottom: .75rem !important;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     .navbar-expand-xl {

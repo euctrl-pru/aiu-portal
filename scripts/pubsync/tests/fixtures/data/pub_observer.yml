@@ -1,0 +1,42 @@
+modal: true
+years:
+  - year: 2026
+    items:
+      - title: "PRC Observer #5 - Open Data: The Foundation of Credibility"
+        date: "16 February 2026"
+        description: "The independent Performance Review Commission (PRC) explains how transparent and widely accepted performance measurement helps build trust and supports stakeholder engagement to improve the performance of the European air transport network."
+        url: "https://www.eurocontrol.int/publication/prc-observer-5-data-foundation-credibility"
+        image: "/images/pi/prc_obs5.png"
+        external: true
+
+  - year: 2025
+    items:
+      - title: "PRC Observer #4 - En route Capacity in Europe – how good was your summer?"
+        date: "9 October 2025"
+        description: "The independent Performance Review Commission (PRC) takes a look at the Network performance in July and August 2025 and tracks how some of the most penalising area control centres of 2024 performed in summer 2025."
+        url: "https://www.eurocontrol.int/publication/prc-observer-4-en-route-capacity-europe-summer-2025"
+        image: "/images/pi/prc_obs4.png"
+        external: true
+
+      - title: "PRC Observer #3 - En route Capacity in Europe – an insufficient level of service"
+        date: "5 June 2025"
+        description: "The independent Performance Review Commission (PRC) examines the shortcomings of the European en-route capacity planning process in meeting airspace users' expectations, and highlights the need for greater transparency to restore service quality and European network capacity performance."
+        url: "https://www.eurocontrol.int/publication/prc-observer-3-en-route-capacity-europe-insufficient-level-service"
+        image: "/images/pi/prc_obs3.png"
+        external: true
+
+  - year: 2024
+    items:
+      - title: "PRC Observer #2 - How was European air traffic capacity performance in Summer 2024?"
+        date: "11 October 2024"
+        description: "The Performance Review Commission (PRC) takes a look at the poor capacity performance in Summer 2024 in Europe, contributing factors, and actions to be taken to mitigate high delays over the coming years."
+        url: "https://www.eurocontrol.int/publication/prc-observer-2-how-was-european-air-traffic-capacity-performance-summer-2024"
+        image: "/images/pi/prc_obs2.png"
+        external: true
+
+      - title: "PRC Observer #1 - How can we make aviation green?"
+        date: "12 July 2024"
+        description: "The Performance Review Commission (PRC) takes a brief look at the environmental performance of European aviation, the possible contribution of ATM in mitigating aviation's impact on climate, and the challenges ahead in achieving the ambitious environmental goals."
+        url: "https://www.eurocontrol.int/publication/prc-observer-1-how-can-we-make-aviation-green"
+        image: "/images/pi/prc_obs1.png"
+        external: true

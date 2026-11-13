@@ -1,0 +1,227 @@
+years:
+  - year: 2026
+    items:
+      - title: "Taxi times - Winter 2025-2026"
+        date: "20 May 2026"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2025-2026"
+        external: true
+        image: "/images/coda/pubs/taxi_2026_winter2526.jpg"
+
+  - year: 2025
+    items:
+      - title: "Taxi times - Summer 2025"
+        date: "29 January 2026"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2025"
+        external: true
+        image: "/images/coda/pubs/taxi_2025_summer.jpg"
+
+      - title: "Taxi times - Winter 2024-2025"
+        date: "29 July 2025"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2024-2025"
+        external: true
+        image: "/images/coda/pubs/taxi_2025_winter2425.jpg"
+
+  - year: 2024
+    items:
+      - title: "Taxi times - Summer 2024"
+        date: "16 December 2024"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2024"
+        external: true
+
+      - title: "Taxi times - Winter 2023-2024"
+        date: "27 June 2024"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2023-2024"
+        external: true
+        image: "/images/coda/pubs/taxi_2024_winter2324.jpg"
+
+  - year: 2023
+    items:
+      - title: "Taxi times - Summer 2023"
+        date: "11 December 2023"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2023"
+        external: true
+        image: "/images/coda/pubs/taxi_2023_summer.jpg"
+
+      - title: "Taxi times - Winter 2022-2023"
+        date: "24 May 2023"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2022-2023"
+        external: true
+        image: "/images/coda/pubs/taxi_2023_winter2223.jpg"
+
+  - year: 2022
+    items:
+      - title: "Taxi times - Summer 2022"
+        date: "6 December 2022"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2022"
+        external: true
+        image: "/images/coda/pubs/taxi_2022_summer.jpg"
+
+      - title: "Taxi times - Winter 2021-2022"
+        date: "9 May 2022"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2021-2022"
+        external: true
+
+  - year: 2021
+    items:
+      - title: "Taxi times - Summer 2021"
+        date: "25 March 2022"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2021"
+        external: true
+
+      - title: "Taxi times - Winter 2020-2021"
+        date: "12 May 2021"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2020-2021"
+        external: true
+
+  - year: 2020
+    items:
+      - title: "Taxi times - Summer 2020"
+        date: "5 March 2021"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2020"
+        external: true
+
+      - title: "Taxi times - Winter 2019-2020"
+        date: "15 May 2020"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2019-2020"
+        external: true
+
+  - year: 2019
+    items:
+      - title: "Taxi times - Summer 2019"
+        date: "19 December 2019"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2019"
+        external: true
+
+      - title: "Taxi times - Winter 2018-2019"
+        date: "15 May 2019"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2018-2019"
+        external: true
+
+  - year: 2018
+    items:
+      - title: "Taxi times - Summer 2018"
+        date: "20 December 2018"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2018"
+        external: true
+
+  - year: 2017
+    items:
+      - title: "Taxi Times - Winter 2017"
+        date: "4 September 2017"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2017"
+        external: true
+
+      - title: "Taxi times - Winter 2016-2017"
+        date: "4 September 2016"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2016-2017"
+        external: true
+
+  - year: 2016
+    items:
+      - title: "Taxi Times - Summer 2016"
+        date: "14 August 2015"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2016"
+        external: true
+
+      - title: "Taxi Times - Winter 2015-2016"
+        date: "4 September 2015"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2015-2016"
+        external: true
+
+  - year: 2015
+    items:
+      - title: "Taxi times - Summer 2015"
+        date: "14 August 2015"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2015"
+        external: true
+
+      - title: "Taxi times - Winter 2014-2015"
+        date: "4 September 2014"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2014-2015"
+        external: true
+
+  - year: 2014
+    items:
+      - title: "Taxi times - Summer 2014"
+        date: "14 August 2014"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2014"
+        external: true
+
+      - title: "Taxi Times - Winter 2013-2014"
+        date: "4 September 2013"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2013-2014"
+        external: true
+
+  - year: 2013
+    items:
+      - title: "Taxi times - Summer 2013"
+        date: "14 August 2013"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2013"
+        external: true
+
+      - title: "Taxi times - Winter 2012-2013"
+        date: "4 September 2012"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2012-2013"
+        external: true
+
+  - year: 2012
+    items:
+      - title: "Taxi times - Summer 2012"
+        date: "14 August 2012"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2012"
+        external: true
+
+  - year: 2011
+    items:
+      - title: "Taxi times - Winter 2011"
+        date: "4 September 2011"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2011"
+        external: true
+
+      - title: "Taxi times - Summer 2011"
+        date: "14 August 2011"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2011"
+        external: true
+
+  - year: 2010
+    items:
+      - title: "Taxi times - Winter 2010"
+        date: "4 September 2010"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-winter-2010"
+        external: true
+
+      - title: "Taxi times - Summer 2010"
+        date: "14 August 2010"
+        description: "Taxi time statistics at European airports."
+        url: "https://www.eurocontrol.int/publication/taxi-times-summer-2010"
+        external: true

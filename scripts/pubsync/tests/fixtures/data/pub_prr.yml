@@ -1,0 +1,106 @@
+years:
+  - year: 2025
+    items:
+      - title: "Performance Review Report 2025"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2025"
+        image: "/images/prc/prr2025.png"
+        external: true
+  - year: 2024
+    items:
+      - title: "Performance Review Report 2024"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2024"
+        image: "/images/prc/prr2024.png"
+        external: true
+  - year: 2023
+    items:
+      - title: "Performance Review Report 2023"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2023"
+        image: "/images/prc/prr2023.png"
+        external: true
+  - year: 2022
+    items:
+      - title: "Performance Review Report 2022"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2022"
+        image: "/images/prc/prr2022.png"
+        external: true
+  - year: 2021
+    items:
+      - title: "Performance Review Report 2021"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2021"
+        image: "/images/prc/prr2021.png"
+        external: true
+  - year: 2020
+    items:
+      - title: "Performance Review Report 2020"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2020"
+        image: "/images/prc/prr2020.png"
+        external: true
+  - year: 2019
+    items:
+      - title: "Performance Review Report 2019"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2019"
+        image: "/images/prc/prr2019.png"
+        external: true
+  - year: 2018
+    items:
+      - title: "Performance Review Report 2018"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2018"
+        image: "/images/prc/prr2018.png"
+        external: true
+  - year: 2017
+    items:
+      - title: "Performance Review Report 2017"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2017"
+        image: "/images/prc/prr2017.png"
+        external: true
+  - year: 2016
+    items:
+      - title: "Performance Review Report 2016"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2016"
+        image: "/images/prc/prr2016.png"
+        external: true
+  - year: 2015
+    items:
+      - title: "Performance Review Report 2015"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2015"
+        image: "/images/prc/prr2015.png"
+        external: true
+  - year: 2014
+    items:
+      - title: "Performance Review Report 2014"
+        url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2014"
+        image: "/images/prc/prr2014.png"
+        external: true
+older:
+  - title: "Performance Review Report 2013"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2013"
+  - title: "Performance Review Report 2012"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2012"
+  - title: "Performance Review Report 2011"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2011"
+  - title: "Performance Review Report 2010"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2010"
+  - title: "Performance Review Report 2009"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2009"
+  - title: "Performance Review Report 2008"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2008"
+  - title: "Performance Review Report 2007"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2007"
+  - title: "Performance Review Report 2006"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2006"
+  - title: "Performance Review Report 2005"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2005"
+  - title: "Performance Review Report 2004"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2004"
+  - title: "Performance Review Report 2003"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2003"
+  - title: "Performance Review Report 2002"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2002"
+  - title: "Performance Review Report 2001"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2001"
+  - title: "Performance Review Report 2000"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-2000"
+  - title: "Performance Review Report 1999"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-1999"
+  - title: "Performance Review Report 1998"
+    url: "https://www.eurocontrol.int/publication/performance-review-report-prr-1998"

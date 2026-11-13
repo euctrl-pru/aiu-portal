@@ -372,9 +372,10 @@
     margin-left: auto;
   }
 .navbar-brand-logo {
+    display: block;
     width: 100%;
-    min-width: 10rem;
-    max-width: 10rem;
+    min-width: 8.5rem;
+    max-width: 8.5rem;
 }
 .zi-2 {
     z-index: 2 !important;
@@ -383,9 +384,67 @@
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
 }
+/* header: one 12px gap above the logo, between logo and title, and below the text */
 .hero {
-    padding-top: 8rem !important;
-    padding-bottom: 5rem !important;
+    padding-top: 5.25rem !important;  /* 12px + 64px logo + 12px, less the title's own line spacing */
+    padding-bottom: 0.75rem !important;
+    min-height: 40px;
+}
+#header.navbar {
+    padding: .75rem 1rem 0;
+}
+.navbar-brand {
+    padding: 0;
+    margin: 0 1rem 0 0;
+}
+/* pin header styles so page CSS can't move the menu or restyle the title */
+#header,
+.custom-hero {
+    font-family: "Exo", sans-serif;
+}
+#header .nav-item {
+    margin: 0;
+}
+#header .nav-link {
+    line-height: 1.5;
+}
+.custom-hero h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
+}
+.custom-hero .lead {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: .375rem 0 0;
+}
+.custom-hero .hero-actions {
+    margin-top: .75rem;
+}
+.custom-hero .hero-text > :last-child:not(.hero-actions) {
+    margin-bottom: -.375rem;          /* line spacing below the baseline, so the gap is measured from the text */
+    min-height: 40px;
+}
+@media (min-width: 1400px) {
+    .navbar-nav-wrap {
+        flex-wrap: nowrap;            /* a wrapped navbar would cover the banner title */
+        min-width: 0;
+    }
+    .navbar-collapse {
+        min-width: 0;
+    }
+    .navbar-collapse .form-inline {
+        flex: 0 1 auto;
+        flex-wrap: nowrap;
+        min-width: 0;
+        margin-left: 1rem !important;
+    }
+    .navbar-collapse .form-inline .form-control {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     .navbar-expand-xl {
