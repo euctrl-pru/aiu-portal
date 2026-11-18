@@ -81,23 +81,19 @@
         <!-- overlay -->
         <div class="bg-overlay"></div>
         <div class="container position-relative zi-2">
-            <div class="row align-items-lg-center">
-                <div class="col-lg-7 mb-7 mb-lg-0">
-                    <!-- Heading -->
-                    <div class="mb-6">
-                        <h1 class="display-5 text-white">{{.Title}}</h1>
-                        <p class="lead text-white">{{.Description}}</p>
-                        {{ if .IsHome }}
-                        <a class="btn btn-primary" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe</a>
-                        <a class="btn btn-secondary" href="/about/us/">About us</a>
-                        {{ end }}
-                    </div>
-                    <!-- End Title & Description -->
+            <!-- Heading -->
+            <div class="hero-text">
+                <h1 class="text-white">{{ .Title }}</h1>
+                {{ with .Description }}<p class="lead text-white">{{ . }}</p>{{ end }}
+                {{ if .IsHome }}
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://www.eurocontrol.int/form/aviation-intelligence-unit-aiu-newsletter">Subscribe</a>
+                    <a class="btn btn-secondary" href="/about/us/">About us</a>
                 </div>
+                {{ end }}
             </div>
-            <!-- End Col -->
+            <!-- End Title & Description -->
         </div>
-        <!-- End Row -->
     </div>
     <!-- End Hero -->
 </main>

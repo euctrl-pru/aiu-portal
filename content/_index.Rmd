@@ -410,8 +410,42 @@ fullpage: true
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
  <div class="carousel-inner">
  
- 
-            <div class="carousel-item active">
+
+          <div class="carousel-item active">
+              <div class="card border-0 rounded">
+              <a href="https://www.eurocontrol.int/publication/how-north-africa-has-become-europes-largest-regional-aviation-flow-2026" target="_blank">
+                <img src="/images/landing/2026-11-16_AT13.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="Published: Aviation Trends #13 - Traffic between Europe and North Africa">
+                <div style="padding: 1rem;">
+                  <h5><a href="https://www.eurocontrol.int/publication/how-north-africa-has-become-europes-largest-regional-aviation-flow-2026" target="_blank">Published: Aviation Trends #13 - Traffic between Europe and North Africa</a></h5>
+                  <small>Air traffic between Europe and North Africa has grown faster than any other regional flow since 2019, with North Africa set to finish the year as Europe's largest regional aviation flow. This Aviation Trends paper examines the historical evolution of this flow, the main factors influencing its growth, and the outlook for the coming years.</small>
+                </div>
+                <div class="card-footer pt-0">
+                  <a href="https://www.eurocontrol.int/publication/how-north-africa-has-become-europes-largest-regional-aviation-flow-2026" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div> 
+            
+            
+          <div class="carousel-item">
+              <div class="card border-0 rounded">
+              <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-62-impact-eus-digital-entry-exit-system-ees" target="_blank">
+                <img src="/images/landing/2026-10-30_DS62.png"
+                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
+                  alt="Data Snapshot #62 on seasonality">
+                <div style="padding: 1rem;">
+                  <h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-62-impact-eus-digital-entry-exit-system-ees" target="_blank">Published: Data Snapshot #62 on the impact of the EU's digital Entry-Exit System (EES)</a></h5>
+                  <small>Data snapshot #62 analyses the impact of the EU's digital Entry-Exit System (EES) for registering non-EU visitors on short stays into the Schengen area.</small>
+                </div>
+                <div class="card-footer pt-0">
+                  <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-62-impact-eus-digital-entry-exit-system-ees" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="carousel-item">
               <div class="card border-0 rounded">
               <a href="https://www.eurocontrol.int/publication/eurocontrol-forecast-2026-2032" target="_blank">
                 <img src="/images/landing/2026-10-21_MT_forecast_update.png"
@@ -426,76 +460,28 @@ fullpage: true
                 </div>
               </div>
             </div>
-            
-          <div class="carousel-item">
-              <div class="card border-0 rounded">
-              <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" target="_blank">
-                <img src="/images/landing/2026-10-05_DS61.png"
-                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Data Snapshot #61 on seasonality">
-                <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" target="_blank">Published: Data Snapshot #61 on seasonal traffic patterns across Europe</a></h5>
-                  <small>Data snapshot #61 provides insights on the European countries which experience the biggest summer traffic surge. Across most of Europe, traffic follows a clear summer-oriented pattern, but the intensity of the seasonal swing differs substantially.</small>
-                </div>
-                <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/publication/eurocontrol-data-snapshot-61-seasonal-traffic-patterns-across-europe" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
           
             <div class="carousel-item">
               <div class="card border-0 rounded">
-              <a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" target="_blank">
-                <img src="/images/landing/2026-09-30_ACE-first-look2025.png"
+              <a href="https://ansperformance.eu/study/data-challenge/dc2026/" target="_blank">
+                <img src="/images/landing/2026-09-07_prc_data_challenge.png"
                   style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="First look at ACE 2025 data">
+                  alt="PRC Data Challenge 2026 Winners">
                 <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" target="_blank">Published: ATM Cost-Effectiveness (ACE) First look at ACE 2025 data</a></h5>
-                  <small>The EUROCONTROL Performance Review Unit has produced a new report providing a first look at ANSP 2025 cost effectiveness data. This data has not yet been validated and thus may differ from later ACE publications.</small>
+                  <h5><a href="https://ansperformance.eu/study/data-challenge/dc2026/" target="_blank">PRC Data Challenge 2026 Winners!</a></h5><small>Congratulations to <a href="https://www.linkedin.com/in/aryamanchawla/" target="_blank">
+    Aryaman Chawla</a> (team charming-eel), winner of the 2026 PRC Challenge! The runners-up, <a href="https://www.linkedin.com/in/luis-melzer-7787513a0/" target="_blank">
+    Luis Melzer</a> (team zesty-puzzle) and <a href="https://www.linkedin.com/in/mattmotoki/" target="_blank">
+    Matthew Motoki</a> (team youthful-giraffe), also delivered great performances. With 510 registrations, 96 teams submitting projects and 56 finalists, we would like to congratulate everyone who took part.
+Stay tuned for the 2027 Challenge!</small>
                 </div>
                 <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/sites/default/files/2026-09/eurocontrol-ace-first-look-ansp-2025-data.pdf" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
+                  <a href="https://ansperformance.eu/study/data-challenge/dc2026/" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>
 
 
 
-            <div class="carousel-item">
-              <div class="card border-0 rounded">
-              <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank">
-                <img src="/images/landing/2026-10-15_addr.png"
-                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Aviation Data Repository for Research">
-                <div style="padding: 1rem;">
-                  <h5><a href="https://www.eurocontrol.int/dashboard/aviation-data-research" target="_blank">Aviation Data Repository for Research</a></h5>
-                  <small>EUROCONTROL expands the Aviation Data Repository for Research (ADRR) by increasing the annual data coverage from 4 months to 12 months and reducing the data release delay from 24 to 12 months. By January 2027, more than 100 million flight records spanning 2015 to 2025 will be accessible.</small>
-                </div>
-                <div class="card-footer pt-0">
-                  <a href="https://www.eurocontrol.int/dashboard/aviation-data-research" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-            
-            
-
-
-            <div class="carousel-item">
-              <div class="card border-0 rounded">
-              <a href="" target="_blank">
-                <img src="/images/landing/summer_data app.png"
-                  style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; width: 100%;"
-                  alt="Updated: Publications page">
-                <div style="padding: 1rem;">
-                  <h5><a href="" target="_blank">New Data App ‘Summer’ feature</a></h5>
-                  <small><p>A new ‘Summer’ button is now available in the EUROCONTROL Data app, giving you a view of traffic statistics and rankings for the summer period. The feature aggregates data from 1 June 2026 up to the current date, with comparisons against the same period in 2025 and 2019.</p>
-<p>Download the App in the <a href="https://play.google.com/store/apps/details?id=com.performancereviewunit.eurocontroldata&hl=en&pli=1" target="_blank">Play Store</a> and <a href="https://apps.apple.com/be/app/eurocontrol-data/id6467232405" target="_blank">Apple Store</a>.</small></p>
-                </div>
-                <div class="card-footer pt-0">
-                  <a href="" class="card-link" target="_blank">Read more</a> <i class="ml-2 fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
             
 
 
@@ -545,7 +531,7 @@ fullpage: true
                 </a>
                 <div style="padding: 1rem;">
                   <h5><a href="/data/" target="_blank">Performance Data Update</a></h5>
-                  <small>September 2026 data available for download now!</small>
+                  <small>October 2026 data available for download now!</small>
                 </div>
                 <div class="card-footer pt-0">
                   <a href="/data/" class="card-link" target="_blank">Read more</a> <i
