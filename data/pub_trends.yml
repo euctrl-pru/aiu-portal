@@ -1,6 +1,11 @@
 years:
   - year: 2026
     items:
+      - title: "Aviation Trends #13 - How North Africa has become Europe's largest regional aviation flow, overtaking North Atlantic and the Middle East"
+        description: "This Aviation Trends paper examines the historical evolution of the Europe-North Africa regional aviation flow, the main factors influencing its growth, and the outlook for the coming years."
+        url: "https://www.eurocontrol.int/publication/how-north-africa-has-become-europes-largest-regional-aviation-flow-2026"
+        image: "/images/at/at13.png"
+        external: true
       - title: "Aviation Trends #12 - How Capacity and Weather-Based Operations (CWBO) are building network resilience to capacity bottlenecks, adverse weather and instability"
         date: "14 September 2026"
         description: "This Aviation Trends paper examines how CWBO combines meteorological forecasts, real-time updates and expected traffic demand to identify emerging capacity shortfalls, including those caused by convective weather affecting en-route operations."
