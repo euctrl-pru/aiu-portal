@@ -13,8 +13,8 @@ date: '2020-05-15'
 ```{r echo=FALSE}
 blogdown::shortcode(
   "bootstrap-card-alt",
-  img = "aiu_apt_db.jpg",
-  link = "db/",
+  img = "aiu_apt_db_powerbi.png",
+  link = "airport_dashboard/",
   title = "AIU Airport Performance Dashboard",
   text = "Consolidated monthly overview of operational performance at European airports across a wide spectrum of indicators. <br><br> <div class='badge-container'><span class='badge badge-secondary'>General Performance</span></div>",
   alt = "AIU airport performance dashboard",
