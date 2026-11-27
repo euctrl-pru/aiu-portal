@@ -24,28 +24,35 @@ fullpage: true
 <p><small>Please note that the dashboard may take a few moments to load.</small></p>
 </div>
 <div class="iframe-container">
-<iframe src="https://oscaralfaro73.shinyapps.io/ConnectivityApp/" width="100%" height="1600px" style="border:none; overflow:hidden;" scrolling="auto">
+<iframe src="https://oscaralfaro73.shinyapps.io/ConnectivityApp/" width="50%" height="2000px" style="border:none; overflow:hidden;" scrolling="auto">
 </iframe>
 </div>
 <style>
-/* Ensure the iframe takes up the full height of the viewport */
 html, body {
-height: 100%;
-margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* Default / smaller screens */
 .iframe-container {
-height: 100vh; /* 100% of the viewport height */
-width: 100%;
-position: relative;
+  width: 100%;
+  height: 190vh;
+  position: relative;
 }
 
 .iframe-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .iframe-container {
+    width: calc(100% - 80px);  /* 40px margin each side */
+    margin: 0 auto;
+    height: 175vh;             /* taller on large screens */
+  }
 }
 </style>
 <div class="footnotes footnotes-end-of-document">

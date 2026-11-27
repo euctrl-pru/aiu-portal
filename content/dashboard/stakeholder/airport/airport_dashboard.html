@@ -21,14 +21,18 @@ description: "Consolidated monthly overview of operational performance at Europe
     position: relative;
 
     /* Full browser width */
-    width: 100vw;
-    max-width: 100vw;
+    width: calc(100vw - 360px);
+    max-width: calc(100vw - 360px);
 
     /* Break out of the website content column */
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw + 180px);
+    margin-right: calc(50% - 50vw + 180px);
 
-    height: 1650px;
+    height: clamp(1075px,calc((100vw - 360px) * 0.85),1350px);
+    
+    margin-bottom: -50px;
+    padding-bottom: 0 !important;
+
 
     overflow: hidden;
 }
@@ -55,11 +59,15 @@ description: "Consolidated monthly overview of operational performance at Europe
     .resp-container {
         position: relative;
 
-        width: 100vw;
-        height: 1100px;
+        width: 99vw;
+        max-width: 100vw;
+        height: clamp(700px, calc((99vw) * 0.85), 1075px);
 
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
+        
+        margin-bottom: -50px;
+        padding-bottom: 0 !important;
 
         overflow: hidden;
     }
@@ -71,7 +79,7 @@ description: "Consolidated monthly overview of operational performance at Europe
         left: 0;
 
         width: 100%;
-        height: 105.6%;
+        height: 107.6%;
 
         border: 0;
     }
@@ -87,13 +95,16 @@ description: "Consolidated monthly overview of operational performance at Europe
     .resp-container {
         position: relative;
 
-        width: 100vw;
+        width: 95vw;
         max-width: 100vw;
 
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
+        margin-left: calc(50% - 48vw);
+        margin-right: calc(50% - 48vw);
 
-        height: 600px;
+        height: clamp(400px, calc((95vw) * 0.85), 700px);
+
+        margin-bottom: -50px;
+        
 
         overflow: hidden;
     }
